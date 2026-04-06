@@ -41,6 +41,7 @@ class SearchResult:
     freshness_score: float = 0.0
     duplicate_cluster_id: Optional[str] = None
     retrieval_reason: Optional[str] = None
+    contains_aggregator_forecast: bool = False
     search_stage_score: float = 0.0
 
 

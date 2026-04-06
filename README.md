@@ -124,23 +124,27 @@ Purpose:
 
 Generate candidate sources relevant to a forecasting question.
 
-Expected tasks:
+Tasks:
 
-• build search queries
-• call search APIs
-• retrieve top results
+• LLM-based query decomposition (5-8 sub-queries per question)
+• Search execution via Tavily API (swappable backend)
+• Dashboard injection for known pathogens (CDC, WHO, etc.)
+• URL normalization and deduplication
+• Source tier scoring and aggregator flagging
 
-Expected outputs:
+Outputs:
 
 ```
 List[SearchResult]
 ```
 
-Example modules:
+Known limitations:
 
-search_engine.py
-query_builder.py
-search_clients/
+• English-only for v1. Francophone Africa, Lusophone, and Spanish-speaking
+  regions are systematically under-covered. This must be addressed before
+  live Fall deployment if time allows.
+• Dashboard lookup is hardcoded (v1) and will need iteration after the first
+  benchmark run.
 
 ---
 
