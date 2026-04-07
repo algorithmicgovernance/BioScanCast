@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest bioscancast/tests/ -v)",
+      "Bash(python scripts/run_search_stage.py \"Will H5N1 cause more than 100 human cases in the US by December 2026?\" --pathogen h5n1 --region \"United States\")",
+      "Bash(xxd .env)",
+      "Bash(iconv -f UTF-16LE -t UTF-8 .env)",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install openai tavily-python python-dotenv)",
+      "Bash(grep -r \"TODO\\\\|FIXME\\\\|XXX\" 'C:\\\\Users\\\\samod8396\\\\local_documents\\\\AGF collab\\\\BioScanCast\\\\bioscancast\\\\stages\\\\search_stage' --include=*.py)",
+      "Bash(xargs -I {} basename {})",
+      "Bash(xargs basename:*)",
+      "Bash(grep -rn \"TODO\\\\|FIXME\\\\|XXX\\\\|FIXME\\\\|open question\\\\|Open question\" 'C:\\\\Users\\\\samod8396\\\\local_documents\\\\AGF collab\\\\BioScanCast\\\\bioscancast' --include=*.py)"
+    ]
+  }
+}
