@@ -1,24 +1,11 @@
-# HTTP client with streaming support
-httpx>=0.27,<1.0
+rank-bm25
+numpy
 
-# HTML main-content extraction (strips nav, ads, boilerplate)
-trafilatura>=1.12,<2.0
-
-# HTML parsing for heading hierarchy and table recovery
-# (transitive dep of trafilatura, pinned explicitly for direct usage)
-beautifulsoup4>=4.12,<5.0
-
-# PDF text and table extraction (imports as 'fitz')
-PyMuPDF>=1.24,<2.0
-
-# Fallback PDF table extraction for cases PyMuPDF mishandles
-pdfplumber>=0.11,<1.0
-
-# Approximate token counting (cl100k_base encoding)
-tiktoken>=0.7,<1.0
-
-# OpenAI API client (used by filtering stage LLM calls)
-openai>=1.0,<2.0
-
-# Testing
-pytest>=8.0,<9.0
+httpx>=0.27,<1.0 # HTTP client with streaming support
+trafilatura>=1.12,<2.0 # HTML main-content extraction (strips nav, ads, boilerplate)
+beautifulsoup4>=4.12,<5.0 # HTML parsing for heading hierarchy and table recovery (transitive dep of trafilatura, pinned explicitly for direct usage)
+PyMuPDF>=1.24,<2.0 # PDF text and table extraction (imports as 'fitz')
+pdfplumber>=0.11,<1.0 # Fallback PDF table extraction for cases PyMuPDF mishandles
+tiktoken>=0.7,<1.0 # Approximate token counting (cl100k_base encoding)
+openai>=1.0,<2.0 # OpenAI API client (used by filtering stage LLM calls)
+pytest>=8.0,<9.0 # Testing
