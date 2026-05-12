@@ -24,6 +24,8 @@ class ExtractionPipeline:
     def __init__(self, *, config: ExtractionConfig | None = None) -> None:
         self._config = config or ExtractionConfig()
         self._parsers = get_parsers(pdf_max_pages=self._config.pdf_max_pages)
+        # Lazily constructed on first PDF that reaches the refiner step.
+        self._docling_refiner = None
 
     def run(self, filtered_docs: List[FilteredDocument]) -> List[Document]:
         """Process documents in order of extraction_priority.
@@ -97,8 +99,28 @@ class ExtractionPipeline:
                 fetch_result=fetch_result,
             )
 
-        # Step 4: Convert ParsedContent → Document with chunks
+        # Step 3b: Docling table refiner (PDFs only, feature-flagged)
         document_type = self._detect_document_type(content_type)
+        if (
+            self._config.enable_docling_refiner
+            and document_type == "pdf"
+        ):
+            refiner = self._get_docling_refiner()
+            if refiner is not None:
+                try:
+                    parsed = refiner.refine(
+                        parsed,
+                        source_url=filtered_doc.url,
+                        content=fetch_result.content_bytes,
+                    )
+                except Exception as exc:
+                    logger.warning(
+                        "Docling refiner failed for %s: %s",
+                        filtered_doc.url,
+                        exc,
+                    )
+
+        # Step 4: Convert ParsedContent → Document with chunks
         chunks = self._build_chunks(parsed, doc_id)
 
         # Step 5: Normalize chunks
@@ -149,6 +171,23 @@ class ExtractionPipeline:
             extracted_dates=extracted_dates,
         )
 
+    def _get_docling_refiner(self):
+        """Lazily build (and cache) the Docling refiner.
+
+        Returns None if the heavy Docling imports or model load fail — the
+        pipeline then falls back to the in-tree parser output unchanged.
+        """
+        if self._docling_refiner is not None:
+            return self._docling_refiner
+        try:
+            from .docling_refiner import DoclingTableRefiner
+
+            self._docling_refiner = DoclingTableRefiner(self._config)
+        except Exception as exc:
+            logger.warning("Docling refiner unavailable, continuing without: %s", exc)
+            self._docling_refiner = None
+        return self._docling_refiner
+
     def _make_failed_document(
         self,
         fdoc: FilteredDocument,
@@ -191,6 +230,7 @@ class ExtractionPipeline:
                     page_number=section.page_number,
                     table_data=section.table_rows,
                     token_count=approx_token_count(section.text),
+                    extractor=section.extractor,
                 )
             )
         return chunks
