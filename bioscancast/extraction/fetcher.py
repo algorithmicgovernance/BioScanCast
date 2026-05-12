@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Optional
 
-import httpx
+from curl_cffi import requests as curl_requests
 
 from .config import ExtractionConfig
 
@@ -52,20 +52,48 @@ def fetch(
     *,
     config: ExtractionConfig | None = None,
 ) -> FetchResult:
-    """Fetch a URL and return the result. Never raises on network errors."""
+    """Fetch a URL and return the result. Never raises on network errors.
+
+    Uses curl_cffi with a browser TLS fingerprint (configurable via
+    ExtractionConfig.impersonate) to avoid Cloudflare/JA3-based blocks that
+    reject httpx and requests. The impersonation profile sets a matching
+    User-Agent automatically.
+    """
     cfg = config or ExtractionConfig()
     fetched_at = datetime.now(timezone.utc)
 
     try:
-        with httpx.Client(
-            follow_redirects=True,
-            timeout=httpx.Timeout(cfg.fetch_timeout_seconds),
-            headers={"User-Agent": cfg.user_agent},
-        ) as client:
-            with client.stream("GET", url) as response:
-                # Check Content-Length header first
-                content_length = response.headers.get("content-length")
-                if content_length and int(content_length) > cfg.fetch_max_bytes:
+        # curl_cffi's streaming Response is not a context manager in the
+        # installed version, so we close it explicitly in a finally block.
+        response = curl_requests.get(
+            url,
+            stream=True,
+            timeout=cfg.fetch_timeout_seconds,
+            impersonate=cfg.impersonate,
+            allow_redirects=True,
+        )
+        try:
+            content_length = response.headers.get("content-length")
+            if content_length and int(content_length) > cfg.fetch_max_bytes:
+                return FetchResult(
+                    url=url,
+                    final_url=str(response.url),
+                    status_code=response.status_code,
+                    content_type=_normalize_content_type(
+                        response.headers.get("content-type")
+                    ),
+                    content_bytes=None,
+                    fetched_at=fetched_at,
+                    error=f"Content-Length {content_length} exceeds max {cfg.fetch_max_bytes} bytes",
+                )
+
+            chunks = []
+            total = 0
+            # chunk_size is not honoured by curl_cffi (warns); curl picks
+            # the buffer size internally.
+            for chunk in response.iter_content():
+                total += len(chunk)
+                if total > cfg.fetch_max_bytes:
                     return FetchResult(
                         url=url,
                         final_url=str(response.url),
@@ -75,47 +103,31 @@ def fetch(
                         ),
                         content_bytes=None,
                         fetched_at=fetched_at,
-                        error=f"Content-Length {content_length} exceeds max {cfg.fetch_max_bytes} bytes",
+                        error=f"Response exceeded max {cfg.fetch_max_bytes} bytes during streaming",
                     )
+                chunks.append(chunk)
 
-                # Stream and accumulate bytes, checking size limit
-                chunks = []
-                total = 0
-                for chunk in response.iter_bytes(chunk_size=65536):
-                    total += len(chunk)
-                    if total > cfg.fetch_max_bytes:
-                        return FetchResult(
-                            url=url,
-                            final_url=str(response.url),
-                            status_code=response.status_code,
-                            content_type=_normalize_content_type(
-                                response.headers.get("content-type")
-                            ),
-                            content_bytes=None,
-                            fetched_at=fetched_at,
-                            error=f"Response exceeded max {cfg.fetch_max_bytes} bytes during streaming",
-                        )
-                    chunks.append(chunk)
+            content_bytes = b"".join(chunks)
+            raw_ct = _normalize_content_type(
+                response.headers.get("content-type")
+            )
 
-                content_bytes = b"".join(chunks)
-                raw_ct = _normalize_content_type(
-                    response.headers.get("content-type")
-                )
+            # Fall back to magic-byte sniffing if header is
+            # missing or generic (e.g. application/octet-stream)
+            if not raw_ct or raw_ct == "application/octet-stream":
+                raw_ct = _sniff_content_type(content_bytes) or raw_ct
 
-                # Fall back to magic-byte sniffing if header is
-                # missing or generic (e.g. application/octet-stream)
-                if not raw_ct or raw_ct == "application/octet-stream":
-                    raw_ct = _sniff_content_type(content_bytes) or raw_ct
-
-                return FetchResult(
-                    url=url,
-                    final_url=str(response.url),
-                    status_code=response.status_code,
-                    content_type=raw_ct,
-                    content_bytes=content_bytes,
-                    fetched_at=fetched_at,
-                    error=None,
-                )
+            return FetchResult(
+                url=url,
+                final_url=str(response.url),
+                status_code=response.status_code,
+                content_type=raw_ct,
+                content_bytes=content_bytes,
+                fetched_at=fetched_at,
+                error=None,
+            )
+        finally:
+            response.close()
 
     except Exception as exc:
         logger.warning("Fetch failed for %s: %s", url, exc)
