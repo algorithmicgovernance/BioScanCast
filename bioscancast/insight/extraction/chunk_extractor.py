@@ -109,6 +109,7 @@ def extract_facts_from_chunk(
     llm_client: LLMClient,
     *,
     model: str,
+    max_tokens: int = 4096,
 ) -> tuple[list[InsightRecord], LLMResponse]:
     """Extract structured facts from a single chunk via LLM.
 
@@ -118,6 +119,8 @@ def extract_facts_from_chunk(
         question: Forecast question for context.
         llm_client: LLM client (fake or real).
         model: Model identifier for extraction.
+        max_tokens: Per-call output-token cap. Raise this if the model is
+            truncating dense pages mid-JSON.
 
     Returns:
         Tuple of (list of InsightRecords, LLMResponse for budget tracking).
@@ -130,6 +133,7 @@ def extract_facts_from_chunk(
         user=user,
         schema=schema,
         model=model,
+        max_tokens=max_tokens,
     )
 
     facts_raw = response.content.get("facts", [])
