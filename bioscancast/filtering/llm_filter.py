@@ -1,14 +1,11 @@
 from __future__ import annotations
 
 import json
-from typing import Dict, List, Protocol
+from typing import Dict, List
+
+from bioscancast.llm.client import LLMClient
 
 from .models import FilterDecision, ForecastQuestion, SearchResult
-
-
-class LLMClient(Protocol):
-    def generate_json(self, prompt: str) -> dict:
-        ...
 
 
 def build_filter_prompt(
