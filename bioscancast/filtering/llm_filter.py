@@ -20,7 +20,8 @@ def build_filter_prompt(
             "You are filtering search results for a biosecurity forecasting pipeline. "
             "Keep only candidates likely to contain relevant factual evidence for forecasting. "
             "Prefer official, primary, recent, and event-specific sources. "
-            "Reject low-information, generic, duplicated, or weakly relevant pages."
+            "Reject low-information, generic, duplicated, or weakly relevant pages. "
+            "Return your response as JSON matching the output_schema below."
         ),
         "question": {
             "id": question.id,
