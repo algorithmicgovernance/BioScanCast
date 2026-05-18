@@ -38,6 +38,9 @@ class DocumentChunk:
     token_count: Optional[int] = None
     """Approximate token count (tokeniser-dependent)."""
 
+    extractor: Optional[str] = None
+    """Backend that produced this chunk ('pymupdf', 'pdfplumber', 'docling', 'trafilatura', ...)."""
+
 
 @dataclass
 class Document:

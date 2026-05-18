@@ -67,12 +67,15 @@ class PdfParser:
 
             # Extract tables with PyMuPDF
             tables_on_page = self._extract_tables_pymupdf(page)
+            table_extractor = "pymupdf"
 
             # If PyMuPDF found no tables, try pdfplumber as fallback
             if not tables_on_page and self._page_looks_tabular(page):
                 tables_on_page = self._extract_tables_pdfplumber(
                     content, page_num
                 )
+                if tables_on_page:
+                    table_extractor = "pdfplumber"
 
             for table_rows in tables_on_page:
                 sections.append(
@@ -82,6 +85,7 @@ class PdfParser:
                         text="",
                         chunk_type="table",
                         table_rows=table_rows,
+                        extractor=table_extractor,
                     )
                 )
 
@@ -129,6 +133,7 @@ class PdfParser:
                                     page_number=page_number,
                                     text=combined,
                                     chunk_type="prose",
+                                    extractor="pymupdf",
                                 )
                             )
                         current_text_parts = []
@@ -147,6 +152,7 @@ class PdfParser:
                             page_number=page_number,
                             text=combined,
                             chunk_type="prose",
+                            extractor="pymupdf",
                         )
                     )
 

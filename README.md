@@ -208,6 +208,21 @@ html_parser.py
 pdf_parser.py
 text_cleaner.py
 
+Note on PDF table extraction (Docling refiner):
+
+The extraction stage uses an in-tree PDF parser (PyMuPDF + pdfplumber) as the
+default and a Docling TableFormer post-pass to refine table sections when an
+in-tree result looks broken or when the source URL is on a curated allowlist
+of publishers whose tables are known to be hard (CDC MMWR, certain WHO
+situation reports).
+
+The first PDF that triggers the refiner downloads the Docling layout and
+TableFormer models (~40 MB) to the HuggingFace cache (`~/.cache/huggingface/`)
+and holds them in memory (~1.5 GB) for the lifetime of the process. The
+feature is toggled with `ExtractionConfig.enable_docling_refiner` — when
+disabled, no Docling imports occur and behaviour matches the pre-refiner
+pipeline exactly.
+
 ---
 
 ## Insight Stage
