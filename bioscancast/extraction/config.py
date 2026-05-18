@@ -34,3 +34,4 @@ class ExtractionConfig:
 
     docling_sparse_cell_threshold: float = 0.5
     """Non-empty-cell ratio below which a table is flagged as suspect and triggers Docling."""
+    impersonate: str = "chrome"
