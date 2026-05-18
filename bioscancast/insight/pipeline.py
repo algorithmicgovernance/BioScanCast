@@ -120,6 +120,7 @@ class InsightPipeline:
                     question,
                     self._llm,
                     model=config.cheap_model,
+                    max_tokens=config.extraction_max_output_tokens,
                 )
                 budget.record(response)
                 all_records.extend(records)

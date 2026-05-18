@@ -1,14 +1,11 @@
 from __future__ import annotations
 
 import json
-from typing import Dict, List, Protocol
+from typing import Dict, List
+
+from bioscancast.llm.client import LLMClient
 
 from .models import FilterDecision, ForecastQuestion, SearchResult
-
-
-class LLMClient(Protocol):
-    def generate_json(self, prompt: str) -> dict:
-        ...
 
 
 def build_filter_prompt(
@@ -20,7 +17,8 @@ def build_filter_prompt(
             "You are filtering search results for a biosecurity forecasting pipeline. "
             "Keep only candidates likely to contain relevant factual evidence for forecasting. "
             "Prefer official, primary, recent, and event-specific sources. "
-            "Reject low-information, generic, duplicated, or weakly relevant pages."
+            "Reject low-information, generic, duplicated, or weakly relevant pages. "
+            "Return your response as JSON matching the output_schema below."
         ),
         "question": {
             "id": question.id,

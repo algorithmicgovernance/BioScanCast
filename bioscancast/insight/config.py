@@ -16,6 +16,7 @@ INSIGHT_CONFIG = {
     "embedding_model": "text-embedding-3-small",
     "max_input_tokens_per_run": 500_000,
     "max_chunks_per_document": 12,
+    "extraction_max_output_tokens": 4096,
 }
 
 
@@ -32,6 +33,10 @@ class InsightConfig:
     embedding_model: str = "text-embedding-3-small"
     max_input_tokens_per_run: int = 500_000
     max_chunks_per_document: int = 12
+    extraction_max_output_tokens: int = 4096
+    """Per-call cap on LLM output tokens for chunk extraction. The default
+    1024 ceiling in LLMClient.generate_json truncates dense pages (e.g. the
+    ECDC CDTR) mid-JSON; 4096 leaves comfortable headroom."""
 
     @classmethod
     def from_dict(cls, d: dict) -> InsightConfig:
