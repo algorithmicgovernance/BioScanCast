@@ -516,6 +516,16 @@ These documents support research publication and developer onboarding.
 
 ---
 
+# Dependencies
+
+Python dependencies are listed in `requirements.txt`. A few notes worth
+flagging for contributors working on the extraction stage:
+
+- **curl_cffi** is used for all HTTP fetches in `bioscancast/extraction/fetcher.py`. It wraps libcurl with browser TLS-fingerprint impersonation (Chrome by default), which lets us reach Cloudflare-fronted news sources (e.g. Reuters) that reject the default Python TLS stack used by `httpx`/`requests` with HTTP 401/403. The impersonation profile is configurable via `ExtractionConfig.impersonate`. See [issue #18](https://github.com/algorithmicgovernance/BioScanCast/issues/18) for background.
+- **Live network tests** are marked `@pytest.mark.live` and skipped by default. Run them with `pytest --live` to verify the fetcher still works against real CDN-fronted endpoints.
+
+---
+
 # Running the Pipeline
 
 Example:

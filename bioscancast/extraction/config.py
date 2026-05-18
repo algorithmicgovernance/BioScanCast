@@ -10,6 +10,4 @@ class ExtractionConfig:
     pdf_max_pages: int = 100
     chunk_target_tokens: int = 800
     chunk_max_tokens: int = 1500
-    user_agent: str = (
-        "BioScanCast/0.1 (+https://github.com/algorithmicgovernance/BioScanCast)"
-    )
+    impersonate: str = "chrome"
