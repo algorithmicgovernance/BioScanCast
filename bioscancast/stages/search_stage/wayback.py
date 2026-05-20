@@ -19,7 +19,9 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import socket
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -50,11 +52,49 @@ RETRY_BACKOFF_SECONDS: tuple[float, ...] = (0, 10, 30, 90, 240)
 # Recoverable HTTP status codes that warrant a retry.
 _RECOVERABLE_STATUSES = {429, 500, 502, 503, 504}
 
+# Minimum interval between successive outbound CDX calls. Internet Archive
+# rate-limits CDX at ~60 req/min server-side; the widely-used edgi-govdata
+# Python client paces at ~0.8 req/s (1.25 s) by default. We sit at 2.0 s
+# (30 req/min) — comfortably under the server cap with headroom for bursts,
+# but ~2x throughput vs the initial conservative 4 s setting once we
+# confirmed the throttle eliminates 429s in practice. Override via env var
+# ``BIOSCANCAST_WAYBACK_MIN_INTERVAL_SECONDS`` for ad-hoc tuning.
+_DEFAULT_MIN_INTERVAL_SECONDS = 2.0
+_MIN_INTERVAL_ENV_VAR = "BIOSCANCAST_WAYBACK_MIN_INTERVAL_SECONDS"
+_throttle_lock = threading.Lock()
+_last_call_monotonic: float = 0.0
+
+
+def _min_interval_seconds() -> float:
+    raw = os.environ.get(_MIN_INTERVAL_ENV_VAR)
+    if raw is None:
+        return _DEFAULT_MIN_INTERVAL_SECONDS
+    try:
+        return float(raw)
+    except ValueError:
+        logger.warning(
+            "Invalid %s=%r; using default %.1fs",
+            _MIN_INTERVAL_ENV_VAR, raw, _DEFAULT_MIN_INTERVAL_SECONDS,
+        )
+        return _DEFAULT_MIN_INTERVAL_SECONDS
+
 
 def _sleep(seconds: float) -> None:
     """Indirection so tests can monkeypatch a no-op sleep."""
     if seconds > 0:
         time.sleep(seconds)
+
+
+def _throttle() -> None:
+    """Block until the configured min interval since the last CDX call has elapsed."""
+    global _last_call_monotonic
+    min_interval = _min_interval_seconds()
+    with _throttle_lock:
+        elapsed = time.monotonic() - _last_call_monotonic
+        wait = min_interval - elapsed
+        if wait > 0:
+            _sleep(wait)
+        _last_call_monotonic = time.monotonic()
 
 
 def _cdx_query(params: dict) -> Optional[list]:
@@ -72,6 +112,7 @@ def _cdx_query(params: dict) -> Optional[list]:
                 pre_delay, attempt, len(RETRY_BACKOFF_SECONDS),
             )
             _sleep(pre_delay)
+        _throttle()
         try:
             req = urllib.request.Request(
                 full_url, headers={"User-Agent": "BioScanCast/replay (+wayback-cdx)"}

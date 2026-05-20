@@ -99,3 +99,52 @@ class TestCdxRetry:
         ):
             data = wayback._cdx_query({"url": "https://example.com/"})
         assert data == []
+
+
+class TestCdxThrottle:
+    """Proactive min-interval pacing in front of every urlopen."""
+
+    def test_throttle_paces_successive_calls(self):
+        sleep_calls: list[float] = []
+        ok = b'[["urlkey","timestamp","original"],["a","20240101120000","b"]]'
+        with patch.object(wayback, "_last_call_monotonic", 0.0), patch.object(
+            wayback, "_min_interval_seconds", lambda: 5.0
+        ), patch.object(wayback, "_sleep", lambda s: sleep_calls.append(s)), patch.object(
+            wayback, "RETRY_BACKOFF_SECONDS", (0,)
+        ), patch(
+            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            side_effect=[_ok_response(ok), _ok_response(ok)],
+        ):
+            wayback._cdx_query({"url": "https://example.com/a"})
+            wayback._cdx_query({"url": "https://example.com/b"})
+        positive_waits = [s for s in sleep_calls if s > 0]
+        assert len(positive_waits) == 1
+        assert 4.0 < positive_waits[0] <= 5.0
+
+    def test_throttle_fires_before_each_retry(self):
+        # Throttle paces before every urlopen — including retried ones — so a
+        # 503 → OK sequence yields two _throttle() calls, the second of which
+        # sleeps because the first urlopen just bumped _last_call_monotonic.
+        sleep_calls: list[float] = []
+        ok = b'[["urlkey","timestamp","original"]]'
+        with patch.object(wayback, "_last_call_monotonic", 0.0), patch.object(
+            wayback, "_min_interval_seconds", lambda: 3.0
+        ), patch.object(wayback, "_sleep", lambda s: sleep_calls.append(s)), patch.object(
+            wayback, "RETRY_BACKOFF_SECONDS", (0, 0, 0)
+        ), patch(
+            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            side_effect=[_http_error(503), _ok_response(ok)],
+        ):
+            data = wayback._cdx_query({"url": "https://example.com/"})
+        assert data == []
+        positive_waits = [s for s in sleep_calls if s > 0]
+        assert len(positive_waits) == 1
+        assert 2.0 < positive_waits[0] <= 3.0
+
+    def test_min_interval_env_override(self, monkeypatch):
+        monkeypatch.setenv("BIOSCANCAST_WAYBACK_MIN_INTERVAL_SECONDS", "1.5")
+        assert wayback._min_interval_seconds() == 1.5
+        monkeypatch.setenv("BIOSCANCAST_WAYBACK_MIN_INTERVAL_SECONDS", "not-a-number")
+        assert wayback._min_interval_seconds() == wayback._DEFAULT_MIN_INTERVAL_SECONDS
+        monkeypatch.delenv("BIOSCANCAST_WAYBACK_MIN_INTERVAL_SECONDS", raising=False)
+        assert wayback._min_interval_seconds() == wayback._DEFAULT_MIN_INTERVAL_SECONDS

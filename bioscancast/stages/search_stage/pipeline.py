@@ -41,6 +41,26 @@ _NON_CONTENT_EXTENSIONS: set[str] = {".zip", ".exe", ".msi", ".dmg", ".tar", ".g
 _DEFAULT_HISTORICAL_LOOKBACK_DAYS = 365
 
 
+def _should_use_wayback_for_recovery(r: SearchResult) -> bool:
+    """Selective gate for the Wayback first-seen leg of the date-recovery chain.
+
+    Wayback CDX is rate-limited (~60 req/min server-side) and even with
+    proactive throttling each call costs us a few seconds. For undated
+    results that would be dropped on quality grounds anyway — aggregators
+    and unknown-tier domains — there is no recall benefit to paying that
+    cost. The URL-slug regex and Last-Modified strategies still run; only
+    the Wayback leg is gated.
+    """
+    domain = extract_domain(r.url)
+    if is_aggregator_domain(domain):
+        logger.debug("Date recovery: skipping Wayback for aggregator %s", domain)
+        return False
+    if (r.source_tier or "").lower() == "unknown":
+        logger.debug("Date recovery: skipping Wayback for unknown-tier %s", domain)
+        return False
+    return True
+
+
 def _compute_freshness(
     published_date: Optional[datetime],
     *,
@@ -443,6 +463,7 @@ class SearchStagePipeline:
         dropped_post_cutoff = 0
         dropped_undatable = 0
         recovered = 0
+        wayback_skipped = 0
         kept: list[SearchResult] = []
         for r in results:
             if r.published_date is not None:
@@ -456,8 +477,16 @@ class SearchStagePipeline:
                 kept.append(r)
                 continue
 
-            # Undated — try the recovery chain
-            recovered_date, source = recover_published_date(r.url)
+            # Undated — try the recovery chain. Skip the Wayback first-seen
+            # leg for aggregator domains and unknown-tier sources: those
+            # results would be dropped on quality grounds anyway, and the
+            # CDX call (even with throttling) costs us several seconds each.
+            use_wayback = _should_use_wayback_for_recovery(r)
+            if not use_wayback:
+                wayback_skipped += 1
+            recovered_date, source = recover_published_date(
+                r.url, use_wayback=use_wayback
+            )
             if recovered_date is None:
                 dropped_undatable += 1
                 logger.debug(
@@ -478,9 +507,9 @@ class SearchStagePipeline:
 
         logger.info(
             "Cutoff filter: kept=%d, recovered=%d, dropped_post_cutoff=%d, "
-            "dropped_undatable=%d (cutoff=%s)",
+            "dropped_undatable=%d, wayback_skipped=%d (cutoff=%s)",
             len(kept), recovered, dropped_post_cutoff, dropped_undatable,
-            as_of.isoformat(),
+            wayback_skipped, as_of.isoformat(),
         )
         return kept
 

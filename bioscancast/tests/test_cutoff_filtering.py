@@ -8,11 +8,12 @@ from datetime import datetime, timezone
 from typing import List
 from unittest.mock import patch
 
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.filtering.models import ForecastQuestion, SearchResult
 from bioscancast.stages.search_stage.backends.base import RawSearchResult
 from bioscancast.stages.search_stage.pipeline import (
     SearchStagePipeline,
     _parse_published_date,
+    _should_use_wayback_for_recovery,
 )
 
 
@@ -270,6 +271,121 @@ def test_historical_lookback_days_is_configurable():
     pipeline.run(_make_question(cutoff))
     starts = [s for s in backend.start_dates_seen if s is not None]
     assert starts and all(s == "2024-05-02" for s in starts)  # 30 days before
+
+
+def _make_search_result(url: str, source_tier: str = "trusted_media") -> SearchResult:
+    return SearchResult(
+        id="r1",
+        question_id="q1",
+        query_id="sq1",
+        engine="fake",
+        url=url,
+        canonical_url=None,
+        domain="",
+        title="t",
+        snippet="",
+        rank=1,
+        retrieved_at=datetime(2024, 1, 1, tzinfo=timezone.utc),
+        source_tier=source_tier,
+    )
+
+
+class TestSelectiveRecoveryGate:
+    """The Wayback-leg gate on the date-recovery chain."""
+
+    def test_official_tier_uses_wayback(self):
+        r = _make_search_result(
+            "https://www.cdc.gov/bird-flu/situation-summary/", source_tier="official"
+        )
+        assert _should_use_wayback_for_recovery(r) is True
+
+    def test_academic_tier_uses_wayback(self):
+        r = _make_search_result(
+            "https://www.nature.com/articles/xyz", source_tier="academic"
+        )
+        assert _should_use_wayback_for_recovery(r) is True
+
+    def test_unknown_tier_skips_wayback(self):
+        r = _make_search_result(
+            "https://obscure-site.example/article", source_tier="unknown"
+        )
+        assert _should_use_wayback_for_recovery(r) is False
+
+    def test_aggregator_domain_skips_wayback(self):
+        # metaculus.com is in AGGREGATOR_DOMAINS regardless of tier label.
+        r = _make_search_result(
+            "https://www.metaculus.com/questions/12345/",
+            source_tier="trusted_media",
+        )
+        assert _should_use_wayback_for_recovery(r) is False
+
+
+def test_aggregator_undated_recovery_skips_wayback():
+    """End-to-end: an undated aggregator result with no slug date routes to
+    recover_published_date with use_wayback=False, so the Wayback leg never
+    fires for it."""
+    cutoff = datetime(2024, 6, 1, tzinfo=timezone.utc)
+    backend_results = [
+        RawSearchResult(
+            url="https://www.metaculus.com/questions/abc",  # known aggregator
+            title="Aggregator forecast",
+            snippet="",
+            rank=1,
+            published_date=None,
+        ),
+    ]
+    pipeline = SearchStagePipeline(
+        search_backend=_FakeBackend(backend_results),
+        llm_client=_FakeLLM(),
+        backend_name="fake",
+    )
+    with patch(
+        "bioscancast.stages.search_stage.pipeline.recover_published_date",
+        return_value=(None, None),
+    ) as mock_rec:
+        pipeline.run(_make_question(cutoff))
+    # The recovery function was called, but with use_wayback=False.
+    assert mock_rec.called
+    # At least one of the calls was for the aggregator URL with use_wayback=False.
+    aggregator_calls = [
+        c for c in mock_rec.call_args_list
+        if c.args and "metaculus.com" in c.args[0]
+    ]
+    assert aggregator_calls
+    for call in aggregator_calls:
+        assert call.kwargs.get("use_wayback") is False
+
+
+def test_official_undated_recovery_still_tries_wayback():
+    """A tier-1 official domain with no slug date should still hit the
+    Wayback leg of recovery (i.e., use_wayback=True)."""
+    cutoff = datetime(2024, 6, 1, tzinfo=timezone.utc)
+    backend_results = [
+        RawSearchResult(
+            url="https://www.cdc.gov/some/article",  # tier 1 official
+            title="CDC article",
+            snippet="",
+            rank=1,
+            published_date=None,
+        ),
+    ]
+    pipeline = SearchStagePipeline(
+        search_backend=_FakeBackend(backend_results),
+        llm_client=_FakeLLM(),
+        backend_name="fake",
+    )
+    with patch(
+        "bioscancast.stages.search_stage.pipeline.recover_published_date",
+        return_value=(None, None),
+    ) as mock_rec:
+        pipeline.run(_make_question(cutoff))
+    cdc_calls = [
+        c for c in mock_rec.call_args_list
+        if c.args and "cdc.gov" in c.args[0]
+    ]
+    assert cdc_calls
+    for call in cdc_calls:
+        assert call.kwargs.get("use_wayback") is True
 
 
 def test_cutoff_applied_persisted_on_results():
