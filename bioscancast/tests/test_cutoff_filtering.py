@@ -70,9 +70,11 @@ class _FakeBackend:
     def __init__(self, results: List[RawSearchResult]):
         self._results = results
         self.end_dates_seen: list = []
+        self.start_dates_seen: list = []
 
-    def search(self, query, max_results=10, end_date=None):
+    def search(self, query, max_results=10, end_date=None, start_date=None):
         self.end_dates_seen.append(end_date)
+        self.start_dates_seen.append(start_date)
         return list(self._results)
 
 
@@ -200,8 +202,74 @@ def test_live_mode_unchanged():
     results = pipeline.run(_make_question(as_of=None))
     # Undated result MUST be kept in live mode (the cutoff filter is off)
     assert any(r.url == "https://news.example.com/x" for r in results)
-    # And backend received end_date=None
+    # And backend received end_date=None AND start_date=None — Tavily ignores
+    # end_date when start_date is missing, so the pipeline must keep them
+    # both unset in live mode.
     assert all(d is None for d in backend.end_dates_seen)
+    assert all(d is None for d in backend.start_dates_seen)
+
+
+def test_historical_mode_forwards_start_and_end_date_pair():
+    """Tavily honors end_date only when start_date is also set. The pipeline
+    must synthesize start_date = as_of - historical_lookback_days and pass
+    both to the backend on every search call."""
+    cutoff = datetime(2024, 6, 1, tzinfo=timezone.utc)
+    backend = _FakeBackend(
+        [
+            RawSearchResult(
+                url="https://news.example.com/x",
+                title="X",
+                snippet="",
+                rank=1,
+                published_date="2024-01-01",
+            )
+        ]
+    )
+    pipeline = SearchStagePipeline(
+        search_backend=backend,
+        llm_client=_FakeLLM(),
+        backend_name="fake",
+        historical_lookback_days=365,
+    )
+    pipeline.run(_make_question(cutoff))
+    # Every search call in historical mode must carry BOTH bounds.
+    paired = [
+        (s, e)
+        for s, e in zip(backend.start_dates_seen, backend.end_dates_seen)
+        if s is not None or e is not None
+    ]
+    assert paired, "expected at least one date-bounded search in historical mode"
+    for start, end in paired:
+        assert start is not None and end is not None, (
+            "Tavily ignores end_date alone — pipeline must pass the pair"
+        )
+        assert end == "2024-06-01"
+        assert start == "2023-06-02"  # 365 days before 2024-06-01
+
+
+def test_historical_lookback_days_is_configurable():
+    """Override the default 365-day lookback via the pipeline constructor."""
+    cutoff = datetime(2024, 6, 1, tzinfo=timezone.utc)
+    backend = _FakeBackend(
+        [
+            RawSearchResult(
+                url="https://news.example.com/x",
+                title="X",
+                snippet="",
+                rank=1,
+                published_date="2024-01-01",
+            )
+        ]
+    )
+    pipeline = SearchStagePipeline(
+        search_backend=backend,
+        llm_client=_FakeLLM(),
+        backend_name="fake",
+        historical_lookback_days=30,
+    )
+    pipeline.run(_make_question(cutoff))
+    starts = [s for s in backend.start_dates_seen if s is not None]
+    assert starts and all(s == "2024-05-02" for s in starts)  # 30 days before
 
 
 def test_cutoff_applied_persisted_on_results():

@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import logging
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from typing import List, Optional
 
@@ -31,6 +31,14 @@ logger = logging.getLogger(__name__)
 
 # File extensions that indicate non-content resources
 _NON_CONTENT_EXTENSIONS: set[str] = {".zip", ".exe", ".msi", ".dmg", ".tar", ".gz", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".mp4", ".mp3"}
+
+# Default lookback window for historical-replay mode. Tavily's news endpoint
+# requires both start_date and end_date to be set together (passing end_date
+# alone is silently ignored — see ``backends/tavily_backend.py``). We synthesize
+# a start_date 12 months before the cutoff: empirically (2026-05-20) this gives
+# 20/20 native pre-cutoff hit rate on the resolved corpus without leaking past
+# the cutoff. Tune via ``historical_lookback_days`` on the pipeline.
+_DEFAULT_HISTORICAL_LOOKBACK_DAYS = 365
 
 
 def _compute_freshness(
@@ -132,6 +140,7 @@ class SearchStagePipeline:
         min_post_filter_results: int = 10,
         top_up_results_per_query: int = 50,
         max_top_up_rounds: int = 1,
+        historical_lookback_days: int = _DEFAULT_HISTORICAL_LOOKBACK_DAYS,
     ) -> None:
         self._backend = search_backend
         self._llm = llm_client
@@ -145,6 +154,10 @@ class SearchStagePipeline:
         self._min_post_filter_results = min_post_filter_results
         self._top_up_results_per_query = top_up_results_per_query
         self._max_top_up_rounds = max_top_up_rounds
+        # In historical-replay mode the backend receives end_date=as_of_date
+        # and start_date=as_of_date-lookback. Tavily requires the pair; see
+        # the module-level note on ``_DEFAULT_HISTORICAL_LOOKBACK_DAYS``.
+        self._historical_lookback_days = historical_lookback_days
 
     def run(self, question: ForecastQuestion) -> List[SearchResult]:
         """Execute the full search stage pipeline."""
@@ -184,10 +197,11 @@ class SearchStagePipeline:
 
         # 6b. Top-up: in historical mode only, if we're below the survivor
         # threshold, run additional rounds with a larger results_per_query
-        # to fish for older content. Tavily's end_date doesn't actually
-        # filter (see tavily_backend.py), so the candidate pool is heavily
-        # biased toward post-cutoff content for recent topics — top-up is
-        # what makes historical mode actually return usable results.
+        # to fish for more in-window content. With the start_date+end_date
+        # pair now forwarded to Tavily (see backends/tavily_backend.py),
+        # the candidate pool is already date-filtered upstream; top-up
+        # mostly compensates for results dropped by deduplication and the
+        # blocked-domain filter.
         if as_of is not None:
             rounds_done = 0
             while (
@@ -285,10 +299,12 @@ class SearchStagePipeline:
     @staticmethod
     def _apply_year_hint(query: str, as_of: Optional[datetime]) -> str:
         """In historical mode, append the cutoff year to the query so the
-        search backend's lexical match biases toward dated content. Empirically
-        Tavily ignores the ``end_date`` parameter, so query-text steering is
-        what actually drags results toward the right time period. No-op in
-        live mode."""
+        search backend's lexical match biases toward dated content. The
+        start_date+end_date pair forwarded to Tavily already filters by
+        publication date, but the year hint reinforces topical relevance
+        within the window (Tavily's in-window ranking can still surface
+        irrelevant dated-correct results on cold or sparse queries). No-op
+        in live mode."""
         if as_of is None:
             return query
         year = as_of.year
@@ -304,9 +320,16 @@ class SearchStagePipeline:
         max_results: Optional[int] = None,
     ) -> List[RawSearchResult]:
         # TODO: multilingual support
-        # end_date is passed for Protocol compliance but TavilyBackend
-        # explicitly does not forward it (see backends/tavily_backend.py).
-        end_date_str = as_of_date.strftime("%Y-%m-%d") if as_of_date else None
+        # In historical-replay mode we pass BOTH start_date and end_date.
+        # Tavily silently ignores end_date when start_date is missing
+        # (verified 2026-05-20, specs/tavily-investigation-findings.md).
+        end_date_str: Optional[str] = None
+        start_date_str: Optional[str] = None
+        if as_of_date is not None:
+            end_date_str = as_of_date.strftime("%Y-%m-%d")
+            start_date_str = (
+                as_of_date - timedelta(days=self._historical_lookback_days)
+            ).strftime("%Y-%m-%d")
         effective_max = max_results if max_results is not None else self._results_per_query
         if self._cache:
             cached = self._cache.get(self._backend_name, query, as_of_date=as_of_date)
@@ -315,7 +338,10 @@ class SearchStagePipeline:
                 return cached
 
         results = self._backend.search(
-            query, max_results=effective_max, end_date=end_date_str
+            query,
+            max_results=effective_max,
+            end_date=end_date_str,
+            start_date=start_date_str,
         )
 
         if self._cache:

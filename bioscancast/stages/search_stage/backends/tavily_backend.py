@@ -36,25 +36,38 @@ class TavilyBackend:
         query: str,
         max_results: int = 10,
         end_date: Optional[str] = None,
+        start_date: Optional[str] = None,
     ) -> List[RawSearchResult]:
-        # NOTE: end_date is accepted to satisfy the SearchBackend Protocol
-        # but is NOT forwarded to the Tavily SDK. Empirically (Feb 2025 test
-        # run on q1) the Tavily client returned articles dated well after
-        # the supplied end_date — the parameter is documented in the SDK
-        # signature but does not appear to actually filter on the result's
-        # published_date. The post-retrieval cutoff filter in the
-        # SearchStagePipeline is the real defense; do not be tempted to
-        # rely on this parameter without re-verifying Tavily's behavior.
+        # Date-window behavior (verified 2026-05-20, see
+        # ``specs/tavily-investigation-findings.md``): Tavily's news endpoint
+        # honors ``start_date`` + ``end_date`` only when **both** are passed
+        # together. Passing ``end_date`` alone is silently ignored and the
+        # results come back unfiltered. The pipeline is responsible for
+        # supplying a sensible ``start_date`` alongside any ``end_date``; if
+        # only ``end_date`` is passed here we drop it rather than send a
+        # request we know Tavily will misinterpret. The post-retrieval cutoff
+        # filter in ``SearchStagePipeline`` remains the authoritative defense.
         from tavily import TavilyClient  # lazy import to avoid hard dep at import time
 
         client = TavilyClient(api_key=self._api_key)
-        try:
-            response = client.search(
-                query=query,
-                max_results=max_results,
-                topic="news",
-                include_answer=False,
+        kwargs: dict = {
+            "query": query,
+            "max_results": max_results,
+            "topic": "news",
+            "include_answer": False,
+        }
+        if start_date and end_date:
+            kwargs["start_date"] = start_date
+            kwargs["end_date"] = end_date
+        elif end_date and not start_date:
+            logger.warning(
+                "TavilyBackend received end_date=%s without start_date; "
+                "dropping (Tavily ignores end_date alone). Cutoff filter "
+                "will still apply post-retrieval.",
+                end_date,
             )
+        try:
+            response = client.search(**kwargs)
         except Exception:
             logger.exception("Tavily search failed for query: %s", query)
             return []

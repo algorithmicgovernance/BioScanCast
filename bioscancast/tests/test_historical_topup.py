@@ -41,7 +41,7 @@ class _RecordingBackend:
     def set_fallback(self, results: List[RawSearchResult]) -> None:
         self._fallback = results
 
-    def search(self, query, max_results=10, end_date=None):
+    def search(self, query, max_results=10, end_date=None, start_date=None):
         self.calls.append((query, max_results))
         # Prefer exact match on (query, max_results); else any match on
         # query; else fallback.

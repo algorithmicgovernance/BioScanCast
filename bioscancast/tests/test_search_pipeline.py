@@ -79,7 +79,7 @@ class FakeSearchBackend:
         ]
 
     def search(
-        self, query: str, max_results: int = 10, end_date=None
+        self, query: str, max_results: int = 10, end_date=None, start_date=None
     ) -> List[RawSearchResult]:
         self.queries_received.append(query)
         return self._results

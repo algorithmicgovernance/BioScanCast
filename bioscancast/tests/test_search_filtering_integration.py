@@ -21,7 +21,7 @@ class RealisticFakeSearchBackend:
     simulating what a real search engine would return."""
 
     def search(
-        self, query: str, max_results: int = 10, end_date=None
+        self, query: str, max_results: int = 10, end_date=None, start_date=None
     ) -> List[RawSearchResult]:
         return [
             RawSearchResult(

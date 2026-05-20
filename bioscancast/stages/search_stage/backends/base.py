@@ -19,9 +19,12 @@ class RawSearchResult:
 class SearchBackend(Protocol):
     """Interface that all search backends must satisfy.
 
-    ``end_date`` is an optional YYYY-MM-DD upper bound used by historical-
-    replay mode. Backends that don't support it should accept and ignore it
-    (the post-retrieval cutoff filter in the pipeline will still apply).
+    ``start_date`` and ``end_date`` are optional YYYY-MM-DD bounds used by
+    historical-replay mode. Tavily's news endpoint requires the **pair** to be
+    set together (see ``tavily_backend.py``); passing ``end_date`` alone is
+    silently ignored. Backends that don't support either should accept and
+    ignore them — the post-retrieval cutoff filter in the pipeline will still
+    apply.
     """
 
     def search(
@@ -29,4 +32,5 @@ class SearchBackend(Protocol):
         query: str,
         max_results: int = 10,
         end_date: Optional[str] = None,
+        start_date: Optional[str] = None,
     ) -> List[RawSearchResult]: ...
