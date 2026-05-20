@@ -74,7 +74,7 @@ def _make_fetch_result(
 def _fake_fetch_factory(mapping: dict[str, FetchResult]):
     """Return a fetch function that looks up results by URL."""
 
-    def fake_fetch(url, *, config=None):
+    def fake_fetch(url, *, config=None, as_of_date=None):
         if url in mapping:
             return mapping[url]
         return _make_fetch_result(url, b"", error="not_found")

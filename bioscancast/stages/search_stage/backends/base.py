@@ -17,6 +17,16 @@ class RawSearchResult:
 
 
 class SearchBackend(Protocol):
-    """Interface that all search backends must satisfy."""
+    """Interface that all search backends must satisfy.
 
-    def search(self, query: str, max_results: int = 10) -> List[RawSearchResult]: ...
+    ``end_date`` is an optional YYYY-MM-DD upper bound used by historical-
+    replay mode. Backends that don't support it should accept and ignore it
+    (the post-retrieval cutoff filter in the pipeline will still apply).
+    """
+
+    def search(
+        self,
+        query: str,
+        max_results: int = 10,
+        end_date: Optional[str] = None,
+    ) -> List[RawSearchResult]: ...

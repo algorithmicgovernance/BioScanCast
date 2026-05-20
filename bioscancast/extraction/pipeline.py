@@ -19,10 +19,22 @@ logger = logging.getLogger(__name__)
 
 
 class ExtractionPipeline:
-    """Orchestrates document fetching, parsing, and chunk normalization."""
+    """Orchestrates document fetching, parsing, and chunk normalization.
 
-    def __init__(self, *, config: ExtractionConfig | None = None) -> None:
+    ``as_of_date`` opts the fetcher into Wayback-rewrite mode. See
+    ``bioscancast.extraction.fetcher.fetch`` for the strategy semantics
+    (live / wayback / wayback_fallback_to_live). The resulting strategy
+    and snapshot timestamp are copied onto each Document for audit.
+    """
+
+    def __init__(
+        self,
+        *,
+        config: ExtractionConfig | None = None,
+        as_of_date: Optional[datetime] = None,
+    ) -> None:
         self._config = config or ExtractionConfig()
+        self._as_of_date = as_of_date
         self._parsers = get_parsers(pdf_max_pages=self._config.pdf_max_pages)
         # Lazily constructed on first PDF that reaches the refiner step.
         self._docling_refiner = None
@@ -54,7 +66,11 @@ class ExtractionPipeline:
         doc_id = f"doc-{filtered_doc.result_id}"
 
         # Step 1: Fetch
-        fetch_result = fetch(filtered_doc.url, config=self._config)
+        fetch_result = fetch(
+            filtered_doc.url,
+            config=self._config,
+            as_of_date=self._as_of_date,
+        )
 
         if fetch_result.error or fetch_result.content_bytes is None:
             return self._make_failed_document(
@@ -169,6 +185,9 @@ class ExtractionPipeline:
             chunks=chunks,
             extracted_tables=extracted_tables,
             extracted_dates=extracted_dates,
+            fetch_strategy=fetch_result.fetch_strategy,
+            snapshot_timestamp=fetch_result.snapshot_timestamp,
+            cutoff_applied=self._as_of_date,
         )
 
     def _get_docling_refiner(self):
@@ -212,6 +231,9 @@ class ExtractionPipeline:
             error_message=error,
             http_status=fetch_result.status_code if fetch_result else None,
             content_type=fetch_result.content_type if fetch_result else None,
+            fetch_strategy=fetch_result.fetch_strategy if fetch_result else "live",
+            snapshot_timestamp=fetch_result.snapshot_timestamp if fetch_result else None,
+            cutoff_applied=self._as_of_date,
         )
 
     def _build_chunks(

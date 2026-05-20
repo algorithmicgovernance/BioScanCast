@@ -31,7 +31,20 @@ class TavilyBackend:
                 "TAVILY_API_KEY is required. Set it in your environment or pass api_key."
             )
 
-    def search(self, query: str, max_results: int = 10) -> List[RawSearchResult]:
+    def search(
+        self,
+        query: str,
+        max_results: int = 10,
+        end_date: Optional[str] = None,
+    ) -> List[RawSearchResult]:
+        # NOTE: end_date is accepted to satisfy the SearchBackend Protocol
+        # but is NOT forwarded to the Tavily SDK. Empirically (Feb 2025 test
+        # run on q1) the Tavily client returned articles dated well after
+        # the supplied end_date — the parameter is documented in the SDK
+        # signature but does not appear to actually filter on the result's
+        # published_date. The post-retrieval cutoff filter in the
+        # SearchStagePipeline is the real defense; do not be tempted to
+        # rely on this parameter without re-verifying Tavily's behavior.
         from tavily import TavilyClient  # lazy import to avoid hard dep at import time
 
         client = TavilyClient(api_key=self._api_key)

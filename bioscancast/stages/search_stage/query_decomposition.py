@@ -88,16 +88,29 @@ def classify_question_type(question: ForecastQuestion, llm_client: LLMClient) ->
         return "unknown"
 
 
-def _build_decomposition_prompt(question: ForecastQuestion, question_type: str) -> str:
+def _build_decomposition_prompt(
+    question: ForecastQuestion,
+    question_type: str,
+    historical_roleplay: bool = False,
+) -> str:
     axes = AXES_BY_TYPE.get(question_type, list(VALID_AXES))
+    task_lines = [
+        "Decompose this biosecurity forecast question into 5-8 search-engine-optimised "
+        "sub-queries. Each sub-query should be 2-8 words and target a specific information "
+        "axis. Return strict JSON: {\"sub_queries\": [{\"text\": \"...\", \"axis\": \"...\"}]}. "
+        "No prose."
+    ]
+    if historical_roleplay and question.as_of_date is not None:
+        task_lines.append(
+            "IMPORTANT: Generate sub-queries as if today were "
+            f"{question.as_of_date.date().isoformat()}. Do not assume knowledge "
+            "of events, named entities, or facts that you only learned about "
+            "after that date. Phrase queries in terms a forecaster on that "
+            "date would have used."
+        )
     return json.dumps(
         {
-            "task": (
-                "Decompose this biosecurity forecast question into 5-8 search-engine-optimised "
-                "sub-queries. Each sub-query should be 2-8 words and target a specific information "
-                "axis. Return strict JSON: {\"sub_queries\": [{\"text\": \"...\", \"axis\": \"...\"}]}. "
-                "No prose."
-            ),
+            "task": " ".join(task_lines),
             "question": question.text,
             "pathogen": question.pathogen,
             "region": question.region,
@@ -158,14 +171,25 @@ def _fallback_subqueries(question: ForecastQuestion) -> List[SubQuery]:
 
 
 def decompose_question(
-    question: ForecastQuestion, llm_client: LLMClient
+    question: ForecastQuestion,
+    llm_client: LLMClient,
+    *,
+    historical_roleplay: bool = False,
 ) -> List[SubQuery]:
     """Decompose a forecast question into sub-queries using an LLM.
 
     Falls back to simple keyword-based sub-queries if the LLM fails.
+
+    ``historical_roleplay`` is an opt-in benchmark-only flag. When True AND
+    ``question.as_of_date`` is set, the prompt is extended with an instruction
+    asking the LLM to query as if today were the cutoff date. This is gated
+    behind its own flag because prompt-level roleplay can have hard-to-predict
+    effects on query quality.
     """
     question_type = classify_question_type(question, llm_client)
-    prompt = _build_decomposition_prompt(question, question_type)
+    prompt = _build_decomposition_prompt(
+        question, question_type, historical_roleplay=historical_roleplay
+    )
 
     try:
         result = llm_client.generate_json(prompt)

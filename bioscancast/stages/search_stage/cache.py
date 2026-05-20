@@ -38,15 +38,28 @@ class SearchCache:
         self._conn.commit()
 
     @staticmethod
-    def _make_key(backend_name: str, query: str) -> str:
-        date_bucket = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    def _make_key(
+        backend_name: str,
+        query: str,
+        as_of_date: Optional[datetime] = None,
+    ) -> str:
+        # In historical-replay mode the bucket is the cutoff date, so that two
+        # benchmark runs against different cutoffs never share cache entries.
+        if as_of_date is not None:
+            date_bucket = as_of_date.strftime("%Y-%m-%d")
+        else:
+            date_bucket = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         raw = f"{backend_name}|{query.strip().lower()}|{date_bucket}"
         return hashlib.sha256(raw.encode()).hexdigest()
 
     def get(
-        self, backend_name: str, query: str, max_age_hours: int = 24
+        self,
+        backend_name: str,
+        query: str,
+        max_age_hours: int = 24,
+        as_of_date: Optional[datetime] = None,
     ) -> Optional[List[RawSearchResult]]:
-        key = self._make_key(backend_name, query)
+        key = self._make_key(backend_name, query, as_of_date)
         row = self._conn.execute(
             "SELECT results_json, created_at FROM search_cache WHERE cache_key = ?",
             (key,),
@@ -63,8 +76,14 @@ class SearchCache:
         items = json.loads(row[0])
         return [RawSearchResult(**item) for item in items]
 
-    def put(self, backend_name: str, query: str, results: List[RawSearchResult]) -> None:
-        key = self._make_key(backend_name, query)
+    def put(
+        self,
+        backend_name: str,
+        query: str,
+        results: List[RawSearchResult],
+        as_of_date: Optional[datetime] = None,
+    ) -> None:
+        key = self._make_key(backend_name, query, as_of_date)
         payload = json.dumps(
             [
                 {

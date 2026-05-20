@@ -20,7 +20,9 @@ class RealisticFakeSearchBackend:
     """Returns results with titles/snippets that overlap with the H5N1 question,
     simulating what a real search engine would return."""
 
-    def search(self, query: str, max_results: int = 10) -> List[RawSearchResult]:
+    def search(
+        self, query: str, max_results: int = 10, end_date=None
+    ) -> List[RawSearchResult]:
         return [
             RawSearchResult(
                 url="https://www.cdc.gov/bird-flu/situation-summary/",
