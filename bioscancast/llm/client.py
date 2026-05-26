@@ -1,3 +1,17 @@
+"""Legacy LLM client kept for the search stage's transitional period.
+
+This module pre-dates ``bioscancast/llm/base.py`` and uses a simpler
+``generate_json(prompt: str) -> dict`` signature. New code should use
+``bioscancast.llm.base.LLMClient`` (with structured ``system/user/schema/
+model/max_tokens`` arguments returning an ``LLMResponse``) and the
+production client at ``bioscancast/llm/openai_client.py``.
+
+Filtering and the insight stage already use the modern protocol. The
+search stage (``bioscancast/stages/search_stage/``) is the only
+remaining consumer of this module and will be migrated in a follow-up.
+Do not add new callers here.
+"""
+
 from __future__ import annotations
 
 import json

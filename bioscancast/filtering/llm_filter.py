@@ -3,23 +3,78 @@ from __future__ import annotations
 import json
 from typing import Dict, List
 
-from bioscancast.llm.client import LLMClient
+from bioscancast.llm.base import LLMClient
 
 from .models import FilterDecision, ForecastQuestion, SearchResult
+
+
+# Default model and max output tokens for the filter LLM call. These can be
+# overridden via `llm_filter_candidates(... , model=..., max_tokens=...)`.
+DEFAULT_FILTER_MODEL = "gpt-4o-mini"
+DEFAULT_FILTER_MAX_TOKENS = 4096
+
+
+FILTER_SYSTEM_PROMPT = (
+    "You are filtering search results for a biosecurity forecasting "
+    "pipeline. Your job is to decide which candidates are likely to "
+    "contain relevant factual evidence for forecasting. Prefer official, "
+    "primary, recent, and event-specific sources. Reject low-information, "
+    "generic, duplicated, or weakly relevant pages. Return a JSON object "
+    "matching the supplied schema with one decision per candidate."
+)
+
+
+FILTER_OUTPUT_SCHEMA: dict = {
+    "type": "object",
+    "properties": {
+        "decisions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "result_id": {"type": "string"},
+                    "keep": {"type": "boolean"},
+                    "relevance_score": {
+                        "type": "number", "minimum": 0.0, "maximum": 1.0,
+                    },
+                    "credibility_score": {
+                        "type": "number", "minimum": 0.0, "maximum": 1.0,
+                    },
+                    "final_score": {
+                        "type": "number", "minimum": 0.0, "maximum": 1.0,
+                    },
+                    "reason_codes": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                    },
+                    "notes": {"type": ["string", "null"]},
+                },
+                "required": [
+                    "result_id", "keep", "relevance_score",
+                    "credibility_score", "final_score", "reason_codes",
+                    "notes",
+                ],
+                "additionalProperties": False,
+            },
+        },
+    },
+    "required": ["decisions"],
+    "additionalProperties": False,
+}
 
 
 def build_filter_prompt(
     question: ForecastQuestion,
     candidates: list[dict],
-) -> str:
-    payload = {
-        "task": (
-            "You are filtering search results for a biosecurity forecasting pipeline. "
-            "Keep only candidates likely to contain relevant factual evidence for forecasting. "
-            "Prefer official, primary, recent, and event-specific sources. "
-            "Reject low-information, generic, duplicated, or weakly relevant pages. "
-            "Return your response as JSON matching the output_schema below."
-        ),
+) -> tuple[str, str, dict]:
+    """Build the (system, user, schema) tuple for the filter LLM call.
+
+    The user prompt is a JSON payload containing the question and the
+    candidate list; the system prompt covers the task instructions; the
+    schema is enforced by structured-output capable LLMs (and ignored
+    by ones that aren't).
+    """
+    user_payload = {
         "question": {
             "id": question.id,
             "text": question.text,
@@ -29,21 +84,9 @@ def build_filter_prompt(
             "resolution_criteria": question.resolution_criteria,
         },
         "candidates": candidates,
-        "output_schema": {
-            "decisions": [
-                {
-                    "result_id": "string",
-                    "keep": "boolean",
-                    "relevance_score": "0_to_1_float",
-                    "credibility_score": "0_to_1_float",
-                    "final_score": "0_to_1_float",
-                    "reason_codes": ["list_of_short_strings"],
-                    "notes": "short explanation",
-                }
-            ]
-        },
     }
-    return json.dumps(payload, default=str, indent=2)
+    user = json.dumps(user_payload, default=str, indent=2)
+    return FILTER_SYSTEM_PROMPT, user, FILTER_OUTPUT_SCHEMA
 
 
 def llm_filter_candidates(
@@ -51,6 +94,9 @@ def llm_filter_candidates(
     candidate_decisions: List[FilterDecision],
     result_map: Dict[str, SearchResult],
     llm_client: LLMClient,
+    *,
+    model: str = DEFAULT_FILTER_MODEL,
+    max_tokens: int = DEFAULT_FILTER_MAX_TOKENS,
 ) -> List[FilterDecision]:
     if not candidate_decisions:
         return []
@@ -73,10 +119,19 @@ def llm_filter_candidates(
             }
         )
 
-    prompt = build_filter_prompt(question, candidates)
-    response = llm_client.generate_json(prompt)
+    system, user, schema = build_filter_prompt(question, candidates)
+    response = llm_client.generate_json(
+        system=system,
+        user=user,
+        schema=schema,
+        model=model,
+        max_tokens=max_tokens,
+    )
 
-    output_by_id = {item["result_id"]: item for item in response.get("decisions", [])}
+    output_by_id = {
+        item["result_id"]: item
+        for item in response.content.get("decisions", [])
+    }
 
     updated: list[FilterDecision] = []
     for decision in candidate_decisions:
