@@ -44,5 +44,4 @@ See `config.py` for all configurable values (`InsightConfig`).
 ## TODO
 
 - [ ] Cognitive bias mitigations belong primarily in the **forecasting** stage's prompts, not here. Insight extraction is neutral fact-finding. A brief reminder is included in the extraction prompt but full bias mitigation should be implemented in forecasting.
-- [ ] Migrate `bioscancast/stages/search_stage/`'s use of the legacy `bioscancast/llm/client.py` to the shared `bioscancast/llm/base.py` protocol (filtering has already been migrated; the legacy client lingers only because the search stage still calls it).
 - [ ] Strong model refinement pass (behind `use_strong_model_refinement` config flag, currently a no-op).

@@ -14,7 +14,7 @@ from typing import List, Optional
 
 from bioscancast.filtering.config import FILTER_CONFIG
 from bioscancast.filtering.models import ForecastQuestion, SearchResult
-from bioscancast.llm.client import LLMClient
+from bioscancast.llm.base import LLMClient
 from bioscancast.stages.search_stage.backends.base import RawSearchResult, SearchBackend
 from bioscancast.stages.search_stage.cache import SearchCache
 from bioscancast.stages.search_stage.dashboard_lookup import lookup_dashboards

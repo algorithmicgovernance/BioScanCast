@@ -1,8 +1,9 @@
 """Tests for the LLM-driven filtering stage.
 
-The filter uses the shared ``bioscancast.llm.base.LLMClient`` protocol —
-the older single-positional-argument ``bioscancast.llm.client.LLMClient``
-is no longer accepted here.
+The filter uses the shared ``bioscancast.llm.base.LLMClient`` protocol.
+The older single-positional-argument legacy LLMClient module has been
+fully removed from the codebase; the regression test at the bottom of
+the file blocks anyone from reintroducing it under the original path.
 """
 
 from __future__ import annotations
@@ -174,8 +175,10 @@ def test_llm_filter_candidates_empty_input_returns_empty():
 
 
 def test_llm_filter_does_not_use_legacy_client_module():
-    """The migration: the filter module must NOT import from
-    bioscancast.llm.client (the legacy single-positional protocol)."""
+    """Regression check: the filter module must NOT import from
+    bioscancast.llm.client (the legacy single-positional protocol that
+    used to exist before the migration). The module is gone now, but
+    keep this check so nothing reintroduces it under that path."""
     import bioscancast.filtering.llm_filter as mod
     src = open(mod.__file__, encoding="utf-8").read()
     assert "from bioscancast.llm.client" not in src
