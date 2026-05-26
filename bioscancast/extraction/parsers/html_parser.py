@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import logging
 import re
 from datetime import datetime
 from typing import List, Optional
+from xml.etree import ElementTree as ET
 
 from bs4 import BeautifulSoup, Tag
 
@@ -13,9 +15,27 @@ try:
 except ImportError:
     trafilatura = None  # type: ignore[assignment]
 
+logger = logging.getLogger(__name__)
+
+# Minimum extractable content for the trafilatura-XML path to be accepted.
+# When the XML output's body text is shorter than this, we treat the
+# extraction as having failed (e.g. listing pages where trafilatura can
+# only isolate a snippet) and fall back to the DOM walker. The threshold
+# is intentionally small so single-paragraph articles still go down the
+# preferred path.
+_MIN_TRAFILATURA_BODY_CHARS = 200
+
 
 class HtmlParser:
-    """Extracts structured content from HTML documents."""
+    """Extracts structured content from HTML documents.
+
+    Strategy: prefer trafilatura's structured (XML) main-content extraction
+    which strips navigation, sidebars, "related articles" sections, and
+    other site boilerplate that a raw DOM walk would otherwise pull in.
+    Fall back to a DOM walker when trafilatura returns too little
+    content — usually because the page is a listing/landing page
+    trafilatura can't isolate, or because trafilatura is not installed.
+    """
 
     def can_parse(self, content_type: str, content: bytes) -> bool:
         if "html" in (content_type or ""):
@@ -26,18 +46,46 @@ class HtmlParser:
     def parse(self, content: bytes, *, source_url: str) -> ParsedContent:
         html_text = content.decode("utf-8", errors="replace")
 
-        # Use trafilatura for cleaned main-content text
+        # Use trafilatura for cleaned main-content text (plain) AND
+        # the structural XML output used for section extraction below.
         main_text = ""
+        main_xml = ""
         if trafilatura is not None:
             main_text = trafilatura.extract(html_text) or ""
+            main_xml = (
+                trafilatura.extract(
+                    html_text,
+                    output_format="xml",
+                    include_tables=True,
+                    include_links=False,
+                )
+                or ""
+            )
 
-        # Parse with BeautifulSoup for structure
+        # Parse with BeautifulSoup for document-level metadata (title,
+        # date, language) — these are reliably in the raw DOM head/meta
+        # tags whether or not the body extraction succeeds.
         soup = BeautifulSoup(html_text, "html.parser")
-
         title = self._extract_title(soup)
         published_date = self._extract_published_date(soup)
         language = self._extract_language(soup)
-        sections = self._extract_sections(soup)
+
+        # Primary path: walk trafilatura's main-content XML.
+        sections = (
+            self._extract_sections_from_trafilatura_xml(main_xml)
+            if main_xml
+            else []
+        )
+        # Fallback path: walk the full DOM when trafilatura's output is
+        # too thin to be trustworthy (listing pages, error pages,
+        # pages trafilatura's heuristics misjudge).
+        if not sections:
+            logger.debug(
+                "trafilatura XML extraction yielded no usable sections for %s "
+                "(xml_chars=%d); falling back to DOM walker",
+                source_url, len(main_xml),
+            )
+            sections = self._extract_sections(soup)
 
         raw_text = main_text or soup.get_text(separator="\n", strip=True)
 
@@ -48,6 +96,112 @@ class HtmlParser:
             language=language,
             published_date=published_date,
         )
+
+    # ----------------------------------------------------------------
+    # Trafilatura XML → sections
+    # ----------------------------------------------------------------
+
+    def _extract_sections_from_trafilatura_xml(
+        self, xml_text: str
+    ) -> List[SectionContent]:
+        """Walk trafilatura's XML output (``<doc><main>...</main></doc>``)
+        to produce ordered sections.
+
+        Trafilatura emits headings as ``<head rend="hN">``, paragraphs as
+        ``<p>``, and tables as ``<table>`` with ``<row>`` containing
+        ``<cell>`` (sometimes wrapping a ``<p>``). We rebuild a
+        heading-stack-aware section list with the same shape as the DOM
+        walker so downstream code doesn't care which path produced them.
+
+        Returns an empty list when the XML body has less than
+        ``_MIN_TRAFILATURA_BODY_CHARS`` of body text — the caller treats
+        that as a signal to fall back to the DOM walker.
+        """
+        try:
+            root = ET.fromstring(xml_text)
+        except ET.ParseError as exc:
+            logger.warning("Could not parse trafilatura XML: %s", exc)
+            return []
+
+        main_el = root.find("main")
+        if main_el is None:
+            return []
+
+        # Cheap quality gate: count printable body text. Headings + para
+        # text + cell text together must clear the threshold or we drop
+        # to the DOM walker.
+        body_chars = sum(
+            len(_collect_element_text(el))
+            for el in main_el.iter()
+            if el.tag in ("head", "p", "cell")
+        )
+        if body_chars < _MIN_TRAFILATURA_BODY_CHARS:
+            return []
+
+        sections: List[SectionContent] = []
+        heading_stack: List[str] = []
+        current_level = 0
+        current_text_parts: List[str] = []
+
+        def flush_prose() -> None:
+            if not current_text_parts:
+                return
+            text = "\n".join(current_text_parts).strip()
+            if text:
+                sections.append(
+                    SectionContent(
+                        section_path=" > ".join(heading_stack) if heading_stack else None,
+                        page_number=None,
+                        text=text,
+                        chunk_type="prose",
+                        extractor="trafilatura",
+                    )
+                )
+            current_text_parts.clear()
+
+        for child in main_el:
+            tag = child.tag
+            if tag == "head":
+                flush_prose()
+                level = _heading_level(child.get("rend"))
+                heading_text = _collect_element_text(child)
+                if level <= current_level:
+                    heading_stack = heading_stack[: level - 1]
+                heading_stack.append(heading_text)
+                current_level = level
+
+            elif tag == "p" or tag == "quote":
+                p_text = _collect_element_text(child).strip()
+                if p_text:
+                    current_text_parts.append(p_text)
+
+            elif tag == "list":
+                # Render a list as one prose chunk with bullet-marked lines.
+                items = [
+                    f"• {_collect_element_text(item).strip()}"
+                    for item in child.findall("item")
+                    if _collect_element_text(item).strip()
+                ]
+                if items:
+                    current_text_parts.append("\n".join(items))
+
+            elif tag == "table":
+                flush_prose()
+                table_rows = _parse_trafilatura_table(child)
+                if table_rows:
+                    sections.append(
+                        SectionContent(
+                            section_path=" > ".join(heading_stack) if heading_stack else None,
+                            page_number=None,
+                            text="",
+                            chunk_type="table",
+                            table_rows=table_rows,
+                            extractor="trafilatura",
+                        )
+                    )
+
+        flush_prose()
+        return sections
 
     def _extract_title(self, soup: BeautifulSoup) -> Optional[str]:
         og_title = soup.find("meta", property="og:title")
@@ -215,3 +369,44 @@ class HtmlParser:
                     )
                 )
         return sections
+
+
+# ---------------------------------------------------------------------------
+# Module-level helpers for the trafilatura XML walker
+# ---------------------------------------------------------------------------
+
+
+def _collect_element_text(el: ET.Element) -> str:
+    """Concatenate text from an XML element and all its descendants."""
+    parts: List[str] = []
+    if el.text:
+        parts.append(el.text)
+    for child in el:
+        parts.append(_collect_element_text(child))
+        if child.tail:
+            parts.append(child.tail)
+    return "".join(parts)
+
+
+def _heading_level(rend: Optional[str]) -> int:
+    """Parse trafilatura's ``rend="hN"`` heading marker. Defaults to h2
+    when the marker is missing or unrecognised (matches the most common
+    article structure)."""
+    if rend and rend.startswith("h") and rend[1:].isdigit():
+        return max(1, min(int(rend[1:]), 4))
+    return 2
+
+
+def _parse_trafilatura_table(table_el: ET.Element) -> List[List[str]]:
+    """Convert a trafilatura ``<table>`` element into row-major cells.
+
+    Trafilatura emits ``<row>`` containing ``<cell>``, sometimes with a
+    nested ``<p>``. We collapse to plain text per cell and discard any
+    rows that came out empty.
+    """
+    rows: List[List[str]] = []
+    for row in table_el.findall("row"):
+        cells = [_collect_element_text(c).strip() for c in row.findall("cell")]
+        if any(cells):
+            rows.append(cells)
+    return rows

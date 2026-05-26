@@ -70,24 +70,31 @@ def test_extraction_africa_cdc_fails_with_requires_ocr(real_docs):
 
 
 @pytest.mark.parametrize(
-    "name",
+    # (name, min_chunks). CIDRAP has a lower floor because trafilatura's
+    # main-content extraction correctly isolates only the actual article
+    # body (~2 chunks) rather than the surrounding navigation, sidebars,
+    # and three additional unrelated articles that the raw DOM contains.
+    # Other sources are calibrated to today's behaviour.
+    "name,min_chunks",
     [
-        "who_mpox_sitrep64",
-        "who_cholera_epi34",
-        "cdc_mmwr_nm_measles",
-        "ecdc_cdtr_week16",
-        "cidrap_utah_measles",
-        "promed_latest",
+        ("who_mpox_sitrep64", 5),
+        ("who_cholera_epi34", 5),
+        ("cdc_mmwr_nm_measles", 5),
+        ("ecdc_cdtr_week16", 5),
+        ("cidrap_utah_measles", 1),
+        ("promed_latest", 5),
     ],
 )
-def test_extraction_produces_chunks_for_text_extractable_sources(real_docs, name):
+def test_extraction_produces_chunks_for_text_extractable_sources(
+    real_docs, name, min_chunks
+):
     """Every source except Africa CDC must extract at least a few chunks."""
     doc = real_docs[name]
     assert doc.status == "success", (
         f"{name}: expected status=success, got {doc.status}"
     )
-    assert len(doc.chunks) >= 5, (
-        f"{name}: expected >= 5 chunks, got {len(doc.chunks)}"
+    assert len(doc.chunks) >= min_chunks, (
+        f"{name}: expected >= {min_chunks} chunks, got {len(doc.chunks)}"
     )
 
 
