@@ -68,7 +68,7 @@ class HtmlParser:
         # tags whether or not the body extraction succeeds.
         soup = BeautifulSoup(html_text, "html.parser")
         title = self._extract_title(soup)
-        published_date = self._extract_published_date(soup)
+        published_date = self._extract_published_date(soup, source_url)
         language = self._extract_language(soup)
 
         # Primary path: walk trafilatura's main-content XML.
@@ -216,11 +216,14 @@ class HtmlParser:
             return h1.get_text(strip=True)
         return None
 
-    def _extract_published_date(self, soup: BeautifulSoup) -> Optional[datetime]:
-        """Extract a publication date from HTML metadata.
+    def _extract_published_date(
+        self, soup: BeautifulSoup, source_url: str = ""
+    ) -> Optional[datetime]:
+        """Extract a publication date from HTML metadata or URL structure.
 
         Tries multiple conventions in priority order (publication-semantic
-        first, then generic, then modification-semantic), and parses the
+        metadata first, then URL path patterns, then generic time tags,
+        then modification-semantic as a last resort), and parses the
         first candidate that yields a valid datetime. Returns ``None``
         when no usable date is found — legitimately the case for listing
         pages or org-site landings that don't expose one. Body-text date
@@ -233,7 +236,7 @@ class HtmlParser:
         a last-rendered timestamp, not a publication date, and returning
         a misleading post-publication date is worse than returning None.
         """
-        for label, raw in self._iter_date_candidates(soup):
+        for label, raw in self._iter_date_candidates(soup, source_url):
             dt = self._parse_date(raw)
             if dt is not None:
                 logger.debug("pub_date matched on %s: %r", label, raw)
@@ -241,7 +244,7 @@ class HtmlParser:
         return None
 
     def _iter_date_candidates(
-        self, soup: BeautifulSoup
+        self, soup: BeautifulSoup, source_url: str = "",
     ) -> Iterable[Tuple[str, str]]:
         """Yield ``(label, raw_string)`` candidates in priority order.
 
@@ -295,12 +298,25 @@ class HtmlParser:
         for value in self._iter_jsonld_date_values(soup, "dateCreated"):
             yield "jsonld[dateCreated]", value
 
-        # ---- 6. <time datetime=...> (first one, intentionally) ----
+        # ---- 6. URL path date pattern ----
+        # Lower priority than any publication-semantic metadata above,
+        # higher than the generic <time> tag below — URL dates are
+        # structurally bounded (no false positives from arbitrary body
+        # text) but often only give year precision, while <time> tags
+        # may be more precise but can refer to unrelated timestamps
+        # (sidebar timestamps, last-modified ribbons, related articles).
+        # Stronger semantic grounding wins over potentially-finer
+        # precision from an ambiguous source.
+        url_iso = _extract_url_date_iso(source_url)
+        if url_iso is not None:
+            yield "url[path]", url_iso
+
+        # ---- 7. <time datetime=...> (first one, intentionally) ----
         t = soup.find("time", attrs={"datetime": True})
         if t:
             yield "time[datetime]", str(t["datetime"])
 
-        # ---- 7. Modification-semantic (last resort) ----
+        # ---- 8. Modification-semantic (last resort) ----
         for prop in ("article:modified_time", "og:modified_time"):
             m = soup.find("meta", property=prop)
             if m and m.get("content"):
@@ -530,3 +546,132 @@ def _walk_jsonld_for_key(obj, key: str) -> Iterable[str]:
     elif isinstance(obj, list):
         for item in obj:
             yield from _walk_jsonld_for_key(item, key)
+
+
+# ---------------------------------------------------------------------------
+# URL path date extraction
+# ---------------------------------------------------------------------------
+
+# Date patterns we recognise in URL path segments, in order of how
+# specifically they pin down a date. The patterns are intentionally
+# narrow: each must occupy a full path segment (between two ``/``) or
+# anchored to the start of one, so arbitrary 4-digit numbers buried
+# inside slugs ("section-2024-summary") do NOT count as years.
+_URL_FULL_DATE_HYPHEN_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
+_URL_FULL_DATE_COMPACT_RE = re.compile(r"^(\d{8})$")  # YYYYMMDD
+_URL_YEAR_MONTH_RE = re.compile(r"^(\d{4})-(\d{2})$")
+_URL_YEAR_ONLY_RE = re.compile(r"^(\d{4})$")
+# Year-prefixed identifiers used by WHO ("2024-DON530"), CDC report
+# numbers, and many news-site categorical IDs. The year must be followed
+# by a separator (``-`` or ``_``) so plain integers like "20240813" go
+# to the compact-date matcher instead.
+_URL_YEAR_PREFIX_RE = re.compile(r"^(\d{4})[-_][A-Za-z].*$")
+
+# Bounds on a plausible publication year. 1990 is a generous floor
+# (article timestamps in our domain rarely predate the modern web);
+# 2100 keeps us safe against typoed far-future years.
+_URL_MIN_YEAR = 1990
+_URL_MAX_YEAR = 2100
+
+
+def _extract_url_date_iso(url: str) -> Optional[str]:
+    """Try to extract a publication date from URL path segments.
+
+    Returns an ISO-formatted date string (``YYYY-MM-DD``) suitable for
+    feeding into ``_parse_date``, or ``None`` when no date-shaped
+    structure is found. Year-only matches default to January 1;
+    year-month matches default to the 1st of the month. Downstream
+    consumers see a ``datetime`` either way.
+
+    The matcher checks segments in this order of specificity, returning
+    the first match found:
+
+      1. Full ISO date in one segment: ``/2024-08-13/`` or ``/20240813/``
+      2. Three consecutive segments: ``/2024/08/13/``
+      3. Year-month in one segment: ``/2024-08/``
+      4. Two consecutive segments: ``/2024/08/``
+      5. Year-prefixed slug: ``/2024-DON530`` or ``/2024-q3-report``
+      6. Bare year segment: ``/2024/``
+
+    Patterns 5 and 6 only return year-precision dates. Patterns
+    requiring separators around the year prevent false positives
+    from numeric IDs (``/article/20240/``).
+    """
+    if not url:
+        return None
+    try:
+        from urllib.parse import urlparse
+        path = urlparse(url).path
+    except Exception:
+        return None
+    segments = [s for s in path.split("/") if s]
+    if not segments:
+        return None
+
+    # 1. Full ISO date in a single segment (most specific)
+    for seg in segments:
+        m = _URL_FULL_DATE_HYPHEN_RE.match(seg)
+        if m and _valid_date(int(m.group(1)), int(m.group(2)), int(m.group(3))):
+            return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+        m = _URL_FULL_DATE_COMPACT_RE.match(seg)
+        if m:
+            ymd = m.group(1)
+            y, mo, d = int(ymd[:4]), int(ymd[4:6]), int(ymd[6:8])
+            if _valid_date(y, mo, d):
+                return f"{y:04d}-{mo:02d}-{d:02d}"
+
+    # 2. Three consecutive numeric segments: /YYYY/MM/DD/
+    for i in range(len(segments) - 2):
+        ys, ms, ds = segments[i], segments[i + 1], segments[i + 2]
+        if _URL_YEAR_ONLY_RE.match(ys) and ms.isdigit() and ds.isdigit():
+            y, mo, d = int(ys), int(ms), int(ds)
+            if _valid_date(y, mo, d):
+                return f"{y:04d}-{mo:02d}-{d:02d}"
+
+    # 3. Year-month in one segment: /YYYY-MM/
+    for seg in segments:
+        m = _URL_YEAR_MONTH_RE.match(seg)
+        if m:
+            y, mo = int(m.group(1)), int(m.group(2))
+            if _valid_year_month(y, mo):
+                return f"{y:04d}-{mo:02d}-01"
+
+    # 4. Two consecutive numeric segments: /YYYY/MM/
+    for i in range(len(segments) - 1):
+        ys, ms = segments[i], segments[i + 1]
+        if _URL_YEAR_ONLY_RE.match(ys) and ms.isdigit():
+            y, mo = int(ys), int(ms)
+            if _valid_year_month(y, mo):
+                return f"{y:04d}-{mo:02d}-01"
+
+    # 5. Year-prefixed slug: /2024-DON530, /2024-q3-summary
+    for seg in segments:
+        m = _URL_YEAR_PREFIX_RE.match(seg)
+        if m:
+            y = int(m.group(1))
+            if _URL_MIN_YEAR <= y <= _URL_MAX_YEAR:
+                return f"{y:04d}-01-01"
+
+    # 6. Bare year segment: /2024/
+    for seg in segments:
+        m = _URL_YEAR_ONLY_RE.match(seg)
+        if m:
+            y = int(m.group(1))
+            if _URL_MIN_YEAR <= y <= _URL_MAX_YEAR:
+                return f"{y:04d}-01-01"
+
+    return None
+
+
+def _valid_year_month(y: int, mo: int) -> bool:
+    return _URL_MIN_YEAR <= y <= _URL_MAX_YEAR and 1 <= mo <= 12
+
+
+def _valid_date(y: int, mo: int, d: int) -> bool:
+    if not _valid_year_month(y, mo) or not (1 <= d <= 31):
+        return False
+    try:
+        datetime(y, mo, d)
+    except ValueError:
+        return False
+    return True

@@ -386,3 +386,145 @@ class TestPublishedDateExtraction:
         html = self._wrap("")  # no meta tags
         result = html_parser.parse(html, source_url="https://x.com/")
         assert result.published_date is None
+
+
+# ---------------------------------------------------------------------------
+# URL path date parsing
+# ---------------------------------------------------------------------------
+
+class TestUrlPathDateParsing:
+    """Direct unit tests for the URL date helper, then integration tests
+    confirming where it sits in the priority chain."""
+
+    def _empty_html(self) -> bytes:
+        return b"<html><head><title>T</title></head><body><p>Body.</p></body></html>"
+
+    @pytest.mark.parametrize(
+        "url,expected_iso",
+        [
+            # Full ISO date in a single segment
+            ("https://x.com/news/2024-08-13/article-slug", "2024-08-13"),
+            # Compact YYYYMMDD
+            ("https://cdn.example.com/files/20240813-update.pdf",
+             # only triggers when the WHOLE segment is digits — slug is
+             # "20240813-update.pdf" so this case must NOT match a date
+             None),
+            ("https://cdn.example.com/files/20240813/update.pdf", "2024-08-13"),
+            # Three consecutive segments
+            ("https://example.com/2024/08/13/article-slug", "2024-08-13"),
+            # Year-month in single segment
+            ("https://archive.example.com/issues/2024-08/", "2024-08-01"),
+            # Two consecutive segments
+            ("https://archive.example.com/2024/08/", "2024-08-01"),
+            # Year-prefixed slug (WHO DON style)
+            ("https://www.who.int/.../item/2024-DON530", "2024-01-01"),
+            # Bare year segment (CDC HAN style)
+            ("https://www.cdc.gov/han/2024/han00514.html", "2024-01-01"),
+            # No date in URL
+            ("https://cidrap.umn.edu/measles/utah-measles-cases-2026",
+             # Year 2026 buried in slug — at start? "utah-measles..." starts
+             # with letters, no. Should NOT match year.
+             None),
+            # Year buried in middle of slug
+            ("https://example.com/articles/section-2024-summary", None),
+            # Plausibly out-of-range year
+            ("https://example.com/1850/something", None),
+            # Far-future year
+            ("https://example.com/2200/something", None),
+            # Empty path
+            ("https://example.com/", None),
+            # Year-shape but invalid month: graceful degradation to
+            # year-only via the bare-year-segment pass
+            ("https://example.com/2024/13/", "2024-01-01"),
+            # Year-shape but invalid day: graceful degradation to
+            # year-month via the year/month-segment pass
+            ("https://example.com/2024/02/30/", "2024-02-01"),
+        ],
+    )
+    def test_extract_url_date_iso(self, url, expected_iso):
+        from bioscancast.extraction.parsers.html_parser import _extract_url_date_iso
+        assert _extract_url_date_iso(url) == expected_iso
+
+    def test_url_year_used_when_no_metadata(self, html_parser):
+        """A page with no meta dates but with a year in its URL should
+        produce a year-precision datetime (Jan 1 of that year)."""
+        result = html_parser.parse(
+            self._empty_html(),
+            source_url="https://www.cdc.gov/han/2024/han00514.html",
+        )
+        assert result.published_date is not None
+        assert result.published_date.year == 2024
+        assert result.published_date.month == 1
+        assert result.published_date.day == 1
+
+    def test_url_year_prefix_slug(self, html_parser):
+        """WHO DON URLs use '2024-DON530'-style segments — year prefix
+        with separator must resolve to the year."""
+        result = html_parser.parse(
+            self._empty_html(),
+            source_url="https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON530",
+        )
+        assert result.published_date is not None
+        assert result.published_date.year == 2024
+
+    def test_meta_publication_date_beats_url(self, html_parser):
+        """Per the user's instruction: URL date must rank BELOW
+        publication-semantic metadata. When both are present, meta
+        wins — even though the URL gives a different year."""
+        html = (
+            '<html><head><title>T</title>'
+            '<meta property="article:published_time" content="2026-04-15T10:00:00">'
+            "</head><body><p>Body.</p></body></html>"
+        ).encode("utf-8")
+        result = html_parser.parse(
+            html,
+            source_url="https://www.cdc.gov/han/2024/han00514.html",
+        )
+        # Meta says 2026, URL says 2024 — meta wins
+        assert result.published_date is not None
+        assert result.published_date.year == 2026
+
+    def test_jsonld_date_published_beats_url(self, html_parser):
+        """JSON-LD datePublished outranks URL path."""
+        html = (
+            '<html><head><title>T</title>'
+            '<script type="application/ld+json">'
+            '{"@type": "NewsArticle", "datePublished": "2025-11-30"}'
+            "</script></head><body><p>Body.</p></body></html>"
+        ).encode("utf-8")
+        result = html_parser.parse(
+            html, source_url="https://example.com/2024/article-x",
+        )
+        assert result.published_date is not None
+        assert result.published_date.year == 2025
+        assert result.published_date.month == 11
+
+    def test_url_beats_generic_time_tag(self, html_parser):
+        """URL date is structurally bounded (no false positives) and
+        therefore outranks the generic <time> tag, which on real pages
+        often references unrelated timestamps (sidebars, related
+        articles, last-modified ribbons)."""
+        # No meta dates. URL has /2024/. Page has a <time> for 2099.
+        html = (
+            '<html><head><title>T</title></head>'
+            '<body><time datetime="2099-01-01">future</time><p>Body.</p></body></html>'
+        ).encode("utf-8")
+        result = html_parser.parse(
+            html, source_url="https://www.cdc.gov/han/2024/han00514.html",
+        )
+        assert result.published_date is not None
+        assert result.published_date.year == 2024
+
+    def test_url_beats_modification_time(self, html_parser):
+        """URL date outranks ``article:modified_time`` — modification
+        is the last-resort tier."""
+        html = (
+            '<html><head><title>T</title>'
+            '<meta property="article:modified_time" content="2099-01-01T00:00:00">'
+            "</head><body><p>Body.</p></body></html>"
+        ).encode("utf-8")
+        result = html_parser.parse(
+            html, source_url="https://example.com/2024/article",
+        )
+        assert result.published_date is not None
+        assert result.published_date.year == 2024
