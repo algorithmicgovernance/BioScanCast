@@ -20,6 +20,7 @@ After all documents:
 from __future__ import annotations
 
 import logging
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional
@@ -58,6 +59,29 @@ class InsightPipeline:
     ) -> None:
         self._llm = llm_client
         self._config = config or InsightConfig()
+
+    def _safe_extract(self, sc, doc, question, config):
+        """Wrap chunk extraction so a failure in one chunk doesn't kill
+        the document. Returns the (records, response) tuple or None.
+
+        Called both serially and from ThreadPoolExecutor workers — must
+        not mutate ``self`` so concurrent calls stay safe.
+        """
+        try:
+            return extract_facts_from_chunk(
+                sc.chunk,
+                doc,
+                question,
+                self._llm,
+                model=config.cheap_model,
+                max_tokens=config.extraction_max_output_tokens,
+            )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning(
+                "Chunk extraction failed (chunk_id=%s): %s",
+                sc.chunk.chunk_id, exc,
+            )
+            return None
 
     def run(
         self,
@@ -112,16 +136,35 @@ class InsightPipeline:
             # Cap chunks per document
             scored_chunks = scored_chunks[: config.max_chunks_per_document]
 
-            # --- Per-chunk extraction ---
-            for sc in scored_chunks:
-                records, response = extract_facts_from_chunk(
-                    sc.chunk,
-                    doc,
-                    question,
-                    self._llm,
-                    model=config.cheap_model,
-                    max_tokens=config.extraction_max_output_tokens,
-                )
+            # --- Per-chunk extraction (parallel within a doc) ---
+            # Live tests on real biosecurity documents show the per-doc
+            # wall-clock is almost entirely sequential OpenAI request
+            # latency. A ThreadPoolExecutor cuts WHO mpox (~30s) and ECDC
+            # CDTR (~38s) down by roughly chunk_workers× because each
+            # request is independent and the OpenAI sync client is
+            # thread-safe. Errors in one chunk don't kill the doc;
+            # budget accounting happens serially after futures complete
+            # so BudgetTracker doesn't need its own lock.
+            workers = max(1, min(config.chunk_workers, len(scored_chunks)))
+            if workers == 1 or len(scored_chunks) <= 1:
+                chunk_results = [
+                    self._safe_extract(sc, doc, question, config)
+                    for sc in scored_chunks
+                ]
+            else:
+                with ThreadPoolExecutor(max_workers=workers) as ex:
+                    futures = [
+                        ex.submit(
+                            self._safe_extract, sc, doc, question, config,
+                        )
+                        for sc in scored_chunks
+                    ]
+                    chunk_results = [f.result() for f in futures]
+
+            for outcome in chunk_results:
+                if outcome is None:
+                    continue
+                records, response = outcome
                 budget.record(response)
                 all_records.extend(records)
 

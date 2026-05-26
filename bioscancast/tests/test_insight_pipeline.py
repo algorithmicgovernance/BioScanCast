@@ -405,6 +405,184 @@ def test_dedup_does_not_merge_across_different_locations():
 
 
 # ---------------------------------------------------------------------------
+# Per-chunk parallelism (ThreadPoolExecutor)
+# ---------------------------------------------------------------------------
+
+
+def _content_keyed_response(chunk_text_marker: str, quote: str) -> LLMResponse:
+    """Build an LLMResponse whose `quote` matches a chunk that contains
+    `chunk_text_marker`. Used to test that parallel chunk extraction
+    pairs responses with the right chunks regardless of which worker
+    processes which chunk first.
+    """
+    return LLMResponse(
+        content={"facts": [{
+            "event_type": "case_count",
+            "confidence": 0.8,
+            "location": None,
+            "pathogen": None,
+            "metric_name": "marker",
+            "metric_value": 1.0,
+            "metric_unit": "events",
+            "event_date": None,
+            "summary": chunk_text_marker,
+            "quote": quote,
+        }]},
+        input_tokens=100,
+        output_tokens=20,
+        model="gpt-4o-mini",
+        raw_text='{"facts": [...]}',
+    )
+
+
+class _ContentKeyedFakeLLM:
+    """Smart fake that returns a different response per chunk based on
+    which chunk text appears in the user prompt. Order-independent — so
+    concurrent worker threads can hit any chunk in any order and still
+    get the right quote-matching response.
+    """
+
+    def __init__(self) -> None:
+        import threading
+        self._lock = threading.Lock()
+        self.calls = 0
+
+    def generate_json(self, *, system, user, schema, model, max_tokens=1024):
+        import re as _re
+        with self._lock:
+            self.calls += 1
+        # Find the chunk text inside the prompt
+        marker_match = _re.search(r"CHUNK TEXT:\n(.+?)$", user, _re.DOTALL)
+        if not marker_match:
+            return LLMResponse(
+                content={"facts": []}, input_tokens=50, output_tokens=5,
+                model=model, raw_text="{}",
+            )
+        chunk_text = marker_match.group(1)
+        # Pull the first sentence as a verbatim quote
+        sentence = _re.search(r"[A-Z][^.\n]{20,150}\.", chunk_text)
+        if not sentence:
+            return LLMResponse(
+                content={"facts": []}, input_tokens=50, output_tokens=5,
+                model=model, raw_text="{}",
+            )
+        quote = sentence.group(0)
+        return LLMResponse(
+            content={"facts": [{
+                "event_type": "case_count",
+                "confidence": 0.7,
+                "location": None,
+                "pathogen": None,
+                "metric_name": "concurrent_marker",
+                "metric_value": 1.0,
+                "metric_unit": "events",
+                "event_date": None,
+                "summary": None,
+                "quote": quote,
+            }]},
+            input_tokens=120, output_tokens=25,
+            model=model, raw_text='{"facts": [...]}',
+        )
+
+    def embed(self, texts, *, model):
+        # Reuse FakeLLMClient's hash-based embeddings
+        return FakeLLMClient(embedding_dim=32).embed(texts, model=model)
+
+
+def test_pipeline_parallel_chunk_extraction_produces_all_records():
+    """With chunk_workers > 1, every retrieved chunk should still be
+    processed and every accepted quote should produce a record. Uses a
+    content-keyed fake so response/chunk pairing is order-independent."""
+    fake = _ContentKeyedFakeLLM()
+    config = InsightConfig(
+        retrieval_top_k=4,
+        max_chunks_per_document=4,
+        chunk_workers=4,
+    )
+    pipeline = InsightPipeline(llm_client=fake, config=config)
+    result = pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])
+
+    # Every chunk in the top-k should have been called
+    assert fake.calls == 4
+    # The pipeline-level dedup may merge records, but at least the
+    # ones whose chunks contain a quotable sentence should produce one
+    # record each (mod dedup).
+    assert len(result.records) >= 1
+    # All records must have valid provenance
+    for rec in result.records:
+        assert rec.sources
+        for s in rec.sources:
+            assert s.quote
+
+
+def test_pipeline_sequential_and_parallel_produce_same_record_count():
+    """chunk_workers=1 and chunk_workers=4 must produce the same number
+    of records when the fake LLM is content-keyed (so result depends on
+    chunk content, not worker order)."""
+    config_seq = InsightConfig(
+        retrieval_top_k=4, max_chunks_per_document=4, chunk_workers=1,
+    )
+    config_par = InsightConfig(
+        retrieval_top_k=4, max_chunks_per_document=4, chunk_workers=4,
+    )
+
+    seq_pipeline = InsightPipeline(
+        llm_client=_ContentKeyedFakeLLM(), config=config_seq,
+    )
+    par_pipeline = InsightPipeline(
+        llm_client=_ContentKeyedFakeLLM(), config=config_par,
+    )
+
+    seq_result = seq_pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])
+    par_result = par_pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])
+
+    assert len(seq_result.records) == len(par_result.records)
+    assert (
+        seq_result.budget_summary["total_input_tokens"]
+        == par_result.budget_summary["total_input_tokens"]
+    )
+
+
+def test_pipeline_parallel_isolates_chunk_failures():
+    """If extract_facts_from_chunk raises on one chunk, the others
+    should still complete and the doc shouldn't blow up."""
+    import threading
+
+    class _IntermittentFake:
+        def __init__(self) -> None:
+            self._lock = threading.Lock()
+            self.calls = 0
+
+        def generate_json(self, *, system, user, schema, model, max_tokens=1024):
+            with self._lock:
+                self.calls += 1
+                n = self.calls
+            if n == 2:
+                raise RuntimeError("simulated failure on second chunk")
+            # Return a benign empty response for others
+            return LLMResponse(
+                content={"facts": []}, input_tokens=80, output_tokens=10,
+                model=model, raw_text="{}",
+            )
+
+        def embed(self, texts, *, model):
+            return FakeLLMClient(embedding_dim=32).embed(texts, model=model)
+
+    fake = _IntermittentFake()
+    config = InsightConfig(
+        retrieval_top_k=4, max_chunks_per_document=4, chunk_workers=4,
+    )
+    pipeline = InsightPipeline(llm_client=fake, config=config)
+    # Must not raise — failed chunk is logged and skipped
+    result = pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])
+
+    # The doc still counts as processed
+    assert result.documents_processed == 1
+    # All four chunks were attempted (the failure didn't abort the rest)
+    assert fake.calls == 4
+
+
+# ---------------------------------------------------------------------------
 # Multi-document end-to-end
 # ---------------------------------------------------------------------------
 

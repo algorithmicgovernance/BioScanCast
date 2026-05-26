@@ -17,6 +17,7 @@ INSIGHT_CONFIG = {
     "max_input_tokens_per_run": 500_000,
     "max_chunks_per_document": 12,
     "extraction_max_output_tokens": 4096,
+    "chunk_workers": 6,
 }
 
 
@@ -37,6 +38,14 @@ class InsightConfig:
     """Per-call cap on LLM output tokens for chunk extraction. The default
     1024 ceiling in LLMClient.generate_json truncates dense pages (e.g. the
     ECDC CDTR) mid-JSON; 4096 leaves comfortable headroom."""
+
+    chunk_workers: int = 6
+    """Max parallel per-chunk extraction calls per document. Each call is
+    a single OpenAI chat-completions request; the SDK is thread-safe so a
+    ThreadPoolExecutor is used. Six matches typical retrieval_top_k while
+    staying well below OpenAI's per-minute rate limits for gpt-4o-mini.
+    Set to 1 for sequential execution (useful for debugging or rate-
+    limit-sensitive setups)."""
 
     @classmethod
     def from_dict(cls, d: dict) -> InsightConfig:
