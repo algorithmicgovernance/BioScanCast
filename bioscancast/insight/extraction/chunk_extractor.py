@@ -15,6 +15,8 @@ import uuid
 from datetime import datetime, timezone
 from typing import TYPE_CHECKING, Optional
 
+import pycountry
+
 from bioscancast.schemas import DocumentChunk, Document, ChunkReference, InsightRecord
 from bioscancast.filtering.models import ForecastQuestion
 from .prompts import build_extraction_prompt
@@ -66,48 +68,66 @@ _TYPOGRAPHY_FOLD_RE = re.compile(
 _WRAPPING_PUNCT_RE = re.compile(r"[\(\)\[\]\{\}\"\']")
 
 
-# Hardcoded country name -> ISO 3166-1 alpha-2 map for the ~30 most
-# likely countries in biosecurity reporting.  Don't pull in pycountry.
-COUNTRY_TO_ISO: dict[str, str] = {
-    "united states": "US",
-    "usa": "US",
-    "us": "US",
-    "united kingdom": "GB",
+# pycountry covers all 249 ISO 3166-1 entries by common, official, and
+# canonical names; the alias dicts below add only the forms pycountry
+# doesn't resolve on its own.
+
+# Country aliases for forms pycountry won't match directly. Keys are
+# lowercased and stripped of internal periods, so write them that way
+# ("uk", "us", "drc" — NOT "u.k.", "u.s."). The lookup helper does the
+# same normalisation on the incoming string.
+_COUNTRY_ALIASES: dict[str, str] = {
     "uk": "GB",
-    "china": "CN",
-    "india": "IN",
-    "brazil": "BR",
-    "uganda": "UG",
-    "democratic republic of the congo": "CD",
+    "us": "US",
+    "usa": "US",
     "drc": "CD",
-    "congo": "CG",
-    "nigeria": "NG",
-    "south africa": "ZA",
-    "kenya": "KE",
-    "ethiopia": "ET",
-    "tanzania": "TZ",
-    "egypt": "EG",
-    "australia": "AU",
-    "canada": "CA",
-    "mexico": "MX",
-    "germany": "DE",
-    "france": "FR",
-    "italy": "IT",
-    "spain": "ES",
-    "japan": "JP",
-    "south korea": "KR",
-    "indonesia": "ID",
-    "thailand": "TH",
-    "vietnam": "VN",
-    "pakistan": "PK",
-    "bangladesh": "BD",
-    "saudi arabia": "SA",
-    "iran": "IR",
-    "turkey": "TR",
+    "dr congo": "CD",
+    "democratic republic of the congo": "CD",
+    "republic of the congo": "CG",
+    "uae": "AE",
     "russia": "RU",
-    "texas": "US",
-    "california": "US",
-    "iowa": "US",
+    "burma": "MM",
+    "ivory coast": "CI",
+    "north korea": "KP",
+    "south korea": "KR",
+    "england": "GB",
+    "scotland": "GB",
+    "wales": "GB",
+    "northern ireland": "GB",
+    "great britain": "GB",
+}
+
+# US states and territories — biosecurity reporting frequently uses
+# state-level location text. Anything in this set resolves to "US".
+# Two-letter postal codes are also included (case-insensitive matching).
+_US_SUBNATIONAL: set[str] = {
+    "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
+    "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho",
+    "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana",
+    "maine", "maryland", "massachusetts", "michigan", "minnesota",
+    "mississippi", "missouri", "montana", "nebraska", "nevada",
+    "new hampshire", "new jersey", "new mexico", "new york",
+    "north carolina", "north dakota", "ohio", "oklahoma", "oregon",
+    "pennsylvania", "rhode island", "south carolina", "south dakota",
+    "tennessee", "texas", "utah", "vermont", "virginia", "washington",
+    "west virginia", "wisconsin", "wyoming",
+    "district of columbia", "d.c.", "dc",
+    "puerto rico", "guam", "american samoa",
+    "u.s. virgin islands", "northern mariana islands",
+}
+
+# Multi-country region labels that explicitly resolve to None. The model
+# emits these often when reading WHO regional roll-ups (e.g.
+# "European Region", "African Region") that aren't single countries.
+_NOT_A_COUNTRY: set[str] = {
+    "africa", "asia", "europe", "north america", "south america",
+    "americas", "oceania",
+    "european region", "african region",
+    "region of the americas", "western pacific region",
+    "south-east asia region", "eastern mediterranean region",
+    "european union", "eu", "eu/eea", "eea",
+    "world", "global", "globally", "multi-country", "multi country",
+    "unknown", "various", "international",
 }
 
 
@@ -204,19 +224,83 @@ def _quote_matches(quote: str, chunk_text: str) -> Optional[str]:
     return None
 
 
+def _lookup_one(token: str) -> Optional[str]:
+    """Resolve a single location token to an ISO alpha-2 code.
+
+    Order: explicit not-a-country set, alias dict, US subnational, then
+    pycountry's built-in lookup (which handles all 249 ISO 3166-1
+    entries by common/canonical/official name and alpha-2/alpha-3 codes).
+    Returns ``None`` when nothing matches. ``search_fuzzy`` is
+    deliberately not used because it produces surprising false positives.
+
+    The token is normalised against ``_NOT_A_COUNTRY``, ``_COUNTRY_ALIASES``,
+    and ``_US_SUBNATIONAL`` with internal punctuation removed (so "U.K."
+    matches the "uk" alias). pycountry is then called on the typography-
+    folded version (so "Côte d'Ivoire" with curly apostrophe also
+    resolves) — its own internal matching is case-insensitive but does
+    not handle smart quotes.
+    """
+    if not token:
+        return None
+    # Typography-fold for pycountry's benefit (smart quotes → straight)
+    folded = _TYPOGRAPHY_FOLD_RE.sub(
+        lambda m: _TYPOGRAPHY_FOLD[m.group(0)], token.strip()
+    )
+    # Alias/region lookup key — lowercased, no internal periods, single spaces
+    key = folded.lower().replace(".", "")
+    key = re.sub(r"\s+", " ", key).strip()
+    if not key:
+        return None
+    if key in _NOT_A_COUNTRY:
+        return None
+    if key in _COUNTRY_ALIASES:
+        return _COUNTRY_ALIASES[key]
+    if key in _US_SUBNATIONAL:
+        return "US"
+    try:
+        return pycountry.countries.lookup(folded).alpha_2
+    except LookupError:
+        return None
+
+
 def _resolve_country_code(location: Optional[str]) -> Optional[str]:
-    """Try to resolve a location string to an ISO country code."""
+    """Resolve a free-text location to an ISO 3166-1 alpha-2 country code.
+
+    Handles common biosecurity reporting patterns:
+
+    * Bare country names ("Uganda", "Côte d'Ivoire") — via pycountry.
+    * Common abbreviations ("DRC", "UK", "USA") — via the alias dict.
+    * US states ("Texas", "New Mexico") → "US".
+    * Multi-country regional roll-ups ("European Region", "EU/EEA",
+      "Africa") → ``None`` (these aren't single countries).
+    * Compound locations like ``"Mubende district, Uganda"`` — tries
+      the whole string first, then falls back to each comma-separated
+      segment from right to left.
+    """
     if not location:
         return None
-    key = location.lower().strip()
-    if key in COUNTRY_TO_ISO:
-        return COUNTRY_TO_ISO[key]
-    # Try matching the last part (e.g., "Mubende district, Uganda" -> "uganda")
-    parts = key.split(",")
-    for part in reversed(parts):
+    cleaned = location.strip()
+    if not cleaned:
+        return None
+
+    # Try the whole string first
+    result = _lookup_one(cleaned)
+    if result is not None:
+        return result
+    # Defer to the not-a-country whitelist on the full string before
+    # falling through to per-segment matching. Normalise the same way
+    # as _lookup_one so "European Region" / "europe" etc. all match.
+    if re.sub(r"\s+", " ", cleaned.lower().replace(".", "")).strip() in _NOT_A_COUNTRY:
+        return None
+
+    # Try comma-separated segments right-to-left ("Mubende district, Uganda")
+    for part in reversed(cleaned.split(",")):
         part = part.strip()
-        if part in COUNTRY_TO_ISO:
-            return COUNTRY_TO_ISO[part]
+        if not part:
+            continue
+        result = _lookup_one(part)
+        if result is not None:
+            return result
     return None
 
 

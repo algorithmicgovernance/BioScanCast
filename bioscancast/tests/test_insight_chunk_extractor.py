@@ -161,6 +161,105 @@ def test_resolve_country_code_unknown():
     assert _resolve_country_code("") is None
 
 
+@pytest.mark.parametrize(
+    "location,expected",
+    [
+        # All 249 ISO entries are covered by pycountry — spot-check the
+        # ones that show up in the 6 real biosecurity test documents.
+        ("Comoros", "KM"),
+        ("Bulgaria", "BG"),
+        ("Austria", "AT"),
+        ("Ireland", "IE"),
+        ("Portugal", "PT"),
+        ("Sweden", "SE"),
+        ("Romania", "RO"),
+        ("Netherlands", "NL"),
+        ("Madagascar", "MG"),
+        ("Mozambique", "MZ"),
+        ("Côte d'Ivoire", "CI"),
+        ("Côte d’Ivoire", "CI"),  # curly apostrophe
+        # Alpha-2 / alpha-3 codes
+        ("DE", "DE"),
+        ("DEU", "DE"),
+    ],
+)
+def test_resolve_country_code_pycountry_lookups(location, expected):
+    assert _resolve_country_code(location) == expected
+
+
+@pytest.mark.parametrize(
+    "location,expected",
+    [
+        # Aliases that pycountry doesn't catch directly
+        ("UK", "GB"),
+        ("U.K.", "GB"),
+        ("England", "GB"),
+        ("Scotland", "GB"),
+        ("DRC", "CD"),
+        ("DR Congo", "CD"),
+        ("Democratic Republic of the Congo", "CD"),
+        ("Republic of the Congo", "CG"),
+        # Bare "Congo" intentionally resolves to CG (Republic of) via
+        # pycountry's canonical name — biosecurity reporting that means
+        # DRC should use one of the DRC aliases.
+        ("Congo", "CG"),
+        ("UAE", "AE"),
+        ("Russia", "RU"),
+        ("Burma", "MM"),
+        ("Myanmar", "MM"),
+        ("Ivory Coast", "CI"),
+        ("North Korea", "KP"),
+        ("South Korea", "KR"),
+    ],
+)
+def test_resolve_country_code_aliases(location, expected):
+    assert _resolve_country_code(location) == expected
+
+
+@pytest.mark.parametrize(
+    "state",
+    [
+        "California", "Iowa", "New Mexico", "Utah", "Texas",
+        "New York", "Florida", "Washington",
+    ],
+)
+def test_resolve_country_code_us_states_resolve_to_us(state):
+    assert _resolve_country_code(state) == "US"
+
+
+@pytest.mark.parametrize(
+    "region",
+    [
+        "Africa", "Asia", "Europe", "Americas", "Oceania",
+        "European Region", "African Region",
+        "Region of the Americas", "Western Pacific Region",
+        "South-East Asia Region", "Eastern Mediterranean Region",
+        "EU/EEA", "EU", "EEA",
+        "World", "global",
+    ],
+)
+def test_resolve_country_code_multi_country_regions_return_none(region):
+    assert _resolve_country_code(region) is None
+
+
+@pytest.mark.parametrize(
+    "location,expected",
+    [
+        # Compound location strings — the resolver should try the last
+        # segment after a comma.
+        ("Mubende district, Uganda", "UG"),
+        ("Lea County, New Mexico", "US"),
+        ("Ngazidja region, Comoros", "KM"),
+        ("Lyon, France", "FR"),
+        # When the last segment is a region label, the resolver should
+        # return None rather than guessing.
+        ("Some city, European Region", None),
+    ],
+)
+def test_resolve_country_code_compound_locations(location, expected):
+    assert _resolve_country_code(location) == expected
+
+
 # ---------------------------------------------------------------------------
 # Token tracking
 # ---------------------------------------------------------------------------
