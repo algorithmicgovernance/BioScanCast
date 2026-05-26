@@ -173,12 +173,6 @@ class InsightPipeline:
         # --- Cross-document deduplication ---
         all_records = _deduplicate_records(all_records)
 
-        # --- Optional strong model refinement ---
-        if config.use_strong_model_refinement:
-            result.notes.append(
-                "Strong model refinement is enabled but not yet implemented."
-            )
-
         result.records = all_records
         result.budget_summary = budget.summary()
         return result

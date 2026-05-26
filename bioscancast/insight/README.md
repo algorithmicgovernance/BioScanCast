@@ -44,4 +44,9 @@ See `config.py` for all configurable values (`InsightConfig`).
 ## TODO
 
 - [ ] Cognitive bias mitigations belong primarily in the **forecasting** stage's prompts, not here. Insight extraction is neutral fact-finding. A brief reminder is included in the extraction prompt but full bias mitigation should be implemented in forecasting.
-- [ ] Strong model refinement pass (behind `use_strong_model_refinement` config flag, currently a no-op).
+
+Strong-model refinement pass was scaffolded in the initial PR but never
+implemented. The scaffold has been removed; the design is preserved in
+[issue #26](https://github.com/algorithmicgovernance/BioScanCast/issues/26)
+to revisit after the first benchmark run identifies whether cheap-model
+records need a refinement pass.

@@ -11,8 +11,6 @@ INSIGHT_CONFIG = {
     "bm25_weight": 0.5,
     "embedding_weight": 0.5,
     "cheap_model": "gpt-4o-mini",
-    "strong_model": "gpt-4o",
-    "use_strong_model_refinement": False,
     "embedding_model": "text-embedding-3-small",
     "max_input_tokens_per_run": 500_000,
     "max_chunks_per_document": 12,
@@ -29,8 +27,6 @@ class InsightConfig:
     bm25_weight: float = 0.5
     embedding_weight: float = 0.5
     cheap_model: str = "gpt-4o-mini"
-    strong_model: str = "gpt-4o"
-    use_strong_model_refinement: bool = False
     embedding_model: str = "text-embedding-3-small"
     max_input_tokens_per_run: int = 500_000
     max_chunks_per_document: int = 12
