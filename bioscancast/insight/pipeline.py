@@ -148,46 +148,139 @@ def _normalize_location(location: Optional[str]) -> str:
     return location.lower().strip()
 
 
-def _record_dedup_key(record: InsightRecord) -> tuple:
-    """Build a deduplication key for an InsightRecord.
+# Ordered from coarsest to finest. Used by the dedup logic to compare
+# two records whose event_date_precision values differ.
+_PRECISION_ORDER = {"year": 0, "month": 1, "day": 2}
 
-    Two records are duplicates if they have the same event_type,
-    metric_name, date, and normalized location.
+
+def _date_bucket(
+    dt: Optional[datetime], precision: Optional[str]
+) -> Optional[tuple]:
+    """Truncate a (datetime, precision) pair to a comparable tuple bucket.
+
+    Returns ``None`` when no date is known.
     """
-    date_str = ""
-    if record.event_date:
-        date_str = record.event_date.strftime("%Y-%m-%d")
+    if dt is None or precision is None:
+        return None
+    if precision == "year":
+        return (dt.year,)
+    if precision == "month":
+        return (dt.year, dt.month)
+    # day (or anything more specific) is collapsed to day
+    return (dt.year, dt.month, dt.day)
+
+
+def _dates_overlap(
+    d1: Optional[datetime],
+    p1: Optional[str],
+    d2: Optional[datetime],
+    p2: Optional[str],
+) -> bool:
+    """Check whether two (datetime, precision) pairs refer to
+    overlapping time buckets.
+
+    Both-None counts as overlap (the "no date known" bucket). One-None
+    does NOT overlap with a known-date bucket — we don't merge dated
+    and undated facts.
+
+    Two known dates overlap when, truncated to whichever precision is
+    coarser, their buckets are equal. So month-precision ``2026-01``
+    overlaps with day-precision ``2026-01-25`` (both → ``(2026, 1)``
+    at month precision) but not with ``2026-02-25``.
+    """
+    if d1 is None and d2 is None:
+        return True
+    if d1 is None or d2 is None:
+        return False
+    if p1 is None or p2 is None:
+        return False
+    coarser = p1 if _PRECISION_ORDER[p1] <= _PRECISION_ORDER[p2] else p2
+    return _date_bucket(d1, coarser) == _date_bucket(d2, coarser)
+
+
+def _record_dedup_key(record: InsightRecord) -> tuple:
+    """First-stage dedup key: groups records that *might* be duplicates.
+
+    Date is intentionally omitted from the first-stage key because two
+    records with different date precisions (e.g. ``2026-01`` vs
+    ``2026-01-25``) need to be considered together. The second stage
+    walks each group and uses ``_dates_overlap`` to decide whether to
+    merge.
+    """
     return (
         record.event_type,
         record.metric_name or "",
-        date_str,
         _normalize_location(record.location),
     )
 
 
-def _deduplicate_records(records: list[InsightRecord]) -> list[InsightRecord]:
-    """Deduplicate InsightRecords, merging provenance lists.
+def _merge_record_into(
+    target: InsightRecord, source: InsightRecord
+) -> None:
+    """Merge ``source`` into ``target`` in place.
 
-    Keeps the record with the higher confidence score and merges
-    source references from duplicates.
+    Adds source's unique chunk references, raises confidence to the max
+    of the two, and adopts the finer of the two date precisions (with
+    its corresponding date). The coarser-precision source loses its
+    date but its provenance is preserved.
     """
-    seen: dict[tuple, InsightRecord] = {}
+    existing_chunk_ids = {
+        (s.document_id, s.chunk_id) for s in target.sources
+    }
+    for src in source.sources:
+        if (src.document_id, src.chunk_id) not in existing_chunk_ids:
+            target.sources.append(src)
+    if source.confidence > target.confidence:
+        target.confidence = source.confidence
+    # Adopt the finer precision date if source has one
+    source_rank = (
+        _PRECISION_ORDER.get(source.event_date_precision, -1)
+        if source.event_date_precision else -1
+    )
+    target_rank = (
+        _PRECISION_ORDER.get(target.event_date_precision, -1)
+        if target.event_date_precision else -1
+    )
+    if source.event_date and source_rank > target_rank:
+        target.event_date = source.event_date
+        target.event_date_precision = source.event_date_precision
 
+
+def _deduplicate_records(records: list[InsightRecord]) -> list[InsightRecord]:
+    """Two-stage deduplication merging records with overlapping date buckets.
+
+    Stage 1: group by ``(event_type, metric_name, normalized_location)``.
+    Stage 2: within each group, walk records in order and merge each
+    into the first surviving entry whose date bucket overlaps. This
+    handles the common case where multiple sources report the same
+    event at different date precisions (e.g. WHO sitrep says
+    "January 2026" while a country report says "as of 25 January
+    2026") — both refer to the same underlying fact.
+
+    Records with completely distinct dates within the same group stay
+    separate (no false merging of "Jan 5" with "Jan 6").
+    """
+    from collections import defaultdict
+
+    groups: dict[tuple, list[InsightRecord]] = defaultdict(list)
     for record in records:
-        key = _record_dedup_key(record)
-        if key in seen:
-            existing = seen[key]
-            # Merge provenance
-            existing_chunk_ids = {
-                (s.document_id, s.chunk_id) for s in existing.sources
-            }
-            for src in record.sources:
-                if (src.document_id, src.chunk_id) not in existing_chunk_ids:
-                    existing.sources.append(src)
-            # Keep higher confidence
-            if record.confidence > existing.confidence:
-                existing.confidence = record.confidence
-        else:
-            seen[key] = record
+        groups[_record_dedup_key(record)].append(record)
 
-    return list(seen.values())
+    out: list[InsightRecord] = []
+    for group in groups.values():
+        merged: list[InsightRecord] = []
+        for record in group:
+            target = None
+            for existing in merged:
+                if _dates_overlap(
+                    record.event_date, record.event_date_precision,
+                    existing.event_date, existing.event_date_precision,
+                ):
+                    target = existing
+                    break
+            if target is not None:
+                _merge_record_into(target, record)
+            else:
+                merged.append(record)
+        out.extend(merged)
+    return out

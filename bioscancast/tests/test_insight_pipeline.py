@@ -190,6 +190,221 @@ def test_pipeline_deduplication():
 
 
 # ---------------------------------------------------------------------------
+# Date-precision-aware dedup
+# ---------------------------------------------------------------------------
+
+
+def _record(
+    record_id: str,
+    *,
+    event_date: "datetime | None" = None,
+    event_date_precision: "str | None" = None,
+    confidence: float = 0.8,
+    location: "str | None" = "United States",
+    metric_name: "str | None" = "confirmed_cases",
+    event_type: str = "case_count",
+    document_id: str = "doc-test",
+):
+    """Build an InsightRecord with a single ChunkReference for dedup tests."""
+    from bioscancast.schemas import InsightRecord, ChunkReference
+    return InsightRecord(
+        id=record_id,
+        question_id="q-test",
+        event_type=event_type,
+        confidence=confidence,
+        location=location,
+        metric_name=metric_name,
+        metric_value=1.0,
+        event_date=event_date,
+        event_date_precision=event_date_precision,
+        sources=[ChunkReference(
+            document_id=document_id,
+            chunk_id=f"chunk-{record_id}",
+            source_url=f"https://example.com/{document_id}",
+            quote="some quote",
+        )],
+    )
+
+
+def test_dedup_merges_day_precision_with_month_precision_in_same_month():
+    """A day-precision fact (2026-01-25) should merge with a month-precision
+    fact (2026-01) and the merged record should keep the finer precision."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    day_record = _record(
+        "day", event_date=datetime(2026, 1, 25), event_date_precision="day",
+    )
+    month_record = _record(
+        "month", event_date=datetime(2026, 1, 1), event_date_precision="month",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([day_record, month_record])
+    assert len(result) == 1
+    merged = result[0]
+    assert merged.event_date_precision == "day"
+    assert merged.event_date == datetime(2026, 1, 25)
+    assert len(merged.sources) == 2
+
+
+def test_dedup_keeps_month_precision_when_order_reversed():
+    """Order of presentation must not change the outcome: month-then-day
+    must also merge to the day-precision form."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    month_record = _record(
+        "month", event_date=datetime(2026, 1, 1), event_date_precision="month",
+    )
+    day_record = _record(
+        "day", event_date=datetime(2026, 1, 25), event_date_precision="day",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([month_record, day_record])
+    assert len(result) == 1
+    merged = result[0]
+    assert merged.event_date_precision == "day"
+    assert merged.event_date == datetime(2026, 1, 25)
+
+
+def test_dedup_does_not_merge_different_months_at_month_precision():
+    """Two month-precision records in different months must stay separate."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    jan = _record(
+        "jan", event_date=datetime(2026, 1, 1), event_date_precision="month",
+    )
+    feb = _record(
+        "feb", event_date=datetime(2026, 2, 1), event_date_precision="month",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([jan, feb])
+    assert len(result) == 2
+
+
+def test_dedup_does_not_merge_different_days():
+    """Two day-precision records on different days must stay separate even
+    when they share the same month."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    day5 = _record(
+        "day5", event_date=datetime(2026, 1, 5), event_date_precision="day",
+    )
+    day6 = _record(
+        "day6", event_date=datetime(2026, 1, 6), event_date_precision="day",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([day5, day6])
+    assert len(result) == 2
+
+
+def test_dedup_merges_year_precision_with_day_precision_in_same_year():
+    """A year-only fact (2026) should merge with a day-precision fact
+    inside that year."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    year = _record(
+        "year", event_date=datetime(2026, 1, 1), event_date_precision="year",
+    )
+    day = _record(
+        "day", event_date=datetime(2026, 3, 15), event_date_precision="day",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([year, day])
+    assert len(result) == 1
+    assert result[0].event_date_precision == "day"
+    assert result[0].event_date == datetime(2026, 3, 15)
+
+
+def test_dedup_does_not_merge_different_years():
+    """Year-only facts in different years must stay separate."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    y2025 = _record(
+        "2025", event_date=datetime(2025, 1, 1), event_date_precision="year",
+    )
+    y2026 = _record(
+        "2026", event_date=datetime(2026, 1, 1), event_date_precision="year",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([y2025, y2026])
+    assert len(result) == 2
+
+
+def test_dedup_three_way_merge_with_mixed_precisions():
+    """Three records, one each at year/month/day precision, all in the
+    same time range, should collapse to one with day precision."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    year = _record(
+        "year", event_date=datetime(2026, 1, 1), event_date_precision="year",
+        document_id="doc-a",
+    )
+    month = _record(
+        "month", event_date=datetime(2026, 1, 1), event_date_precision="month",
+        document_id="doc-b",
+    )
+    day = _record(
+        "day", event_date=datetime(2026, 1, 25), event_date_precision="day",
+        document_id="doc-c",
+    )
+    result = _deduplicate_records([year, month, day])
+    assert len(result) == 1
+    merged = result[0]
+    assert merged.event_date_precision == "day"
+    assert merged.event_date == datetime(2026, 1, 25)
+    assert len(merged.sources) == 3
+
+
+def test_dedup_does_not_merge_dated_with_undated():
+    """A record with no date and a record with a date should stay
+    separate — we don't claim they're about the same event."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    undated = _record("undated")
+    dated = _record(
+        "dated", event_date=datetime(2026, 1, 25), event_date_precision="day",
+        document_id="doc-other",
+    )
+    result = _deduplicate_records([undated, dated])
+    assert len(result) == 2
+
+
+def test_dedup_merges_undated_records():
+    """Two records with no date in the same group still merge."""
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    a = _record("a")
+    b = _record("b", document_id="doc-other")
+    result = _deduplicate_records([a, b])
+    assert len(result) == 1
+    assert len(result[0].sources) == 2
+
+
+def test_dedup_does_not_merge_across_different_locations():
+    """Different normalized locations stay in separate groups."""
+    from datetime import datetime
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    us = _record(
+        "us", location="United States",
+        event_date=datetime(2026, 1, 25), event_date_precision="day",
+    )
+    uk = _record(
+        "uk", location="United Kingdom", document_id="doc-other",
+        event_date=datetime(2026, 1, 25), event_date_precision="day",
+    )
+    result = _deduplicate_records([us, uk])
+    assert len(result) == 2
+
+
+# ---------------------------------------------------------------------------
 # Multi-document end-to-end
 # ---------------------------------------------------------------------------
 

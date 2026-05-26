@@ -220,16 +220,49 @@ def _resolve_country_code(location: Optional[str]) -> Optional[str]:
     return None
 
 
-def _parse_event_date(date_str: Optional[str]) -> Optional[datetime]:
-    """Try to parse a date string from the LLM output."""
+def _parse_event_date(
+    date_str: Optional[str],
+) -> tuple[Optional[datetime], Optional[str]]:
+    """Parse a date string from the LLM output into a (datetime, precision)
+    pair.
+
+    Accepts (in order of preference):
+
+    * ``YYYY-MM-DD`` and similar full ISO forms → precision="day"
+    * ``YYYY-MM`` → precision="month"; datetime is the start of that month
+    * ``YYYY`` → precision="year"; datetime is January 1 of that year
+    * Free-form ``"15 January 2026"``, ``"January 15, 2026"`` → "day"
+
+    Returns ``(None, None)`` when no format matches. Storing precision
+    alongside the canonicalised datetime lets the dedup logic merge a
+    month-precision record like 2026-01 with a day-precision record
+    inside that month without throwing away the underlying granularity.
+    """
     if not date_str:
-        return None
-    for fmt in ("%Y-%m-%d", "%d %B %Y", "%B %d, %Y", "%Y-%m-%dT%H:%M:%S"):
+        return None, None
+
+    cleaned = date_str.strip()
+
+    # Day-precision attempts (in order)
+    for fmt in ("%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%d %B %Y", "%B %d, %Y"):
         try:
-            return datetime.strptime(date_str, fmt)
+            return datetime.strptime(cleaned, fmt), "day"
         except ValueError:
             continue
-    return None
+
+    # Month-precision attempt
+    try:
+        return datetime.strptime(cleaned, "%Y-%m"), "month"
+    except ValueError:
+        pass
+
+    # Year-precision attempt
+    try:
+        return datetime.strptime(cleaned, "%Y"), "year"
+    except ValueError:
+        pass
+
+    return None, None
 
 
 def extract_facts_from_chunk(
@@ -290,7 +323,9 @@ def extract_facts_from_chunk(
 
         location = fact.get("location")
         iso_code = _resolve_country_code(location)
-        event_date = _parse_event_date(fact.get("event_date"))
+        event_date, event_date_precision = _parse_event_date(
+            fact.get("event_date")
+        )
 
         record = InsightRecord(
             id=f"ins-{uuid.uuid4().hex[:12]}",
@@ -308,6 +343,7 @@ def extract_facts_from_chunk(
             ),
             metric_unit=fact.get("metric_unit"),
             event_date=event_date,
+            event_date_precision=event_date_precision,
             summary=fact.get("summary"),
             model=model,
             extracted_at=datetime.now(timezone.utc),

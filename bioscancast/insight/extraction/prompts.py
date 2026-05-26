@@ -32,7 +32,12 @@ substring of the chunk text.
 This is expected and common — most chunks are irrelevant.
 4. Do NOT answer the forecast question.  Your job is fact extraction, \
 not forecasting.
-5. Be aware of cognitive biases that affect information processing:
+5. For event_date, use the most specific ISO date you can extract from \
+the chunk and nothing more: ``YYYY-MM-DD`` when a day is given, \
+``YYYY-MM`` when only a month is given (e.g. "January 2026"), or \
+``YYYY`` when only a year is given. Do NOT invent a day-of-month when \
+the chunk only mentions a month.
+6. Be aware of cognitive biases that affect information processing:
    - Anchoring: do not over-weight the first number you encounter.
    - Availability: rare dramatic events are not necessarily more likely.
    - Overconfidence: if the chunk is ambiguous, lower your confidence.
