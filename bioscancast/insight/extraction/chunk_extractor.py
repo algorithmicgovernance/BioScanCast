@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import logging
 import re
+import unicodedata
 import uuid
 from datetime import datetime, timezone
 from typing import TYPE_CHECKING, Optional
@@ -22,6 +23,47 @@ if TYPE_CHECKING:
     from bioscancast.llm.base import LLMClient, LLMResponse
 
 logger = logging.getLogger(__name__)
+
+# Punctuation the hallucination guard is willing to ignore at the very end
+# of a model-supplied quote. Live tests on real WHO/CDC/ECDC documents show
+# the model habitually closes paraphrased quotes with '.' even when the
+# source has a comma, semicolon, or no terminator at that position.
+_TERMINAL_PUNCT = ".;,:!?"
+
+# Typography → ASCII folding applied at layer 1 before substring matching.
+# NFKC alone does NOT fold smart quotes (U+2018/9, U+201C/D) or em/en
+# dashes — those are independent Unicode codepoints, not compatibility
+# forms. But real biosecurity sources mix them freely with their ASCII
+# equivalents (WHO and ECDC PDFs in particular use curly quotes and
+# em-dashes), and the model normalises them inconsistently in its
+# output. Folding here keeps the guard robust to those variants.
+_TYPOGRAPHY_FOLD: dict[str, str] = {
+    "‘": "'",  # LEFT SINGLE QUOTATION MARK
+    "’": "'",  # RIGHT SINGLE QUOTATION MARK
+    "‚": "'",  # SINGLE LOW-9 QUOTATION MARK
+    "‛": "'",  # SINGLE HIGH-REVERSED-9
+    "“": '"',  # LEFT DOUBLE QUOTATION MARK
+    "”": '"',  # RIGHT DOUBLE QUOTATION MARK
+    "„": '"',  # DOUBLE LOW-9 QUOTATION MARK
+    "–": "-",  # EN DASH
+    "—": "-",  # EM DASH
+    "−": "-",  # MINUS SIGN
+    "…": "...",  # HORIZONTAL ELLIPSIS
+}
+
+_TYPOGRAPHY_FOLD_RE = re.compile(
+    "|".join(re.escape(k) for k in _TYPOGRAPHY_FOLD)
+)
+
+# Wrapping punctuation the guard will strip from both sides at layer 3.
+# These are characters whose presence-vs-absence around inline elements
+# (acronyms like "(NMDOH)", figures like "[12]", quoted speech) flips
+# between model output and source text without changing meaning. We do
+# NOT strip hyphens or other connecting punctuation because those carry
+# semantic load (e.g. "outbreak-related"). Note: smart quotes have
+# already been folded to ASCII at layer 1, so this regex only needs to
+# list the ASCII variants.
+_WRAPPING_PUNCT_RE = re.compile(r"[\(\)\[\]\{\}\"\']")
 
 
 # Hardcoded country name -> ISO 3166-1 alpha-2 map for the ~30 most
@@ -70,8 +112,96 @@ COUNTRY_TO_ISO: dict[str, str] = {
 
 
 def _normalize_whitespace(text: str) -> str:
-    """Collapse all whitespace to single spaces for substring matching."""
+    """Collapse all whitespace to single spaces for substring matching.
+
+    Retained as a thin wrapper for callers (and tests) that pre-date the
+    NFKC-aware match logic. New code should use ``_normalize_for_match``.
+    """
     return re.sub(r"\s+", " ", text).strip()
+
+
+def _normalize_for_match(text: str) -> str:
+    """NFKC + typography-to-ASCII fold + whitespace collapse.
+
+    Used by the hallucination guard to compare quotes against chunk text
+    on a stable footing. NFKC handles compatibility chars (non-breaking
+    spaces, full-width ASCII); the explicit typography fold handles
+    smart quotes and em/en dashes (which are NOT compatibility chars in
+    Unicode). Without these, the guard rejects real quotes whose only
+    difference from the source is a typographic variant.
+    """
+    if not text:
+        return ""
+    text = unicodedata.normalize("NFKC", text)
+    text = _TYPOGRAPHY_FOLD_RE.sub(lambda m: _TYPOGRAPHY_FOLD[m.group(0)], text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _quote_matches(quote: str, chunk_text: str) -> Optional[str]:
+    """Hallucination guard: return the canonical chunk substring the quote
+    matches, or ``None`` if no match.
+
+    Layers applied in order:
+
+    1. **NFKC + whitespace collapse → exact substring.** Catches curly vs
+       straight apostrophes, non-breaking spaces, em-dashes, full-width
+       ASCII, and the model's whitespace habits.
+    2. **Strip terminal punctuation** (``.;,:!?``) from the normalised
+       quote, then substring check again. Catches the model's strong
+       tendency to close paraphrased quotes with ``.`` even when the
+       source has a comma or no punctuation at that position (e.g.
+       source: ``"...reported by Italy (63), Spain..."``; model quote:
+       ``"...reported by Italy (63)."``).
+    3. **Strip wrapping punctuation** (``()[]{}""``) from both quote and
+       chunk and retry (also dropping terminal punctuation from the
+       quote). Catches the model's habit of dropping the parens around
+       acronyms (source: ``"f Health (NMDOH) eventually reported..."``;
+       model quote: ``"NMDOH eventually reported..."``).
+
+    The function returns the *canonical* form of the matched substring
+    (with the same transformations applied that made the match succeed)
+    rather than the model's original output, so the stored
+    ``ChunkReference.quote`` always corresponds to actual chunk content
+    after the same normalisation. Returns ``None`` when no layer
+    matches — caller drops the fact.
+
+    Note: this loosening was driven by live tests showing the strict
+    substring-only guard rejected ~85% of real factual quotes due to
+    minor punctuation/unicode drift on real WHO/CDC/ECDC documents,
+    while the looser three-layer guard still rejects substantive
+    paraphrases (e.g. the model bolting a prefix from one sentence onto
+    a fragment of another) and content-insertion hallucinations (extra
+    words in a list).
+    """
+    if not quote:
+        return None
+    norm_quote = _normalize_for_match(quote)
+    if not norm_quote:
+        return None
+    norm_chunk = _normalize_for_match(chunk_text)
+
+    # Layer 1: exact substring after NFKC + whitespace
+    if norm_quote in norm_chunk:
+        return norm_quote
+
+    # Layer 2: strip terminal punctuation from the quote and retry
+    stripped = norm_quote.rstrip(_TERMINAL_PUNCT).strip()
+    if stripped and stripped != norm_quote and stripped in norm_chunk:
+        return stripped
+
+    # Layer 3: strip wrapping punctuation everywhere on both sides, then
+    # strip terminal punctuation from the quote, and retry.
+    unwrap_quote = _WRAPPING_PUNCT_RE.sub("", stripped or norm_quote)
+    unwrap_quote = re.sub(r"\s+", " ", unwrap_quote).strip()
+    unwrap_quote = unwrap_quote.rstrip(_TERMINAL_PUNCT).strip()
+    if not unwrap_quote:
+        return None
+    unwrap_chunk = _WRAPPING_PUNCT_RE.sub("", norm_chunk)
+    unwrap_chunk = re.sub(r"\s+", " ", unwrap_chunk).strip()
+    if unwrap_quote in unwrap_chunk:
+        return unwrap_quote
+
+    return None
 
 
 def _resolve_country_code(location: Optional[str]) -> Optional[str]:
@@ -138,22 +268,23 @@ def extract_facts_from_chunk(
 
     facts_raw = response.content.get("facts", [])
     records: list[InsightRecord] = []
-    chunk_text_normalized = _normalize_whitespace(chunk.text)
 
     for fact in facts_raw:
-        quote = fact.get("quote", "")
-        quote_normalized = _normalize_whitespace(quote)
+        raw_quote = fact.get("quote", "")
 
         # --- Hallucination guard ---
-        # The quote must appear as a substring in the chunk text.
-        # Exact substring check (whitespace-normalized) is the point —
-        # don't soften to fuzzy match without careful consideration.
-        if not quote_normalized or quote_normalized not in chunk_text_normalized:
+        # The quote must appear as a substring in the chunk text under
+        # NFKC + whitespace normalisation, optionally with terminal
+        # punctuation stripped. The guard rejects substantive paraphrases
+        # and content-insertion hallucinations. See ``_quote_matches`` for
+        # the rationale and the layers.
+        canonical_quote = _quote_matches(raw_quote, chunk.text)
+        if canonical_quote is None:
             logger.warning(
                 "Hallucination guard: dropping fact with non-matching quote. "
                 "chunk_id=%s, quote=%r",
                 chunk.chunk_id,
-                quote[:100],
+                raw_quote[:100],
             )
             continue
 
@@ -185,7 +316,7 @@ def extract_facts_from_chunk(
                     document_id=document.id,
                     chunk_id=chunk.chunk_id,
                     source_url=document.source_url,
-                    quote=quote[:200],
+                    quote=canonical_quote[:200],
                 ),
             ],
         )

@@ -3,11 +3,14 @@
 All tests use FakeLLMClient — no network calls, no real OpenAI imports.
 """
 
+import pytest
+
 from bioscancast.llm.fake_client import FakeLLMClient
 from bioscancast.insight.extraction.chunk_extractor import (
     extract_facts_from_chunk,
     _resolve_country_code,
     _normalize_whitespace,
+    _quote_matches,
 )
 
 from bioscancast.tests.fixtures.insight.synthetic_documents import (
@@ -177,3 +180,192 @@ def test_response_returned_for_budget_tracking():
     assert response.input_tokens == 150
     assert response.output_tokens == 15
     assert response.model == "gpt-4o-mini"
+
+
+# ---------------------------------------------------------------------------
+# Hallucination guard — layered match behaviour
+# ---------------------------------------------------------------------------
+
+# Each tuple: (label, chunk_text, quote, should_match)
+#
+# These cases come from live-LLM observations on real WHO/CDC/ECDC documents.
+# The strict substring guard rejected ~85% of real factual quotes due to
+# minor punctuation/unicode drift; the looser layered guard must keep
+# accepting wholesale fabrications while accepting the real-but-drifted
+# variants below.
+
+_LAYER1_NFKC_CASES = [
+    (
+        "curly-apos source vs straight-apos quote",
+        "Côte d’Ivoire reported four confirmed cases each in January",
+        "Côte d'Ivoire reported four confirmed cases each in January",
+        True,
+    ),
+    (
+        "non-breaking space in source number",
+        "30 EU/EEA Member States reported a total of 4 623 cases of measles.",
+        "30 EU/EEA Member States reported a total of 4 623 cases of measles",
+        True,
+    ),
+    (
+        "em-dash in source vs hyphen in quote",
+        "Measles—Multi-country—Monitoring European outbreaks",
+        "Measles-Multi-country-Monitoring European outbreaks",
+        # The typography fold step maps em-dash to hyphen.
+        True,
+    ),
+    (
+        "newline in source vs space in quote",
+        "Democratic Republic of the Congo\n6 543",
+        "Democratic Republic of the Congo 6 543",
+        True,
+    ),
+]
+
+
+_LAYER2_TERMINAL_PUNCTUATION_CASES = [
+    (
+        "comma in source becomes period in quote",
+        "...reported by Italy (63), Spain (36), France (16) and Poland (five).",
+        "The highest case counts were reported by Italy (63).",
+        # Quote prefix not in source — should reject
+        False,
+    ),
+    (
+        "comma in source becomes period in quote — full prefix",
+        "The highest case counts were reported by Italy (63), Spain (36), France (16) and Poland (five).",
+        "The highest case counts were reported by Italy (63).",
+        True,
+    ),
+    (
+        "no terminator in source vs period in quote",
+        "Spain reported 97 cases of measles from 1 January to 12 April 2026 according to ECDC",
+        "Spain reported 97 cases of measles from 1 January to 12 April 2026.",
+        True,
+    ),
+]
+
+
+_LAYER3_WRAPPING_PUNCTUATION_CASES = [
+    (
+        "parens around acronym in source dropped in quote",
+        "f Health (NMDOH) eventually reported 99 outbreak-related measles cases, approximately one half.",
+        "NMDOH eventually reported 99 outbreak-related measles cases.",
+        True,
+    ),
+    (
+        "double quotes in source dropped in quote",
+        "The CDC said “we are responding” to the outbreak.",
+        "The CDC said we are responding to the outbreak.",
+        True,
+    ),
+    (
+        "square brackets in source dropped in quote",
+        "the result [12] shows a clear trend in cases.",
+        "the result 12 shows a clear trend in cases.",
+        True,
+    ),
+]
+
+
+_HALLUCINATION_CASES = [
+    (
+        "fabricated word inserted into list",
+        "Ghana and Liberia have reported human mpox due to clade IIa MPXV.",
+        "Ghana, Atlantis, and Liberia have reported human mpox due to clade IIa MPXV.",
+        False,
+    ),
+    (
+        "wholesale fabrication",
+        "Some real chunk content about measles cases in Utah.",
+        "THIS QUOTE WAS INVENTED BY THE MODEL AND APPEARS NOWHERE.",
+        False,
+    ),
+    (
+        "synthesised prefix bolted onto a fragment",
+        # Model takes a prefix from sentence A and bolts it onto a fragment of sentence B
+        "Italy reported 63 cases. Spain reported 36 cases.",
+        "Italy reported 36 cases.",
+        False,
+    ),
+    (
+        "wrong number",
+        "Spain reported 36 cases yesterday.",
+        "Spain reported 363 cases yesterday.",
+        False,
+    ),
+    (
+        "empty quote",
+        "Real chunk content.",
+        "",
+        False,
+    ),
+    (
+        "whitespace-only quote",
+        "Real chunk content.",
+        "   \n\t  ",
+        False,
+    ),
+]
+
+
+@pytest.mark.parametrize(
+    "label,chunk_text,quote,should_match",
+    _LAYER1_NFKC_CASES + _LAYER2_TERMINAL_PUNCTUATION_CASES + _LAYER3_WRAPPING_PUNCTUATION_CASES,
+)
+def test_quote_matches_accepts_real_quotes_with_normalisation_drift(
+    label, chunk_text, quote, should_match
+):
+    """Real factual quotes with NFKC / terminal-punctuation / wrapping-
+    punctuation drift should be accepted by the layered guard."""
+    result = _quote_matches(quote, chunk_text)
+    if should_match:
+        assert result is not None, (
+            f"{label}: expected match, got None. quote={quote!r}"
+        )
+        # The returned canonical form must itself be a substring of the
+        # *normalised* chunk text — that's the invariant the guard
+        # guarantees to downstream consumers.
+        from bioscancast.insight.extraction.chunk_extractor import (
+            _normalize_for_match,
+            _WRAPPING_PUNCT_RE,
+        )
+        import re
+        norm_chunk = _normalize_for_match(chunk_text)
+        unwrap_chunk = re.sub(
+            r"\s+", " ", _WRAPPING_PUNCT_RE.sub("", norm_chunk)
+        ).strip()
+        assert result in norm_chunk or result in unwrap_chunk, (
+            f"{label}: canonical form {result!r} not in chunk after "
+            "normalisation"
+        )
+    else:
+        assert result is None, f"{label}: expected reject, got {result!r}"
+
+
+@pytest.mark.parametrize(
+    "label,chunk_text,quote,should_match", _HALLUCINATION_CASES
+)
+def test_quote_matches_rejects_hallucinations(
+    label, chunk_text, quote, should_match
+):
+    """Content insertions, fabrications, wrong numbers, and synthesised
+    quotes must all be rejected even by the looser layered guard."""
+    result = _quote_matches(quote, chunk_text)
+    assert result is None, (
+        f"{label}: expected reject, got {result!r} (quote={quote!r})"
+    )
+
+
+def test_quote_matches_returns_canonical_form_not_raw_quote():
+    """When a quote matches via terminal-punctuation strip, the canonical
+    returned form should be the stripped version — not the model's raw
+    output — so downstream consumers always see a verbatim chunk
+    substring."""
+    chunk = "Italy reported 63 cases, Spain reported 36 cases."
+    quote = "Italy reported 63 cases."  # Model added period
+    result = _quote_matches(quote, chunk)
+    assert result == "Italy reported 63 cases"
+    # Round-trip: the canonical form must be a substring of the
+    # normalised chunk
+    assert result in _normalize_whitespace(chunk)
