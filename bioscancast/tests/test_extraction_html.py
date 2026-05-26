@@ -247,3 +247,142 @@ class TestTrafilaturaXmlExtraction:
         assert result.published_date is not None
         assert result.published_date.year == 2026
         assert result.language == "en"
+
+
+# ---------------------------------------------------------------------------
+# Publication-date extraction across the candidate priority chain
+# ---------------------------------------------------------------------------
+
+class TestPublishedDateExtraction:
+    """The HTML parser tries multiple date-bearing patterns in priority
+    order. These tests pin the chain so future additions don't shuffle
+    the precedence silently.
+    """
+
+    def _wrap(self, head_extra: str) -> bytes:
+        """Wrap meta fragments in a minimal HTML doc."""
+        return (
+            f"<html><head><title>T</title>{head_extra}</head>"
+            "<body><p>Body.</p></body></html>"
+        ).encode("utf-8")
+
+    def test_article_published_time_wins(self, html_parser):
+        html = self._wrap(
+            '<meta property="article:published_time" content="2026-04-15T10:00:00">'
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.year == 2026
+        assert result.published_date.month == 4
+        assert result.published_date.day == 15
+
+    def test_jsonld_date_published_extracted(self, html_parser):
+        html = self._wrap(
+            '<script type="application/ld+json">'
+            '{"@type": "NewsArticle", "datePublished": "2026-02-10"}'
+            "</script>"
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 2
+        assert result.published_date.day == 10
+
+    def test_jsonld_nested_date_published_extracted(self, html_parser):
+        """datePublished inside a nested @graph entry should still be
+        found — JSON-LD blocks routinely wrap the Article inside a
+        WebPage inside an @graph list."""
+        html = self._wrap(
+            '<script type="application/ld+json">'
+            '{"@graph": [{"@type": "WebPage"}, '
+            '{"@type": "NewsArticle", "datePublished": "2026-05-01"}]}'
+            "</script>"
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 5
+
+    def test_dublin_core_issued_extracted(self, html_parser):
+        html = self._wrap(
+            '<meta name="DC.date.issued" content="2026-03-20">'
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 3
+        assert result.published_date.day == 20
+
+    def test_dcterms_issued_extracted(self, html_parser):
+        html = self._wrap('<meta name="dcterms:issued" content="2026-06-12">')
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 6
+
+    def test_sailthru_date_extracted(self, html_parser):
+        html = self._wrap('<meta name="sailthru.date" content="2026-01-08">')
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 1
+
+    def test_bare_dc_date_intentionally_ignored(self, html_parser):
+        """``DC.date`` (without an explicit ``issued`` / ``created``
+        suffix) is ambiguous and in practice (e.g. CDC HAN alerts) is
+        used as a last-rendered timestamp rather than a publication
+        date. Returning that would mislead downstream consumers, so
+        the extractor deliberately ignores it.
+        """
+        html = self._wrap('<meta name="DC.date" content="2026-10-27T04:46:58Z">')
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is None
+
+    def test_modified_time_only_used_as_last_resort(self, html_parser):
+        """When only modification metadata is available, the parser
+        returns that rather than None — but earlier patterns must win."""
+        html = self._wrap(
+            '<meta property="article:modified_time" content="2026-07-01T00:00:00">'
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 7
+
+    def test_published_beats_modified(self, html_parser):
+        """When both are present, the publication date wins."""
+        html = self._wrap(
+            '<meta property="article:published_time" content="2026-04-01T00:00:00">'
+            '<meta property="article:modified_time" content="2026-08-01T00:00:00">'
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 4
+
+    def test_jsonld_beats_dublin_core(self, html_parser):
+        """JSON-LD ``datePublished`` is more semantically precise than
+        Dublin Core and wins when both are present."""
+        html = self._wrap(
+            '<meta name="DC.date.issued" content="2026-09-01">'
+            '<script type="application/ld+json">'
+            '{"@type": "Article", "datePublished": "2026-02-15"}'
+            "</script>"
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 2
+
+    def test_malformed_jsonld_does_not_crash(self, html_parser):
+        """JSON-LD blocks with templated/partial content are common in
+        the wild; a parser error must not propagate."""
+        html = self._wrap(
+            '<meta property="article:published_time" content="2026-04-15T10:00:00">'
+            '<script type="application/ld+json">{not valid json</script>'
+            '<script type="application/ld+json">{{ template_var }}</script>'
+        )
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is not None
+        assert result.published_date.month == 4
+
+    def test_no_date_metadata_returns_none(self, html_parser):
+        """Listing pages (like ProMED's recent-posts page) that expose
+        no date metadata anywhere should legitimately return None
+        rather than picking up an unrelated body-text date.
+        """
+        html = self._wrap("")  # no meta tags
+        result = html_parser.parse(html, source_url="https://x.com/")
+        assert result.published_date is None

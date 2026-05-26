@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import json as _json
 import logging
 import re
 from datetime import datetime
-from typing import List, Optional
+from typing import Iterable, List, Optional, Tuple
 from xml.etree import ElementTree as ET
 
 from bs4 import BeautifulSoup, Tag
@@ -216,23 +217,123 @@ class HtmlParser:
         return None
 
     def _extract_published_date(self, soup: BeautifulSoup) -> Optional[datetime]:
-        for attr in ("article:published_time", "og:published_time"):
-            meta = soup.find("meta", property=attr)
-            if meta and meta.get("content"):  # type: ignore[union-attr]
-                return self._parse_date(meta["content"])  # type: ignore[index]
+        """Extract a publication date from HTML metadata.
 
-        meta_name = soup.find("meta", attrs={"name": "publication_date"})
-        if meta_name and meta_name.get("content"):  # type: ignore[union-attr]
-            return self._parse_date(meta_name["content"])  # type: ignore[index]
+        Tries multiple conventions in priority order (publication-semantic
+        first, then generic, then modification-semantic), and parses the
+        first candidate that yields a valid datetime. Returns ``None``
+        when no usable date is found — legitimately the case for listing
+        pages or org-site landings that don't expose one. Body-text date
+        extraction is intentionally NOT attempted here: too many pages
+        (especially epidemiology articles) contain dozens of unrelated
+        dates that a regex would mistakenly pick up.
 
-        time_tag = soup.find("time", attrs={"datetime": True})
-        if time_tag:
-            return self._parse_date(time_tag["datetime"])  # type: ignore[index]
-
+        Why ``DC.date`` without an explicit "issued" / "created" suffix
+        is NOT consulted: in practice (e.g. CDC HAN alerts) it's used as
+        a last-rendered timestamp, not a publication date, and returning
+        a misleading post-publication date is worse than returning None.
+        """
+        for label, raw in self._iter_date_candidates(soup):
+            dt = self._parse_date(raw)
+            if dt is not None:
+                logger.debug("pub_date matched on %s: %r", label, raw)
+                return dt
         return None
 
+    def _iter_date_candidates(
+        self, soup: BeautifulSoup
+    ) -> Iterable[Tuple[str, str]]:
+        """Yield ``(label, raw_string)`` candidates in priority order.
+
+        The label is for diagnostic logging only; the order is what
+        actually matters. Publication-semantic sources come first
+        (``article:published_time``, JSON-LD ``datePublished``, Dublin
+        Core ``issued``/``created``). Generic ``<time datetime>`` lands
+        in the middle. Modification-semantic sources come last so they
+        only contribute when nothing better is available.
+        """
+        # ---- 1. Publication-semantic <meta> ----
+        for prop in (
+            "article:published_time",
+            "og:article:published_time",
+            "og:published_time",
+        ):
+            m = soup.find("meta", property=prop)
+            if m and m.get("content"):
+                yield f"meta[property={prop}]", str(m["content"])
+        for name in (
+            "sailthru.date",
+            "parsely-pub-date",
+            "article.published",
+            "pubdate",
+        ):
+            m = soup.find("meta", attrs={"name": name})
+            if m and m.get("content"):
+                yield f"meta[name={name}]", str(m["content"])
+
+        # ---- 2. JSON-LD datePublished ----
+        for value in self._iter_jsonld_date_values(soup, "datePublished"):
+            yield "jsonld[datePublished]", value
+
+        # ---- 3. Dublin Core publication-semantic ----
+        for name in (
+            "DC.date.issued",
+            "dcterms:issued",
+            "DC.date.created",
+            "dcterms:created",
+        ):
+            m = soup.find("meta", attrs={"name": name})
+            if m and m.get("content"):
+                yield f"meta[name={name}]", str(m["content"])
+
+        # ---- 4. Legacy / generic publication_date ----
+        m = soup.find("meta", attrs={"name": "publication_date"})
+        if m and m.get("content"):
+            yield "meta[name=publication_date]", str(m["content"])
+
+        # ---- 5. JSON-LD dateCreated ----
+        for value in self._iter_jsonld_date_values(soup, "dateCreated"):
+            yield "jsonld[dateCreated]", value
+
+        # ---- 6. <time datetime=...> (first one, intentionally) ----
+        t = soup.find("time", attrs={"datetime": True})
+        if t:
+            yield "time[datetime]", str(t["datetime"])
+
+        # ---- 7. Modification-semantic (last resort) ----
+        for prop in ("article:modified_time", "og:modified_time"):
+            m = soup.find("meta", property=prop)
+            if m and m.get("content"):
+                yield f"meta[property={prop}]", str(m["content"])
+        for value in self._iter_jsonld_date_values(soup, "dateModified"):
+            yield "jsonld[dateModified]", value
+
+    def _iter_jsonld_date_values(
+        self, soup: BeautifulSoup, key: str
+    ) -> Iterable[str]:
+        """Walk every ``<script type="application/ld+json">`` block in
+        the document and yield string values whose key matches ``key``
+        at any depth. JSON-LD nests freely (e.g. an Article inside a
+        NewsArticle inside a WebPage); a flat ``obj.get(key)`` would
+        miss the common cases.
+
+        Malformed JSON is silently skipped — never raised — because
+        partial / templated JSON-LD blocks are common in the wild.
+        """
+        for script in soup.find_all("script", type="application/ld+json"):
+            text = script.string or ""
+            if not text.strip():
+                continue
+            try:
+                obj = _json.loads(text)
+            except (_json.JSONDecodeError, TypeError):
+                continue
+            yield from _walk_jsonld_for_key(obj, key)
+
     def _parse_date(self, date_str: str) -> Optional[datetime]:
-        date_str = date_str.strip()
+        date_str = (date_str or "").strip()
+        if not date_str:
+            return None
         for fmt in (
             "%Y-%m-%dT%H:%M:%S%z",
             "%Y-%m-%dT%H:%M:%SZ",
@@ -410,3 +511,22 @@ def _parse_trafilatura_table(table_el: ET.Element) -> List[List[str]]:
         if any(cells):
             rows.append(cells)
     return rows
+
+
+def _walk_jsonld_for_key(obj, key: str) -> Iterable[str]:
+    """Recursively yield string values whose key matches ``key`` anywhere
+    in a JSON-LD object tree.
+
+    JSON-LD documents nest deeply — a NewsArticle inside a WebPage
+    inside an @graph list is common — so we can't just look at top-level
+    keys. We yield only string values; date keys that point to nested
+    objects (rare) are ignored.
+    """
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == key and isinstance(v, str):
+                yield v
+            yield from _walk_jsonld_for_key(v, key)
+    elif isinstance(obj, list):
+        for item in obj:
+            yield from _walk_jsonld_for_key(item, key)
