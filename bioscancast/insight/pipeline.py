@@ -241,6 +241,31 @@ def _dates_overlap(
     return _date_bucket(d1, coarser) == _date_bucket(d2, coarser)
 
 
+def _values_compatible(
+    v1: Optional[float], v2: Optional[float], *, rel_tol: float = 0.01
+) -> bool:
+    """Check whether two metric_values are close enough to be the same fact.
+
+    Both-None counts as compatible (the "no value" bucket). One-None is
+    compatible with a known value (one source happened to omit the
+    count). Two known values are compatible when their relative
+    difference is within ``rel_tol`` (default 1%) — this accommodates
+    rounding (e.g. "6500" vs "6543") without merging genuinely
+    different counts (e.g. African Region 9782 vs DRC 6543 — which
+    happens when the model misattributes a regional quote to a
+    specific country).
+    """
+    if v1 is None or v2 is None:
+        return True
+    if v1 == v2:
+        return True
+    # Relative difference; guard against division by zero
+    denom = max(abs(v1), abs(v2))
+    if denom == 0:
+        return v1 == v2
+    return abs(v1 - v2) / denom <= rel_tol
+
+
 def _record_dedup_key(record: InsightRecord) -> tuple:
     """First-stage dedup key: groups records that *might* be duplicates.
 
@@ -315,12 +340,23 @@ def _deduplicate_records(records: list[InsightRecord]) -> list[InsightRecord]:
         for record in group:
             target = None
             for existing in merged:
-                if _dates_overlap(
+                if not _dates_overlap(
                     record.event_date, record.event_date_precision,
                     existing.event_date, existing.event_date_precision,
                 ):
-                    target = existing
-                    break
+                    continue
+                if not _values_compatible(
+                    record.metric_value, existing.metric_value,
+                ):
+                    # Same dedup key + overlapping dates but different
+                    # numeric values — almost always a model attribution
+                    # error (e.g. regional total mistakenly tagged with
+                    # a country location). Keep both records so the
+                    # conflict is visible downstream rather than
+                    # silently dropped.
+                    continue
+                target = existing
+                break
             if target is not None:
                 _merge_record_into(target, record)
             else:

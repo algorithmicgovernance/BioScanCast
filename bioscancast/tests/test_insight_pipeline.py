@@ -405,6 +405,89 @@ def test_dedup_does_not_merge_across_different_locations():
 
 
 # ---------------------------------------------------------------------------
+# Value-aware dedup (catches model location-attribution errors)
+# ---------------------------------------------------------------------------
+
+
+def _record_with_value(
+    record_id: str,
+    metric_value: float,
+    *,
+    event_date=None,
+    event_date_precision=None,
+    document_id: str = "doc-test",
+):
+    """Build a record with a specific metric_value for value-conflict tests."""
+    from bioscancast.schemas import InsightRecord, ChunkReference
+    from datetime import datetime
+    if event_date is None:
+        event_date = datetime(2026, 1, 1)
+    return InsightRecord(
+        id=record_id,
+        question_id="q-test",
+        event_type="case_count",
+        confidence=0.8,
+        location="Democratic Republic of the Congo",
+        metric_name="confirmed_cases",
+        metric_value=metric_value,
+        event_date=event_date,
+        event_date_precision=event_date_precision or "month",
+        sources=[ChunkReference(
+            document_id=document_id,
+            chunk_id=f"chunk-{record_id}",
+            source_url=f"https://example.com/{document_id}",
+            quote="some quote",
+        )],
+    )
+
+
+def test_dedup_does_not_merge_when_metric_values_differ_significantly():
+    """Two records sharing event_type, metric_name, location and date
+    bucket should still NOT merge when their metric_values disagree —
+    this is almost always a model location-attribution error (e.g.
+    regional 9782 cases mistakenly labelled with the DRC's location).
+    Live tests on the WHO cholera doc exposed this exact case."""
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    drc_real = _record_with_value("drc", 6543.0)
+    africa_misattributed = _record_with_value(
+        "africa_misattributed", 9782.0, document_id="doc-other",
+    )
+    result = _deduplicate_records([drc_real, africa_misattributed])
+    assert len(result) == 2, (
+        f"Expected separate records for different values, got {len(result)}"
+    )
+
+
+def test_dedup_merges_when_metric_values_are_close():
+    """Rounding differences within 1% should still merge — one source
+    rounding to 6500 while another reports 6543 doesn't mean they're
+    different facts."""
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    exact = _record_with_value("exact", 6543.0)
+    rounded = _record_with_value(
+        "rounded", 6540.0, document_id="doc-other",  # within 1%
+    )
+    result = _deduplicate_records([exact, rounded])
+    assert len(result) == 1
+
+
+def test_dedup_merges_when_one_value_is_none():
+    """When one record has no metric_value (qualitative claim) and
+    another has a value, they should still merge if dedup keys and
+    dates align — the value-aware check treats None as compatible."""
+    from bioscancast.insight.pipeline import _deduplicate_records
+
+    valued = _record_with_value("valued", 6543.0)
+    no_value = _record_with_value("no_value", None, document_id="doc-other")
+    result = _deduplicate_records([valued, no_value])
+    assert len(result) == 1
+    # The merged record retains the actual value
+    assert result[0].metric_value == 6543.0
+
+
+# ---------------------------------------------------------------------------
 # Per-chunk parallelism (ThreadPoolExecutor)
 # ---------------------------------------------------------------------------
 
