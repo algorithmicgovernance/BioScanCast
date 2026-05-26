@@ -317,3 +317,114 @@ class TestExtractionPipeline:
 
         assert isinstance(doc, Document)
         assert doc.status == "success"
+
+
+# ---------------------------------------------------------------------------
+# Empty chunk handling — _drop_or_repair_empty_chunks
+# ---------------------------------------------------------------------------
+
+class TestEmptyChunkHandling:
+    """The extraction pipeline must drop empty prose chunks and render
+    table chunks whose text is empty (but whose table_data is populated)
+    into a flat text representation. See pipeline._drop_or_repair_empty_chunks."""
+
+    def test_empty_prose_chunk_is_dropped(self):
+        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.schemas.document import DocumentChunk
+
+        chunks = [
+            DocumentChunk(
+                chunk_id="c0", chunk_index=0, text="Real content.",
+                chunk_type="prose",
+            ),
+            DocumentChunk(
+                chunk_id="c1", chunk_index=1, text="",
+                chunk_type="prose",
+            ),
+            DocumentChunk(
+                chunk_id="c2", chunk_index=2, text="   \n\t  ",
+                chunk_type="prose",
+            ),
+            DocumentChunk(
+                chunk_id="c3", chunk_index=3, text="More content.",
+                chunk_type="prose",
+            ),
+        ]
+        out = _drop_or_repair_empty_chunks(chunks)
+        assert [c.chunk_id for c in out] == ["c0", "c3"]
+
+    def test_empty_text_table_chunk_with_table_data_is_repaired(self):
+        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.schemas.document import DocumentChunk
+
+        table_data = [
+            ["Country", "Cases", "Deaths"],
+            ["Uganda", "9", "3"],
+            ["DRC", "6543", "148"],
+        ]
+        chunks = [
+            DocumentChunk(
+                chunk_id="t0", chunk_index=0, text="",
+                chunk_type="table", table_data=table_data,
+            ),
+        ]
+        out = _drop_or_repair_empty_chunks(chunks)
+        assert len(out) == 1
+        assert "Uganda" in out[0].text
+        assert "6543" in out[0].text
+        assert "Deaths" in out[0].text
+        # Original structured data is preserved unchanged
+        assert out[0].table_data == table_data
+        # Token count is recomputed for the rendered text
+        assert out[0].token_count is not None
+        assert out[0].token_count > 0
+
+    def test_empty_table_chunk_without_table_data_is_dropped(self):
+        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.schemas.document import DocumentChunk
+
+        chunks = [
+            DocumentChunk(
+                chunk_id="t0", chunk_index=0, text="",
+                chunk_type="table", table_data=None,
+            ),
+            DocumentChunk(
+                chunk_id="t1", chunk_index=1, text="",
+                chunk_type="table", table_data=[],
+            ),
+        ]
+        out = _drop_or_repair_empty_chunks(chunks)
+        assert out == []
+
+    def test_empty_table_chunk_with_only_empty_rows_is_dropped(self):
+        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.schemas.document import DocumentChunk
+
+        chunks = [
+            DocumentChunk(
+                chunk_id="t0", chunk_index=0, text="",
+                chunk_type="table",
+                table_data=[["", "", ""], ["", ""]],
+            ),
+        ]
+        out = _drop_or_repair_empty_chunks(chunks)
+        assert out == []
+
+    def test_table_chunk_with_text_passes_through_unchanged(self):
+        """A table chunk that already has text is left alone."""
+        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.schemas.document import DocumentChunk
+
+        chunks = [
+            DocumentChunk(
+                chunk_id="t0", chunk_index=0,
+                text="Existing flowed text",
+                chunk_type="table",
+                table_data=[["a", "b"]],
+                token_count=4,
+            ),
+        ]
+        out = _drop_or_repair_empty_chunks(chunks)
+        assert len(out) == 1
+        assert out[0].text == "Existing flowed text"  # unchanged
+        assert out[0].token_count == 4  # unchanged

@@ -146,6 +146,11 @@ class ExtractionPipeline:
             max_tokens=self._config.chunk_max_tokens,
         )
 
+        # Step 5b: Drop or repair empty chunks before any downstream
+        # consumer sees them. Empty chunks make retrieval waste budget
+        # (BM25 still indexes the heading) and confuse the insight stage.
+        chunks = _drop_or_repair_empty_chunks(chunks)
+
         # Renumber chunk indices after normalization
         for i, chunk in enumerate(chunks):
             chunk.chunk_index = i
@@ -290,3 +295,70 @@ class ExtractionPipeline:
                 seen.add(d)
                 unique.append(d)
         return unique
+
+
+def _render_table_data_as_text(rows: List[List[str]]) -> str:
+    """Render row-major table data as a flat text block.
+
+    Cells are joined with tabs within a row and rows with newlines.
+    Empty cells are preserved (so column alignment stays implicit) but
+    fully-empty rows are skipped. This is good enough for BM25 keyword
+    matching when the underlying PDF parser produced a table whose cells
+    are present but whose flowed text was empty.
+    """
+    out_rows: List[str] = []
+    for row in rows:
+        cells = [(cell or "").strip() for cell in row]
+        if not any(cells):
+            continue
+        out_rows.append("\t".join(cells))
+    return "\n".join(out_rows)
+
+
+def _drop_or_repair_empty_chunks(
+    chunks: List[DocumentChunk],
+) -> List[DocumentChunk]:
+    """Filter chunks whose ``text`` is blank after stripping whitespace.
+
+    Two paths, in order of preference:
+
+    * If the chunk is a table with non-empty ``table_data`` rows, render
+      those rows into the ``text`` field so downstream retrieval and
+      LLM extraction can see the cell contents. The structured
+      ``table_data`` is preserved unchanged for any consumer that wants
+      cell-level access.
+    * Otherwise drop the chunk and log at DEBUG. An empty prose chunk
+      usually indicates a half-broken section in the upstream parser
+      (heading without body, footer artefact, decorative caption), not
+      something the insight stage can act on.
+
+    Running this *after* ``normalize_chunks`` means it sees the final
+    post-split chunk text, not pre-split fragments that the splitter
+    might have rebalanced.
+    """
+    out: List[DocumentChunk] = []
+    for chunk in chunks:
+        if chunk.text and chunk.text.strip():
+            out.append(chunk)
+            continue
+        if chunk.chunk_type == "table" and chunk.table_data:
+            rendered = _render_table_data_as_text(chunk.table_data)
+            if rendered:
+                chunk.text = rendered
+                chunk.token_count = approx_token_count(rendered)
+                logger.debug(
+                    "Empty-text table chunk repaired from table_data "
+                    "(chunk_id=%s, rows=%d, rendered_chars=%d)",
+                    chunk.chunk_id,
+                    len(chunk.table_data),
+                    len(rendered),
+                )
+                out.append(chunk)
+                continue
+        logger.debug(
+            "Dropping empty chunk (chunk_id=%s, type=%s, heading=%r)",
+            chunk.chunk_id,
+            chunk.chunk_type,
+            (chunk.heading or "")[:60],
+        )
+    return out
