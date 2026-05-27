@@ -38,7 +38,14 @@ FILTER_CONFIG = {
         "domain": 0.20,
         "official_bonus": 0.20,
     },
-    "heuristic_keep_threshold": 0.72,
+    # Lowered from 0.72 to 0.65 after q7/q12 live runs showed filter
+    # survival of 4.7% / 13.5% — the threshold was tighter than the
+    # heuristic's actual signal supports. Borderline candidates that
+    # cross the new threshold still go to the LLM rescue path; this
+    # change just stops dropping high-credibility-but-low-keyword-overlap
+    # results pre-LLM (e.g. apnews/theguardian/washingtonpost in q7).
+    # See issue #13.
+    "heuristic_keep_threshold": 0.65,
     "heuristic_borderline_threshold": 0.45,
 
     "reranker_weights": {
