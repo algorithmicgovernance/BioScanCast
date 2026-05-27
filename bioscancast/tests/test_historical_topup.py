@@ -6,25 +6,38 @@ from datetime import datetime, timezone
 from typing import List
 
 from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.llm.base import LLMResponse
 from bioscancast.stages.search_stage.backends.base import RawSearchResult
 from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
+
+
+def _resp(content: dict) -> LLMResponse:
+    return LLMResponse(
+        content=content,
+        input_tokens=0,
+        output_tokens=0,
+        model="fake",
+        raw_text="",
+    )
 
 
 class _FakeLLM:
     def __init__(self):
         self._calls = 0
 
-    def generate_json(self, prompt: str) -> dict:
+    def generate_json(self, *, system, user, schema, model, max_tokens=1024) -> LLMResponse:
         self._calls += 1
         if self._calls == 1:
-            return {"question_type": "outbreak_count"}
-        return {
-            "sub_queries": [
-                {"text": "H5N1 cases", "axis": "latest_data"},
-                {"text": "avian flu trend", "axis": "trend"},
-                {"text": "bird flu policy", "axis": "policy"},
-            ]
-        }
+            return _resp({"question_type": "outbreak_count"})
+        return _resp(
+            {
+                "sub_queries": [
+                    {"text": "H5N1 cases", "axis": "latest_data"},
+                    {"text": "avian flu trend", "axis": "trend"},
+                    {"text": "bird flu policy", "axis": "policy"},
+                ]
+            }
+        )
 
 
 class _RecordingBackend:
@@ -113,15 +126,17 @@ def test_year_hint_not_double_appended_if_already_present():
         def __init__(self):
             self._n = 0
 
-        def generate_json(self, prompt: str) -> dict:
+        def generate_json(self, *, system, user, schema, model, max_tokens=1024) -> LLMResponse:
             self._n += 1
             if self._n == 1:
-                return {"question_type": "outbreak_count"}
-            return {
-                "sub_queries": [
-                    {"text": "H5N1 cases 2024", "axis": "latest_data"},
-                ]
-            }
+                return _resp({"question_type": "outbreak_count"})
+            return _resp(
+                {
+                    "sub_queries": [
+                        {"text": "H5N1 cases 2024", "axis": "latest_data"},
+                    ]
+                }
+            )
 
     backend = _RecordingBackend()
     backend.set_fallback(

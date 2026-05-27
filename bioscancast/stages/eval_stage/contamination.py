@@ -31,9 +31,34 @@ from datetime import datetime
 from typing import Iterable, List, Optional
 
 from bioscancast.filtering.models import ForecastQuestion, SearchResult
-from bioscancast.llm.client import LLMClient
+from bioscancast.llm.base import LLMClient
 
 logger = logging.getLogger(__name__)
+
+
+# The baseline call is a small JSON request — gpt-4o-mini is plenty. Both
+# overridable per-call so eval harnesses can swap in a different model.
+DEFAULT_BASELINE_MODEL = "gpt-4o-mini"
+DEFAULT_BASELINE_MAX_TOKENS = 512
+
+_BASELINE_SYSTEM_PROMPT = (
+    "You forecast biosecurity questions using ONLY your prior knowledge. "
+    "Do not assume any additional research has been done. Return JSON "
+    "matching the schema."
+)
+
+_BASELINE_SCHEMA: dict = {
+    "type": "object",
+    "properties": {
+        "probabilities": {
+            "type": "array",
+            "items": {"type": "number"},
+        },
+        "rationale": {"type": "string"},
+    },
+    "required": ["probabilities", "rationale"],
+    "additionalProperties": False,
+}
 
 
 # Phrased verbosely on purpose: a non-coder reading the eval report should
@@ -108,6 +133,9 @@ def retrieval_free_baseline_forecast(
     question: ForecastQuestion,
     options: List[str],
     llm_client: LLMClient,
+    *,
+    model: str = DEFAULT_BASELINE_MODEL,
+    max_tokens: int = DEFAULT_BASELINE_MAX_TOKENS,
 ) -> BaselineForecast:
     """Ask the LLM to forecast the question with NO retrieved evidence.
 
@@ -119,14 +147,11 @@ def retrieval_free_baseline_forecast(
     pipeline filtering can fix. Report alongside Brier/log scores, never
     in place of them.
     """
-    prompt = json.dumps(
+    user_payload = json.dumps(
         {
             "task": (
                 "Forecast the probability of each option for this biosecurity "
-                "question using ONLY your prior knowledge. Do not assume any "
-                "additional research has been done. Return strict JSON: "
-                "{\"probabilities\": [<float per option, in order>], "
-                "\"rationale\": \"<one sentence>\"}. Probabilities must sum to 1."
+                "question. Probabilities must sum to 1."
             ),
             "question": question.text,
             "pathogen": question.pathogen,
@@ -141,7 +166,14 @@ def retrieval_free_baseline_forecast(
         }
     )
     try:
-        result = llm_client.generate_json(prompt)
+        response = llm_client.generate_json(
+            system=_BASELINE_SYSTEM_PROMPT,
+            user=user_payload,
+            schema=_BASELINE_SCHEMA,
+            model=model,
+            max_tokens=max_tokens,
+        )
+        result = response.content
     except Exception:
         logger.exception("Retrieval-free baseline LLM call failed for %s", question.id)
         uniform = [1.0 / len(options)] * len(options)

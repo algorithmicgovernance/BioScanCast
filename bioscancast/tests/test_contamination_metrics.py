@@ -1,12 +1,23 @@
 from datetime import datetime, timezone
 
 from bioscancast.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.llm.base import LLMResponse
 from bioscancast.stages.eval_stage.contamination import (
     BaselineForecast,
     ContaminationCounts,
     filter_caught_contamination_rate,
     retrieval_free_baseline_forecast,
 )
+
+
+def _llm_response(content: dict) -> LLMResponse:
+    return LLMResponse(
+        content=content,
+        input_tokens=0,
+        output_tokens=0,
+        model="fake",
+        raw_text="",
+    )
 
 
 def _result(pub: datetime | None) -> SearchResult:
@@ -70,8 +81,8 @@ class TestRetrievalFreeBaselineForecast:
         )
 
         class GoodLLM:
-            def generate_json(self, prompt):
-                return {"probabilities": [0.7, 0.3], "rationale": "guess"}
+            def generate_json(self, *, system, user, schema, model, max_tokens=1024):
+                return _llm_response({"probabilities": [0.7, 0.3], "rationale": "guess"})
 
         out = retrieval_free_baseline_forecast(
             question, options=["yes", "no"], llm_client=GoodLLM()
@@ -89,8 +100,8 @@ class TestRetrievalFreeBaselineForecast:
         )
 
         class UnnormLLM:
-            def generate_json(self, prompt):
-                return {"probabilities": [2.0, 6.0], "rationale": ""}
+            def generate_json(self, *, system, user, schema, model, max_tokens=1024):
+                return _llm_response({"probabilities": [2.0, 6.0], "rationale": ""})
 
         out = retrieval_free_baseline_forecast(
             question, options=["a", "b"], llm_client=UnnormLLM()
@@ -106,8 +117,8 @@ class TestRetrievalFreeBaselineForecast:
         )
 
         class BadLLM:
-            def generate_json(self, prompt):
-                return {"probabilities": "not a list"}
+            def generate_json(self, *, system, user, schema, model, max_tokens=1024):
+                return _llm_response({"probabilities": "not a list"})
 
         out = retrieval_free_baseline_forecast(
             question, options=["a", "b", "c"], llm_client=BadLLM()
@@ -123,7 +134,7 @@ class TestRetrievalFreeBaselineForecast:
         )
 
         class ExplodingLLM:
-            def generate_json(self, prompt):
+            def generate_json(self, *, system, user, schema, model, max_tokens=1024):
                 raise RuntimeError("oops")
 
         out = retrieval_free_baseline_forecast(
