@@ -16,6 +16,8 @@ INSIGHT_CONFIG = {
     "max_chunks_per_document": 12,
     "extraction_max_output_tokens": 4096,
     "chunk_workers": 6,
+    "low_survival_doc_threshold": 5,
+    "low_survival_top_k": 20,
 }
 
 
@@ -42,6 +44,18 @@ class InsightConfig:
     staying well below OpenAI's per-minute rate limits for gpt-4o-mini.
     Set to 1 for sequential execution (useful for debugging or rate-
     limit-sensitive setups)."""
+
+    low_survival_doc_threshold: int = 5
+    """When the filter passes fewer than this many usable documents to
+    insight, switch to ``low_survival_top_k`` for both retrieval and the
+    per-document chunk cap. q7 reached insight with only 2 surviving
+    documents; in that regime per-doc retrieval depth becomes the
+    bottleneck on coverage."""
+
+    low_survival_top_k: int = 20
+    """Retrieval / per-doc cap used when usable documents are at or below
+    ``low_survival_doc_threshold``. Set to ``None`` (or equal to
+    ``retrieval_top_k``) to disable the adaptive lift."""
 
     @classmethod
     def from_dict(cls, d: dict) -> InsightConfig:

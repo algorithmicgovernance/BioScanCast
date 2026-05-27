@@ -103,6 +103,30 @@ class InsightPipeline:
         result = InsightRunResult()
         embedding_cache: dict[str, list[float]] = {}
 
+        # Adaptive top-k: when the filter passes through only a handful
+        # of usable documents, lift retrieval depth so the per-doc chunk
+        # budget isn't the bottleneck on coverage. See InsightConfig
+        # docstrings for the rationale.
+        usable_doc_count = sum(
+            1 for d in documents if d.status != "failed" and d.chunks
+        )
+        if usable_doc_count <= config.low_survival_doc_threshold:
+            effective_top_k = max(config.retrieval_top_k, config.low_survival_top_k)
+            effective_max_chunks = max(
+                config.max_chunks_per_document, config.low_survival_top_k
+            )
+            if effective_top_k != config.retrieval_top_k:
+                result.notes.append(
+                    f"Low-survival adaptive top_k engaged: "
+                    f"{usable_doc_count} usable docs (≤ threshold "
+                    f"{config.low_survival_doc_threshold}); "
+                    f"retrieval_top_k={effective_top_k} (default "
+                    f"{config.retrieval_top_k})."
+                )
+        else:
+            effective_top_k = config.retrieval_top_k
+            effective_max_chunks = config.max_chunks_per_document
+
         for doc in documents:
             # --- Skip check ---
             if doc.status == "failed" or not doc.chunks:
@@ -126,7 +150,7 @@ class InsightPipeline:
                 question,
                 doc,
                 self._llm,
-                top_k=config.retrieval_top_k,
+                top_k=effective_top_k,
                 bm25_weight=config.bm25_weight,
                 embedding_weight=config.embedding_weight,
                 embedding_model=config.embedding_model,
@@ -134,7 +158,7 @@ class InsightPipeline:
             )
 
             # Cap chunks per document
-            scored_chunks = scored_chunks[: config.max_chunks_per_document]
+            scored_chunks = scored_chunks[:effective_max_chunks]
 
             # --- Per-chunk extraction (parallel within a doc) ---
             # Live tests on real biosecurity documents show the per-doc
