@@ -27,7 +27,12 @@ RULES:
 by the chunk text.  Do NOT infer, speculate, or use outside knowledge.
 2. For each fact, provide a verbatim quote from the chunk (max 200 \
 characters) that supports the claim.  The quote must be an exact \
-substring of the chunk text.
+substring of the chunk text.  The quote MUST be the sentence (or \
+sentence fragment) that carries the figure itself — it must contain \
+the metric_value either as digits (e.g. "82"), as a number-word \
+(e.g. "eighty-two", "a dozen"), or as a clear relative reference \
+(e.g. "a quarter of the population"). A contextual or supporting \
+sentence that mentions the topic but not the figure is NOT acceptable.
 3. If the chunk contains no relevant facts, return an empty facts list. \
 This is expected and common — most chunks are irrelevant.
 4. Do NOT answer the forecast question.  Your job is fact extraction, \
