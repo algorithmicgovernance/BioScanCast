@@ -40,12 +40,13 @@ the chunk only mentions a month.
 6. For metric_name, use one of these canonical snake_case values when \
 applicable (this lets downstream dedup merge facts about the same \
 metric across sources):
-   - confirmed_cases       (suspected, probable, possible all get \
-their own variants below)
-   - suspected_cases
-   - probable_cases
-   - confirmed_or_probable_cases
-   - deaths
+   - confirmed_cases       (the "confirmed" tier — lab-confirmed)
+   - suspected_cases       (the "not-yet-confirmed" tier — covers \
+"suspected", "probable", and "possible" reporting categories)
+   - confirmed_or_probable_cases   (WHO/CDC's combined reporting bucket)
+   - deaths                (lab-confirmed deaths)
+   - suspected_deaths      (the "not-yet-confirmed" tier for deaths — \
+covers "suspected", "probable", "under investigation" reporting)
    - hospitalizations
    - recoveries
    - vaccinations_administered
@@ -58,7 +59,10 @@ their own variants below)
    If none of these fit, invent a short snake_case label. Do NOT put \
 qualifiers (sex, age, sub-region, time-period like "weekly") in \
 metric_name — capture those in `summary` or `location` instead. \
-"cases", "reported cases", "total cases" all map to confirmed_cases.
+"cases", "reported cases", "total cases" all map to confirmed_cases. \
+"suspected cases", "probable cases", "possible cases" all map to \
+suspected_cases. "deaths" alone maps to deaths; "suspected deaths", \
+"probable deaths", "deaths under investigation" map to suspected_deaths.
 7. Be aware of cognitive biases that affect information processing:
    - Anchoring: do not over-weight the first number you encounter.
    - Availability: rare dramatic events are not necessarily more likely.
