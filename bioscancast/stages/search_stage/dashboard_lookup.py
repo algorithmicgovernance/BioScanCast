@@ -48,21 +48,21 @@ def lookup_dashboards(question: ForecastQuestion) -> List[SearchResult]:
         return []
 
     pathogen_key = question.pathogen.strip().lower()
-    urls = DASHBOARD_LOOKUP.get(pathogen_key, [])
-    if not urls:
+    entries = DASHBOARD_LOOKUP.get(pathogen_key, [])
+    if not entries:
         return []
 
     as_of = question.as_of_date
     results: list[SearchResult] = []
     now = datetime.now(timezone.utc)
 
-    for url in urls:
+    for entry in entries:
         if as_of is not None:
-            snapshot = closest_snapshot_before(url, as_of)
+            snapshot = closest_snapshot_before(entry.url, as_of)
             if snapshot is None:
                 logger.info(
                     "Suppressing dashboard %s — no Wayback snapshot at-or-before %s",
-                    url, as_of.isoformat(),
+                    entry.url, as_of.isoformat(),
                 )
                 continue
             snapshot_dt, snapshot_url = snapshot
@@ -71,12 +71,12 @@ def lookup_dashboards(question: ForecastQuestion) -> List[SearchResult]:
             published_date_source = "wayback_snapshot"
             # Keep ``domain`` as the original publisher for tier scoring;
             # the URL itself points at archive.org for fetching.
-            domain = extract_domain(url)
+            domain = extract_domain(entry.url)
         else:
-            effective_url = url
+            effective_url = entry.url
             published_date = None
             published_date_source = None
-            domain = extract_domain(url)
+            domain = extract_domain(entry.url)
 
         tier_num, domain_score, source_tier = resolve_tier(domain)
 
@@ -89,8 +89,8 @@ def lookup_dashboards(question: ForecastQuestion) -> List[SearchResult]:
                 url=effective_url,
                 canonical_url=normalize_url(effective_url),
                 domain=domain,
-                title=f"Dashboard: {domain}",
-                snippet=f"Known {pathogen_key} monitoring dashboard",
+                title=entry.title,
+                snippet=entry.snippet,
                 rank=0,
                 retrieved_at=now,
                 published_date=published_date,
