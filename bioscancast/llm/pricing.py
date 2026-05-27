@@ -26,14 +26,21 @@ class ModelPrice:
     output: float
 
 
+_GPT_4O_MINI = ModelPrice(input=0.15, cached_input=0.075, output=0.60)
+_GPT_4O = ModelPrice(input=2.50, cached_input=1.25, output=10.00)
+
 MODEL_PRICES: dict[str, ModelPrice] = {
     # Cheap chat workhorse — used by search (query decomposition + filter
-    # rescue) and insight (chunk extraction).
-    "gpt-4o-mini": ModelPrice(input=0.15, cached_input=0.075, output=0.60),
+    # rescue) and insight (chunk extraction). OpenAI returns the dated
+    # alias in response.model even when the request used the floating
+    # name; keep both keyed to the same price.
+    "gpt-4o-mini": _GPT_4O_MINI,
+    "gpt-4o-mini-2024-07-18": _GPT_4O_MINI,
     # Strong model — scaffolded for issue #26 refinement but not in
     # production use as of 2026-05-27.
-    "gpt-4o": ModelPrice(input=2.50, cached_input=1.25, output=10.00),
-    "gpt-4o-2024-08-06": ModelPrice(input=2.50, cached_input=1.25, output=10.00),
+    "gpt-4o": _GPT_4O,
+    "gpt-4o-2024-08-06": _GPT_4O,
+    "gpt-4o-2024-05-13": _GPT_4O,
     # Embeddings (insight retrieval).
     "text-embedding-3-small": ModelPrice(input=0.02, cached_input=0.02, output=0.0),
     "text-embedding-3-large": ModelPrice(input=0.13, cached_input=0.13, output=0.0),

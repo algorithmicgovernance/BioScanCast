@@ -18,15 +18,17 @@ from bioscancast.insight.pipeline import InsightRunResult
 
 
 def _json_default(obj: Any) -> Any:
-    """Default JSON encoder for datetimes and dataclasses.
+    """Default JSON encoder for datetimes, dataclasses, and sets.
 
-    Lifted from scripts/eval_insight_on_real_docs.py so the orchestrator
-    and the eval harness use the same conventions for run artifacts.
+    Lifted from scripts/eval_insight_on_real_docs.py and extended to
+    handle the set/frozenset values that live in FILTER_CONFIG.
     """
     if isinstance(obj, datetime):
         return obj.isoformat()
     if is_dataclass(obj):
         return asdict(obj)
+    if isinstance(obj, (set, frozenset)):
+        return sorted(obj)
     raise TypeError(f"not serializable: {type(obj).__name__}")
 
 
