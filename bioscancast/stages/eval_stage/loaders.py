@@ -66,7 +66,13 @@ def load_questions(path: PathLike) -> pd.DataFrame:
     df = _clean_text_columns(df)
 
     if "created_date" in df.columns:
-        df["created_date"] = pd.to_datetime(df["created_date"], errors="coerce")
+        # The CSV stores created_date as an Excel serial day (e.g. 45712 →
+        # 2025-02-19). Without unit="D" + origin="1899-12-30", pandas treats
+        # the integer as nanoseconds past 1970 and produces garbage dates
+        # like 1970-01-01 00:00:00.000045712.
+        df["created_date"] = pd.to_datetime(
+            df["created_date"], unit="D", origin="1899-12-30", errors="coerce",
+        )
 
     if "question_status" in df.columns:
         df["question_status"] = df["question_status"].str.lower()
