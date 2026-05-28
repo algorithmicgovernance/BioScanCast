@@ -54,6 +54,18 @@ class TestResolveTier:
         assert score == 0.2
         assert label == "unknown"
 
+    def test_national_news_is_trusted_media(self):
+        for domain in ("cnn.com", "nbcnews.com", "forbes.com", "latimes.com", "npr.org"):
+            tier, score, label = resolve_tier(domain)
+            assert tier == 3, domain
+            assert score == 0.6, domain
+            assert label == "trusted_media", domain
+
+    def test_national_news_subdomain_match(self):
+        # edition.cnn.com / africa.businessinsider.com resolve via SLD.
+        assert resolve_tier("edition.cnn.com")[2] == "trusted_media"
+        assert resolve_tier("africa.businessinsider.com")[2] == "trusted_media"
+
     def test_subdomain_match(self):
         """wwwnc.cdc.gov should match cdc.gov via second-level domain."""
         tier, score, label = resolve_tier("wwwnc.cdc.gov")
