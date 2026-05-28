@@ -56,6 +56,18 @@ FILTER_CONFIG = {
     "auto_reject_after_rerank": 0.30,
     "max_llm_filter_candidates": 10,
 
+    # When no LLM client is configured, the ambiguous "llm_needed" band
+    # (reranked priority between auto_reject and auto_keep) is normally
+    # rejected outright (fail-closed). With this flag enabled — for dev /
+    # offline / no-API-key runs — a borderline candidate is instead KEPT if it
+    # is an official domain OR its keyword-overlap relevance clears
+    # ``no_llm_fallback_relevance_threshold``. This approximates the LLM-rescue
+    # path without an API call, recovering the on-topic / authoritative tail
+    # without admitting the generic-news mass. Default OFF so production (which
+    # always has an LLM client) is unchanged. See issue #13.
+    "no_llm_soft_fallback": False,
+    "no_llm_fallback_relevance_threshold": 0.5,
+
     "max_docs_per_domain": 2,
     "max_docs_per_type": 5,
 
