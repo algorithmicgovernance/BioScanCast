@@ -31,6 +31,46 @@ from bioscancast.stages.search_stage.wayback import closest_snapshot_before
 logger = logging.getLogger(__name__)
 
 
+# Common name variants that should route to a canonical DASHBOARD_LOOKUP key.
+# The canonical-key substring fallback in ``_resolve_pathogen_key`` already
+# handles suffixes like "marburg virus disease" -> "marburg"; this map covers
+# synonyms where the canonical key is NOT a substring of the alias.
+_PATHOGEN_ALIASES: dict[str, str] = {
+    "monkeypox": "mpox",
+    "sars-cov-2": "covid-19",
+    "sars-cov2": "covid-19",
+    "covid": "covid-19",
+    "covid19": "covid-19",
+    "coronavirus": "covid-19",
+    "bird flu": "h5n1",
+    "avian flu": "h5n1",
+}
+
+
+def _resolve_pathogen_key(pathogen: str) -> str | None:
+    """Map a free-text pathogen string to a DASHBOARD_LOOKUP key, tolerantly.
+
+    Resolution order: exact key, exact alias, alias-substring, then
+    canonical-key substring (longest match wins, so "ebola virus disease"
+    resolves to "ebola" and "marburg virus disease" to "marburg"). Returns
+    None if nothing matches.
+    """
+    key = pathogen.strip().lower()
+    if not key:
+        return None
+    if key in DASHBOARD_LOOKUP:
+        return key
+    if key in _PATHOGEN_ALIASES and _PATHOGEN_ALIASES[key] in DASHBOARD_LOOKUP:
+        return _PATHOGEN_ALIASES[key]
+    for alias, canon in _PATHOGEN_ALIASES.items():
+        if alias in key and canon in DASHBOARD_LOOKUP:
+            return canon
+    matches = [k for k in DASHBOARD_LOOKUP if k in key]
+    if matches:
+        return max(matches, key=len)
+    return None
+
+
 def lookup_dashboards(question: ForecastQuestion) -> List[SearchResult]:
     """Generate synthetic SearchResult entries for known pathogen dashboards.
 
@@ -47,10 +87,10 @@ def lookup_dashboards(question: ForecastQuestion) -> List[SearchResult]:
     if not question.pathogen:
         return []
 
-    pathogen_key = question.pathogen.strip().lower()
-    entries = DASHBOARD_LOOKUP.get(pathogen_key, [])
-    if not entries:
+    pathogen_key = _resolve_pathogen_key(question.pathogen)
+    if not pathogen_key:
         return []
+    entries = DASHBOARD_LOOKUP[pathogen_key]
 
     as_of = question.as_of_date
     results: list[SearchResult] = []

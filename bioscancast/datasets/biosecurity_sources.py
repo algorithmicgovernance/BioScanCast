@@ -68,19 +68,19 @@ DASHBOARD_LOOKUP: dict[str, list[DashboardEntry]] = {
             snippet="WHO situation reports with weekly case counts, country breakdowns, and public-health guidance for ongoing outbreaks including mpox.",
         ),
         DashboardEntry(
-            url="https://www.cdc.gov/mpox/data-research/index.html",
-            title="CDC mpox data and research dashboard for the United States",
-            snippet="CDC tracking of US mpox cases, demographic data, vaccination coverage, and outbreak response.",
+            url="https://www.cdc.gov/monkeypox/situation-summary/index.html",
+            title="CDC mpox current situation summary: confirmed cases in the United States",
+            snippet="CDC current situation summary for mpox, with US confirmed case counts, clade information, demographics, and outbreak response.",
         ),
     ],
     "ebola": [
         DashboardEntry(
-            url="https://www.afro.who.int/health-topics/ebola-virus-disease",
+            url="https://www.afro.who.int/health-topics/ebola-disease",
             title="WHO Africa Ebola virus disease outbreak surveillance and case counts",
             snippet="WHO regional office for Africa tracking of Ebola virus disease outbreaks, confirmed and suspected cases, deaths, and response across African countries.",
         ),
         DashboardEntry(
-            url="https://www.cdc.gov/ebola/index.html",
+            url="https://www.cdc.gov/ebola/about/index.html",
             title="CDC Ebola virus disease outbreak history and case counts",
             snippet="CDC information on current and historical Ebola virus disease outbreaks worldwide, with case counts, deaths, and US public-health response.",
         ),
