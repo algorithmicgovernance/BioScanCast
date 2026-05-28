@@ -96,6 +96,11 @@ class _UsageTrackingClient:
         # estimation in here.
         return self._inner.embed(texts, model=model)
 
+    def snapshot(self) -> dict[str, dict[str, int]]:
+        """Return a plain-dict copy of cumulative usage for delta-ing
+        between stages."""
+        return {model: dict(counts) for model, counts in self.per_model.items()}
+
 
 # ----------------------------------------------------------------------------
 # CLI parsing and question construction
@@ -221,6 +226,24 @@ def _merge_usage(*usage_dicts: dict[str, dict[str, int]]) -> dict[str, dict[str,
     return dict(merged)
 
 
+def _usage_delta(
+    before: dict[str, dict[str, int]],
+    after: dict[str, dict[str, int]],
+) -> dict[str, dict[str, int]]:
+    """Per-model usage that accrued between two snapshots of the same
+    tracker. Models with no change are omitted."""
+    delta: dict[str, dict[str, int]] = {}
+    for model, counts in after.items():
+        b = before.get(model, {})
+        d = {
+            k: int(counts.get(k, 0)) - int(b.get(k, 0))
+            for k in ("input_tokens", "output_tokens", "calls")
+        }
+        if any(d.values()):
+            delta[model] = d
+    return delta
+
+
 def _estimate_total_cost(per_model: dict[str, dict[str, int]]) -> tuple[float, list[str]]:
     """Return (usd_total, list_of_warnings)."""
     total = 0.0
@@ -302,6 +325,11 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     shared_llm_raw = OpenAILLMClient()
     shared_llm = _UsageTrackingClient(shared_llm_raw)
 
+    # Per-stage usage is captured by snapshotting the shared tracker
+    # before/after each stage that uses it. Search and filter share one
+    # client; insight reports its own budget_summary.
+    stage_usage: dict[str, dict[str, dict[str, int]]] = {}
+
     try:
         with _stage_timer(manifest, "search"):
             backend = TavilyBackend()
@@ -316,6 +344,8 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
             persistence.save_search(run_dir, search_results)
             if cache:
                 cache.close()
+        usage_after_search = shared_llm.snapshot()
+        stage_usage["search"] = usage_after_search
         _log_summary(
             "search", f"{len(search_results)} results",
             manifest["stage_timings"]["search"],
@@ -326,6 +356,7 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
             filter_pipeline = FilteringPipeline(llm_client=shared_llm)
             filtered_docs = filter_pipeline.run(question, search_results)
             persistence.save_filtered(run_dir, filtered_docs)
+        stage_usage["filter"] = _usage_delta(usage_after_search, shared_llm.snapshot())
         _log_summary(
             "filter", f"{len(filtered_docs)} docs",
             manifest["stage_timings"]["filter"],
@@ -350,6 +381,7 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
             )
             insight_result = insight_pipeline.run(question, documents)
             persistence.save_insight(run_dir, insight_result)
+        stage_usage["insight"] = insight_result.budget_summary.get("per_model") or {}
         budget = insight_result.budget_summary
         _log_summary(
             "insight",
@@ -365,16 +397,29 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
         persistence.save_manifest(run_dir, manifest)
         raise PipelineError(manifest["current_stage"] or "unknown", exc) from exc
 
-    # Combine usage across stages and estimate cost.
+    # Per-stage cost from the captured usage snapshots.
+    stage_costs: dict[str, float] = {}
+    cost_warnings: list[str] = []
+    for stage in ("search", "filter", "insight"):
+        usage = stage_usage.get(stage) or {}
+        cost, warns = _estimate_total_cost(usage)
+        stage_costs[stage] = round(cost, 6)
+        cost_warnings.extend(warns)
+
+    # Combine usage across stages and estimate total cost.
     combined_usage = _merge_usage(
         dict(shared_llm.per_model),
         insight_result.budget_summary.get("per_model") or {},
     )
-    cost_usd, cost_warnings = _estimate_total_cost(combined_usage)
+    cost_usd, _ = _estimate_total_cost(combined_usage)
+    # Dedup warnings (same unknown model can surface in multiple stages).
+    cost_warnings = list(dict.fromkeys(cost_warnings))
 
     manifest["current_stage"] = None
     manifest["completed_at"] = datetime.now(timezone.utc).isoformat()
     manifest["combined_usage"] = combined_usage
+    manifest["stage_usage"] = stage_usage
+    manifest["stage_costs_usd"] = stage_costs
     manifest["estimated_cost_usd"] = round(cost_usd, 6)
     if cost_warnings:
         manifest["cost_estimate_warnings"] = cost_warnings
@@ -384,9 +429,12 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     print(f"=== Pipeline complete: {question.id} ===")
     for stage in ("search", "filter", "extract", "insight"):
         elapsed = manifest["stage_timings"].get(stage)
-        if elapsed is not None:
-            print(f"  {stage:<8} {elapsed:>7.2f}s")
-    print(f"  estimated cost: ${cost_usd:.4f}")
+        if elapsed is None:
+            continue
+        stage_cost = stage_costs.get(stage)
+        cost_str = f"  ${stage_cost:.4f}" if stage_cost is not None else ""
+        print(f"  {stage:<8} {elapsed:>7.2f}s{cost_str}")
+    print(f"  total cost:  ${cost_usd:.4f}")
     if cost_warnings:
         for w in cost_warnings:
             print(f"  ! {w}")
