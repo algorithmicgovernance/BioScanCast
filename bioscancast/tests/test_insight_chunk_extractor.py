@@ -367,11 +367,41 @@ _LAYER3_WRAPPING_PUNCTUATION_CASES = [
 ]
 
 
+_LAYER4_CASE_INSENSITIVE_CASES = [
+    (
+        # Real q12 finding: model lowercased the leading "T" of a sentence
+        # it quoted from mid-paragraph; otherwise verbatim.
+        "leading letter lowercased by model",
+        "There are now 750 suspected cases and 177 suspected deaths, though more are expected.",
+        "there are now 750 suspected cases and 177 suspected deaths",
+        True,
+    ),
+    (
+        # Real q12 finding: same drift on a longer attribution clause.
+        "leading 'The' lowercased mid-paragraph quote",
+        "The Congolese Ministry of Communication, in a post to X on Sunday, said that there were 904 suspected cases and 119 suspected deaths.",
+        "the Congolese Ministry of Communication, in a post to X on Sunday, said that there were 904 suspected cases and 119 suspected deaths",
+        True,
+    ),
+]
+
+
 _HALLUCINATION_CASES = [
     (
         "fabricated word inserted into list",
         "Ghana and Liberia have reported human mpox due to clade IIa MPXV.",
         "Ghana, Atlantis, and Liberia have reported human mpox due to clade IIa MPXV.",
+        False,
+    ),
+    (
+        # Real q12 finding: model bolted a real prefix ("a total of 105
+        # confirmed cases (including 10 deaths)") onto a fabricated
+        # continuation. The source actually continues "...and 906
+        # suspected cases". Must stay rejected even with the new
+        # case-insensitive layer 4.
+        "real prefix bolted onto fabricated continuation (q12)",
+        "According to the Ministry of Health of DRC on 25 May, a total of 105 confirmed cases (including 10 deaths) and 906 suspected cases.",
+        "a total of 105 confirmed cases (including 10 deaths) have been reported in Ituri, North Kivu, and South Kivu",
         False,
     ),
     (
@@ -410,7 +440,10 @@ _HALLUCINATION_CASES = [
 
 @pytest.mark.parametrize(
     "label,chunk_text,quote,should_match",
-    _LAYER1_NFKC_CASES + _LAYER2_TERMINAL_PUNCTUATION_CASES + _LAYER3_WRAPPING_PUNCTUATION_CASES,
+    _LAYER1_NFKC_CASES
+    + _LAYER2_TERMINAL_PUNCTUATION_CASES
+    + _LAYER3_WRAPPING_PUNCTUATION_CASES
+    + _LAYER4_CASE_INSENSITIVE_CASES,
 )
 def test_quote_matches_accepts_real_quotes_with_normalisation_drift(
     label, chunk_text, quote, should_match
