@@ -172,24 +172,25 @@ Intended responsibilities:
 ```text
 bioscancast/
 ├── bioscancast/
-│   ├── datasets/
-│   ├── extraction/
-│   ├── filtering/
-│   ├── insight/
-│   ├── llm/
-│   ├── schemas/
+│   ├── datasets/      Source registries and tier definitions
+│   ├── extraction/    Fetching, parsing, and chunking
+│   ├── filtering/     Relevance filtering and reranking
+│   ├── insight/       Retrieval and insight extraction
+│   ├── llm/           LLM client abstractions
+│   ├── schemas/       Shared data models
 │   ├── stages/
 │   │   ├── search_stage/
 │   │   └── eval_stage/
-│   └── tests/
-├── configs/
+│   └── tests/         Unit and integration tests
 ├── data/
-├── docs/
-├── notebooks/
+│   ├── raw/
+│   ├── processed/
+│   └── docling_eval/
+├── evaluation/
 ├── scripts/
-├── tests/
 ├── pyproject.toml
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
