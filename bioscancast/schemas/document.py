@@ -115,3 +115,13 @@ class Document:
 
     extracted_dates: List[str] = field(default_factory=list)
     """Date strings found anywhere in the document, preserved as-is."""
+
+    # ---- historical-replay provenance ----
+    fetch_strategy: str = "live"
+    """How the bytes were obtained: 'live', 'wayback', or 'wayback_fallback_to_live'."""
+
+    snapshot_timestamp: Optional[datetime] = None
+    """Wayback capture timestamp when fetch_strategy == 'wayback'. None otherwise."""
+
+    cutoff_applied: Optional[datetime] = None
+    """The as_of_date that was active when this document was fetched. None in live mode."""

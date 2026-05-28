@@ -31,17 +31,43 @@ class TavilyBackend:
                 "TAVILY_API_KEY is required. Set it in your environment or pass api_key."
             )
 
-    def search(self, query: str, max_results: int = 10) -> List[RawSearchResult]:
+    def search(
+        self,
+        query: str,
+        max_results: int = 10,
+        end_date: Optional[str] = None,
+        start_date: Optional[str] = None,
+    ) -> List[RawSearchResult]:
+        # Date-window behavior (verified 2026-05-20, see
+        # ``specs/tavily-investigation-findings.md``): Tavily's news endpoint
+        # honors ``start_date`` + ``end_date`` only when **both** are passed
+        # together. Passing ``end_date`` alone is silently ignored and the
+        # results come back unfiltered. The pipeline is responsible for
+        # supplying a sensible ``start_date`` alongside any ``end_date``; if
+        # only ``end_date`` is passed here we drop it rather than send a
+        # request we know Tavily will misinterpret. The post-retrieval cutoff
+        # filter in ``SearchStagePipeline`` remains the authoritative defense.
         from tavily import TavilyClient  # lazy import to avoid hard dep at import time
 
         client = TavilyClient(api_key=self._api_key)
-        try:
-            response = client.search(
-                query=query,
-                max_results=max_results,
-                topic="news",
-                include_answer=False,
+        kwargs: dict = {
+            "query": query,
+            "max_results": max_results,
+            "topic": "news",
+            "include_answer": False,
+        }
+        if start_date and end_date:
+            kwargs["start_date"] = start_date
+            kwargs["end_date"] = end_date
+        elif end_date and not start_date:
+            logger.warning(
+                "TavilyBackend received end_date=%s without start_date; "
+                "dropping (Tavily ignores end_date alone). Cutoff filter "
+                "will still apply post-retrieval.",
+                end_date,
             )
+        try:
+            response = client.search(**kwargs)
         except Exception:
             logger.exception("Tavily search failed for query: %s", query)
             return []

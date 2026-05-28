@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import logging
+import re
 import statistics
 from datetime import datetime
 from typing import List, Optional
@@ -14,6 +15,18 @@ logger = logging.getLogger(__name__)
 #       a failed ParsedContent with reason "requires_ocr".
 
 _DEFAULT_MAX_PAGES = 100
+
+# A PDF /Title metadata value is "filename-shaped" when it ends in a
+# document-format extension or is implausibly short. Many PDFs from
+# the WHO / ECDC / CDC pipelines have stale conversion titles like
+# "2026-WCP-0020 Draft.docx" — those should be rejected so downstream
+# falls back to the search-side title rather than displaying a
+# meaningless filename.
+_FILENAME_EXT_RE = re.compile(
+    r"\.(pdf|docx?|odt|rtf|txt|pages|xlsx?|pptx?|html?)$",
+    re.IGNORECASE,
+)
+_MIN_TITLE_LENGTH = 5
 
 
 class PdfParser:
@@ -37,7 +50,7 @@ class PdfParser:
 
         # Extract metadata
         meta = doc.metadata or {}
-        title = meta.get("title") or None
+        title = self._sanitize_title(meta.get("title"))
         pub_date = self._parse_pdf_date(meta.get("creationDate"))
 
         all_text_parts: List[str] = []
@@ -233,6 +246,37 @@ class PdfParser:
         except Exception as exc:
             logger.debug("pdfplumber fallback failed on page %d: %s", page_index, exc)
             return []
+
+    def _sanitize_title(self, title: Optional[str]) -> Optional[str]:
+        """Filter out PDF /Title metadata values that aren't real titles.
+
+        Returns the trimmed title when it looks like real content, or
+        ``None`` to let the upstream caller fall back to the search-side
+        title. Rejects:
+
+        * Empty / whitespace-only values.
+        * Strings ending in a document-format extension (``.pdf``,
+          ``.docx``, ``.html``, etc.) — typically a stale Word→PDF
+          conversion title or a verbatim filename.
+        * Implausibly short titles (fewer than ``_MIN_TITLE_LENGTH``
+          characters) — usually internal doc IDs or leftover placeholders.
+        """
+        if not title:
+            return None
+        stripped = title.strip()
+        if not stripped:
+            return None
+        if _FILENAME_EXT_RE.search(stripped):
+            logger.debug(
+                "Dropping filename-shaped PDF title: %r", stripped[:80]
+            )
+            return None
+        if len(stripped) < _MIN_TITLE_LENGTH:
+            logger.debug(
+                "Dropping implausibly short PDF title: %r", stripped
+            )
+            return None
+        return stripped
 
     def _parse_pdf_date(self, date_str: Optional[str]) -> Optional[datetime]:
         """Parse PDF date strings like 'D:20240115120000+00'00''."""

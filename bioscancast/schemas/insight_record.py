@@ -71,7 +71,19 @@ class InsightRecord:
     """Unit of the metric (e.g. 'cases', 'herds', 'deaths')."""
 
     event_date: Optional[datetime] = None
-    """Date the fact pertains to (not the date it was reported)."""
+    """Date the fact pertains to (not the date it was reported).
+
+    Canonicalised to the start of the period when only a partial date is
+    known (e.g. ``"2026-01"`` → ``datetime(2026, 1, 1)``). Read together
+    with ``event_date_precision`` to recover the original granularity.
+    """
+
+    event_date_precision: Optional[str] = None
+    """Granularity of ``event_date``: ``"year"`` | ``"month"`` | ``"day"``,
+    or ``None`` when no date was extracted. The dedup logic in the insight
+    pipeline merges two records whose date buckets overlap at the coarser
+    precision (e.g. a record with month precision 2026-01 merges with a
+    day-precision record dated 2026-01-25)."""
 
     # ---- free-text fallback ----
     summary: Optional[str] = None

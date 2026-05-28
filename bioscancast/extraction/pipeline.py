@@ -19,10 +19,22 @@ logger = logging.getLogger(__name__)
 
 
 class ExtractionPipeline:
-    """Orchestrates document fetching, parsing, and chunk normalization."""
+    """Orchestrates document fetching, parsing, and chunk normalization.
 
-    def __init__(self, *, config: ExtractionConfig | None = None) -> None:
+    ``as_of_date`` opts the fetcher into Wayback-rewrite mode. See
+    ``bioscancast.extraction.fetcher.fetch`` for the strategy semantics
+    (live / wayback / wayback_fallback_to_live). The resulting strategy
+    and snapshot timestamp are copied onto each Document for audit.
+    """
+
+    def __init__(
+        self,
+        *,
+        config: ExtractionConfig | None = None,
+        as_of_date: Optional[datetime] = None,
+    ) -> None:
         self._config = config or ExtractionConfig()
+        self._as_of_date = as_of_date
         self._parsers = get_parsers(pdf_max_pages=self._config.pdf_max_pages)
         # Lazily constructed on first PDF that reaches the refiner step.
         self._docling_refiner = None
@@ -54,7 +66,11 @@ class ExtractionPipeline:
         doc_id = f"doc-{filtered_doc.result_id}"
 
         # Step 1: Fetch
-        fetch_result = fetch(filtered_doc.url, config=self._config)
+        fetch_result = fetch(
+            filtered_doc.url,
+            config=self._config,
+            as_of_date=self._as_of_date,
+        )
 
         if fetch_result.error or fetch_result.content_bytes is None:
             return self._make_failed_document(
@@ -130,6 +146,11 @@ class ExtractionPipeline:
             max_tokens=self._config.chunk_max_tokens,
         )
 
+        # Step 5b: Drop or repair empty chunks before any downstream
+        # consumer sees them. Empty chunks make retrieval waste budget
+        # (BM25 still indexes the heading) and confuse the insight stage.
+        chunks = _drop_or_repair_empty_chunks(chunks)
+
         # Renumber chunk indices after normalization
         for i, chunk in enumerate(chunks):
             chunk.chunk_index = i
@@ -169,6 +190,9 @@ class ExtractionPipeline:
             chunks=chunks,
             extracted_tables=extracted_tables,
             extracted_dates=extracted_dates,
+            fetch_strategy=fetch_result.fetch_strategy,
+            snapshot_timestamp=fetch_result.snapshot_timestamp,
+            cutoff_applied=self._as_of_date,
         )
 
     def _get_docling_refiner(self):
@@ -212,6 +236,9 @@ class ExtractionPipeline:
             error_message=error,
             http_status=fetch_result.status_code if fetch_result else None,
             content_type=fetch_result.content_type if fetch_result else None,
+            fetch_strategy=fetch_result.fetch_strategy if fetch_result else "live",
+            snapshot_timestamp=fetch_result.snapshot_timestamp if fetch_result else None,
+            cutoff_applied=self._as_of_date,
         )
 
     def _build_chunks(
@@ -268,3 +295,70 @@ class ExtractionPipeline:
                 seen.add(d)
                 unique.append(d)
         return unique
+
+
+def _render_table_data_as_text(rows: List[List[str]]) -> str:
+    """Render row-major table data as a flat text block.
+
+    Cells are joined with tabs within a row and rows with newlines.
+    Empty cells are preserved (so column alignment stays implicit) but
+    fully-empty rows are skipped. This is good enough for BM25 keyword
+    matching when the underlying PDF parser produced a table whose cells
+    are present but whose flowed text was empty.
+    """
+    out_rows: List[str] = []
+    for row in rows:
+        cells = [(cell or "").strip() for cell in row]
+        if not any(cells):
+            continue
+        out_rows.append("\t".join(cells))
+    return "\n".join(out_rows)
+
+
+def _drop_or_repair_empty_chunks(
+    chunks: List[DocumentChunk],
+) -> List[DocumentChunk]:
+    """Filter chunks whose ``text`` is blank after stripping whitespace.
+
+    Two paths, in order of preference:
+
+    * If the chunk is a table with non-empty ``table_data`` rows, render
+      those rows into the ``text`` field so downstream retrieval and
+      LLM extraction can see the cell contents. The structured
+      ``table_data`` is preserved unchanged for any consumer that wants
+      cell-level access.
+    * Otherwise drop the chunk and log at DEBUG. An empty prose chunk
+      usually indicates a half-broken section in the upstream parser
+      (heading without body, footer artefact, decorative caption), not
+      something the insight stage can act on.
+
+    Running this *after* ``normalize_chunks`` means it sees the final
+    post-split chunk text, not pre-split fragments that the splitter
+    might have rebalanced.
+    """
+    out: List[DocumentChunk] = []
+    for chunk in chunks:
+        if chunk.text and chunk.text.strip():
+            out.append(chunk)
+            continue
+        if chunk.chunk_type == "table" and chunk.table_data:
+            rendered = _render_table_data_as_text(chunk.table_data)
+            if rendered:
+                chunk.text = rendered
+                chunk.token_count = approx_token_count(rendered)
+                logger.debug(
+                    "Empty-text table chunk repaired from table_data "
+                    "(chunk_id=%s, rows=%d, rendered_chars=%d)",
+                    chunk.chunk_id,
+                    len(chunk.table_data),
+                    len(rendered),
+                )
+                out.append(chunk)
+                continue
+        logger.debug(
+            "Dropping empty chunk (chunk_id=%s, type=%s, heading=%r)",
+            chunk.chunk_id,
+            chunk.chunk_type,
+            (chunk.heading or "")[:60],
+        )
+    return out

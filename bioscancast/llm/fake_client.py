@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import math
+import threading
 from collections import deque
 from typing import Sequence
 
@@ -20,6 +21,13 @@ class FakeLLMClient:
 
     Responses are consumed in FIFO order.  If the queue is exhausted,
     a RuntimeError is raised — failing loudly beats returning empty dicts.
+
+    ``generate_json`` is thread-safe under multiple concurrent callers
+    (e.g. when the insight pipeline's per-chunk ThreadPoolExecutor calls
+    it from several workers): a single ``threading.Lock`` protects the
+    response deque and the call-count / token totals. Without this, the
+    deque popleft + counter increment race and tests run under concurrency
+    can drop responses or under-count tokens.
     """
 
     def __init__(
@@ -33,10 +41,12 @@ class FakeLLMClient:
         self.call_count = 0
         self.total_input_tokens = 0
         self.total_output_tokens = 0
+        self._lock = threading.Lock()
 
     def enqueue(self, *responses: LLMResponse) -> None:
         """Add responses to the end of the queue."""
-        self._responses.extend(responses)
+        with self._lock:
+            self._responses.extend(responses)
 
     def generate_json(
         self,
@@ -47,16 +57,17 @@ class FakeLLMClient:
         model: str,
         max_tokens: int = 1024,
     ) -> LLMResponse:
-        if not self._responses:
-            raise RuntimeError(
-                f"FakeLLMClient: no scripted responses left "
-                f"(call #{self.call_count + 1}). "
-                f"Enqueue more responses before running the test."
-            )
-        response = self._responses.popleft()
-        self.call_count += 1
-        self.total_input_tokens += response.input_tokens
-        self.total_output_tokens += response.output_tokens
+        with self._lock:
+            if not self._responses:
+                raise RuntimeError(
+                    f"FakeLLMClient: no scripted responses left "
+                    f"(call #{self.call_count + 1}). "
+                    f"Enqueue more responses before running the test."
+                )
+            response = self._responses.popleft()
+            self.call_count += 1
+            self.total_input_tokens += response.input_tokens
+            self.total_output_tokens += response.output_tokens
         return response
 
     def embed(self, texts: list[str], *, model: str) -> list[list[float]]:

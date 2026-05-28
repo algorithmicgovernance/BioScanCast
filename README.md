@@ -366,6 +366,42 @@ human_comparison.py
 
 Used to compare model forecasts against human forecasts.
 
+## Historical-replay mode (benchmarking against human forecasters)
+
+When benchmarking the pipeline against human forecasters on past questions,
+the model must not be allowed to see sources that didn't exist (or contained
+different content) at the time the human forecasted. Historical-replay mode
+enforces this by reading a single per-question field, `ForecastQuestion.as_of_date`:
+
+- When `as_of_date` is `None` (default), the pipeline behaves exactly as in
+  live mode. No code paths change.
+- When `as_of_date` is set, the search backend receives `end_date=as_of_date`,
+  the cache key incorporates the cutoff, post-retrieval filtering drops any
+  result dated after the cutoff (and any undated result whose date cannot be
+  cheaply recovered), dashboard URLs are rewritten to the closest Wayback
+  snapshot at or before the cutoff (or suppressed if none exists), and the
+  extraction stage fetches from Wayback. Wayback fallback to live is logged
+  at INFO and recorded in `Document.fetch_strategy`, never silent.
+
+The LLM "historical roleplay" prompt is *not* automatically enabled by
+`as_of_date`; it lives behind a separate `historical_roleplay=True` flag on
+`SearchStagePipeline` because its effect on query quality is harder to
+predict. Turn it on for the benchmark and off for production.
+
+What this mode does NOT fix: the LLMs themselves were trained on data that
+postdates many of our benchmark questions. Retrieval fairness ≠ model
+fairness. The `retrieval_free_baseline_forecast` metric in
+`bioscancast/stages/eval_stage/contamination.py` reports how well the LLM
+forecasts with no evidence at all; a small gap between that and the full
+pipeline is itself evidence of training-data leakage and must be reported
+alongside the headline Brier/log scores.
+
+`filter_caught_contamination_rate` is also exposed by the same module. It
+is a **lower bound** on contamination — it only counts post-cutoff results
+whose `published_date` is known. Undated results and results whose content
+changed post-cutoff are invisible to it. Reports MUST surface this caveat;
+the metric's docstring repeats it for the same reason.
+
 ---
 
 # Datasets

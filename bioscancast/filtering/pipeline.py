@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from bioscancast.llm.client import LLMClient
+from bioscancast.llm.base import LLMClient
 
 from .config import FILTER_CONFIG
 from .deduplication import deduplicate_filtered_documents
