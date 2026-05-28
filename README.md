@@ -1,370 +1,441 @@
 # BioScanCast
 
-BioScanCast is an open source pipeline that uses large language models and automated web retrieval to produce forecasts for biosecurity related questions.
+BioScanCast is an open source pipeline for biosecurity forecasting using LLMs and automated web retrieval.
 
-The system gathers information from the internet, filters relevant sources, extracts structured insights, and produces probabilistic forecasts with confidence scores. The project also evaluates model forecasts against human expert forecasts.
+The system retrieves internet sources, filters relevant documents, extracts structured information, and is intended to support probabilistic forecasting and evaluation against human forecasters.
 
-This repository contains the full pipeline implementation, benchmarking framework, and tooling required to reproduce experiments.
+Current repository contents include:
+
+* modular pipeline stages
+* shared schemas and LLM abstractions
+* retrieval and extraction tooling
+* benchmarking and evaluation infrastructure
+* smoke-test and operational scripts
+
+The forecasting stage is not yet implemented.
 
 ---
 
 # Project Goals
 
 1. Build an open source forecasting system for biosecurity questions.
-2. Benchmark model forecasts against human expert forecasters.
-3. Provide a fully reproducible research pipeline suitable for publication.
-4. Produce accessible outputs including technical documentation and public explanations.
+2. Benchmark model forecasts against human forecasters.
+3. Provide a reproducible research pipeline suitable for publication.
+4. Produce accessible technical and public-facing outputs.
 
 ---
 
-# High Level Pipeline
+# Pipeline Status
 
-The system follows a modular pipeline with five stages.
+Implemented:
 
-1. Search stage
-   Collect candidate sources from the internet.
+```text
+Search -> Filtering -> Extraction -> Insight
+```
 
-2. Filtering stage
-   Identify credible and relevant sources.
+Planned:
 
-3. Extraction stage
-   Retrieve and clean content from selected sources.
+```text
+Forecasting
+```
 
-4. Insight stage
-   Extract structured information such as events and timelines.
+Current capabilities include:
 
-5. Forecasting stage
-   Use structured information to generate forecasts and confidence scores.
+* LLM query decomposition
+* web/news retrieval via Tavily
+* heuristic + optional LLM filtering
+* HTML/PDF extraction and chunking
+* hybrid BM25 + embedding retrieval
+* structured fact extraction with provenance tracking
 
-Each stage is implemented as an independent module so developers can work on components without affecting the rest of the system.
+---
+
+# Pipeline Overview
+
+## 1. Search Stage
+
+Collect candidate internet sources.
+
+Features:
+
+* LLM query decomposition
+* Tavily retrieval backend
+* source tier scoring
+* dashboard injection
+* URL normalization + deduplication
+
+Output:
+
+```python
+List[SearchResult]
+```
+
+---
+
+## 2. Filtering Stage
+
+Identify credible and relevant sources.
+
+Features:
+
+* heuristic relevance scoring
+* source credibility scoring
+* duplicate removal
+* optional LLM review
+* extraction-priority assignment
+
+Output:
+
+```python
+List[FilteredDocument]
+```
+
+---
+
+## 3. Extraction Stage
+
+Fetch and normalize source content.
+
+Features:
+
+* HTML/PDF fetching
+* HTML/PDF parsing
+* table extraction
+* chunk normalization
+* metadata extraction
+
+Output:
+
+```python
+List[Document]
+```
+
+---
+
+## 4. Insight Stage
+
+Convert extracted text into structured facts.
+
+Features:
+
+* BM25 retrieval
+* embedding retrieval
+* hybrid reranking
+* structured fact extraction
+* provenance tracking
+* hallucination filtering
+* cross-document deduplication
+
+Output:
+
+```python
+List[InsightRecord]
+```
+
+Design principle:
+
+```text
+one chunk -> one extraction call
+```
+
+Each fact must include:
+
+* supporting quote
+* source chunk
+* source URL
+
+Facts failing substring verification are discarded.
+
+Current limitations:
+
+* disconnected from extraction outputs in smoke tests
+* no temporal reasoning layer
+* no forecasting integration
+
+---
+
+## 5. Forecasting Stage
+
+Planned but not implemented.
+
+Intended responsibilities:
+
+* probabilistic forecasting
+* calibration
+* confidence estimation
+* forecast evaluation
 
 ---
 
 # Repository Structure
 
-```
+```text
 bioscancast/
-│
 ├── bioscancast/
-│   ├── pipeline/
+│   ├── datasets/      Source registries and tier definitions
+│   ├── extraction/    Fetching, parsing, and chunking
+│   ├── filtering/     Relevance filtering and reranking
+│   ├── insight/       Retrieval and insight extraction
+│   ├── llm/           LLM client abstractions
+│   ├── schemas/       Shared data models
 │   ├── stages/
-│   ├── schemas/
-│   ├── llm/
-│   ├── retrieval/
-│   ├── evaluation/
-│   ├── datasets/
-│   └── utils/
-│
-├── configs/
+│   │   ├── search_stage/
+│   │   └── eval_stage/
+│   └── tests/         Unit and integration tests
 ├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── docling_eval/
+├── evaluation/
 ├── scripts/
-├── notebooks/
-├── tests/
-└── docs/
+├── pyproject.toml
+├── requirements.txt
+└── README.md
 ```
-
-The sections below describe the purpose of each directory.
 
 ---
 
-# Core Package
+# Core Modules
 
-The `bioscancast/` directory contains the main application code.
-
-```
-bioscancast/
-```
-
-This package implements the forecasting pipeline and supporting modules.
-
----
-
-# Pipeline
-
-```
-bioscancast/pipeline/
-```
-
-Responsible for coordinating execution across stages.
-
-Files:
-
-**orchestrator.py**
-Controls pipeline flow. Calls each stage sequentially.
-
-**pipeline_runner.py**
-Entry point for running the full pipeline.
-
-**pipeline_types.py**
-Shared data types used to pass outputs between stages.
-
-Developers modifying pipeline order or execution logic should work here.
+| Module                 | Purpose                                    |
+| ---------------------- | ------------------------------------------ |
+| `datasets/`            | curated source registries and source tiers |
+| `extraction/`          | fetching, parsing, chunking                |
+| `filtering/`           | source filtering and ranking               |
+| `insight/`             | retrieval and fact extraction              |
+| `llm/`                 | model abstractions                         |
+| `schemas/`             | shared structured contracts                |
+| `stages/search_stage/` | retrieval stage                            |
+| `stages/eval_stage/`   | evaluation tooling                         |
 
 ---
 
-# Pipeline Stages
-
-```
-bioscancast/stages/
-```
-
-Each stage of the forecasting pipeline is implemented in its own folder.
-
-Stages should remain independent and communicate only through defined schemas.
-
----
+# Stage Details
 
 ## Search Stage
 
-```
+```text
 bioscancast/stages/search_stage/
 ```
 
-Purpose:
+Implemented modules:
 
-Generate candidate sources relevant to a forecasting question.
+| File                         | Purpose                    |
+| ---------------------------- | -------------------------- |
+| `pipeline.py`                | orchestration              |
+| `query_decomposition.py`     | LLM sub-query generation   |
+| `tier_resolution.py`         | source credibility scoring |
+| `dashboard_lookup.py`        | dashboard injection        |
+| `url_normalization.py`       | canonicalization + dedup   |
+| `backends/tavily_backend.py` | Tavily backend             |
 
-Tasks:
+Current features:
 
-• LLM-based query decomposition (5-8 sub-queries per question)
-• Search execution via Tavily API (swappable backend)
-• Dashboard injection for known pathogens (CDC, WHO, etc.)
-• URL normalization and deduplication
-• Source tier scoring and aggregator flagging
-
-Outputs:
-
-```
-List[SearchResult]
-```
+* 5–8 LLM-generated subqueries
+* backend abstraction via `SearchBackend`
+* source tier + freshness scoring
+* aggregator-domain flagging
+* non-content URL filtering
 
 Known limitations:
 
-• English-only for v1. Francophone Africa, Lusophone, and Spanish-speaking
-  regions are systematically under-covered. This must be addressed before
-  live Fall deployment if time allows.
-• Dashboard lookup is hardcoded (v1) and will need iteration after the first
-  benchmark run.
+* English-only retrieval
+* hardcoded dashboard mappings
+* no multilingual retrieval
 
 ---
 
 ## Filtering Stage
 
-```
-bioscancast/stages/filtering_stage/
-```
-
-Purpose:
-
-Identify credible and relevant sources.
-
-Expected tasks:
-
-• LLM relevance classification
-• source credibility checks
-• removal of duplicate or low quality URLs
-
-Expected outputs:
-
-```
-List[FilteredURL]
+```text
+bioscancast/filtering/
 ```
 
-Example modules:
+Implemented modules:
 
-url_ranker.py
-source_validator.py
-relevance_model.py
+| File               | Purpose                        |
+| ------------------ | ------------------------------ |
+| `pipeline.py`      | orchestration                  |
+| `heuristics.py`    | heuristic scoring              |
+| `llm_filter.py`    | LLM adjudication               |
+| `reranker.py`      | borderline reranking           |
+| `deduplication.py` | duplicate handling             |
+| `postprocess.py`   | extraction-priority assignment |
+
+Current features:
+
+* heuristic relevance scoring
+* source credibility scoring
+* optional LLM review
+* domain caps
+* extraction-mode assignment
 
 ---
 
 ## Extraction Stage
 
-```
-bioscancast/stages/extraction_stage/
-```
-
-Purpose:
-
-Retrieve and normalize content from selected sources.
-
-Expected tasks:
-
-• scrape HTML pages
-• download PDFs
-• parse documents
-• clean text
-
-Expected outputs:
-
-```
-List[Document]
+```text
+bioscancast/extraction/
 ```
 
-Example modules:
+Implemented modules:
 
-scraper.py
-html_parser.py
-pdf_parser.py
-text_cleaner.py
+| File                     | Purpose                   |
+| ------------------------ | ------------------------- |
+| `pipeline.py`            | orchestration             |
+| `fetcher.py`             | network retrieval         |
+| `chunking.py`            | chunk normalization       |
+| `parsers/html_parser.py` | HTML extraction           |
+| `parsers/pdf_parser.py`  | PDF extraction            |
+| `docling_refiner.py`     | optional table refinement |
 
-Note on PDF table extraction (Docling refiner):
+Current features:
 
-The extraction stage uses an in-tree PDF parser (PyMuPDF + pdfplumber) as the
-default and a Docling TableFormer post-pass to refine table sections when an
-in-tree result looks broken or when the source URL is on a curated allowlist
-of publishers whose tables are known to be hard (CDC MMWR, certain WHO
-situation reports).
+* browser-fingerprinted fetching via `curl_cffi`
+* BeautifulSoup + trafilatura HTML parsing
+* PyMuPDF PDF parsing
+* pdfplumber table fallback
+* chunk normalization
+* metadata extraction
+* document-level provenance tracking
 
-The first PDF that triggers the refiner downloads the Docling layout and
-TableFormer models (~40 MB) to the HuggingFace cache (`~/.cache/huggingface/`)
-and holds them in memory (~1.5 GB) for the lifetime of the process. The
-feature is toggled with `ExtractionConfig.enable_docling_refiner` — when
-disabled, no Docling imports occur and behaviour matches the pre-refiner
-pipeline exactly.
+### PDF Table Extraction (Docling Refiner)
+
+The default PDF pipeline uses PyMuPDF + pdfplumber with an optional Docling TableFormer refinement pass.
+
+The first refinement run downloads Docling models (~40 MB) into:
+
+```text
+~/.cache/huggingface/
+```
+
+Models remain resident in memory (~1.5 GB) for the process lifetime.
+
+Controlled via:
+
+```python
+ExtractionConfig.enable_docling_refiner
+```
+
+When disabled, no Docling imports occur.
+
+Current limitations:
+
+* OCR not implemented
+* scanned PDFs return `requires_ocr`
+* no persistent document store
+* extraction is currently in-memory only
 
 ---
 
 ## Insight Stage
 
-```
-bioscancast/stages/insight_stage/
-```
-
-Purpose:
-
-Extract structured information from text.
-
-Expected tasks:
-
-• event extraction
-• timeline construction
-• key insight identification
-
-Expected outputs:
-
-```
-DataFrame[InsightRecord]
+```text
+bioscancast/insight/
 ```
 
-Example modules:
+Implemented modules:
 
-information_extractor.py
-event_parser.py
-timeline_builder.py
-dataframe_builder.py
+| File                            | Purpose             |
+| ------------------------------- | ------------------- |
+| `pipeline.py`                   | orchestration       |
+| `retrieval/bm25.py`             | lexical retrieval   |
+| `retrieval/embeddings.py`       | embedding retrieval |
+| `retrieval/hybrid.py`           | hybrid reranking    |
+| `extraction/chunk_extractor.py` | fact extraction     |
 
----
+Current features:
 
-## Forecasting Stage
-
-```
-bioscancast/stages/forecasting_stage/
-```
-
-Purpose:
-
-Produce probabilistic forecasts based on extracted insights.
-
-Expected tasks:
-
-• generate model prompts
-• apply reasoning models
-• calibrate probabilities
-• produce confidence scores
-
-Expected outputs:
-
-```
-ForecastOutput
-```
-
-Example modules:
-
-forecaster.py
-prompt_templates.py
-confidence_calibration.py
-
----
-
-# Schemas
-
-```
-bioscancast/schemas/
-```
-
-Defines structured data objects shared between pipeline stages.
-
-Examples:
-
-search_result.py
-document.py
-extracted_event.py
-forecast_output.py
-
-All stages should communicate using these schemas. Do not pass raw dictionaries between stages.
-
----
-
-# LLM Integration
-
-```
-bioscancast/llm/
-```
-
-Provides abstraction layers for language models.
-
-Supported providers may include:
-
-• OpenAI
-• Anthropic
-• Local models
-
-Example files:
-
-llm_client.py
-openai_client.py
-anthropic_client.py
-
-Stages should call these clients rather than directly interacting with APIs.
-
----
-
-# Retrieval Utilities
-
-```
-bioscancast/retrieval/
-```
-
-Tools for document retrieval and embedding.
-
-Examples:
-
-document_store.py
-embedding_model.py
-chunking.py
-
-Used by extraction and insight stages.
+* BM25 retrieval
+* embedding similarity retrieval
+* hybrid scoring
+* keyword reranking
+* chunk-level extraction
+* quote-based hallucination guards
+* provenance linking
+* cross-document deduplication
 
 ---
 
 # Evaluation
 
+```text
+bioscancast/stages/eval_stage/
 ```
-bioscancast/evaluation/
+
+Implemented modules:
+
+| File               | Purpose                   |
+| ------------------ | ------------------------- |
+| `evaluator.py`     | orchestration             |
+| `scoring.py`       | forecast scoring          |
+| `calibration.py`   | calibration metrics       |
+| `compare.py`       | model vs human comparison |
+| `visualisation.py` | plots and reporting       |
+
+Repository datasets:
+
+```text
+bioscancast_forecasts.csv
+bioscancast_questions.csv
 ```
 
-Contains benchmarking and evaluation logic.
+---
 
-Examples:
+# Schemas
 
-benchmark_loader.py
-scoring.py
-brier_score.py
-calibration_metrics.py
-human_comparison.py
+```text
+bioscancast/schemas/
+```
 
-Used to compare model forecasts against human forecasts.
+Shared stage contracts.
+
+Key schemas:
+
+| File                | Purpose                      |
+| ------------------- | ---------------------------- |
+| `document.py`       | extracted documents + chunks |
+| `insight_record.py` | extracted facts              |
+
+Additional filtering models live in:
+
+```text
+bioscancast/filtering/models.py
+```
+
+including:
+
+* `ForecastQuestion`
+* `SearchResult`
+* `FilteredDocument`
+
+Stages should communicate through schemas rather than raw dictionaries.
+
+---
+
+# LLM Integration
+
+```text
+bioscancast/llm/
+```
+
+Current files:
+
+| File               | Purpose                            |
+| ------------------ | ---------------------------------- |
+| `base.py`          | shared protocol + token accounting |
+| `client.py`        | legacy/simple OpenAI wrapper       |
+| `openai_client.py` | structured extraction client       |
+| `fake_client.py`   | testing client                     |
+
+The repository currently contains two partially overlapping interfaces:
+
+```text
+bioscancast/llm/base.py
+bioscancast/llm/client.py
+```
+
+These should eventually be unified.
 
 ## Historical-replay mode (benchmarking against human forecasters)
 
@@ -406,195 +477,246 @@ the metric's docstring repeats it for the same reason.
 
 # Datasets
 
-```
+```text
 bioscancast/datasets/
 ```
 
-Contains definitions for forecasting datasets and curated source lists.
+Curated source definitions and credibility tiers.
 
-Examples:
-
-forecast_questions.py
-biosecurity_sources.py
-
----
-
-# Utilities
-
-```
-bioscancast/utils/
-```
-
-General purpose helpers used throughout the codebase.
-
-Examples:
-
-logging utilities
-configuration loading
-rate limiting
-caching
-
----
-
-# Configurations
-
-```
-configs/
-```
-
-Configuration files for models, scraping behavior, and pipeline parameters.
-
-Examples:
-
-model configuration
-API settings
-scraping limits
-LLM prompt settings
-
-These files allow experimentation without modifying code.
-
----
-
-# Data
-
-```
-data/
-```
-
-Stores intermediate and benchmark data.
-
-Subdirectories:
-
-raw
-original scraped data
-
-processed
-cleaned datasets
-
-benchmarks
-forecasting evaluation datasets
+| File                     | Purpose                  |
+| ------------------------ | ------------------------ |
+| `biosecurity_sources.py` | curated source registry  |
+| `source_tiers.py`        | source credibility tiers |
 
 ---
 
 # Scripts
 
-```
+```text
 scripts/
 ```
 
-Command line tools used to run experiments and pipelines.
+Operational and smoke-test utilities.
 
-Examples:
+| Script                | Purpose                     |
+| --------------------- | --------------------------- |
+| `run_search_stage.py` | run search stage            |
+| `run_filtering.py`    | run filtering stage         |
+| `run_extraction.py`   | run extraction stage        |
+| `run_insight.py`      | run insight smoke test      |
+| `eval_docling.py`     | Docling evaluation          |
+| `eval_hybrid_pdf.py`  | PDF extraction benchmarking |
 
-run_pipeline.py
-Runs the full forecasting pipeline.
-
-run_benchmark.py
-Evaluates model forecasts against benchmark datasets.
-
-scrape_sources.py
-Bulk scraping utility for collecting documents.
-
-evaluate_forecasts.py
-Computes evaluation metrics.
-
-Scripts are intended for operational tasks rather than reusable code.
-
----
-
-# Notebooks
-
-```
-notebooks/
-```
-
-Used for exploratory analysis and experimentation.
-
-Examples:
-
-model experiments
-prompt exploration
-benchmark analysis
-
-Notebook code should not be required for the main pipeline.
-
----
-
-# Tests
-
-```
-tests/
-```
-
-Unit and integration tests for pipeline components.
-
-Examples:
-
-stage level tests
-pipeline execution tests
-schema validation tests
-
-Each pipeline stage should include test coverage.
-
----
-
-# Documentation
-
-```
-docs/
-```
-
-Project documentation and architecture notes.
-
-Examples:
-
-system architecture
-pipeline design
-benchmark methodology
-API documentation
-
-These documents support research publication and developer onboarding.
-
----
-
-# Development Principles
-
-1. Pipeline stages must remain modular.
-2. Data passed between stages must use schemas.
-3. Stages should not import logic from other stages.
-4. Experimental code should live in notebooks or scripts.
-5. Reproducibility is a core requirement.
-
----
-
-# Dependencies
-
-Python dependencies are listed in `requirements.txt`. A few notes worth
-flagging for contributors working on the extraction stage:
-
-- **curl_cffi** is used for all HTTP fetches in `bioscancast/extraction/fetcher.py`. It wraps libcurl with browser TLS-fingerprint impersonation (Chrome by default), which lets us reach Cloudflare-fronted news sources (e.g. Reuters) that reject the default Python TLS stack used by `httpx`/`requests` with HTTP 401/403. The impersonation profile is configurable via `ExtractionConfig.impersonate`. See [issue #18](https://github.com/algorithmicgovernance/BioScanCast/issues/18) for background.
-- **Live network tests** are marked `@pytest.mark.live` and skipped by default. Run them with `pytest --live` to verify the fetcher still works against real CDN-fronted endpoints.
+Scripts are intended for operational workflows rather than reusable library APIs.
 
 ---
 
 # Running the Pipeline
 
-Example:
+## Environment Setup
 
-```
-python scripts/run_pipeline.py
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Example benchmark run:
+Additional packages:
 
-```
-python scripts/run_benchmark.py
+```bash
+pip install openai tavily-python python-dotenv
 ```
 
 ---
 
-# Contributing
+## Environment Variables
 
-Developers should work within a single pipeline stage whenever possible. Changes that affect data contracts or schemas should be discussed before merging.
+Create `.env`:
 
-All contributions should include tests.
+```bash
+OPENAI_API_KEY=sk-...
+TAVILY_API_KEY=tvly-...
+```
+
+---
+
+## Search Stage
+
+```bash
+python scripts/run_search_stage.py \
+  "Will H5N1 cause more than 100 human cases in the US by December 2026?" \
+  --pathogen h5n1 \
+  --region "United States"
+```
+
+Optional JSON output:
+
+```bash
+python scripts/run_search_stage.py \
+  "How many mpox cases will be reported globally by June 2026?" \
+  --pathogen mpox \
+  --output data/search_results.json
+```
+
+---
+
+## Filtering Stage
+
+```bash
+python scripts/run_filtering.py
+```
+
+Current limitation:
+
+* uses hardcoded sample inputs rather than automatic search-stage ingestion
+
+Output:
+
+```text
+data/filtered_results.json
+```
+
+---
+
+## Extraction Stage
+
+Smoke-test mode:
+
+```bash
+python scripts/run_extraction.py
+```
+
+Using filtered-document JSON:
+
+```bash
+python scripts/run_extraction.py \
+  --input data/filtered_results.json
+```
+
+Output:
+
+```text
+data/extraction_results.json
+```
+
+---
+
+## Insight Stage
+
+```bash
+python scripts/run_insight.py
+```
+
+Current limitation:
+
+* uses synthetic documents rather than extraction outputs
+
+---
+
+# Closest Current End-to-End Flow
+
+```bash
+python scripts/run_search_stage.py \
+  "Will mpox cases increase in Uganda in 2026?" \
+  --pathogen mpox \
+  --region Uganda \
+  --output data/search_results.json && \
+python scripts/run_filtering.py && \
+python scripts/run_extraction.py \
+  --input data/filtered_results.json
+```
+
+`bioscancast/main.py` currently contains pseudocode only and is not yet a runnable orchestrator.
+
+---
+
+# Tests
+
+```text
+bioscancast/tests/
+```
+
+Includes:
+
+* extraction tests
+* retrieval tests
+* pipeline tests
+* schema validation
+* search-stage integration tests
+
+Run all tests:
+
+```bash
+pytest
+```
+
+Run selected tests:
+
+```bash
+pytest bioscancast/tests/test_extraction_pipeline.py
+pytest bioscancast/tests/test_insight_pipeline.py
+```
+
+Live fetch tests are marked:
+
+```python
+@pytest.mark.live
+```
+
+and skipped by default.
+
+Run with:
+
+```bash
+pytest --live
+```
+
+---
+
+# Dependencies
+
+Important dependencies:
+
+| Dependency   | Usage                               |
+| ------------ | ----------------------------------- |
+| `curl_cffi`  | browser-fingerprinted HTTP fetching |
+| `rank_bm25`  | lexical retrieval                   |
+| `PyMuPDF`    | primary PDF parsing                 |
+| `pdfplumber` | fallback PDF table extraction       |
+
+`curl_cffi` is used in:
+
+```text
+bioscancast/extraction/fetcher.py
+```
+
+The impersonation profile is configurable via:
+
+```python
+ExtractionConfig.impersonate
+```
+
+---
+
+# Development Principles
+
+1. Keep pipeline stages modular.
+2. Use schemas between stages.
+3. Prefer structured interfaces over raw dictionaries.
+4. Keep experimental workflows in scripts or notebooks.
+5. Prioritize reproducibility.
+6. Treat provenance and auditability as first-class concerns.
+
+---
+
+# Known Architectural Gaps
+
+Major missing components:
+
+1. unified end-to-end orchestrator
+2. extraction → insight integration
+3. OCR support
+4. forecasting stage implementation
+5. persistent storage/vector DB layer
+6. unified LLM abstraction
+7. multilingual retrieval
