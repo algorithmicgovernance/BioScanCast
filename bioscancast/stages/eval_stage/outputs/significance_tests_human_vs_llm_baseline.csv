@@ -1,0 +1,8 @@
+source_a,source_b,metric,test,statistic,p_value,n
+human,llm_baseline,brier_score,paired_t_test,-2.972828460689968,0.058934397724842796,4
+human,llm_baseline,brier_score,wilcoxon_signed_rank,0.0,0.125,4
+human,llm_baseline,log_score,paired_t_test,-2.9940131268202297,0.057944772269952566,4
+human,llm_baseline,log_score,wilcoxon_signed_rank,0.0,0.125,4
+human,llm_baseline,rps,paired_t_test,-2.6169617030707726,0.07920835139119317,4
+human,llm_baseline,rps,wilcoxon_signed_rank,0.0,0.125,4
+human,llm_baseline,accuracy,mcnemar_exact,1.3333333333333333,0.25,4

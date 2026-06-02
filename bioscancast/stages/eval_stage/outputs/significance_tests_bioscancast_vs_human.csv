@@ -1,0 +1,8 @@
+source_a,source_b,metric,test,statistic,p_value,n
+bioscancast,human,brier_score,paired_t_test,0.8803545575668019,0.4434880231575905,4
+bioscancast,human,brier_score,wilcoxon_signed_rank,4.0,0.875,4
+bioscancast,human,log_score,paired_t_test,0.24244168423869597,0.8240674327803076,4
+bioscancast,human,log_score,wilcoxon_signed_rank,4.0,0.875,4
+bioscancast,human,rps,paired_t_test,0.7885127238223784,0.4879638838228039,4
+bioscancast,human,rps,wilcoxon_signed_rank,4.0,0.875,4
+bioscancast,human,accuracy,mcnemar_exact,0.0,1.0,4
