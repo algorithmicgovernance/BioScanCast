@@ -20,6 +20,7 @@ After all documents:
 from __future__ import annotations
 
 import logging
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional
@@ -58,6 +59,29 @@ class InsightPipeline:
     ) -> None:
         self._llm = llm_client
         self._config = config or InsightConfig()
+
+    def _safe_extract(self, sc, doc, question, config):
+        """Wrap chunk extraction so a failure in one chunk doesn't kill
+        the document. Returns the (records, response) tuple or None.
+
+        Called both serially and from ThreadPoolExecutor workers — must
+        not mutate ``self`` so concurrent calls stay safe.
+        """
+        try:
+            return extract_facts_from_chunk(
+                sc.chunk,
+                doc,
+                question,
+                self._llm,
+                model=config.cheap_model,
+                max_tokens=config.extraction_max_output_tokens,
+            )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning(
+                "Chunk extraction failed (chunk_id=%s): %s",
+                sc.chunk.chunk_id, exc,
+            )
+            return None
 
     def run(
         self,
@@ -112,15 +136,35 @@ class InsightPipeline:
             # Cap chunks per document
             scored_chunks = scored_chunks[: config.max_chunks_per_document]
 
-            # --- Per-chunk extraction ---
-            for sc in scored_chunks:
-                records, response = extract_facts_from_chunk(
-                    sc.chunk,
-                    doc,
-                    question,
-                    self._llm,
-                    model=config.cheap_model,
-                )
+            # --- Per-chunk extraction (parallel within a doc) ---
+            # Live tests on real biosecurity documents show the per-doc
+            # wall-clock is almost entirely sequential OpenAI request
+            # latency. A ThreadPoolExecutor cuts WHO mpox (~30s) and ECDC
+            # CDTR (~38s) down by roughly chunk_workers× because each
+            # request is independent and the OpenAI sync client is
+            # thread-safe. Errors in one chunk don't kill the doc;
+            # budget accounting happens serially after futures complete
+            # so BudgetTracker doesn't need its own lock.
+            workers = max(1, min(config.chunk_workers, len(scored_chunks)))
+            if workers == 1 or len(scored_chunks) <= 1:
+                chunk_results = [
+                    self._safe_extract(sc, doc, question, config)
+                    for sc in scored_chunks
+                ]
+            else:
+                with ThreadPoolExecutor(max_workers=workers) as ex:
+                    futures = [
+                        ex.submit(
+                            self._safe_extract, sc, doc, question, config,
+                        )
+                        for sc in scored_chunks
+                    ]
+                    chunk_results = [f.result() for f in futures]
+
+            for outcome in chunk_results:
+                if outcome is None:
+                    continue
+                records, response = outcome
                 budget.record(response)
                 all_records.extend(records)
 
@@ -128,12 +172,6 @@ class InsightPipeline:
 
         # --- Cross-document deduplication ---
         all_records = _deduplicate_records(all_records)
-
-        # --- Optional strong model refinement ---
-        if config.use_strong_model_refinement:
-            result.notes.append(
-                "Strong model refinement is enabled but not yet implemented."
-            )
 
         result.records = all_records
         result.budget_summary = budget.summary()
@@ -147,46 +185,175 @@ def _normalize_location(location: Optional[str]) -> str:
     return location.lower().strip()
 
 
-def _record_dedup_key(record: InsightRecord) -> tuple:
-    """Build a deduplication key for an InsightRecord.
+# Ordered from coarsest to finest. Used by the dedup logic to compare
+# two records whose event_date_precision values differ.
+_PRECISION_ORDER = {"year": 0, "month": 1, "day": 2}
 
-    Two records are duplicates if they have the same event_type,
-    metric_name, date, and normalized location.
+
+def _date_bucket(
+    dt: Optional[datetime], precision: Optional[str]
+) -> Optional[tuple]:
+    """Truncate a (datetime, precision) pair to a comparable tuple bucket.
+
+    Returns ``None`` when no date is known.
     """
-    date_str = ""
-    if record.event_date:
-        date_str = record.event_date.strftime("%Y-%m-%d")
+    if dt is None or precision is None:
+        return None
+    if precision == "year":
+        return (dt.year,)
+    if precision == "month":
+        return (dt.year, dt.month)
+    # day (or anything more specific) is collapsed to day
+    return (dt.year, dt.month, dt.day)
+
+
+def _dates_overlap(
+    d1: Optional[datetime],
+    p1: Optional[str],
+    d2: Optional[datetime],
+    p2: Optional[str],
+) -> bool:
+    """Check whether two (datetime, precision) pairs refer to
+    overlapping time buckets.
+
+    Both-None counts as overlap (the "no date known" bucket). One-None
+    does NOT overlap with a known-date bucket — we don't merge dated
+    and undated facts.
+
+    Two known dates overlap when, truncated to whichever precision is
+    coarser, their buckets are equal. So month-precision ``2026-01``
+    overlaps with day-precision ``2026-01-25`` (both → ``(2026, 1)``
+    at month precision) but not with ``2026-02-25``.
+    """
+    if d1 is None and d2 is None:
+        return True
+    if d1 is None or d2 is None:
+        return False
+    if p1 is None or p2 is None:
+        return False
+    coarser = p1 if _PRECISION_ORDER[p1] <= _PRECISION_ORDER[p2] else p2
+    return _date_bucket(d1, coarser) == _date_bucket(d2, coarser)
+
+
+def _values_compatible(
+    v1: Optional[float], v2: Optional[float], *, rel_tol: float = 0.01
+) -> bool:
+    """Check whether two metric_values are close enough to be the same fact.
+
+    Both-None counts as compatible (the "no value" bucket). One-None is
+    compatible with a known value (one source happened to omit the
+    count). Two known values are compatible when their relative
+    difference is within ``rel_tol`` (default 1%) — this accommodates
+    rounding (e.g. "6500" vs "6543") without merging genuinely
+    different counts (e.g. African Region 9782 vs DRC 6543 — which
+    happens when the model misattributes a regional quote to a
+    specific country).
+    """
+    if v1 is None or v2 is None:
+        return True
+    if v1 == v2:
+        return True
+    # Relative difference; guard against division by zero
+    denom = max(abs(v1), abs(v2))
+    if denom == 0:
+        return v1 == v2
+    return abs(v1 - v2) / denom <= rel_tol
+
+
+def _record_dedup_key(record: InsightRecord) -> tuple:
+    """First-stage dedup key: groups records that *might* be duplicates.
+
+    Date is intentionally omitted from the first-stage key because two
+    records with different date precisions (e.g. ``2026-01`` vs
+    ``2026-01-25``) need to be considered together. The second stage
+    walks each group and uses ``_dates_overlap`` to decide whether to
+    merge.
+    """
     return (
         record.event_type,
         record.metric_name or "",
-        date_str,
         _normalize_location(record.location),
     )
 
 
-def _deduplicate_records(records: list[InsightRecord]) -> list[InsightRecord]:
-    """Deduplicate InsightRecords, merging provenance lists.
+def _merge_record_into(
+    target: InsightRecord, source: InsightRecord
+) -> None:
+    """Merge ``source`` into ``target`` in place.
 
-    Keeps the record with the higher confidence score and merges
-    source references from duplicates.
+    Adds source's unique chunk references, raises confidence to the max
+    of the two, and adopts the finer of the two date precisions (with
+    its corresponding date). The coarser-precision source loses its
+    date but its provenance is preserved.
     """
-    seen: dict[tuple, InsightRecord] = {}
+    existing_chunk_ids = {
+        (s.document_id, s.chunk_id) for s in target.sources
+    }
+    for src in source.sources:
+        if (src.document_id, src.chunk_id) not in existing_chunk_ids:
+            target.sources.append(src)
+    if source.confidence > target.confidence:
+        target.confidence = source.confidence
+    # Adopt the finer precision date if source has one
+    source_rank = (
+        _PRECISION_ORDER.get(source.event_date_precision, -1)
+        if source.event_date_precision else -1
+    )
+    target_rank = (
+        _PRECISION_ORDER.get(target.event_date_precision, -1)
+        if target.event_date_precision else -1
+    )
+    if source.event_date and source_rank > target_rank:
+        target.event_date = source.event_date
+        target.event_date_precision = source.event_date_precision
 
+
+def _deduplicate_records(records: list[InsightRecord]) -> list[InsightRecord]:
+    """Two-stage deduplication merging records with overlapping date buckets.
+
+    Stage 1: group by ``(event_type, metric_name, normalized_location)``.
+    Stage 2: within each group, walk records in order and merge each
+    into the first surviving entry whose date bucket overlaps. This
+    handles the common case where multiple sources report the same
+    event at different date precisions (e.g. WHO sitrep says
+    "January 2026" while a country report says "as of 25 January
+    2026") — both refer to the same underlying fact.
+
+    Records with completely distinct dates within the same group stay
+    separate (no false merging of "Jan 5" with "Jan 6").
+    """
+    from collections import defaultdict
+
+    groups: dict[tuple, list[InsightRecord]] = defaultdict(list)
     for record in records:
-        key = _record_dedup_key(record)
-        if key in seen:
-            existing = seen[key]
-            # Merge provenance
-            existing_chunk_ids = {
-                (s.document_id, s.chunk_id) for s in existing.sources
-            }
-            for src in record.sources:
-                if (src.document_id, src.chunk_id) not in existing_chunk_ids:
-                    existing.sources.append(src)
-            # Keep higher confidence
-            if record.confidence > existing.confidence:
-                existing.confidence = record.confidence
-        else:
-            seen[key] = record
+        groups[_record_dedup_key(record)].append(record)
 
-    return list(seen.values())
+    out: list[InsightRecord] = []
+    for group in groups.values():
+        merged: list[InsightRecord] = []
+        for record in group:
+            target = None
+            for existing in merged:
+                if not _dates_overlap(
+                    record.event_date, record.event_date_precision,
+                    existing.event_date, existing.event_date_precision,
+                ):
+                    continue
+                if not _values_compatible(
+                    record.metric_value, existing.metric_value,
+                ):
+                    # Same dedup key + overlapping dates but different
+                    # numeric values — almost always a model attribution
+                    # error (e.g. regional total mistakenly tagged with
+                    # a country location). Keep both records so the
+                    # conflict is visible downstream rather than
+                    # silently dropped.
+                    continue
+                target = existing
+                break
+            if target is not None:
+                _merge_record_into(target, record)
+            else:
+                merged.append(record)
+        out.extend(merged)
+    return out

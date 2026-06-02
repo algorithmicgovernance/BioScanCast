@@ -2,10 +2,12 @@ from __future__ import annotations
 
 from typing import List, Optional
 
+from bioscancast.llm.base import LLMClient
+
 from .config import FILTER_CONFIG
 from .deduplication import deduplicate_filtered_documents
 from .heuristics import heuristic_filter
-from .llm_filter import LLMClient, llm_filter_candidates
+from .llm_filter import llm_filter_candidates
 from .models import FilterDecision, FilteredDocument, ForecastQuestion, SearchResult
 from .postprocess import assign_extraction_hints, build_filtered_documents, cap_per_domain_and_type
 from .reranker import rerank_borderline_candidates, split_for_llm_review

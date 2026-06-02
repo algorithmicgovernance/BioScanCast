@@ -10,12 +10,16 @@ BASE_DIR = Path(__file__).resolve().parent
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run the BioScanCast evaluation pipeline.")
+    """
+    Parse command-line arguments for the evaluation entry point.
+    """
+    parser = argparse.ArgumentParser(
+        description="Run the BioScanCast evaluation pipeline."
+    )
     parser.add_argument(
         "--forecasts",
-        nargs="+",
-        default=[str(BASE_DIR / "bioscancast_forecasts.csv")],
-        help="One or more forecast CSV files. Pass multiple files to compare sources.",
+        default=str(BASE_DIR / "bioscancast_forecasts.csv"),
+        help="Path to the forecasts CSV file.",
     )
     parser.add_argument(
         "--questions",
@@ -26,8 +30,14 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    """
+    Entry point for running the evaluation pipeline from the command line.
+    """
     args = parse_args()
-    run_evaluation(forecasts_path=args.forecasts, questions_path=args.questions)
+    run_evaluation(
+        forecasts_path=args.forecasts,
+        questions_path=args.questions,
+    )
 
 
 if __name__ == "__main__":

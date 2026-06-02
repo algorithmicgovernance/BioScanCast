@@ -7,10 +7,13 @@ package and an ``OPENAI_API_KEY`` environment variable (or explicit key).
 from __future__ import annotations
 
 import json
+import logging
 import os
 from typing import Optional
 
 from .base import LLMResponse
+
+logger = logging.getLogger(__name__)
 
 
 class OpenAILLMClient:
@@ -63,8 +66,25 @@ class OpenAILLMClient:
             seed=self._seed,
         )
         raw_text = response.choices[0].message.content or "{}"
-        content = json.loads(raw_text)
         usage = response.usage
+        try:
+            content = json.loads(raw_text)
+        except json.JSONDecodeError as exc:
+            # Malformed JSON from the model — typically caused by hitting
+            # max_tokens mid-string. Don't raise: the HTTP call succeeded
+            # and we already paid for the tokens, so preserve the budget
+            # numbers and let the caller handle an empty content dict.
+            logger.warning(
+                "generate_json: dropping unparseable model response "
+                "(model=%s, output_tokens=%s, finish_reason=%s, err=%s). "
+                "Raw text head: %r",
+                response.model,
+                usage.completion_tokens if usage else None,
+                response.choices[0].finish_reason,
+                exc,
+                raw_text[:200],
+            )
+            content = {}
         return LLMResponse(
             content=content,
             input_tokens=usage.prompt_tokens if usage else 0,

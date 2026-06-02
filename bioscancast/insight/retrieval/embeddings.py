@@ -20,6 +20,23 @@ if TYPE_CHECKING:
     from bioscancast.llm.base import LLMClient
 
 
+def _embeddable_text(chunk: DocumentChunk) -> str:
+    """Build a non-empty text representation of a chunk for embedding.
+
+    Table chunks have empty ``.text`` because their content lives in
+    ``.table_data``; rendering the rows inline lets the embedding model
+    see the actual values. Falls back to the heading or a placeholder
+    if both are empty, since the embeddings API rejects empty strings.
+    """
+    text = chunk.text or ""
+    if not text.strip() and chunk.table_data:
+        rows = [" | ".join(str(cell) for cell in row) for row in chunk.table_data]
+        text = "\n".join(rows)
+    if chunk.heading:
+        text = f"{chunk.heading} {text}".strip()
+    return text or (chunk.heading or "[empty chunk]")
+
+
 def embed_chunks(
     chunks: list[DocumentChunk],
     llm_client: LLMClient,
@@ -47,9 +64,7 @@ def embed_chunks(
 
     for i, chunk in enumerate(chunks):
         if chunk.chunk_id not in cache:
-            text = chunk.text
-            if chunk.heading:
-                text = chunk.heading + " " + text
+            text = _embeddable_text(chunk)
             texts_to_embed.append(text)
             indices_to_embed.append(i)
 
