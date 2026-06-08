@@ -100,7 +100,7 @@ def load_forecasts(path: PathLike) -> pd.DataFrame:
         )
 
     if "forecast_version" in df.columns:
-        df["forecast_version"] = df["forecast_version"].str.strip()
+        df["forecast_version"] = df["forecast_version"].astype(str).str.strip()
 
     if "question_id" in df.columns:
         df["question_id"] = df["question_id"].str.strip()
