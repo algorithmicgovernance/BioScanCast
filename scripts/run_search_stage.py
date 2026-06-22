@@ -24,6 +24,8 @@ import sys
 from dataclasses import asdict
 from datetime import datetime, timezone
 
+from bioscancast.datasets.biosecurity_sources import DASHBOARD_LOOKUP
+
 # Add project root to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -51,7 +53,15 @@ def _serialize(obj):
 def main():
     parser = argparse.ArgumentParser(description="Run BioScanCast Search Stage")
     parser.add_argument("question", help="The forecast question text")
-    parser.add_argument("--pathogen", default=None, help="Pathogen name (e.g. h5n1, mpox)")
+    parser.add_argument(
+        "--pathogen",
+        default=None,
+        choices=sorted(DASHBOARD_LOOKUP),
+        help=(
+            "Pathogen name; allowed values are: "
+            + ", ".join(sorted(DASHBOARD_LOOKUP))
+        ),
+    )
     parser.add_argument("--region", default=None, help="Geographic region")
     parser.add_argument("--output", "-o", default=None, help="Output JSON file path")
     parser.add_argument("--no-cache", action="store_true", help="Disable search cache")
