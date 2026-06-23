@@ -59,7 +59,9 @@ def test_pipeline_single_document():
         RISK_ASSESSMENT_RESPONSE, # chunk p4 (no facts)
     ])
 
-    config = InsightConfig(retrieval_top_k=5, max_chunks_per_document=5)
+    config = InsightConfig(
+        retrieval_top_k=5, max_chunks_per_document=5, low_survival_top_k=5,
+    )
     pipeline = InsightPipeline(llm_client=client, config=config)
 
     result = pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])
@@ -91,7 +93,9 @@ def test_pipeline_skips_failed_documents():
         EMPTY_RESPONSE,  # For the one chunk that gets extracted
     ])
 
-    config = InsightConfig(retrieval_top_k=1, max_chunks_per_document=1)
+    config = InsightConfig(
+        retrieval_top_k=1, max_chunks_per_document=1, low_survival_top_k=1,
+    )
     pipeline = InsightPipeline(llm_client=client, config=config)
 
     # Include a failed document alongside a successful one
@@ -114,7 +118,9 @@ def test_pipeline_budget_tracking():
         SUDAN_TABLE_RESPONSE,
     ])
 
-    config = InsightConfig(retrieval_top_k=2, max_chunks_per_document=2)
+    config = InsightConfig(
+        retrieval_top_k=2, max_chunks_per_document=2, low_survival_top_k=2,
+    )
     pipeline = InsightPipeline(llm_client=client, config=config)
 
     result = pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])
@@ -137,6 +143,7 @@ def test_pipeline_stops_on_budget_exceeded():
     config = InsightConfig(
         retrieval_top_k=2,
         max_chunks_per_document=2,
+        low_survival_top_k=2,
         max_input_tokens_per_run=1,  # Absurdly low -> triggers immediately
     )
     pipeline = InsightPipeline(llm_client=client, config=config)
@@ -170,7 +177,9 @@ def test_pipeline_deduplication():
         DUPLICATE_SUDAN_CASE_COUNT,  # doc 2 -> 1 fact (duplicate case)
     ])
 
-    config = InsightConfig(retrieval_top_k=1, max_chunks_per_document=1)
+    config = InsightConfig(
+        retrieval_top_k=1, max_chunks_per_document=1, low_survival_top_k=1,
+    )
     pipeline = InsightPipeline(llm_client=client, config=config)
 
     result = pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN, doc2])
@@ -580,6 +589,7 @@ def test_pipeline_parallel_chunk_extraction_produces_all_records():
     config = InsightConfig(
         retrieval_top_k=4,
         max_chunks_per_document=4,
+        low_survival_top_k=4,
         chunk_workers=4,
     )
     pipeline = InsightPipeline(llm_client=fake, config=config)
@@ -603,10 +613,12 @@ def test_pipeline_sequential_and_parallel_produce_same_record_count():
     of records when the fake LLM is content-keyed (so result depends on
     chunk content, not worker order)."""
     config_seq = InsightConfig(
-        retrieval_top_k=4, max_chunks_per_document=4, chunk_workers=1,
+        retrieval_top_k=4, max_chunks_per_document=4, low_survival_top_k=4,
+        chunk_workers=1,
     )
     config_par = InsightConfig(
-        retrieval_top_k=4, max_chunks_per_document=4, chunk_workers=4,
+        retrieval_top_k=4, max_chunks_per_document=4, low_survival_top_k=4,
+        chunk_workers=4,
     )
 
     seq_pipeline = InsightPipeline(
@@ -653,7 +665,8 @@ def test_pipeline_parallel_isolates_chunk_failures():
 
     fake = _IntermittentFake()
     config = InsightConfig(
-        retrieval_top_k=4, max_chunks_per_document=4, chunk_workers=4,
+        retrieval_top_k=4, max_chunks_per_document=4, low_survival_top_k=4,
+        chunk_workers=4,
     )
     pipeline = InsightPipeline(llm_client=fake, config=config)
     # Must not raise — failed chunk is logged and skipped
@@ -684,7 +697,9 @@ def test_pipeline_multi_document():
         H5N1_TABLE_RESPONSE,
     ])
 
-    config = InsightConfig(retrieval_top_k=2, max_chunks_per_document=2)
+    config = InsightConfig(
+        retrieval_top_k=2, max_chunks_per_document=2, low_survival_top_k=2,
+    )
     pipeline = InsightPipeline(llm_client=client, config=config)
 
     result = pipeline.run(QUESTION_H5N1, [DOC_WHO_SUDAN, DOC_CDC_H5N1])
@@ -709,7 +724,9 @@ def test_pipeline_output_records_valid():
         SUDAN_TABLE_RESPONSE,
     ])
 
-    config = InsightConfig(retrieval_top_k=2, max_chunks_per_document=2)
+    config = InsightConfig(
+        retrieval_top_k=2, max_chunks_per_document=2, low_survival_top_k=2,
+    )
     pipeline = InsightPipeline(llm_client=client, config=config)
 
     result = pipeline.run(QUESTION_SUDAN, [DOC_WHO_SUDAN])

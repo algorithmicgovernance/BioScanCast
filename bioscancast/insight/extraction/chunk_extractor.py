@@ -221,6 +221,24 @@ def _quote_matches(quote: str, chunk_text: str) -> Optional[str]:
     if unwrap_quote in unwrap_chunk:
         return unwrap_quote
 
+    # Layer 4: case-insensitive substring. Catches the model lowercasing
+    # the leading letter of a sentence it quotes from mid-paragraph -
+    # otherwise verbatim drift that's very common (q12 live runs:
+    # "there are now 750 suspected cases..." vs the source's "There are
+    # now 750..."). Returns the chunk's own casing so the stored quote
+    # reflects the source. Crucially this does NOT recover content-
+    # insertion hallucinations: a fabricated continuation still fails the
+    # substring test regardless of case (verified against the q12
+    # "...have been reported in Ituri, North Kivu" fabrication, whose real
+    # source text continues "...and 906 suspected cases").
+    ci_chunk = norm_chunk.lower()
+    for candidate in (norm_quote, stripped):
+        if not candidate:
+            continue
+        idx = ci_chunk.find(candidate.lower())
+        if idx >= 0:
+            return norm_chunk[idx: idx + len(candidate)]
+
     return None
 
 
