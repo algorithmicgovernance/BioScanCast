@@ -160,9 +160,14 @@ class TestSearchStagePipeline:
 
     def test_scoring_formula(self):
         """Verify the search_stage_score formula for a known result."""
+        from bioscancast.stages.search_stage.pipeline import _compute_relevance
+
+        question = _make_question()
         results = self._run_pipeline()
         for r in results:
-            expected = 0.5 * r.domain_score + 0.3 * r.freshness_score + 0.2 * (1.0 / max(r.rank, 1))
+            rel = _compute_relevance(r, question)
+            rank_score = 1.0 / max(r.rank, 1)
+            expected = 0.45 * rel + 0.30 * r.domain_score + 0.10 * r.freshness_score + 0.15 * rank_score
             expected = max(0.0, min(1.0, expected))
             assert abs(r.search_stage_score - expected) < 1e-9, (
                 f"Score mismatch for {r.url}: {r.search_stage_score} != {expected}"

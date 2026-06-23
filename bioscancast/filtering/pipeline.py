@@ -37,11 +37,24 @@ class FilteringPipeline:
         llm_decisions: list[FilterDecision] = []
         if llm_needed:
             if self.llm_client is None:
-                # Fail closed: reject ambiguous cases if no LLM client is configured.
+                # No LLM client. Default is fail-closed (reject the ambiguous
+                # band). When the soft-fallback flag is enabled, keep candidates
+                # that are official-domain or sufficiently relevant — see
+                # FILTER_CONFIG["no_llm_soft_fallback"] and issue #13.
+                soft = FILTER_CONFIG.get("no_llm_soft_fallback", False)
+                rel_threshold = FILTER_CONFIG.get(
+                    "no_llm_fallback_relevance_threshold", 0.5
+                )
                 for d in llm_needed:
-                    d.keep = False
                     d.stage = "llm_skipped"
-                    d.reason_codes.append("no_llm_client_configured")
+                    result = result_map.get(d.result_id)
+                    is_official = bool(result and result.is_official_domain)
+                    if soft and (is_official or d.relevance_score >= rel_threshold):
+                        d.keep = True
+                        d.reason_codes.append("no_llm_soft_fallback_kept")
+                    else:
+                        d.keep = False
+                        d.reason_codes.append("no_llm_client_configured")
                 llm_decisions = llm_needed
             else:
                 llm_decisions = llm_filter_candidates(

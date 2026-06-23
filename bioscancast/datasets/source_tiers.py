@@ -59,6 +59,36 @@ TIER_3_DOMAINS: set[str] = {
     "wikipedia.org",
     "sciencedirect.com",
     "pubmed.ncbi.nlm.nih.gov",
+    # National/international news with established newsrooms. Added after the
+    # #13 tier-coverage audit (data/investigations/findings-issues-3-4-13.md):
+    # live pools showed reputable outbreak reporting from these outlets
+    # resolving to "unknown" (domain_score 0.2), which sank them below the
+    # filter's credibility floor. Second-level-domain matching in
+    # resolve_tier() covers subdomains (edition.cnn.com, ca.news.yahoo.com,
+    # africa.businessinsider.com, etc.).
+    "cnn.com",
+    "nbcnews.com",
+    "cbsnews.com",
+    "abcnews.go.com",
+    "abcnews.com",
+    "npr.org",
+    "pbs.org",
+    "usatoday.com",
+    "latimes.com",
+    "politico.com",
+    "politico.eu",
+    "axios.com",
+    "thehill.com",
+    "forbes.com",
+    "bloomberg.com",
+    "ft.com",
+    "wsj.com",
+    "economist.com",
+    "time.com",
+    "theatlantic.com",
+    "newyorker.com",
+    "arstechnica.com",
+    "businessinsider.com",
 }
 
 TIER_4_DOMAINS: set[str] = {

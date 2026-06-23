@@ -13,7 +13,9 @@ from email.utils import parsedate_to_datetime
 from typing import List, Optional
 
 from bioscancast.filtering.config import FILTER_CONFIG
+from bioscancast.filtering.heuristics import build_query_terms
 from bioscancast.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.filtering.utils import keyword_overlap_score
 from bioscancast.llm.base import LLMClient
 from bioscancast.stages.search_stage.backends.base import RawSearchResult, SearchBackend
 from bioscancast.stages.search_stage.cache import SearchCache
@@ -83,10 +85,39 @@ def _compute_freshness(
     return max(0.0, min(1.0, 1.0 - (days_old / 365.0)))
 
 
-def _compute_search_stage_score(domain_score: float, freshness_score: float, rank: int) -> float:
-    """search_stage_score = 0.5 * domain_score + 0.3 * freshness_score + 0.2 * (1/rank)"""
+# search_stage_score weights (sum to 1.0). Relevance (keyword overlap of
+# title/snippet/domain against the question terms) is the dominant term:
+# domain/freshness/rank alone rank off-topic high-authority content too highly,
+# because freshness is ~uniform in live mode and domain score is too coarse to
+# separate on-topic from off-topic within a tier. Freshness is kept low for that
+# reason. See data/investigations/findings-issues-3-4-13.md (#4).
+_SCORE_W_RELEVANCE = 0.45
+_SCORE_W_DOMAIN = 0.30
+_SCORE_W_FRESHNESS = 0.10
+_SCORE_W_RANK = 0.15
+
+
+def _compute_relevance(result: SearchResult, question: ForecastQuestion) -> float:
+    """Keyword overlap of the result against the question terms.
+
+    Mirrors ``bioscancast.filtering.heuristics.compute_heuristic_relevance`` so
+    the search stage and the filter stage use the same relevance signal.
+    """
+    text = f"{result.title} {result.snippet} {result.domain}"
+    return keyword_overlap_score(text, build_query_terms(question))
+
+
+def _compute_search_stage_score(
+    relevance: float, domain_score: float, freshness_score: float, rank: int
+) -> float:
+    """search_stage_score = 0.45*relevance + 0.30*domain + 0.10*freshness + 0.15*(1/rank)"""
     rank_score = 1.0 / max(rank, 1)
-    raw = 0.5 * domain_score + 0.3 * freshness_score + 0.2 * rank_score
+    raw = (
+        _SCORE_W_RELEVANCE * relevance
+        + _SCORE_W_DOMAIN * domain_score
+        + _SCORE_W_FRESHNESS * freshness_score
+        + _SCORE_W_RANK * rank_score
+    )
     return max(0.0, min(1.0, raw))
 
 
@@ -260,7 +291,10 @@ class SearchStagePipeline:
                 r.published_date, reference_date=as_of
             )
             r.search_stage_score = _compute_search_stage_score(
-                r.domain_score, r.freshness_score, r.rank
+                _compute_relevance(r, question),
+                r.domain_score,
+                r.freshness_score,
+                r.rank,
             )
 
         # 8. Sort and cap

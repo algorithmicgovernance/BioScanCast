@@ -49,6 +49,17 @@ def cap_per_domain_and_type(
     max_docs_per_domain: int,
     max_docs_per_type: int,
 ) -> List[FilteredDocument]:
+    """Limit how many docs from a single domain or file type survive.
+
+    Dashboard-bypassed docs (selection_reasons contains
+    ``"dashboard_lookup_bypass"``) are always kept and do not consume a
+    slot against either cap. Curated dashboard injections are a separate
+    channel from organic search results; without this carve-out, a
+    dashboard sitting at synthetic priority 1.0 displaces a genuine
+    organic candidate on the same domain - which is exactly what
+    happened on q7 (WHO sitreps dashboard squeezed out the WHO research
+    event page that the baseline extracted records from).
+    """
     kept: list[FilteredDocument] = []
     domain_counts = defaultdict(int)
     type_counts = defaultdict(int)
@@ -56,14 +67,20 @@ def cap_per_domain_and_type(
     for doc in docs:
         doc_type = doc.file_type or "unknown"
 
-        if domain_counts[doc.domain] >= max_docs_per_domain:
-            continue
-        if type_counts[doc_type] >= max_docs_per_type:
-            continue
+        is_dashboard_bypass = "dashboard_lookup_bypass" in (
+            doc.selection_reasons or []
+        )
+
+        if not is_dashboard_bypass:
+            if domain_counts[doc.domain] >= max_docs_per_domain:
+                continue
+            if type_counts[doc_type] >= max_docs_per_type:
+                continue
 
         kept.append(doc)
-        domain_counts[doc.domain] += 1
-        type_counts[doc_type] += 1
+        if not is_dashboard_bypass:
+            domain_counts[doc.domain] += 1
+            type_counts[doc_type] += 1
 
     return kept
 

@@ -46,6 +46,23 @@ class TestDashboardLookup:
         results = lookup_dashboards(q)
         assert len(results) > 0
 
+    def test_multiword_pathogen_routes_via_substring(self):
+        # CSV-natural "Marburg Virus Disease" -> pathogen "marburg virus disease"
+        # must still route to the "marburg" dashboard key.
+        canonical = lookup_dashboards(_make_question(pathogen="marburg"))
+        multiword = lookup_dashboards(_make_question(pathogen="marburg virus disease"))
+        assert len(multiword) > 0
+        assert [r.url for r in multiword] == [r.url for r in canonical]
+
+    def test_alias_routes_to_canonical(self):
+        # "monkeypox" -> "mpox"; "bird flu" -> "h5n1".
+        assert len(lookup_dashboards(_make_question(pathogen="monkeypox"))) > 0
+        assert (
+            [r.url for r in lookup_dashboards(_make_question(pathogen="monkeypox"))]
+            == [r.url for r in lookup_dashboards(_make_question(pathogen="mpox"))]
+        )
+        assert len(lookup_dashboards(_make_question(pathogen="bird flu"))) > 0
+
     def test_results_have_required_fields(self):
         q = _make_question(pathogen="ebola")
         results = lookup_dashboards(q)
