@@ -613,20 +613,50 @@ Current limitation:
 
 ---
 
-# Closest Current End-to-End Flow
+# End-to-End Orchestrator
+
+`bioscancast/main.py` runs all four stages — search → filter → extract →
+insight — against a single forecast question. Each stage's output plus a
+running `manifest.json` are persisted under
+`data/runs/{question_id}/{run_id}/`, so a crashed run still leaves partial
+artifacts for debugging.
+
+Run by question ID (looked up in the question CSV):
 
 ```bash
-python scripts/run_search_stage.py \
-  "Will mpox cases increase in Uganda in 2026?" \
-  --pathogen mpox \
-  --region Uganda \
-  --output data/search_results.json && \
-python scripts/run_filtering.py && \
-python scripts/run_extraction.py \
-  --input data/filtered_results.json
+python -m bioscancast.main q7
 ```
 
-`bioscancast/main.py` currently contains pseudocode only and is not yet a runnable orchestrator.
+Or via the `scripts/run_*` wrapper, matching the per-stage runner convention:
+
+```bash
+python scripts/run_pipeline.py q7
+```
+
+Historical-replay mode pins the information cutoff so no post-cutoff
+evidence leaks in:
+
+```bash
+python scripts/run_pipeline.py q7 --as-of-date 2025-02-28 -v
+```
+
+Common flags (`--help` for the full list):
+
+| Flag                                        | Purpose                                                                              |
+| ------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `--as-of-date Y-M-D`                        | Historical-replay cutoff. Omit for live mode.                                        |
+| `--csv PATH`                                | Question CSV. Default: `bioscancast/stages/eval_stage/bioscancast_questions.csv`     |
+| `--out-root PATH`                           | Run-artifact root directory. Default: `data/runs`                                    |
+| `--run-id NAME`                             | Override the UTC-timestamp run directory name.                                       |
+| `--target-date Y-M-D`                       | Override the CSV-derived target date.                                                |
+| `--region` / `--pathogen` / `--event-type` | Override the corresponding question fields.                                          |
+| `--no-cache`                                | Disable the search-stage cache.                                                      |
+| `--max-input-tokens N`                      | Override `InsightConfig.max_input_tokens_per_run`.                                    |
+| `-v`, `--verbose`                           | Set log level to INFO.                                                                |
+
+Each run prints per-stage timings and an estimated token cost, and writes
+`question.json`, `search.json`, `filtered.json`, `documents.json`,
+`insight.json`, and `manifest.json` to the run directory.
 
 ---
 
@@ -713,10 +743,8 @@ ExtractionConfig.impersonate
 
 Major missing components:
 
-1. unified end-to-end orchestrator
-2. extraction → insight integration
-3. OCR support
-4. forecasting stage implementation
-5. persistent storage/vector DB layer
-6. unified LLM abstraction
-7. multilingual retrieval
+1. OCR support
+2. forecasting stage implementation
+3. persistent storage/vector DB layer
+4. unified LLM abstraction
+5. multilingual retrieval
