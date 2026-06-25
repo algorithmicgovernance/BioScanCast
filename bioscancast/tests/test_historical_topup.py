@@ -5,10 +5,10 @@ SearchStagePipeline.
 from datetime import datetime, timezone
 from typing import List
 
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.base import LLMResponse
-from bioscancast.stages.search_stage.backends.base import RawSearchResult
-from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
+from bioscancast.stages.searching.backends.base import RawSearchResult
+from bioscancast.stages.searching.pipeline import SearchStagePipeline
 
 
 def _resp(content: dict) -> LLMResponse:

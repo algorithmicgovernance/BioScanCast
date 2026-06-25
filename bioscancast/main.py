@@ -31,13 +31,6 @@ try:
 except ImportError:
     pass
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.pipeline import ExtractionPipeline
-from bioscancast.filtering.config import FILTER_CONFIG
-from bioscancast.filtering.models import ForecastQuestion
-from bioscancast.filtering.pipeline import FilteringPipeline
-from bioscancast.insight.config import InsightConfig
-from bioscancast.insight.pipeline import InsightPipeline, InsightRunResult
 from bioscancast.llm.base import LLMResponse
 from bioscancast.llm.openai_client import OpenAILLMClient
 from bioscancast.llm.pricing import (
@@ -45,10 +38,18 @@ from bioscancast.llm.pricing import (
     estimate_cost,
 )
 from bioscancast.orchestration import persistence
-from bioscancast.stages.eval_stage.loaders import load_question_by_id
-from bioscancast.stages.search_stage.backends.tavily_backend import TavilyBackend
-from bioscancast.stages.search_stage.cache import SearchCache
-from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
+
+from bioscancast.stages.evaluation.loaders import load_question_by_id
+from bioscancast.stages.searching.backends.tavily_backend import TavilyBackend
+from bioscancast.stages.searching.cache import SearchCache
+from bioscancast.stages.searching.pipeline import SearchStagePipeline
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.pipeline import ExtractionPipeline
+from bioscancast.stages.filtering.config import FILTER_CONFIG
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.pipeline import FilteringPipeline
+from bioscancast.stages.insight.config import InsightConfig
+from bioscancast.stages.insight.pipeline import InsightPipeline, InsightRunResult
 
 
 DEFAULT_CSV = "bioscancast/stages/eval_stage/bioscancast_questions.csv"
@@ -114,6 +115,8 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
     )
     parser.add_argument(
         "question_id",
+        nargs="?",
+        default="demo",
         help="ID of the question in the CSV (e.g. q7).",
     )
     parser.add_argument(
@@ -140,6 +143,11 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         "--target-date",
         default=None,
         help="Override CSV-derived target_date (YYYY-MM-DD).",
+    )
+    parser.add_argument(
+        "--question",
+        default=None,
+        help="Override question text. If omitted, load from CSV by question_id.",
     )
     parser.add_argument("--region", default=None, help="Override region field.")
     parser.add_argument("--pathogen", default=None, help="Override pathogen field.")
@@ -267,21 +275,28 @@ def _estimate_total_cost(per_model: dict[str, dict[str, int]]) -> tuple[float, l
 
 def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     csv_path = Path(args.csv)
-    if not csv_path.exists():
-        raise FileNotFoundError(f"Question CSV not found: {csv_path}")
 
-    for var in ("OPENAI_API_KEY", "TAVILY_API_KEY"):
-        if not os.environ.get(var):
-            raise RuntimeError(
-                f"Missing required environment variable {var}. "
-                f"Set it in your shell or in a .env file."
-            )
+    if args.question is None:
+        if not csv_path.exists():
+            raise FileNotFoundError(f"Question CSV not found: {csv_path}")
 
-    question = load_question_by_id(
-        csv_path,
-        args.question_id,
-        as_of_date=_parse_date(args.as_of_date),
-    )
+        question = load_question_by_id(
+            csv_path,
+            args.question_id,
+            as_of_date=_parse_date(args.as_of_date),
+        )
+    else:
+        question = ForecastQuestion(
+            id=args.question_id,
+            text=args.question,
+            created_at=datetime.now(timezone.utc),
+            target_date=_parse_date(args.target_date),
+            region=args.region,
+            pathogen=args.pathogen,
+            event_type=args.event_type,
+            resolution_criteria=None,
+            as_of_date=_parse_date(args.as_of_date),
+        )
     question = _apply_overrides(question, args)
 
     run_id = args.run_id or datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")

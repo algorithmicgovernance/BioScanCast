@@ -7,9 +7,9 @@ kwargs and return ``LLMResponse`` objects.
 
 from datetime import datetime, timezone
 
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.base import LLMResponse
-from bioscancast.stages.search_stage.query_decomposition import (
+from bioscancast.stages.searching.query_decomposition import (
     CLASSIFY_SCHEMA,
     DECOMPOSE_SCHEMA,
     VALID_AXES,

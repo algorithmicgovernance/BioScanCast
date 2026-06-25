@@ -8,9 +8,9 @@ from datetime import datetime, timezone
 from typing import List
 from unittest.mock import patch
 
-from bioscancast.filtering.models import ForecastQuestion, SearchResult
-from bioscancast.stages.search_stage.backends.base import RawSearchResult
-from bioscancast.stages.search_stage.pipeline import (
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.stages.searching.backends.base import RawSearchResult
+from bioscancast.stages.searching.pipeline import (
     SearchStagePipeline,
     _parse_published_date,
     _should_use_wayback_for_recovery,
@@ -135,7 +135,7 @@ def test_undated_dropped_when_recovery_fails():
         backend_name="fake",
     )
     with patch(
-        "bioscancast.stages.search_stage.pipeline.recover_published_date"
+        "bioscancast.stages.searching.pipeline.recover_published_date"
     ) as mock_rec:
         mock_rec.return_value = (None, None)
         results = pipeline.run(_make_question(cutoff))
@@ -340,7 +340,7 @@ def test_aggregator_undated_recovery_skips_wayback():
         backend_name="fake",
     )
     with patch(
-        "bioscancast.stages.search_stage.pipeline.recover_published_date",
+        "bioscancast.stages.searching.pipeline.recover_published_date",
         return_value=(None, None),
     ) as mock_rec:
         pipeline.run(_make_question(cutoff))
@@ -375,7 +375,7 @@ def test_official_undated_recovery_still_tries_wayback():
         backend_name="fake",
     )
     with patch(
-        "bioscancast.stages.search_stage.pipeline.recover_published_date",
+        "bioscancast.stages.searching.pipeline.recover_published_date",
         return_value=(None, None),
     ) as mock_rec:
         pipeline.run(_make_question(cutoff))

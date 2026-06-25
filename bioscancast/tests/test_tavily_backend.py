@@ -13,7 +13,7 @@ from typing import Any
 
 import pytest
 
-from bioscancast.stages.search_stage.backends.tavily_backend import TavilyBackend
+from bioscancast.stages.searching.backends.tavily_backend import TavilyBackend
 
 
 class _FakeTavilyClient:

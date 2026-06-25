@@ -19,20 +19,25 @@ After all documents:
 
 from __future__ import annotations
 
+import os
+import sys
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional
 
+# Add project root to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
 from bioscancast.schemas import Document, InsightRecord
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.base import LLMClient
 
 from .budget import BudgetTracker
 from .config import InsightConfig
 from .retrieval.hybrid import hybrid_retrieve
-from .extraction.chunk_extractor import extract_facts_from_chunk
+from .text_extraction.chunk_extractor import extract_facts_from_chunk
 
 logger = logging.getLogger(__name__)
 

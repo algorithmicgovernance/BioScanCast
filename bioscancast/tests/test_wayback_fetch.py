@@ -11,7 +11,8 @@ from unittest.mock import patch
 
 import pytest
 
-from bioscancast.extraction.fetcher import fetch
+from bioscancast.stages.extraction.fetcher import fetch
+from bioscancast.stages.searching.wayback import closest_snapshot_before
 
 
 class _FakeResponse:
@@ -103,7 +104,6 @@ class TestWaybackRewrite:
 @pytest.mark.live
 def test_live_wayback_lookup():
     """Smoke-test the real Wayback CDX endpoint. Skipped by default."""
-    from bioscancast.stages.search_stage.wayback import closest_snapshot_before
 
     result = closest_snapshot_before(
         "https://www.cdc.gov/",

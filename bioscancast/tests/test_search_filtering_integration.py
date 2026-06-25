@@ -7,11 +7,11 @@ FilteringPipeline input — no manually constructed SearchResult objects.
 from collections import Counter
 from typing import List
 
-from bioscancast.filtering.config import FILTER_CONFIG
-from bioscancast.filtering.models import FilteredDocument
-from bioscancast.filtering.pipeline import FilteringPipeline
-from bioscancast.stages.search_stage.backends.base import RawSearchResult
-from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
+from bioscancast.stages.filtering.config import FILTER_CONFIG
+from bioscancast.stages.filtering.models import FilteredDocument, ForecastQuestion
+from bioscancast.stages.filtering.pipeline import FilteringPipeline
+from bioscancast.stages.searching.backends.base import RawSearchResult
+from bioscancast.stages.searching.pipeline import SearchStagePipeline
 
 from bioscancast.tests.test_search_pipeline import FakeLLMClient
 
@@ -70,8 +70,6 @@ def _make_question():
     """Question with no known pathogen so dashboard injection doesn't overwrite
     realistic search results with generic dashboard titles."""
     from datetime import datetime, timezone
-
-    from bioscancast.filtering.models import ForecastQuestion
 
     return ForecastQuestion(
         id="Q001",

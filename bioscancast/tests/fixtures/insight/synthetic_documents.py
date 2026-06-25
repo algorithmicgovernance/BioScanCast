@@ -16,7 +16,7 @@ retrieval and extraction tests have known ground truth.
 from datetime import datetime
 
 from bioscancast.schemas import Document, DocumentChunk
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 
 
 # ---- Forecast Questions ----

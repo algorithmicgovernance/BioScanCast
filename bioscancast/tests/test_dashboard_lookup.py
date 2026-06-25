@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
-from bioscancast.filtering.models import ForecastQuestion
-from bioscancast.stages.search_stage.dashboard_lookup import lookup_dashboards
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.searching.dashboard_lookup import lookup_dashboards
 
 
 def _make_question(**overrides):

@@ -1,0 +1,188 @@
+"""YAML lookup — inject known source URLs as SearchResults.
+
+This preserves the same SearchResult shape and historical Wayback behavior
+as the current dashboard lookup, but reads entries from sources.yaml.
+"""
+
+from __future__ import annotations
+
+import logging
+import uuid
+from datetime import datetime, timezone
+from functools import lru_cache
+from pathlib import Path
+from typing import Any, List
+
+import yaml
+
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.stages.searching.tier_resolution import (
+    is_aggregator_domain,
+    resolve_tier,
+)
+from bioscancast.stages.searching.url_normalization import (
+    extract_domain,
+    normalize_url,
+)
+from bioscancast.stages.searching.wayback import closest_snapshot_before
+
+logger = logging.getLogger(__name__)
+
+_SOURCES_YAML = Path(__file__).resolve().parents[2] / "datasets" / "sources.yaml"
+
+
+# Common name variants used to resolve a free-text pathogen string inside
+# the YAML structure.
+_PATHOGEN_ALIASES: dict[str, str] = {
+    "monkeypox": "mpox",
+    "sars-cov-2": "covid-19",
+    "sars-cov2": "covid-19",
+    "covid": "covid-19",
+    "covid19": "covid-19",
+    "coronavirus": "covid-19",
+    "bird flu": "h5n1",
+    "avian flu": "h5n1",
+}
+
+
+@lru_cache(maxsize=1)
+def _load_sources_yaml() -> dict[str, Any]:
+    with open(_SOURCES_YAML, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
+def _resolve_pathogen_key(pathogen: str, family_block: dict[str, Any]) -> str | None:
+    """Map free-text pathogen text to a YAML pathogen key within one family."""
+    key = pathogen.strip().lower()
+    if not key:
+        return None
+
+    if key in family_block:
+        return key
+
+    if key in _PATHOGEN_ALIASES and _PATHOGEN_ALIASES[key] in family_block:
+        return _PATHOGEN_ALIASES[key]
+
+    for alias, canon in _PATHOGEN_ALIASES.items():
+        if alias in key and canon in family_block:
+            return canon
+
+    matches = [k for k in family_block if k in key]
+    if matches:
+        return max(matches, key=len)
+
+    return None
+
+_ROUTE_ALIASES = {
+    "general": "general_sources",
+}
+
+def _resolve_entries(question: ForecastQuestion, source_route: str) -> list[dict[str, Any]]:
+    """Return the YAML entries for the requested route."""
+    cfg = _load_sources_yaml()
+
+    source_route = _ROUTE_ALIASES.get(source_route, source_route)
+
+    if source_route == "general_sources":
+        entries = cfg.get("general_sources", [])
+        return entries if isinstance(entries, list) else []
+
+    families = cfg.get("specific_pathogen_sources", {})
+
+    if not isinstance(families, dict):
+        return []
+
+    family_block = families.get(source_route, {})
+    if not isinstance(family_block, dict):
+        return []
+
+    if not question.pathogen:
+        return []
+
+    pathogen_key = _resolve_pathogen_key(question.pathogen, family_block)
+    if pathogen_key and isinstance(family_block.get(pathogen_key), list):
+        return family_block[pathogen_key]
+
+    # Fallback: flatten everything under the selected family.
+    entries: list[dict[str, Any]] = []
+    for source_list in family_block.values():
+        if isinstance(source_list, list):
+            entries.extend(source_list)
+    return entries
+
+
+def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[SearchResult]:
+    """Generate synthetic SearchResult entries from sources.yaml.
+
+    Live mode: returns one SearchResult per URL with rank=0 and
+    retrieval_reason="dashboard_lookup".
+
+    Historical-replay mode: looks up the closest Wayback snapshot
+    at-or-before the cutoff and emits a SearchResult pointing at the
+    snapshot. Entries with no pre-cutoff snapshot are suppressed.
+    """
+    entries = _resolve_entries(question, source_route)
+    if not entries:
+        return []
+
+    as_of = question.as_of_date
+    results: list[SearchResult] = []
+    now = datetime.now(timezone.utc)
+
+    for entry in entries:
+        url = str(entry.get("url", "")).strip()
+        if not url:
+            continue
+
+        title = str(entry.get("name", url)).strip()
+        snippet = str(entry.get("snippet") or entry.get("geography") or title).strip()
+
+        if as_of is not None:
+            snapshot = closest_snapshot_before(url, as_of)
+            if snapshot is None:
+                logger.info(
+                    "Suppressing source %s — no Wayback snapshot at-or-before %s",
+                    url,
+                    as_of.isoformat(),
+                )
+                continue
+            snapshot_dt, snapshot_url = snapshot
+            effective_url = snapshot_url
+            published_date: datetime | None = snapshot_dt
+            published_date_source = "wayback_snapshot"
+            domain = extract_domain(url)
+        else:
+            effective_url = url
+            published_date = None
+            published_date_source = None
+            domain = extract_domain(url)
+
+        tier_num, domain_score, source_tier = resolve_tier(domain)
+
+        results.append(
+            SearchResult(
+                id=uuid.uuid4().hex,
+                question_id=question.id,
+                query_id=f"dashboard_{question.id}",
+                engine="dashboard",
+                url=effective_url,
+                canonical_url=normalize_url(effective_url),
+                domain=domain,
+                title=title,
+                snippet=snippet,
+                rank=0,
+                retrieved_at=now,
+                published_date=published_date,
+                is_official_domain=(tier_num == 1 and source_tier == "official"),
+                source_tier=source_tier,
+                domain_score=domain_score,
+                freshness_score=1.0,
+                retrieval_reason="dashboard_lookup",
+                contains_aggregator_forecast=is_aggregator_domain(domain),
+                search_stage_score=0.0,
+                published_date_source=published_date_source,
+                cutoff_applied=as_of,
+            )
+        )
+
+    return results

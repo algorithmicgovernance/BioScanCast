@@ -1,4 +1,4 @@
-from bioscancast.stages.search_stage.url_normalization import extract_domain, normalize_url
+from bioscancast.stages.searching.url_normalization import extract_domain, normalize_url
 
 
 class TestNormalizeUrl:

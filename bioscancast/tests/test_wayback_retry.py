@@ -7,7 +7,7 @@ import urllib.error
 from io import BytesIO
 from unittest.mock import patch
 
-from bioscancast.stages.search_stage import wayback
+from bioscancast.stages.searching import wayback
 
 
 def _http_error(code: int) -> urllib.error.HTTPError:
@@ -49,7 +49,7 @@ class TestCdxRetry:
             _ok_response(b'[["urlkey","timestamp","original"],["a","20240101120000","b"]]'),
         ]
         with self._short_schedule(), self._no_sleep(), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=seq,
         ):
             data = wayback._cdx_query({"url": "https://example.com/"})
@@ -58,7 +58,7 @@ class TestCdxRetry:
 
     def test_gives_up_after_max_attempts_503(self):
         with self._short_schedule(), self._no_sleep(), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=[_http_error(503)] * 3,
         ):
             data = wayback._cdx_query({"url": "https://example.com/"})
@@ -70,7 +70,7 @@ class TestCdxRetry:
             _ok_response(b'[["urlkey","timestamp","original"]]'),
         ]
         with self._short_schedule(), self._no_sleep(), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=seq,
         ):
             data = wayback._cdx_query({"url": "https://example.com/"})
@@ -80,7 +80,7 @@ class TestCdxRetry:
     def test_non_recoverable_status_does_not_retry(self):
         # 404 should fail immediately with no retries
         with self._short_schedule(), self._no_sleep(), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=[_http_error(404)],
         ) as mock_open:
             data = wayback._cdx_query({"url": "https://example.com/"})
@@ -94,7 +94,7 @@ class TestCdxRetry:
             _ok_response(b'[["header"]]'),
         ]
         with self._short_schedule(), self._no_sleep(), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=seq,
         ):
             data = wayback._cdx_query({"url": "https://example.com/"})
@@ -112,7 +112,7 @@ class TestCdxThrottle:
         ), patch.object(wayback, "_sleep", lambda s: sleep_calls.append(s)), patch.object(
             wayback, "RETRY_BACKOFF_SECONDS", (0,)
         ), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=[_ok_response(ok), _ok_response(ok)],
         ):
             wayback._cdx_query({"url": "https://example.com/a"})
@@ -132,7 +132,7 @@ class TestCdxThrottle:
         ), patch.object(wayback, "_sleep", lambda s: sleep_calls.append(s)), patch.object(
             wayback, "RETRY_BACKOFF_SECONDS", (0, 0, 0)
         ), patch(
-            "bioscancast.stages.search_stage.wayback.urllib.request.urlopen",
+            "bioscancast.stages.searching.wayback.urllib.request.urlopen",
             side_effect=[_http_error(503), _ok_response(ok)],
         ):
             data = wayback._cdx_query({"url": "https://example.com/"})

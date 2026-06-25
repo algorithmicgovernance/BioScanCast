@@ -14,7 +14,7 @@ not here.  Insight extraction is neutral fact-finding.
 from __future__ import annotations
 
 from bioscancast.schemas import Document, DocumentChunk
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 
 
 EXTRACTION_SYSTEM_PROMPT = """\

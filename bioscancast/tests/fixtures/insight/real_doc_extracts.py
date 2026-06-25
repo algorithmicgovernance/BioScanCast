@@ -21,10 +21,10 @@ from pathlib import Path
 from typing import Optional
 from unittest.mock import patch
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.fetcher import FetchResult
-from bioscancast.extraction.pipeline import ExtractionPipeline
-from bioscancast.filtering.models import FilteredDocument, ForecastQuestion
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.fetcher import FetchResult
+from bioscancast.stages.extraction.pipeline import ExtractionPipeline
+from bioscancast.stages.filtering.models import FilteredDocument, ForecastQuestion
 from bioscancast.llm.base import LLMResponse
 from bioscancast.llm.fake_client import FakeLLMClient
 from bioscancast.schemas import Document

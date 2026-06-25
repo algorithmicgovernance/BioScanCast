@@ -22,7 +22,7 @@ from typing import Any, Iterable
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from bioscancast.stages.search_stage.date_recovery import date_from_url_slug
+from bioscancast.stages.searching.date_recovery import date_from_url_slug
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESULTS_DIR = REPO_ROOT / "specs" / "probe-results"

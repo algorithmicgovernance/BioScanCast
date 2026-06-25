@@ -5,7 +5,7 @@ import re
 from datetime import datetime, timezone
 from typing import List, Optional
 
-from bioscancast.filtering.models import FilteredDocument
+from bioscancast.stages.filtering.models import FilteredDocument
 from bioscancast.schemas.document import Document, DocumentChunk
 
 from .chunking import normalize_chunks

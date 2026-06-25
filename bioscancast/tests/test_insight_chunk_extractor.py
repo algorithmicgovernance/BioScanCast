@@ -6,7 +6,7 @@ All tests use FakeLLMClient — no network calls, no real OpenAI imports.
 import pytest
 
 from bioscancast.llm.fake_client import FakeLLMClient
-from bioscancast.insight.extraction.chunk_extractor import (
+from bioscancast.insight.text_extraction.chunk_extractor import (
     extract_facts_from_chunk,
     _resolve_country_code,
     _normalize_whitespace,

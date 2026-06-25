@@ -7,7 +7,7 @@ from typing import Optional
 
 from curl_cffi import requests as curl_requests
 
-from bioscancast.stages.search_stage.wayback import closest_snapshot_before
+from bioscancast.stages.searching.wayback import closest_snapshot_before
 
 from .config import ExtractionConfig
 

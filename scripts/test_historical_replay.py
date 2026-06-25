@@ -39,10 +39,10 @@ try:
 except ImportError:
     pass
 
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.statesfiltering.models import ForecastQuestion
 from bioscancast.llm.client import OpenAIClient
-from bioscancast.stages.search_stage.backends.tavily_backend import TavilyBackend
-from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
+from bioscancast.stages.searching.backends.tavily_backend import TavilyBackend
+from bioscancast.stages.searching.pipeline import SearchStagePipeline
 
 
 # q1 from bioscancast_questions.csv. created_date is Excel serial 45705 =

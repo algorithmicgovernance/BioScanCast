@@ -7,14 +7,19 @@ still has partial artifacts for debugging.
 
 from __future__ import annotations
 
+import os
+import sys
 import json
 from dataclasses import asdict, is_dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-from bioscancast.filtering.models import ForecastQuestion
-from bioscancast.insight.pipeline import InsightRunResult
+# Add project root to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.insight.pipeline import InsightRunResult
 
 
 def _json_default(obj: Any) -> Any:

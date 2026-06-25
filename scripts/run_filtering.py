@@ -1,7 +1,13 @@
+import os
+import sys
 import json
 from datetime import datetime
-from bioscancast.filtering.pipeline import FilteringPipeline
-from bioscancast.filtering.models import ForecastQuestion, SearchResult
+
+# Add project root to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from bioscancast.stages.filtering.pipeline import FilteringPipeline
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
 
 
 def serialize(doc):

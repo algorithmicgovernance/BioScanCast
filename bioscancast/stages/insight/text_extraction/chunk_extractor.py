@@ -8,6 +8,8 @@ control.  Stick with one chunk per call.
 
 from __future__ import annotations
 
+import os
+import sys
 import logging
 import re
 import unicodedata
@@ -17,8 +19,11 @@ from typing import TYPE_CHECKING, Optional
 
 import pycountry
 
+# Add project root to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
 from bioscancast.schemas import DocumentChunk, Document, ChunkReference, InsightRecord
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from .prompts import build_extraction_prompt
 
 if TYPE_CHECKING:

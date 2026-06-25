@@ -15,9 +15,11 @@ import json
 import logging
 import uuid
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List
+import yaml
 
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.base import LLMClient
 
 logger = logging.getLogger(__name__)
@@ -30,6 +32,53 @@ logger = logging.getLogger(__name__)
 DEFAULT_QUERY_MODEL = "gpt-4o-mini"
 DEFAULT_CLASSIFY_MAX_TOKENS = 256
 DEFAULT_DECOMPOSE_MAX_TOKENS = 1024
+DEFAULT_SOURCE_ROUTE_MAX_TOKENS = 256
+
+# ---------------------------------------------------------------------------
+# JSON schemas for the LLM source root
+# ---------------------------------------------------------------------------
+
+
+_SOURCES_YAML = Path(__file__).resolve().parents[2] / "datasets" / "sources.yaml"
+
+with open(_SOURCES_YAML, "r", encoding="utf-8") as f:
+    SOURCE_CONFIG = yaml.safe_load(f)
+
+SOURCE_ROUTES = sorted({
+    "general_sources",
+    *SOURCE_CONFIG["specific_pathogen_sources"].keys(),
+})
+
+SOURCE_ROUTE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "route": {
+            "type": "string",
+            "enum": SOURCE_ROUTES,
+        },
+    },
+    "required": ["route"],
+    "additionalProperties": False,
+}
+
+SOURCE_ROUTE_PROMPT = (
+    "Select the most relevant source route for this biosecurity forecast "
+    "question. Return JSON only."
+)
+
+def route_sources(
+    question: ForecastQuestion,
+    llm_client: LLMClient,
+) -> str:
+    response = llm_client.generate_json(
+        system=SOURCE_ROUTE_PROMPT,
+        user=_build_classify_user_payload(question),
+        schema=SOURCE_ROUTE_SCHEMA,
+        model=DEFAULT_QUERY_MODEL,
+        max_tokens=DEFAULT_SOURCE_ROUTE_MAX_TOKENS,
+    )
+
+    return response.content.get("route", "general_sources")
 
 
 VALID_AXES: set[str] = {

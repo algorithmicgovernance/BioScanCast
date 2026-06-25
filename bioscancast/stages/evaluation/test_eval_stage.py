@@ -1,4 +1,4 @@
-from bioscancast.stages.eval_stage.evaluator import evaluate_binary
+from bioscancast.stages.evaluation.evaluator import evaluate_binary
 
 def test_binary():
     preds = [

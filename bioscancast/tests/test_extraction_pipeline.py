@@ -10,10 +10,10 @@ from unittest.mock import patch
 
 import pytest
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.fetcher import FetchResult
-from bioscancast.extraction.pipeline import ExtractionPipeline
-from bioscancast.filtering.models import FilteredDocument
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.fetcher import FetchResult
+from bioscancast.stages.extraction.pipeline import ExtractionPipeline
+from bioscancast.stages.filtering.models import FilteredDocument
 from bioscancast.schemas.document import Document
 
 FIXTURES = Path(__file__).parent / "fixtures" / "extraction"
