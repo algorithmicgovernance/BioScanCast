@@ -15,10 +15,10 @@ from typing import Any, List
 
 import yaml
 
+from bioscancast.datasets.source_tiers import TIER_SCORE_MAP, get_tier_label
 from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
 from bioscancast.stages.searching.tier_resolution import (
     is_aggregator_domain,
-    resolve_tier,
 )
 from bioscancast.stages.searching.url_normalization import (
     extract_domain,
@@ -76,6 +76,25 @@ def _resolve_pathogen_key(pathogen: str, family_block: dict[str, Any]) -> str | 
 _ROUTE_ALIASES = {
     "general": "general_sources",
 }
+
+
+def _resolve_yaml_tier(entry: dict[str, Any], domain: str) -> tuple[int, float, str]:
+    """Resolve tier for YAML-injected sources.
+
+    Policy: default to Tier 1 unless entry explicitly sets `tier:` (1-5).
+    """
+    raw_tier = entry.get("tier", 1)
+    try:
+        tier_num = int(raw_tier)
+    except (TypeError, ValueError):
+        tier_num = 1
+
+    if tier_num not in TIER_SCORE_MAP:
+        tier_num = 1
+
+    domain_score, _ = TIER_SCORE_MAP[tier_num]
+    source_tier = get_tier_label(domain.lower(), tier_num)
+    return tier_num, domain_score, source_tier
 
 def _resolve_entries(question: ForecastQuestion, source_route: str) -> list[dict[str, Any]]:
     """Return the YAML entries for the requested route."""
@@ -157,7 +176,7 @@ def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[S
             published_date_source = None
             domain = extract_domain(url)
 
-        tier_num, domain_score, source_tier = resolve_tier(domain)
+        tier_num, domain_score, source_tier = _resolve_yaml_tier(entry, domain)
 
         source_id = str(entry.get("id", "")).strip() or None
 
