@@ -85,7 +85,6 @@ class FilteredDocument:
     snippet: str
     published_date: Optional[datetime]
     file_type: Optional[str]
-    source_id: Optional[str] = None
 
     relevance_score: float
     credibility_score: float
@@ -98,3 +97,4 @@ class FilteredDocument:
     extraction_priority: int
     extraction_mode: str
     expected_value: str
+    source_id: Optional[str] = None

@@ -185,7 +185,6 @@ def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[S
                 search_stage_score=0.0,
                 published_date_source=published_date_source,
                 cutoff_applied=as_of,
-                source_id=source_id,
             )
         )
 
