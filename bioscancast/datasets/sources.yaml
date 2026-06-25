@@ -153,6 +153,26 @@ specific_pathogen_sources:
         url: "https://www.cdc.gov/mpox/data-research/index.html"
         geography: "Global"
 
+      - id: "ecdc_mpox"
+        name: "ECDC MPOX"
+        url: "https://www.ecdc.europa.eu/en/mpox-worldwide-overview"
+        geography: "Global"
+
+      - id: "who_mpox_rshiny"
+        name: "World Health Organization - MPOX"
+        url: "https://worldhealthorg.shinyapps.io/mpx_global/"
+        geography: "Global"
+
+      - id: "ecdc_mpox_monthly"
+        name: "ECDC MPOX Monthly Report"
+        url: "https://mpox-monthly.ecdc.europa.eu/"
+        geography: "Europe"
+
+      - id: "paho_mpox"
+        name: "PAHO MPOX"
+        url: "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D="
+        geography: "Americas"
+
   vector_borne: []
 
   animal_spillover:

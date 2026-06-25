@@ -159,9 +159,12 @@ def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[S
 
         tier_num, domain_score, source_tier = resolve_tier(domain)
 
+        source_id = str(entry.get("id", "")).strip() or None
+
         results.append(
             SearchResult(
                 id=uuid.uuid4().hex,
+                source_id=source_id,
                 question_id=question.id,
                 query_id=f"dashboard_{question.id}",
                 engine="dashboard",
@@ -182,6 +185,7 @@ def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[S
                 search_stage_score=0.0,
                 published_date_source=published_date_source,
                 cutoff_applied=as_of,
+                source_id=source_id,
             )
         )
 

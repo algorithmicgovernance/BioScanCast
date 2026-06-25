@@ -70,6 +70,7 @@ class ExtractionPipeline:
             filtered_doc.url,
             config=self._config,
             as_of_date=self._as_of_date,
+            source_id=filtered_doc.source_id,
         )
 
         if fetch_result.error or fetch_result.content_bytes is None:

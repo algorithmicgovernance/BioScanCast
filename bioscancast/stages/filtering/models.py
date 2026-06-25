@@ -40,6 +40,7 @@ class SearchResult:
     published_date: Optional[datetime] = None
     file_type: Optional[str] = None
     language: Optional[str] = None
+    source_id: Optional[str] = None
 
     is_official_domain: bool = False
     source_tier: str = "unknown"
@@ -84,6 +85,7 @@ class FilteredDocument:
     snippet: str
     published_date: Optional[datetime]
     file_type: Optional[str]
+    source_id: Optional[str] = None
 
     relevance_score: float
     credibility_score: float
