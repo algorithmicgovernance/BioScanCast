@@ -1,7 +1,8 @@
 from datetime import datetime, timezone
 
 from bioscancast.stages.filtering.models import ForecastQuestion
-from bioscancast.stages.searching.dashboard_lookup import lookup_dashboards
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.searching.source_lookup import lookup_yaml_sources
 
 
 def _make_question(**overrides):
@@ -17,7 +18,7 @@ def _make_question(**overrides):
 class TestDashboardLookup:
     def test_known_pathogen_returns_results(self):
         q = _make_question(pathogen="h5n1")
-        results = lookup_dashboards(q)
+        results = lookup_yaml_sources(q, "specific_pathogen_sources")
         assert len(results) > 0
         for r in results:
             assert r.retrieval_reason == "dashboard_lookup"
