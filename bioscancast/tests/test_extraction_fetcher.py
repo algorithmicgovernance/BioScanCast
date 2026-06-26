@@ -6,8 +6,8 @@ from unittest.mock import patch
 
 import pytest
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.fetcher import fetch, _sniff_content_type
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.fetcher import fetch, _sniff_content_type
 
 
 # ---------------------------------------------------------------------------

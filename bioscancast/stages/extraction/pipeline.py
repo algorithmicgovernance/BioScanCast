@@ -71,6 +71,8 @@ class ExtractionPipeline:
             config=self._config,
             as_of_date=self._as_of_date,
             source_id=filtered_doc.source_id,
+            region=filtered_doc.region,
+            question_text=filtered_doc.question_text,
         )
 
         if fetch_result.error or fetch_result.content_bytes is None:

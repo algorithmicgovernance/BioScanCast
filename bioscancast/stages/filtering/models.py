@@ -98,3 +98,5 @@ class FilteredDocument:
     extraction_mode: str
     expected_value: str
     source_id: Optional[str] = None
+    region: Optional[str] = None
+    question_text: Optional[str] = None

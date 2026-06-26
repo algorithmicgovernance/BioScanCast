@@ -67,6 +67,9 @@ class FilteringPipeline:
         combined = heuristic_keep + llm_not_needed + llm_decisions
 
         docs = build_filtered_documents(combined, result_map)
+        for doc in docs:
+            doc.region = question.region
+            doc.question_text = question.text
         docs = deduplicate_filtered_documents(docs)
         docs = cap_per_domain_and_type(
             docs,

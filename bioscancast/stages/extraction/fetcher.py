@@ -32,12 +32,33 @@ def _custom_scraper_module_path(source_id: str) -> str:
     return f"bioscancast.stages.extraction.custom_scrapers.{source_id}"
 
 
+def _normalize_content_type(header_value: Optional[str]) -> Optional[str]:
+    """Extract the MIME type portion, stripping charset and other params."""
+    if not header_value:
+        return None
+    return header_value.split(";", 1)[0].strip().lower()
+
+def _sniff_content_type(content: bytes) -> Optional[str]:
+    """Detect content type from magic bytes when headers are missing/generic."""
+    if not content:
+        return None
+    trimmed = content.lstrip()
+    if trimmed.startswith(b"%PDF-"):
+        return "application/pdf"
+    lowered = trimmed[:128].lower()
+    if lowered.startswith(b"<!doctype html") or lowered.startswith(b"<html"):
+        return "text/html"
+    return None
+
+
 def _fetch_via_custom_scraper(
     *,
     url: str,
     source_id: Optional[str],
     config: ExtractionConfig | None,
     as_of_date: Optional[datetime],
+    region: Optional[str],
+    question_text: Optional[str],
 ) -> Optional[FetchResult]:
     if not source_id:
         return None
@@ -52,7 +73,34 @@ def _fetch_via_custom_scraper(
         return None
 
     try:
-        result = fetch_fn(url=url, config=config, as_of_date=as_of_date)
+        result = fetch_fn(
+            url=url,
+            config=config,
+            as_of_date=as_of_date,
+            region=region,
+            question_text=question_text,
+        )
+    except TypeError as exc:
+        # Backward compatibility: existing custom scrapers may not yet accept
+        # region/question_text kwargs.
+        if "unexpected keyword argument" not in str(exc):
+            logger.info(
+                "Custom scraper failed for %s (source_id=%s): %s; falling back to default",
+                url,
+                source_id,
+                exc,
+            )
+            return None
+        try:
+            result = fetch_fn(url=url, config=config, as_of_date=as_of_date)
+        except Exception as retry_exc:
+            logger.info(
+                "Custom scraper failed for %s (source_id=%s): %s; falling back to default",
+                url,
+                source_id,
+                retry_exc,
+            )
+            return None
     except Exception as exc:
         logger.info(
             "Custom scraper failed for %s (source_id=%s): %s; falling back to default",
@@ -77,6 +125,8 @@ def fetch(
     config: ExtractionConfig | None = None,
     as_of_date: Optional[datetime] = None,
     source_id: Optional[str] = None,
+    region: Optional[str] = None,
+    question_text: Optional[str] = None,
 ) -> FetchResult:
     """Fetch a URL and return the result. Never raises on network errors.
 
@@ -91,6 +141,8 @@ def fetch(
         source_id=source_id,
         config=config,
         as_of_date=as_of_date,
+        region=region,
+        question_text=question_text,
     )
     if custom_result is not None:
         custom_result.fetch_strategy = f"custom:{source_id}"
