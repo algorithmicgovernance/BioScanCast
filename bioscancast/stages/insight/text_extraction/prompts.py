@@ -68,7 +68,21 @@ metric_name — capture those in `summary` or `location` instead. \
 "suspected cases", "probable cases", "possible cases" all map to \
 suspected_cases. "deaths" alone maps to deaths; "suspected deaths", \
 "probable deaths", "deaths under investigation" map to suspected_deaths.
-7. Be aware of cognitive biases that affect information processing:
+6b. For count_basis, choose one of:
+   - cumulative: total cases/deaths/etc. to date
+   - incident: new cases/deaths during a period
+   - active: currently active cases
+   - prevalence: point/prevalent cases
+   - unknown: if the text does not make this clear
+7. For time_window, choose one of:
+   - day
+   - week
+   - month
+   - year
+   - unknown
+   Use this only when the chunk explicitly gives a reporting period (e.g. "this week", "in January 2026"). Otherwise leave it null or "unknown".
+8. For surveillance_method, capture an explicitly stated surveillance or ascertainment method only (e.g. laboratory surveillance, syndromic surveillance, enhanced surveillance, passive reporting). Do not infer it.
+9. Be aware of cognitive biases that affect information processing:
    - Anchoring: do not over-weight the first number you encounter.
    - Availability: rare dramatic events are not necessarily more likely.
    - Overconfidence: if the chunk is ambiguous, lower your confidence.
@@ -147,6 +161,29 @@ EXTRACTION_JSON_SCHEMA: dict = {
                     "metric_name": {"type": ["string", "null"]},
                     "metric_value": {"type": ["number", "null"]},
                     "metric_unit": {"type": ["string", "null"]},
+                    "count_basis": {
+                        "type": ["string", "null"],
+                        "enum": [
+                            "cumulative",
+                            "incident",
+                            "active",
+                            "prevalence",
+                            "unknown",
+                        ],
+                    },
+                    "time_window": {
+                        "type": ["string", "null"],
+                        "enum": [
+                            "day",
+                            "week",
+                            "month",
+                            "year",
+                            "unknown",
+                        ],
+                    },
+                    "surveillance_method": {
+                        "type": ["string", "null"],
+                    },
                     "event_date": {"type": ["string", "null"]},
                     "summary": {"type": ["string", "null"]},
                     "quote": {"type": "string"},
@@ -159,6 +196,9 @@ EXTRACTION_JSON_SCHEMA: dict = {
                     "metric_name",
                     "metric_value",
                     "metric_unit",
+                    "count_basis",
+                    "time_window",
+                    "surveillance_method",
                     "event_date",
                     "summary",
                     "quote",
