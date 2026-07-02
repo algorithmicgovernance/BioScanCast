@@ -25,6 +25,17 @@ def _version_sort_key(value):
         return (1, text)
 
 
+def _timeline_sort_key(value):
+    parsed = pd.to_datetime(value, errors='coerce')
+    if pd.notna(parsed):
+        return (0, parsed)
+    return (1, _version_sort_key(value))
+
+
+def _timeline_column(df: pd.DataFrame) -> str:
+    return 'forecast_date' if 'forecast_date' in df.columns else 'forecast_version'
+
+
 def _ordered_unique(values: Sequence[object]) -> list[str]:
     seen: list[str] = []
     for value in values:
@@ -77,10 +88,11 @@ def _summarise_by_group(results_df: pd.DataFrame, group_cols: Sequence[str]) -> 
         return summary
 
     sort_cols = [col for col in group_cols if col in summary.columns]
-    if 'forecast_version' in summary.columns:
+    timeline_col = 'forecast_date' if 'forecast_date' in summary.columns else ('forecast_version' if 'forecast_version' in summary.columns else None)
+    if timeline_col and timeline_col in summary.columns:
         summary = summary.sort_values(
-            ['forecast_version'] + [c for c in sort_cols if c != 'forecast_version'],
-            key=lambda s: s.map(_version_sort_key) if s.name == 'forecast_version' else s.astype(str),
+            [timeline_col] + [c for c in sort_cols if c != timeline_col],
+            key=lambda s: s.map(_timeline_sort_key) if s.name == timeline_col else s.astype(str),
         )
     else:
         summary = summary.sort_values(sort_cols)
@@ -88,7 +100,6 @@ def _summarise_by_group(results_df: pd.DataFrame, group_cols: Sequence[str]) -> 
 
 
 def compare_sources(results_df: pd.DataFrame) -> pd.DataFrame:
-    """Aggregate scoring metrics by forecast source."""
     _require_columns(results_df, {'question_id', 'forecast_source'})
     summary = _summarise_by_group(results_df, ['forecast_source'])
     if 'median_brier_score' in summary.columns:
@@ -97,19 +108,18 @@ def compare_sources(results_df: pd.DataFrame) -> pd.DataFrame:
 
 
 def compare_sources_over_time(results_df: pd.DataFrame) -> pd.DataFrame:
-    """Aggregate scoring metrics by forecast version and source."""
-    _require_columns(results_df, {'question_id', 'forecast_source', 'forecast_version'})
-    summary = _summarise_by_group(results_df, ['forecast_version', 'forecast_source'])
+    timeline_col = _timeline_column(results_df)
+    _require_columns(results_df, {'question_id', 'forecast_source', timeline_col})
+    summary = _summarise_by_group(results_df, [timeline_col, 'forecast_source'])
     if not summary.empty:
         summary = summary.sort_values(
-            ['forecast_version', 'forecast_source'],
-            key=lambda s: s.map(_version_sort_key) if s.name == 'forecast_version' else s.astype(str),
+            [timeline_col, 'forecast_source'],
+            key=lambda s: s.map(_timeline_sort_key) if s.name == timeline_col else s.astype(str),
         ).reset_index(drop=True)
     return summary
 
 
 def compare_sources_by_question_type(results_df: pd.DataFrame) -> pd.DataFrame:
-    """Aggregate scoring metrics by forecast source and question type."""
     _require_columns(results_df, {'question_id', 'forecast_source'})
     if 'question_type' not in results_df.columns:
         raise ValueError("results_df must contain a 'question_type' column to compare by question type.")
@@ -121,18 +131,18 @@ def compare_sources_by_question_type(results_df: pd.DataFrame) -> pd.DataFrame:
 
 
 def rank_sources_over_time(summary_df: pd.DataFrame, *, metric_column: str = 'median_brier_score', ascending: bool = True) -> pd.DataFrame:
-    """Rank sources within each version using the selected metric."""
-    required = {'forecast_version', 'forecast_source', metric_column}
+    timeline_col = 'forecast_date' if 'forecast_date' in summary_df.columns else 'forecast_version'
+    required = {timeline_col, 'forecast_source', metric_column}
     _require_columns(summary_df, required)
 
     rows = []
-    for version, group in summary_df.groupby('forecast_version', dropna=False):
+    for time_value, group in summary_df.groupby(timeline_col, dropna=False):
         ordered = group.sort_values([metric_column, 'forecast_source'], ascending=[ascending, True]).reset_index(drop=True)
         ranks = ordered[metric_column].rank(method='dense', ascending=ascending).astype(int)
         for idx, (_, row) in enumerate(ordered.iterrows()):
             rows.append(
                 {
-                    'forecast_version': version,
+                    timeline_col: time_value,
                     'forecast_source': row['forecast_source'],
                     'metric_column': metric_column,
                     'metric_value': float(row[metric_column]),
@@ -144,22 +154,18 @@ def rank_sources_over_time(summary_df: pd.DataFrame, *, metric_column: str = 'me
     if ranked.empty:
         return ranked
     ranked = ranked.sort_values(
-        ['forecast_version', 'rank', 'forecast_source'],
-        key=lambda s: s.map(_version_sort_key) if s.name == 'forecast_version' else s.astype(str),
+        [timeline_col, 'rank', 'forecast_source'],
+        key=lambda s: s.map(_timeline_sort_key) if s.name == timeline_col else s.astype(str),
     )
     return ranked.reset_index(drop=True)
 
 
 def relative_improvement_over_time(results_df: pd.DataFrame, baseline_version: str | None = None) -> pd.DataFrame:
-    """Measure change versus the baseline forecast version for each source and metric.
-
-    Positive values mean the forecast improved relative to the baseline because
-    the evaluated metrics are lower-is-better.
-    """
-    required = {'question_id', 'forecast_source', 'forecast_version'} | set(METRIC_COLUMNS)
+    required = {'question_id', 'forecast_source'} | set(METRIC_COLUMNS)
     _require_columns(results_df, required)
 
-    versions = sorted(_ordered_unique(results_df['forecast_version'].tolist()), key=_version_sort_key)
+    timeline_col = _timeline_column(results_df)
+    versions = sorted(_ordered_unique(results_df[timeline_col].tolist()), key=_timeline_sort_key)
     if not versions:
         return pd.DataFrame()
     if baseline_version is None:
@@ -167,11 +173,11 @@ def relative_improvement_over_time(results_df: pd.DataFrame, baseline_version: s
 
     rows = []
     for source, source_df in results_df.groupby('forecast_source', dropna=False):
-        baseline_df = source_df[source_df['forecast_version'].astype(str) == str(baseline_version)]
+        baseline_df = source_df[source_df[timeline_col].astype(str) == str(baseline_version)]
         if baseline_df.empty:
             continue
         for version in versions:
-            current_df = source_df[source_df['forecast_version'].astype(str) == str(version)]
+            current_df = source_df[source_df[timeline_col].astype(str) == str(version)]
             merged = baseline_df[['question_id', *METRIC_COLUMNS]].merge(
                 current_df[['question_id', *METRIC_COLUMNS]],
                 on='question_id',
@@ -183,11 +189,11 @@ def relative_improvement_over_time(results_df: pd.DataFrame, baseline_version: s
                 pair = merged[[f'{metric}_baseline', f'{metric}_current']].dropna()
                 if pair.empty:
                     continue
-                deltas = pair[f'{metric}_baseline'] - pair[f'{metric}_current']
+                deltas = pair[f'{metric}_current'] - pair[f'{metric}_baseline']
                 rows.append(
                     {
                         'forecast_source': source,
-                        'forecast_version': version,
+                        timeline_col: version,
                         'baseline_version': baseline_version,
                         'metric': metric,
                         'n_questions': int(len(deltas)),
@@ -203,7 +209,52 @@ def relative_improvement_over_time(results_df: pd.DataFrame, baseline_version: s
     if improvement.empty:
         return improvement
     improvement = improvement.sort_values(
-        ['metric', 'forecast_version', 'forecast_source'],
-        key=lambda s: s.map(_version_sort_key) if s.name == 'forecast_version' else s.astype(str),
+        [timeline_col, 'metric', 'forecast_source'],
+        key=lambda s: s.map(_timeline_sort_key) if s.name == timeline_col else s.astype(str),
+    )
+    return improvement.reset_index(drop=True)
+
+
+def metric_change_over_time(summary_df: pd.DataFrame, baseline_timeline_value: str | None = None) -> pd.DataFrame:
+    timeline_col = _timeline_column(summary_df)
+    required = {timeline_col, 'forecast_source'} | {f'mean_{metric}' for metric in METRIC_COLUMNS}
+    _require_columns(summary_df, required)
+
+    rows = []
+    for source, source_df in summary_df.groupby('forecast_source', dropna=False):
+        source_versions = sorted(_ordered_unique(source_df[timeline_col].tolist()), key=_timeline_sort_key)
+        if not source_versions:
+            continue
+
+        this_baseline = baseline_timeline_value if baseline_timeline_value is not None else source_versions[0]
+        baseline_row = source_df[source_df[timeline_col].astype(str) == str(this_baseline)]
+        if baseline_row.empty:
+            continue
+        baseline_row = baseline_row.iloc[0]
+
+        for version in source_versions:
+            current_row = source_df[source_df[timeline_col].astype(str) == str(version)]
+            if current_row.empty:
+                continue
+            current_row = current_row.iloc[0]
+            for metric in METRIC_COLUMNS:
+                baseline_val = baseline_row.get(f'mean_{metric}')
+                current_val = current_row.get(f'mean_{metric}')
+                if pd.isna(baseline_val) or pd.isna(current_val):
+                    continue
+                rows.append({
+                    timeline_col: version,
+                    'forecast_source': source,
+                    'metric': metric,
+                    'baseline_timeline_value': this_baseline,
+                    'mean_improvement': float(current_val) - float(baseline_val),
+                })
+
+    improvement = pd.DataFrame(rows)
+    if improvement.empty:
+        return improvement
+    improvement = improvement.sort_values(
+        [timeline_col, 'metric', 'forecast_source'],
+        key=lambda s: s.map(_timeline_sort_key) if s.name == timeline_col else s.astype(str),
     )
     return improvement.reset_index(drop=True)

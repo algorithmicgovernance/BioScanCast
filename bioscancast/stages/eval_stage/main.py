@@ -9,9 +9,19 @@ from bioscancast.stages.eval_stage.pipeline import run_evaluation
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_FORECASTS = [
     str(BASE_DIR / 'mock_forecasts' / 'human_forecasts.csv'),
-    str(BASE_DIR / 'mock_forecasts' / 'bioscancast_forecasts.csv'),
     str(BASE_DIR / 'mock_forecasts' / 'llm_baseline_forecasts.csv'),
+    str(BASE_DIR / 'mock_forecasts' / 'perplexity_forecasts.csv'),
 ]
+
+
+def _collect_forecast_files(directory: str | Path) -> list[str]:
+    path = Path(directory)
+    if not path.exists():
+        raise FileNotFoundError(f"Forecast directory not found: {directory}")
+    files = sorted(p for p in path.glob("*.csv") if p.is_file())
+    if not files:
+        raise ValueError(f"No CSV forecasts found in {directory}")
+    return [str(p) for p in files]
 
 
 def parse_args() -> argparse.Namespace:
@@ -19,12 +29,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         '--forecasts',
         nargs='+',
-        default=DEFAULT_FORECASTS,
-        help='One or more forecast CSV files. Use forecast_version to place repeated runs on the timeline.',
+        default=None,
+        help='One or more forecast CSV files.',
+    )
+    parser.add_argument(
+        '--forecast-dir',
+        default=None,
+        help='Directory containing forecast CSVs to evaluate together.',
     )
     parser.add_argument(
         '--questions',
-        default=str(BASE_DIR / 'bioscancast_questions.csv'),
+        default=str(BASE_DIR / 'bioscancast_questions_resolved.csv'),
         help='Path to the questions CSV file.',
     )
     return parser.parse_args()
@@ -32,7 +47,13 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    run_evaluation(forecasts_path=args.forecasts, questions_path=args.questions)
+    if args.forecast_dir:
+        forecasts = _collect_forecast_files(args.forecast_dir)
+    elif args.forecasts:
+        forecasts = args.forecasts
+    else:
+        forecasts = DEFAULT_FORECASTS
+    run_evaluation(forecasts_path=forecasts, questions_path=args.questions)
 
 
 if __name__ == '__main__':

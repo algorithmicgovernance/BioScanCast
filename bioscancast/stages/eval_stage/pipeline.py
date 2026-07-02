@@ -9,7 +9,6 @@ from bioscancast.stages.eval_stage.compare import (
     compare_sources,
     compare_sources_by_question_type,
     compare_sources_over_time,
-    rank_sources_over_time,
     relative_improvement_over_time,
 )
 from bioscancast.stages.eval_stage.loaders import load_forecasts, load_questions
@@ -26,7 +25,6 @@ from bioscancast.stages.eval_stage.visualisation import (
     plot_question_heatmap,
     plot_relative_improvement,
     plot_score_timeline_boxplots,
-    plot_source_ranking_over_time,
     plot_source_timeline,
 )
 
@@ -34,10 +32,37 @@ OUTPUT_DIR = Path(__file__).resolve().parent / 'outputs'
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_FORECASTS = [
     str(BASE_DIR / 'mock_forecasts' / 'human_forecasts.csv'),
-    str(BASE_DIR / 'mock_forecasts' / 'bioscancast_forecasts.csv'),
     str(BASE_DIR / 'mock_forecasts' / 'llm_baseline_forecasts.csv'),
+    str(BASE_DIR / 'mock_forecasts' / 'perplexity_forecasts.csv'),
 ]
 
+def _current_run_date() -> str:
+    return pd.Timestamp.today().normalize().strftime('%Y-%m-%d')
+
+
+def _refresh_perplexity_forecasts(questions_path: str | Path = str(BASE_DIR / 'bioscancast_questions_resolved.csv')) -> Path:
+    """Regenerate the Perplexity mock forecasts when the API is available.
+
+    If the Perplexity API key is not configured, fall back to the existing cached
+    CSV so the evaluation stage can still run offline.
+    """
+    output_path = BASE_DIR / 'mock_forecasts' / 'perplexity_forecasts.csv'
+    try:
+        from bioscancast.stages.eval_stage.generate_perplexity_forecasts import (
+            DEFAULT_TEMPLATE_FORECASTS,
+            build_forecasts,
+        )
+        rows = build_forecasts(questions_path, DEFAULT_TEMPLATE_FORECASTS, model='sonar-reasoning-pro')
+    except Exception as exc:
+        if output_path.exists():
+            print(f'Perplexity refresh skipped ({exc}); using cached forecasts at {output_path}.')
+            return output_path
+        raise
+
+    df = pd.DataFrame(rows)
+    df.to_csv(output_path, sep=';', index=False, decimal=',', encoding='cp1252')
+    print(f'Regenerated Perplexity forecasts at {output_path}')
+    return output_path
 
 def _ensure_output_dir() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -102,16 +127,11 @@ def _prepare_forecasts(df: pd.DataFrame, source_name: str | None = None) -> pd.D
             'Problematic rows: ' + str(bad_rows.index.tolist())
         )
 
-    if df['probability'].max() > 1.0:
-        df['probability'] = df['probability']  # keep as-is if already scaled
-
     if 'forecast_source' not in df.columns:
         df['forecast_source'] = source_name or 'forecast'
     else:
         df['forecast_source'] = df['forecast_source'].astype(str).str.strip()
-        if source_name and (df['forecast_source'].nunique() == 1) and (
-            df['forecast_source'].iloc[0] in {'', 'nan', 'none'}
-        ):
+        if source_name and (df['forecast_source'].nunique() == 1) and (df['forecast_source'].iloc[0] in {'', 'nan', 'none'}):
             df['forecast_source'] = source_name
 
     if 'forecast_version' not in df.columns:
@@ -119,6 +139,13 @@ def _prepare_forecasts(df: pd.DataFrame, source_name: str | None = None) -> pd.D
     else:
         df['forecast_version'] = df['forecast_version'].astype(str).str.strip()
         df.loc[df['forecast_version'].isin({'', 'nan', 'none'}), 'forecast_version'] = '1'
+
+    if 'forecast_date' in df.columns:
+        parsed_dates = pd.to_datetime(df['forecast_date'], errors='coerce')
+        fallback_date = _current_run_date()
+        df['forecast_date'] = parsed_dates.dt.strftime('%Y-%m-%d').fillna(fallback_date)
+    else:
+        df['forecast_date'] = _current_run_date()
 
     return df
 
@@ -157,8 +184,8 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
     results = []
     skipped = []
 
-    grouped = merged_df.groupby(['question_id', 'forecast_source', 'forecast_version'], dropna=False)
-    for (question_id, source, version), group in grouped:
+    grouped = merged_df.groupby(['question_id', 'forecast_source', 'forecast_version', 'forecast_date'], dropna=False)
+    for (question_id, source, version, forecast_date), group in grouped:
         question_row = group.iloc[0]
 
         if str(question_row['question_status']).lower() != 'resolved':
@@ -167,6 +194,7 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
                     'question_id': question_id,
                     'forecast_source': source,
                     'forecast_version': version,
+                    'forecast_date': forecast_date,
                     'skip_reason': f"question_status={question_row['question_status']}",
                 }
             )
@@ -180,6 +208,7 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
                     'question_id': question_id,
                     'forecast_source': source,
                     'forecast_version': version,
+                    'forecast_date': forecast_date,
                     'skip_reason': skip_reason,
                 }
             )
@@ -191,6 +220,7 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
                     'question_id': question_id,
                     'forecast_source': source,
                     'forecast_version': version,
+                    'forecast_date': forecast_date,
                     'skip_reason': 'resolved_option_missing_after_normalization',
                 }
             )
@@ -212,6 +242,7 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
                 'question_type': question_row.get('question_type', 'unknown'),
                 'forecast_source': source,
                 'forecast_version': version,
+                'forecast_date': forecast_date,
                 'resolved_option': resolved_option,
                 'brier_score': brier,
                 'log_score': logscore,
@@ -229,7 +260,7 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
 
 def run_evaluation(
     forecasts_path: str | Sequence[str] | None = None,
-    questions_path: str = str(BASE_DIR / 'bioscancast_questions.csv'),
+    questions_path: str = str(BASE_DIR / 'bioscancast_questions_resolved.csv'),
 ) -> None:
     """End-to-end evaluation entry point."""
     _ensure_output_dir()
@@ -242,6 +273,7 @@ def run_evaluation(
         forecast_paths = [str(p) for p in forecasts_path]
 
     questions = _prepare_questions(load_questions(questions_path))
+    _refresh_perplexity_forecasts(questions_path=questions_path)
     resolved_questions = questions[questions['question_status'] == 'resolved'].copy()
     ambiguous_questions = questions[questions['question_status'] == 'ambiguous'].copy()
     unresolved_questions = questions[questions['question_status'] == 'unresolved'].copy()
@@ -272,7 +304,6 @@ def run_evaluation(
     summary_path = OUTPUT_DIR / 'summary_metrics.csv'
     by_type_path = OUTPUT_DIR / 'summary_metrics_by_question_type.csv'
     timeline_summary_path = OUTPUT_DIR / 'summary_metrics_over_time.csv'
-    ranking_path = OUTPUT_DIR / 'source_ranking_over_time.csv'
     improvement_path = OUTPUT_DIR / 'metric_improvement_over_time.csv'
 
     results_df.to_csv(results_path, index=False)
@@ -291,17 +322,14 @@ def run_evaluation(
     timeline_summary_df = compare_sources_over_time(results_df)
     timeline_summary_df.to_csv(timeline_summary_path, index=False)
 
-    ranking_df = rank_sources_over_time(timeline_summary_df, metric_column='median_brier_score', ascending=True)
-    ranking_df.to_csv(ranking_path, index=False)
-
-    improvement_df = relative_improvement_over_time(results_df)
+    from bioscancast.stages.eval_stage.compare import metric_change_over_time
+    improvement_df = metric_change_over_time(timeline_summary_df)
     improvement_df.to_csv(improvement_path, index=False)
 
     plot_score_timeline_boxplots(results_df, OUTPUT_DIR / 'score_timeline_boxplots.png')
     plot_source_timeline(timeline_summary_df, OUTPUT_DIR / 'source_timeline_summary.png')
     plot_relative_improvement(results_df, OUTPUT_DIR / 'improvement_vs_v1.png')
     plot_question_heatmap(results_df, OUTPUT_DIR / 'question_heatmap.png')
-    plot_source_ranking_over_time(timeline_summary_df, OUTPUT_DIR / 'source_ranking_over_time.png')
 
     print('\nEvaluation complete.')
     print(summary_df.to_string(index=False))
