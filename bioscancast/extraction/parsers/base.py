@@ -24,6 +24,9 @@ class SectionContent:
     table_rows: Optional[List[List[str]]] = None
     """Row-major table data when chunk_type is 'table'."""
 
+    extractor: Optional[str] = None
+    """Which backend produced this section ('pymupdf', 'pdfplumber', 'docling', ...)."""
+
 
 @dataclass
 class ParsedContent:

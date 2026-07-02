@@ -17,7 +17,13 @@ build/
 
 # Data / cache
 data/cache/
+data/runs/
 *.sqlite
+
+# Docling eval — keep FINDINGS.md and sources/, ignore generated run artifacts
+data/docling_eval/*
+!data/docling_eval/FINDINGS.md
+!data/docling_eval/sources/
 
 # OS
 .DS_Store

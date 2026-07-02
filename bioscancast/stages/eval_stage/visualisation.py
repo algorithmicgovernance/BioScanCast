@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import Sequence
 
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from matplotlib.colors import to_rgba
 from matplotlib.patches import Patch
@@ -21,6 +20,9 @@ METRICS = [
 
 
 def _ensure_parent_dir(output_path: str | Path) -> Path:
+    """
+    Make sure the destination folder exists before saving a figure.
+    """
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     return output_path

@@ -43,7 +43,10 @@ See `config.py` for all configurable values (`InsightConfig`).
 
 ## TODO
 
-- [ ] Migrate `bioscancast/filtering/llm_filter.py`'s local `LLMClient` protocol to the shared `bioscancast/llm/base.py` protocol.
 - [ ] Cognitive bias mitigations belong primarily in the **forecasting** stage's prompts, not here. Insight extraction is neutral fact-finding. A brief reminder is included in the extraction prompt but full bias mitigation should be implemented in forecasting.
-- [ ] When extraction lands and synthetic fixtures are swapped for real Document outputs, expect surprises. Plan a follow-up PR to harden the chunk extractor against messy real-world chunks (long text, mid-sentence breaks, OCR garbage in tables).
-- [ ] Strong model refinement pass (behind `use_strong_model_refinement` config flag, currently a no-op).
+
+Strong-model refinement pass was scaffolded in the initial PR but never
+implemented. The scaffold has been removed; the design is preserved in
+[issue #26](https://github.com/algorithmicgovernance/BioScanCast/issues/26)
+to revisit after the first benchmark run identifies whether cheap-model
+records need a refinement pass.

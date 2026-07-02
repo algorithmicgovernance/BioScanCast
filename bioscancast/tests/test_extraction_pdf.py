@@ -95,3 +95,60 @@ class TestWhoDonPdf:
         assert result.is_partial
         assert result.partial_reason is not None
         assert "Truncated" in result.partial_reason
+
+
+# ---------------------------------------------------------------------------
+# Title sanitisation
+# ---------------------------------------------------------------------------
+
+class TestSanitizeTitle:
+    """The PDF /Title metadata field is often a stale conversion artefact
+    (e.g. "2026-WCP-0020 Draft.docx") rather than a real document title.
+    _sanitize_title filters those out so the upstream pipeline can fall
+    back to the search-side title.
+    """
+
+    def test_filename_ending_in_docx_is_rejected(self, pdf_parser):
+        # ECDC CDTR case observed in live tests
+        assert pdf_parser._sanitize_title("2026-WCP-0020 Draft.docx") is None
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "report.pdf",
+            "draft.doc",
+            "file.docx",
+            "presentation.pptx",
+            "data.xlsx",
+            "page.html",
+            "notes.txt",
+            "Document.PDF",  # case-insensitive
+        ],
+    )
+    def test_other_filename_extensions_are_rejected(self, pdf_parser, title):
+        assert pdf_parser._sanitize_title(title) is None
+
+    def test_empty_or_whitespace_title_is_rejected(self, pdf_parser):
+        assert pdf_parser._sanitize_title(None) is None
+        assert pdf_parser._sanitize_title("") is None
+        assert pdf_parser._sanitize_title("   ") is None
+        assert pdf_parser._sanitize_title("\n\t") is None
+
+    def test_implausibly_short_title_is_rejected(self, pdf_parser):
+        assert pdf_parser._sanitize_title("ab") is None
+        assert pdf_parser._sanitize_title("xyz") is None
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "Measles Outbreak — New Mexico, 2025",
+            "Multi-country outbreak of mpox, External situation report 64",
+            "Communicable Disease Threats Report, Week 16, 2026",
+            "Weekly Cholera Update No. 34",
+        ],
+    )
+    def test_real_titles_pass_through(self, pdf_parser, title):
+        assert pdf_parser._sanitize_title(title) == title
+
+    def test_title_is_trimmed(self, pdf_parser):
+        assert pdf_parser._sanitize_title("  Real Title  ") == "Real Title"

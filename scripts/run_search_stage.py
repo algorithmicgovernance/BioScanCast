@@ -35,7 +35,7 @@ except ImportError:
     pass  # python-dotenv not installed; keys must be in environment directly
 
 from bioscancast.filtering.models import ForecastQuestion
-from bioscancast.llm.client import OpenAIClient
+from bioscancast.llm.openai_client import OpenAILLMClient
 from bioscancast.stages.search_stage.backends.tavily_backend import TavilyBackend
 from bioscancast.stages.search_stage.cache import SearchCache
 from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
@@ -65,7 +65,7 @@ def main():
         region=args.region,
     )
 
-    llm_client = OpenAIClient()
+    llm_client = OpenAILLMClient()
     search_backend = TavilyBackend()
     cache = None if args.no_cache else SearchCache()
 

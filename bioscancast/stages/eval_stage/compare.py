@@ -46,6 +46,9 @@ def _ordered_unique(values: Sequence[object]) -> list[str]:
 
 
 def _require_columns(df: pd.DataFrame, required: Iterable[str]) -> None:
+    """
+    Ensure the dataframe contains the columns needed for comparison.
+    """
     missing = [col for col in required if col not in df.columns]
     if missing:
         raise ValueError('results_df is missing required columns: ' + ', '.join(missing))

@@ -46,6 +46,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    """
+    Entry point for running the evaluation pipeline from the command line.
+    """
     args = parse_args()
     if args.forecast_dir:
         forecasts = _collect_forecast_files(args.forecast_dir)

@@ -50,6 +50,7 @@ def normalize_chunks(
                     page_number=chunk.page_number,
                     table_data=None,
                     token_count=part_tokens,
+                    extractor=chunk.extractor,
                 )
             )
 

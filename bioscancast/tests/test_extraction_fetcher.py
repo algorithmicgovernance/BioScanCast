@@ -2,14 +2,12 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
-import httpx
 import pytest
 
 from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.fetcher import FetchResult, fetch, _sniff_content_type
+from bioscancast.extraction.fetcher import fetch, _sniff_content_type
 
 
 # ---------------------------------------------------------------------------
@@ -34,11 +32,11 @@ class TestSniffContentType:
 
 
 # ---------------------------------------------------------------------------
-# Helpers: fake httpx responses
+# Helpers: fake curl_cffi responses
 # ---------------------------------------------------------------------------
 
 class FakeResponse:
-    """Minimal stand-in for httpx.Response used in stream context."""
+    """Minimal stand-in for a curl_cffi.requests streaming Response."""
 
     def __init__(
         self,
@@ -49,33 +47,16 @@ class FakeResponse:
         url: str = "https://example.com/page",
     ):
         self.status_code = status_code
-        self.headers = httpx.Headers(headers or {})
-        self.url = httpx.URL(url)
+        # curl_cffi headers behave like a case-insensitive dict; a plain dict
+        # with lowercase keys is sufficient for the fetcher's lookups.
+        self.headers = {k.lower(): v for k, v in (headers or {}).items()}
+        self.url = url
         self._chunks = chunks or [b"<html><body>Hello</body></html>"]
 
-    def iter_bytes(self, chunk_size: int = 65536):
+    def iter_content(self):
         yield from self._chunks
 
-    def __enter__(self):
-        return self
-
-    def __exit__(self, *args):
-        pass
-
-
-class FakeClient:
-    """Minimal stand-in for httpx.Client."""
-
-    def __init__(self, response: FakeResponse):
-        self._response = response
-
-    def stream(self, method, url, **kwargs):
-        return self._response
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, *args):
+    def close(self):
         pass
 
 
@@ -84,9 +65,11 @@ class FakeClient:
 # ---------------------------------------------------------------------------
 
 class TestFetch:
-    def _patch_client(self, response: FakeResponse):
-        client = FakeClient(response)
-        return patch("bioscancast.extraction.fetcher.httpx.Client", return_value=client)
+    def _patch_get(self, response: FakeResponse):
+        return patch(
+            "bioscancast.extraction.fetcher.curl_requests.get",
+            return_value=response,
+        )
 
     def test_successful_html_fetch(self):
         resp = FakeResponse(
@@ -95,7 +78,7 @@ class TestFetch:
             chunks=[b"<html><body>Hello world</body></html>"],
             url="https://example.com/page",
         )
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/page")
 
         assert result.error is None
@@ -110,7 +93,7 @@ class TestFetch:
             headers={},
             chunks=[b"%PDF-1.7 fake pdf content"],
         )
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/report")
 
         assert result.content_type == "application/pdf"
@@ -121,7 +104,7 @@ class TestFetch:
             headers={"content-type": "application/octet-stream"},
             chunks=[b"<!DOCTYPE html><html><body>Hi</body></html>"],
         )
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/page")
 
         assert result.content_type == "text/html"
@@ -136,7 +119,7 @@ class TestFetch:
             chunks=[b"small"],
         )
         config = ExtractionConfig(fetch_max_bytes=1000)
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/big.pdf", config=config)
 
         assert result.error is not None
@@ -150,7 +133,7 @@ class TestFetch:
             chunks=[b"a" * 600, b"b" * 600],
         )
         config = ExtractionConfig(fetch_max_bytes=1000)
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/page", config=config)
 
         assert result.error is not None
@@ -159,8 +142,8 @@ class TestFetch:
 
     def test_network_error_returns_fetch_result(self):
         with patch(
-            "bioscancast.extraction.fetcher.httpx.Client",
-            side_effect=httpx.ConnectError("Connection refused"),
+            "bioscancast.extraction.fetcher.curl_requests.get",
+            side_effect=ConnectionError("Connection refused"),
         ):
             result = fetch("https://unreachable.example.com")
 
@@ -176,7 +159,7 @@ class TestFetch:
             chunks=[b"<html>redirected</html>"],
             url="https://example.com/final-page",
         )
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/old-page")
 
         assert result.final_url == "https://example.com/final-page"
@@ -188,7 +171,46 @@ class TestFetch:
             headers={"content-type": "text/html"},
             chunks=[b"<html></html>"],
         )
-        with self._patch_client(resp):
+        with self._patch_get(resp):
             result = fetch("https://example.com/page")
 
         assert result.fetched_at.tzinfo is not None
+
+    def test_impersonate_passed_to_curl_cffi(self):
+        """The configured impersonation profile reaches curl_cffi.get."""
+        resp = FakeResponse(
+            status_code=200,
+            headers={"content-type": "text/html"},
+            chunks=[b"<html></html>"],
+        )
+        config = ExtractionConfig(impersonate="firefox")
+        with patch(
+            "bioscancast.extraction.fetcher.curl_requests.get",
+            return_value=resp,
+        ) as mock_get:
+            fetch("https://example.com/page", config=config)
+
+        kwargs = mock_get.call_args.kwargs
+        assert kwargs["impersonate"] == "firefox"
+        assert kwargs["stream"] is True
+        assert kwargs["allow_redirects"] is True
+
+
+# ---------------------------------------------------------------------------
+# Live integration test: opt-in with `pytest -m live`.
+# Confirms curl_cffi successfully fetches a Cloudflare-fronted URL that
+# httpx/requests would 401/403 on. Skipped by default to keep CI offline.
+# ---------------------------------------------------------------------------
+
+@pytest.mark.live
+def test_live_cloudflare_fronted_fetch():
+    # Reuters is the canonical case from the docling eval (see issue #18).
+    # Pick a stable landing page rather than a dated article.
+    url = "https://www.reuters.com/"
+    result = fetch(url)
+    assert result.error is None, f"fetch errored: {result.error}"
+    assert result.status_code == 200, (
+        f"expected 200 from Cloudflare-fronted URL, got {result.status_code}"
+    )
+    assert result.content_bytes is not None
+    assert result.content_type == "text/html"

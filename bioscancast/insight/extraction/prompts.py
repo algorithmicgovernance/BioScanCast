@@ -27,12 +27,48 @@ RULES:
 by the chunk text.  Do NOT infer, speculate, or use outside knowledge.
 2. For each fact, provide a verbatim quote from the chunk (max 200 \
 characters) that supports the claim.  The quote must be an exact \
-substring of the chunk text.
+substring of the chunk text.  The quote MUST be the sentence (or \
+sentence fragment) that carries the figure itself — it must contain \
+the metric_value either as digits (e.g. "82"), as a number-word \
+(e.g. "eighty-two", "a dozen"), or as a clear relative reference \
+(e.g. "a quarter of the population"). A contextual or supporting \
+sentence that mentions the topic but not the figure is NOT acceptable.
 3. If the chunk contains no relevant facts, return an empty facts list. \
 This is expected and common — most chunks are irrelevant.
 4. Do NOT answer the forecast question.  Your job is fact extraction, \
 not forecasting.
-5. Be aware of cognitive biases that affect information processing:
+5. For event_date, use the most specific ISO date you can extract from \
+the chunk and nothing more: ``YYYY-MM-DD`` when a day is given, \
+``YYYY-MM`` when only a month is given (e.g. "January 2026"), or \
+``YYYY`` when only a year is given. Do NOT invent a day-of-month when \
+the chunk only mentions a month.
+6. For metric_name, use one of these canonical snake_case values when \
+applicable (this lets downstream dedup merge facts about the same \
+metric across sources):
+   - confirmed_cases       (the "confirmed" tier — lab-confirmed)
+   - suspected_cases       (the "not-yet-confirmed" tier — covers \
+"suspected", "probable", and "possible" reporting categories)
+   - confirmed_or_probable_cases   (WHO/CDC's combined reporting bucket)
+   - deaths                (lab-confirmed deaths)
+   - suspected_deaths      (the "not-yet-confirmed" tier for deaths — \
+covers "suspected", "probable", "under investigation" reporting)
+   - hospitalizations
+   - recoveries
+   - vaccinations_administered
+   - vaccine_doses_distributed
+   - affected_herds         (animal disease — herds/farms affected)
+   - affected_animals
+   - new_outbreaks_declared
+   - reproductive_number    (R0, Rt)
+   - case_fatality_ratio
+   If none of these fit, invent a short snake_case label. Do NOT put \
+qualifiers (sex, age, sub-region, time-period like "weekly") in \
+metric_name — capture those in `summary` or `location` instead. \
+"cases", "reported cases", "total cases" all map to confirmed_cases. \
+"suspected cases", "probable cases", "possible cases" all map to \
+suspected_cases. "deaths" alone maps to deaths; "suspected deaths", \
+"probable deaths", "deaths under investigation" map to suspected_deaths.
+7. Be aware of cognitive biases that affect information processing:
    - Anchoring: do not over-weight the first number you encounter.
    - Availability: rare dramatic events are not necessarily more likely.
    - Overconfidence: if the chunk is ambiguous, lower your confidence.
@@ -115,7 +151,18 @@ EXTRACTION_JSON_SCHEMA: dict = {
                     "summary": {"type": ["string", "null"]},
                     "quote": {"type": "string"},
                 },
-                "required": ["event_type", "confidence", "quote"],
+                "required": [
+                    "event_type",
+                    "confidence",
+                    "location",
+                    "pathogen",
+                    "metric_name",
+                    "metric_value",
+                    "metric_unit",
+                    "event_date",
+                    "summary",
+                    "quote",
+                ],
                 "additionalProperties": False,
             },
         },

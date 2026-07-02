@@ -65,10 +65,21 @@ def _refresh_perplexity_forecasts(questions_path: str | Path = str(BASE_DIR / 'b
     return output_path
 
 def _ensure_output_dir() -> None:
+    """
+    Make sure the output directory exists before writing files.
+    """
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def _canonicalize_text(value) -> str:
+    """
+    Normalize text so bucket matching is more robust.
+
+    This helps with:
+    - accidental whitespace
+    - en dashes vs hyphens
+    - inconsistent casing
+    """
     if pd.isna(value):
         return ''
     text = str(value)
@@ -78,6 +89,9 @@ def _canonicalize_text(value) -> str:
 
 
 def _prepare_questions(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Clean and standardize the question metadata dataframe.
+    """
     df = df.copy()
     required_cols = {'question_id', 'question_status', 'resolved_option'}
     missing = [col for col in required_cols if col not in df.columns]
@@ -108,7 +122,9 @@ def _infer_source_name(path: str | Path) -> str:
     return stem or 'forecast'
 
 
-def _prepare_forecasts(df: pd.DataFrame, source_name: str | None = None) -> pd.DataFrame:
+    The current CSV uses forecast_version, so we map that to forecast_source
+    for downstream comparison and reporting.
+    """
     df = df.copy()
 
     required_cols = {'question_id', 'option', 'probability'}
@@ -177,10 +193,16 @@ def build_distribution(group: pd.DataFrame) -> Tuple[list[str], list[float]]:
     if total <= 0:
         raise ValueError('Forecast probabilities must sum to a positive value.')
     probabilities = [p / total for p in probabilities]
+
     return options, probabilities
 
 
 def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """
+    Score each question/source pair and return:
+    - a question-level metrics dataframe
+    - a skipped-questions dataframe
+    """
     results = []
     skipped = []
 
@@ -201,7 +223,11 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
             continue
 
         options, probabilities = build_distribution(group)
-        resolved_option, skip_reason = _get_resolved_option_for_group(group=group, question_row=question_row)
+        resolved_option, skip_reason = _get_resolved_option_for_group(
+            group=group,
+            question_row=question_row,
+        )
+
         if skip_reason:
             skipped.append(
                 {
@@ -227,13 +253,10 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
             continue
 
         true_index = options.index(resolved_option)
+
         brier = multiclass_brier_score(probabilities, true_index)
         logscore = log_score(probabilities, true_index)
         acc = accuracy(probabilities, true_index)
-        rps = ranked_probability_score(probabilities, true_index)
-        top_prob = top_probability(probabilities)
-        norm_entropy = normalized_entropy(probabilities)
-        true_prob = true_probability(probabilities, true_index)
 
         results.append(
             {
@@ -255,14 +278,20 @@ def score_all_forecasts(merged_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataF
             }
         )
 
-    return pd.DataFrame(results), pd.DataFrame(skipped)
+    results_df = pd.DataFrame(results)
+    skipped_df = pd.DataFrame(skipped)
 
 
 def run_evaluation(
     forecasts_path: str | Sequence[str] | None = None,
     questions_path: str = str(BASE_DIR / 'bioscancast_questions_resolved.csv'),
 ) -> None:
-    """End-to-end evaluation entry point."""
+    """
+    End-to-end evaluation entry point.
+
+    This reads the CSV files, scores all resolvable forecasts, writes metrics,
+    and generates a few basic plots.
+    """
     _ensure_output_dir()
 
     if forecasts_path is None:
@@ -283,13 +312,6 @@ def run_evaluation(
     if not unresolved_questions.empty:
         unresolved_questions.to_csv(OUTPUT_DIR / 'unresolved_questions.csv', index=False)
 
-    forecast_frames = []
-    for forecast_path in forecast_paths:
-        source_name = _infer_source_name(forecast_path)
-        forecast_df = _prepare_forecasts(load_forecasts(forecast_path), source_name=source_name)
-        forecast_frames.append(forecast_df)
-
-    forecasts = pd.concat(forecast_frames, ignore_index=True)
     merged = forecasts.merge(
         resolved_questions,
         on='question_id',
