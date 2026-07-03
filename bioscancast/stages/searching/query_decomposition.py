@@ -70,13 +70,17 @@ def route_sources(
     question: ForecastQuestion,
     llm_client: LLMClient,
 ) -> str:
-    response = llm_client.generate_json(
-        system=SOURCE_ROUTE_PROMPT,
-        user=_build_classify_user_payload(question),
-        schema=SOURCE_ROUTE_SCHEMA,
-        model=DEFAULT_QUERY_MODEL,
-        max_tokens=DEFAULT_SOURCE_ROUTE_MAX_TOKENS,
-    )
+    try:
+        response = llm_client.generate_json(
+            system=SOURCE_ROUTE_PROMPT,
+            user=_build_classify_user_payload(question),
+            schema=SOURCE_ROUTE_SCHEMA,
+            model=DEFAULT_QUERY_MODEL,
+            max_tokens=DEFAULT_SOURCE_ROUTE_MAX_TOKENS,
+        )
+    except Exception:
+        logger.exception("Source routing failed, defaulting to 'general_sources'")
+        return "general_sources"
 
     return response.content.get("route", "general_sources")
 

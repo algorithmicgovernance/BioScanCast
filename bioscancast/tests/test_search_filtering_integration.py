@@ -7,6 +7,8 @@ FilteringPipeline input — no manually constructed SearchResult objects.
 from collections import Counter
 from typing import List
 
+import pytest
+
 from bioscancast.stages.filtering.config import FILTER_CONFIG
 from bioscancast.stages.filtering.models import FilteredDocument, ForecastQuestion
 from bioscancast.stages.filtering.pipeline import FilteringPipeline
@@ -14,6 +16,17 @@ from bioscancast.stages.searching.backends.base import RawSearchResult
 from bioscancast.stages.searching.pipeline import SearchStagePipeline
 
 from bioscancast.tests.test_search_pipeline import FakeLLMClient
+
+
+@pytest.fixture(autouse=True)
+def _stub_source_lookup_wayback(monkeypatch):
+    """Injected YAML sources call closest_snapshot_before in historical mode;
+    stub it so these tests never hit the live archive.org network. Returning
+    None suppresses the injected source (the 'no pre-cutoff snapshot' path)."""
+    monkeypatch.setattr(
+        "bioscancast.stages.searching.source_lookup.closest_snapshot_before",
+        lambda *args, **kwargs: None,
+    )
 
 
 class RealisticFakeSearchBackend:
@@ -151,13 +164,22 @@ class TestSearchToFilteringContract:
             )
 
     def test_domain_cap_respected(self):
-        """No domain appears more than max_docs_per_domain times."""
+        """No domain exceeds max_docs_per_domain among organic docs.
+
+        Curated dashboard injections are exempt from the cap by design (see
+        ``cap_per_domain_and_type``: ``dashboard_lookup_bypass`` docs are always
+        kept and don't consume a slot), so they're excluded from this count.
+        """
         _, docs = _run_end_to_end()
 
         cap = FILTER_CONFIG["max_docs_per_domain"]
-        domain_counts = Counter(d.domain for d in docs)
+        domain_counts = Counter(
+            d.domain
+            for d in docs
+            if "dashboard_lookup_bypass" not in (d.selection_reasons or [])
+        )
         for domain, count in domain_counts.items():
-            assert count <= cap, f"Domain {domain} has {count} docs, exceeds cap of {cap}"
+            assert count <= cap, f"Domain {domain} has {count} organic docs, exceeds cap of {cap}"
 
     def test_aggregator_results_handled(self):
         """Aggregator results (e.g. Metaculus) don't crash the pipeline."""

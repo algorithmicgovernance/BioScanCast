@@ -39,8 +39,8 @@ try:
 except ImportError:
     pass
 
-from bioscancast.statesfiltering.models import ForecastQuestion
-from bioscancast.llm.client import OpenAIClient
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.llm.openai_client import OpenAILLMClient as OpenAIClient
 from bioscancast.stages.searching.backends.tavily_backend import TavilyBackend
 from bioscancast.stages.searching.pipeline import SearchStagePipeline
 

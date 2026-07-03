@@ -7,12 +7,7 @@ re-rank boosts, not hard cuts.
 
 from __future__ import annotations
 
-import os
-import sys
 from typing import TYPE_CHECKING, Optional
-
-# Add project root to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from bioscancast.schemas import Document, DocumentChunk
 from bioscancast.stages.filtering.models import ForecastQuestion

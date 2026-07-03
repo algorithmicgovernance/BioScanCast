@@ -22,7 +22,7 @@ class ExtractionPipeline:
     """Orchestrates document fetching, parsing, and chunk normalization.
 
     ``as_of_date`` opts the fetcher into Wayback-rewrite mode. See
-    ``bioscancast.extraction.fetcher.fetch`` for the strategy semantics
+    ``bioscancast.stages.extraction.fetcher.fetch`` for the strategy semantics
     (live / wayback / wayback_fallback_to_live). The resulting strategy
     and snapshot timestamp are copied onto each Document for audit.
     """

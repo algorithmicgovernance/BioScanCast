@@ -1,10 +1,17 @@
 from datetime import datetime, timezone
 
 from bioscancast.stages.filtering.models import ForecastQuestion
-from bioscancast.stages.filtering.models import ForecastQuestion
-from bioscancast.stages.searching.source_lookup import lookup_yaml_sources
+from bioscancast.stages.searching.source_lookup import (
+    lookup_yaml_sources,
+    _resolve_pathogen_key,
+    _load_sources_yaml,
+)
 
 
+# The YAML-backed registry makes the caller supply the *route* (family);
+# pathogen -> pathogen-key within that route is resolved by
+# _resolve_pathogen_key. Routes used below: h5n1/"bird flu" -> respiratory,
+# mpox/monkeypox -> pox_re_emerging_viruses, ebola/marburg -> hemorrhagic.
 def _make_question(**overrides):
     defaults = {
         "id": "Q001",
@@ -15,10 +22,10 @@ def _make_question(**overrides):
     return ForecastQuestion(**defaults)
 
 
-class TestDashboardLookup:
+class TestYamlSourceLookup:
     def test_known_pathogen_returns_results(self):
         q = _make_question(pathogen="h5n1")
-        results = lookup_yaml_sources(q, "specific_pathogen_sources")
+        results = lookup_yaml_sources(q, "respiratory")
         assert len(results) > 0
         for r in results:
             assert r.retrieval_reason == "dashboard_lookup"
@@ -29,44 +36,64 @@ class TestDashboardLookup:
 
     def test_mpox_returns_results(self):
         q = _make_question(pathogen="mpox")
-        results = lookup_dashboards(q)
+        results = lookup_yaml_sources(q, "pox_re_emerging_viruses")
         assert len(results) > 0
 
-    def test_unknown_pathogen_returns_empty(self):
+    def test_unknown_pathogen_falls_back_to_family(self):
+        # An unrecognised pathogen under a family route falls back to the whole
+        # family (see _resolve_entries). Intentional best-effort behaviour;
+        # flagged for review in the route-gating follow-up issue.
         q = _make_question(pathogen="unknownvirus123")
-        results = lookup_dashboards(q)
-        assert results == []
+        results = lookup_yaml_sources(q, "hemorrhagic")
+        assert len(results) > 0
 
     def test_no_pathogen_returns_empty(self):
+        # No pathogen + a pathogen-specific route yields nothing; only the
+        # general_sources route is pathogen-independent.
         q = _make_question(pathogen=None)
-        results = lookup_dashboards(q)
+        results = lookup_yaml_sources(q, "hemorrhagic")
         assert results == []
+
+    def test_general_sources_route_ignores_pathogen(self):
+        q = _make_question(pathogen=None)
+        results = lookup_yaml_sources(q, "general_sources")
+        assert len(results) > 0
 
     def test_case_insensitive(self):
         q = _make_question(pathogen="H5N1")
-        results = lookup_dashboards(q)
+        results = lookup_yaml_sources(q, "respiratory")
         assert len(results) > 0
 
     def test_multiword_pathogen_routes_via_substring(self):
-        # CSV-natural "Marburg Virus Disease" -> pathogen "marburg virus disease"
-        # must still route to the "marburg" dashboard key.
-        canonical = lookup_dashboards(_make_question(pathogen="marburg"))
-        multiword = lookup_dashboards(_make_question(pathogen="marburg virus disease"))
+        # "Marburg Virus Disease" -> pathogen "marburg virus disease" must still
+        # resolve to the "marburg" key within the hemorrhagic family.
+        canonical = lookup_yaml_sources(
+            _make_question(pathogen="marburg"), "hemorrhagic"
+        )
+        multiword = lookup_yaml_sources(
+            _make_question(pathogen="marburg virus disease"), "hemorrhagic"
+        )
         assert len(multiword) > 0
         assert [r.url for r in multiword] == [r.url for r in canonical]
 
     def test_alias_routes_to_canonical(self):
         # "monkeypox" -> "mpox"; "bird flu" -> "h5n1".
-        assert len(lookup_dashboards(_make_question(pathogen="monkeypox"))) > 0
-        assert (
-            [r.url for r in lookup_dashboards(_make_question(pathogen="monkeypox"))]
-            == [r.url for r in lookup_dashboards(_make_question(pathogen="mpox"))]
+        monkeypox = lookup_yaml_sources(
+            _make_question(pathogen="monkeypox"), "pox_re_emerging_viruses"
         )
-        assert len(lookup_dashboards(_make_question(pathogen="bird flu"))) > 0
+        mpox = lookup_yaml_sources(
+            _make_question(pathogen="mpox"), "pox_re_emerging_viruses"
+        )
+        assert len(monkeypox) > 0
+        assert [r.url for r in monkeypox] == [r.url for r in mpox]
+        assert (
+            len(lookup_yaml_sources(_make_question(pathogen="bird flu"), "respiratory"))
+            > 0
+        )
 
     def test_results_have_required_fields(self):
         q = _make_question(pathogen="ebola")
-        results = lookup_dashboards(q)
+        results = lookup_yaml_sources(q, "hemorrhagic")
         assert len(results) > 0
         for r in results:
             assert r.url is not None
@@ -76,3 +103,14 @@ class TestDashboardLookup:
             assert 0.0 <= r.domain_score <= 1.0
             assert r.freshness_score == 1.0
             assert r.search_stage_score == 0.0  # computed later by pipeline
+
+
+class TestResolvePathogenKey:
+    def test_exact_alias_and_substring(self):
+        cfg = _load_sources_yaml()
+        respiratory = cfg["specific_pathogen_sources"]["respiratory"]
+        hemorrhagic = cfg["specific_pathogen_sources"]["hemorrhagic"]
+        assert _resolve_pathogen_key("h5n1", respiratory) == "h5n1"
+        assert _resolve_pathogen_key("bird flu", respiratory) == "h5n1"  # alias
+        assert _resolve_pathogen_key("marburg virus disease", hemorrhagic) == "marburg"  # substring
+        assert _resolve_pathogen_key("unknownvirus123", hemorrhagic) is None

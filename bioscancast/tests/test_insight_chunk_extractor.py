@@ -6,7 +6,7 @@ All tests use FakeLLMClient — no network calls, no real OpenAI imports.
 import pytest
 
 from bioscancast.llm.fake_client import FakeLLMClient
-from bioscancast.insight.text_extraction.chunk_extractor import (
+from bioscancast.stages.insight.text_extraction.chunk_extractor import (
     extract_facts_from_chunk,
     _resolve_country_code,
     _normalize_whitespace,
@@ -458,7 +458,7 @@ def test_quote_matches_accepts_real_quotes_with_normalisation_drift(
         # The returned canonical form must itself be a substring of the
         # *normalised* chunk text — that's the invariant the guard
         # guarantees to downstream consumers.
-        from bioscancast.insight.extraction.chunk_extractor import (
+        from bioscancast.stages.insight.text_extraction.chunk_extractor import (
             _normalize_for_match,
             _WRAPPING_PUNCT_RE,
         )

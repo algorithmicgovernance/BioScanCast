@@ -5,10 +5,23 @@ SearchStagePipeline.
 from datetime import datetime, timezone
 from typing import List
 
+import pytest
+
 from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.base import LLMResponse
 from bioscancast.stages.searching.backends.base import RawSearchResult
 from bioscancast.stages.searching.pipeline import SearchStagePipeline
+
+
+@pytest.fixture(autouse=True)
+def _stub_source_lookup_wayback(monkeypatch):
+    """Injected YAML sources call closest_snapshot_before in historical mode;
+    stub it so these tests never hit the live archive.org network. Returning
+    None suppresses the injected source (the 'no pre-cutoff snapshot' path)."""
+    monkeypatch.setattr(
+        "bioscancast.stages.searching.source_lookup.closest_snapshot_before",
+        lambda *args, **kwargs: None,
+    )
 
 
 def _resp(content: dict) -> LLMResponse:

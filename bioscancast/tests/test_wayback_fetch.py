@@ -1,6 +1,6 @@
 """Offline tests for the Wayback rewrite in the extraction fetcher.
 
-The patching reaches into ``bioscancast.extraction.fetcher.closest_snapshot_before``
+The patching reaches into ``bioscancast.stages.extraction.fetcher.closest_snapshot_before``
 (the symbol imported at module load) and ``curl_requests.get``, never touching
 the network. There is also a ``@pytest.mark.live`` smoke test for hitting
 Wayback for real.
@@ -31,14 +31,14 @@ class _FakeResponse:
 
 def _patch_curl(body: bytes, url: str = "https://example.com/page"):
     return patch(
-        "bioscancast.extraction.fetcher.curl_requests.get",
+        "bioscancast.stages.extraction.fetcher.curl_requests.get",
         return_value=_FakeResponse(body=body, url=url),
     )
 
 
 def _patch_snapshot(value):
     return patch(
-        "bioscancast.extraction.fetcher.closest_snapshot_before",
+        "bioscancast.stages.extraction.fetcher.closest_snapshot_before",
         return_value=value,
     )
 
@@ -91,7 +91,7 @@ class TestWaybackRewrite:
             return r
 
         with _patch_snapshot((snap_dt, snap_url)), patch(
-            "bioscancast.extraction.fetcher.curl_requests.get", side_effect=side_effect
+            "bioscancast.stages.extraction.fetcher.curl_requests.get", side_effect=side_effect
         ):
             result = fetch(
                 "https://example.com/page",

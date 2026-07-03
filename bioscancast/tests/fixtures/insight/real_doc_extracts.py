@@ -179,7 +179,15 @@ def _make_fake_fetch(file_path: Path, content_type: str):
     """Return a fetch() replacement that reads on-disk bytes — no network."""
     payload = file_path.read_bytes()
 
-    def fake_fetch(url, *, config=None, as_of_date=None):
+    def fake_fetch(
+        url,
+        *,
+        config=None,
+        as_of_date=None,
+        source_id=None,
+        region=None,
+        question_text=None,
+    ):
         return FetchResult(
             url=url,
             final_url=url,
@@ -208,7 +216,7 @@ def extract_real_documents() -> dict[str, Document]:
         if not path.exists():
             raise FileNotFoundError(f"Missing source file: {path}")
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             _make_fake_fetch(path, src["content_type"]),
         ):
             out[src["name"]] = pipeline.extract_one(make_filtered_doc(src))

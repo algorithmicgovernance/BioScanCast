@@ -78,11 +78,6 @@ specific_pathogen_sources:
         url: "https://www.cdc.gov/bird-flu/situation-summary/"
         geography: "Global"
 
-      - id: "who_avian_flu"
-        name: "WHO Avian Influenza"
-        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza"
-        geography: "Global"
-
     covid-19:
       - id: "ourworldindata_covid"
         name: "Our World in Data - COVID-19"
@@ -99,23 +94,13 @@ specific_pathogen_sources:
         url: "https://www.who.int/tools/flunet"
         geography: "Global"
 
-      - id: "cdc_covid"
-        name: "CDC COVID-19"
-        url: "https://www.cdc.gov/covid/php/surveillance/index.html"
+      - id: "cdc_fluview"
+        name: "CDC FluView"
+        url: "https://www.cdc.gov/fluview/index.html"
         geography: "Global"
 
   hemorrhagic:
     ebola:
-      - id: "who_ebola"
-        name: "WHO Ebola"
-        url: "https://www.afro.who.int/health-topics/ebola-virus-disease"
-        geography: "Global"
-
-      - id: "cdc_ebola"
-        name: "CDC Ebola"
-        url: "https://www.cdc.gov/ebola/index.html"
-        geography: "Global"
-
       - id: "who_ebola"
         name: "WHO Ebola"
         url: "https://www.afro.who.int/health-topics/ebola-virus-disease"

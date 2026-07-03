@@ -19,16 +19,11 @@ After all documents:
 
 from __future__ import annotations
 
-import os
-import sys
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional
-
-# Add project root to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from bioscancast.schemas import Document, InsightRecord
 from bioscancast.stages.filtering.models import ForecastQuestion

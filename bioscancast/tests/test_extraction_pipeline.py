@@ -1,4 +1,4 @@
-"""End-to-end tests for bioscancast.extraction.pipeline with monkeypatched fetcher."""
+"""End-to-end tests for bioscancast.stages.extraction.pipeline with monkeypatched fetcher."""
 
 from __future__ import annotations
 
@@ -74,7 +74,15 @@ def _make_fetch_result(
 def _fake_fetch_factory(mapping: dict[str, FetchResult]):
     """Return a fetch function that looks up results by URL."""
 
-    def fake_fetch(url, *, config=None, as_of_date=None):
+    def fake_fetch(
+        url,
+        *,
+        config=None,
+        as_of_date=None,
+        source_id=None,
+        region=None,
+        question_text=None,
+    ):
         if url in mapping:
             return mapping[url]
         return _make_fetch_result(url, b"", error="not_found")
@@ -100,7 +108,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -129,7 +137,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -161,7 +169,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -195,7 +203,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -222,7 +230,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -245,7 +253,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -266,7 +274,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -288,7 +296,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -309,7 +317,7 @@ class TestExtractionPipeline:
         }
 
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             side_effect=_fake_fetch_factory(fetch_map),
         ):
             pipeline = ExtractionPipeline()
@@ -329,7 +337,7 @@ class TestEmptyChunkHandling:
     into a flat text representation. See pipeline._drop_or_repair_empty_chunks."""
 
     def test_empty_prose_chunk_is_dropped(self):
-        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.stages.extraction.pipeline import _drop_or_repair_empty_chunks
         from bioscancast.schemas.document import DocumentChunk
 
         chunks = [
@@ -354,7 +362,7 @@ class TestEmptyChunkHandling:
         assert [c.chunk_id for c in out] == ["c0", "c3"]
 
     def test_empty_text_table_chunk_with_table_data_is_repaired(self):
-        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.stages.extraction.pipeline import _drop_or_repair_empty_chunks
         from bioscancast.schemas.document import DocumentChunk
 
         table_data = [
@@ -380,7 +388,7 @@ class TestEmptyChunkHandling:
         assert out[0].token_count > 0
 
     def test_empty_table_chunk_without_table_data_is_dropped(self):
-        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.stages.extraction.pipeline import _drop_or_repair_empty_chunks
         from bioscancast.schemas.document import DocumentChunk
 
         chunks = [
@@ -397,7 +405,7 @@ class TestEmptyChunkHandling:
         assert out == []
 
     def test_empty_table_chunk_with_only_empty_rows_is_dropped(self):
-        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.stages.extraction.pipeline import _drop_or_repair_empty_chunks
         from bioscancast.schemas.document import DocumentChunk
 
         chunks = [
@@ -412,7 +420,7 @@ class TestEmptyChunkHandling:
 
     def test_table_chunk_with_text_passes_through_unchanged(self):
         """A table chunk that already has text is left alone."""
-        from bioscancast.extraction.pipeline import _drop_or_repair_empty_chunks
+        from bioscancast.stages.extraction.pipeline import _drop_or_repair_empty_chunks
         from bioscancast.schemas.document import DocumentChunk
 
         chunks = [

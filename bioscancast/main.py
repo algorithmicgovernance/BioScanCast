@@ -52,7 +52,7 @@ from bioscancast.stages.insight.config import InsightConfig
 from bioscancast.stages.insight.pipeline import InsightPipeline, InsightRunResult
 
 
-DEFAULT_CSV = "bioscancast/stages/eval_stage/bioscancast_questions.csv"
+DEFAULT_CSV = "bioscancast/stages/evaluation/bioscancast_questions.csv"
 DEFAULT_OUT_ROOT = "data/runs"
 
 logger = logging.getLogger("bioscancast.main")
@@ -275,6 +275,13 @@ def _estimate_total_cost(per_model: dict[str, dict[str, int]]) -> tuple[float, l
 
 def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     csv_path = Path(args.csv)
+
+    for var in ("OPENAI_API_KEY", "TAVILY_API_KEY"):
+        if not os.environ.get(var):
+            raise RuntimeError(
+                f"Missing required environment variable {var}. "
+                f"Set it in your shell or in a .env file."
+            )
 
     if args.question is None:
         if not csv_path.exists():

@@ -1,4 +1,4 @@
-"""Tests for bioscancast.extraction.parsers.pdf_parser using fixture files."""
+"""Tests for bioscancast.stages.extraction.parsers.pdf_parser using fixture files."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from bioscancast.extraction.parsers.pdf_parser import PdfParser
+from bioscancast.stages.extraction.parsers.pdf_parser import PdfParser
 
 FIXTURES = Path(__file__).parent / "fixtures" / "extraction"
 
