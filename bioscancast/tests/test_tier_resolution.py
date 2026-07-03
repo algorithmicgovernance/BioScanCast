@@ -1,4 +1,4 @@
-from bioscancast.stages.search_stage.tier_resolution import (
+from bioscancast.stages.searching.tier_resolution import (
     is_aggregator_domain,
     is_official_domain,
     resolve_tier,

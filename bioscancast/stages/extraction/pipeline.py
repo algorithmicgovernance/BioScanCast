@@ -5,7 +5,7 @@ import re
 from datetime import datetime, timezone
 from typing import List, Optional
 
-from bioscancast.filtering.models import FilteredDocument
+from bioscancast.stages.filtering.models import FilteredDocument
 from bioscancast.schemas.document import Document, DocumentChunk
 
 from .chunking import normalize_chunks
@@ -22,7 +22,7 @@ class ExtractionPipeline:
     """Orchestrates document fetching, parsing, and chunk normalization.
 
     ``as_of_date`` opts the fetcher into Wayback-rewrite mode. See
-    ``bioscancast.extraction.fetcher.fetch`` for the strategy semantics
+    ``bioscancast.stages.extraction.fetcher.fetch`` for the strategy semantics
     (live / wayback / wayback_fallback_to_live). The resulting strategy
     and snapshot timestamp are copied onto each Document for audit.
     """
@@ -70,6 +70,9 @@ class ExtractionPipeline:
             filtered_doc.url,
             config=self._config,
             as_of_date=self._as_of_date,
+            source_id=filtered_doc.source_id,
+            region=filtered_doc.region,
+            question_text=filtered_doc.question_text,
         )
 
         if fetch_result.error or fetch_result.content_bytes is None:

@@ -1,4 +1,4 @@
-"""Tests for bioscancast.extraction.docling_refiner.
+"""Tests for bioscancast.stages.extraction.docling_refiner.
 
 Docling is heavyweight (~1.5 GB RAM and ~10-30 s model load on construction).
 Every test in this module uses a fake converter injected into the refiner,
@@ -13,15 +13,15 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.docling_refiner import (
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.docling_refiner import (
     DoclingTableRefiner,
     _broken_table_reasons,
     _docling_table_to_rows,
     _merge_docling_tables_into_parsed,
     _should_refine_by_url,
 )
-from bioscancast.extraction.parsers.base import ParsedContent, SectionContent
+from bioscancast.stages.extraction.parsers.base import ParsedContent, SectionContent
 
 
 # ---------------------------------------------------------------------------
@@ -596,7 +596,7 @@ class TestDoclingTableRefinerEndToEnd:
 def test_disabling_flag_skips_docling_construction(monkeypatch):
     """With enable_docling_refiner=False the pipeline must never instantiate
     a refiner (and therefore never touch any Docling import)."""
-    from bioscancast.extraction.pipeline import ExtractionPipeline
+    from bioscancast.stages.extraction.pipeline import ExtractionPipeline
 
     pipeline = ExtractionPipeline(
         config=ExtractionConfig(enable_docling_refiner=False)
@@ -606,7 +606,7 @@ def test_disabling_flag_skips_docling_construction(monkeypatch):
         raise AssertionError("DoclingTableRefiner should not be constructed")
 
     monkeypatch.setattr(
-        "bioscancast.extraction.docling_refiner.DoclingTableRefiner.__init__",
+        "bioscancast.stages.extraction.docling_refiner.DoclingTableRefiner.__init__",
         _fail,
     )
     # Force the pipeline's path that decides whether to call the refiner.

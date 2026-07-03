@@ -1,0 +1,39 @@
+[
+  {
+    "id": "doc-r1",
+    "result_id": "r1",
+    "source_url": "https://who.int/update",
+    "domain": "who.int",
+    "fetched_at": "2026-06-24 15:59:03.968375+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/update",
+    "title": "404",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 168,
+    "token_count": 35,
+    "error_message": null,
+    "http_status": 404,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-r1-c0",
+        "chunk_index": 0,
+        "text": "The page or file you are trying to access cannot be found. This is because the web address is incorrect or the file has been moved or deleted.\nPlease try the following:",
+        "chunk_type": "prose",
+        "heading": "This page cannot be found",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 35,
+        "extractor": null
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

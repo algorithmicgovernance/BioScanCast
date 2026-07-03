@@ -12,22 +12,27 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from typing import List, Optional
 
-from bioscancast.filtering.config import FILTER_CONFIG
-from bioscancast.filtering.heuristics import build_query_terms
-from bioscancast.filtering.models import ForecastQuestion, SearchResult
-from bioscancast.filtering.utils import keyword_overlap_score
 from bioscancast.llm.base import LLMClient
-from bioscancast.stages.search_stage.backends.base import RawSearchResult, SearchBackend
-from bioscancast.stages.search_stage.cache import SearchCache
-from bioscancast.stages.search_stage.dashboard_lookup import lookup_dashboards
-from bioscancast.stages.search_stage.date_recovery import recover_published_date
-from bioscancast.stages.search_stage.query_decomposition import SubQuery, decompose_question
-from bioscancast.stages.search_stage.tier_resolution import (
+
+from bioscancast.stages.filtering.config import FILTER_CONFIG
+from bioscancast.stages.filtering.heuristics import build_query_terms
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.stages.filtering.utils import keyword_overlap_score
+from bioscancast.stages.searching.backends.base import RawSearchResult, SearchBackend
+from bioscancast.stages.searching.cache import SearchCache
+from bioscancast.stages.searching.source_lookup import lookup_yaml_sources
+from bioscancast.stages.searching.date_recovery import recover_published_date
+from bioscancast.stages.searching.query_decomposition import (
+    SubQuery,
+    decompose_question,
+    route_sources,
+)
+from bioscancast.stages.searching.tier_resolution import (
     is_aggregator_domain,
     is_official_domain,
     resolve_tier,
 )
-from bioscancast.stages.search_stage.url_normalization import extract_domain, normalize_url
+from bioscancast.stages.searching.url_normalization import extract_domain, normalize_url
 
 logger = logging.getLogger(__name__)
 
@@ -100,7 +105,7 @@ _SCORE_W_RANK = 0.15
 def _compute_relevance(result: SearchResult, question: ForecastQuestion) -> float:
     """Keyword overlap of the result against the question terms.
 
-    Mirrors ``bioscancast.filtering.heuristics.compute_heuristic_relevance`` so
+    Mirrors ``bioscancast.stages.filtering.heuristics.compute_heuristic_relevance`` so
     the search stage and the filter stage use the same relevance signal.
     """
     text = f"{result.title} {result.snippet} {result.domain}"
@@ -220,19 +225,24 @@ class SearchStagePipeline:
             self._llm,
             historical_roleplay=self._historical_roleplay,
         )
-        logger.info("Decomposed into %d sub-queries", len(sub_queries))
 
-        # 2. Inject dashboard lookups
-        dashboard_results = lookup_dashboards(question)
-        logger.info("Dashboard lookup produced %d results", len(dashboard_results))
+        source_route = route_sources(question, self._llm)
 
-        # 3. Execute initial search round
-        all_results: list[SearchResult] = list(dashboard_results)
-        seen_canonical: set[str] = set()
-        for r in dashboard_results:
-            if r.canonical_url:
-                seen_canonical.add(r.canonical_url)
+        logger.info(
+            "Decomposed into %d sub-queries (route=%s)",
+            len(sub_queries),
+            source_route,
+        )
 
+        # 2. Inject YAML lookups
+        yaml_results = lookup_yaml_sources(question, source_route)
+
+        logger.info("YAML lookup produced %d results", len(yaml_results))
+
+        all_results: list[SearchResult] = list(yaml_results)
+        seen_canonical: set[str] = {
+            r.canonical_url for r in all_results if r.canonical_url
+        }
         all_results, seen_canonical = self._search_round(
             sub_queries,
             question,

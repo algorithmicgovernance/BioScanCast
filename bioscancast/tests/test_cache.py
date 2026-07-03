@@ -3,8 +3,8 @@ import tempfile
 from datetime import datetime, timedelta, timezone
 from unittest.mock import patch
 
-from bioscancast.stages.search_stage.backends.base import RawSearchResult
-from bioscancast.stages.search_stage.cache import SearchCache
+from bioscancast.stages.searching.backends.base import RawSearchResult
+from bioscancast.stages.searching.cache import SearchCache
 
 
 def _make_results():
@@ -73,7 +73,7 @@ class TestSearchCache:
 
                 # Mock datetime to simulate 25 hours passing
                 future = datetime.now(timezone.utc) + timedelta(hours=25)
-                with patch("bioscancast.stages.search_stage.cache.datetime") as mock_dt:
+                with patch("bioscancast.stages.searching.cache.datetime") as mock_dt:
                     mock_dt.now.return_value = future
                     mock_dt.fromisoformat = datetime.fromisoformat
                     mock_dt.side_effect = lambda *a, **kw: datetime(*a, **kw)

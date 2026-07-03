@@ -16,9 +16,9 @@ from __future__ import annotations
 
 import pytest
 
-from bioscancast.filtering.models import ForecastQuestion
-from bioscancast.insight.config import InsightConfig
-from bioscancast.insight.pipeline import InsightPipeline
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.insight.config import InsightConfig
+from bioscancast.stages.insight.pipeline import InsightPipeline
 from bioscancast.schemas import Document
 from bioscancast.tests.fixtures.insight.real_doc_extracts import (
     HallucinatingFakeLLM,

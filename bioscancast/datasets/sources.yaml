@@ -1,0 +1,169 @@
+general_sources:
+    - id: "who_don"
+      name: "WHO Disease Outbreak News"
+      url: "https://www.who.int/emergencies/disease-outbreak-news"
+      geography: "Global"
+
+    - id: "cdc_outbreaks"
+      name: "CDC Current Outbreaks"
+      url: "https://www.cdc.gov/outbreaks/index.html"
+      geography: "Global"
+
+    - id: "africa_cdc_ei_weekly"
+      name: "Africa CDC Epidemic Intelligence Weekly Report"
+      url: "https://africacdc.org/download/africa-cdc-epidemic-intelligence-weekly-report-april-2026/"
+      geography: "Africa"
+
+    - id: "paho_epidemiological_alerts"
+      name: "PAHO Epidemiological Alerts and Updates"
+      url: "https://www.paho.org/en/epidemiological-alerts-and-updates"
+      geography: "Americas"
+
+    - id: "ukhsa_outbreaks_under_monitoring"
+      name: "UKHSA Outbreaks under monitoring"
+      url: "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026"
+      geography: "Global"
+
+    - id: "ecdc_weekly_threat_reports"
+      name: "ECDC Weekly Threat Reports"
+      url: "https://www.ecdc.europa.eu/en/publications-data/monitoring/weekly-threats-reports"
+      geography: "Europe"
+
+    - id: "promed"
+      name: "ProMED"
+      url: "https://promedmail.org/"
+      geography: "Global"
+
+    - id: "healthmap"
+      name: "HealthMap"
+      url: "https://www.healthmap.org/"
+      geography: "Global"
+      tier: 3
+
+    - id: "woah_wahis"
+      name: "WOAH WAHIS"
+      url: "https://wahis.woah.org/"
+      geography: "Global"
+
+    - id: "fao_empres_i_plus"
+      name: "FAO EMPRES-i+"
+      url: "https://empres-i.apps.fao.org/"
+      geography: "Global"
+
+    - id: "glews_plus"
+      name: "GLEWS+"
+      url: "https://www.fao.org/one-health/highlights/the-global-early-warning-system/en"
+      geography: "Global"
+
+    - id: "who_fluid"
+      name: "WHO FluID"
+      url: "https://www.who.int/teams/global-influenza-programme/surveillance-and-monitoring/fluid"
+      geography: "Global"
+
+    - id: "nextstrain"
+      name: "Nextstrain"
+      url: "https://nextstrain.org/"
+      geography: "Global"
+
+specific_pathogen_sources:
+  respiratory:
+    h5n1:
+      - id: "who_h5n1"
+        name: "WHO H5N1 Situation Updates"
+        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza"
+        geography: "Global"
+
+      - id: "cdc_h5n1"
+        name: "CDC H5N1 Situation Summary"
+        url: "https://www.cdc.gov/bird-flu/situation-summary/"
+        geography: "Global"
+
+    covid-19:
+      - id: "ourworldindata_covid"
+        name: "Our World in Data - COVID-19"
+        url: "https://ourworldindata.org/coronavirus"
+        geography: "Global"
+      - id: "cdc_covid"
+        name: "CDC COVID-19"
+        url: "https://www.cdc.gov/covid/php/surveillance/index.html"
+        geography: "Global"
+
+    influenza:
+      - id: "who_flunet"
+        name: "WHO FluNet"
+        url: "https://www.who.int/tools/flunet"
+        geography: "Global"
+
+      - id: "cdc_fluview"
+        name: "CDC FluView"
+        url: "https://www.cdc.gov/fluview/index.html"
+        geography: "Global"
+
+  hemorrhagic:
+    ebola:
+      - id: "who_ebola"
+        name: "WHO Ebola"
+        url: "https://www.afro.who.int/health-topics/ebola-virus-disease"
+        geography: "Global"
+
+      - id: "cdc_ebola"
+        name: "CDC Ebola"
+        url: "https://www.cdc.gov/ebola/index.html"
+        geography: "Global"
+
+    marburg:
+      - id: "who_marburg"
+        name: "WHO Marburg"
+        url: "https://www.who.int/news-room/fact-sheets/detail/marburg-virus-disease"
+        geography: "Global"
+
+      - id: "cdc_marburg"
+        name: "CDC Marburg"
+        url: "https://www.cdc.gov/marburg/index.html"
+        geography: "Global"
+
+  pox_re_emerging_viruses:
+    mpox:
+      - id: "who_mpox"
+        name: "WHO MPOX"
+        url: "https://www.who.int/health-topics/mpox"
+        geography: "Global"
+
+      - id: "ourworldindata_mpox"
+        name: "Our World in Data - MPOX"
+        url: "https://ourworldindata.org/mpox"
+        geography: "Global"
+
+      - id: "cdc_mpox"
+        name: "CDC MPOX"
+        url: "https://www.cdc.gov/mpox/data-research/index.html"
+        geography: "Global"
+
+      - id: "ecdc_mpox"
+        name: "ECDC MPOX"
+        url: "https://www.ecdc.europa.eu/en/mpox-worldwide-overview"
+        geography: "Global"
+
+      - id: "who_mpox_rshiny"
+        name: "World Health Organization - MPOX"
+        url: "https://worldhealthorg.shinyapps.io/mpx_global/"
+        geography: "Global"
+
+      - id: "ecdc_mpox_monthly"
+        name: "ECDC MPOX Monthly Report"
+        url: "https://mpox-monthly.ecdc.europa.eu/"
+        geography: "Europe"
+
+      - id: "paho_mpox"
+        name: "PAHO MPOX"
+        url: "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D="
+        geography: "Americas"
+
+  vector_borne: []
+
+  animal_spillover:
+    nipah:
+      - id: "who_nipah"
+        name: "WHO Nipah"
+        url: "https://www.who.int/health-topics/nipah-virus-infection"
+        geography: "Global"

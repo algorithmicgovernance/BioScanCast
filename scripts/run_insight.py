@@ -9,15 +9,19 @@ independently of the extraction stage.
 
 from __future__ import annotations
 
-import json
+import os
 import sys
+import json
 from dataclasses import asdict
 from datetime import datetime
 
+# Add project root to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
 # Use the real client (requires openai package and API key)
 from bioscancast.llm.openai_client import OpenAILLMClient
-from bioscancast.insight.pipeline import InsightPipeline
-from bioscancast.insight.config import InsightConfig
+from bioscancast.stages.insight.pipeline import InsightPipeline
+from bioscancast.stages.insight.config import InsightConfig
 
 # Synthetic test data
 from bioscancast.tests.fixtures.insight.synthetic_documents import (

@@ -30,7 +30,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Iterable, List, Optional
 
-from bioscancast.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
 from bioscancast.llm.base import LLMClient
 
 logger = logging.getLogger(__name__)

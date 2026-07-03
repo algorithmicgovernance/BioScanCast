@@ -8,14 +8,18 @@ Without --input, runs against a handful of built-in sample URLs.
 
 from __future__ import annotations
 
+import os
+import sys
 import argparse
 import json
-import sys
 from dataclasses import asdict
 from datetime import datetime
 
-from bioscancast.extraction.pipeline import ExtractionPipeline
-from bioscancast.filtering.models import FilteredDocument
+# Add project root to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from bioscancast.stages.extraction.pipeline import ExtractionPipeline
+from bioscancast.stages.filtering.models import FilteredDocument
 
 
 def _build_sample_docs() -> list[FilteredDocument]:

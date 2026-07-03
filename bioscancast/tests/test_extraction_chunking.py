@@ -1,11 +1,11 @@
-"""Tests for bioscancast.extraction.chunking."""
+"""Tests for bioscancast.stages.extraction.chunking."""
 
 from __future__ import annotations
 
 import pytest
 
-from bioscancast.extraction.chunking import normalize_chunks
-from bioscancast.extraction.tokens import approx_token_count
+from bioscancast.stages.extraction.chunking import normalize_chunks
+from bioscancast.stages.extraction.tokens import approx_token_count
 from bioscancast.schemas.document import DocumentChunk
 
 

@@ -37,6 +37,7 @@ def build_filtered_documents(
                 extraction_priority=0,
                 extraction_mode="unknown",
                 expected_value="medium",
+                source_id=result.source_id,
             )
         )
 

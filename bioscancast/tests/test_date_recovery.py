@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 from unittest.mock import patch
 
-from bioscancast.stages.search_stage.date_recovery import (
+from bioscancast.stages.searching.date_recovery import (
     date_from_last_modified,
     date_from_url_slug,
     recover_published_date,
@@ -71,7 +71,7 @@ class TestRecoverPublishedDate:
 
     def test_wayback_used_when_no_slug(self):
         with patch(
-            "bioscancast.stages.search_stage.date_recovery._wayback_first_seen"
+            "bioscancast.stages.searching.date_recovery._wayback_first_seen"
         ) as mock_wb:
             mock_wb.return_value = datetime(2020, 1, 1, tzinfo=timezone.utc)
             dt, source = recover_published_date("https://example.com/about")
@@ -80,7 +80,7 @@ class TestRecoverPublishedDate:
 
     def test_all_strategies_fail(self):
         with patch(
-            "bioscancast.stages.search_stage.date_recovery._wayback_first_seen"
+            "bioscancast.stages.searching.date_recovery._wayback_first_seen"
         ) as mock_wb:
             mock_wb.return_value = None
             dt, source = recover_published_date("https://example.com/about")

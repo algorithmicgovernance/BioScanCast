@@ -485,7 +485,7 @@ Curated source definitions and credibility tiers.
 
 | File                     | Purpose                  |
 | ------------------------ | ------------------------ |
-| `biosecurity_sources.py` | curated source registry  |
+| `sources.yaml.`          | curated source registry  |
 | `source_tiers.py`        | source credibility tiers |
 
 ---
@@ -500,7 +500,7 @@ Operational and smoke-test utilities.
 
 | Script                | Purpose                     |
 | --------------------- | --------------------------- |
-| `run_search_stage.py` | run search stage            |
+| `run_searching.py`    | run search stage            |
 | `run_filtering.py`    | run filtering stage         |
 | `run_extraction.py`   | run extraction stage        |
 | `run_insight.py`      | run insight smoke test      |
@@ -552,7 +552,7 @@ python scripts/run_search_stage.py \
 Optional JSON output:
 
 ```bash
-python scripts/run_search_stage.py \
+python scripts/run_searching.py \
   "How many mpox cases will be reported globally by June 2026?" \
   --pathogen mpox \
   --output data/search_results.json
@@ -645,7 +645,7 @@ Common flags (`--help` for the full list):
 | Flag                                        | Purpose                                                                              |
 | ------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `--as-of-date Y-M-D`                        | Historical-replay cutoff. Omit for live mode.                                        |
-| `--csv PATH`                                | Question CSV. Default: `bioscancast/stages/eval_stage/bioscancast_questions.csv`     |
+| `--csv PATH`                                | Question CSV. Default: `bioscancast/stages/evaluation/bioscancast_questions.csv`     |
 | `--out-root PATH`                           | Run-artifact root directory. Default: `data/runs`                                    |
 | `--run-id NAME`                             | Override the UTC-timestamp run directory name.                                       |
 | `--target-date Y-M-D`                       | Override the CSV-derived target date.                                                |

@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from bioscancast.filtering.config import FILTER_CONFIG
-from bioscancast.filtering.models import ForecastQuestion, SearchResult
-from bioscancast.filtering.pipeline import FilteringPipeline
+from bioscancast.stages.filtering.config import FILTER_CONFIG
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.stages.filtering.pipeline import FilteringPipeline
 
 
 def test_pipeline_keeps_official_result():

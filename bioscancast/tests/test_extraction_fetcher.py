@@ -1,4 +1,4 @@
-"""Tests for bioscancast.extraction.fetcher — all offline via monkeypatching."""
+"""Tests for bioscancast.stages.extraction.fetcher — all offline via monkeypatching."""
 
 from __future__ import annotations
 
@@ -6,8 +6,8 @@ from unittest.mock import patch
 
 import pytest
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.fetcher import fetch, _sniff_content_type
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.fetcher import fetch, _sniff_content_type
 
 
 # ---------------------------------------------------------------------------
@@ -67,7 +67,7 @@ class FakeResponse:
 class TestFetch:
     def _patch_get(self, response: FakeResponse):
         return patch(
-            "bioscancast.extraction.fetcher.curl_requests.get",
+            "bioscancast.stages.extraction.fetcher.curl_requests.get",
             return_value=response,
         )
 
@@ -142,7 +142,7 @@ class TestFetch:
 
     def test_network_error_returns_fetch_result(self):
         with patch(
-            "bioscancast.extraction.fetcher.curl_requests.get",
+            "bioscancast.stages.extraction.fetcher.curl_requests.get",
             side_effect=ConnectionError("Connection refused"),
         ):
             result = fetch("https://unreachable.example.com")
@@ -185,7 +185,7 @@ class TestFetch:
         )
         config = ExtractionConfig(impersonate="firefox")
         with patch(
-            "bioscancast.extraction.fetcher.curl_requests.get",
+            "bioscancast.stages.extraction.fetcher.curl_requests.get",
             return_value=resp,
         ) as mock_get:
             fetch("https://example.com/page", config=config)

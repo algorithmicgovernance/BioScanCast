@@ -10,7 +10,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, Optional
 
 from bioscancast.schemas import Document, DocumentChunk
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 
 from . import bm25 as bm25_mod
 from . import embeddings as emb_mod

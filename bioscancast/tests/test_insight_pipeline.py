@@ -6,8 +6,8 @@ No network calls, no real OpenAI imports.
 
 from bioscancast.llm.fake_client import FakeLLMClient
 from bioscancast.llm.base import LLMResponse
-from bioscancast.insight.pipeline import InsightPipeline, InsightRunResult
-from bioscancast.insight.config import InsightConfig
+from bioscancast.stages.insight.pipeline import InsightPipeline, InsightRunResult
+from bioscancast.stages.insight.config import InsightConfig
 
 from bioscancast.tests.fixtures.insight.synthetic_documents import (
     DOC_WHO_SUDAN,
@@ -239,7 +239,7 @@ def test_dedup_merges_day_precision_with_month_precision_in_same_month():
     """A day-precision fact (2026-01-25) should merge with a month-precision
     fact (2026-01) and the merged record should keep the finer precision."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     day_record = _record(
         "day", event_date=datetime(2026, 1, 25), event_date_precision="day",
@@ -260,7 +260,7 @@ def test_dedup_keeps_month_precision_when_order_reversed():
     """Order of presentation must not change the outcome: month-then-day
     must also merge to the day-precision form."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     month_record = _record(
         "month", event_date=datetime(2026, 1, 1), event_date_precision="month",
@@ -279,7 +279,7 @@ def test_dedup_keeps_month_precision_when_order_reversed():
 def test_dedup_does_not_merge_different_months_at_month_precision():
     """Two month-precision records in different months must stay separate."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     jan = _record(
         "jan", event_date=datetime(2026, 1, 1), event_date_precision="month",
@@ -296,7 +296,7 @@ def test_dedup_does_not_merge_different_days():
     """Two day-precision records on different days must stay separate even
     when they share the same month."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     day5 = _record(
         "day5", event_date=datetime(2026, 1, 5), event_date_precision="day",
@@ -313,7 +313,7 @@ def test_dedup_merges_year_precision_with_day_precision_in_same_year():
     """A year-only fact (2026) should merge with a day-precision fact
     inside that year."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     year = _record(
         "year", event_date=datetime(2026, 1, 1), event_date_precision="year",
@@ -331,7 +331,7 @@ def test_dedup_merges_year_precision_with_day_precision_in_same_year():
 def test_dedup_does_not_merge_different_years():
     """Year-only facts in different years must stay separate."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     y2025 = _record(
         "2025", event_date=datetime(2025, 1, 1), event_date_precision="year",
@@ -348,7 +348,7 @@ def test_dedup_three_way_merge_with_mixed_precisions():
     """Three records, one each at year/month/day precision, all in the
     same time range, should collapse to one with day precision."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     year = _record(
         "year", event_date=datetime(2026, 1, 1), event_date_precision="year",
@@ -374,7 +374,7 @@ def test_dedup_does_not_merge_dated_with_undated():
     """A record with no date and a record with a date should stay
     separate — we don't claim they're about the same event."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     undated = _record("undated")
     dated = _record(
@@ -387,7 +387,7 @@ def test_dedup_does_not_merge_dated_with_undated():
 
 def test_dedup_merges_undated_records():
     """Two records with no date in the same group still merge."""
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     a = _record("a")
     b = _record("b", document_id="doc-other")
@@ -399,7 +399,7 @@ def test_dedup_merges_undated_records():
 def test_dedup_does_not_merge_across_different_locations():
     """Different normalized locations stay in separate groups."""
     from datetime import datetime
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     us = _record(
         "us", location="United States",
@@ -456,7 +456,7 @@ def test_dedup_does_not_merge_when_metric_values_differ_significantly():
     this is almost always a model location-attribution error (e.g.
     regional 9782 cases mistakenly labelled with the DRC's location).
     Live tests on the WHO cholera doc exposed this exact case."""
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     drc_real = _record_with_value("drc", 6543.0)
     africa_misattributed = _record_with_value(
@@ -472,7 +472,7 @@ def test_dedup_merges_when_metric_values_are_close():
     """Rounding differences within 1% should still merge — one source
     rounding to 6500 while another reports 6543 doesn't mean they're
     different facts."""
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     exact = _record_with_value("exact", 6543.0)
     rounded = _record_with_value(
@@ -486,7 +486,7 @@ def test_dedup_merges_when_one_value_is_none():
     """When one record has no metric_value (qualitative claim) and
     another has a value, they should still merge if dedup keys and
     dates align — the value-aware check treats None as compatible."""
-    from bioscancast.insight.pipeline import _deduplicate_records
+    from bioscancast.stages.insight.pipeline import _deduplicate_records
 
     valued = _record_with_value("valued", 6543.0)
     no_value = _record_with_value("no_value", None, document_id="doc-other")

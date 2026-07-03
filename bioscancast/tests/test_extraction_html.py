@@ -1,4 +1,4 @@
-"""Tests for bioscancast.extraction.parsers.html_parser using fixture files."""
+"""Tests for bioscancast.stages.extraction.parsers.html_parser using fixture files."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from bioscancast.extraction.parsers.html_parser import HtmlParser
+from bioscancast.stages.extraction.parsers.html_parser import HtmlParser
 
 FIXTURES = Path(__file__).parent / "fixtures" / "extraction"
 
@@ -442,7 +442,7 @@ class TestUrlPathDateParsing:
         ],
     )
     def test_extract_url_date_iso(self, url, expected_iso):
-        from bioscancast.extraction.parsers.html_parser import _extract_url_date_iso
+        from bioscancast.stages.extraction.parsers.html_parser import _extract_url_date_iso
         assert _extract_url_date_iso(url) == expected_iso
 
     def test_url_year_used_when_no_metadata(self, html_parser):

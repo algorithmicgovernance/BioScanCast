@@ -5,10 +5,10 @@ from typing import List, Tuple
 
 import pandas as pd
 
-from bioscancast.stages.eval_stage.compare import compare_sources, compare_sources_by_question_type
-from bioscancast.stages.eval_stage.loaders import load_forecasts, load_questions
-from bioscancast.stages.eval_stage.scoring import accuracy, log_score, multiclass_brier_score
-from bioscancast.stages.eval_stage.visualisation import (
+from bioscancast.stages.evaluation.compare import compare_sources, compare_sources_by_question_type
+from bioscancast.stages.evaluation.loaders import load_forecasts, load_questions
+from bioscancast.stages.evaluation.scoring import accuracy, log_score, multiclass_brier_score
+from bioscancast.stages.evaluation.visualisation import (
     plot_accuracy_by_source,
     plot_log_score_distribution,
     plot_score_distribution,
