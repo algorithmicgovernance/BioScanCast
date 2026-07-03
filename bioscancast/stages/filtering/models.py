@@ -40,6 +40,7 @@ class SearchResult:
     published_date: Optional[datetime] = None
     file_type: Optional[str] = None
     language: Optional[str] = None
+    source_id: Optional[str] = None
 
     is_official_domain: bool = False
     source_tier: str = "unknown"
@@ -96,3 +97,6 @@ class FilteredDocument:
     extraction_priority: int
     extraction_mode: str
     expected_value: str
+    source_id: Optional[str] = None
+    region: Optional[str] = None
+    question_text: Optional[str] = None

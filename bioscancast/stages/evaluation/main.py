@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from bioscancast.stages.eval_stage.pipeline import run_evaluation
+from bioscancast.stages.evaluation.pipeline import run_evaluation
 
 
 BASE_DIR = Path(__file__).resolve().parent

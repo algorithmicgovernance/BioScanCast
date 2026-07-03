@@ -18,7 +18,7 @@ from typing import TYPE_CHECKING, Optional
 import pycountry
 
 from bioscancast.schemas import DocumentChunk, Document, ChunkReference, InsightRecord
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from .prompts import build_extraction_prompt
 
 if TYPE_CHECKING:
@@ -444,6 +444,9 @@ def extract_facts_from_chunk(
                 else None
             ),
             metric_unit=fact.get("metric_unit"),
+            count_basis=fact.get("count_basis"),
+            time_window=fact.get("time_window"),
+            surveillance_method=fact.get("surveillance_method"),
             event_date=event_date,
             event_date_precision=event_date_precision,
             summary=fact.get("summary"),

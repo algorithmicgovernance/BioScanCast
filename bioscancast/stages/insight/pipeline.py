@@ -26,13 +26,13 @@ from datetime import datetime
 from typing import Optional
 
 from bioscancast.schemas import Document, InsightRecord
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.base import LLMClient
 
 from .budget import BudgetTracker
 from .config import InsightConfig
 from .retrieval.hybrid import hybrid_retrieve
-from .extraction.chunk_extractor import extract_facts_from_chunk
+from .text_extraction.chunk_extractor import extract_facts_from_chunk
 
 logger = logging.getLogger(__name__)
 

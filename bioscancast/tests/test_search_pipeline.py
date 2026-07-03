@@ -1,9 +1,9 @@
 from datetime import datetime, timezone
 from typing import List
 
-from bioscancast.filtering.models import ForecastQuestion, SearchResult
-from bioscancast.stages.search_stage.backends.base import RawSearchResult
-from bioscancast.stages.search_stage.pipeline import SearchStagePipeline
+from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
+from bioscancast.stages.searching.backends.base import RawSearchResult
+from bioscancast.stages.searching.pipeline import SearchStagePipeline, _compute_relevance
 
 
 class FakeLLMClient:
@@ -160,7 +160,6 @@ class TestSearchStagePipeline:
 
     def test_scoring_formula(self):
         """Verify the search_stage_score formula for a known result."""
-        from bioscancast.stages.search_stage.pipeline import _compute_relevance
 
         question = _make_question()
         results = self._run_pipeline()

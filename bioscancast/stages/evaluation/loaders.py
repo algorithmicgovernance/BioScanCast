@@ -8,7 +8,7 @@ from typing import Optional, Union
 
 import pandas as pd
 
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 
 
 PathLike = Union[str, Path]

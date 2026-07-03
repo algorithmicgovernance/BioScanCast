@@ -6,15 +6,15 @@ All tests use FakeLLMClient — no network calls, no real OpenAI imports.
 from datetime import datetime
 
 from bioscancast.schemas import Document, DocumentChunk
-from bioscancast.filtering.models import ForecastQuestion
+from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.llm.fake_client import FakeLLMClient
-from bioscancast.insight.retrieval.bm25 import top_k as bm25_top_k
-from bioscancast.insight.retrieval.embeddings import embed_chunks, top_k as emb_top_k
-from bioscancast.insight.retrieval.rule_filters import (
+from bioscancast.stages.insight.retrieval.bm25 import top_k as bm25_top_k
+from bioscancast.stages.insight.retrieval.embeddings import embed_chunks, top_k as emb_top_k
+from bioscancast.stages.insight.retrieval.rule_filters import (
     filter_by_date_window,
     filter_by_keyword,
 )
-from bioscancast.insight.retrieval.hybrid import hybrid_retrieve
+from bioscancast.stages.insight.retrieval.hybrid import hybrid_retrieve
 
 from bioscancast.tests.fixtures.insight.synthetic_documents import (
     DOC_WHO_SUDAN,
