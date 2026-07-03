@@ -179,8 +179,8 @@ bioscancast/
 │   ├── llm/           LLM client abstractions
 │   ├── schemas/       Shared data models
 │   ├── stages/
-│   │   ├── search_stage/
-│   │   └── eval_stage/
+│   │   ├── searching/
+│   │   └── evaluation/
 │   └── tests/         Unit and integration tests
 ├── data/
 │   ├── raw/
@@ -205,8 +205,8 @@ bioscancast/
 | `insight/`             | retrieval and fact extraction              |
 | `llm/`                 | model abstractions                         |
 | `schemas/`             | shared structured contracts                |
-| `stages/search_stage/` | retrieval stage                            |
-| `stages/eval_stage/`   | evaluation tooling                         |
+| `stages/searching/`    | retrieval stage                            |
+| `stages/evaluation/`   | evaluation tooling                         |
 
 ---
 
@@ -215,7 +215,7 @@ bioscancast/
 ## Search Stage
 
 ```text
-bioscancast/stages/search_stage/
+bioscancast/stages/searching/
 ```
 
 Implemented modules:
@@ -360,7 +360,7 @@ Current features:
 # Evaluation
 
 ```text
-bioscancast/stages/eval_stage/
+bioscancast/stages/evaluation/
 ```
 
 Implemented modules:
@@ -462,7 +462,7 @@ predict. Turn it on for the benchmark and off for production.
 What this mode does NOT fix: the LLMs themselves were trained on data that
 postdates many of our benchmark questions. Retrieval fairness ≠ model
 fairness. The `retrieval_free_baseline_forecast` metric in
-`bioscancast/stages/eval_stage/contamination.py` reports how well the LLM
+`bioscancast/stages/evaluation/contamination.py` reports how well the LLM
 forecasts with no evidence at all; a small gap between that and the full
 pipeline is itself evidence of training-data leakage and must be reported
 alongside the headline Brier/log scores.
@@ -543,7 +543,7 @@ TAVILY_API_KEY=tvly-...
 ## Search Stage
 
 ```bash
-python scripts/run_search_stage.py \
+python scripts/run_searching.py \
   "Will H5N1 cause more than 100 human cases in the US by December 2026?" \
   --pathogen h5n1 \
   --region "United States"
