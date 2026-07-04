@@ -31,6 +31,10 @@ from .scoring import (
     binary_log_score,
     log_score,
     multiclass_brier_score,
+    normalized_entropy,
+    ranked_probability_score,
+    top_probability,
+    true_probability,
 )
 
 __all__ = [
@@ -44,6 +48,10 @@ __all__ = [
     "load_questions",
     "log_score",
     "multiclass_brier_score",
+    "normalized_entropy",
+    "ranked_probability_score",
     "run_evaluation",
     "score_all_forecasts",
+    "top_probability",
+    "true_probability",
 ]
