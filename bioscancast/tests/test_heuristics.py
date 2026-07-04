@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from bioscancast.filtering.heuristics import is_low_value_page
-from bioscancast.filtering.models import SearchResult
+from bioscancast.stages.filtering.heuristics import is_low_value_page
+from bioscancast.stages.filtering.models import SearchResult
 
 
 def test_low_value_page_detected():

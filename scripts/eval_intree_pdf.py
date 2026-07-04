@@ -22,7 +22,7 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))  # for `import bioscancast.*`
 
-from bioscancast.extraction.parsers.pdf_parser import PdfParser  # noqa: E402
+from bioscancast.stages.extraction.parsers.pdf_parser import PdfParser  # noqa: E402
 
 SRC_DIR = REPO_ROOT / "data" / "docling_eval" / "sources"
 OUT_DIR = REPO_ROOT / "data" / "docling_eval" / "intree_pdf"

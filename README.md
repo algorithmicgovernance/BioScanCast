@@ -172,21 +172,20 @@ Intended responsibilities:
 ```text
 bioscancast/
 ├── bioscancast/
-│   ├── datasets/      Source registries and tier definitions
-│   ├── extraction/    Fetching, parsing, and chunking
-│   ├── filtering/     Relevance filtering and reranking
-│   ├── insight/       Retrieval and insight extraction
-│   ├── llm/           LLM client abstractions
-│   ├── schemas/       Shared data models
+│   ├── datasets/        Source registries and tier definitions
+│   ├── llm/             LLM client abstractions
+│   ├── orchestration/   End-to-end run orchestration and persistence
+│   ├── schemas/         Shared data models
 │   ├── stages/
-│   │   ├── search_stage/
-│   │   └── eval_stage/
-│   └── tests/         Unit and integration tests
+│   │   ├── searching/   Search stage
+│   │   ├── filtering/   Filtering stage
+│   │   ├── extraction/  Extraction stage
+│   │   ├── insight/     Insight stage
+│   │   └── evaluation/  Evaluation tooling
+│   └── tests/           Unit and integration tests
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── docling_eval/
-├── evaluation/
+│   ├── docling_eval/
+│   └── investigations/
 ├── scripts/
 ├── pyproject.toml
 ├── requirements.txt
@@ -197,16 +196,17 @@ bioscancast/
 
 # Core Modules
 
-| Module                 | Purpose                                    |
-| ---------------------- | ------------------------------------------ |
-| `datasets/`            | curated source registries and source tiers |
-| `extraction/`          | fetching, parsing, chunking                |
-| `filtering/`           | source filtering and ranking               |
-| `insight/`             | retrieval and fact extraction              |
-| `llm/`                 | model abstractions                         |
-| `schemas/`             | shared structured contracts                |
-| `stages/search_stage/` | retrieval stage                            |
-| `stages/eval_stage/`   | evaluation tooling                         |
+| Module                 | Purpose                                     |
+| ---------------------- | ------------------------------------------- |
+| `datasets/`            | curated source registries and source tiers  |
+| `llm/`                 | model abstractions                          |
+| `orchestration/`       | end-to-end run orchestration + persistence  |
+| `schemas/`             | shared structured contracts                 |
+| `stages/searching/`    | retrieval stage                             |
+| `stages/filtering/`    | source filtering and ranking                |
+| `stages/extraction/`   | fetching, parsing, chunking                 |
+| `stages/insight/`      | retrieval and fact extraction               |
+| `stages/evaluation/`   | evaluation tooling                          |
 
 ---
 
@@ -215,7 +215,7 @@ bioscancast/
 ## Search Stage
 
 ```text
-bioscancast/stages/search_stage/
+bioscancast/stages/searching/
 ```
 
 Implemented modules:
@@ -248,7 +248,7 @@ Known limitations:
 ## Filtering Stage
 
 ```text
-bioscancast/filtering/
+bioscancast/stages/filtering/
 ```
 
 Implemented modules:
@@ -275,7 +275,7 @@ Current features:
 ## Extraction Stage
 
 ```text
-bioscancast/extraction/
+bioscancast/stages/extraction/
 ```
 
 Implemented modules:
@@ -331,7 +331,7 @@ Current limitations:
 ## Insight Stage
 
 ```text
-bioscancast/insight/
+bioscancast/stages/insight/
 ```
 
 Implemented modules:
@@ -342,7 +342,7 @@ Implemented modules:
 | `retrieval/bm25.py`             | lexical retrieval   |
 | `retrieval/embeddings.py`       | embedding retrieval |
 | `retrieval/hybrid.py`           | hybrid reranking    |
-| `extraction/chunk_extractor.py` | fact extraction     |
+| `text_extraction/chunk_extractor.py` | fact extraction |
 
 Current features:
 
@@ -360,7 +360,7 @@ Current features:
 # Evaluation
 
 ```text
-bioscancast/stages/eval_stage/
+bioscancast/stages/evaluation/
 ```
 
 Implemented modules:
@@ -400,7 +400,7 @@ Key schemas:
 Additional filtering models live in:
 
 ```text
-bioscancast/filtering/models.py
+bioscancast/stages/filtering/models.py
 ```
 
 including:
@@ -462,7 +462,7 @@ predict. Turn it on for the benchmark and off for production.
 What this mode does NOT fix: the LLMs themselves were trained on data that
 postdates many of our benchmark questions. Retrieval fairness ≠ model
 fairness. The `retrieval_free_baseline_forecast` metric in
-`bioscancast/stages/eval_stage/contamination.py` reports how well the LLM
+`bioscancast/stages/evaluation/contamination.py` reports how well the LLM
 forecasts with no evidence at all; a small gap between that and the full
 pipeline is itself evidence of training-data leakage and must be reported
 alongside the headline Brier/log scores.
@@ -485,7 +485,7 @@ Curated source definitions and credibility tiers.
 
 | File                     | Purpose                  |
 | ------------------------ | ------------------------ |
-| `biosecurity_sources.py` | curated source registry  |
+| `sources.yaml.`          | curated source registry  |
 | `source_tiers.py`        | source credibility tiers |
 
 ---
@@ -500,7 +500,7 @@ Operational and smoke-test utilities.
 
 | Script                | Purpose                     |
 | --------------------- | --------------------------- |
-| `run_search_stage.py` | run search stage            |
+| `run_searching.py`    | run search stage            |
 | `run_filtering.py`    | run filtering stage         |
 | `run_extraction.py`   | run extraction stage        |
 | `run_insight.py`      | run insight smoke test      |
@@ -543,7 +543,7 @@ TAVILY_API_KEY=tvly-...
 ## Search Stage
 
 ```bash
-python scripts/run_search_stage.py \
+python scripts/run_searching.py \
   "Will H5N1 cause more than 100 human cases in the US by December 2026?" \
   --pathogen h5n1 \
   --region "United States"
@@ -552,7 +552,7 @@ python scripts/run_search_stage.py \
 Optional JSON output:
 
 ```bash
-python scripts/run_search_stage.py \
+python scripts/run_searching.py \
   "How many mpox cases will be reported globally by June 2026?" \
   --pathogen mpox \
   --output data/search_results.json
@@ -613,20 +613,50 @@ Current limitation:
 
 ---
 
-# Closest Current End-to-End Flow
+# End-to-End Orchestrator
+
+`bioscancast/main.py` runs all four stages — search → filter → extract →
+insight — against a single forecast question. Each stage's output plus a
+running `manifest.json` are persisted under
+`data/runs/{question_id}/{run_id}/`, so a crashed run still leaves partial
+artifacts for debugging.
+
+Run by question ID (looked up in the question CSV):
 
 ```bash
-python scripts/run_search_stage.py \
-  "Will mpox cases increase in Uganda in 2026?" \
-  --pathogen mpox \
-  --region Uganda \
-  --output data/search_results.json && \
-python scripts/run_filtering.py && \
-python scripts/run_extraction.py \
-  --input data/filtered_results.json
+python -m bioscancast.main q7
 ```
 
-`bioscancast/main.py` currently contains pseudocode only and is not yet a runnable orchestrator.
+Or via the `scripts/run_*` wrapper, matching the per-stage runner convention:
+
+```bash
+python scripts/run_pipeline.py q7
+```
+
+Historical-replay mode pins the information cutoff so no post-cutoff
+evidence leaks in:
+
+```bash
+python scripts/run_pipeline.py q7 --as-of-date 2025-02-28 -v
+```
+
+Common flags (`--help` for the full list):
+
+| Flag                                        | Purpose                                                                              |
+| ------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `--as-of-date Y-M-D`                        | Historical-replay cutoff. Omit for live mode.                                        |
+| `--csv PATH`                                | Question CSV. Default: `bioscancast/stages/evaluation/bioscancast_questions.csv`     |
+| `--out-root PATH`                           | Run-artifact root directory. Default: `data/runs`                                    |
+| `--run-id NAME`                             | Override the UTC-timestamp run directory name.                                       |
+| `--target-date Y-M-D`                       | Override the CSV-derived target date.                                                |
+| `--region` / `--pathogen` / `--event-type` | Override the corresponding question fields.                                          |
+| `--no-cache`                                | Disable the search-stage cache.                                                      |
+| `--max-input-tokens N`                      | Override `InsightConfig.max_input_tokens_per_run`.                                    |
+| `-v`, `--verbose`                           | Set log level to INFO.                                                                |
+
+Each run prints per-stage timings and an estimated token cost, and writes
+`question.json`, `search.json`, `filtered.json`, `documents.json`,
+`insight.json`, and `manifest.json` to the run directory.
 
 ---
 
@@ -687,7 +717,7 @@ Important dependencies:
 `curl_cffi` is used in:
 
 ```text
-bioscancast/extraction/fetcher.py
+bioscancast/stages/extraction/fetcher.py
 ```
 
 The impersonation profile is configurable via:
@@ -713,10 +743,8 @@ ExtractionConfig.impersonate
 
 Major missing components:
 
-1. unified end-to-end orchestrator
-2. extraction → insight integration
-3. OCR support
-4. forecasting stage implementation
-5. persistent storage/vector DB layer
-6. unified LLM abstraction
-7. multilingual retrieval
+1. OCR support
+2. forecasting stage implementation
+3. persistent storage/vector DB layer
+4. unified LLM abstraction
+5. multilingual retrieval

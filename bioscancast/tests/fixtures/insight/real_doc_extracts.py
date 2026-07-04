@@ -21,10 +21,10 @@ from pathlib import Path
 from typing import Optional
 from unittest.mock import patch
 
-from bioscancast.extraction.config import ExtractionConfig
-from bioscancast.extraction.fetcher import FetchResult
-from bioscancast.extraction.pipeline import ExtractionPipeline
-from bioscancast.filtering.models import FilteredDocument, ForecastQuestion
+from bioscancast.stages.extraction.config import ExtractionConfig
+from bioscancast.stages.extraction.fetcher import FetchResult
+from bioscancast.stages.extraction.pipeline import ExtractionPipeline
+from bioscancast.stages.filtering.models import FilteredDocument, ForecastQuestion
 from bioscancast.llm.base import LLMResponse
 from bioscancast.llm.fake_client import FakeLLMClient
 from bioscancast.schemas import Document
@@ -179,7 +179,15 @@ def _make_fake_fetch(file_path: Path, content_type: str):
     """Return a fetch() replacement that reads on-disk bytes — no network."""
     payload = file_path.read_bytes()
 
-    def fake_fetch(url, *, config=None, as_of_date=None):
+    def fake_fetch(
+        url,
+        *,
+        config=None,
+        as_of_date=None,
+        source_id=None,
+        region=None,
+        question_text=None,
+    ):
         return FetchResult(
             url=url,
             final_url=url,
@@ -208,7 +216,7 @@ def extract_real_documents() -> dict[str, Document]:
         if not path.exists():
             raise FileNotFoundError(f"Missing source file: {path}")
         with patch(
-            "bioscancast.extraction.pipeline.fetch",
+            "bioscancast.stages.extraction.pipeline.fetch",
             _make_fake_fetch(path, src["content_type"]),
         ):
             out[src["name"]] = pipeline.extract_one(make_filtered_doc(src))
@@ -282,6 +290,9 @@ class QuoteEchoingFakeLLM:
             "metric_name": "events",
             "metric_value": 1.0,
             "metric_unit": "events",
+            "count_basis": None,
+            "time_window": None,
+            "surveillance_method": None,
             "event_date": None,
             "summary": "Quote-echoing fake fact for testing.",
             "quote": quote,
@@ -327,6 +338,9 @@ class HallucinatingFakeLLM:
             "metric_name": "confirmed_cases",
             "metric_value": 999.0,
             "metric_unit": "cases",
+            "count_basis": None,
+            "time_window": None,
+            "surveillance_method": None,
             "event_date": "2099-01-01",
             "summary": "Fabricated.",
             "quote": self.BOGUS_QUOTE,

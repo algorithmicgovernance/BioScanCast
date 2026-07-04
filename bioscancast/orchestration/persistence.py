@@ -13,8 +13,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-from bioscancast.filtering.models import ForecastQuestion
-from bioscancast.insight.pipeline import InsightRunResult
+from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.insight.pipeline import InsightRunResult
 
 
 def _json_default(obj: Any) -> Any:

@@ -70,6 +70,19 @@ class InsightRecord:
     metric_unit: Optional[str] = None
     """Unit of the metric (e.g. 'cases', 'herds', 'deaths')."""
 
+    count_basis: Optional[str] = None
+    """How the metric is defined: cumulative, incident, active,
+    prevalence, or unknown."""
+
+    time_window: Optional[str] = None
+    """Reporting period for incident metrics (e.g. day, week,
+    month, year, or unknown). None when not applicable or not stated."""
+
+    surveillance_method: Optional[str] = None
+    """Surveillance or ascertainment method explicitly stated in the
+    source (e.g. laboratory surveillance, syndromic surveillance,
+    enhanced surveillance)."""
+
     event_date: Optional[datetime] = None
     """Date the fact pertains to (not the date it was reported).
 
