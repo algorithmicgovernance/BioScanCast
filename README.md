@@ -2,7 +2,7 @@
 
 BioScanCast is an open source pipeline for biosecurity forecasting using LLMs and automated web retrieval.
 
-The system retrieves internet sources, filters relevant documents, extracts structured information, and is intended to support probabilistic forecasting and evaluation against human forecasters.
+The system retrieves internet sources, filters relevant documents, extracts structured information, produces probabilistic forecasts, and supports evaluation against human forecasters.
 
 Current repository contents include:
 
@@ -12,7 +12,8 @@ Current repository contents include:
 * benchmarking and evaluation infrastructure
 * smoke-test and operational scripts
 
-The forecasting stage is not yet implemented.
+All five pipeline stages (search, filtering, extraction, insight, forecasting)
+are implemented and wired into the end-to-end orchestrator.
 
 ---
 
@@ -30,13 +31,7 @@ The forecasting stage is not yet implemented.
 Implemented:
 
 ```text
-Search -> Filtering -> Extraction -> Insight
-```
-
-Planned:
-
-```text
-Forecasting
+Search -> Filtering -> Extraction -> Insight -> Forecasting
 ```
 
 Current capabilities include:
@@ -150,20 +145,35 @@ Current limitations:
 
 * disconnected from extraction outputs in smoke tests
 * no temporal reasoning layer
-* no forecasting integration
 
 ---
 
 ## 5. Forecasting Stage
 
-Planned but not implemented.
+Turn insight records into a probabilistic forecast over a question's answer
+options.
 
-Intended responsibilities:
+Features:
 
-* probabilistic forecasting
-* calibration
-* confidence estimation
-* forecast evaluation
+* ensemble of superforecaster-style reasoning samples (per-call temperature +
+  varied seed for diversity)
+* evidence digest built from insight records, tagged by count basis
+  (`[cumulative]`, `[incident/<window>]`, `[active]`) and any data-quality caveat
+* log opinion pool (geometric mean of odds) aggregation
+* confidence-gated extremizing (sharpen only already-decisive forecasts;
+  default `extremize=1.0`, gate `0.5`, tuned on the n=11 BFG benchmark)
+* retrieval-free baseline forecast for comparison
+* token/cost accounting via the shared budget tracker
+
+Output:
+
+```python
+ForecastResult  # one distribution per forecast_source, over the options
+```
+
+Backtest/calibration tooling: `scripts/run_historical_trajectory.py`
+(as-of-date replay), `scripts/eval_forecast_calibration.py` (offline
+extremize/calibration analysis), `scripts/demo_forecast.py` (live demo).
 
 ---
 
@@ -181,6 +191,7 @@ bioscancast/
 │   │   ├── filtering/   Filtering stage
 │   │   ├── extraction/  Extraction stage
 │   │   ├── insight/     Insight stage
+│   │   ├── forecasting/ Forecasting stage
 │   │   └── evaluation/  Evaluation tooling
 │   └── tests/           Unit and integration tests
 ├── data/
@@ -206,6 +217,7 @@ bioscancast/
 | `stages/filtering/`    | source filtering and ranking                |
 | `stages/extraction/`   | fetching, parsing, chunking                 |
 | `stages/insight/`      | retrieval and fact extraction               |
+| `stages/forecasting/`  | probabilistic forecasting from insights     |
 | `stages/evaluation/`   | evaluation tooling                          |
 
 ---

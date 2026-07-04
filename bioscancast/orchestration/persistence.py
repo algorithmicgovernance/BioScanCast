@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from bioscancast.stages.filtering.models import ForecastQuestion
+from bioscancast.stages.forecasting.schemas import ForecastResult
 from bioscancast.stages.insight.pipeline import InsightRunResult
 
 
@@ -75,6 +76,26 @@ def save_insight(run_dir: Path, result: InsightRunResult) -> None:
         "notes": list(result.notes),
     }
     _dump(run_dir / "insight.json", payload)
+
+
+def save_forecast(run_dir: Path, result: ForecastResult) -> None:
+    """Serialize a ForecastResult to forecast.json.
+
+    The nested ForecastDistribution / ForecastRecord / SampleForecast
+    dataclasses are all handled by asdict via _json_default.
+    """
+    payload = {
+        "question_id": result.question_id,
+        "options": list(result.options),
+        "distributions": [asdict(d) for d in result.distributions],
+        "records": [asdict(r) for r in result.records],
+        "samples": [asdict(s) for s in result.samples],
+        "baseline_rationale": result.baseline_rationale,
+        "evidence_record_ids": list(result.evidence_record_ids),
+        "budget_summary": result.budget_summary,
+        "notes": list(result.notes),
+    }
+    _dump(run_dir / "forecast.json", payload)
 
 
 def save_manifest(run_dir: Path, manifest: dict) -> None:

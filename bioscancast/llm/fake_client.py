@@ -56,7 +56,11 @@ class FakeLLMClient:
         schema: dict,
         model: str,
         max_tokens: int = 1024,
+        temperature: float | None = None,
+        seed: int | None = None,
     ) -> LLMResponse:
+        # temperature/seed are accepted for protocol compatibility but
+        # ignored: scripted responses are deterministic by construction.
         with self._lock:
             if not self._responses:
                 raise RuntimeError(
