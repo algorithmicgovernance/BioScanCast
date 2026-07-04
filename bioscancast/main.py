@@ -49,6 +49,7 @@ from bioscancast.stages.searching.cache import SearchCache
 from bioscancast.stages.searching.pipeline import SearchStagePipeline
 from bioscancast.stages.extraction.config import ExtractionConfig
 from bioscancast.stages.extraction.pipeline import ExtractionPipeline
+from bioscancast.stages.extraction.quality import flag_thin_extractions
 from bioscancast.stages.filtering.config import FILTER_CONFIG
 from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.stages.filtering.pipeline import FilteringPipeline
@@ -449,15 +450,47 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
         )
         persistence.save_manifest(run_dir, manifest)
 
+        extraction_config = ExtractionConfig()
         with _stage_timer(manifest, "extract"):
-            extraction_pipeline = ExtractionPipeline(as_of_date=question.as_of_date)
+            extraction_pipeline = ExtractionPipeline(
+                config=extraction_config,
+                as_of_date=question.as_of_date,
+            )
             documents = extraction_pipeline.run(filtered_docs)
             persistence.save_documents(run_dir, documents)
         n_ok = sum(1 for d in documents if d.status == "success")
+        # 'success' only means bytes-in + ≥1 chunk; it does NOT mean the
+        # content we cared about was captured. Flag suspiciously-thin
+        # successes (nav/index pages, paywalls, JS-rendered data — #34) so a
+        # silent retrieval miss is visible instead of hiding behind "N/N".
+        thin_warnings = flag_thin_extractions(
+            documents, min_chars=extraction_config.thin_extraction_min_chars
+        )
+        manifest["thin_extractions"] = [w.as_dict() for w in thin_warnings]
+        # Docling refiner telemetry (#17): per-PDF wall-clock / page count /
+        # suspect-table footprint, for the per-page-vs-full-doc decision.
+        # Empty unless PDFs reached the refiner.
+        docling_telemetry = extraction_pipeline.docling_telemetry
+        manifest["docling_refiner"] = [t.as_dict() for t in docling_telemetry]
+        thin_note = f", {len(thin_warnings)} thin" if thin_warnings else ""
+        n_refined = sum(1 for t in docling_telemetry if t.fired)
+        docling_note = (
+            f", docling {n_refined}/{len(docling_telemetry)} PDFs"
+            if docling_telemetry else ""
+        )
         _log_summary(
-            "extract", f"{n_ok}/{len(documents)} success",
+            "extract", f"{n_ok}/{len(documents)} success{thin_note}{docling_note}",
             manifest["stage_timings"]["extract"],
         )
+        for w in thin_warnings:
+            print(f"  ! thin extraction: {w.describe()}", flush=True)
+        for t in docling_telemetry:
+            if t.fired:
+                print(
+                    f"  · docling refined {t.page_count}p in {t.convert_s:.1f}s "
+                    f"({t.n_suspect_tables} suspect tables) {t.source_url}",
+                    flush=True,
+                )
         persistence.save_manifest(run_dir, manifest)
 
         with _stage_timer(manifest, "insight"):

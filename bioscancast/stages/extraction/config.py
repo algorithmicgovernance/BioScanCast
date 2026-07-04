@@ -11,6 +11,18 @@ class ExtractionConfig:
     pdf_max_pages: int = 100
     chunk_target_tokens: int = 800
     chunk_max_tokens: int = 1500
+
+    thin_extraction_min_chars: int = 500
+    """Char floor below which a 'success' document is flagged as a likely
+    silent-truncation (nav/index page, paywall snippet, or JS-rendered page
+    whose payload never made it into the static scrape).
+
+    Measurement-only: flagging never drops or alters a document. The floor is
+    set from observed run artifacts — across 156 saved docs, every doc below
+    ~500 chars was junk (the who.int emergencies index at 263, a Washington
+    Post paywall snippet at 274; see #34), while no legitimate content doc
+    fell below it. Set to 0 to disable flagging.
+    """
     user_agent: str = (
         "BioScanCast/0.1 (+https://github.com/algorithmicgovernance/BioScanCast)"
     )

@@ -14,13 +14,51 @@ from __future__ import annotations
 
 import io
 import logging
-from dataclasses import replace
+import time
+from dataclasses import dataclass, field, replace
 from typing import Any, FrozenSet, List, Optional, Sequence, Tuple
 
 from .config import ExtractionConfig
 from .parsers.base import ParsedContent, SectionContent
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class RefinerTelemetry:
+    """One record per ``refine()`` call (i.e. per PDF that reaches the refiner).
+
+    Captures the inputs issue #17 needs to decide per-page vs full-doc Docling:
+    per-doc wall-clock, page count, and the suspect-table footprint. ``fired``
+    distinguishes calls where Docling actually ran from skips (no trigger /
+    OCR-required). Conversion is the page-scaling cost — ``convert_s`` is the
+    metric ``page_range`` would reduce; ``total_s`` adds the (cheap) merge.
+    """
+
+    source_url: str
+    fired: bool
+    trigger: Optional[str]  # "allowlist" | "heuristic" | None
+    status: str
+    page_count: Optional[int]
+    n_suspect_tables: int
+    suspect_pages: List[int] = field(default_factory=list)
+    convert_s: Optional[float] = None
+    total_s: float = 0.0
+
+    def as_dict(self) -> dict:
+        return {
+            "source_url": self.source_url,
+            "fired": self.fired,
+            "trigger": self.trigger,
+            "status": self.status,
+            "page_count": self.page_count,
+            "n_suspect_tables": self.n_suspect_tables,
+            "suspect_pages": list(self.suspect_pages),
+            "convert_s": (
+                round(self.convert_s, 3) if self.convert_s is not None else None
+            ),
+            "total_s": round(self.total_s, 3),
+        }
 
 
 class DoclingTableRefiner:
@@ -40,6 +78,10 @@ class DoclingTableRefiner:
         self._config = config
         # Allow dependency injection for tests; real construction is lazy.
         self._converter = converter
+        # One RefinerTelemetry per refine() call, in call order. The
+        # extraction pipeline drains this after a run so the orchestrator can
+        # persist it (issue #17: 2-week refiner-time collection).
+        self.telemetry: List[RefinerTelemetry] = []
 
     # ---------- public API ----------
 
@@ -60,8 +102,14 @@ class DoclingTableRefiner:
         Short-circuits to a no-op for OCR-required PDFs — Docling without OCR
         cannot help there.
         """
+        t0 = time.perf_counter()
+
         if parsed.is_partial and parsed.partial_reason == "requires_ocr":
             logger.debug("docling refiner skipped: requires_ocr")
+            self._record(
+                source_url, fired=False, trigger=None, status="skipped_ocr",
+                parsed=parsed, flagged=[], total_s=time.perf_counter() - t0,
+            )
             return parsed
 
         # Always compute broken-table indices: even URL-triggered runs need
@@ -76,19 +124,67 @@ class DoclingTableRefiner:
             source_url, self._config.docling_source_allowlist
         )
         if url_match:
+            trigger = "allowlist"
             logger.info(
                 "docling refiner triggered: source-allowlist hit for %s", source_url
             )
         elif flagged:
+            trigger = "heuristic"
             for _, reason in flagged:
                 logger.info("docling refiner triggered: %s", reason)
         else:
             logger.debug(
                 "docling refiner skipped: no trigger matched for %s", source_url
             )
+            self._record(
+                source_url, fired=False, trigger=None, status="skipped_no_trigger",
+                parsed=parsed, flagged=flagged, total_s=time.perf_counter() - t0,
+            )
             return parsed
 
-        return self._do_refine(parsed, content, broken_indices=broken_indices)
+        refined, convert_s, status = self._do_refine(
+            parsed, content, broken_indices=broken_indices
+        )
+        self._record(
+            source_url, fired=(status == "refined"), trigger=trigger, status=status,
+            parsed=parsed, flagged=flagged, convert_s=convert_s,
+            total_s=time.perf_counter() - t0,
+        )
+        return refined
+
+    def _record(
+        self,
+        source_url: str,
+        *,
+        fired: bool,
+        trigger: Optional[str],
+        status: str,
+        parsed: ParsedContent,
+        flagged: Sequence[Tuple[int, str]],
+        total_s: float,
+        convert_s: Optional[float] = None,
+    ) -> None:
+        suspect_pages = sorted(
+            {
+                parsed.sections[i].page_number
+                for i, _ in flagged
+                if 0 <= i < len(parsed.sections)
+                and parsed.sections[i].page_number is not None
+            }
+        )
+        self.telemetry.append(
+            RefinerTelemetry(
+                source_url=source_url,
+                fired=fired,
+                trigger=trigger,
+                status=status,
+                page_count=parsed.page_count,
+                n_suspect_tables=len(flagged),
+                suspect_pages=suspect_pages,
+                convert_s=convert_s,
+                total_s=total_s,
+            )
+        )
 
     # ---------- internals ----------
 
@@ -98,27 +194,37 @@ class DoclingTableRefiner:
         content: bytes,
         *,
         broken_indices: FrozenSet[int] = frozenset(),
-    ) -> ParsedContent:
+    ) -> Tuple[ParsedContent, Optional[float], str]:
+        """Run Docling and merge its tables back in.
+
+        Returns ``(parsed, convert_s, status)`` where ``convert_s`` is the
+        wall-clock of the Docling ``convert()`` call (None if it never ran)
+        and ``status`` is one of ``refined``, ``converter_unavailable``,
+        ``conversion_failed``, ``no_document``.
+        """
         try:
             converter = self._get_converter()
         except Exception as exc:  # pragma: no cover - construction failures
             logger.warning("docling converter unavailable: %s", exc)
-            return parsed
+            return parsed, None, "converter_unavailable"
 
+        t0 = time.perf_counter()
         try:
             result = converter.convert(content)
         except Exception as exc:
             logger.warning("docling conversion failed: %s", exc)
-            return parsed
+            return parsed, time.perf_counter() - t0, "conversion_failed"
+        convert_s = time.perf_counter() - t0
 
         docling_doc = getattr(result, "document", None)
         if docling_doc is None:
             logger.warning("docling result has no document; leaving parsed unchanged")
-            return parsed
+            return parsed, convert_s, "no_document"
 
-        return _merge_docling_tables_into_parsed(
+        merged = _merge_docling_tables_into_parsed(
             parsed, docling_doc, broken_indices=broken_indices
         )
+        return merged, convert_s, "refined"
 
     def _get_converter(self) -> Any:
         if self._converter is not None:

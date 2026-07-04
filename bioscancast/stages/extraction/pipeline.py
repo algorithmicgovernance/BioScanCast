@@ -61,6 +61,18 @@ class ExtractionPipeline:
 
         return results
 
+    @property
+    def docling_telemetry(self) -> list:
+        """Per-PDF Docling refiner telemetry accumulated during ``run``.
+
+        Empty when the refiner never ran (no PDFs, or feature flag off).
+        See ``docling_refiner.RefinerTelemetry`` (issue #17).
+        """
+        refiner = self._docling_refiner
+        if refiner is None:
+            return []
+        return list(getattr(refiner, "telemetry", []))
+
     def extract_one(self, filtered_doc: FilteredDocument) -> Document:
         """Fetch, parse, chunk, and return a Document for a single FilteredDocument."""
         doc_id = f"doc-{filtered_doc.result_id}"
