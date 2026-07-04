@@ -92,7 +92,8 @@ def _load_cutoffs(
         sub = df[df["forecast_version"] == v]
         dist = _norm({r["option"]: float(r["probability"]) for _, r in sub.iterrows()})
         if overlay and (qid, cutoff) in OVERLAY and OVERLAY[(qid, cutoff)].exists():
-            fc = json.load(open(OVERLAY[(qid, cutoff)]))
+            with open(OVERLAY[(qid, cutoff)]) as fh:
+                fc = json.load(fh)
             for d in fc["distributions"]:
                 if d["forecast_source"] == "bioscancast":
                     dist = _norm(dict(d["probabilities"]))
