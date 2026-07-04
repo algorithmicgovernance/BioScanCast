@@ -71,17 +71,35 @@ class InsightRecord:
     """Unit of the metric (e.g. 'cases', 'herds', 'deaths')."""
 
     count_basis: Optional[str] = None
-    """How the metric is defined: cumulative, incident, active,
-    prevalence, or unknown."""
+    """How the metric is counted: ``'cumulative'`` (running total to date),
+    ``'incident'`` (new in a stated period), ``'active'`` (currently active),
+    ``'prevalence'`` (point-prevalent), or ``'unknown'``. Distinguishes
+    epidemiologically different numbers that would otherwise flatten to the
+    same ``metric_name``/``metric_value`` (e.g. "282 cumulative" vs "282 new
+    this week" vs "282 active"). Extracted, never inferred beyond explicit
+    textual cues. Orthogonal to the (separate, planned) ``value_basis`` axis
+    that distinguishes observed from projected/modeled numbers."""
 
     time_window: Optional[str] = None
-    """Reporting period for incident metrics (e.g. day, week,
-    month, year, or unknown). None when not applicable or not stated."""
+    """Reporting period for an *incident* count: ``'day'``, ``'week'``,
+    ``'month'``, ``'year'``, or ``'unknown'``. ``'unknown'`` for
+    cumulative/active/prevalence counts, which have no window."""
 
     surveillance_method: Optional[str] = None
-    """Surveillance or ascertainment method explicitly stated in the
-    source (e.g. laboratory surveillance, syndromic surveillance,
-    enhanced surveillance)."""
+    """Surveillance/ascertainment method, captured only when explicitly
+    stated in the source (e.g. 'laboratory surveillance', 'syndromic
+    surveillance', 'enhanced surveillance', 'passive reporting'). ``None``
+    when not stated. Never inferred."""
+
+    data_quality: Optional[str] = None
+    """Explicit data-quality caveat stated in the source about how the
+    reported numbers relate to reality: under-reporting, limited
+    testing/ascertainment, reporting lag, suspected-vs-confirmed definition
+    issues, or a surveillance/case-definition change (e.g. 'testing capacity
+    limited; many mild cases not captured'). ``None`` when the source states
+    no such caveat. Never inferred from a number alone — the forecasting
+    stage decides what to do with it. Surfaced in the evidence digest even
+    on metric-bearing records (whose ``summary`` the digest otherwise omits)."""
 
     event_date: Optional[datetime] = None
     """Date the fact pertains to (not the date it was reported).
