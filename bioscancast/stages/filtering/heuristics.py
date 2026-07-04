@@ -72,8 +72,12 @@ def compute_priority_score(
         FILTER_CONFIG["heuristic_weights"],
     )
 
-    # Blend in credibility as an additional stabilizer.
-    return 0.75 * score + 0.25 * credibility_score
+    # Blend in credibility as an additional stabilizer. Kept low (0.15) so a
+    # reputable-but-off-topic source cannot clear the keep threshold on
+    # authority alone (#44); topical keyword-overlap dominates the decision.
+    # Official-source recall does NOT rely on this term — officials are kept
+    # unconditionally in the heuristic loop below.
+    return 0.85 * score + 0.15 * credibility_score
 
 
 def make_decision(
@@ -156,7 +160,17 @@ def heuristic_filter(
         if result.file_type == "pdf":
             reason_codes.append("pdf_candidate")
 
-        if priority_score >= FILTER_CONFIG["heuristic_keep_threshold"]:
+        passes_threshold = priority_score >= FILTER_CONFIG["heuristic_keep_threshold"]
+        # Official domains are kept unconditionally so official-source recall
+        # stays 1.0 (the #13 sweep property) independent of the priority
+        # weights. This decouples the recall guarantee from the credibility
+        # blend, so that blend can be lowered (#44) without dropping a
+        # low-keyword-overlap official (e.g. a terse WHO DON) below threshold.
+        if passes_threshold or result.is_official_domain:
+            keep_reason = (
+                "passed_heuristic_threshold" if passes_threshold
+                else "official_recall_guarantee"
+            )
             keep_list.append(
                 make_decision(
                     result=result,
@@ -165,7 +179,7 @@ def heuristic_filter(
                     relevance_score=relevance_score,
                     credibility_score=credibility_score,
                     priority_score=priority_score,
-                    reason_codes=reason_codes + ["passed_heuristic_threshold"],
+                    reason_codes=reason_codes + [keep_reason],
                 )
             )
         elif priority_score >= FILTER_CONFIG["heuristic_borderline_threshold"]:

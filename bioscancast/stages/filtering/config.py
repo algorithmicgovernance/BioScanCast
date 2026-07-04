@@ -32,10 +32,16 @@ FILTER_CONFIG = {
         "ngo": 0.6,
         "unknown": 0.35,
     },
+    # keyword_overlap (topical relevance) carries the most weight so a
+    # reputable-but-off-topic source can't clear the keep threshold on domain
+    # authority alone (#44). domain (generic tier authority) was lowered from
+    # 0.20 -> 0.10 and folded into keyword_overlap (0.40 -> 0.50); official
+    # authority is preserved via official_bonus (unchanged) plus the
+    # unconditional official keep in heuristics.compute_heuristic_decisions.
     "heuristic_weights": {
-        "keyword_overlap": 0.40,
+        "keyword_overlap": 0.50,
         "freshness": 0.20,
-        "domain": 0.20,
+        "domain": 0.10,
         "official_bonus": 0.20,
     },
     # Lowered from 0.72 to 0.65 after q7/q12 live runs showed filter
