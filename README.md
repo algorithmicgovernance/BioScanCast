@@ -172,21 +172,20 @@ Intended responsibilities:
 ```text
 bioscancast/
 ├── bioscancast/
-│   ├── datasets/      Source registries and tier definitions
-│   ├── extraction/    Fetching, parsing, and chunking
-│   ├── filtering/     Relevance filtering and reranking
-│   ├── insight/       Retrieval and insight extraction
-│   ├── llm/           LLM client abstractions
-│   ├── schemas/       Shared data models
+│   ├── datasets/        Source registries and tier definitions
+│   ├── llm/             LLM client abstractions
+│   ├── orchestration/   End-to-end run orchestration and persistence
+│   ├── schemas/         Shared data models
 │   ├── stages/
-│   │   ├── search_stage/
-│   │   └── eval_stage/
-│   └── tests/         Unit and integration tests
+│   │   ├── searching/   Search stage
+│   │   ├── filtering/   Filtering stage
+│   │   ├── extraction/  Extraction stage
+│   │   ├── insight/     Insight stage
+│   │   └── evaluation/  Evaluation tooling
+│   └── tests/           Unit and integration tests
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── docling_eval/
-├── evaluation/
+│   ├── docling_eval/
+│   └── investigations/
 ├── scripts/
 ├── pyproject.toml
 ├── requirements.txt
@@ -197,16 +196,17 @@ bioscancast/
 
 # Core Modules
 
-| Module                 | Purpose                                    |
-| ---------------------- | ------------------------------------------ |
-| `datasets/`            | curated source registries and source tiers |
-| `extraction/`          | fetching, parsing, chunking                |
-| `filtering/`           | source filtering and ranking               |
-| `insight/`             | retrieval and fact extraction              |
-| `llm/`                 | model abstractions                         |
-| `schemas/`             | shared structured contracts                |
-| `stages/search_stage/` | retrieval stage                            |
-| `stages/eval_stage/`   | evaluation tooling                         |
+| Module                 | Purpose                                     |
+| ---------------------- | ------------------------------------------- |
+| `datasets/`            | curated source registries and source tiers  |
+| `llm/`                 | model abstractions                          |
+| `orchestration/`       | end-to-end run orchestration + persistence  |
+| `schemas/`             | shared structured contracts                 |
+| `stages/searching/`    | retrieval stage                             |
+| `stages/filtering/`    | source filtering and ranking                |
+| `stages/extraction/`   | fetching, parsing, chunking                 |
+| `stages/insight/`      | retrieval and fact extraction               |
+| `stages/evaluation/`   | evaluation tooling                          |
 
 ---
 
@@ -215,7 +215,7 @@ bioscancast/
 ## Search Stage
 
 ```text
-bioscancast/stages/search_stage/
+bioscancast/stages/searching/
 ```
 
 Implemented modules:
@@ -248,7 +248,7 @@ Known limitations:
 ## Filtering Stage
 
 ```text
-bioscancast/filtering/
+bioscancast/stages/filtering/
 ```
 
 Implemented modules:
@@ -275,7 +275,7 @@ Current features:
 ## Extraction Stage
 
 ```text
-bioscancast/extraction/
+bioscancast/stages/extraction/
 ```
 
 Implemented modules:
@@ -331,7 +331,7 @@ Current limitations:
 ## Insight Stage
 
 ```text
-bioscancast/insight/
+bioscancast/stages/insight/
 ```
 
 Implemented modules:
@@ -342,7 +342,7 @@ Implemented modules:
 | `retrieval/bm25.py`             | lexical retrieval   |
 | `retrieval/embeddings.py`       | embedding retrieval |
 | `retrieval/hybrid.py`           | hybrid reranking    |
-| `extraction/chunk_extractor.py` | fact extraction     |
+| `text_extraction/chunk_extractor.py` | fact extraction |
 
 Current features:
 
@@ -360,7 +360,7 @@ Current features:
 # Evaluation
 
 ```text
-bioscancast/stages/eval_stage/
+bioscancast/stages/evaluation/
 ```
 
 Implemented modules:
@@ -400,7 +400,7 @@ Key schemas:
 Additional filtering models live in:
 
 ```text
-bioscancast/filtering/models.py
+bioscancast/stages/filtering/models.py
 ```
 
 including:
@@ -462,7 +462,7 @@ predict. Turn it on for the benchmark and off for production.
 What this mode does NOT fix: the LLMs themselves were trained on data that
 postdates many of our benchmark questions. Retrieval fairness ≠ model
 fairness. The `retrieval_free_baseline_forecast` metric in
-`bioscancast/stages/eval_stage/contamination.py` reports how well the LLM
+`bioscancast/stages/evaluation/contamination.py` reports how well the LLM
 forecasts with no evidence at all; a small gap between that and the full
 pipeline is itself evidence of training-data leakage and must be reported
 alongside the headline Brier/log scores.
@@ -543,7 +543,7 @@ TAVILY_API_KEY=tvly-...
 ## Search Stage
 
 ```bash
-python scripts/run_search_stage.py \
+python scripts/run_searching.py \
   "Will H5N1 cause more than 100 human cases in the US by December 2026?" \
   --pathogen h5n1 \
   --region "United States"
@@ -717,7 +717,7 @@ Important dependencies:
 `curl_cffi` is used in:
 
 ```text
-bioscancast/extraction/fetcher.py
+bioscancast/stages/extraction/fetcher.py
 ```
 
 The impersonation profile is configurable via:
