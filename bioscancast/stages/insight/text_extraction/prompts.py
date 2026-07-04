@@ -5,6 +5,12 @@ Key design principles:
 - Require a verbatim quote (<=200 chars) for each fact.
 - Allow zero facts (common and valid for irrelevant chunks).
 - Include the forecast question for context but forbid answering it.
+- Only OBSERVED counts become case_count/death_count; projected, modeled,
+  and off-scope numbers are kept as context, not observed metrics, and
+  confidence tracks how well a fact's scope matches the question. This
+  guards the "lurch" failure where a projection or wrong-scope figure was
+  filed as an observed count at high confidence (rules 7-9); the
+  bioscancast/tests/test_insight_extraction_traps.py trap-set pins it.
 - Brief cognitive bias warnings from the grant proposal's Table 5.
 
 Note: full cognitive bias mitigations belong in the forecasting stage,
@@ -68,21 +74,57 @@ metric_name — capture those in `summary` or `location` instead. \
 "suspected cases", "probable cases", "possible cases" all map to \
 suspected_cases. "deaths" alone maps to deaths; "suspected deaths", \
 "probable deaths", "deaths under investigation" map to suspected_deaths.
-6b. For count_basis, choose one of:
-   - cumulative: total cases/deaths/etc. to date
-   - incident: new cases/deaths during a period
-   - active: currently active cases
-   - prevalence: point/prevalent cases
-   - unknown: if the text does not make this clear
-7. For time_window, choose one of:
-   - day
-   - week
-   - month
-   - year
-   - unknown
-   Use this only when the chunk explicitly gives a reporting period (e.g. "this week", "in January 2026"). Otherwise leave it null or "unknown".
-8. For surveillance_method, capture an explicitly stated surveillance or ascertainment method only (e.g. laboratory surveillance, syndromic surveillance, enhanced surveillance, passive reporting). Do not infer it.
-9. Be aware of cognitive biases that affect information processing:
+7. OBSERVED vs NON-OBSERVED. event_type ``case_count`` and ``death_count`` \
+are for OBSERVED, actually-reported counts ONLY. NEVER assign them to a \
+number that is projected, modeled, forecasted, simulated, estimated, \
+hypothetical, or a target/threshold — even when the number is stated \
+plainly (e.g. "could see as many as 10,000 cases by year-end", "one in 20 \
+simulations projected ..."). For such a number, set event_type ``other``, \
+leave metric_value null, and describe it in ``summary`` (note it is a \
+projection/model output and give its horizon and scenario if stated).
+8. SCOPE MATCH. A number pertains to the question only if its metric, its \
+geography, AND its time window all match the question's. Do NOT relabel a \
+number to the question's scope: if the geography differs (e.g. a GLOBAL \
+cumulative total against a United-States question), set ``location`` to the \
+number's true scope (e.g. "Global"), never the question's region, and note \
+the period (e.g. "cumulative since 2003") in ``summary``. A sub-national \
+figure (one state/district) keeps its sub-national ``location`` and is NOT \
+the national total. A weekly / "new this week" increment must say so in \
+``summary``; it is NOT the cumulative total.
+9. CONFIDENCE reflects SCOPE-MATCH, not textual presence. Set ``confidence`` \
+by how well the fact's metric/geography/time-window match the question, NOT \
+by whether the number appears in the text. A number present verbatim but of \
+uncertain or mismatched scope gets LOW confidence (<= 0.5). Reserve high \
+confidence (> 0.85) for numbers whose metric, geography, and window clearly \
+match the question.
+10. COUNT BASIS. For every case/death-type metric, set ``count_basis`` to \
+exactly one of: ``cumulative`` (a running total to date — "cumulative total", \
+"since the start", "to date", "so far"), ``incident`` (new counts during a \
+period — "new", "reported this week", "in January"), ``active`` (currently \
+active/ongoing — "active cases", "currently under isolation"), ``prevalence`` \
+(point-prevalent cases), or ``unknown``. This is the KIND of number, \
+independent of its value. Do NOT guess: if the chunk gives no explicit cue, \
+use ``unknown``. Ratios and rates that are not counts (e.g. \
+``case_fatality_ratio``, ``reproductive_number``) use ``unknown``.
+11. TIME WINDOW. Set ``time_window`` to the reporting period ONLY for \
+``incident`` counts and ONLY when the chunk states it: ``day``, ``week``, \
+``month``, or ``year``; otherwise ``unknown``. Cumulative, active, and \
+prevalence counts always use ``unknown`` (they have no window). This \
+complements rule 8: a weekly increment is ``count_basis=incident``, \
+``time_window=week`` — and still note "new this week" in ``summary``.
+12. SURVEILLANCE METHOD. Set ``surveillance_method`` to a surveillance or \
+ascertainment method ONLY when it is explicitly stated (e.g. "laboratory \
+surveillance", "syndromic surveillance", "enhanced surveillance", "passive \
+reporting"). Otherwise set it to null. NEVER infer it.
+13. DATA QUALITY. Set ``data_quality`` to a short verbatim-ish note ONLY when \
+the chunk explicitly states a caveat about how the numbers relate to reality: \
+under-reporting ("likely underreported", "true number is higher"), limited \
+testing/ascertainment ("testing capacity limited", "many mild cases not \
+captured"), reporting lag/delay, a suspected-vs-confirmed definition issue, or \
+a surveillance/case-definition change. Otherwise set it to null. Do NOT infer \
+under-reporting from a number alone, and do NOT restate the metric here — this \
+field is only for an explicit data-quality statement present in the text.
+14. Be aware of cognitive biases that affect information processing:
    - Anchoring: do not over-weight the first number you encounter.
    - Availability: rare dramatic events are not necessarily more likely.
    - Overconfidence: if the chunk is ambiguous, lower your confidence.
@@ -161,8 +203,14 @@ EXTRACTION_JSON_SCHEMA: dict = {
                     "metric_name": {"type": ["string", "null"]},
                     "metric_value": {"type": ["number", "null"]},
                     "metric_unit": {"type": ["string", "null"]},
+                    # count_basis / time_window are non-nullable strings with an
+                    # explicit "unknown" member rather than nullable enums: under
+                    # OpenAI strict json-schema a nullable enum must also list
+                    # null, and "unknown" already expresses "not stated" more
+                    # legibly downstream. surveillance_method stays nullable
+                    # free-text (no controlled vocabulary).
                     "count_basis": {
-                        "type": ["string", "null"],
+                        "type": "string",
                         "enum": [
                             "cumulative",
                             "incident",
@@ -172,18 +220,11 @@ EXTRACTION_JSON_SCHEMA: dict = {
                         ],
                     },
                     "time_window": {
-                        "type": ["string", "null"],
-                        "enum": [
-                            "day",
-                            "week",
-                            "month",
-                            "year",
-                            "unknown",
-                        ],
+                        "type": "string",
+                        "enum": ["day", "week", "month", "year", "unknown"],
                     },
-                    "surveillance_method": {
-                        "type": ["string", "null"],
-                    },
+                    "surveillance_method": {"type": ["string", "null"]},
+                    "data_quality": {"type": ["string", "null"]},
                     "event_date": {"type": ["string", "null"]},
                     "summary": {"type": ["string", "null"]},
                     "quote": {"type": "string"},
@@ -199,6 +240,7 @@ EXTRACTION_JSON_SCHEMA: dict = {
                     "count_basis",
                     "time_window",
                     "surveillance_method",
+                    "data_quality",
                     "event_date",
                     "summary",
                     "quote",
