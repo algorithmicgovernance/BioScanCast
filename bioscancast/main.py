@@ -1,8 +1,9 @@
-"""End-to-end pipeline orchestrator: search -> filter -> extract -> insight.
+"""End-to-end pipeline orchestrator: search -> filter -> extract -> insight -> forecast.
 
-Runs all four stages against a single forecast question, persisting each
+Runs all five stages against a single forecast question, persisting each
 stage's output and a running manifest under ``data/runs/{qid}/{run_id}/``
-so a crashed run still has partial artifacts for debugging.
+so a crashed run still has partial artifacts for debugging. The forecast
+stage can be skipped with ``--no-forecast`` (stops after insight).
 
 Usage:
 
@@ -39,7 +40,10 @@ from bioscancast.llm.pricing import (
 )
 from bioscancast.orchestration import persistence
 
-from bioscancast.stages.evaluation.loaders import load_question_by_id
+from bioscancast.stages.evaluation.loaders import (
+    load_options_for_question,
+    load_question_by_id,
+)
 from bioscancast.stages.searching.backends.tavily_backend import TavilyBackend
 from bioscancast.stages.searching.cache import SearchCache
 from bioscancast.stages.searching.pipeline import SearchStagePipeline
@@ -48,11 +52,15 @@ from bioscancast.stages.extraction.pipeline import ExtractionPipeline
 from bioscancast.stages.filtering.config import FILTER_CONFIG
 from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.stages.filtering.pipeline import FilteringPipeline
+from bioscancast.stages.forecasting.config import ForecastingConfig
+from bioscancast.stages.forecasting.pipeline import ForecastingPipeline
+from bioscancast.stages.forecasting.schemas import ForecastResult
 from bioscancast.stages.insight.config import InsightConfig
 from bioscancast.stages.insight.pipeline import InsightPipeline, InsightRunResult
 
 
 DEFAULT_CSV = "bioscancast/stages/evaluation/bioscancast_questions.csv"
+DEFAULT_FORECASTS_CSV = "bioscancast/stages/evaluation/bioscancast_forecasts.csv"
 DEFAULT_OUT_ROOT = "data/runs"
 
 logger = logging.getLogger("bioscancast.main")
@@ -155,6 +163,30 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         "--event-type", default=None, help="Override event_type field."
     )
     parser.add_argument(
+        "--options",
+        default=None,
+        help="Comma-separated answer options for the forecast (e.g. "
+        "'YES,NO' or '70-100,100-150,150-200,200+'). If omitted, options "
+        "are read from the forecasts CSV for this question, falling back "
+        "to a YES/NO binary.",
+    )
+    parser.add_argument(
+        "--forecasts-csv",
+        default=DEFAULT_FORECASTS_CSV,
+        help=f"Forecasts CSV used to resolve answer options when --options "
+        f"is omitted. Default: {DEFAULT_FORECASTS_CSV}",
+    )
+    parser.add_argument(
+        "--no-forecast",
+        action="store_true",
+        help="Stop after the insight stage; skip forecasting.",
+    )
+    parser.add_argument(
+        "--no-baseline",
+        action="store_true",
+        help="Skip the retrieval-free baseline forecast.",
+    )
+    parser.add_argument(
         "--no-cache",
         action="store_true",
         help="Disable the search-stage cache.",
@@ -177,6 +209,31 @@ def _parse_date(arg: Optional[str]) -> Optional[datetime]:
     if arg is None:
         return None
     return datetime.strptime(arg, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+
+
+def _resolve_options(args: argparse.Namespace, question_id: str) -> tuple[list[str], str]:
+    """Determine the forecast option set and how it was sourced.
+
+    Precedence: explicit ``--options`` > the forecasts CSV (the human
+    forecast rows define the option set for benchmark questions) > a
+    ``YES/NO`` binary default. Returns ``(options, source_note)``.
+    """
+    if args.options:
+        opts = [o.strip() for o in args.options.split(",") if o.strip()]
+        if opts:
+            return opts, "cli"
+
+    forecasts_csv = Path(args.forecasts_csv)
+    if forecasts_csv.exists():
+        try:
+            opts = load_options_for_question(forecasts_csv, question_id)
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Could not read options from %s: %s", forecasts_csv, exc)
+            opts = []
+        if opts:
+            return opts, f"forecasts_csv:{forecasts_csv}"
+
+    return ["YES", "NO"], "binary_default"
 
 
 def _apply_overrides(q: ForecastQuestion, args: argparse.Namespace) -> ForecastQuestion:
@@ -273,7 +330,7 @@ def _estimate_total_cost(per_model: dict[str, dict[str, int]]) -> tuple[float, l
 # ----------------------------------------------------------------------------
 
 
-def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
+def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult":
     csv_path = Path(args.csv)
 
     for var in ("OPENAI_API_KEY", "TAVILY_API_KEY"):
@@ -326,6 +383,9 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     if args.max_input_tokens:
         insight_config.max_input_tokens_per_run = args.max_input_tokens
 
+    forecast_config = ForecastingConfig(emit_baseline=not args.no_baseline)
+    options, options_source = _resolve_options(args, question.id)
+
     manifest: dict[str, Any] = {
         "run_id": run_id,
         "question_id": question.id,
@@ -340,7 +400,10 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
             "filter": dict(FILTER_CONFIG),
             "extraction": asdict(ExtractionConfig()),
             "insight": asdict(insight_config),
+            "forecast": asdict(forecast_config),
         },
+        "forecast_options": options,
+        "forecast_options_source": options_source,
     }
     persistence.save_manifest(run_dir, manifest)
 
@@ -351,6 +414,7 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     # before/after each stage that uses it. Search and filter share one
     # client; insight reports its own budget_summary.
     stage_usage: dict[str, dict[str, dict[str, int]]] = {}
+    forecast_result: Optional[ForecastResult] = None
 
     try:
         with _stage_timer(manifest, "search"):
@@ -412,6 +476,30 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
             f"out={budget.get('total_output_tokens', 0):,}",
             manifest["stage_timings"]["insight"],
         )
+        persistence.save_manifest(run_dir, manifest)
+
+        if not args.no_forecast:
+            with _stage_timer(manifest, "forecast"):
+                forecast_pipeline = ForecastingPipeline(
+                    llm_client=shared_llm_raw,
+                    config=forecast_config,
+                )
+                forecast_result = forecast_pipeline.run(
+                    question, insight_result.records, options,
+                )
+                persistence.save_forecast(run_dir, forecast_result)
+            stage_usage["forecast"] = (
+                forecast_result.budget_summary.get("per_model") or {}
+            )
+            fb = forecast_result.budget_summary
+            _log_summary(
+                "forecast",
+                f"{len(forecast_result.distributions)} distribution(s) over "
+                f"{len(options)} options | "
+                f"in={fb.get('total_input_tokens', 0):,} "
+                f"out={fb.get('total_output_tokens', 0):,}",
+                manifest["stage_timings"]["forecast"],
+            )
 
     except Exception as exc:
         manifest["errored_stage"] = manifest.get("current_stage")
@@ -422,16 +510,20 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
     # Per-stage cost from the captured usage snapshots.
     stage_costs: dict[str, float] = {}
     cost_warnings: list[str] = []
-    for stage in ("search", "filter", "insight"):
+    for stage in ("search", "filter", "insight", "forecast"):
         usage = stage_usage.get(stage) or {}
         cost, warns = _estimate_total_cost(usage)
         stage_costs[stage] = round(cost, 6)
         cost_warnings.extend(warns)
 
     # Combine usage across stages and estimate total cost.
+    forecast_usage = (
+        forecast_result.budget_summary.get("per_model") if forecast_result else None
+    ) or {}
     combined_usage = _merge_usage(
         dict(shared_llm.per_model),
         insight_result.budget_summary.get("per_model") or {},
+        forecast_usage,
     )
     cost_usd, _ = _estimate_total_cost(combined_usage)
     # Dedup warnings (same unknown model can surface in multiple stages).
@@ -449,7 +541,7 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
 
     print()
     print(f"=== Pipeline complete: {question.id} ===")
-    for stage in ("search", "filter", "extract", "insight"):
+    for stage in ("search", "filter", "extract", "insight", "forecast"):
         elapsed = manifest["stage_timings"].get(stage)
         if elapsed is None:
             continue
@@ -462,7 +554,7 @@ def run_pipeline(args: argparse.Namespace) -> InsightRunResult:
             print(f"  ! {w}")
     print(f"  artifacts: {run_dir}")
 
-    return insight_result
+    return forecast_result if forecast_result is not None else insight_result
 
 
 def main(argv: Optional[list[str]] = None) -> int:

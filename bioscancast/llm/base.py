@@ -48,6 +48,8 @@ class LLMClient(Protocol):
         schema: dict,
         model: str,
         max_tokens: int = 1024,
+        temperature: float | None = None,
+        seed: int | None = None,
     ) -> LLMResponse:
         """Generate a JSON response constrained to the given schema.
 
@@ -57,6 +59,13 @@ class LLMClient(Protocol):
             schema: JSON Schema dict constraining the output format.
             model: Model identifier to use for this call.
             max_tokens: Maximum output tokens.
+            temperature: Per-call sampling temperature. ``None`` uses the
+                client's configured default. Callers that need sampling
+                diversity across repeated calls (e.g. the forecasting
+                stage's ensemble) raise this and vary ``seed``.
+            seed: Per-call sampling seed. ``None`` uses the client's
+                configured default. Vary it across calls to draw distinct
+                samples from the same prompt.
 
         Returns:
             LLMResponse with parsed JSON content and token counts.

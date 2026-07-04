@@ -46,6 +46,8 @@ class OpenAILLMClient:
         schema: dict,
         model: str,
         max_tokens: int = 1024,
+        temperature: float | None = None,
+        seed: int | None = None,
     ) -> LLMResponse:
         response = self._client.chat.completions.create(
             model=model,
@@ -62,8 +64,8 @@ class OpenAILLMClient:
                 },
             },
             max_tokens=max_tokens,
-            temperature=self._temperature,
-            seed=self._seed,
+            temperature=self._temperature if temperature is None else temperature,
+            seed=self._seed if seed is None else seed,
         )
         raw_text = response.choices[0].message.content or "{}"
         usage = response.usage
