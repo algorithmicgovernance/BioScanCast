@@ -4,6 +4,16 @@ general_sources:
       url: "https://www.who.int/emergencies/disease-outbreak-news"
       geography: "Global"
 
+    - id: "who_pheic_list"
+      name: "WHO IHR Emergency Committees (PHEIC status)"
+      url: "https://www.who.int/teams/ihr/ihr-emergency-committees"
+      geography: "Global"
+
+    - id: "who_variant_tracking"
+      name: "WHO Tracking SARS-CoV-2 variants"
+      url: "https://www.who.int/activities/tracking-SARS-CoV-2-variants"
+      geography: "Global"
+
     - id: "cdc_outbreaks"
       name: "CDC Current Outbreaks"
       url: "https://www.cdc.gov/outbreaks/index.html"
@@ -73,10 +83,20 @@ specific_pathogen_sources:
         url: "https://www.who.int/teams/global-influenza-programme/avian-influenza"
         geography: "Global"
 
+      - id: "who_h5_hai"
+        name: "WHO Influenza at the human-animal interface (monthly risk assessment)"
+        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary"
+        geography: "Global"
+
       - id: "cdc_h5n1"
         name: "CDC H5N1 Situation Summary"
         url: "https://www.cdc.gov/bird-flu/situation-summary/"
         geography: "Global"
+
+      - id: "usda_aphis_livestock"
+        name: "USDA APHIS HPAI Confirmed Cases in Livestock"
+        url: "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock"
+        geography: "United States"
 
     covid-19:
       - id: "ourworldindata_covid"
@@ -86,6 +106,10 @@ specific_pathogen_sources:
       - id: "cdc_covid"
         name: "CDC COVID-19"
         url: "https://www.cdc.gov/covid/php/surveillance/index.html"
+        geography: "Global"
+      - id: "who_variant_tracking"
+        name: "WHO Tracking SARS-CoV-2 variants"
+        url: "https://www.who.int/activities/tracking-SARS-CoV-2-variants"
         geography: "Global"
 
     influenza:
@@ -101,14 +125,24 @@ specific_pathogen_sources:
 
   hemorrhagic:
     ebola:
+      - id: "who_ebola_drc"
+        name: "WHO Ebola outbreak DRC 2026 (Bundibugyo virus) event page"
+        url: "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+        geography: "Global"
+
+      - id: "who_ebola_don"
+        name: "WHO Disease Outbreak News - Ebola (Bundibugyo) DRC & Uganda"
+        url: "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602"
+        geography: "Global"
+
       - id: "who_ebola"
         name: "WHO Ebola"
-        url: "https://www.afro.who.int/health-topics/ebola-virus-disease"
+        url: "https://www.afro.who.int/health-topics/ebola-disease"
         geography: "Global"
 
       - id: "cdc_ebola"
         name: "CDC Ebola"
-        url: "https://www.cdc.gov/ebola/index.html"
+        url: "https://www.cdc.gov/ebola/about/index.html"
         geography: "Global"
 
     marburg:
@@ -125,8 +159,8 @@ specific_pathogen_sources:
   pox_re_emerging_viruses:
     mpox:
       - id: "who_mpox"
-        name: "WHO MPOX"
-        url: "https://www.who.int/health-topics/mpox"
+        name: "WHO Mpox outbreak (multi-country)"
+        url: "https://www.who.int/emergencies/situations/mpox-outbreak"
         geography: "Global"
 
       - id: "ourworldindata_mpox"
@@ -135,8 +169,8 @@ specific_pathogen_sources:
         geography: "Global"
 
       - id: "cdc_mpox"
-        name: "CDC MPOX"
-        url: "https://www.cdc.gov/mpox/data-research/index.html"
+        name: "CDC Mpox Situation Summary"
+        url: "https://www.cdc.gov/monkeypox/situation-summary/index.html"
         geography: "Global"
 
       - id: "ecdc_mpox"
@@ -159,7 +193,49 @@ specific_pathogen_sources:
         url: "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D="
         geography: "Americas"
 
-  vector_borne: []
+  vector_borne:
+    dengue:
+      - id: "paho_dengue"
+        name: "PAHO Epidemiological Update - Dengue in the Americas"
+        url: "https://www.paho.org/en/epidemiological-alerts-and-updates"
+        geography: "Americas"
+
+    chikungunya:
+      - id: "ecdc_chikungunya"
+        name: "ECDC Chikungunya worldwide overview (monthly)"
+        url: "https://www.ecdc.europa.eu/en/chikungunya-monthly"
+        geography: "Europe"
+
+    oropouche:
+      - id: "paho_oropouche"
+        name: "PAHO Oropouche virus disease"
+        url: "https://www.paho.org/en/topics/oropouche-virus-disease"
+        geography: "Americas"
+
+  enteric:
+    cholera:
+      - id: "who_cholera"
+        name: "WHO Cholera upsurge (multi-country external situation reports)"
+        url: "https://www.who.int/emergencies/situations/cholera-upsurge"
+        geography: "Global"
+
+  vaccine_preventable:
+    measles:
+      - id: "cdc_measles"
+        name: "CDC Measles Cases and Outbreaks (data & research)"
+        url: "https://www.cdc.gov/measles/data-research/index.html"
+        geography: "United States"
+
+      - id: "paho_measles"
+        name: "PAHO Measles"
+        url: "https://www.paho.org/en/topics/measles"
+        geography: "Americas"
+
+    polio:
+      - id: "gpei_polio"
+        name: "GPEI Polio this week"
+        url: "https://polioeradication.org/about-polio/polio-this-week/"
+        geography: "Global"
 
   animal_spillover:
     nipah:
@@ -167,3 +243,27 @@ specific_pathogen_sources:
         name: "WHO Nipah"
         url: "https://www.who.int/health-topics/nipah-virus-infection"
         geography: "Global"
+
+    # Avian influenza is zoonotic, so the source router often classifies H5
+    # questions as animal_spillover rather than respiratory. Mirror the H5N1
+    # sources here so either route injects the right dashboards.
+    h5n1:
+      - id: "who_h5n1"
+        name: "WHO H5N1 Situation Updates"
+        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza"
+        geography: "Global"
+
+      - id: "who_h5_hai"
+        name: "WHO Influenza at the human-animal interface (monthly risk assessment)"
+        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary"
+        geography: "Global"
+
+      - id: "cdc_h5n1"
+        name: "CDC H5N1 Situation Summary"
+        url: "https://www.cdc.gov/bird-flu/situation-summary/"
+        geography: "Global"
+
+      - id: "usda_aphis_livestock"
+        name: "USDA APHIS HPAI Confirmed Cases in Livestock"
+        url: "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock"
+        geography: "United States"
