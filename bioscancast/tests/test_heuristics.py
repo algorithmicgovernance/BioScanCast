@@ -92,3 +92,29 @@ def test_official_source_kept_even_when_priority_below_threshold():
     kept = next(d for d in keep_list if d.result_id == official.id)
     assert "official_recall_guarantee" in kept.reason_codes
     assert kept.priority_score < 0.65  # kept despite being below threshold
+
+
+def test_dashboard_lookup_survives_low_value_url():
+    """A curated dashboard whose URL trips the low-value screen (an ``/about``
+    path like GPEI's ``about-polio/polio-this-week``) must still be kept: the
+    ``dashboard_lookup`` bypass runs *before* the low-value-page check, so
+    injected sources are never dropped by URL-shape heuristics."""
+    question = ForecastQuestion(
+        id="q1",
+        text="How many wild poliovirus type 1 cases in 2026?",
+        created_at=datetime.utcnow(),
+        pathogen="poliovirus",
+    )
+    dashboard = _mk_result(
+        url="https://polioeradication.org/about-polio/polio-this-week/",
+        domain="polioeradication.org",
+        retrieval_reason="dashboard_lookup",
+    )
+    # Sanity: on its own this URL would be dropped by the low-value screen.
+    assert is_low_value_page(dashboard) is True
+
+    keep_list, _borderline, reject_list = heuristic_filter([dashboard], question)
+    assert dashboard.id in {d.result_id for d in keep_list}
+    assert dashboard.id not in {d.result_id for d in reject_list}
+    kept = next(d for d in keep_list if d.result_id == dashboard.id)
+    assert "dashboard_lookup_bypass" in kept.reason_codes

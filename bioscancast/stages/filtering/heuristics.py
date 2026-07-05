@@ -111,25 +111,13 @@ def heuristic_filter(
     reject_list: list[FilterDecision] = []
 
     for result in search_results:
-        if is_low_value_page(result):
-            reject_list.append(
-                make_decision(
-                    result=result,
-                    keep=False,
-                    stage="heuristic",
-                    relevance_score=0.0,
-                    credibility_score=0.0,
-                    priority_score=0.0,
-                    reason_codes=["low_value_page"],
-                )
-            )
-            continue
-
-        # Dashboard-injected results are hand-curated in
-        # ``bioscancast/datasets/biosecurity_sources.py``; they bypass the
-        # keyword-overlap-driven heuristic which structurally undervalues
-        # their generic titles. See issue #14 and live-run data on q7/q12
-        # where 4/4 injected dashboards had keyword_overlap == 0.000.
+        # Dashboard-injected results are hand-curated in ``sources.yaml``; they
+        # bypass the keyword-overlap-driven heuristic which structurally
+        # undervalues their generic titles (issue #14: q7/q12 had 4/4 injected
+        # dashboards at keyword_overlap == 0.000). This bypass runs BEFORE the
+        # low-value-page screen so a curated URL is never dropped by it — e.g.
+        # ``polioeradication.org/about-polio/polio-this-week/`` matches the
+        # "about" low-value keyword yet is the authoritative polio dashboard.
         if result.retrieval_reason == "dashboard_lookup":
             relevance_score = compute_heuristic_relevance(result, question)
             credibility_score = compute_heuristic_credibility(result)
@@ -142,6 +130,20 @@ def heuristic_filter(
                     credibility_score=credibility_score,
                     priority_score=1.0,
                     reason_codes=["dashboard_lookup_bypass"],
+                )
+            )
+            continue
+
+        if is_low_value_page(result):
+            reject_list.append(
+                make_decision(
+                    result=result,
+                    keep=False,
+                    stage="heuristic",
+                    relevance_score=0.0,
+                    credibility_score=0.0,
+                    priority_score=0.0,
+                    reason_codes=["low_value_page"],
                 )
             )
             continue
