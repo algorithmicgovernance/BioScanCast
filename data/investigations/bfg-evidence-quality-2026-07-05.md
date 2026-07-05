@@ -194,6 +194,15 @@ fires on the cholera situation-report and PAHO mpox sitrep PDFs.
    stating it — so the scraper is a correct precondition but does not, by itself,
    deliver q6/q8's cumulative anchor.
 2. **`pipeline.py` refiner-URL fix** (above).
+3. **`custom_scrapers/cdc_measles.py`** (new) — the CDC measles page injects its
+   case/**death** figures client-side; the death table cells are empty in the
+   statically served HTML (only cases are in prose, which is why q14 worked and
+   q16 didn't). The data is published as plain JSON at
+   `/wcms/vizdata/measles/measles_hosp.json` (no browser/Akamai needed); the
+   scraper fetches it and renders `total_deaths` / `deaths_sentence` / `total_cases`
+   as clean prose. **q16: 0 records → `0 measles deaths in 2026` @ conf 0.85**, and
+   it corroborates q14's 2,170 cases. Live-only (returns `None` in replay to avoid
+   leakage). Tests: `test_cdc_measles_scraper.py`.
 
 ## What Docling did (and didn't) change
 
@@ -204,11 +213,15 @@ keep their high-confidence dashboard anchors. Conclusion: the Phase-1 verdicts a
 numbers in prose or simple-enough tables that the base parser already handles.
 Docling matters for genuinely hard tables, but it does **not** rescue the gaps below.
 
-## Gaps that are NOT scraper/Docling-fixable (revised)
+## q16 (measles deaths) — FIXED via the CDC JSON feed
 
-- **q16 (measles deaths):** the 2026 death count is in an **HTML** table on the CDC
-  page; the Docling refiner is **PDF-only**, so it can't help. (Cases are in prose →
-  q14 works.) Needs HTML-table extraction or a CDC data endpoint.
+Initially looked HTML-table-bound (Docling is PDF-only). But the CDC page's data is
+served as plain JSON (`measles_hosp.json`) reachable without a browser — so the
+`cdc_measles` scraper above resolves it cleanly. This is the APHIS pattern *without*
+the Akamai wall. **q16 moved under_supported → high-confidence anchor (0 deaths).**
+
+## Gaps still NOT scraper/Docling-fixable
+
 - **q9 (APHIS states):** Tableau-behind-Akamai — **deferred** per decision; needs a
   browser package (**issue #50**).
 - **q11 / q24 / q25 (list enumeration):** "count PHEICs / DON items" — the pipeline
@@ -226,6 +239,7 @@ Ran 4 questions **with** the forecast (evidence `bioscancast` vs retrieval-free
 | **q1** (well-supported, anchor 1,460) | evidence: **0.64** on "1,000–2,499" + 0.36 on "2,500+"; baseline diffuse on low bins | Retrieval **decisively** anchors the forecast on the true current value. ✔ |
 | **q17** (anchor 114,829 @ conf 0.5) | evidence shifts mass up to "300k–449k" 0.35 / "450k–599k" 0.27; baseline 0.25/0.35 on the low bins | Low-confidence anchor **is used** — the record reaches the digest regardless of confidence. **q17 needs no insight code change for the forecast to move.** ✔ |
 | **q18** (dengue, anchor ~63k–251k) | evidence concentrates on "1–1.9M" 0.43 / "2–3.9M" 0.31 | Anchors sensibly toward the Americas full-year range. ✔ |
+| **q16** (remediated — CDC JSON scraper) | evidence: **0.99** on "0" deaths; baseline 0.70 | Post-fix: the new anchor (0 deaths 2026) sharpens the forecast onto the true value. ✔ |
 | **q6** (under-supported, ~0 records) | evidence: **0.96** on "0–4"; baseline diffuse | Sparse evidence → **over-confident** forecast. The real risk of under-support. ✘ |
 
 **Takeaway:** the evidence→forecast path works well where evidence is sufficient
@@ -236,8 +250,9 @@ that already work.
 
 # Revised recommendations (prioritized)
 
-1. **HTML-table extraction** (q16 measles deaths; also helps any CDC/ECDC
-   count-in-a-table). Highest ROI now that PDF tables are handled. — *new issue*
+1. **~~HTML-table extraction (q16)~~ — DONE** via the `cdc_measles` JSON scraper.
+   The general lesson: for JS-rendered gov dashboards, look for the page's JSON
+   data feed (CDC exposes them openly) before concluding "not extractable."
 2. **List-enumeration capability** (q11/q24/q25) — count entries on a WHO DON/PHEIC
    list. — *new issue*
 3. **q9 APHIS** — proceed on **#50** (curated snapshot or headless) when a browser
