@@ -30,6 +30,13 @@ begin once the first cases are entered into the ECDC EpiPulse Cases platform by
 EU/EEA countries. Until then, this section will remain empty.</p></body></html>
 """
 
+# Singular shape: ECDC uses "has reported" with grammatically singular subjects.
+_SINGULAR = """
+<html><body><p>Seasonal surveillance of chikungunya virus disease in the EU/EEA.
+In 2026, one country in Europe has reported cases of chikungunya virus disease:
+France (1).</p></body></html>
+"""
+
 
 def _getter(page):
     return lambda url, config: page
@@ -74,3 +81,12 @@ def test_missing_or_unparseable_falls_back():
     assert ecdc_chikungunya.fetch(
         _PAGE, html_getter=lambda url, config: "<html><body>unrelated</body></html>"
     ) is None
+
+
+def test_handles_singular_has_reported():
+    """ECDC uses singular 'has reported' when exactly one country is affected."""
+    result = ecdc_chikungunya.fetch(_PAGE, html_getter=_getter(_SINGULAR))
+    html = _html(result)
+    assert "1 EU/EEA country have reported locally-acquired" in html
+    assert "France (1)" in html
+    assert "2026" in html

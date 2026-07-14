@@ -47,7 +47,7 @@ _EMPTY_MARKERS = ("will remain empty", "will begin once the first")
 
 # "<n> countr(y|ies) in Europe have reported cases of chikungunya"
 _REPORT_SENTENCE = re.compile(
-    r"(\w+)\s+countr(?:y|ies)\s+in\s+Europe\s+have\s+reported\s+cases\s+of\s+chikungunya",
+    r"(\w+)\s+countr(?:y|ies)\s+in\s+Europe\s+(?:have|has)\s+reported\s+cases\s+of\s+chikungunya",
     re.IGNORECASE,
 )
 # "France (788)" / "Czechia (12)" — a country name followed by a case count.
