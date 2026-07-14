@@ -122,6 +122,53 @@ def _resolve_yaml_tier(entry: dict[str, Any], domain: str) -> tuple[int, float, 
     source_tier = get_tier_label(domain.lower(), tier_num)
     return tier_num, domain_score, source_tier
 
+def _iter_family_blocks(cfg: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
+    """Yield (family_name, family_block) for every well-formed family."""
+    families = cfg.get("specific_pathogen_sources", {})
+    if not isinstance(families, dict):
+        return []
+    return [
+        (name, block)
+        for name, block in families.items()
+        if isinstance(block, dict)
+    ]
+
+
+def resolve_pathogen_entries(question: ForecastQuestion) -> list[dict[str, Any]]:
+    """Deterministically resolve pathogen-specific entries from ``question.pathogen``.
+
+    Scans *every* family for the question's pathogen (rather than trusting an
+    LLM to pick the family first) and returns the matching source entries.
+    Returns ``[]`` when the pathogen is unset or resolves in no family — the
+    caller then falls back to LLM routing / general sources.
+
+    Entries are de-duplicated by ``id``/``url``: ``h5n1`` is intentionally
+    mirrored under both ``respiratory`` and ``animal_spillover`` in the YAML,
+    so a cross-family scan would otherwise return each H5N1 source twice.
+    """
+    if not question.pathogen:
+        return []
+
+    cfg = _load_sources_yaml()
+    entries: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for _family, family_block in _iter_family_blocks(cfg):
+        pathogen_key = _resolve_pathogen_key(question.pathogen, family_block)
+        source_list = family_block.get(pathogen_key) if pathogen_key else None
+        if not isinstance(source_list, list):
+            continue
+        for entry in source_list:
+            if not isinstance(entry, dict):
+                continue
+            dedup_key = str(entry.get("id") or entry.get("url") or "").strip().lower()
+            if dedup_key and dedup_key in seen:
+                continue
+            if dedup_key:
+                seen.add(dedup_key)
+            entries.append(entry)
+    return entries
+
+
 def _resolve_entries(question: ForecastQuestion, source_route: str) -> list[dict[str, Any]]:
     """Return the YAML entries for the requested route."""
     cfg = _load_sources_yaml()
@@ -148,12 +195,24 @@ def _resolve_entries(question: ForecastQuestion, source_route: str) -> list[dict
     if pathogen_key and isinstance(family_block.get(pathogen_key), list):
         return family_block[pathogen_key]
 
-    # Fallback: flatten everything under the selected family.
-    entries: list[dict[str, Any]] = []
-    for source_list in family_block.values():
-        if isinstance(source_list, list):
-            entries.extend(source_list)
-    return entries
+    # Unresolved pathogen under this family: return nothing rather than
+    # flattening the whole family. Flattening would inject wrong-pathogen
+    # dashboards (e.g. a Lassa question routed to `hemorrhagic` picking up
+    # ebola + marburg case counts the insight stage could misread). The
+    # caller falls back to general_sources instead. (issue #41, finding #1)
+    return []
+
+
+def lookup_pathogen_sources(question: ForecastQuestion) -> List[SearchResult]:
+    """Deterministic pathogen-first injection.
+
+    Resolves ``question.pathogen`` against every family (no LLM routing) and
+    returns the curated sources as SearchResults. Returns ``[]`` when the
+    pathogen is unset or unrecognised, signalling the caller to fall back to
+    LLM routing / general sources. Shares the historical-replay / Wayback
+    behaviour of :func:`lookup_yaml_sources`.
+    """
+    return _entries_to_results(question, resolve_pathogen_entries(question))
 
 
 def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[SearchResult]:
@@ -166,7 +225,18 @@ def lookup_yaml_sources(question: ForecastQuestion, source_route: str) -> List[S
     at-or-before the cutoff and emits a SearchResult pointing at the
     snapshot. Entries with no pre-cutoff snapshot are suppressed.
     """
-    entries = _resolve_entries(question, source_route)
+    return _entries_to_results(question, _resolve_entries(question, source_route))
+
+
+def _entries_to_results(
+    question: ForecastQuestion, entries: list[dict[str, Any]]
+) -> List[SearchResult]:
+    """Convert resolved YAML entries into SearchResults.
+
+    In historical-replay mode (``question.as_of_date`` set) each URL is
+    rewritten to its closest Wayback snapshot at-or-before the cutoff, and
+    entries with no pre-cutoff snapshot are suppressed.
+    """
     if not entries:
         return []
 

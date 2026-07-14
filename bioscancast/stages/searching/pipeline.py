@@ -20,7 +20,10 @@ from bioscancast.stages.filtering.models import ForecastQuestion, SearchResult
 from bioscancast.stages.filtering.utils import keyword_overlap_score
 from bioscancast.stages.searching.backends.base import RawSearchResult, SearchBackend
 from bioscancast.stages.searching.cache import SearchCache
-from bioscancast.stages.searching.source_lookup import lookup_yaml_sources
+from bioscancast.stages.searching.source_lookup import (
+    lookup_pathogen_sources,
+    lookup_yaml_sources,
+)
 from bioscancast.stages.searching.date_recovery import recover_published_date
 from bioscancast.stages.searching.query_decomposition import (
     SubQuery,
@@ -226,18 +229,48 @@ class SearchStagePipeline:
             historical_roleplay=self._historical_roleplay,
         )
 
-        source_route = route_sources(question, self._llm)
+        # 2. Inject curated sources.
+        #
+        # Routing policy (issue #41): default/general sources are injected
+        # ONLY when no pathogen-specific sources are available. The structured
+        # ``question.pathogen`` field is the primary, deterministic gate; the
+        # LLM route is a backup for pathogen-unset / unrecognised questions.
+        #
+        #   (a) Pathogen-first: resolve question.pathogen against every family.
+        #       On a hit, inject those curated sources and skip general.
+        #   (b) LLM backup: only if (a) is empty, ask route_sources() to pick a
+        #       route. An unresolved pathogen-family route yields nothing (we no
+        #       longer flatten a whole family), falling through to (c).
+        #   (c) General baseline: the last-resort route when nothing above
+        #       produced pathogen-specific sources.
+        yaml_results = lookup_pathogen_sources(question)
+        if yaml_results:
+            logger.info(
+                "Pathogen-first injection: %d curated source(s) for pathogen=%r",
+                len(yaml_results),
+                question.pathogen,
+            )
+        else:
+            source_route = route_sources(question, self._llm)
+            yaml_results = lookup_yaml_sources(question, source_route)
+            if not yaml_results and source_route != "general_sources":
+                logger.info(
+                    "Route %r yielded no sources; falling back to general_sources",
+                    source_route,
+                )
+                source_route = "general_sources"
+                yaml_results = lookup_yaml_sources(question, source_route)
+            logger.info(
+                "No pathogen-specific sources; LLM backup route=%s produced %d result(s)",
+                source_route,
+                len(yaml_results),
+            )
 
         logger.info(
-            "Decomposed into %d sub-queries (route=%s)",
+            "Decomposed into %d sub-queries; injected %d curated source(s)",
             len(sub_queries),
-            source_route,
+            len(yaml_results),
         )
-
-        # 2. Inject YAML lookups
-        yaml_results = lookup_yaml_sources(question, source_route)
-
-        logger.info("YAML lookup produced %d results", len(yaml_results))
 
         all_results: list[SearchResult] = list(yaml_results)
         seen_canonical: set[str] = {

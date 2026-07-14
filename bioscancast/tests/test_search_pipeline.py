@@ -180,3 +180,61 @@ class TestSearchStagePipeline:
         for r in dashboard_results:
             assert r.rank == 0
             assert r.engine == "dashboard"
+
+
+class TestSourceRoutingOrder:
+    """Issue #41: deterministic pathogen-first injection, LLM route as backup,
+    general sources only when nothing pathogen-specific is available."""
+
+    @staticmethod
+    def _pipeline():
+        return SearchStagePipeline(
+            search_backend=FakeSearchBackend(),
+            llm_client=FakeLLMClient(),
+            backend_name="fake",
+        )
+
+    def test_pathogen_hit_bypasses_llm_route(self, monkeypatch):
+        """A resolvable question.pathogen must inject curated sources without
+        ever consulting the LLM route."""
+        import bioscancast.stages.searching.pipeline as pipe
+
+        route_calls = {"n": 0}
+
+        def spy_route(question, llm_client):
+            route_calls["n"] += 1
+            return "general_sources"
+
+        monkeypatch.setattr(pipe, "route_sources", spy_route)
+
+        results = self._pipeline().run(_make_question())  # pathogen="H5N1"
+
+        assert route_calls["n"] == 0
+        dash = [r for r in results if r.retrieval_reason == "dashboard_lookup"]
+        assert dash and all("cdc.gov" in r.domain or "who.int" in r.domain or "aphis" in r.domain
+                            for r in dash)
+
+    def test_unset_pathogen_falls_back_to_general(self, monkeypatch):
+        """With no resolvable pathogen the LLM backup runs and general sources
+        are injected as the last resort."""
+        import bioscancast.stages.searching.pipeline as pipe
+
+        route_calls = {"n": 0}
+
+        def spy_route(question, llm_client):
+            route_calls["n"] += 1
+            return "general_sources"
+
+        monkeypatch.setattr(pipe, "route_sources", spy_route)
+
+        question = ForecastQuestion(
+            id="Q002",
+            text="Will WHO declare a PHEIC by December 2026?",
+            created_at=datetime(2025, 1, 15, tzinfo=timezone.utc),
+            pathogen=None,
+        )
+        results = self._pipeline().run(question)
+
+        assert route_calls["n"] == 1
+        dash = [r for r in results if r.retrieval_reason == "dashboard_lookup"]
+        assert dash, "expected general_sources to be injected as fallback"
