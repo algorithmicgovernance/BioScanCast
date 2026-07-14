@@ -61,6 +61,47 @@ def _parse_date(text: str) -> Optional[datetime]:
         return None
 
 
+def _select_item_pdf(isoup: BeautifulSoup, item_url: str, kw: str) -> Optional[str]:
+    """Pick the epidemiological-update PDF from a WHO item page.
+
+    An item page can link several PDFs (annexes, translations, briefs), so
+    taking the first ``.pdf`` blindly can extract the wrong document (issue
+    #59). Score candidates by how strongly they look like the situation
+    report/epidemiological update and prefer the highest scorer, falling back
+    to the first PDF in document order so behaviour is unchanged when nothing
+    is distinguishable.
+    """
+    best_url: Optional[str] = None
+    best_score = -1
+    for idx, a in enumerate(isoup.find_all("a", href=True)):
+        cand = urljoin(item_url, a["href"])
+        low = cand.lower()
+        if ".pdf" not in low:
+            continue
+        text = a.get_text(" ", strip=True).lower()
+
+        score = 0
+        # The Docling allowlist and the cumulative tables live on the
+        # ``situation-reports`` path — strongest signal.
+        if "situation-report" in low:
+            score += 4
+        if "epidemiological-update" in low or "epidemiological update" in text:
+            score += 3
+        if kw in low or kw in text:
+            score += 2
+        # WHO serves the real report PDFs from the CDN host.
+        if urlparse(low).netloc.endswith("cdn.who.int"):
+            score += 1
+
+        # Strictly-greater keeps the first candidate on ties, preserving the
+        # previous "first PDF" fallback for indistinguishable pages.
+        if score > best_score:
+            best_score = score
+            best_url = cand
+
+    return best_url
+
+
 def _get(url: str, cfg: ExtractionConfig) -> Optional[curl_requests.Response]:
     try:
         return curl_requests.get(
@@ -124,12 +165,7 @@ def fetch_who_hub_latest_pdf(
         return None
     isoup = BeautifulSoup(item.text, "html.parser")
 
-    pdf_url = None
-    for a in isoup.find_all("a", href=True):
-        cand = urljoin(item_url, a["href"])
-        if ".pdf" in cand.lower():
-            pdf_url = cand
-            break
+    pdf_url = _select_item_pdf(isoup, item_url, kw)
     if not pdf_url:
         return None
 
