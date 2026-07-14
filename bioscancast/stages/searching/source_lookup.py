@@ -42,6 +42,15 @@ _PATHOGEN_ALIASES: dict[str, str] = {
     "coronavirus": "covid-19",
     "bird flu": "h5n1",
     "avian flu": "h5n1",
+    "avian influenza": "h5n1",
+    "h5": "h5n1",
+    "h5nx": "h5n1",
+    "bundibugyo": "ebola",
+    "sudan virus": "ebola",
+    "filovirus": "ebola",
+    "poliovirus": "polio",
+    "wild poliovirus": "polio",
+    "wpv1": "polio",
 }
 
 
