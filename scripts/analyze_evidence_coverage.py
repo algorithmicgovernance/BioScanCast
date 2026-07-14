@@ -783,11 +783,11 @@ QTYPE: dict[str, str] = {
     "bfg_q1": "range", "bfg_q2": "range", "bfg_q3": "binary", "bfg_q4": "range",
     "bfg_q5": "categorical", "bfg_q6": "range", "bfg_q7": "binary",
     "bfg_q8": "categorical", "bfg_q9": "range", "bfg_q10": "categorical",
-    "bfg_q11": "categorical", "bfg_q12": "binary", "bfg_q13": "range",
+    "bfg_q11": "range", "bfg_q12": "binary", "bfg_q13": "range",
     "bfg_q14": "range", "bfg_q15": "binary", "bfg_q16": "range",
     "bfg_q17": "range", "bfg_q18": "range", "bfg_q19": "range",
     "bfg_q20": "range", "bfg_q21": "binary", "bfg_q22": "range",
-    "bfg_q23": "binary", "bfg_q24": "binary", "bfg_q25": "range",
+    "bfg_q23": "binary", "bfg_q24": "range", "bfg_q25": "range",
 }
 
 
