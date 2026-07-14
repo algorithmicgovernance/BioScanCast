@@ -15,6 +15,7 @@ See ``--help`` for the full flag list.
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import os
 import sys
@@ -326,6 +327,87 @@ def _estimate_total_cost(per_model: dict[str, dict[str, int]]) -> tuple[float, l
     return total, warnings
 
 
+def _build_forecast_history_context(
+    out_root: Path,
+    question_id: str,
+    current_run_id: str,
+    *,
+    max_runs: int = 5,
+) -> str:
+    """Summarize prior forecast outputs for prompt context.
+
+    Pulls previous ``forecast.json`` + ``question.json`` artifacts for this
+    question and emits a compact text block the forecasting prompt can use as
+    historical context. Failures are best-effort and silently skipped.
+    """
+    qdir = out_root / question_id
+    if not qdir.exists() or not qdir.is_dir():
+        return ""
+
+    run_dirs = [p for p in qdir.iterdir() if p.is_dir() and p.name != current_run_id]
+    run_dirs.sort(key=lambda p: p.name, reverse=True)
+
+    lines: list[str] = []
+    for run_dir in run_dirs:
+        if len(lines) >= max_runs:
+            break
+        forecast_path = run_dir / "forecast.json"
+        question_path = run_dir / "question.json"
+        if not forecast_path.exists() or not question_path.exists():
+            continue
+
+        try:
+            forecast_payload = json.loads(forecast_path.read_text(encoding="utf-8"))
+            question_payload = json.loads(question_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        as_of = question_payload.get("as_of_date") or "(none)"
+        distributions = forecast_payload.get("distributions") or []
+        chosen = None
+        for d in distributions:
+            if d.get("forecast_source") == "bioscancast":
+                chosen = d
+                break
+        if chosen is None and distributions:
+            chosen = distributions[0]
+        if not chosen:
+            continue
+
+        probs = chosen.get("probabilities") or {}
+        if not probs:
+            continue
+        top_option = max(probs, key=probs.get)
+        top_prob = float(probs[top_option])
+        prob_parts = [f"{k}={float(v):.3f}" for k, v in probs.items()]
+
+        rationale = ""
+        samples = forecast_payload.get("samples") or []
+        for s in samples:
+            r = (s or {}).get("rationale")
+            if r:
+                rationale = str(r).strip()
+                break
+        if not rationale:
+            r = forecast_payload.get("baseline_rationale")
+            if r:
+                rationale = str(r).strip()
+
+        if len(rationale) > 240:
+            rationale = rationale[:237].rstrip() + "..."
+
+        line = (
+            f"- as_of={as_of} run={run_dir.name}: "
+            f"top={top_option} ({top_prob:.3f}); probs: "
+            f"{', '.join(prob_parts)}"
+        )
+        if rationale:
+            line += f"; rationale: {rationale}"
+        lines.append(line)
+
+    return "\n".join(lines)
+
+
 # ----------------------------------------------------------------------------
 # Main pipeline
 # ----------------------------------------------------------------------------
@@ -513,12 +595,20 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
 
         if not args.no_forecast:
             with _stage_timer(manifest, "forecast"):
+                historical_context = _build_forecast_history_context(
+                    out_root,
+                    question.id,
+                    run_id,
+                )
                 forecast_pipeline = ForecastingPipeline(
                     llm_client=shared_llm_raw,
                     config=forecast_config,
                 )
                 forecast_result = forecast_pipeline.run(
-                    question, insight_result.records, options,
+                    question,
+                    insight_result.records,
+                    options,
+                    historical_context=historical_context,
                 )
                 persistence.save_forecast(run_dir, forecast_result)
             stage_usage["forecast"] = (

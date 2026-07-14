@@ -138,6 +138,7 @@ class ForecastingPipeline:
         question: ForecastQuestion,
         records: List[InsightRecord],
         options: List[str],
+        historical_context: str | None = None,
     ) -> ForecastResult:
         """Produce a forecast distribution over ``options`` for ``question``.
 
@@ -168,7 +169,7 @@ class ForecastingPipeline:
 
         # --- Ensemble of superforecaster reasoning samples ---
         system, user, schema = build_forecast_prompt(
-            question, options, evidence_digest
+            question, options, evidence_digest, historical_context
         )
         usable_vectors: List[List[float]] = []
         for i in range(config.ensemble_samples):

@@ -15,7 +15,9 @@ from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.stages.forecasting import aggregation
 from bioscancast.stages.forecasting.config import ForecastingConfig
 from bioscancast.stages.forecasting.evidence import build_evidence_digest, _format_record
+from bioscancast.stages.forecasting.prompts import build_forecast_prompt
 from bioscancast.stages.forecasting.pipeline import ForecastingPipeline
+import bioscancast.stages.forecasting.pipeline as forecasting_pipeline_mod
 from bioscancast.stages.forecasting.schemas import ForecastResult
 from bioscancast.llm.base import LLMResponse
 from bioscancast.llm.fake_client import FakeLLMClient
@@ -459,6 +461,51 @@ def test_pipeline_rejects_empty_options():
     pipeline = ForecastingPipeline(llm_client=client, config=_config())
     with pytest.raises(ValueError):
         pipeline.run(QUESTION, [_record()], [])
+
+
+def test_prompt_includes_forecast_history_block_when_provided():
+    system, user, schema = build_forecast_prompt(
+        QUESTION,
+        ["YES", "NO"],
+        evidence_digest="[2026-01-15] sample evidence",
+        historical_context=(
+            "- as_of=2026-01-01 run=20260101_000000: top=NO (0.620); "
+            "probs: YES=0.380, NO=0.620; rationale: outbreak appears contained"
+        ),
+    )
+    assert "FORECAST HISTORY (prior runs for this question" in user
+    assert "as_of=2026-01-01" in user
+    assert "rationale: outbreak appears contained" in user
+
+
+def test_pipeline_threads_historical_context_into_prompt(monkeypatch):
+    captured: dict[str, str | None] = {"historical_context": None}
+    original = forecasting_pipeline_mod.build_forecast_prompt
+
+    def _recording_build_prompt(question, options, evidence_digest, historical_context=None):
+        captured["historical_context"] = historical_context
+        return original(question, options, evidence_digest, historical_context)
+
+    monkeypatch.setattr(
+        forecasting_pipeline_mod,
+        "build_forecast_prompt",
+        _recording_build_prompt,
+    )
+
+    client = FakeLLMClient([_forecast_resp([0.6, 0.4])])
+    pipeline = ForecastingPipeline(
+        llm_client=client,
+        config=_config(ensemble_samples=1, emit_baseline=False),
+    )
+    pipeline.run(
+        QUESTION,
+        [_record()],
+        ["YES", "NO"],
+        historical_context="- as_of=2026-01-01 run=old: top=NO (0.620)",
+    )
+
+    assert captured["historical_context"] is not None
+    assert "as_of=2026-01-01" in (captured["historical_context"] or "")
 
 
 # ---------------------------------------------------------------------------
