@@ -139,9 +139,16 @@ class ExtractionPipeline:
             refiner = self._get_docling_refiner()
             if refiner is not None:
                 try:
+                    # Match the Docling allowlist against the URL actually
+                    # fetched. Custom hub scrapers (who_cholera, who_h5_hai, ...)
+                    # resolve a landing page to a ``cdn.who.int/.../*.pdf``; the
+                    # allowlist entries target those resolved PDF paths, so
+                    # matching on ``filtered_doc.url`` (the hub) would never fire
+                    # the ``situation-reports`` / ``_sage-`` allowlist for exactly
+                    # the PDFs it exists to catch.
                     parsed = refiner.refine(
                         parsed,
-                        source_url=filtered_doc.url,
+                        source_url=fetch_result.final_url or filtered_doc.url,
                         content=fetch_result.content_bytes,
                     )
                 except Exception as exc:

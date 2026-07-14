@@ -150,6 +150,53 @@ class TestExtractionPipeline:
         assert doc.page_count is not None
         assert len(doc.chunks) > 0
 
+    def test_refiner_receives_resolved_pdf_url_not_hub(self):
+        # A hub scraper (who_cholera, who_h5_hai, ...) resolves a landing page
+        # who.int/<hub> to a cdn.who.int/.../*.pdf. The Docling allowlist targets
+        # the resolved PDF path, so the refiner must be handed
+        # ``fetch_result.final_url`` — matching on the hub ``filtered_doc.url``
+        # would never fire the allowlist for exactly those scraper PDFs.
+        pdf_bytes = (FIXTURES / "who_don_sample.pdf").read_bytes()
+        hub_url = "https://www.who.int/emergencies/situations/cholera-upsurge"
+        pdf_url = (
+            "https://cdn.who.int/media/docs/default-source/documents/"
+            "emergencies/situation-reports/cholera_update.pdf"
+        )
+        fdoc = _make_filtered_doc(
+            result_id="r_hub", url=hub_url, domain="who.int", extraction_mode="pdf"
+        )
+        fetch_map = {
+            hub_url: FetchResult(
+                url=pdf_url,
+                final_url=pdf_url,
+                status_code=200,
+                content_type="application/pdf",
+                content_bytes=pdf_bytes,
+                fetched_at=datetime.now(timezone.utc),
+                error=None,
+            )
+        }
+
+        seen: dict[str, str] = {}
+
+        class _SpyRefiner:
+            def refine(self, parsed, *, source_url, content):
+                seen["source_url"] = source_url
+                return parsed
+
+        with patch(
+            "bioscancast.stages.extraction.pipeline.fetch",
+            side_effect=_fake_fetch_factory(fetch_map),
+        ), patch.object(
+            ExtractionPipeline, "_get_docling_refiner", return_value=_SpyRefiner()
+        ):
+            pipeline = ExtractionPipeline(
+                config=ExtractionConfig(enable_docling_refiner=True)
+            )
+            pipeline.run([fdoc])
+
+        assert seen.get("source_url") == pdf_url
+
     def test_ordering_by_extraction_priority(self):
         html_bytes = b"<html><body><p>Test content</p></body></html>"
         fdoc_low = _make_filtered_doc(
