@@ -112,6 +112,9 @@ class TestMpoxCumulativeMetric:
         # Trend columns present, and the last World trend row is the cutoff date.
         assert "<th>total_cases</th>" in body
         assert "2025-03-05" in body
+        assert "Trend summary (total_cases, World):" in body
+        assert "Linear fit on recent cumulative trend (total_cases" in body
+        assert "Incident trend stats (new_cases, World):" in body
 
     def test_returns_none_when_no_rows_before_cutoff(self):
         assert (
@@ -146,6 +149,8 @@ class TestLocationTargeting:
         )
         assert "<h2>Africa</h2>" in body
         assert "cumulative confirmed cases (Africa): 41,000" in body
+        assert "Region/question-target focus: Africa trend statistics" in body
+        assert "Trend summary (total_cases, Africa):" in body
 
     def test_question_text_infers_target_entity(self):
         body = _html(

@@ -33,6 +33,8 @@ import csv
 import html
 import io
 import logging
+import math
+import statistics
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Callable, Optional
@@ -203,6 +205,89 @@ def _series_delta(series: list[tuple[datetime, float]], n_back: int) -> float | 
     return series[-1][1] - series[-(n_back + 1)][1]
 
 
+def _r2(y: list[float], yhat: list[float]) -> float:
+    if not y or len(y) != len(yhat):
+        return 0.0
+    y_mean = sum(y) / len(y)
+    ss_res = sum((a - b) ** 2 for a, b in zip(y, yhat))
+    ss_tot = sum((a - y_mean) ** 2 for a in y)
+    if ss_tot <= 0.0:
+        return 1.0 if ss_res <= 1e-12 else 0.0
+    return max(0.0, min(1.0, 1.0 - (ss_res / ss_tot)))
+
+
+def _fit_linear(values: list[float]) -> dict[str, float] | None:
+    if len(values) < 2:
+        return None
+    n = len(values)
+    xs = list(range(n))
+    x_mean = sum(xs) / n
+    y_mean = sum(values) / n
+    denom = sum((x - x_mean) ** 2 for x in xs)
+    if denom <= 0.0:
+        return None
+    slope = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, values)) / denom
+    intercept = y_mean - (slope * x_mean)
+    yhat = [intercept + slope * x for x in xs]
+    return {
+        "intercept": float(intercept),
+        "slope": float(slope),
+        "r2": _r2(values, yhat),
+    }
+
+
+def _fit_exponential(values: list[float]) -> dict[str, float] | None:
+    if len(values) < 2:
+        return None
+    points = [(idx, v) for idx, v in enumerate(values) if v > 0]
+    if len(points) < 2:
+        return None
+
+    xs = [float(idx) for idx, _ in points]
+    ys = [float(v) for _, v in points]
+    ln_ys = [math.log(v) for v in ys]
+
+    n = len(xs)
+    x_mean = sum(xs) / n
+    y_mean = sum(ln_ys) / n
+    denom = sum((x - x_mean) ** 2 for x in xs)
+    if denom <= 0.0:
+        return None
+
+    b = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, ln_ys)) / denom
+    ln_a = y_mean - (b * x_mean)
+    a = math.exp(ln_a)
+    yhat = [a * math.exp(b * x) for x in xs]
+    return {
+        "a": float(a),
+        "b": float(b),
+        "r2": _r2(ys, yhat),
+    }
+
+
+def _fmt_num(value: float | None, *, decimals: int = 2) -> str:
+    if value is None:
+        return "n/a"
+    if abs(value - round(value)) < 1e-9:
+        return f"{int(round(value)):,}"
+    return f"{value:,.{decimals}f}"
+
+
+def _stats_summary(values: list[float]) -> str:
+    if not values:
+        return "n=0"
+    n = len(values)
+    mean = sum(values) / n
+    std = statistics.stdev(values) if n > 1 else 0.0
+    min_v = min(values)
+    med = statistics.median(values)
+    max_v = max(values)
+    return (
+        f"n={n}, mean={_fmt_num(mean)}, std={_fmt_num(std)}, "
+        f"min={_fmt_num(min_v)}, median={_fmt_num(med)}, max={_fmt_num(max_v)}"
+    )
+
+
 def _cumulative_line(dataset: OWIDDataset, entity: str, dt: datetime, row: dict[str, str]) -> str:
     """One prose sentence stating an entity's cumulative figures as of a date."""
     parts = [f"As of {dt.date().isoformat()}, {html.escape(entity)}:"]
@@ -213,7 +298,13 @@ def _cumulative_line(dataset: OWIDDataset, entity: str, dt: datetime, row: dict[
     return " ".join(parts).rstrip(";")
 
 
-def _trend_table_html(dataset: OWIDDataset, entity: str, ordered_rows: list[tuple[datetime, dict[str, str]]]) -> list[str]:
+def _trend_table_html(
+    dataset: OWIDDataset,
+    entity: str,
+    ordered_rows: list[tuple[datetime, dict[str, str]]],
+    *,
+    is_target_entity: bool,
+) -> list[str]:
     cols = [c for c in dataset.trend_columns if ordered_rows and c in ordered_rows[-1][1]]
     if not cols:
         return []
@@ -221,16 +312,85 @@ def _trend_table_html(dataset: OWIDDataset, entity: str, ordered_rows: list[tupl
     value_series = [(dt, _parse_float(row.get(dataset.value_col))) for dt, row in series]
     d4 = _series_delta([(dt, v) for dt, v in value_series if v is not None], 4)
     d12 = _series_delta([(dt, v) for dt, v in value_series if v is not None], 12)
+    d7 = _series_delta([(dt, v) for dt, v in value_series if v is not None], 7)
+    d30 = _series_delta([(dt, v) for dt, v in value_series if v is not None], 30)
 
     lines = [f"<h3>{html.escape(entity)} — recent trend</h3>"]
-    if value_series and value_series[-1][1] is not None:
-        latest_dt, latest_val = value_series[-1]
+    clean_series = [(dt, v) for dt, v in value_series if v is not None]
+    if clean_series and clean_series[-1][1] is not None:
+        latest_dt, latest_val = clean_series[-1]
+        row_span_days = (
+            (clean_series[-1][0] - clean_series[0][0]).days
+            if len(clean_series) > 1
+            else 0
+        )
         lines.append(
             f"<p>Latest {html.escape(dataset.value_col)} "
             f"({latest_dt.date().isoformat()}): {latest_val:,.0f}; "
             f"delta_4_rows: {d4 if d4 is not None else 'n/a'}; "
             f"delta_12_rows: {d12 if d12 is not None else 'n/a'}</p>"
         )
+
+        cumulative_values = [v for _, v in clean_series]
+        cumulative_fit_window = cumulative_values[-30:]
+        cumulative_linear = _fit_linear(cumulative_fit_window)
+        increments = [
+            cumulative_values[i] - cumulative_values[i - 1]
+            for i in range(1, len(cumulative_values))
+        ]
+
+        lines.append(
+            f"<p>Trend summary ({html.escape(dataset.value_col)}, {html.escape(entity)}): "
+            f"points={len(cumulative_values)}, span_days={row_span_days}, "
+            f"delta_7_rows={_fmt_num(d7)}, delta_30_rows={_fmt_num(d30)}, "
+            f"recent_increment_stats={_stats_summary(increments)}.</p>"
+        )
+
+        if cumulative_linear is None:
+            lines.append(
+                "<p>Linear fit on recent cumulative trend: unavailable "
+                "(insufficient points).</p>"
+            )
+        else:
+            lines.append(
+                "<p>Linear fit on recent cumulative trend "
+                f"({html.escape(dataset.value_col)}, last {len(cumulative_fit_window)} rows): "
+                f"intercept={cumulative_linear['intercept']:.6f}, "
+                f"slope={cumulative_linear['slope']:.6f} per row, "
+                f"R^2={cumulative_linear['r2']:.6f}.</p>"
+            )
+
+        if "new_cases" in cols:
+            new_case_values = [
+                _parse_float(row.get("new_cases"))
+                for _dt, row in ordered_rows
+            ]
+            new_case_values = [v for v in new_case_values if v is not None]
+            new_case_fit_window = new_case_values[-30:]
+            exp_fit = _fit_exponential(new_case_fit_window)
+            lines.append(
+                f"<p>Incident trend stats (new_cases, {html.escape(entity)}): "
+                f"{_stats_summary(new_case_fit_window)}.</p>"
+            )
+            if exp_fit is None:
+                lines.append(
+                    "<p>Exponential fit on recent new_cases: unavailable "
+                    "(insufficient strictly-positive points).</p>"
+                )
+            else:
+                lines.append(
+                    "<p>Exponential fit on recent new_cases "
+                    f"(last {len(new_case_fit_window)} rows): "
+                    f"a={exp_fit['a']:.6f}, b={exp_fit['b']:.6f}, "
+                    f"R^2={exp_fit['r2']:.6f}.</p>"
+                )
+
+        if is_target_entity:
+            lines.append(
+                f"<p>Region/question-target focus: {html.escape(entity)} trend "
+                "statistics and model-fit outputs are included in this section.</p>"
+            )
+
     header = "".join(f"<th>{html.escape(c)}</th>" for c in cols)
     lines.append(f"<table><thead><tr>{header}</tr></thead><tbody>")
     for _dt, row in ordered_rows[-dataset.trend_rows:]:
@@ -348,7 +508,14 @@ def fetch_owid(
             f"{_cumulative_line(dataset, entity, dt, row)}. "
             f"Source: {html.escape(dataset.csv_url)}.</p>"
         )
-        summary_lines.extend(_trend_table_html(dataset, entity, rows_by_location[entity]))
+        summary_lines.extend(
+            _trend_table_html(
+                dataset,
+                entity,
+                rows_by_location[entity],
+                is_target_entity=entity in target_locations,
+            )
+        )
 
     if top_locations:
         summary_lines.append("<h2>Top locations by latest cumulative value</h2>")
