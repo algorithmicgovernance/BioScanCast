@@ -2,7 +2,9 @@ from datetime import datetime, timezone
 
 from bioscancast.stages.filtering.models import ForecastQuestion
 from bioscancast.stages.searching.source_lookup import (
+    lookup_pathogen_sources,
     lookup_yaml_sources,
+    resolve_pathogen_entries,
     _resolve_pathogen_key,
     _load_sources_yaml,
 )
@@ -39,13 +41,15 @@ class TestYamlSourceLookup:
         results = lookup_yaml_sources(q, "pox_re_emerging_viruses")
         assert len(results) > 0
 
-    def test_unknown_pathogen_falls_back_to_family(self):
-        # An unrecognised pathogen under a family route falls back to the whole
-        # family (see _resolve_entries). Intentional best-effort behaviour;
-        # flagged for review in the route-gating follow-up issue.
+    def test_unknown_pathogen_under_family_returns_empty(self):
+        # An unrecognised pathogen under a family route returns nothing rather
+        # than flattening the whole family: injecting ebola + marburg dashboards
+        # for, say, a Lassa question would feed the insight stage wrong-pathogen
+        # case counts. The pipeline falls back to general_sources instead.
+        # (issue #41, finding #1)
         q = _make_question(pathogen="unknownvirus123")
         results = lookup_yaml_sources(q, "hemorrhagic")
-        assert len(results) > 0
+        assert results == []
 
     def test_no_pathogen_returns_empty(self):
         # No pathogen + a pathogen-specific route yields nothing; only the
@@ -103,6 +107,57 @@ class TestYamlSourceLookup:
             assert 0.0 <= r.domain_score <= 1.0
             assert r.freshness_score == 1.0
             assert r.search_stage_score == 0.0  # computed later by pipeline
+
+
+class TestPathogenFirstLookup:
+    """Deterministic pathogen-first resolution scans *all* families for
+    question.pathogen — no LLM route required (issue #41)."""
+
+    def test_resolves_across_families_without_route(self):
+        results = lookup_pathogen_sources(_make_question(pathogen="mpox"))
+        assert len(results) > 0
+        for r in results:
+            assert r.retrieval_reason == "dashboard_lookup"
+
+    def test_unset_pathogen_returns_empty(self):
+        assert lookup_pathogen_sources(_make_question(pathogen=None)) == []
+        assert resolve_pathogen_entries(_make_question(pathogen=None)) == []
+
+    def test_unrecognised_pathogen_returns_empty(self):
+        # No family match -> empty, so the pipeline falls back to general.
+        assert lookup_pathogen_sources(_make_question(pathogen="novel pathogen")) == []
+        assert resolve_pathogen_entries(_make_question(pathogen="unknownvirus123")) == []
+
+    def test_h5n1_mirrored_family_deduplicated(self):
+        # h5n1 is intentionally mirrored under `respiratory` and
+        # `animal_spillover`; a cross-family scan must not return duplicates.
+        entries = resolve_pathogen_entries(_make_question(pathogen="h5n1"))
+        ids = [e.get("id") for e in entries]
+        assert ids == list(dict.fromkeys(ids)), f"duplicate entries: {ids}"
+        urls = [e.get("url") for e in entries]
+        assert len(urls) == len(set(urls))
+
+    def test_alias_resolves_without_route(self):
+        # Free-text topic strings from the benchmark loader must resolve.
+        for text, canonical in [
+            ("avian influenza h5", "h5n1"),
+            ("sudan virus disease", "ebola"),
+            ("sars-cov-2", "covid-19"),
+            ("poliovirus", "polio"),
+        ]:
+            got = {r.url for r in lookup_pathogen_sources(_make_question(pathogen=text))}
+            want = {r.url for r in lookup_pathogen_sources(_make_question(pathogen=canonical))}
+            assert got == want and got, f"{text!r} did not resolve to {canonical!r}"
+
+    def test_pathogen_first_excludes_general_sources(self):
+        # Pathogen hit must not pull in the general baseline feeds.
+        general_urls = {
+            r.url for r in lookup_yaml_sources(_make_question(), "general_sources")
+        }
+        pathogen_urls = {
+            r.url for r in lookup_pathogen_sources(_make_question(pathogen="mpox"))
+        }
+        assert pathogen_urls.isdisjoint(general_urls)
 
 
 class TestResolvePathogenKey:
