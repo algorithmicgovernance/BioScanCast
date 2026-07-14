@@ -114,3 +114,19 @@ class TestResolvePathogenKey:
         assert _resolve_pathogen_key("bird flu", respiratory) == "h5n1"  # alias
         assert _resolve_pathogen_key("marburg virus disease", hemorrhagic) == "marburg"  # substring
         assert _resolve_pathogen_key("unknownvirus123", hemorrhagic) is None
+
+    def test_bare_h5_and_h5nx_resolve_to_h5n1(self):
+        # Unspecified-N inputs intentionally fall back to the h5n1 curated set.
+        cfg = _load_sources_yaml()
+        respiratory = cfg["specific_pathogen_sources"]["respiratory"]
+        assert _resolve_pathogen_key("h5", respiratory) == "h5n1"
+        assert _resolve_pathogen_key("h5nx", respiratory) == "h5n1"
+        assert _resolve_pathogen_key("avian influenza", respiratory) == "h5n1"
+
+    def test_non_h5n1_subtypes_do_not_resolve_to_h5n1(self):
+        # Explicit non-H5N1 H5 subtypes must not be silently routed to the
+        # H5N1 source set (issue #58).
+        cfg = _load_sources_yaml()
+        respiratory = cfg["specific_pathogen_sources"]["respiratory"]
+        for subtype in ("h5n5", "h5n8", "h5n2", "avian influenza a(h5n5)"):
+            assert _resolve_pathogen_key(subtype, respiratory) != "h5n1", subtype

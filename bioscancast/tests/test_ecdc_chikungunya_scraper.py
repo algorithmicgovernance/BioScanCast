@@ -90,3 +90,53 @@ def test_handles_singular_has_reported():
     assert "1 EU/EEA country have reported locally-acquired" in html
     assert "France (1)" in html
     assert "2026" in html
+
+
+# --- issue #60: number words beyond twelve, and undercount guards -----------
+
+def _sentence(count_word: str, tail: str = "") -> str:
+    return (
+        "<html><body><p>Seasonal surveillance of chikungunya virus disease in the "
+        f"EU/EEA. In 2026, {count_word} countries in Europe have reported cases of "
+        f"chikungunya virus disease{tail}.</p></body></html>"
+    )
+
+
+def test_large_number_word_without_pairs():
+    # "fifteen" exceeds the old twelve ceiling; with no enumerable pairs the
+    # stated prose number must still be honoured (issue #60).
+    result = ecdc_chikungunya.fetch(_PAGE, html_getter=_getter(_sentence("fifteen")))
+    assert "15 EU/EEA countries have reported" in _html(result)
+
+
+def test_compound_number_word():
+    result = ecdc_chikungunya.fetch(_PAGE, html_getter=_getter(_sentence("twenty-one")))
+    assert "21 EU/EEA countries have reported" in _html(result)
+
+
+def test_incomplete_pairs_do_not_drag_down_stated_count():
+    # Prose states five but only two pairs are enumerable; the count must not be
+    # silently undercounted to two (issue #60).
+    result = ecdc_chikungunya.fetch(
+        _PAGE,
+        html_getter=_getter(_sentence("five", ": France (788) and Italy (384)")),
+    )
+    html = _html(result)
+    assert "5 EU/EEA countries have reported" in html
+    assert "France (788)" in html and "Italy (384)" in html
+
+
+def test_enumeration_reveals_more_than_stated():
+    # If the enumerated list is larger than the stated number, trust the list.
+    result = ecdc_chikungunya.fetch(
+        _PAGE,
+        html_getter=_getter(_sentence("two", ": France (1), Italy (2), Spain (3)")),
+    )
+    assert "3 EU/EEA countries have reported" in _html(result)
+
+
+def test_unrecognized_count_word_without_pairs_falls_back():
+    # An unparseable count word with nothing to enumerate must fall back rather
+    # than fabricate a confident zero (issue #60).
+    result = ecdc_chikungunya.fetch(_PAGE, html_getter=_getter(_sentence("several")))
+    assert result is None

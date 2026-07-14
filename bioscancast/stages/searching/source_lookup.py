@@ -7,6 +7,7 @@ as the current dashboard lookup, but reads entries from sources.yaml.
 from __future__ import annotations
 
 import logging
+import re
 import uuid
 from datetime import datetime, timezone
 from functools import lru_cache
@@ -53,6 +54,13 @@ _PATHOGEN_ALIASES: dict[str, str] = {
     "wpv1": "polio",
 }
 
+# An explicit influenza A subtype like "H5N5" / "H5N8" (but not "H5N1").
+# Used to stop the broad `h5` / `h5nx` / "avian influenza" aliases from
+# silently funnelling a non-H5N1 subtype into the H5N1 curated source set
+# (issue #58). Bare "h5" and "h5nx" (unspecified N) are intentionally left to
+# resolve to h5n1 as the best-available curated set.
+_H5_SUBTYPE_RE = re.compile(r"h5n(\d+)")
+
 
 @lru_cache(maxsize=1)
 def _load_sources_yaml() -> dict[str, Any]:
@@ -72,11 +80,20 @@ def _resolve_pathogen_key(pathogen: str, family_block: dict[str, Any]) -> str | 
     if key in _PATHOGEN_ALIASES and _PATHOGEN_ALIASES[key] in family_block:
         return _PATHOGEN_ALIASES[key]
 
+    # A text that names an explicit H5 subtype other than H5N1 must not be
+    # aliased into the h5n1 source set by substring matching (issue #58).
+    _m = _H5_SUBTYPE_RE.search(key)
+    non_h5n1_subtype = _m is not None and _m.group(1) != "1"
+
     for alias, canon in _PATHOGEN_ALIASES.items():
         if alias in key and canon in family_block:
+            if non_h5n1_subtype and canon == "h5n1":
+                continue
             return canon
 
     matches = [k for k in family_block if k in key]
+    if non_h5n1_subtype:
+        matches = [k for k in matches if k != "h5n1"]
     if matches:
         return max(matches, key=len)
 
