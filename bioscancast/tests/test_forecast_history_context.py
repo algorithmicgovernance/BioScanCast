@@ -3,7 +3,10 @@ from __future__ import annotations
 import json
 
 import bioscancast.main as orchestrator
-from bioscancast.main import _build_forecast_history_context
+from bioscancast.main import (
+    _build_forecast_history_context,
+    _build_insight_history_context,
+)
 from bioscancast.stages.forecasting.schemas import (
     ForecastDistribution,
     ForecastRecord,
@@ -72,6 +75,37 @@ def test_build_forecast_history_context_skips_current_run(tmp_path):
     assert context == ""
 
 
+def test_build_insight_history_context_reads_prior_scrape_dates(tmp_path):
+    qid = "q-hist"
+    current = "20260714_120000"
+
+    old_run = tmp_path / qid / "20260701_000000"
+    _write_json(
+        old_run / "question.json",
+        {"id": qid, "as_of_date": "2026-07-01T00:00:00+00:00"},
+    )
+    _write_json(
+        old_run / "insight.json",
+        {
+            "records": [
+                {
+                    "event_type": "case_count",
+                    "location": "Uganda",
+                    "metric_name": "confirmed_cases",
+                    "metric_value": 42,
+                    "summary": "Weekly increase in confirmed cases",
+                    "sources": [{"quote": "42 confirmed cases"}],
+                }
+            ]
+        },
+    )
+
+    context = _build_insight_history_context(tmp_path, qid, current)
+    assert "past_scrape_as_of=2026-07-01T00:00:00+00:00" in context
+    assert "metric=confirmed_cases, value=42" in context
+    assert "summary: Weekly increase in confirmed cases" in context
+
+
 def test_orchestrator_passes_history_block_from_prior_runs(tmp_path, monkeypatch):
     qid = "q-int"
     current = "20260714_120000"
@@ -95,6 +129,21 @@ def test_orchestrator_passes_history_block_from_prior_runs(tmp_path, monkeypatch
                 "samples": [{"ok": True, "rationale": rationale}],
             },
         )
+        _write_json(
+            rdir / "insight.json",
+            {
+                "records": [
+                    {
+                        "event_type": "case_count",
+                        "location": "Uganda",
+                        "metric_name": "confirmed_cases",
+                        "metric_value": 10 if "0712" in run_id else 8,
+                        "summary": "Prior scrape saw growth",
+                        "sources": [{"quote": "confirmed cases reported"}],
+                    }
+                ]
+            },
+        )
 
     # Unrelated question history must not be included.
     other = tmp_path / "q-other" / "20260711_000000"
@@ -111,8 +160,26 @@ def test_orchestrator_passes_history_block_from_prior_runs(tmp_path, monkeypatch
             "samples": [{"ok": True, "rationale": "other question"}],
         },
     )
+    _write_json(
+        other / "insight.json",
+        {
+            "records": [
+                {
+                    "event_type": "case_count",
+                    "location": "Other",
+                    "metric_name": "confirmed_cases",
+                    "metric_value": 999,
+                    "summary": "other question",
+                    "sources": [{"quote": "other question"}],
+                }
+            ]
+        },
+    )
 
-    captured: dict[str, str | None] = {"history": None}
+    captured: dict[str, str | None] = {
+        "history": None,
+        "insight_history": None,
+    }
 
     class _DummyLLM:
         def generate_json(self, **kwargs):  # pragma: no cover
@@ -166,8 +233,16 @@ def test_orchestrator_passes_history_block_from_prior_runs(tmp_path, monkeypatch
         def __init__(self, **kwargs):
             pass
 
-        def run(self, question, records, options, historical_context=None):
+        def run(
+            self,
+            question,
+            records,
+            options,
+            historical_context=None,
+            historical_insight_context=None,
+        ):
             captured["history"] = historical_context
+            captured["insight_history"] = historical_insight_context
             return ForecastResult(
                 question_id=question.id,
                 options=list(options),
@@ -228,8 +303,13 @@ def test_orchestrator_passes_history_block_from_prior_runs(tmp_path, monkeypatch
     orchestrator.run_pipeline(args)
 
     history = captured["history"] or ""
+    insight_history = captured["insight_history"] or ""
     assert "as_of=2026-07-12T00:00:00+00:00" in history
     assert "as_of=2026-07-10T00:00:00+00:00" in history
     assert "rationale: uptick continued" in history
     assert "rationale: signals mixed" in history
     assert "other question" not in history
+    assert "past_scrape_as_of=2026-07-12T00:00:00+00:00" in insight_history
+    assert "past_scrape_as_of=2026-07-10T00:00:00+00:00" in insight_history
+    assert "metric=confirmed_cases" in insight_history
+    assert "other question" not in insight_history

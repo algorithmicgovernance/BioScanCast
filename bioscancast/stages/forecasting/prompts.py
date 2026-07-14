@@ -122,6 +122,7 @@ def build_forecast_prompt(
     options: List[str],
     evidence_digest: str,
     historical_context: str | None = None,
+    historical_insight_context: str | None = None,
 ) -> Tuple[str, str, dict]:
     """Build the (system, user, json_schema) tuple for one reasoning sample.
 
@@ -162,6 +163,14 @@ def build_forecast_prompt(
             "not as a substitute for current evidence):"
         )
         parts.append(historical_context)
+
+    if historical_insight_context:
+        parts.append("")
+        parts.append(
+            "PAST INSIGHT SCRAPES (from prior runs; each line includes the "
+            "scrape as-of date):"
+        )
+        parts.append(historical_insight_context)
 
     parts.append("")
     if evidence_digest:

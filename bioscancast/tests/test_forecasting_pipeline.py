@@ -478,13 +478,45 @@ def test_prompt_includes_forecast_history_block_when_provided():
     assert "rationale: outbreak appears contained" in user
 
 
+def test_prompt_includes_past_insight_scrape_block_when_provided():
+    system, user, schema = build_forecast_prompt(
+        QUESTION,
+        ["YES", "NO"],
+        evidence_digest="[2026-01-15] sample evidence",
+        historical_insight_context=(
+            "- past_scrape_as_of=2026-01-03 run=20260103_000000: "
+            "event_type=case_count, location=Uganda, metric=confirmed_cases, "
+            "value=12; summary: Weekly increase observed"
+        ),
+    )
+    assert "PAST INSIGHT SCRAPES (from prior runs" in user
+    assert "past_scrape_as_of=2026-01-03" in user
+    assert "Weekly increase observed" in user
+
+
 def test_pipeline_threads_historical_context_into_prompt(monkeypatch):
-    captured: dict[str, str | None] = {"historical_context": None}
+    captured: dict[str, str | None] = {
+        "historical_context": None,
+        "historical_insight_context": None,
+    }
     original = forecasting_pipeline_mod.build_forecast_prompt
 
-    def _recording_build_prompt(question, options, evidence_digest, historical_context=None):
+    def _recording_build_prompt(
+        question,
+        options,
+        evidence_digest,
+        historical_context=None,
+        historical_insight_context=None,
+    ):
         captured["historical_context"] = historical_context
-        return original(question, options, evidence_digest, historical_context)
+        captured["historical_insight_context"] = historical_insight_context
+        return original(
+            question,
+            options,
+            evidence_digest,
+            historical_context,
+            historical_insight_context,
+        )
 
     monkeypatch.setattr(
         forecasting_pipeline_mod,
@@ -502,10 +534,17 @@ def test_pipeline_threads_historical_context_into_prompt(monkeypatch):
         [_record()],
         ["YES", "NO"],
         historical_context="- as_of=2026-01-01 run=old: top=NO (0.620)",
+        historical_insight_context=(
+            "- past_scrape_as_of=2026-01-02 run=older: metric=confirmed_cases, value=7"
+        ),
     )
 
     assert captured["historical_context"] is not None
     assert "as_of=2026-01-01" in (captured["historical_context"] or "")
+    assert captured["historical_insight_context"] is not None
+    assert "past_scrape_as_of=2026-01-02" in (
+        captured["historical_insight_context"] or ""
+    )
 
 
 # ---------------------------------------------------------------------------

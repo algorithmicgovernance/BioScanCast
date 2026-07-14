@@ -408,6 +408,94 @@ def _build_forecast_history_context(
     return "\n".join(lines)
 
 
+def _build_insight_history_context(
+    out_root: Path,
+    question_id: str,
+    current_run_id: str,
+    *,
+    max_runs: int = 3,
+    max_records_per_run: int = 3,
+) -> str:
+    """Summarize prior insight extracts for prompt context.
+
+    Each emitted line explicitly includes the prior scrape ``as_of`` date so
+    the forecasting model can distinguish historical snapshots from current
+    evidence.
+    """
+    qdir = out_root / question_id
+    if not qdir.exists() or not qdir.is_dir():
+        return ""
+
+    run_dirs = [p for p in qdir.iterdir() if p.is_dir() and p.name != current_run_id]
+    run_dirs.sort(key=lambda p: p.name, reverse=True)
+
+    lines: list[str] = []
+    runs_added = 0
+    for run_dir in run_dirs:
+        if runs_added >= max_runs:
+            break
+        insight_path = run_dir / "insight.json"
+        question_path = run_dir / "question.json"
+        if not insight_path.exists() or not question_path.exists():
+            continue
+
+        try:
+            insight_payload = json.loads(insight_path.read_text(encoding="utf-8"))
+            question_payload = json.loads(question_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        as_of = question_payload.get("as_of_date") or "(none)"
+        records = insight_payload.get("records") or []
+        if not isinstance(records, list) or not records:
+            continue
+
+        kept = 0
+        for rec in records:
+            if kept >= max_records_per_run:
+                break
+            if not isinstance(rec, dict):
+                continue
+
+            metric_name = rec.get("metric_name") or "(none)"
+            metric_value = rec.get("metric_value")
+            if metric_value is None:
+                metric_value_text = "n/a"
+            else:
+                metric_value_text = str(metric_value)
+            event_type = rec.get("event_type") or "other"
+            location = rec.get("location") or "(unknown)"
+            summary = (rec.get("summary") or "").strip()
+            if len(summary) > 140:
+                summary = summary[:137].rstrip() + "..."
+
+            quote = ""
+            sources = rec.get("sources") or []
+            if isinstance(sources, list) and sources:
+                first = sources[0]
+                if isinstance(first, dict):
+                    quote = (first.get("quote") or "").strip()
+            if len(quote) > 120:
+                quote = quote[:117].rstrip() + "..."
+
+            line = (
+                f"- past_scrape_as_of={as_of} run={run_dir.name}: "
+                f"event_type={event_type}, location={location}, "
+                f"metric={metric_name}, value={metric_value_text}"
+            )
+            if summary:
+                line += f"; summary: {summary}"
+            if quote:
+                line += f"; quote: {quote}"
+            lines.append(line)
+            kept += 1
+
+        if kept > 0:
+            runs_added += 1
+
+    return "\n".join(lines)
+
+
 # ----------------------------------------------------------------------------
 # Main pipeline
 # ----------------------------------------------------------------------------
@@ -600,6 +688,11 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
                     question.id,
                     run_id,
                 )
+                historical_insight_context = _build_insight_history_context(
+                    out_root,
+                    question.id,
+                    run_id,
+                )
                 forecast_pipeline = ForecastingPipeline(
                     llm_client=shared_llm_raw,
                     config=forecast_config,
@@ -609,6 +702,7 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
                     insight_result.records,
                     options,
                     historical_context=historical_context,
+                    historical_insight_context=historical_insight_context,
                 )
                 persistence.save_forecast(run_dir, forecast_result)
             stage_usage["forecast"] = (
