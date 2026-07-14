@@ -88,6 +88,11 @@ specific_pathogen_sources:
         url: "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary"
         geography: "Global"
 
+      - id: "who_h5n1_cumulative"
+        name: "WHO Cumulative confirmed human cases of avian influenza A(H5N1) reported to WHO"
+        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus"
+        geography: "Global"
+
       - id: "cdc_h5n1"
         name: "CDC H5N1 Situation Summary"
         url: "https://www.cdc.gov/bird-flu/situation-summary/"
@@ -256,6 +261,11 @@ specific_pathogen_sources:
       - id: "who_h5_hai"
         name: "WHO Influenza at the human-animal interface (monthly risk assessment)"
         url: "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary"
+        geography: "Global"
+
+      - id: "who_h5n1_cumulative"
+        name: "WHO Cumulative confirmed human cases of avian influenza A(H5N1) reported to WHO"
+        url: "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus"
         geography: "Global"
 
       - id: "cdc_h5n1"
