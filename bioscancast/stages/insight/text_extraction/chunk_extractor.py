@@ -414,6 +414,20 @@ def extract_facts_from_chunk(
         # and content-insertion hallucinations. See ``_quote_matches`` for
         # the rationale and the layers.
         canonical_quote = _quote_matches(raw_quote, chunk.text)
+        source_chunk_id = chunk.chunk_id
+        if canonical_quote is None:
+            # Minimal fallback for chunk-routing misses: if retrieval sends a
+            # chunk adjacent to the one the model quoted, accept only when the
+            # quote appears verbatim in some other chunk of the same document.
+            for alt_chunk in document.chunks:
+                if alt_chunk.chunk_id == chunk.chunk_id:
+                    continue
+                alt_quote = _quote_matches(raw_quote, alt_chunk.text)
+                if alt_quote is not None:
+                    canonical_quote = alt_quote
+                    source_chunk_id = alt_chunk.chunk_id
+                    break
+
         if canonical_quote is None:
             logger.warning(
                 "Hallucination guard: dropping fact with non-matching quote. "
@@ -456,7 +470,7 @@ def extract_facts_from_chunk(
             sources=[
                 ChunkReference(
                     document_id=document.id,
-                    chunk_id=chunk.chunk_id,
+                    chunk_id=source_chunk_id,
                     source_url=document.source_url,
                     quote=canonical_quote[:200],
                 ),
