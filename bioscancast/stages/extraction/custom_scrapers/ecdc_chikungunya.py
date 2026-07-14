@@ -45,19 +45,54 @@ _REPORT_URL = "https://chik-weekly.ecdc.europa.eu/"
 # "this section will remain empty" between seasons; also the announce sentence.
 _EMPTY_MARKERS = ("will remain empty", "will begin once the first")
 
-# "<n> countr(y|ies) in Europe have reported cases of chikungunya"
+# "<n> countr(y|ies) in Europe have/has reported cases of chikungunya".
+# Accepts singular "has reported" (issue #61, PR #62) and a one- or two-word
+# number token so compound tens like "twenty-one" are captured rather than
+# clipped to the trailing unit (issue #60).
 _REPORT_SENTENCE = re.compile(
-    r"(\w+)\s+countr(?:y|ies)\s+in\s+Europe\s+(?:have|has)\s+reported\s+cases\s+of\s+chikungunya",
+    r"([A-Za-z]+(?:[-\s][A-Za-z]+)?|\d+)\s+countr(?:y|ies)\s+in\s+Europe\s+"
+    r"(?:have|has)\s+reported\s+cases\s+of\s+chikungunya",
     re.IGNORECASE,
 )
 # "France (788)" / "Czechia (12)" — a country name followed by a case count.
 _COUNTRY_PAIR = re.compile(r"([A-Z][A-Za-zÀ-ſ'’.\- ]*?)\s*\(([\d, ]+)\)")
 
-_NUM_WORDS = {
+# EU/EEA membership is 30 countries, so the stated count can plausibly reach the
+# twenties. Cover 0–19, the tens, and compound tens+unit ("twenty-seven").
+_ONES = {
     "no": 0, "zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
-    "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11,
-    "twelve": 12,
+    "six": 6, "seven": 7, "eight": 8, "nine": 9,
 }
+_TEENS = {
+    "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14,
+    "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19,
+}
+_TENS = {"twenty": 20, "thirty": 30}
+
+
+def _word_to_int(phrase: str) -> int | None:
+    """Convert a number word/phrase to an int, or None if not recognized.
+
+    Evaluates the rightmost number expression so incidental leading words don't
+    defeat the lookup, and handles compound tens ("twenty-one" / "twenty one").
+    """
+    parts = phrase.strip().lower().replace("-", " ").split()
+    if not parts:
+        return None
+    if parts[-1].isdigit():
+        return int(parts[-1])
+    if (
+        len(parts) >= 2
+        and parts[-2] in _TENS
+        and parts[-1] in _ONES
+        and 0 < _ONES[parts[-1]] < 10
+    ):
+        return _TENS[parts[-2]] + _ONES[parts[-1]]
+    last = parts[-1]
+    for table in (_ONES, _TEENS, _TENS):
+        if last in table:
+            return table[last]
+    return None
 
 
 def _strip_tags(raw: str) -> str:
@@ -107,14 +142,27 @@ def _parse(text: str):
         tail = re.split(r"This week|\. [A-Z]", tail, maxsplit=1)[0]
         pairs = [(n.strip(), c.replace(" ", "").replace(",", ""))
                  for n, c in _COUNTRY_PAIR.findall(tail)]
-        token = sentence.group(1).lower()
-        stated = _NUM_WORDS.get(token)
-        if stated is None and token.isdigit():
-            stated = int(token)
-        count = stated if stated is not None else len(pairs)
-        # Prefer the enumerated list when it disagrees and is non-empty.
-        if pairs and count != len(pairs):
+        stated = _word_to_int(sentence.group(1))
+        if stated is None and not pairs:
+            # The sentence asserts reporting countries but we can neither parse
+            # the number word nor enumerate pairs — don't fabricate a confident
+            # undercount (0). Fall back to the generic fetch instead (issue #60).
+            logger.info(
+                "ECDC chikungunya: unrecognized count word %r with no enumerable "
+                "pairs; falling back to generic fetch.",
+                sentence.group(1),
+            )
+            return None
+        if stated is None:
             count = len(pairs)
+        elif pairs and len(pairs) > stated:
+            # Enumeration reveals more countries than the prose states — trust the
+            # larger evidence rather than undercount.
+            count = len(pairs)
+        else:
+            # Trust the explicit prose count; a shorter/incomplete pair list must
+            # not drag it down (issue #60).
+            count = stated
         return count, pairs
     if any(mk in text.lower() for mk in _EMPTY_MARKERS):
         return 0, []
