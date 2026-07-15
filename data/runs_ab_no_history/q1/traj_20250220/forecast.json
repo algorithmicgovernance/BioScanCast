@@ -1,0 +1,153 @@
+{
+  "question_id": "q1",
+  "options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "distributions": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "70-100": 0.9781017233253921,
+        "100-150": 0.020290419640909687,
+        "150-200": 0.0012341043083096267,
+        "200+": 0.0003737527253887142
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "70-100",
+      "probability": 0.9781017233253921,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "100-150",
+      "probability": 0.020290419640909687,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "150-200",
+      "probability": 0.0012341043083096267,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "200+",
+      "probability": 0.0003737527253887142,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.9,
+        0.08,
+        0.01,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Past H5N1 outbreaks in the US and globally",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "The US has reported 67 cumulative cases since 2022, indicating some level of transmission.",
+        "Recent reports indicate new cases are still being detected."
+      ],
+      "drivers_down": [
+        "The cumulative number of cases is still relatively low, at 67 cases since 2022, suggesting limited spread.",
+        "No evidence of large-scale outbreaks or exponential growth in case numbers.",
+        "Most cases are linked to commercial agriculture, which might be easier to contain."
+      ],
+      "why_might_be_wrong": "There might be under-reporting or delays in reporting new cases, especially close to the target date.",
+      "rationale": "The base rate for H5N1 transmission to humans is low, given historical data and current case numbers. Despite the recent cases in the US, the evidence does not indicate a rapid increase or large-scale outbreak. Most cases are tied to commercial agriculture, suggesting containment efforts may limit further spread. Given the current case count of 67 and the lack of evidence for accelerating transmission, it's reasonable to predict that the count will remain below 100 by February 28, 2025.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.7,
+        0.2,
+        0.08,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in cases, with 67 confirmed cases since 2022",
+        "High concentration of cases in states like California, indicating potential for further spread"
+      ],
+      "drivers_down": [
+        "The historically low number of human cases of H5N1 globally since 2003",
+        "Limited human-to-human transmission observed, with most cases linked to agriculture"
+      ],
+      "why_might_be_wrong": "The forecast could be off due to potential underreporting or sudden changes in transmission dynamics.",
+      "rationale": "The base rate of H5N1 cases has been low historically. However, there has been a notable increase recently, with 67 cases reported in the US since 2022. The clustering of cases in specific states suggests some potential for further spread. Still, the lack of widespread human-to-human transmission and the linkage of many cases to agriculture suggest that an exponential increase is unlikely. Given the current case count of 67 and the limited time until the target date, the probability of reaching over 70 cases is moderate, but exceeding 100 cases seems unlikely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in confirmed cases from December 2024 indicates ongoing transmission.",
+        "High concentration of cases in California suggests potential for localized outbreaks."
+      ],
+      "drivers_down": [
+        "No evidence of widespread community transmission in the US.",
+        "Most cases linked to commercial agriculture, where mitigation measures can be applied."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or changes in the virus's transmissibility could lead to a higher case count than forecasted.",
+      "rationale": "As of January 2025, the cumulative number of confirmed H5N1 cases in the US is 9. The recent trend shows a significant rise from earlier months, suggesting the possibility of more cases. However, the base rate of H5N1 cases historically remains low in the US. Given the current evidence and typical patterns of H5N1 outbreaks, the probability of reaching above 100 cases by late February 2025 is low. Therefore, the most likely outcome is the 70-100 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": null,
+  "evidence_record_ids": [
+    "ins-febdb43b6415",
+    "ins-517fcad5261d",
+    "ins-e470ce2cc2e3",
+    "ins-f14b41f0c964",
+    "ins-6ebfbebe41e9",
+    "ins-ae60784a837e",
+    "ins-e46c87abcc12",
+    "ins-6a03580ff1d4",
+    "ins-6d15fa32c492",
+    "ins-5719fdb51002",
+    "ins-b91740d5241b",
+    "ins-d71f805fc1b3",
+    "ins-6a03a30ebbef",
+    "ins-0603684c784c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5994,
+    "total_output_tokens": 737,
+    "total_tokens": 6731,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5994,
+        "output_tokens": 737,
+        "calls": 3
+      }
+    }
+  },
+  "notes": []
+}

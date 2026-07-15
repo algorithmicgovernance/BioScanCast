@@ -1,0 +1,160 @@
+{
+  "question_id": "q1",
+  "options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "distributions": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "70-100": 0.9330758586890564,
+        "100-150": 0.048265595551276644,
+        "150-200": 0.01301336745817357,
+        "200+": 0.005645178301493643
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "70-100",
+      "probability": 0.9330758586890564,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "100-150",
+      "probability": 0.048265595551276644,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "150-200",
+      "probability": 0.01301336745817357,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "200+",
+      "probability": 0.005645178301493643,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.85,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in cases from December 2024 to January 2025 suggests ongoing transmission.",
+        "Past outbreaks of H5N1 have seen rapid increases in cases when transmission is not contained."
+      ],
+      "drivers_down": [
+        "The cumulative number of cases has only reached 9 as of January 2025, suggesting limited spread.",
+        "H5N1 typically transmits less efficiently between humans compared to other influenza strains, which could limit case numbers.",
+        "Public health measures and awareness could limit further spread."
+      ],
+      "why_might_be_wrong": "The dynamics of virus transmission can change rapidly, and unforeseen factors such as a mutation leading to higher transmissibility could significantly alter case numbers.",
+      "rationale": "The base rate for H5N1 outbreaks in the US is relatively low, given historical data. As of January 2025, there are only 9 confirmed cases. Although there is a recent uptick in cases, the nature of H5N1's transmission suggests it is less efficient at spreading among humans. Public health measures could further limit its spread. Therefore, the probability of reaching higher case numbers remains low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.15,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Confirmed human cases of H5N1 in countries with similar healthcare and surveillance systems.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in cases, from 61 in December to 67 by January",
+        "Most cases are linked to commercial agriculture, suggesting potential for more exposure",
+        "The virus is already present in multiple states, increasing the likelihood of further spread"
+      ],
+      "drivers_down": [
+        "The rate of increase appears to be slowing, with only 6 new cases from December to January",
+        "Strong healthcare and surveillance systems in the US may prevent rapid increases",
+        "Most cases have been mild, suggesting limited transmission potential"
+      ],
+      "why_might_be_wrong": "Under-reporting or delays in case detection and reporting could mean actual figures could be higher than currently known.",
+      "rationale": "As of the latest data in January 2025, there are 67 confirmed cases in the US. The increase from December to January was 6 cases, which suggests a slowdown in new cases. Given the base rate of similar outbreaks and the drivers up and down, it's reasonable to expect the number of confirmed cases to be in the 70-100 range by February 28, 2025. The strong healthcare infrastructure in the US should help contain the spread, but the presence of the virus in commercial agriculture remains a risk factor.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.39999999999999997,
+        0.19999999999999998,
+        0.19999999999999998,
+        0.19999999999999998
+      ],
+      "ok": true,
+      "reference_class": "Cumulative human cases of H5N1 in the US over a similar time frame.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Recent increase in cases suggests a trend towards higher reporting.",
+        "Previous months have shown a sharp increase, suggesting potential for continued spread.",
+        "Seasonal factors may contribute to a further increase in cases, as influenza viruses tend to spread more in certain weather conditions."
+      ],
+      "drivers_down": [
+        "The recent cumulative number of cases is only 9, far from the lowest option threshold of 70.",
+        "Control measures and public health interventions may reduce the spread.",
+        "The window until February 28, 2025, is short for a significant case increase."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or inaccuracies in reporting could rapidly change case numbers.",
+      "rationale": "The recent evidence shows a cumulative total of 9 cases, which is significantly below the threshold for 70-100 cases, the lowest option. Despite a recent increase, the short time frame until February 28, 2025, makes it unlikely to reach even the lowest option threshold. Control measures and natural limitations on spread also suggest slower growth. Thus, the probability of reaching any of the listed options is extremely low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": null,
+  "evidence_record_ids": [
+    "ins-098b4eaf5143",
+    "ins-bfd7147c04e1",
+    "ins-9673ff309cf6",
+    "ins-9bc33a10a1a9",
+    "ins-de3b9b382709",
+    "ins-fbe6644f1352",
+    "ins-8d3de449989e",
+    "ins-446bf4906d24",
+    "ins-b6ab7ed8251a",
+    "ins-b488ea400552",
+    "ins-56d2c848e6c0",
+    "ins-a6c09bc8ca4d",
+    "ins-69f9a7baa251",
+    "ins-e810d7258c41",
+    "ins-28774fa009a8",
+    "ins-c970251da78c",
+    "ins-e7a2be6db26c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6609,
+    "total_output_tokens": 804,
+    "total_tokens": 7413,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6609,
+        "output_tokens": 804,
+        "calls": 3
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,151 @@
+{
+  "question_id": "q1",
+  "options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "distributions": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "70-100": 0.9999101134472381,
+        "100-150": 8.988655271344008e-05,
+        "150-200": 4.8413676833303883e-14,
+        "200+": 1.0430410484166256e-18
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "70-100",
+      "probability": 0.9999101134472381,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "100-150",
+      "probability": 8.988655271344008e-05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "150-200",
+      "probability": 4.8413676833303883e-14,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "200+",
+      "probability": 1.0430410484166256e-18,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.99,
+        0.01,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Recent uptick in cases, with 67 confirmed cases since 2022.",
+        "Over half of the cases in 2024 occurred in California, indicating potential regional clusters."
+      ],
+      "drivers_down": [
+        "Historically low human-to-human transmission rate for H5N1.",
+        "As of late January 2025, the cumulative number of cases is still relatively low (67 cases)."
+      ],
+      "why_might_be_wrong": "There could be unreported cases or a sudden increase in transmission due to changes in the virus or reporting mechanisms that are not captured in the current data.",
+      "rationale": "The cumulative number of confirmed H5N1 cases in the US is 67, with recent data indicating a slow increase. Historically, H5N1 has limited human-to-human transmission, which supports a lower base rate of large outbreaks. Given the current number of cases and the remaining short timeframe until the target date, the probability of reaching even the lower range of 70-100 is high. However, the probability of surpassing 100 cases is low due to the nature of the virus and current trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.95,
+        0.04,
+        0.01,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "Recent uptick in cases, with 34 cases reported in 2025 alone",
+        "Majority of cases concentrated in California, indicating potential regional outbreak"
+      ],
+      "drivers_down": [
+        "H5N1 historically has limited human-to-human transmission",
+        "The cumulative confirmed cases as of February 20, 2025, is 67, indicating a slow spread",
+        "No evidence of significant changes in transmissibility or new variants"
+      ],
+      "why_might_be_wrong": "Unexpected changes in the virus's transmissibility or a new variant could lead to a rapid increase in cases.",
+      "rationale": "The cumulative confirmed cases of H5N1 in the US were reported as 67 as of February 20, 2025. Despite a recent increase in cases, with 34 reported in 2025 alone, the nature of H5N1's transmission remains limited primarily to animal-to-human. Historical data shows a low base rate for significant outbreaks in the US. Given the current evidence, the probability that cases will reach 70-100 by February 28, 2025 is high. The lack of significant transmission changes or new variants further supports the likelihood of remaining within the 70-100 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.998,
+        0.002,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.933,
+      "drivers_up": [
+        "Recent small uptick in cases suggesting potential for more human contact or spread",
+        "High concentration of cases in specific states like California, indicating localized outbreaks"
+      ],
+      "drivers_down": [
+        "H5N1 historically has limited human-to-human transmission",
+        "The cumulative number of cases is still significantly below 70",
+        "The US has robust public health surveillance and response systems in place"
+      ],
+      "why_might_be_wrong": "There could be an unanticipated surge in cases due to a mutation or increased exposure risk that isn't currently evident.",
+      "rationale": "The current cumulative number of confirmed H5N1 cases in the US is 67, with a recent slight increase. Historically, H5N1 has not been highly transmissible between humans, and public health measures in the US are strong. Given the low base rate of major outbreaks and the current case count, it is highly likely that the final count by February 28, 2025, will remain below 100. Therefore, the probability is skewed heavily towards the 70-100 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": null,
+  "evidence_record_ids": [
+    "ins-51c441692238",
+    "ins-17cfd749eeda",
+    "ins-086c99d04f2b",
+    "ins-8ed76331e648",
+    "ins-4d96fc33c0e4",
+    "ins-d9abfad30860",
+    "ins-953aae88ce1f",
+    "ins-00dc240f365a",
+    "ins-4562471a8dde",
+    "ins-3cade2f9329e",
+    "ins-8b9e0d49c3d0"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 8097,
+    "total_output_tokens": 779,
+    "total_tokens": 8876,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 8097,
+        "output_tokens": 779,
+        "calls": 3
+      }
+    }
+  },
+  "notes": []
+}

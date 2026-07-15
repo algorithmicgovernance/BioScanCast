@@ -1,0 +1,154 @@
+{
+  "question_id": "q1",
+  "options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "distributions": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "70-100": 0.9978743860813621,
+        "100-150": 0.0019075990590898026,
+        "150-200": 0.00016069748614622954,
+        "200+": 5.731737340189762e-05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "70-100",
+      "probability": 0.9978743860813621,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "100-150",
+      "probability": 0.0019075990590898026,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "150-200",
+      "probability": 0.00016069748614622954,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "200+",
+      "probability": 5.731737340189762e-05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.933,
+        0.048,
+        0.013,
+        0.006
+      ],
+      "ok": true,
+      "reference_class": "Past H5N1 outbreaks in the United States and globally",
+      "base_rate": 0.933,
+      "drivers_up": [
+        "The cumulative number of cases has reached 67, indicating some spread.",
+        "There was a recent increase in cases from 61 to 67 over a short period."
+      ],
+      "drivers_down": [
+        "Base rate for H5N1 outbreaks in the US is historically low.",
+        "H5N1 has limited human-to-human transmission capabilities compared to other influenza viruses.",
+        "The recent uptick in cases is relatively small in absolute numbers."
+      ],
+      "why_might_be_wrong": "There could be an unexpected large-scale outbreak or underreporting of cases leading to a higher actual number than predicted.",
+      "rationale": "The cumulative confirmed cases of H5N1 in the US have reached 67, with a recent small uptick in cases. Despite this, H5N1 historically has limited human-to-human transmission, and the base rate for outbreaks in the US remains low. Given these factors, it is most likely that the total reported cases by February 28, 2025, will remain within the 70-100 range. Any substantial increase would be unexpected based on historical patterns and current transmission characteristics.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.95,
+        0.03,
+        0.01,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Recent uptick in cases, with a cumulative total of 67 cases as of mid-February 2025.",
+        "Historically low human-to-human transmission of H5N1 limits rapid spread."
+      ],
+      "drivers_down": [
+        "No significant increase in cases reported between mid-January and mid-February 2025.",
+        "Strong public health measures and awareness may limit further spread.",
+        "Historically, H5N1 has shown limited capability for sustained human-to-human transmission."
+      ],
+      "why_might_be_wrong": "An unexpected outbreak or change in the virus transmissibility could lead to a rapid increase in cases beyond the base rate.",
+      "rationale": "As of February 2025, the cumulative confirmed human cases of H5N1 in the US is 67. Given the historical transmission patterns of H5N1, where human-to-human transmission is rare, and the lack of significant increase in cases recently, it's unlikely that the number will surpass 100 by February 28, 2025. Thus, the probability of remaining in the 70-100 range is high, with smaller probabilities for higher numbers.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.933,
+        0.048,
+        0.013,
+        0.006
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.933,
+      "drivers_up": [
+        "Recent increase in confirmed cases to 67 by mid-February 2025 indicates potential for more cases.",
+        "H5N1 is a zoonotic virus with potential for human transmission, primarily in areas with high bird-human interaction."
+      ],
+      "drivers_down": [
+        "Historically low base rates of H5N1 cases in humans in the US.",
+        "Limited human-to-human transmission of H5N1 compared to other influenza viruses.",
+        "Current surveillance and control measures in place in the US reduce likelihood of rapid spread."
+      ],
+      "why_might_be_wrong": "H5N1 could mutate to become more easily transmissible between humans, leading to a sudden increase in cases that current surveillance might not catch immediately.",
+      "rationale": "The base rate of H5N1 cases in the US has historically been low, and although there has been a recent increase to 67 cases, the transmission dynamics of H5N1 suggest limited human-to-human spread. Surveillance and control measures are likely to contain further spread, making a large jump in cases unlikely by the target date. Therefore, it is reasonable to predict that confirmed cases will remain in the 70-100 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": null,
+  "evidence_record_ids": [
+    "ins-3f61179552e1",
+    "ins-b98c3ee6ebdc",
+    "ins-d55b420f88e6",
+    "ins-e8d6a74cd91d",
+    "ins-0c46a1b83e3c",
+    "ins-3c6bddb54123",
+    "ins-77a12428355c",
+    "ins-46bed2e91d43",
+    "ins-1ad18630365d",
+    "ins-b514cf2d804f",
+    "ins-362af5c8a89f",
+    "ins-8af42bb3249e",
+    "ins-fc7f78ebceab"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7164,
+    "total_output_tokens": 787,
+    "total_tokens": 7951,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7164,
+        "output_tokens": 787,
+        "calls": 3
+      }
+    }
+  },
+  "notes": []
+}

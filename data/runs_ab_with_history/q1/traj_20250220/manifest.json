@@ -1,0 +1,202 @@
+{
+  "run_id": "traj_20250220",
+  "question_id": "q1",
+  "csv_path": "bioscancast/stages/evaluation/bioscancast_questions.csv",
+  "started_at": "2026-07-14T23:12:06.954051+00:00",
+  "completed_at": "2026-07-14T23:20:32.915876+00:00",
+  "stage_timings": {
+    "search": 265.38,
+    "filter": 1.938,
+    "extract": 213.615,
+    "insight": 18.118,
+    "forecast": 6.889
+  },
+  "current_stage": null,
+  "errored_stage": null,
+  "error_message": null,
+  "config": {
+    "filter": {
+      "blocked_domains": [
+        "facebook.com",
+        "instagram.com",
+        "pinterest.com",
+        "tiktok.com"
+      ],
+      "low_value_url_keywords": [
+        "/about",
+        "/account",
+        "/advertise",
+        "/careers",
+        "/contact",
+        "/login",
+        "/privacy",
+        "/register",
+        "/signup",
+        "/terms"
+      ],
+      "low_value_title_keywords": [
+        "cookie policy",
+        "login",
+        "privacy policy",
+        "register",
+        "sign in",
+        "terms of use"
+      ],
+      "source_tier_scores": {
+        "official": 1.0,
+        "academic": 0.9,
+        "trusted_media": 0.65,
+        "ngo": 0.6,
+        "unknown": 0.35
+      },
+      "heuristic_weights": {
+        "keyword_overlap": 0.5,
+        "freshness": 0.2,
+        "domain": 0.1,
+        "official_bonus": 0.2
+      },
+      "heuristic_keep_threshold": 0.65,
+      "heuristic_borderline_threshold": 0.45,
+      "reranker_weights": {
+        "heuristic_priority": 0.6,
+        "reranker_score": 0.4
+      },
+      "auto_keep_after_rerank": 0.82,
+      "auto_reject_after_rerank": 0.3,
+      "max_llm_filter_candidates": 10,
+      "no_llm_soft_fallback": false,
+      "no_llm_fallback_relevance_threshold": 0.5,
+      "max_docs_per_domain": 2,
+      "max_docs_per_type": 5,
+      "near_duplicate_similarity_threshold": 0.92
+    },
+    "extraction": {
+      "fetch_timeout_seconds": 30.0,
+      "fetch_max_bytes": 25000000,
+      "pdf_max_pages": 100,
+      "chunk_target_tokens": 800,
+      "chunk_max_tokens": 1500,
+      "thin_extraction_min_chars": 500,
+      "user_agent": "BioScanCast/0.1 (+https://github.com/algorithmicgovernance/BioScanCast)",
+      "enable_docling_refiner": true,
+      "docling_source_allowlist": [
+        "cdc.gov/mmwr/",
+        "cdn.who.int/media/docs/default-source/_sage-",
+        "cdn.who.int/media/docs/default-source/documents/emergencies/situation-reports/"
+      ],
+      "docling_sparse_cell_threshold": 0.5,
+      "impersonate": "chrome"
+    },
+    "insight": {
+      "retrieval_top_k": 12,
+      "bm25_weight": 0.5,
+      "embedding_weight": 0.5,
+      "cheap_model": "gpt-4o-mini",
+      "embedding_model": "text-embedding-3-small",
+      "max_input_tokens_per_run": 500000,
+      "max_chunks_per_document": 12,
+      "extraction_max_output_tokens": 4096,
+      "chunk_workers": 6,
+      "low_survival_doc_threshold": 5,
+      "low_survival_top_k": 20
+    },
+    "forecast": {
+      "model": "gpt-4o",
+      "ensemble_samples": 3,
+      "temperature": 0.7,
+      "seed": 42,
+      "aggregation": "geometric_mean_of_odds",
+      "extremize": 1.0,
+      "extremize_gate": 0.5,
+      "reasoning_max_tokens": 4096,
+      "max_evidence_records": 40,
+      "max_input_tokens_per_run": 1000000,
+      "forecast_source": "bioscancast",
+      "emit_baseline": false,
+      "baseline_source": "bioscancast_baseline",
+      "baseline_model": "gpt-4o-mini"
+    },
+    "no_history_context": false
+  },
+  "forecast_options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "forecast_options_source": "forecasts_csv:bioscancast/stages/evaluation/bioscancast_forecasts.csv",
+  "thin_extractions": [
+    {
+      "doc_id": "doc-474e1c111d17468b91ff565c1e386d00",
+      "result_id": "474e1c111d17468b91ff565c1e386d00",
+      "domain": "aphis.usda.gov",
+      "source_url": "https://web.archive.org/web/20250219045133id_/https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+      "document_type": "html",
+      "char_count": 492,
+      "min_chars": 500,
+      "reason": "thin_extraction"
+    }
+  ],
+  "docling_refiner": [
+    {
+      "source_url": "https://cdn.who.int/media/docs/default-source/influenza/human-animal-interface-risk-assessments/influenza-at-the-human-animal-interface-summary-and-assessment--from-13-december-2024-to-20-january-2025.pdf?sfvrsn=aff4e6b9_3&download=true",
+      "fired": false,
+      "trigger": null,
+      "status": "skipped_no_trigger",
+      "page_count": 8,
+      "n_suspect_tables": 0,
+      "suspect_pages": [],
+      "convert_s": null,
+      "total_s": 0.001
+    }
+  ],
+  "combined_usage": {
+    "gpt-4o-mini-2024-07-18": {
+      "input_tokens": 86267,
+      "output_tokens": 2112,
+      "calls": 41
+    },
+    "gpt-4o-2024-08-06": {
+      "input_tokens": 7164,
+      "output_tokens": 787,
+      "calls": 3
+    }
+  },
+  "stage_usage": {
+    "search": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 390,
+        "output_tokens": 96,
+        "calls": 2
+      }
+    },
+    "filter": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 973,
+        "output_tokens": 133,
+        "calls": 1
+      }
+    },
+    "insight": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 84904,
+        "output_tokens": 1883,
+        "calls": 38
+      }
+    },
+    "forecast": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7164,
+        "output_tokens": 787,
+        "calls": 3
+      }
+    }
+  },
+  "stage_costs_usd": {
+    "search": 0.000116,
+    "filter": 0.000226,
+    "insight": 0.013865,
+    "forecast": 0.02578
+  },
+  "estimated_cost_usd": 0.039987
+}

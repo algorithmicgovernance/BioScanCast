@@ -1,0 +1,153 @@
+{
+  "question_id": "q1",
+  "options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "distributions": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "70-100": 0.9835928913625247,
+        "100-150": 0.012312603857545758,
+        "150-200": 0.0029955097501227815,
+        "200+": 0.0010989950298066595
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "70-100",
+      "probability": 0.9835928913625247,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "100-150",
+      "probability": 0.012312603857545758,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "150-200",
+      "probability": 0.0029955097501227815,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "200+",
+      "probability": 0.0010989950298066595,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.7,
+        0.15,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in the US",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in H5N1 cases in the US suggests higher transmission rate.",
+        "High concentration of cases in California, a populous state, which could lead to more cases if containment is not effective.",
+        "Historical global data shows H5N1 can have significant outbreaks."
+      ],
+      "drivers_down": [
+        "Currently only 9 confirmed cases in January 2025, which is far from the lower threshold of 70 for the options given.",
+        "Previous cases have been linked to specific agricultural settings rather than widespread community transmission, suggesting limited spread.",
+        "Global H5N1 cases historically have not resulted in large numbers in the US."
+      ],
+      "why_might_be_wrong": "There could be a sudden outbreak or misreporting that significantly increases the number of confirmed cases beyond current trends.",
+      "rationale": "As of January 2025, there are 9 confirmed cases of H5N1 in the US, with a history of sporadic cases rather than a large outbreak. The base rate for large outbreaks is low in the US, and while recent trends suggest an increase in cases, it is unlikely to reach the thresholds of 70+ cases given the current containment strategies and the nature of transmission being limited mostly to agricultural settings. However, unpredictability in viral transmission or reporting could lead to unexpected results.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Cumulative human H5N1 cases in the US in recent years",
+      "base_rate": 0.01,
+      "drivers_up": [
+        "Recent increase in confirmed cases from 61 to 67 within a short period suggests a rising trend.",
+        "High transmission potential due to connections with commercial agriculture."
+      ],
+      "drivers_down": [
+        "Only 9 new cases reported from January 15 to January 20, 2025, suggesting a slowdown.",
+        "Historical base rates of H5N1 in humans are generally low globally and in the US.",
+        "No evidence of a significant outbreak or change in virus transmissibility."
+      ],
+      "why_might_be_wrong": "A sudden outbreak or change in virus transmissibility could lead to a rapid increase in cases.",
+      "rationale": "The base rate of H5N1 cases in the US is low, with only 67 cases since 2022. Recent data show a slowing trend in reported cases, with only 9 new cases in January 2025. While there is a potential for increased transmission linked to commercial agriculture, the lack of a major outbreak and low historical incidence suggest that reaching any of the higher brackets is unlikely. Thus, the probability is weighted heavily towards the lower range of 70-100 cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.9,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Past H5N1 outbreaks in the United States",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Significant increase in cases from 2024 to early 2025, indicating potential for further growth.",
+        "Presence of H5N1 in multiple states suggesting wider spread."
+      ],
+      "drivers_down": [
+        "Current cumulative confirmed cases are only at 9, far from the lowest option threshold of 70.",
+        "H5N1 generally has low human-to-human transmission rates.",
+        "Previous cases in 2024 were largely linked to commercial agriculture, a specific source that can be controlled."
+      ],
+      "why_might_be_wrong": "The rate of new cases could accelerate unexpectedly due to changes in the virus's transmission dynamics or human behavior, leading to a larger outbreak than anticipated.",
+      "rationale": "The current cumulative number of confirmed cases is only 9, which is far below the threshold for the lowest option (70-100). While there has been a recent increase in cases, the total is still quite low, and H5N1 typically does not spread easily between humans. Additionally, many of the past cases were linked to specific agricultural exposure, suggesting that control measures could limit further spread. Given the low base rate and current numbers, the probability of reaching 70 cases by the target date is very low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": null,
+  "evidence_record_ids": [
+    "ins-79b39d6cd2e9",
+    "ins-e13f9c1c66be",
+    "ins-52804af640ac",
+    "ins-ca5809281766",
+    "ins-79ad3241b13f",
+    "ins-5623220d5ccb",
+    "ins-b726026b1cac",
+    "ins-5cf522e4c6ee",
+    "ins-b844d077e306",
+    "ins-76b4e3e66d49",
+    "ins-72990952deef"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5223,
+    "total_output_tokens": 837,
+    "total_tokens": 6060,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5223,
+        "output_tokens": 837,
+        "calls": 3
+      }
+    }
+  },
+  "notes": []
+}

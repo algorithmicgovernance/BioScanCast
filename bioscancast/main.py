@@ -194,6 +194,11 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         help="Disable the search-stage cache.",
     )
     parser.add_argument(
+        "--no-history-context",
+        action="store_true",
+        help="Disable prior-run forecast/insight context injection into forecasting.",
+    )
+    parser.add_argument(
         "--max-input-tokens",
         type=int,
         default=None,
@@ -572,6 +577,7 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
             "extraction": asdict(ExtractionConfig()),
             "insight": asdict(insight_config),
             "forecast": asdict(forecast_config),
+            "no_history_context": bool(args.no_history_context),
         },
         "forecast_options": options,
         "forecast_options_source": options_source,
@@ -683,16 +689,20 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
 
         if not args.no_forecast:
             with _stage_timer(manifest, "forecast"):
-                historical_context = _build_forecast_history_context(
-                    out_root,
-                    question.id,
-                    run_id,
-                )
-                historical_insight_context = _build_insight_history_context(
-                    out_root,
-                    question.id,
-                    run_id,
-                )
+                if args.no_history_context:
+                    historical_context = ""
+                    historical_insight_context = ""
+                else:
+                    historical_context = _build_forecast_history_context(
+                        out_root,
+                        question.id,
+                        run_id,
+                    )
+                    historical_insight_context = _build_insight_history_context(
+                        out_root,
+                        question.id,
+                        run_id,
+                    )
                 forecast_pipeline = ForecastingPipeline(
                     llm_client=shared_llm_raw,
                     config=forecast_config,

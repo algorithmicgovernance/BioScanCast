@@ -1,0 +1,355 @@
+{
+  "records": [
+    {
+      "id": "ins-72990952deef",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 67.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": null,
+      "event_date_precision": null,
+      "summary": "Cumulative total of confirmed cases since 2022, with all but one occurring in 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:01.607665+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8",
+          "chunk_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8-c3",
+          "source_url": "https://web.archive.org/web/20250221235638id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "To date, 67 people have tested positive for A(H5) virus in the United States since 2022"
+        }
+      ]
+    },
+    {
+      "id": "ins-b844d077e306",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 66.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed H5N1 cases in the US since 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:05.839265+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1a54af62de424fda94562938c4fc1b73",
+          "chunk_id": "doc-1a54af62de424fda94562938c4fc1b73-c0",
+          "source_url": "https://www.bbc.com/news/articles/cqx85y07jz9o",
+          "quote": "There have been 66 confirmed cases of H5N1 bird flu in the US since 2024"
+        },
+        {
+          "document_id": "doc-ad0a8fe44ac74067bf72756185d98061",
+          "chunk_id": "doc-ad0a8fe44ac74067bf72756185d98061-c0",
+          "source_url": "https://www.latimes.com/environment/story/2024-12-31/worrisome-mutations-found-in-h5n1-bird-flu-virus-isolated-from-canadian-teenager",
+          "quote": "There have been a total of 66 reported human cases of H5N1 bird flu in the U.S. in 2024."
+        }
+      ]
+    },
+    {
+      "id": "ins-79ad3241b13f",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 34.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-18T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed human infections recorded in the U.S. this year, with 34 cases reported, mostly in California.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:07.905811+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285",
+          "chunk_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285-c2",
+          "source_url": "https://time.com/7203290/bird-flu-united-states-severe-case-h5n1-explainer/",
+          "quote": "Of the human infections recorded in the U.S. this year, 34, or more than half, were in California"
+        }
+      ]
+    },
+    {
+      "id": "ins-5623220d5ccb",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-18T00:00:00",
+      "event_date_precision": "day",
+      "summary": "first known case of H5N1 infection in the U.S. linked to sick and dead birds in backyard flocks",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:09.395808+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285",
+          "chunk_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285-c1",
+          "source_url": "https://time.com/7203290/bird-flu-united-states-severe-case-h5n1-explainer/",
+          "quote": "the first known case of infection in the U.S. to have those origins."
+        }
+      ]
+    },
+    {
+      "id": "ins-b726026b1cac",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 60.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-18T00:00:00",
+      "event_date_precision": "day",
+      "summary": "total of 60 other cases, with 58 linked to commercial agriculture",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:09.395927+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285",
+          "chunk_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285-c1",
+          "source_url": "https://time.com/7203290/bird-flu-united-states-severe-case-h5n1-explainer/",
+          "quote": "Of the 60 other cases, 58 were linked to commercial agriculture"
+        }
+      ]
+    },
+    {
+      "id": "ins-5cf522e4c6ee",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "USA",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "One laboratory-confirmed human case of infection with influenza A(H5) reported from Louisiana.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:04.153692+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8",
+          "chunk_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8-c2",
+          "source_url": "https://web.archive.org/web/20250221235638id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "the USA notified WHO of one laboratory-confirmed human case of infection with influenza A(H5) in an adult aged over 65 years from the state of Louisiana."
+        }
+      ]
+    },
+    {
+      "id": "ins-52804af640ac",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "USA",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Two additional laboratory-confirmed human cases of infection with influenza A(H5) reported from Iowa and Wisconsin.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:04.154524+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8",
+          "chunk_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8-c2",
+          "source_url": "https://web.archive.org/web/20250221235638id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "the USA notified WHO of two additional laboratory-confirmed human case of infection with influenza A(H5) in an adult from the states of Iowa and Wisconsin."
+        }
+      ]
+    },
+    {
+      "id": "ins-e13f9c1c66be",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "USA",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "One additional laboratory-confirmed human case of infection with influenza A(H5) reported from California.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:04.155054+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8",
+          "chunk_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8-c2",
+          "source_url": "https://web.archive.org/web/20250221235638id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "the USA notified WHO of one additional laboratory-confirmed human case of infection with influenza A(H5) from the state of California."
+        }
+      ]
+    },
+    {
+      "id": "ins-79b39d6cd2e9",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States of America",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 9.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed human cases of influenza A(H5) virus in the US since the last risk assessment.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:01.707463+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8",
+          "chunk_id": "doc-08a9d1af007d4a9291e6f2dd1b49f4c8-c1",
+          "source_url": "https://web.archive.org/web/20250221235638id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "influenza A(H5) virus has been detected in nine humans in the United States of America (USA)"
+        }
+      ]
+    },
+    {
+      "id": "ins-76b4e3e66d49",
+      "question_id": "q1",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 954.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2003-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Since 2003, the World Health Organization (WHO) has counted 954 confirmed human cases of bird flu, of which about half have died.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:06.044193+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1a54af62de424fda94562938c4fc1b73",
+          "chunk_id": "doc-1a54af62de424fda94562938c4fc1b73-c1",
+          "source_url": "https://www.bbc.com/news/articles/cqx85y07jz9o",
+          "quote": "Since 2003, the World Health Organization (WHO) has counted 954 confirmed human cases of bird flu, of which about half have died."
+        }
+      ]
+    },
+    {
+      "id": "ins-ca5809281766",
+      "question_id": "q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "confirmed_cases",
+      "metric_value": 61.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed human H5N1 cases since April 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-14T23:51:07.823021+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285",
+          "chunk_id": "doc-e4c0f772f7bb40fbb2cb232f0db01285-c0",
+          "source_url": "https://time.com/7203290/bird-flu-united-states-severe-case-h5n1-explainer/",
+          "quote": "It is the 61st case of human H5N1 bird flu infection in the country since April this year."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 75670,
+    "total_output_tokens": 1602,
+    "total_tokens": 77272,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 75670,
+        "output_tokens": 1602,
+        "calls": 34
+      }
+    }
+  },
+  "documents_processed": 8,
+  "documents_skipped": 0,
+  "notes": []
+}

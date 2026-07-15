@@ -1,0 +1,156 @@
+{
+  "question_id": "q1",
+  "options": [
+    "70-100",
+    "100-150",
+    "150-200",
+    "200+"
+  ],
+  "distributions": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "70-100": 0.9696517924061445,
+        "100-150": 0.02625833811431085,
+        "150-200": 0.0033220710153221583,
+        "200+": 0.00076779846422236
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "70-100",
+      "probability": 0.9696517924061445,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "100-150",
+      "probability": 0.02625833811431085,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "150-200",
+      "probability": 0.0033220710153221583,
+      "forecast_version": null
+    },
+    {
+      "question_id": "q1",
+      "forecast_source": "bioscancast",
+      "option": "200+",
+      "probability": 0.00076779846422236,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.88,
+        0.08,
+        0.03,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Human H5N1 cases in countries with outbreaks since 2003",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in cases, with 9 confirmed by January 2025.",
+        "H5N1 has been detected in several states, indicating potential wider spread.",
+        "Historical global case count shows potential for significant outbreaks."
+      ],
+      "drivers_down": [
+        "Only 9 cases confirmed by January 2025 indicates slow progression.",
+        "Most US cases have been linked to commercial agriculture, not community spread.",
+        "Limited time until February 2025 for a dramatic increase in cases."
+      ],
+      "why_might_be_wrong": "The base rate and global data might inadequately capture the local dynamics and public health responses in the US.",
+      "rationale": "The base rate from historical data suggests a low probability of high case numbers. With only 9 cases confirmed by January 2025, the likelihood of reaching 70 cases by February 28, 2025, is low. Factors like the recent increase in cases and potential for wider spread push the probability slightly up. However, the time frame is short, and most cases are linked to agriculture, limiting potential for rapid increase, making lower case counts more likely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Historical outbreaks of H5N1 in the US and globally",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "Recent increase in cases from 61 in December 2024 to 68 in September 2024 suggests potential for further spread.",
+        "Past reports indicate H5N1 infections in multiple states, not just confined to one area, which could facilitate wider spread."
+      ],
+      "drivers_down": [
+        "The cumulative number of cases reported as of January 2025 is only 9, suggesting a significant slowing of new cases compared to late 2024.",
+        "Containment and control measures may have been enacted following the sudden increase in cases, reducing further spread."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is a sudden outbreak or if the virus adapts, leading to a significant increase in cases before the target date.",
+      "rationale": "With only 9 confirmed cases reported as of January 2025 and the historical base rate of substantial outbreaks being low, it is unlikely that the number of cases will reach the higher thresholds by February 28, 2025. Despite a surge in cases in late 2024, the current evidence does not suggest a continued rapid increase. Therefore, the probability of remaining in the lowest range (70-100 cases) is highest.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "H5N1 outbreaks in countries with reported human cases",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "Recent increase in cases from 9 to 68 in a short period, indicating a possible outbreak.",
+        "High number of cases in California suggests localized spread.",
+        "Confirmed human-to-human transmission in recent cases could lead to more cases."
+      ],
+      "drivers_down": [
+        "Historically low human-to-human transmission of H5N1 globally.",
+        "Containment measures typically effective in the US to prevent large outbreaks.",
+        "Current case count is still low compared to thresholds."
+      ],
+      "why_might_be_wrong": "Unexpected changes in transmission dynamics or containment failures could lead to a rapid increase in cases.",
+      "rationale": "Given the recent increase in cases to 68 and localized clusters, there is a potential for more cases, but given historical transmission patterns and the containment capabilities of the US, it is unlikely to exceed 100 cases. Therefore, the highest probability is assigned to the 70-100 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": null,
+  "evidence_record_ids": [
+    "ins-3aa7e365b48b",
+    "ins-c7bbcc04ee19",
+    "ins-e58a8f8096ee",
+    "ins-8982afa24d84",
+    "ins-c9e19f76cc5c",
+    "ins-1a3745d41416",
+    "ins-0360c1acd31e",
+    "ins-35ef7cd18dc5",
+    "ins-3f918a8e7616",
+    "ins-b831a7252894",
+    "ins-5ededcaf4bdd",
+    "ins-f8af3289f09f",
+    "ins-b1f5c93ea05b",
+    "ins-031f36115918"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6000,
+    "total_output_tokens": 753,
+    "total_tokens": 6753,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6000,
+        "output_tokens": 753,
+        "calls": 3
+      }
+    }
+  },
+  "notes": []
+}

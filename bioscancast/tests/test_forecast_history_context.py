@@ -313,3 +313,171 @@ def test_orchestrator_passes_history_block_from_prior_runs(tmp_path, monkeypatch
     assert "past_scrape_as_of=2026-07-10T00:00:00+00:00" in insight_history
     assert "metric=confirmed_cases" in insight_history
     assert "other question" not in insight_history
+
+
+def test_orchestrator_no_history_context_flag_disables_prior_context(tmp_path, monkeypatch):
+    qid = "q-int"
+    current = "20260714_130000"
+
+    prior = tmp_path / qid / "20260712_000000"
+    _write_json(
+        prior / "question.json",
+        {"id": qid, "as_of_date": "2026-07-12T00:00:00+00:00"},
+    )
+    _write_json(
+        prior / "forecast.json",
+        {
+            "distributions": [
+                {
+                    "forecast_source": "bioscancast",
+                    "probabilities": {"YES": 0.7, "NO": 0.3},
+                }
+            ],
+            "samples": [{"ok": True, "rationale": "uptick continued"}],
+        },
+    )
+    _write_json(
+        prior / "insight.json",
+        {
+            "records": [
+                {
+                    "event_type": "case_count",
+                    "location": "Uganda",
+                    "metric_name": "confirmed_cases",
+                    "metric_value": 10,
+                    "summary": "Prior scrape saw growth",
+                    "sources": [{"quote": "confirmed cases reported"}],
+                }
+            ]
+        },
+    )
+
+    captured: dict[str, str | None] = {
+        "history": None,
+        "insight_history": None,
+    }
+
+    class _DummyLLM:
+        def generate_json(self, **kwargs):  # pragma: no cover
+            raise AssertionError("LLM should not be called in this stubbed test")
+
+        def embed(self, texts, *, model):
+            return [[0.0] * 4 for _ in texts]
+
+    class _DummyBackend:
+        pass
+
+    class _SearchStagePipeline:
+        def __init__(self, **kwargs):
+            pass
+
+        def run(self, question):
+            return []
+
+    class _FilteringPipeline:
+        def __init__(self, **kwargs):
+            pass
+
+        def run(self, question, search_results):
+            return []
+
+    class _ExtractionPipeline:
+        def __init__(self, **kwargs):
+            self.docling_telemetry = []
+
+        def run(self, filtered_docs):
+            return []
+
+    class _InsightPipeline:
+        def __init__(self, **kwargs):
+            pass
+
+        def run(self, question, documents):
+            return InsightRunResult(
+                records=[],
+                budget_summary={
+                    "total_input_tokens": 0,
+                    "total_output_tokens": 0,
+                    "per_model": {},
+                },
+                documents_processed=0,
+                documents_skipped=0,
+                notes=[],
+            )
+
+    class _ForecastingPipeline:
+        def __init__(self, **kwargs):
+            pass
+
+        def run(
+            self,
+            question,
+            records,
+            options,
+            historical_context=None,
+            historical_insight_context=None,
+        ):
+            captured["history"] = historical_context
+            captured["insight_history"] = historical_insight_context
+            return ForecastResult(
+                question_id=question.id,
+                options=list(options),
+                distributions=[
+                    ForecastDistribution(
+                        question_id=question.id,
+                        forecast_source="bioscancast",
+                        probabilities={"YES": 0.5, "NO": 0.5},
+                    )
+                ],
+                records=[
+                    ForecastRecord(
+                        question_id=question.id,
+                        forecast_source="bioscancast",
+                        option="YES",
+                        probability=0.5,
+                    ),
+                    ForecastRecord(
+                        question_id=question.id,
+                        forecast_source="bioscancast",
+                        option="NO",
+                        probability=0.5,
+                    ),
+                ],
+                budget_summary={
+                    "total_input_tokens": 0,
+                    "total_output_tokens": 0,
+                    "per_model": {},
+                },
+            )
+
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    monkeypatch.setenv("TAVILY_API_KEY", "test-key")
+    monkeypatch.setattr(orchestrator, "OpenAILLMClient", _DummyLLM)
+    monkeypatch.setattr(orchestrator, "TavilyBackend", _DummyBackend)
+    monkeypatch.setattr(orchestrator, "SearchStagePipeline", _SearchStagePipeline)
+    monkeypatch.setattr(orchestrator, "FilteringPipeline", _FilteringPipeline)
+    monkeypatch.setattr(orchestrator, "ExtractionPipeline", _ExtractionPipeline)
+    monkeypatch.setattr(orchestrator, "InsightPipeline", _InsightPipeline)
+    monkeypatch.setattr(orchestrator, "ForecastingPipeline", _ForecastingPipeline)
+
+    args = orchestrator._parse_args(
+        [
+            qid,
+            "--question",
+            "Will cases exceed threshold?",
+            "--out-root",
+            str(tmp_path),
+            "--run-id",
+            current,
+            "--options",
+            "YES,NO",
+            "--no-baseline",
+            "--no-cache",
+            "--no-history-context",
+        ]
+    )
+
+    orchestrator.run_pipeline(args)
+
+    assert (captured["history"] or "") == ""
+    assert (captured["insight_history"] or "") == ""
