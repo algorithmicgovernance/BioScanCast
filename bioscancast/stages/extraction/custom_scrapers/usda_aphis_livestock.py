@@ -1,51 +1,159 @@
 """Custom scraper for USDA APHIS HPAI livestock detections.
 
-The public APHIS dashboard is a client-rendered Tableau page; this scraper reads
-its downloadable CSV export and renders compact analytical prose/tables so the
-regular HTML parser + insight extraction pipeline can operate without additional
-CSV-specific parser changes.
+The public APHIS dashboard is a client-rendered Tableau page; this scraper uses
+headless browser automation to export the Tableau crosstab CSV and renders
+compact analytical prose/tables so the regular HTML parser + insight extraction
+pipeline can operate without additional parser changes.
 """
 
 from __future__ import annotations
 
 import html
-import io
+import logging
 from datetime import datetime, timezone
 from typing import Callable, Optional
 
 import numpy as np
 import pandas as pd
-from curl_cffi import requests as curl_requests
 
 from bioscancast.stages.extraction.config import ExtractionConfig
 from bioscancast.stages.extraction.fetcher import FetchResult
 
-CSV_URL = (
-    "https://publicdashboards.dl.usda.gov/vizql/t/MRP_PUB/"
-    "w/VS_Cattle_HPAIConfirmedDetections2024/v/HPAI2022ConfirmedDetections/"
-    "tempfile/sessions/89200926388D46C4A9F17603C7900132-1:0/"
-    "?key=2503115340&keepfile=yes&attachment=yes"
+logger = logging.getLogger(__name__)
+
+TABLEAU_VIEW_URL = (
+    "https://publicdashboards.dl.usda.gov/t/MRP_PUB/views/"
+    "VS_Cattle_HPAIConfirmedDetections2024/HPAI2022ConfirmedDetections"
 )
 
-CsvFetcher = Callable[[str, ExtractionConfig], Optional[str]]
+TableauFetcher = Callable[[str, ExtractionConfig], Optional[pd.DataFrame]]
 
 
-def _fetch_csv_text(url: str, cfg: ExtractionConfig) -> Optional[str]:
+def _embed_url(url: str) -> str:
+    if ":embed=y" in url:
+        return url
+    sep = "&" if "?" in url else "?"
+    return f"{url}{sep}:showVizHome=no&:embed=y"
+
+
+def _read_csv_with_fallback(path: str) -> Optional[pd.DataFrame]:
+    attempts = [
+        {"encoding": "utf-16", "sep": "\t", "skiprows": 1},
+        {"encoding": "utf-16-le", "sep": "\t", "skiprows": 1},
+        {"encoding": "utf-8-sig", "sep": "\t", "skiprows": 1},
+        {"encoding": "utf-8", "sep": "\t", "skiprows": 1},
+        {"encoding": "utf-16"},
+        {"encoding": "utf-16-le"},
+        {"encoding": "utf-8-sig"},
+        {"encoding": "utf-8"},
+        {"encoding": "latin-1"},
+    ]
+    for kwargs in attempts:
+        try:
+            df = pd.read_csv(path, **kwargs)
+            logger.info("USDA Tableau: parsed CSV with options=%s", kwargs)
+            return df
+        except UnicodeDecodeError:
+            logger.info("USDA Tableau: decode failed with options=%s", kwargs)
+            continue
+        except Exception as exc:
+            logger.info("USDA Tableau: csv parse error with options=%s: %s", kwargs, exc)
+            continue
+    return None
+
+
+def _fetch_tableau_dataframe(url: str, cfg: ExtractionConfig) -> Optional[pd.DataFrame]:
     try:
-        resp = curl_requests.get(
-            url,
-            timeout=max(cfg.fetch_timeout_seconds, 30.0),
-            impersonate=cfg.impersonate,
-            allow_redirects=True,
-        )
-    except Exception:
+        from playwright.sync_api import sync_playwright
+    except Exception as exc:
+        logger.info("USDA Tableau: Playwright unavailable: %s", exc)
         return None
 
-    if resp.status_code != 200:
+    timeout_ms = int(max(cfg.fetch_timeout_seconds, 45.0) * 1000)
+
+    try:
+        with sync_playwright() as p:
+            logger.info("USDA Tableau: launching headless browser")
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(accept_downloads=True)
+            page = context.new_page()
+
+            target_url = _embed_url(url)
+            logger.info("USDA Tableau: navigating to %s", target_url)
+            page.goto(_embed_url(url), wait_until="domcontentloaded", timeout=timeout_ms)
+
+            logger.info("USDA Tableau: waiting for download toolbar button")
+            for _ in range(200):
+                if page.locator("button[data-tb-test-id='viz-viewer-toolbar-button-download']").count() > 0:
+                    break
+                page.wait_for_timeout(250)
+            download_btn_count = page.locator("button[data-tb-test-id='viz-viewer-toolbar-button-download']").count()
+            logger.info("USDA Tableau: download button count=%s", download_btn_count)
+            if download_btn_count == 0:
+                logger.info("USDA Tableau: download button not found before timeout")
+                context.close()
+                browser.close()
+                return None
+
+            logger.info("USDA Tableau: opening download menu")
+            page.locator("button[data-tb-test-id='viz-viewer-toolbar-button-download']").first.click(timeout=20_000)
+            logger.info("USDA Tableau: selecting Crosstab")
+            page.locator("[data-tb-test-id='download-flyout-download-crosstab-MenuItem']").first.click(timeout=20_000)
+            page.wait_for_timeout(1500)
+
+            logger.info("USDA Tableau: selecting worksheet 'Table Details by Date'")
+            page.locator("[data-tb-test-id^='sheet-thumbnail-']", has_text="Table Details by Date").first.click(timeout=20_000)
+            logger.info("USDA Tableau: selecting CSV export format")
+            page.locator("[data-tb-test-id='crosstab-options-dialog-radio-csv-Label']").first.click(timeout=20_000)
+
+            downloads = []
+            page.on("download", lambda d: downloads.append(d))
+            logger.info("USDA Tableau: triggering export download")
+            page.locator("[data-tb-test-id='export-crosstab-export-Button']").first.click(timeout=20_000)
+
+            waited = 0
+            step = 250
+            while waited <= timeout_ms and not downloads:
+                page.wait_for_timeout(step)
+                waited += step
+            logger.info("USDA Tableau: download events captured=%s after %sms", len(downloads), waited)
+
+            if not downloads:
+                logger.info("USDA Tableau: no download event received")
+                context.close()
+                browser.close()
+                return None
+            download = downloads[0]
+
+            path = download.path()
+            logger.info("USDA Tableau: download path resolved=%s", bool(path))
+            if path is None:
+                logger.info("USDA Tableau: download path unavailable")
+                context.close()
+                browser.close()
+                return None
+
+            logger.info("USDA Tableau: reading CSV from %s", path)
+            df = _read_csv_with_fallback(path)
+            context.close()
+            browser.close()
+
+            if df is None:
+                logger.info("USDA Tableau: failed to parse CSV with fallback encodings")
+                return None
+            if df.empty:
+                logger.info("USDA Tableau: CSV parsed but DataFrame empty")
+                return None
+            logger.info("USDA Tableau: CSV parsed rows=%s cols=%s", df.shape[0], df.shape[1])
+            return df
+    except Exception as exc:
+        logger.info("USDA Tableau: fetch failed with exception: %s", exc)
         return None
 
-    text = (resp.text or "").strip()
-    return text or None
+
+def _resolve_column(df: pd.DataFrame, wanted: str) -> str | None:
+    by_lower = {str(c).strip().lower(): c for c in df.columns}
+    return by_lower.get(wanted.strip().lower())
 
 
 def _r2(y: np.ndarray, yhat: np.ndarray) -> float:
@@ -215,27 +323,31 @@ def fetch(
     as_of_date: datetime | None = None,
     region: str | None = None,
     question_text: str | None = None,
-    csv_fetcher: CsvFetcher | None = None,
+    tableau_fetcher: TableauFetcher | None = None,
 ) -> FetchResult | None:
     cfg = config or ExtractionConfig()
     fetched_at = datetime.now(timezone.utc)
 
-    text = (csv_fetcher or _fetch_csv_text)(CSV_URL, cfg)
-    if not text:
+    df = (tableau_fetcher or _fetch_tableau_dataframe)(TABLEAU_VIEW_URL, cfg)
+    if df is None or df.empty:
         return None
 
-    try:
-        df = pd.read_csv(io.StringIO(text))
-    except Exception:
-        return None
+    df = df.copy()
 
     # Requested behavior: ignore first row.
     if df.shape[0] < 2:
         return None
     df = df.iloc[1:].copy()
 
-    if "Confirmed Diagnosis" not in df.columns or "State" not in df.columns:
+    confirmed_col = _resolve_column(df, "Confirmed Diagnosis")
+    state_col = _resolve_column(df, "State")
+    if confirmed_col is None or state_col is None:
         return None
+
+    if confirmed_col != "Confirmed Diagnosis":
+        df = df.rename(columns={confirmed_col: "Confirmed Diagnosis"})
+    if state_col != "State":
+        df = df.rename(columns={state_col: "State"})
 
     df["Confirmed Diagnosis"] = pd.to_datetime(
         df["Confirmed Diagnosis"], errors="coerce"
@@ -277,9 +389,9 @@ def fetch(
         "</head><body>"
         "<h1>USDA APHIS HPAI Confirmed Cases in Livestock - analytics snapshot</h1>"
         f"<p>Source dashboard URL: {html.escape(url)}</p>"
-        f"<p>CSV source URL: {html.escape(CSV_URL)}</p>"
+        f"<p>Tableau source URL: {html.escape(TABLEAU_VIEW_URL)}</p>"
         f"<p>Retrieved at: {fetched_at.isoformat()} | latest confirmed diagnosis date: {html.escape(latest)}.</p>"
-        "<p>This summary is computed from the downloadable APHIS CSV. The first CSV row was ignored by design.</p>"
+        "<p>This summary is computed from Tableau workbook data. The first data row was ignored by design.</p>"
         "<h2>Cumulative and state coverage summary</h2>"
         f"<p>Cumulative confirmed cases in livestock (from CSV rows): {cumulative_case_count}.</p>"
         f"{_render_first_case_by_state(df)}"
@@ -297,8 +409,8 @@ def fetch(
     ).encode("utf-8")
 
     return FetchResult(
-        url=CSV_URL,
-        final_url=CSV_URL,
+        url=TABLEAU_VIEW_URL,
+        final_url=TABLEAU_VIEW_URL,
         status_code=200,
         content_type="text/html",
         content_bytes=rendered,

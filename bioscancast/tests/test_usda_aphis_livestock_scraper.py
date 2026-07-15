@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import io
 from datetime import datetime, timezone
+
+import pandas as pd
 
 from bioscancast.llm.fake_client import FakeLLMClient
 from bioscancast.llm.base import LLMResponse
@@ -25,8 +28,11 @@ _CSV = """Confirmed Diagnosis,State,County
 """
 
 
-def _fetcher(text: str = _CSV):
-    return lambda url, config: text
+def _df_fetcher(text: str = _CSV):
+    def _fetch(_url, _config):
+        return pd.read_csv(io.StringIO(text))
+
+    return _fetch
 
 
 def _html(result) -> str:
@@ -42,7 +48,7 @@ def _asof(s: str) -> datetime:
 def test_renders_requested_analytics_sections():
     result = usda_aphis_livestock.fetch(
         "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
-        csv_fetcher=_fetcher(),
+        tableau_fetcher=_df_fetcher(),
     )
     body = _html(result)
 
@@ -63,7 +69,7 @@ def test_renders_requested_analytics_sections():
 def test_ignores_first_row_before_aggregation():
     result = usda_aphis_livestock.fetch(
         "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
-        csv_fetcher=_fetcher(),
+        tableau_fetcher=_df_fetcher(),
     )
     body = _html(result)
 
@@ -79,7 +85,7 @@ def test_as_of_date_applies_cutoff():
     result = usda_aphis_livestock.fetch(
         "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
         as_of_date=_asof("2026-03-31"),
-        csv_fetcher=_fetcher(),
+        tableau_fetcher=_df_fetcher(),
     )
     body = _html(result)
 
@@ -90,7 +96,11 @@ def test_as_of_date_applies_cutoff():
 def test_dispatcher_uses_source_id_custom_scraper(monkeypatch):
     from bioscancast.stages.extraction import fetcher as fetcher_mod
 
-    monkeypatch.setattr(usda_aphis_livestock, "_fetch_csv_text", lambda _url, _cfg: _CSV)
+    monkeypatch.setattr(
+        usda_aphis_livestock,
+        "_fetch_tableau_dataframe",
+        lambda _url, _cfg: pd.read_csv(io.StringIO(_CSV)),
+    )
 
     result = fetcher_mod.fetch(
         "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
@@ -106,13 +116,17 @@ def test_returns_none_on_missing_columns():
     bad = "date,state\n2026-01-01,CA\n2026-01-02,TX\n"
     result = usda_aphis_livestock.fetch(
         "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
-        csv_fetcher=_fetcher(bad),
+        tableau_fetcher=_df_fetcher(bad),
     )
     assert result is None
 
 
 def test_usda_scraper_output_reaches_insight_llm(monkeypatch):
-    monkeypatch.setattr(usda_aphis_livestock, "_fetch_csv_text", lambda _url, _cfg: _CSV)
+    monkeypatch.setattr(
+        usda_aphis_livestock,
+        "_fetch_tableau_dataframe",
+        lambda _url, _cfg: pd.read_csv(io.StringIO(_CSV)),
+    )
 
     fdoc = FilteredDocument(
         result_id="r-usda-1",
@@ -152,15 +166,32 @@ def test_usda_scraper_output_reaches_insight_llm(monkeypatch):
     assert docs[0].status == "success"
     assert docs[0].chunks
 
-    # Empty fact response is enough to prove the USDA-derived chunks are sent
-    # to extraction LLM calls in the insight stage.
     llm = FakeLLMClient([
         LLMResponse(
-            content={"facts": []},
+            content={
+                "facts": [
+                    {
+                        "event_type": "case_count",
+                        "confidence": 0.9,
+                        "location": "United States",
+                        "pathogen": "H5N1",
+                        "metric_name": "confirmed_cases",
+                        "metric_value": 8,
+                        "metric_unit": "cases",
+                        "count_basis": "cumulative",
+                        "time_window": "unknown",
+                        "surveillance_method": None,
+                        "data_quality": None,
+                        "event_date": None,
+                        "summary": "USDA cumulative count from dashboard extract.",
+                        "quote": "Cumulative confirmed cases in livestock (from CSV rows): 8.",
+                    }
+                ]
+            },
             input_tokens=100,
             output_tokens=10,
             model="gpt-4o-mini",
-            raw_text='{"facts": []}',
+            raw_text='{"facts": [{...}]}',
         )
     ])
     insight = InsightPipeline(
@@ -173,4 +204,5 @@ def test_usda_scraper_output_reaches_insight_llm(monkeypatch):
     ).run(question, docs)
 
     assert insight.documents_processed == 1
+    assert len(insight.records) == 1
     assert llm.call_count == 1
