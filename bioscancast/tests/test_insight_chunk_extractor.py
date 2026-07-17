@@ -140,6 +140,45 @@ def test_hallucination_guard_passes_valid_quote():
 
 
 # ---------------------------------------------------------------------------
+# Cross-chunk quote routing (retrieval-miss fallback)
+# ---------------------------------------------------------------------------
+
+
+def test_cross_chunk_quote_routing_recovers_fact_and_corrects_chunk_id():
+    """If retrieval routes a chunk adjacent to the one the model actually
+    quoted, the fact should still be accepted — the quote is verbatim in a
+    sibling chunk of the same document — and its provenance chunk_id should
+    point at the chunk that truly contains the quote, not the routed one."""
+    routed_chunk = DOC_WHO_SUDAN.chunks[0]  # heading chunk — no case count
+    quoted_chunk = DOC_WHO_SUDAN.chunks[1]  # prose chunk the quote lives in
+
+    # Precondition: the prose quote is absent from the routed heading chunk
+    # but present in its sibling prose chunk.
+    quote_text = "9 confirmed cases including 3 deaths have been reported"
+    assert _normalize_whitespace(quote_text) not in _normalize_whitespace(
+        routed_chunk.text
+    )
+    assert _normalize_whitespace(quote_text) in _normalize_whitespace(
+        quoted_chunk.text
+    )
+
+    client = FakeLLMClient([SUDAN_PROSE_RESPONSE])
+    records, _ = extract_facts_from_chunk(
+        routed_chunk, DOC_WHO_SUDAN, QUESTION_SUDAN, client, model="gpt-4o-mini"
+    )
+
+    # The fact survives the hallucination guard via the sibling-chunk fallback.
+    assert len(records) == 2
+    # Provenance is corrected to the chunk that actually contains the quote.
+    assert records[0].sources[0].chunk_id == quoted_chunk.chunk_id
+    assert records[0].sources[0].chunk_id != routed_chunk.chunk_id
+    # The recorded canonical quote is still a verbatim substring of that chunk.
+    assert _normalize_whitespace(
+        records[0].sources[0].quote
+    ) in _normalize_whitespace(quoted_chunk.text)
+
+
+# ---------------------------------------------------------------------------
 # Country code resolution
 # ---------------------------------------------------------------------------
 
