@@ -1,5 +1,6 @@
 rank-bm25
 numpy
+pandas>=2.0 # DataFrame ops in the evaluation stage and the custom Tableau/CSV scrapers (USDA APHIS, PAHO Oropouche)
 
 curl_cffi>=0.7,<1.0 # HTTP client with streaming support and browser TLS-fingerprint impersonation (Cloudflare workaround)
 trafilatura>=1.12,<2.0 # HTML main-content extraction (strips nav, ads, boilerplate)

@@ -121,6 +121,8 @@ def build_forecast_prompt(
     question: ForecastQuestion,
     options: List[str],
     evidence_digest: str,
+    historical_context: str | None = None,
+    historical_insight_context: str | None = None,
 ) -> Tuple[str, str, dict]:
     """Build the (system, user, json_schema) tuple for one reasoning sample.
 
@@ -153,6 +155,22 @@ def build_forecast_prompt(
         f"  {i}. {opt}" for i, opt in enumerate(options)
     )
     parts.append(f"OPTIONS (assign a probability to each, in this order):\n{numbered_options}")
+
+    if historical_context:
+        parts.append("")
+        parts.append(
+            "FORECAST HISTORY (prior runs for this question; use as context, "
+            "not as a substitute for current evidence):"
+        )
+        parts.append(historical_context)
+
+    if historical_insight_context:
+        parts.append("")
+        parts.append(
+            "PAST INSIGHT SCRAPES (from prior runs; each line includes the "
+            "scrape as-of date):"
+        )
+        parts.append(historical_insight_context)
 
     parts.append("")
     if evidence_digest:
