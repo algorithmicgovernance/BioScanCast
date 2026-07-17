@@ -112,6 +112,9 @@ class TestMpoxCumulativeMetric:
         # Trend columns present, and the last World trend row is the cutoff date.
         assert "<th>total_cases</th>" in body
         assert "2025-03-05" in body
+        assert "Trend summary (total_cases, World):" in body
+        assert "Linear fit on recent cumulative trend (total_cases" in body
+        assert "Incident trend stats (new_cases, World):" in body
 
     def test_returns_none_when_no_rows_before_cutoff(self):
         assert (
@@ -146,6 +149,8 @@ class TestLocationTargeting:
         )
         assert "<h2>Africa</h2>" in body
         assert "cumulative confirmed cases (Africa): 41,000" in body
+        assert "Region/question-target focus: Africa trend statistics" in body
+        assert "Trend summary (total_cases, Africa):" in body
 
     def test_question_text_infers_target_entity(self):
         body = _html(
@@ -196,3 +201,49 @@ class TestDispatchRouting:
         assert result.fetch_strategy == "custom:ourworldindata_mpox"
         assert result.content_type == "text/html"
         assert "cumulative confirmed cases (World): 129,602" in _html(result)
+
+
+# ---------------------------------------------------------------------------
+# Numeric correctness of the trend-fit helpers
+# ---------------------------------------------------------------------------
+#
+# The rendering tests above assert the fit sections are *present*; these lock
+# in the *values* the least-squares helpers produce on known series.
+
+import math
+
+from bioscancast.stages.extraction.custom_scrapers._owid_common import (
+    _fit_linear,
+    _fit_exponential,
+    _r2,
+)
+
+
+class TestTrendFitHelpers:
+    def test_fit_linear_recovers_known_slope(self):
+        fit = _fit_linear([1.0, 2.0, 3.0, 4.0, 5.0])
+        assert fit is not None
+        assert fit["slope"] == pytest.approx(1.0)
+        assert fit["intercept"] == pytest.approx(1.0)
+        assert fit["r2"] == pytest.approx(1.0)
+
+    def test_fit_linear_needs_two_points(self):
+        assert _fit_linear([]) is None
+        assert _fit_linear([5.0]) is None
+
+    def test_fit_exponential_recovers_doubling(self):
+        fit = _fit_exponential([1.0, 2.0, 4.0, 8.0, 16.0])
+        assert fit is not None
+        # y = a * exp(b*x) with a ~ 1 and b ~ ln(2)
+        assert fit["a"] == pytest.approx(1.0, abs=1e-6)
+        assert fit["b"] == pytest.approx(math.log(2), rel=1e-6)
+        assert fit["r2"] == pytest.approx(1.0, abs=1e-9)
+
+    def test_fit_exponential_needs_two_positive_points(self):
+        # Fewer than two strictly-positive observations -> None.
+        assert _fit_exponential([0.0, 0.0, 5.0]) is None
+
+    def test_r2_perfect_and_mean_baseline(self):
+        assert _r2([1.0, 2.0, 3.0], [1.0, 2.0, 3.0]) == pytest.approx(1.0)
+        # Predicting the mean everywhere yields R^2 == 0.
+        assert _r2([1.0, 2.0, 3.0], [2.0, 2.0, 2.0]) == pytest.approx(0.0)
