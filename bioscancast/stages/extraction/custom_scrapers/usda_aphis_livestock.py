@@ -349,8 +349,11 @@ def fetch(
     if state_col != "State":
         df = df.rename(columns={state_col: "State"})
 
+    # The crosstab renders dates like "14-Jul-26" (%d-%b-%y). Opt into
+    # per-element parsing explicitly (format="mixed") — the same inference the
+    # bare call already did, but without the "Could not infer format" warning.
     df["Confirmed Diagnosis"] = pd.to_datetime(
-        df["Confirmed Diagnosis"], errors="coerce"
+        df["Confirmed Diagnosis"], format="mixed", errors="coerce"
     )
     df = df.dropna(subset=["Confirmed Diagnosis"]).copy()
     if df.empty:
