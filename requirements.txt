@@ -1,5 +1,6 @@
 rank-bm25
 numpy
+pandas>=2.0 # DataFrame ops in the evaluation stage and the custom Tableau/CSV scrapers (USDA APHIS, PAHO Oropouche)
 
 curl_cffi>=0.7,<1.0 # HTTP client with streaming support and browser TLS-fingerprint impersonation (Cloudflare workaround)
 trafilatura>=1.12,<2.0 # HTML main-content extraction (strips nav, ads, boilerplate)
@@ -10,4 +11,5 @@ docling[chunking]>=2.90,<3.0 # TableFormer-based refinement for borderless / mer
 tiktoken>=0.7,<1.0 # Approximate token counting (cl100k_base encoding)
 openai>=1.0,<2.0 # OpenAI API client (used by filtering stage LLM calls)
 pycountry>=24.0 # ISO 3166-1 country name → alpha-2 lookup (insight stage location resolution)
+playwright>=1.40,<2.0 # Headless-browser Tableau crosstab export for the USDA APHIS livestock scraper (requires a one-time `playwright install chromium`)
 pytest>=8.0,<9.0 # Testing
