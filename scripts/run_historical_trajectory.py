@@ -124,6 +124,11 @@ def _parse_args(argv: List[str]) -> argparse.Namespace:
     p.add_argument("--no-baseline", action="store_true", help="Skip the retrieval-free baseline.")
     p.add_argument("--no-cache", action="store_true", help="Disable the search-stage cache.")
     p.add_argument(
+        "--history-context",
+        action="store_true",
+        help="Enable prior-run forecast/insight context during forecasting (off by default).",
+    )
+    p.add_argument(
         "--max-input-tokens", type=int, default=None,
         help="Override InsightConfig.max_input_tokens_per_run.",
     )
@@ -181,6 +186,8 @@ def _run_one_cutoff(
         orch_argv.append("--no-baseline")
     if args.no_cache:
         orch_argv.append("--no-cache")
+    if args.history_context:
+        orch_argv.append("--history-context")
     if args.max_input_tokens is not None:
         orch_argv += ["--max-input-tokens", str(args.max_input_tokens)]
     if args.verbose:
