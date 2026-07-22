@@ -539,15 +539,15 @@ Additional packages:
 pip install openai tavily-python python-dotenv
 ```
 
-The USDA APHIS livestock scraper drives a headless browser to export the
-Tableau crosstab. After installing `requirements.txt`, download the browser
-once:
+The USDA APHIS livestock and PAHO Oropouche scrapers drive a headless browser
+to export their Tableau data. After installing `requirements.txt`, download the
+browser once:
 
 ```bash
 playwright install chromium
 ```
 
-If the browser is unavailable, that scraper degrades gracefully (it returns
+If the browser is unavailable, those scrapers degrade gracefully (they return
 no data and the generic fetcher is used instead) — the rest of the pipeline
 is unaffected.
 

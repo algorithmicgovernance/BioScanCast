@@ -71,7 +71,7 @@ def test_as_of_date_filters_future_weeks():
 def test_dispatcher_uses_source_id_custom_scraper(monkeypatch):
     from bioscancast.stages.extraction import fetcher as fetcher_mod
 
-    monkeypatch.setattr(paho_oropouche_portal, "_fetch_csv_text", lambda _url, _cfg: _CSV)
+    monkeypatch.setattr(paho_oropouche_portal, "_fetch_full_data_csv", lambda _url, _cfg: _CSV)
 
     result = fetcher_mod.fetch(
         "https://www.paho.org/en/arbo-portal/arbo-portal-oropouche",
@@ -93,7 +93,7 @@ def test_returns_none_on_missing_required_columns():
 
 
 def test_oropouche_scraper_output_reaches_insight_llm(monkeypatch):
-    monkeypatch.setattr(paho_oropouche_portal, "_fetch_csv_text", lambda _url, _cfg: _CSV)
+    monkeypatch.setattr(paho_oropouche_portal, "_fetch_full_data_csv", lambda _url, _cfg: _CSV)
 
     fdoc = FilteredDocument(
         result_id="r-orov-1",
@@ -154,3 +154,27 @@ def test_oropouche_scraper_output_reaches_insight_llm(monkeypatch):
 
     assert insight.documents_processed == 1
     assert llm.call_count == 1
+
+
+# The live "Full Data" vudcsv export carries extra columns (SE, Iso3166,
+# Actualizado, Dominio, ...) and a different column order than the minimal
+# fixture above; the parser must resolve the four it needs and ignore the rest.
+_FULL_DATA_CSV = (
+    "Week Lab Confirmed,Semanas Epi,Pais,Año,SE,Iso3166,Actualizado,Dominio,Fuente\n"
+    "1,2,Brasil,2026,15,76,2026-04-28,PAHO internal use only,Boletim\n"
+    "3,5,Brasil,2026,15,76,2026-04-28,PAHO internal use only,Boletim\n"
+    "2,4,Panamá,2026,15,591,2026-04-28,PAHO internal use only,MINSA\n"
+)
+
+
+def test_parses_full_data_column_superset():
+    result = paho_oropouche_portal.fetch(
+        "https://www.paho.org/en/arbo-portal/arbo-portal-oropouche",
+        csv_fetcher=_fetcher(_FULL_DATA_CSV),
+    )
+    body = _html(result)
+    assert "Weekly counts from Año + Semanas Epi" in body
+    assert "Per-country summary" in body
+    # Both reporting countries surface in the per-country grouping.
+    assert "Brasil" in body
+    assert "Panamá" in body

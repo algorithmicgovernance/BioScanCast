@@ -1,53 +1,158 @@
-"""Custom scraper for PAHO ARBO Portal Oropouche weekly CSV.
+"""Custom scraper for PAHO ARBO Portal Oropouche weekly data.
 
-The PAHO Oropouche portal is dashboard-backed. This scraper pulls the downloadable
-underlying CSV and renders computed weekly/country analytics as compact HTML so
-standard extraction + insight stages can consume the information.
+The PAHO Oropouche dashboard is an authenticated Tableau Server view exposed
+publicly through a trusted-ticket wrapper. This scraper drives a headless
+browser to redeem a fresh ticket, reads the underlying "Full Data" table via the
+Tableau vizql export endpoint, and renders computed weekly/country analytics as
+compact HTML so the standard extraction + insight stages can consume it.
+
+Access notes: the public embed disables the download toolbar, and the underlying
+table is labelled "PAHO internal use only"; this scraper reconstructs the export
+endpoint the UI would otherwise expose. The view/table identifiers are stable
+across sessions -- only the vizql session token is ephemeral (minted per
+render). Any failure returns None so extraction degrades to the generic fetcher.
 """
 
 from __future__ import annotations
 
 import html
 import io
+import logging
 import re
+import time
 import unicodedata
 from datetime import datetime, timezone
 from typing import Callable, Optional
 
 import numpy as np
 import pandas as pd
-from curl_cffi import requests as curl_requests
 
 from bioscancast.stages.extraction.config import ExtractionConfig
 from bioscancast.stages.extraction.fetcher import FetchResult
 
-CSV_URL = (
-    "https://phip.paho.org/vizql/w/AME_OROV_Cases/v/Oropouche/vudcsv/"
-    "sessions/21F758F6EAB9431B932EB51F61EBDE01-1:0/views/"
-    "10956961424773455462_12644916002446576356"
-    "?underlying_table_id=FZ_AME_OROV_Cases_SE_12E30DDB8F874DC6AE5888461B08AB74"
-    "&underlying_table_caption=Full%20Data"
-)
+logger = logging.getLogger(__name__)
+
+# Public trusted-ticket wrapper: loading this mints a single-use Tableau ticket
+# and establishes an authenticated vizql session in the browser context.
+WRAPPER_URL = "https://ais.paho.org/ha_viz/Oropouche/AME_OROV_Viz.asp?env=pri"
+
+# Tableau vizql workbook/view and the stable identifiers for the Oropouche
+# "Full Data" underlying table. Only the session token (below) is per-render; if
+# PAHO republishes the workbook these ids may change and the fetch will 404 ->
+# None -> generic-fetch fallback.
+VIZQL_BASE = "https://phip.paho.org/vizql/w/AME_OROV_Cases/v/Oropouche"
+VIEW_ID = "10956961424773455462_12644916002446576356"
+UNDERLYING_TABLE_ID = "FZ_AME_OROV_Cases_SE_12E30DDB8F874DC6AE5888461B08AB74"
+
+_SESSION_RE = re.compile(r"/sessions/([0-9A-F]+-\d+:\d+)")
+
+# The trusted-ticket + vizql flow occasionally misses (a slow bootstrap or a
+# transient throttle); retry the whole browser flow a couple of times so those
+# self-heal without failing the extraction.
+_FETCH_ATTEMPTS = 2
+_RETRY_BACKOFF_SECONDS = 2.0
 
 CsvFetcher = Callable[[str, ExtractionConfig], Optional[str]]
 
 
-def _fetch_csv_text(url: str, cfg: ExtractionConfig) -> Optional[str]:
+def _fetch_full_data_csv(url: str, cfg: ExtractionConfig) -> Optional[str]:
+    """Return the Oropouche "Full Data" underlying CSV as text, or None.
+
+    Loads the trusted-ticket wrapper (``url``) to establish a vizql session,
+    captures the fresh session token from the viz bootstrap request, then GETs
+    the vudcsv underlying-data export for the stable view/table ids. Retries the
+    whole flow a couple of times on a transient miss. Never raises: any failure
+    (Playwright missing, navigation, non-200) returns None.
+    """
     try:
-        resp = curl_requests.get(
-            url,
-            timeout=max(cfg.fetch_timeout_seconds, 30.0),
-            impersonate=cfg.impersonate,
-            allow_redirects=True,
-        )
-    except Exception:
+        import playwright.sync_api  # noqa: F401
+    except Exception as exc:  # pragma: no cover - env without playwright
+        logger.info("PAHO Oropouche: Playwright unavailable: %s", exc)
         return None
 
-    if resp.status_code != 200:
-        return None
+    for attempt in range(1, _FETCH_ATTEMPTS + 1):
+        text = _fetch_full_data_csv_once(url, cfg)
+        if text:
+            return text
+        if attempt < _FETCH_ATTEMPTS:
+            logger.info(
+                "PAHO Oropouche: attempt %s returned nothing; retrying", attempt
+            )
+            time.sleep(_RETRY_BACKOFF_SECONDS)
+    return None
 
-    text = (resp.text or "").strip()
-    return text or None
+
+def _fetch_full_data_csv_once(url: str, cfg: ExtractionConfig) -> Optional[str]:
+    """One browser attempt at the Full Data export (see _fetch_full_data_csv)."""
+    from playwright.sync_api import sync_playwright
+
+    timeout_ms = int(max(cfg.fetch_timeout_seconds, 45.0) * 1000)
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            # phip.paho.org serves an incomplete TLS chain; it is PAHO's own
+            # host, reached only for this data export.
+            context = browser.new_context(ignore_https_errors=True)
+            page = context.new_page()
+
+            sessions: list[str] = []
+
+            def _on_request(req) -> None:
+                if "vizql" in req.url:
+                    match = _SESSION_RE.search(req.url)
+                    if match:
+                        sessions.append(match.group(1))
+
+            page.on("request", _on_request)
+
+            logger.info("PAHO Oropouche: loading trusted-ticket wrapper")
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+
+            waited = 0
+            while waited < timeout_ms and not sessions:
+                page.wait_for_timeout(500)
+                waited += 500
+            if not sessions:
+                logger.info("PAHO Oropouche: no vizql session captured")
+                context.close()
+                browser.close()
+                return None
+
+            session = sessions[0]
+            # Let the session finish bootstrapping before exporting.
+            page.wait_for_timeout(3000)
+
+            vudcsv = (
+                f"{VIZQL_BASE}/vudcsv/sessions/{session}/views/{VIEW_ID}"
+                f"?underlying_table_id={UNDERLYING_TABLE_ID}"
+                "&underlying_table_caption=Full%20Data"
+            )
+
+            text: Optional[str] = None
+            for _ in range(2):
+                resp = context.request.get(vudcsv, timeout=timeout_ms)
+                if resp.status == 200:
+                    body = resp.body()
+                    if body:
+                        text = body.decode("utf-8-sig", errors="replace").strip()
+                        if text:
+                            break
+                logger.info("PAHO Oropouche: vudcsv retry (status=%s)", resp.status)
+                page.wait_for_timeout(2000)
+
+            context.close()
+            browser.close()
+            if not text:
+                logger.info("PAHO Oropouche: no CSV returned")
+                return None
+            logger.info(
+                "PAHO Oropouche: fetched Full Data CSV (%s bytes)", len(text)
+            )
+            return text
+    except Exception as exc:  # pragma: no cover - network/browser failure
+        logger.info("PAHO Oropouche: fetch failed: %s", exc)
+        return None
 
 
 def _normalize_col(name: str) -> str:
@@ -208,7 +313,7 @@ def fetch(
     cfg = config or ExtractionConfig()
     fetched_at = datetime.now(timezone.utc)
 
-    text = (csv_fetcher or _fetch_csv_text)(CSV_URL, cfg)
+    text = (csv_fetcher or _fetch_full_data_csv)(WRAPPER_URL, cfg)
     if not text:
         return None
 
@@ -294,7 +399,7 @@ def fetch(
         "</head><body>"
         "<h1>PAHO Oropouche weekly analytics snapshot</h1>"
         f"<p>Source portal URL: {html.escape(url)}</p>"
-        f"<p>CSV source URL: {html.escape(CSV_URL)}</p>"
+        f"<p>Data source: {html.escape(WRAPPER_URL)}</p>"
         f"<p>Retrieved at: {fetched_at.isoformat()} | latest year_week: {html.escape(latest_week)}.</p>"
         "<h2>Weekly counts from Año + Semanas Epi</h2>"
         f"<p>Summary statistics (weekly summed Week Lab Confirmed): {_fmt_stats(weekly_series)}. "
@@ -308,8 +413,8 @@ def fetch(
     ).encode("utf-8")
 
     return FetchResult(
-        url=CSV_URL,
-        final_url=CSV_URL,
+        url=WRAPPER_URL,
+        final_url=WRAPPER_URL,
         status_code=200,
         content_type="text/html",
         content_bytes=rendered,
