@@ -1,0 +1,165 @@
+{
+  "question_id": "bfg_q10",
+  "options": [
+    "0",
+    "1",
+    "2 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.6515927356098208,
+        "1": 0.3051685947552368,
+        "2 or more": 0.04323866963494241
+      }
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.3,
+        "2 or more": 0.3
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.6515927356098208,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.3051685947552368,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "2 or more",
+      "probability": 0.04323866963494241,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 or more",
+      "probability": 0.3,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations from 2005 to 2026",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Ebola outbreak in Congo with over 2000 confirmed cases and high mortality, indicating a significant health risk",
+        "The presence of 753 active suspected Ebola cases suggests ongoing transmission, increasing the likelihood of WHO declaring a PHEIC"
+      ],
+      "drivers_down": [
+        "The WHO may decide not to declare a PHEIC if the situation is deemed controllable or if it believes local measures are sufficient",
+        "PHEIC declarations are relatively rare, with only a few being declared since the IHR came into effect in 2005"
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is a sudden emergence of new, severe health threats that are not currently visible or reported.",
+      "rationale": "The base rate for new PHEIC declarations is low, given historical data, as such declarations are rare. The ongoing Ebola outbreak in Congo, with a high number of cases and deaths, could potentially lead to a new PHEIC declaration if the situation worsens or spreads. However, given the rarity of PHEICs and the possibility of WHO choosing not to declare it under certain conditions, the probabilities are weighted towards fewer declarations. The presence of a significant outbreak in the current evidence justifies a moderate adjustment upwards from the base rate, leading to a probability of around 0.3 for one new PHEIC and 0.1 for two or more, with the likelihood of zero new PHEICs being the highest.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.25,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "PHEIC declarations from 2009 to 2023",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Active Ebola outbreak in Congo with substantial number of cases and deaths, indicating potential for PHEIC declaration if situation worsens.",
+        "The WHO may declare a PHEIC if there is an increase in transmission rate or spread to new regions."
+      ],
+      "drivers_down": [
+        "The current Ebola situation might be managed without a PHEIC declaration if local control measures are effective.",
+        "There is no indication of other emerging infectious diseases that might lead to a PHEIC in the given window."
+      ],
+      "why_might_be_wrong": "The emergence of an unforeseen infectious disease could lead to a PHEIC declaration, which is not accounted for in the current evidence.",
+      "rationale": "The base rate for PHEIC declarations is low, given historical data. The ongoing Ebola outbreak in Congo presents a risk, but it's unclear if it will escalate to the point of a PHEIC. There are no other known imminent threats at this time. Thus, a single PHEIC declaration is plausible but not highly likely, and multiple declarations are unlikely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.5,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Ebola outbreak in Congo with a significant number of cases and deaths could lead to a PHEIC declaration",
+        "The active number of suspected cases is high, indicating ongoing transmission and potential for international spread"
+      ],
+      "drivers_down": [
+        "The WHO may decide that the existing measures are sufficient and a PHEIC is not necessary",
+        "There may be no other emerging infectious diseases during the forecast period that reach the threshold for a PHEIC"
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks of other diseases could occur, leading to more PHEIC declarations than anticipated.",
+      "rationale": "The base rate for new PHEIC declarations within a six-month period is moderate, given historical frequency. The current Ebola outbreak in Congo presents a significant risk that could justify a PHEIC declaration, especially with high case and death counts. However, the probability for more than one new declaration is lower, as it requires either another significant outbreak or the Ebola situation escalating dramatically. Thus, the probability is highest for one new PHEIC but not negligible for zero or more than one, given the unpredictability of global health events.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data, the emergence of new Public Health Emergencies of International Concern (PHEICs) can be unpredictable but tends to occur sporadically. Given the global health landscape, it is reasonable to estimate a moderate probability for no new PHEICs (0), a slightly higher chance for one new PHEIC (1), and a similar probability for two or more new PHEICs (2 or more). The probabilities reflect a cautious outlook on the emergence of new health threats.",
+  "evidence_record_ids": [
+    "ins-1a834fe7a5b9",
+    "ins-3160305633fb",
+    "ins-a2cd28eaf47d",
+    "ins-82416fd21cfc"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3615,
+    "total_output_tokens": 950,
+    "total_tokens": 4565,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3408,
+        "output_tokens": 828,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 207,
+        "output_tokens": 122,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

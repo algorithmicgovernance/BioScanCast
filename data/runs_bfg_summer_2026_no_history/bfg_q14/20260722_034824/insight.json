@@ -1,0 +1,171 @@
+{
+  "records": [
+    {
+      "id": "ins-1d82944221fa",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2260.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed measles cases reported in the United States for 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:02:56.938145+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1f81923796764f65b9b454b1148c9c68",
+          "chunk_id": "doc-1f81923796764f65b9b454b1148c9c68-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,260 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-6f0be772acff",
+      "question_id": "bfg_q14",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed deaths from measles reported in the United States for 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:02:56.938419+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1f81923796764f65b9b454b1148c9c68",
+          "chunk_id": "doc-1f81923796764f65b9b454b1148c9c68-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-ab8a3f56678d",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed measles cases reported in the US as of July 19, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:00.939356+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-537f56579af24a55a79d8d033d0dcd40",
+          "chunk_id": "doc-537f56579af24a55a79d8d033d0dcd40-c1",
+          "source_url": "https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026/",
+          "quote": "the nation reported 2,295 cases as of Tuesday."
+        }
+      ]
+    },
+    {
+      "id": "ins-24c2bdb92f89",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The U.S. measles case count for this year has surged past last year's total and now stands at 2,295.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:03.407832+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-45962d4f8f3a4861a0466051a0b136a0",
+          "chunk_id": "doc-45962d4f8f3a4861a0466051a0b136a0-c0",
+          "source_url": "https://www.axios.com/2026/07/22/measles-cases-surge-past-last-year",
+          "quote": "now stands at 2,295 - a level that hasn't been seen in 35 years"
+        }
+      ]
+    },
+    {
+      "id": "ins-ccf6c842a227",
+      "question_id": "bfg_q14",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-09T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The U.S. is on track to surpass the total reported for all of last year, which was 2,289 cases in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:06.313528+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f0e64e335efb4e18aca5f9ef318f6d17",
+          "chunk_id": "doc-f0e64e335efb4e18aca5f9ef318f6d17-c0-p0",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "the U.S. has reported 2,231 cases as of July 9, which is just 58 shy of the 2,289 cases reported for the entirety of 2025."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 18164,
+    "total_output_tokens": 631,
+    "total_tokens": 18795,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 18164,
+        "output_tokens": 631,
+        "calls": 8
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q14",
+  "options": [
+    "under 3,000",
+    "3,000 to 3,999",
+    "4,000 to 5,499",
+    "5,500 to 7,999",
+    "8,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 3,000": 0.8242456679613765,
+        "3,000 to 3,999": 0.13925635129215036,
+        "4,000 to 5,499": 0.032795151627732375,
+        "5,500 to 7,999": 0.003305544149621926,
+        "8,000 or more": 0.00039728496911869943
+      }
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 3,000": 0.4,
+        "3,000 to 3,999": 0.3,
+        "4,000 to 5,499": 0.15,
+        "5,500 to 7,999": 0.1,
+        "8,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "under 3,000",
+      "probability": 0.8242456679613765,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 3,999",
+      "probability": 0.13925635129215036,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "4,000 to 5,499",
+      "probability": 0.032795151627732375,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "5,500 to 7,999",
+      "probability": 0.003305544149621926,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "8,000 or more",
+      "probability": 0.00039728496911869943,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 3,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 3,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4,000 to 5,499",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,500 to 7,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.45,
+        0.35,
+        0.15,
+        0.04,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Annual US measles cases in recent history",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Current cumulative cases as of July 2026 are already higher than the total cases for 2025, indicating an upward trend.",
+        "The 2,295 confirmed cases by July 2026 is a 35-year high, suggesting a significant increase in incidence."
+      ],
+      "drivers_down": [
+        "Measles outbreaks often trigger public health responses that can contain further spread, such as vaccination campaigns.",
+        "The absence of deaths might indicate that the current cases are being effectively managed, possibly limiting further spread."
+      ],
+      "why_might_be_wrong": "Unforeseen factors such as changes in public health policy or vaccination coverage could significantly alter the trajectory of case numbers.",
+      "rationale": "The cumulative number of confirmed measles cases in the US as of July 2026 is already 2,295, which is higher than the total for the entire year of 2025. This suggests a significant increase in measles incidence. Given this trend, it is reasonable to expect the total number of cases in 2026 to surpass 3,000. However, surpassing 8,000 seems unlikely without further evidence of exponential growth. Therefore, the most probable range is 3,000 to 3,999, as current data supports a higher total than the previous year but not an extreme surge beyond 8,000.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.04,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Annual US measles cases in recent decades",
+      "base_rate": 0.99,
+      "drivers_up": [
+        "The current cumulative case count of 2,295 by July 2026 is already significantly high, suggesting a continuing trend.",
+        "Historical data shows that once an outbreak reaches a certain threshold, it tends to continue at an elevated level for the remainder of the year.",
+        "Public health warnings and media coverage might lead to increased testing and reporting, further driving up the reported case count."
+      ],
+      "drivers_down": [
+        "The case count of 2,295 is described as a 35-year high, indicating it might be an outlier and could stabilize or decrease with public health interventions.",
+        "There have been no measles-related deaths in 2026, suggesting that while case numbers are high, the severity might not be increasing, potentially leading to less panic and more control measures."
+      ],
+      "why_might_be_wrong": "There could be significant public health interventions or changes in behavior that drastically reduce the spread of measles in the latter half of 2026.",
+      "rationale": "As of July 2026, the cumulative measles case count in the US is 2,295, which already surpasses the total for all of 2025. Given the historical trend and the fact that this level of cases hasn't been seen in 35 years, it is highly likely that the total for the year will exceed 3,000 cases. However, reaching 8,000 or more seems less probable unless the outbreak accelerates significantly. The probability distribution reflects the expectation of continued but not explosive growth in cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.7,
+        0.15,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "US measles outbreaks in recent decades",
+      "base_rate": 0.98,
+      "drivers_up": [
+        "Ongoing record-breaking case counts in 2026, with 2,295 cases by July.",
+        "The year 2025 also had high measles case counts, suggesting a trend."
+      ],
+      "drivers_down": [
+        "Measles cases typically have high public health responses once they reach certain thresholds.",
+        "There have been no deaths, indicating the outbreaks may eventually be controlled without significant escalation."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is a significant change in public health response or a new variant that affects transmission rates.",
+      "rationale": "By July 2026, there were already 2,295 confirmed measles cases, which is a record level for the last 35 years. This suggests a strong upward trend in cases. Historically, US measles outbreaks have usually not exceeded a few thousand cases annually, and reaching 3,000 would be unusually high. However, given the current trajectory and the fact that 2025 also saw high numbers, there is a reasonable likelihood that cases will continue to rise but possibly not exceed 3,000 by a large margin. Any substantial rise in public health interventions could stabilize or reduce this increase.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical trends of measles outbreaks in the US, the probability of confirmed cases remaining under 3,000 is relatively high, especially with ongoing vaccination efforts. The range of 3,000 to 3,999 is also plausible due to sporadic outbreaks, while higher ranges (4,000 and above) are less likely given the current vaccination rates and public health measures.",
+  "evidence_record_ids": [
+    "ins-24c2bdb92f89",
+    "ins-ab8a3f56678d",
+    "ins-ccf6c842a227",
+    "ins-1d82944221fa",
+    "ins-6f0be772acff"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3922,
+    "total_output_tokens": 1026,
+    "total_tokens": 4948,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3699,
+        "output_tokens": 921,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 105,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

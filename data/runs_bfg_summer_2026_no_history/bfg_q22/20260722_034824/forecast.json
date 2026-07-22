@@ -1,0 +1,202 @@
+{
+  "question_id": "bfg_q22",
+  "options": [
+    "15 or fewer",
+    "16 to 30",
+    "31 to 50",
+    "51 to 79",
+    "80 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "15 or fewer": 0.42810355440363906,
+        "16 to 30": 0.3343046381734782,
+        "31 to 50": 0.14098172599869682,
+        "51 to 79": 0.06317961760683813,
+        "80 or more": 0.03343046381734781
+      }
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "15 or fewer": 0.6,
+        "16 to 30": 0.2,
+        "31 to 50": 0.1,
+        "51 to 79": 0.05,
+        "80 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "15 or fewer",
+      "probability": 0.42810355440363906,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "16 to 30",
+      "probability": 0.3343046381734782,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "31 to 50",
+      "probability": 0.14098172599869682,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "51 to 79",
+      "probability": 0.06317961760683813,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "80 or more",
+      "probability": 0.03343046381734781,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 or fewer",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "16 to 30",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "31 to 50",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "51 to 79",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "80 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.7,
+        0.2,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 case counts in recent years",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "By mid-2026, only 11 cases have been reported globally, indicating a low incidence rate.",
+        "Global efforts towards polio eradication have seen significant success in reducing case numbers over the years."
+      ],
+      "drivers_down": [
+        "There may be under-reporting or delayed reporting of cases, especially in areas with less robust health surveillance systems.",
+        "Unexpected outbreaks can occur due to political instability or disruptions in vaccination campaigns."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is a significant outbreak or if reporting has been significantly delayed or under-reported.",
+      "rationale": "As of mid-2026, there have been 11 reported cases of wild poliovirus type 1 globally. Given the consistent efforts in polio eradication and the relatively low number of cases reported by June, it's reasonable to expect that the total number of cases by the end of 2026 will remain low, likely in the 15 or fewer category. However, recognizing potential under-reporting and unforeseen outbreaks, a small probability is assigned to higher case numbers.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 cases in recent years",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Eleven cases reported by mid-June indicates a trend that could exceed 15 by year-end if cases continue at this pace.",
+        "Poliovirus is highly transmissible, which can lead to sudden case spikes."
+      ],
+      "drivers_down": [
+        "There have been significant global efforts to eradicate polio, which could limit the number of new cases.",
+        "The cases reported so far in 2026 are relatively low, suggesting good control measures are in place."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or changes in surveillance could lead to a significantly higher or lower number of cases than currently projected.",
+      "rationale": "The base rate of 0.7 reflects the likelihood that wild polio cases will remain low due to global eradication efforts. With 11 cases reported by mid-year, extrapolating this number could lead to a total slightly above 15 but not significantly higher. Given the current control measures and eradication efforts, the most likely scenario is that the total will remain under 30. Thus, assigning higher probabilities to the lower bins reflects the base rate and current trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.4,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 cases reported annually",
+      "base_rate": 0.6,
+      "drivers_up": [
+        "Global confirmed cases are already at 11 by mid-2026, which suggests a higher likelihood of surpassing 15 cases by year-end."
+      ],
+      "drivers_down": [
+        "The global effort to eradicate polio is ongoing and has been effective in reducing cases significantly over the years.",
+        "There may be increased vaccination and containment efforts following the mid-year report, potentially slowing the spread."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or under-reporting in certain regions could skew the numbers significantly.",
+      "rationale": "By mid-2026, there are 11 confirmed cases of wild poliovirus type 1 globally. This high number by mid-year makes it probable to exceed 15 cases by the end of the year. However, considering the ongoing global efforts to eradicate polio, the final count is more likely to fall within the 16 to 30 range rather than going significantly higher. Adjustments in public health responses could mitigate further spread, but given the current trajectory, it is prudent to assign the highest probability to the 16 to 30 bin.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the global efforts in vaccination and eradication programs for poliovirus, particularly wild poliovirus type 1, it is likely that the number of cases will continue to decrease. The majority of projections suggest that with sustained efforts, the number of cases could remain very low, hence the highest probability is assigned to '15 or fewer'. The probabilities for higher case counts decrease significantly as the global health community continues to work towards eradication.",
+  "evidence_record_ids": [
+    "ins-75cecdc8cbd4",
+    "ins-3c07c6cc944c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3200,
+    "total_output_tokens": 889,
+    "total_tokens": 4089,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2991,
+        "output_tokens": 775,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 114,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

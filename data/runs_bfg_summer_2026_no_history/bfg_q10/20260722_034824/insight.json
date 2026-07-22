@@ -1,0 +1,142 @@
+{
+  "records": [
+    {
+      "id": "ins-1a834fe7a5b9",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "Ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2011.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed Ebola cases in Congo as of July 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:57:58.513901+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-62a38fd06b7c446c9b271f269badb96d",
+          "chunk_id": "doc-62a38fd06b7c446c9b271f269badb96d-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-outbreak-who-2000-cases-b0645a84c4f95c7101e343484edeac1b",
+          "quote": "The number of confirmed cases of Ebola in Congo has reached 2,011"
+        }
+      ]
+    },
+    {
+      "id": "ins-3160305633fb",
+      "question_id": "bfg_q10",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "Ebola",
+      "metric_name": "deaths",
+      "metric_value": 754.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed deaths from Ebola in Congo as of July 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:57:58.514240+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-62a38fd06b7c446c9b271f269badb96d",
+          "chunk_id": "doc-62a38fd06b7c446c9b271f269badb96d-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-outbreak-who-2000-cases-b0645a84c4f95c7101e343484edeac1b",
+          "quote": "including 754 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-a2cd28eaf47d",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "Ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 753.0,
+      "metric_unit": "cases",
+      "count_basis": "active",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Active cases of Ebola patients in isolation or hospitals as of July 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:57:58.514370+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-62a38fd06b7c446c9b271f269badb96d",
+          "chunk_id": "doc-62a38fd06b7c446c9b271f269badb96d-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-outbreak-who-2000-cases-b0645a84c4f95c7101e343484edeac1b",
+          "quote": "A total of 753 patients remain in isolation or in hospitals"
+        }
+      ]
+    },
+    {
+      "id": "ins-82416fd21cfc",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "Ebola",
+      "metric_name": "recoveries",
+      "metric_value": 366.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of recoveries from Ebola in Congo as of July 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:57:58.514478+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-62a38fd06b7c446c9b271f269badb96d",
+          "chunk_id": "doc-62a38fd06b7c446c9b271f269badb96d-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-outbreak-who-2000-cases-b0645a84c4f95c7101e343484edeac1b",
+          "quote": "366 have recovered so far"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 160485,
+    "total_output_tokens": 721,
+    "total_tokens": 161206,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 160485,
+        "output_tokens": 721,
+        "calls": 74
+      }
+    }
+  },
+  "documents_processed": 18,
+  "documents_skipped": 2,
+  "notes": [
+    "Skipped document doc-74a97138474f4474aa16f769979fbbaf: no chunks",
+    "Skipped document doc-5ed778e811774147ba506a88cb7c5847: no chunks"
+  ]
+}

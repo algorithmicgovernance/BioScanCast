@@ -1,0 +1,186 @@
+{
+  "question_id": "bfg_q5",
+  "options": [
+    "trials ongoing, no efficacy results reported",
+    "interim efficacy results reported from any BVD vaccine or therapeutic trial",
+    "emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic",
+    "vaccine or therapeutic deployed at scale in affected countries beyond the trials"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "trials ongoing, no efficacy results reported": 0.3334540135663898,
+        "interim efficacy results reported from any BVD vaccine or therapeutic trial": 0.4056269333490913,
+        "emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic": 0.16829999597052833,
+        "vaccine or therapeutic deployed at scale in affected countries beyond the trials": 0.0926190571139906
+      }
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "trials ongoing, no efficacy results reported": 0.4,
+        "interim efficacy results reported from any BVD vaccine or therapeutic trial": 0.3,
+        "emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic": 0.2,
+        "vaccine or therapeutic deployed at scale in affected countries beyond the trials": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast",
+      "option": "trials ongoing, no efficacy results reported",
+      "probability": 0.3334540135663898,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast",
+      "option": "interim efficacy results reported from any BVD vaccine or therapeutic trial",
+      "probability": 0.4056269333490913,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast",
+      "option": "emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic",
+      "probability": 0.16829999597052833,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast",
+      "option": "vaccine or therapeutic deployed at scale in affected countries beyond the trials",
+      "probability": 0.0926190571139906,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast_baseline",
+      "option": "trials ongoing, no efficacy results reported",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast_baseline",
+      "option": "interim efficacy results reported from any BVD vaccine or therapeutic trial",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast_baseline",
+      "option": "emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q5",
+      "forecast_source": "bioscancast_baseline",
+      "option": "vaccine or therapeutic deployed at scale in affected countries beyond the trials",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.35,
+        0.45,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreak responses and vaccine/therapeutic trial timelines",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Both vaccine and therapeutic trials have been initiated in July 2026, suggesting a strong focus and resource allocation.",
+        "Past Ebola outbreaks have seen accelerated trial processes and emergency use authorizations, especially when the outbreak was active.",
+        "Regulatory processes have been known to expedite during public health emergencies."
+      ],
+      "drivers_down": [
+        "The outbreak in Uganda is potentially nearing an end, which could slow trial urgency and impact motivation for scale deployment.",
+        "There may be logistical or regulatory challenges in the DRC and Uganda, impacting trial progress and authorization.",
+        "Trials typically take time to reach interim results, especially if the outbreak diminishes quickly."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if the outbreak situation changes dramatically, leading to faster emergency use authorizations or if trials face unexpected delays.",
+      "rationale": "Given the initiation of trials and the historical context where Ebola outbreaks have led to expedited measures, it is reasonable to expect at least interim results by the end of 2026. However, the potential near-end of the outbreak in Uganda and typical trial timelines suggest that full deployment or emergency use authorization may not occur this quickly.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.4,
+        0.2,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks and response timelines",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Trials have already commenced for both a vaccine and therapeutics, indicating progress in countermeasure development.",
+        "The outbreak seems to be under control in Uganda, which may allow for more focus on trial results and potential deployment."
+      ],
+      "drivers_down": [
+        "The outbreak is not very large, which may reduce the urgency and scale of trials and deployment.",
+        "The timeline from trial commencement to results and deployment is typically longer than a few months, especially for emergency use authorization or large-scale deployment."
+      ],
+      "why_might_be_wrong": "Unexpected developments in the outbreak or rapid trial results could lead to faster-than-anticipated progress, such as emergency authorization or deployment.",
+      "rationale": "The base rate for reaching interim efficacy results in Ebola outbreaks is moderate, but progressing to emergency use or large-scale deployment within a few months is less common. Given the timing of the trial launches and the typical pace of such trials, it seems most likely that by the end of 2026, interim efficacy results from trials could be reported. However, the likelihood of reaching emergency use authorization or wider deployment is lower within this timeframe. Ongoing trial status without efficacy results is also possible but less probable given the progress already made.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.35,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Ebola countermeasure development timelines",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The trials for both vaccine and therapeutic (remdesivir and MBP134) started before the target date, providing ample time for progress.",
+        "Uganda has discharged its last Ebola patient, suggesting the outbreak might be under control, allowing focus on trials."
+      ],
+      "drivers_down": [
+        "The outbreak in DRC and the relatively high number of suspected cases might delay trials or complicate data collection.",
+        "Ebola trials typically take several years from initiation to conclusion, especially to reach deployment at scale."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if an unexpected acceleration in research or an emergency prioritization leads to faster than usual development and deployment.",
+      "rationale": "The base rate for countermeasure development reaching the stage of emergency use or deployment within a few months of trial initiation is relatively low, given historical Ebola response timelines. However, the initiation of trials before the target date, and the control of the outbreak in Uganda, provide some impetus for progress. The ongoing outbreak in DRC could hinder progress, making it more likely that trials are still ongoing or interim results are reported by the end of 2026. Considering these factors, the probabilities reflect the likelihood of each milestone being reached by the end of the year, with 'trials ongoing' as the most likely outcome followed by 'interim results reported'.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "By the target date of August 1, 2026, the Bundibugyo vaccine trial will have just started in July 2026, and the therapeutic trials will also be in their early stages. Given this timeline, it is likely that trials will still be ongoing without any efficacy results reported. Interim results may be possible but are less certain. Emergency use authorization or deployment at scale would be less likely to occur by this date.",
+  "evidence_record_ids": [
+    "ins-9049dc7d309a",
+    "ins-c7f810b773be",
+    "ins-3cc564a4f54c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3835,
+    "total_output_tokens": 950,
+    "total_tokens": 4785,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3552,
+        "output_tokens": 838,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 283,
+        "output_tokens": 112,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

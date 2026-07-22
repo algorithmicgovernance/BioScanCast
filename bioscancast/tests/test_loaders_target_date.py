@@ -9,12 +9,15 @@ target_date (previously q6/q9/q11 returned None and needed a manual
 
 from __future__ import annotations
 
+import csv
 from datetime import datetime, timezone
+from pathlib import Path
 
 import pytest
 
 from bioscancast.stages.evaluation.loaders import (
     _parse_target_date,
+    load_questions,
     load_question_by_id,
 )
 
@@ -70,3 +73,48 @@ _EXPECTED = {
 def test_every_bfg_question_has_target_date(qid, expected):
     q = load_question_by_id(QUESTIONS_CSV, qid)
     assert q.target_date == expected, f"{qid}: got {q.target_date}, want {expected}"
+
+
+@pytest.mark.parametrize(
+    ("delimiter", "encoding"),
+    [(";", "cp1252"), (",", "cp1252"), (",", "utf-8-sig")],
+)
+def test_load_questions_detects_delimiter(tmp_path: Path, delimiter: str, encoding: str):
+    csv_path = tmp_path / "questions.csv"
+    with csv_path.open("w", encoding=encoding, newline="") as handle:
+        writer = csv.writer(handle, delimiter=delimiter)
+        writer.writerow(
+            [
+                "question_id",
+                "topic",
+                "question_text",
+                "question_type",
+                "resolution_criteria",
+                "created_date",
+                "question_status",
+                "resolved_option",
+                "comparison_to_outcome",
+                "takeaways",
+                "relevant_links",
+            ]
+        )
+        writer.writerow(
+            [
+                "q1",
+                "Mpox (World)",
+                "How many cases will be reported by February 28, 2025?",
+                "range",
+                "Resolve from WHO data by February 28, 2025.",
+                "45712",
+                "unresolved",
+                "TBD",
+                "TBD",
+                "TBD",
+                "https://example.com",
+            ]
+        )
+
+    df = load_questions(csv_path)
+
+    assert df.loc[0, "question_id"] == "q1"
+    assert df.loc[0, "question_text"] == "How many cases will be reported by February 28, 2025?"

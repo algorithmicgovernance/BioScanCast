@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "id": "ins-87e5ddd709d8",
+      "question_id": "bfg_q20",
+      "event_type": "outbreak_declared",
+      "confidence": 0.5,
+      "location": "Brasil",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:07:05.727915+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-be831f40ab6942f7a8d7346f4a11038f",
+          "chunk_id": "doc-be831f40ab6942f7a8d7346f4a11038f-c0-p0",
+          "source_url": "https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    },
+    {
+      "id": "ins-ec7e399550af",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Oropouche virus was identified as causing large outbreaks in endemic areas and new areas in South America in late 2023 and Cuba reported its first confirmed case in June 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:07:10.956640+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dbd7ba1c05704b259dec3affeadab6e3",
+          "chunk_id": "doc-dbd7ba1c05704b259dec3affeadab6e3-c1",
+          "source_url": "https://www.cdc.gov/oropouche/hcp/clinical-overview/index.html",
+          "quote": "In late 2023, Oropouche virus was identified as causing large outbreaks in endemic areas and new areas in South America."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 59505,
+    "total_output_tokens": 399,
+    "total_tokens": 59904,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 59505,
+        "output_tokens": 399,
+        "calls": 28
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}
