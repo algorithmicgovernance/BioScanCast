@@ -1,0 +1,212 @@
+{
+  "question_id": "bfg_q13",
+  "options": [
+    "under 3,000",
+    "3,000 to 6,999",
+    "7,000 to 11,999",
+    "12,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 3,000": 0.17681780985304915,
+        "3,000 to 6,999": 0.32351521061450933,
+        "7,000 to 11,999": 0.2684615057154884,
+        "12,000 to 19,999": 0.14913391663717512,
+        "20,000 or more": 0.08207155717977803
+      }
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 3,000": 0.4,
+        "3,000 to 6,999": 0.3,
+        "7,000 to 11,999": 0.15,
+        "12,000 to 19,999": 0.1,
+        "20,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "under 3,000",
+      "probability": 0.17681780985304915,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 6,999",
+      "probability": 0.32351521061450933,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "7,000 to 11,999",
+      "probability": 0.2684615057154884,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "12,000 to 19,999",
+      "probability": 0.14913391663717512,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.08207155717977803,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 3,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 6,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7,000 to 11,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12,000 to 19,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.2,
+        0.35,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Cumulative global mpox outbreaks",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "High number of cases in North America, indicating potential for spread to other regions",
+        "Global cumulative cases are substantial, suggesting sustained transmission potential"
+      ],
+      "drivers_down": [
+        "Recent data shows stabilization or decline in some regions, such as the EU/EEA",
+        "Increased awareness and preventive measures may reduce spread"
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is an unexpected resurgence or if new variants emerge that increase transmission.",
+      "rationale": "The base rate for significant mpox outbreaks globally suggests ongoing transmission potential. Recent data indicates 180,545 global cumulative cases by April 2026, with North America reporting the highest regional cases at 45,183. Given this, there is a reasonable chance for case numbers to increase moderately. However, some regions like the EU/EEA show signs of stabilization. Balancing these factors, the most likely range is 3,000 to 6,999 new cases, with a possibility of higher numbers if transmission increases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.35,
+        0.2,
+        0.1,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious disease outbreaks with global spread",
+      "base_rate": 0.4,
+      "drivers_up": [
+        "Recent high cumulative case count of 184,531 globally suggests ongoing transmission.",
+        "High subregional case numbers in North America (45,183 cases) indicate potential for further spread.",
+        "18 countries in EU/EEA reporting cases suggests widespread distribution."
+      ],
+      "drivers_down": [
+        "The mpox outbreak may have peaked, leading to a decline in new cases.",
+        "Public health interventions and awareness could reduce the transmission rate.",
+        "Limited recent increases in certain regions suggest containment measures may be effective."
+      ],
+      "why_might_be_wrong": "The forecast might overestimate new cases if current public health measures are more effective than anticipated, or if there is a natural decline in transmission.",
+      "rationale": "The cumulative global confirmed cases of mpox recently reached 184,531, with significant contributions from North America and the EU/EEA. Given this context, a moderate number of additional cases is plausible, but the outbreak may be stabilizing. This suggests a moderate likelihood for the outcome to fall within the 3,000 to 6,999 range. However, the possibility of an increase in transmission rates, or reporting lags, means that the upper bins cannot be ruled out entirely. Thus, the probabilities are distributed with some skew toward the lower ranges but accounting for uncertainty.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.25,
+        0.35,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Global mpox outbreaks in recent years",
+      "base_rate": 0.6,
+      "drivers_up": [
+        "North America reported a high cumulative number of cases (45,183) recently, indicating potential for continued spread.",
+        "Global cumulative cases have increased from 180,545 to 184,531 in a short period, showing ongoing transmission.",
+        "Mpox has been reported in 145 countries, indicating a wide geographic spread that can facilitate further cases."
+      ],
+      "drivers_down": [
+        "The EU/EEA reported only 829 cases in the past 12 months, suggesting a lower spread in some regions.",
+        "Some regions report very low numbers (e.g., 39 clade Ib cases), indicating limited spread in certain clades.",
+        "Public health measures and immune responses may limit the spread as awareness and interventions improve."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there are unanticipated changes in public health interventions or if a new variant emerges that significantly alters transmission dynamics.",
+      "rationale": "Given the recent data, the global spread of mpox and the high number of cases in North America suggest a moderate to high likelihood of continued spread. The base rate for similar outbreaks in recent years is around 0.6 for the 7,000 to 11,999 cases bin. Case-specific factors, such as a high number of cases in some regions and a broad geographic spread, support this range. However, lower case numbers in other regions and potential public health interventions could limit the increase, leading to a probability distribution that favors the 3,000 to 6,999 and 7,000 to 11,999 bins.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current trends in mpox cases and the global response to outbreaks, it is reasonable to predict that the number of cases will remain relatively low, especially with increased awareness and vaccination efforts. The highest probability is assigned to 'under 3,000' due to effective containment measures, while the probabilities decrease for higher case ranges as they become less likely.",
+  "evidence_record_ids": [
+    "ins-4463e23b26d1",
+    "ins-f6184297893d",
+    "ins-eab4c2d63bb0",
+    "ins-46a231b56ef2",
+    "ins-51ab68364e09",
+    "ins-bff19d9c5633",
+    "ins-1d2506957168"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4281,
+    "total_output_tokens": 980,
+    "total_tokens": 5261,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4056,
+        "output_tokens": 881,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 225,
+        "output_tokens": 99,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

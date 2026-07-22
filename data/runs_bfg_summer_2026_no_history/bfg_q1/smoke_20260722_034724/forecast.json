@@ -1,0 +1,206 @@
+{
+  "question_id": "bfg_q1",
+  "options": [
+    "under 2,500",
+    "2,500 to 4,999",
+    "5,000 to 9,999",
+    "10,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,500": 0.34730783914075086,
+        "2,500 to 4,999": 0.40621371290717456,
+        "5,000 to 9,999": 0.24604643427147654,
+        "10,000 to 19,999": 0.0002650454866765594,
+        "20,000 or more": 0.00016696819392171425
+      }
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,500": 0.1,
+        "2,500 to 4,999": 0.3,
+        "5,000 to 9,999": 0.4,
+        "10,000 to 19,999": 0.15,
+        "20,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "under 2,500",
+      "probability": 0.34730783914075086,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "2,500 to 4,999",
+      "probability": 0.40621371290717456,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "5,000 to 9,999",
+      "probability": 0.24604643427147654,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "10,000 to 19,999",
+      "probability": 0.0002650454866765594,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.00016696819392171425,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,500",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,500 to 4,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 to 9,999",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "10,000 to 19,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.25,
+        0.4,
+        0.2,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in DRC and Uganda",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "High initial case count with 2,344 confirmed cases by July 2026",
+        "Historical tendency for Ebola outbreaks to escalate rapidly if not contained"
+      ],
+      "drivers_down": [
+        "Significant deaths (930 deaths) might indicate high case fatality rate limiting spread",
+        "Response measures likely implemented by WHO and local health authorities"
+      ],
+      "why_might_be_wrong": "The effectiveness of containment measures and public health response is uncertain, which could significantly alter the outbreak trajectory.",
+      "rationale": "The base rate for Ebola outbreaks in the DRC and Uganda suggests a high likelihood of cases under 5,000 due to effective response measures typically implemented. However, the current outbreak already has 2,344 confirmed cases by July 2026, suggesting potential to surpass 2,500 cases. The high death toll could indicate either a severe outbreak or effective containment by reducing spread. Given these factors, the most reasonable estimate is that cumulative cases will fall into the 2,500 to 4,999 range, with some chance of remaining under 2,500 if containment is effective.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.3,
+        0.4,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past Bundibugyo virus disease outbreaks in DRC and Uganda",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Rapid increase in cases from 246 to 2,344 within two months, indicating potential for continued rapid spread.",
+        "High death toll of 930 out of 2,344 cases suggests potential for more undetected cases and spread.",
+        "Historical difficulty in containing Ebola outbreaks in the region due to infrastructure and resource constraints."
+      ],
+      "drivers_down": [
+        "Efforts to control outbreaks typically intensify as case numbers grow, potentially slowing spread.",
+        "Public health interventions might become more effective over time, reducing transmission rates.",
+        "International support and resources are often mobilized for significant outbreaks, potentially controlling spread."
+      ],
+      "why_might_be_wrong": "The dynamics of outbreak control are unpredictable, and interventions could either fail or succeed rapidly.",
+      "rationale": "The rapid increase from 246 to 2,344 cases in about two months suggests a high potential for the outbreak to exceed the lower thresholds. Given historical patterns of Ebola outbreaks in the region, containment can be challenging, and the death toll suggests significant transmission potential. However, intervention efforts may intensify, which could limit the spread. Balancing these factors, the most probable scenario is an outcome in the 5,000 to 9,999 range, but outcomes in the lower ranges remain possible if interventions are more effective than expected.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.1,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola virus disease outbreaks in Africa",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "The outbreak has already rapidly escalated to 2,344 confirmed cases by July 2026, indicating a high transmission rate.",
+        "The death toll is significant at 930, suggesting a severe outbreak that could continue to spread."
+      ],
+      "drivers_down": [
+        "Efforts to contain Ebola outbreaks usually intensify as they progress, potentially reducing the rate of case growth.",
+        "Historical outbreaks of Ebola, including Bundibugyo, have sometimes plateaued or been controlled within a span of months."
+      ],
+      "why_might_be_wrong": "The forecast might underestimate the potential for intensified containment efforts and international support to significantly reduce the transmission rate.",
+      "rationale": "The evidence indicates that the outbreak has already reached 2,344 confirmed cases by mid-July 2026, which suggests a rapid spread. Given the remaining time until the end of October, it is plausible that the number of cases could continue to grow significantly. However, historical containment efforts and the nature of Ebola outbreaks suggest that growth might slow down as efforts intensify. Balancing these factors, the most likely scenario is that the total will remain under 5,000 by the target date.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo virus outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative cases will likely be under 5,000 due to effective containment measures. However, the potential for a larger outbreak exists, hence the probabilities reflect a higher likelihood for the lower ranges.",
+  "evidence_record_ids": [
+    "ins-3e7c1e91fef2",
+    "ins-2ddec4bd962d",
+    "ins-074bef3ad41e"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3622,
+    "total_output_tokens": 915,
+    "total_tokens": 4537,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3372,
+        "output_tokens": 820,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 250,
+        "output_tokens": 95,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

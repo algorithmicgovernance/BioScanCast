@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "id": "ins-8e449fab0ac1",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "There have been 0 confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:04:17.221939+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-02a25288ed794a15ad5fe72905b54665",
+          "chunk_id": "doc-02a25288ed794a15ad5fe72905b54665-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4388,
+    "total_output_tokens": 117,
+    "total_tokens": 4505,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 4388,
+        "output_tokens": 117,
+        "calls": 2
+      }
+    }
+  },
+  "documents_processed": 2,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 2 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

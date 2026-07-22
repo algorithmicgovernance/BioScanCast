@@ -1,0 +1,206 @@
+{
+  "question_id": "bfg_q11",
+  "options": [
+    "under 200,000",
+    "200,000 to 299,999",
+    "300,000 to 449,999",
+    "450,000 to 649,999",
+    "650,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 200,000": 0.13324419549862623,
+        "200,000 to 299,999": 0.34775559288743324,
+        "300,000 to 449,999": 0.28706591702763046,
+        "450,000 to 649,999": 0.16787716668502686,
+        "650,000 or more": 0.06405712790128332
+      }
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 200,000": 0.4,
+        "200,000 to 299,999": 0.3,
+        "300,000 to 449,999": 0.2,
+        "450,000 to 649,999": 0.05,
+        "650,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "under 200,000",
+      "probability": 0.13324419549862623,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "200,000 to 299,999",
+      "probability": 0.34775559288743324,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "300,000 to 449,999",
+      "probability": 0.28706591702763046,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "450,000 to 649,999",
+      "probability": 0.16787716668502686,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "650,000 or more",
+      "probability": 0.06405712790128332,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 200,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "200,000 to 299,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "300,000 to 449,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "450,000 to 649,999",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "650,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.4,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual chikungunya case counts in the Americas in recent non-epidemic years",
+      "base_rate": 0.6,
+      "drivers_up": [
+        "The baseline number of cases as of mid-year (164,889) is already relatively high, suggesting continued risk of high annual totals.",
+        "Chikungunya transmission is influenced by factors such as climate conditions, which can be favorable for mosquito breeding in certain parts of the Americas.",
+        "There is potential for under-reporting of cases due to limitations in surveillance and healthcare access in some regions."
+      ],
+      "drivers_down": [
+        "Efforts in vector control and public health interventions may reduce transmission rates in the latter half of the year.",
+        "Seasonal changes and public awareness campaigns might lead to a decrease in transmission rates.",
+        "Previous outbreaks have sometimes been contained before reaching very high numbers."
+      ],
+      "why_might_be_wrong": "Surveillance quality and public health responses could vary significantly across regions, affecting case reporting and actual incidence rates.",
+      "rationale": "Given the baseline of 164,889 suspected cases by mid-year, the likelihood of reaching at least 200,000 cases by year-end is high. However, reaching 650,000 or more seems less likely unless there is a substantial increase in transmission or reporting. The most likely band, given historical patterns and the current trajectory, is 200,000 to 299,999 cases. The probabilities are adjusted slightly to account for potential under-reporting and interventions.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.4,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual chikungunya cases in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Historical trends show periods of high incidence can lead to significant annual case counts.",
+        "Seasonal and environmental factors may increase mosquito populations, leading to more transmission.",
+        "Lack of effective mosquito control measures could lead to sustained transmission rates."
+      ],
+      "drivers_down": [
+        "Improvements in public health interventions and awareness could reduce transmission rates.",
+        "Variability in reporting and surveillance accuracy may affect case numbers.",
+        "Natural immunity in populations previously exposed may reduce susceptible individuals."
+      ],
+      "why_might_be_wrong": "The lack of specific data for 2026 and reliance on general trends may not capture unique circumstances of that year.",
+      "rationale": "Given the baseline of 164,889 suspected cases by mid-2026 and historical variability, the most likely outcome is the 200,000 to 299,999 range, reflecting moderate growth expected in the second half of the year. The probability distribution reflects potential upward or downward variations from this scenario.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Annual chikungunya case counts in the Americas in recent years.",
+      "base_rate": 0.33,
+      "drivers_up": [
+        "There is a high baseline of 164,889 suspected cases as of mid-year, indicating a potentially high annual total.",
+        "Chikungunya outbreaks can spread rapidly and unpredictably, especially in regions with suitable mosquito vectors."
+      ],
+      "drivers_down": [
+        "Efforts to control mosquito populations and public health interventions might reduce transmission in the latter half of the year.",
+        "Seasonal variations and climatic conditions could lead to a natural decline in transmission rates."
+      ],
+      "why_might_be_wrong": "The lack of specific data on interventions or changes in transmission dynamics could lead to under- or overestimation of case numbers.",
+      "rationale": "The high baseline of cases mid-year suggests a potentially high total by year-end. However, without specific evidence of interventions or changes in transmission dynamics, it's challenging to predict significant increases. Given the base rate and the potential for both increases and decreases, probabilities are distributed with a slight skew towards higher case counts.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Chikungunya outbreaks can vary significantly based on factors such as climate, vector control measures, and public health interventions. Given the historical data and trends in the Americas, it is reasonable to estimate that the number of cases will likely remain under 200,000 due to improved surveillance and response strategies. However, there is still a possibility of a moderate outbreak leading to cases in the range of 200,000 to 299,999. The likelihood of cases exceeding 300,000 is lower, but not negligible, considering the potential for localized outbreaks.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 2949,
+    "total_output_tokens": 903,
+    "total_tokens": 3852,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2721,
+        "output_tokens": 764,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 228,
+        "output_tokens": 139,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "records": [
+    {
+      "id": "ins-689d3592cc3b",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 930.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of deaths in the ongoing Ebola outbreak in Congo.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:50:50.744562+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d5eb40d3d3f04ee28cc23dee76ea1ac4",
+          "chunk_id": "doc-d5eb40d3d3f04ee28cc23dee76ea1ac4-c0",
+          "source_url": "https://www.nbcnews.com/world/africa/least-930-people-died-congo-ebola-outbreak-rcna588327",
+          "quote": "At least 930 people have died in Congo's Ebola outbreak"
+        },
+        {
+          "document_id": "doc-3c17084830174189acbd1b736fcb266e",
+          "chunk_id": "doc-3c17084830174189acbd1b736fcb266e-c0",
+          "source_url": "https://www.npr.org/2026/07/20/g-s1-134548/ebola-congo-deaths",
+          "quote": "At least 930 people have died in Congo's Ebola outbreak"
+        }
+      ]
+    },
+    {
+      "id": "ins-a6fa0ada0613",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2344.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed cases in the ongoing Ebola outbreak in Congo.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:50:53.496820+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3c17084830174189acbd1b736fcb266e",
+          "chunk_id": "doc-3c17084830174189acbd1b736fcb266e-c0",
+          "source_url": "https://www.npr.org/2026/07/20/g-s1-134548/ebola-congo-deaths",
+          "quote": "2,344 cases confirmed as of Saturday"
+        }
+      ]
+    },
+    {
+      "id": "ins-1b96cb33a373",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 930.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported due to the Bundibugyo outbreak in DRC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:50:56.853194+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4e334c39ea814ad1b77a3a7367bd22bc",
+          "chunk_id": "doc-4e334c39ea814ad1b77a3a7367bd22bc-c0",
+          "source_url": "https://www.dw.com/en/dr-congo-neighbors-boost-preparedness-as-ebola-cases-surge/a-78033880",
+          "quote": "at least 930 people have died due to the illness."
+        }
+      ]
+    },
+    {
+      "id": "ins-21e8846bacf1",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2344.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases of Bundibugyo reported in DRC since the outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:50:56.853511+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4e334c39ea814ad1b77a3a7367bd22bc",
+          "chunk_id": "doc-4e334c39ea814ad1b77a3a7367bd22bc-c0",
+          "source_url": "https://www.dw.com/en/dr-congo-neighbors-boost-preparedness-as-ebola-cases-surge/a-78033880",
+          "quote": "The DRC has recorded 2,344 cases of Bundibugyo"
+        }
+      ]
+    },
+    {
+      "id": "ins-5befb8214f09",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases of Bundibugyo strain of Ebola in Uganda since mid-May.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:51:00.618947+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-80fcf70031e449eb8a3a43066bef16c6",
+          "chunk_id": "doc-80fcf70031e449eb8a3a43066bef16c6-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/uganda-discharge-last-ebola-patient-spokesperson-says-2026-07-16/",
+          "quote": "Uganda has confirmed a total of 20 cases of the rare Bundibugyo strain of Ebola since mid-May."
+        },
+        {
+          "document_id": "doc-3bf2cda27dac4264bc637a53a5a32bba",
+          "chunk_id": "doc-3bf2cda27dac4264bc637a53a5a32bba-c0",
+          "source_url": "https://www.bbc.com/news/articles/cx2myxjv172o",
+          "quote": "Uganda recorded 20 confirmed cases, mostly among visitors from DR Congo"
+        }
+      ]
+    },
+    {
+      "id": "ins-9c7d9bf34e1c",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of Congo",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2073.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed infections of Bundibugyo strain of Ebola in DRC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:51:00.619357+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-80fcf70031e449eb8a3a43066bef16c6",
+          "chunk_id": "doc-80fcf70031e449eb8a3a43066bef16c6-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/uganda-discharge-last-ebola-patient-spokesperson-says-2026-07-16/",
+          "quote": "Congo reported 62 new cases on Thursday, taking its total number of confirmed infections to 2,073"
+        }
+      ]
+    },
+    {
+      "id": "ins-6f3d82234d04",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Uganda recorded 2 deaths linked to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:51:05.606881+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3bf2cda27dac4264bc637a53a5a32bba",
+          "chunk_id": "doc-3bf2cda27dac4264bc637a53a5a32bba-c0",
+          "source_url": "https://www.bbc.com/news/articles/cx2myxjv172o",
+          "quote": "and two deaths."
+        }
+      ]
+    },
+    {
+      "id": "ins-0b24074de5bf",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DR Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 796.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "DR Congo has reported 796 deaths due to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:51:05.607262+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3bf2cda27dac4264bc637a53a5a32bba",
+          "chunk_id": "doc-3bf2cda27dac4264bc637a53a5a32bba-c0",
+          "source_url": "https://www.bbc.com/news/articles/cx2myxjv172o",
+          "quote": "and 796 deaths in DR Congo"
+        }
+      ]
+    },
+    {
+      "id": "ins-28a4f5b43413",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DR Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "DR Congo has reported more than 2,000 confirmed infections.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:51:05.607634+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3bf2cda27dac4264bc637a53a5a32bba",
+          "chunk_id": "doc-3bf2cda27dac4264bc637a53a5a32bba-c0",
+          "source_url": "https://www.bbc.com/news/articles/cx2myxjv172o",
+          "quote": "There have been more than 2,000 confirmed infections and 796 deaths in DR Congo"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 79143,
+    "total_output_tokens": 1346,
+    "total_tokens": 80489,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 79143,
+        "output_tokens": 1346,
+        "calls": 36
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

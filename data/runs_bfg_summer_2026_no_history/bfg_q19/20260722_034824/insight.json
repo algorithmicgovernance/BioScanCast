@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "id": "ins-620fd02831f0",
+      "question_id": "bfg_q19",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "EU/EEA",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 0.0,
+      "metric_unit": "countries",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "A cumulative total of 0 EU/EEA countries have reported locally-acquired chikungunya virus disease in 2026 (year-to-date).",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:06:24.273756+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c9cf464a720643b984b1837bc593117e",
+          "chunk_id": "doc-c9cf464a720643b984b1837bc593117e-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "a cumulative total of 0 (zero) EU/EEA countries have reported locally-acquired (autochthonous) chikungunya virus disease in 2026"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 2089,
+    "total_output_tokens": 149,
+    "total_tokens": 2238,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 2089,
+        "output_tokens": 149,
+        "calls": 1
+      }
+    }
+  },
+  "documents_processed": 1,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 1 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

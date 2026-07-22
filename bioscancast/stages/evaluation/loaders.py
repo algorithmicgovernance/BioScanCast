@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import logging
 import re
 from datetime import datetime, timezone
@@ -133,10 +134,24 @@ def _read_csv(path: PathLike) -> pd.DataFrame:
     Read one of the BioScanCast CSV files with the correct separator,
     encoding, and decimal format.
     """
+    path = Path(path)
+    raw_sample = path.read_bytes()[:8192]
+    encoding = "utf-8-sig" if raw_sample.startswith(b"\xef\xbb\xbf") else "cp1252"
+    sample = raw_sample.decode(encoding, errors="replace")
+
+    try:
+        dialect = csv.Sniffer().sniff(sample, delimiters=";,\t|")
+        delimiter = dialect.delimiter
+    except csv.Error:
+        header = next((line for line in sample.splitlines() if line.strip()), "")
+        delimiter = max((";", ",", "\t", "|"), key=header.count, default=";")
+        if not header or header.count(delimiter) == 0:
+            delimiter = ";"
+
     return pd.read_csv(
         path,
-        sep=";",
-        encoding="cp1252",
+        sep=delimiter,
+        encoding=encoding,
         decimal=",",
     )
 
