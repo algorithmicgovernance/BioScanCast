@@ -13,11 +13,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  QCSV: [bfg_summer_2026_questions.csv](http://_vscodecontentref_/0)
-  OCSV: [bfg_summer_2026_options.csv](http://_vscodecontentref_/1)
+  QCSV: bfg_summer_2026_questions.csv
+  OCSV: bfg_summer_2026_options.csv
   OUT_NO_HISTORY: data/runs_bfg_summer_2026_no_history
   OUT_WITH_HISTORY: data/runs_bfg_summer_2026_with_history
-  PPLX_OUTPUT: [perplexity_bfg_summer_2026.csv](http://_vscodecontentref_/2)
+  PPLX_OUTPUT: perplexity_bfg_summer_2026.csv
   PPLX_MODEL: sonar-reasoning-pro
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r [requirements.txt](http://_vscodecontentref_/3)
+          pip install -r requirements.txt
 
       - name: Prepare run metadata
         run: |
@@ -134,7 +134,7 @@ jobs:
             data/ci_logs/
             data/runs_bfg_summer_2026_no_history/
             data/runs_bfg_summer_2026_with_history/
-            [perplexity_bfg_summer_2026.csv](http://_vscodecontentref_/4)
+            perplexity_bfg_summer_2026.csv
 
       - name: Persist results in repository
         if: always()
@@ -146,7 +146,7 @@ jobs:
           git add data/ci_logs/
           git add data/runs_bfg_summer_2026_no_history/
           git add data/runs_bfg_summer_2026_with_history/
-          git add [perplexity_bfg_summer_2026.csv](http://_vscodecontentref_/5)
+          git add perplexity_bfg_summer_2026.csv
 
           if git diff --cached --quiet; then
             echo "No result changes to commit."
