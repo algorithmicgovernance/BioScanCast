@@ -13,11 +13,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  QCSV: bfg_summer_2026_questions.csv
-  OCSV: bfg_summer_2026_options.csv
+  QCSV: bioscancast/stages/evaluation/bfg_summer_2026_questions.csv
+  OCSV: bioscancast/stages/evaluation/bfg_summer_2026_options.csv
   OUT_NO_HISTORY: data/runs_bfg_summer_2026_no_history
   OUT_WITH_HISTORY: data/runs_bfg_summer_2026_with_history
-  PPLX_OUTPUT: perplexity_bfg_summer_2026.csv
+  PPLX_OUTPUT: bioscancast/stages/evaluation/mock_forecasts/perplexity_bfg_summer_2026.csv
   PPLX_MODEL: sonar-reasoning-pro
 
 jobs:
