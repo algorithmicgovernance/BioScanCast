@@ -134,7 +134,7 @@ jobs:
             data/ci_logs/
             data/runs_bfg_summer_2026_no_history/
             data/runs_bfg_summer_2026_with_history/
-            perplexity_bfg_summer_2026.csv
+            bioscancast/stages/evaluation/mock_forecasts/perplexity_bfg_summer_2026.csv
 
       - name: Persist results in repository
         if: always()
@@ -146,7 +146,7 @@ jobs:
           git add data/ci_logs/
           git add data/runs_bfg_summer_2026_no_history/
           git add data/runs_bfg_summer_2026_with_history/
-          git add perplexity_bfg_summer_2026.csv
+          git add bioscancast/stages/evaluation/mock_forecasts/perplexity_bfg_summer_2026.csv
 
           if git diff --cached --quiet; then
             echo "No result changes to commit."
