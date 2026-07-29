@@ -140,8 +140,20 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
+
+          BRANCH="bfg-forecast-results-summer-2026"
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create the branch if it doesn't exist; otherwise check it out.
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            git fetch origin "$BRANCH"
+            git checkout "$BRANCH"
+            git reset --hard "origin/$BRANCH"
+          else
+            git checkout -b "$BRANCH"
+          fi
 
           git add data/ci_logs/
           git add data/runs_bfg_summer_2026_no_history/
@@ -154,4 +166,4 @@ jobs:
           fi
 
           git commit -m "chore: scheduled BFG forecast runs ${STAMP}"
-          git push
+          git push -u origin "$BRANCH"
