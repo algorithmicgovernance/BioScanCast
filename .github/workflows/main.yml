@@ -46,6 +46,18 @@ jobs:
             git checkout -b "$BRANCH"
           fi
 
+      - name: Select results branch
+        run: |
+          set -euo pipefail
+          BRANCH="${RESULTS_BRANCH}"
+          git fetch origin --prune
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            git checkout "$BRANCH"
+            git pull --ff-only origin "$BRANCH"
+          else
+            git checkout -b "$BRANCH"
+          fi
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
