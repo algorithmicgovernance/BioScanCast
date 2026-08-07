@@ -1,0 +1,148 @@
+{
+  "question_id": "bfg_q7",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.0004163197335553706,
+        "NO": 0.9995836802664447
+      }
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.0004163197335553706,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9995836802664447,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.02,
+        0.98
+      ],
+      "ok": true,
+      "reference_class": "Sustained human-to-human transmission events of avian influenza viruses",
+      "base_rate": 0.01,
+      "drivers_up": [
+        "Increased surveillance and detection capabilities globally could identify cases sooner.",
+        "The presence of H5 infections in humans indicates potential for genetic reassortment or mutations."
+      ],
+      "drivers_down": [
+        "Historically, H5 viruses have not shown sustained human-to-human transmission.",
+        "Current reports indicate no human-to-human transmission beyond single cases.",
+        "The cumulative number of cases is low, suggesting limited spread."
+      ],
+      "why_might_be_wrong": "The virus could mutate or reassort in unforeseen ways, leading to transmission capabilities that current data does not predict.",
+      "rationale": "The base rate for sustained human-to-human transmission of H5 viruses is very low, as historically such events have been exceedingly rare. Despite the ongoing presence of H5 in humans and improved detection technologies, current evidence shows no confirmed clusters of sustained transmission. Given these factors, the probability of WHO or a national public health authority confirming such a cluster by the target date remains low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.02,
+        0.98
+      ],
+      "ok": true,
+      "reference_class": "Past instances of confirmed human-to-human transmission of avian influenza viruses",
+      "base_rate": 0.01,
+      "drivers_up": [
+        "Ongoing detection of individual human H5 cases globally, indicating the virus is present in humans.",
+        "Improved surveillance and genetic characterization might identify transmission clusters more effectively."
+      ],
+      "drivers_down": [
+        "Historically, sustained human-to-human transmission of H5 viruses is extremely rare.",
+        "Current evidence shows no confirmed clusters of sustained human-to-human transmission.",
+        "The virus is not currently considered capable of sustained human transmission."
+      ],
+      "why_might_be_wrong": "There could be underreporting or misclassification of transmission events due to limited surveillance in certain regions.",
+      "rationale": "The probability of sustained human-to-human transmission of H5 viruses is low based on historical data. No clusters meeting the criteria have been confirmed to date, and the virus is not currently considered capable of such transmission. While surveillance improvements could increase detection, the absence of current evidence and the rarity of such events keep the probability low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.02,
+        0.98
+      ],
+      "ok": true,
+      "reference_class": "Historical instances of H5 avian influenza in humans leading to sustained human-to-human transmission",
+      "base_rate": 0.01,
+      "drivers_up": [
+        "Continued presence of H5 viruses in humans, indicating ongoing exposure risk",
+        "Advancements in detection and surveillance could identify human-to-human transmission if it occurs"
+      ],
+      "drivers_down": [
+        "Historically, H5 viruses have not been known to sustain human-to-human transmission",
+        "Current evidence shows no confirmed clusters of sustained human-to-human transmission",
+        "Genetic characterization of viruses shows no significant mutations known to enhance human transmission"
+      ],
+      "why_might_be_wrong": "There could be under-reported or undetected cases of human-to-human transmission, or the virus could mutate suddenly to allow such transmission.",
+      "rationale": "The base rate for sustained human-to-human transmission of H5 viruses is very low based on historical data. Despite the ongoing presence of H5 in humans, there is no current evidence of sustained transmission. Surveillance improvements could increase detection, but the lack of significant genetic changes in the virus and historical precedent suggest a low probability. Adjusting slightly for these factors, the probability of confirmation remains low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical patterns of avian influenza H5 viruses, while there have been instances of human infections, sustained human-to-human transmission has been rare. The global public health measures and surveillance systems in place are likely to mitigate the risk of such transmission. Therefore, the probability of a confirmed cluster of sustained human-to-human transmission by the WHO or national authorities by the target date is assessed to be low.",
+  "evidence_record_ids": [
+    "ins-db7fb1a4bb67",
+    "ins-fc09ccec5982",
+    "ins-c12872161de1",
+    "ins-7cf8ac9dd492"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7156,
+    "total_output_tokens": 764,
+    "total_tokens": 7920,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6951,
+        "output_tokens": 668,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 205,
+        "output_tokens": 96,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

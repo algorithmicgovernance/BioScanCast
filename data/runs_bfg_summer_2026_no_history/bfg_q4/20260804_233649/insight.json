@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-c500615075ab",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "France",
+      "iso_country_code": "FR",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Imported case reported in France from areas affected by the ongoing outbreak in DRC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:37:22.030695+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-90c366e07a8545ada4619c27e064a785",
+          "chunk_id": "doc-90c366e07a8545ada4619c27e064a785-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda",
+          "quote": "on 24 June 2026 a further imported case was reported in France by the Ministry of Health."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 106599,
+    "total_output_tokens": 729,
+    "total_tokens": 107328,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 106599,
+        "output_tokens": 729,
+        "calls": 49
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

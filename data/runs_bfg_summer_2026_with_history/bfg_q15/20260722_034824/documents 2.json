@@ -1,0 +1,139 @@
+[
+  {
+    "id": "doc-dbdb185b6d5748979939d97e1819bc5f",
+    "result_id": "dbdb185b6d5748979939d97e1819bc5f",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-07-22T04:03:30.370968+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-dbdb185b6d5748979939d97e1819bc5f-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-07-22.\nAs of the latest CDC update, a total of 2,260 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-07-22"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-cdd963b94ea34fd19295ef2aa1b3543f",
+    "result_id": "cdd963b94ea34fd19295ef2aa1b3543f",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-07-22T04:03:30.553552+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-cdd963b94ea34fd19295ef2aa1b3543f-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-8bc45ce66f4c4360a65fded758e6170d",
+    "result_id": "8bc45ce66f4c4360a65fded758e6170d",
+    "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+    "domain": "abcnews.com",
+    "fetched_at": "2026-07-22T04:03:31.107669+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+    "title": "Measles cases in 2026 are set to surpass last year's total. Here's why",
+    "published_date": "2026-07-17T14:17:18+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 8270,
+    "token_count": 1735,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p0",
+        "chunk_index": 0,
+        "text": "Last year saw the highest number of measles cases in more than 30 years.\n\nThe number of reported measles cases in the United States this year is soon set to surpass the total reported for all of last year.\n\nData from the Centers for Disease Control and Prevention (CDC) shows the U.S.\n\nhas reported 2,231 cases as of July 9, which is just 58 shy of the 2,289 cases reported for the entirety of 2025.\n\nPreviously, the 2025 total was the highest number of cases seen in more than 30 years, and some public health specialists believe the U.S.\n\nis on track to lose the elimination status it earned in 2000.\n\nThe specialists told ABC News that there are several reasons for the U.S.\n\nbreaking measles case records for the second year in a row, including declining vaccination rates, people not fearing the measles virus, a loss of trust in public health institutions and a perceived lack of clear guidance and communication from the nation's top public health officials.\n\n\"A world leading public health triumph, the elimination of measles in the United States, which was a beacon to the rest of the world, showing that this actually could be done, is eroding, and we are trying to turn back the clock as a society to the bad old days, I'm afraid,\" Dr.\n\nWilliam Schaffner, a professor of preventive medicine at Vanderbilt University Medical Center in Nashville, told ABC News.\n\nNot fearing measles\nIn the decade before the measles vaccine became available, the CDC estimates that 3 to 4 million in the U.S.\n\nwere sickened by measles every year, about 48,000 were hospitalized and about 400 to 500 people died.\n\nAbout 1,000 people suffer encephalitis every year.\n\nIn 1971, the measles, mumps, rubella (MMR) vaccine became available and, in 1989, the Advisory Committee on Immunization Practices, the American Academy of Pediatrics and the American Academy of Family Physicians recommended that children receive a second MMR dose.\n\nBy 2000, annual recorded cases had fallen to just 85, and measles was declared eliminated, meaning it was without continuous spread for at least 12 months.\n\nThe CDC recommends two doses of the MMR vaccine.\n\nOne dose is 93% effective, and two doses are 97% effective against measles, the CDC says.\n\nHowever, CDC data show vaccination rates have been lagging in recent years.\n\nDuring the 2024-2025 school year, 92.5% of kindergartners received the MMR vaccine, according to data.\n\nThis is lower than the 92.7% seen in the previous school year and the 95.2% seen in the 2019-2020 school year, prior to the COVID-19 pandemic.\n\nDr.\n\nPaul Offit, director of the Vaccine Education Center and an attending physician in the division of infectious diseases at Children's Hospital of Philadelphia, told ABC News that vaccines are a victim of their own success.\n\nBecause vaccines were so effective at eliminating measles, many members of the public no longer remember a time when measles was ubiquitous, he said.\n\nIn turn, some people no longer fear the illness and some focus has shifted to the perceived risks of the vaccines themselves, leading to a decline in vaccination rates.\n\n\"We don't fear these diseases,\" Offit said.\n\n\"Not only do [people] not see these diseases, they didn't grow up with these diseases.\n\nSo, they're just not scared of the diseases.\n\n...\n\nI've had residents in our hospital come up and tell me when we had admitted a case of measles; they'd never seen a case with measles before in their life.\n\nThat's the problem.\n\nYou don't fear the disease.\"\nDeclining trust in public health\nSchaffner said another reason has been a loss of trust in public health and health care professionals since the COVID-19 pandemic.",
+        "chunk_type": "prose",
+        "heading": "Measles cases in 2026 are set to surpass last year's total. Here's why",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 795,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p1",
+        "chunk_index": 1,
+        "text": "The CDC and other federal public health agencies faced criticism for mixed messaging and unclear guidance during the pandemic, as well as for failing to communicate that guidance was often changing because the pandemic was a fast-evolving situation.\n\n\"There's been in our society a real diminution of trust in authority, authority of all kinds,\" Schaffner said, \"And so, when professional organizations and governmental organizations such as the CDC recommend vaccines universally, such as measles vaccines, that's greeted with skepticism rather than, when I was growing up, those kinds of pronouncements from professional groups and the CDC would be embraced by my parents and say, 'That's the right thing to do.'\"\nThe rise in distrust has been coupled with a rise in unverified or untrue claims about measles spreading online and on social media, Schaffner said.\n\nThis includes claims that measles is a harmless virus.\n\n\"Measles was a universal infection of children growing up, but that does not mean it was a trivial infection,\" Schaffner said.\n\n\"Quite to the contrary, from the point of view of individual children, it often made them miserable for a week and a half.\"\nHe went on, \"Even more importantly, it is associated with all kinds of complications, middle ear infections, which require more medical care, and pneumonia.\n\nThis virus could get down into your bronchial tubes and lungs, which causes difficulty breathing, requiring hospitalization, intensive care unit admission, and resulting in some of the deaths.\"\nPerceived lack of CDC response\nAs the number of measles cases began rising last year, fueled by a fast-growing outbreak in Texas, both the CDC and Health and Human Services Secretary Robert F.\n\nKennedy Jr.\n\nfaced criticism for their alleged silence.\n\nA December 2025 analysis from Johns Hopkins University published in the journal Vaccine looked at posts from the CDC's official Facebook, Instagram and X accounts related to measles and the MMR vaccine as well as posts from major news outlets.\n\nThe analysis found that between Jan.\n\n1, 2025, and Aug.\n\n1, 2025, the CDC posted just 10 times across the three platforms, a decrease from an average of 45.8 posts over the same period from 2021 to 2024, despite fewer measles cases during those years.\n\nMeanwhile, Kennedy did not endorse the MMR vaccine until an April 6, 2025, X post after meeting with the families of two school-aged children who died of measles in Texas.\n\n\"The most effective way to prevent the spread of measles is the MMR vaccine,\" he wrote.\n\nHowever, in a second social media post that evening, Kennedy said he had met with two physicians who have \"treated and healed\" about 300 children infected with measles in the Mennonite community with aerosolized budesonide and clarithromycin.\n\nBudesonide is an inhaled steroid and clarithromycin is an antibiotic used to treat bacterial infections.\n\nDoctors say there\u2019s no evidence that shows either medication is an effective treatment for measles.\n\nIn a statement to ABC News, an HHS spokesperson said, \"Secretary Kennedy has been clear that vaccination remains the most effective way to prevent measles infection.\"\n\"Under the Secretary\u2019s leadership, HHS has mounted an aggressive outbreak response, providing more than $8.5 million to states and local partners, expanding technical assistance, and surging CDC personnel and resources to support containment efforts where needed most,\" the spokesperson added.\n\nOffit believes Kennedy could have used his position to more emphatically recommend MMR vaccines.\n\n\"A healthy six- and eight-year-old girl died of measles in this country, the first child death of measles in this country in more than 20 years,\" Offit said.\n\n\"And what did [Kennedy] do?\n\nNothing.",
+        "chunk_type": "prose",
+        "heading": "Measles cases in 2026 are set to surpass last year's total. Here's why",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 761,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p2",
+        "chunk_index": 2,
+        "text": "He didn't use his considerable platform or famous name and get out there and say, 'Vaccinate your children.'\"\nWhile Kennedy has claimed the HHS promotes MMR vaccine, public health specialists say he has also promulgated misinformation about the vaccine's safety and efficacy.\n\nSchaffner said that by promoting vaccine education in middle and high school curriculums about vaccines, it could help combat the misinformation they are presented with on social media and elsewhere.\n\n\"We have to go back and reformulate the educational curriculum in middle school and high school so that they learn what is measles, what is diphtheria, what is polio, and why do we have vaccines, and why do we vaccinate all of our children?\" Schaffner said.\n\n\"We need to introduce that into the general curriculum of children across the country.\n\nThe high schoolers of today are tomorrow's parents.\"",
+        "chunk_type": "prose",
+        "heading": "Measles cases in 2026 are set to surpass last year's total. Here's why",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 179,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "April 6, 2025"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

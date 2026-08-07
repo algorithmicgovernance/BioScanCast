@@ -1,0 +1,208 @@
+{
+  "question_id": "bfg_q19",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 5",
+    "6 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.24281124564033574,
+        "1": 0.25253387205577227,
+        "2 to 3": 0.3059229995334538,
+        "4 to 5": 0.1443251093339352,
+        "6 or more": 0.05440677343650292
+      }
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.3,
+        "2 to 3": 0.2,
+        "4 to 5": 0.1,
+        "6 or more": 0.0
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.24281124564033574,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.25253387205577227,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.3059229995334538,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "4 to 5",
+      "probability": 0.1443251093339352,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "6 or more",
+      "probability": 0.05440677343650292,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 5",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "6 or more",
+      "probability": 0.0,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.4,
+        0.3,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya in previous years.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Global warming increasing mosquito habitats in Europe.",
+        "Increased travel and trade raising the likelihood of mosquito-borne diseases spreading.",
+        "Previous instances of chikungunya transmission in Europe, suggesting possible endemic areas."
+      ],
+      "drivers_down": [
+        "Chikungunya is primarily tropical and has limited spread in temperate climates like most of Europe.",
+        "EU/EEA countries have strong public health systems capable of controlling outbreaks.",
+        "Limited historical data on significant chikungunya outbreaks in the EU/EEA."
+      ],
+      "why_might_be_wrong": "Climate change could accelerate faster than expected, expanding mosquito habitats significantly by 2026.",
+      "rationale": "The base rate for chikungunya in Europe is low, but increasing due to climate and globalization factors. Historically, there have been few European countries reporting local cases, but the increase in conducive conditions could lead to more reports. Given the factors, it's most likely that a small number of countries (2 to 3) will report cases by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.08,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya cases in previous years.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Global warming may expand habitable regions for chikungunya vector mosquitoes in Europe.",
+        "Increased travel and trade could introduce the virus more frequently into new areas.",
+        "Past instances of small outbreaks in Europe suggest potential for future occurrences."
+      ],
+      "drivers_down": [
+        "Chikungunya is still relatively rare in Europe compared to other regions.",
+        "Public health measures and vector control in EU/EEA countries are generally strong.",
+        "No current evidence of widespread chikungunya outbreaks in Europe as of 2026."
+      ],
+      "why_might_be_wrong": "The potential for sudden outbreaks due to climate change or undetected cases could lead to more countries reporting cases than predicted.",
+      "rationale": "The base rate for EU/EEA countries reporting locally acquired chikungunya cases has historically been low. While climate change and increased travel could increase this rate, the strong public health measures in Europe likely mitigate this risk. Given the current lack of evidence for a widespread outbreak in 2026, the probability of no EU/EEA country reporting cases is relatively high, with a moderate chance for 1 or a few countries to report cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired autochthonous chikungunya cases in past years",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "Climate change has expanded the habitat of Aedes mosquitoes, vectors for chikungunya, into more EU/EEA regions.",
+        "Increased travel and trade can facilitate the spread of chikungunya into new areas.",
+        "Some EU/EEA countries had previously reported locally acquired cases, indicating potential for re-emergence."
+      ],
+      "drivers_down": [
+        "Past years have shown low to no locally acquired cases in most EU/EEA countries, indicating a historically low base rate.",
+        "EU/EEA countries have strong public health infrastructure to respond to outbreaks, potentially limiting spread.",
+        "No recent evidence of increased chikungunya transmission within the EU/EEA in 2026."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if there are sudden outbreaks due to unforeseen factors like a new mosquito vector introduction or significant environmental changes.",
+      "rationale": "Historical data shows a low base rate of chikungunya transmission within the EU/EEA. While climate change and travel pose risks, the strong public health systems in these countries and lack of recent evidence of outbreaks support a conservative forecast. Thus, it is more likely that few countries will report cases, with probabilities weighted towards 0 or 1 country reporting.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Chikungunya is primarily transmitted by Aedes mosquitoes, which are present in some EU/EEA countries. However, the incidence of locally acquired cases has been low historically in Europe. Given the current trends and climate conditions, it is likely that a few countries may report cases, but widespread outbreaks are less probable. Therefore, the highest probability is assigned to '0' cases, followed by '1' case, and then '2 to 3' cases, with lower probabilities for '4 to 5' and '6 or more' cases.",
+  "evidence_record_ids": [
+    "ins-828371f7e87e"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3062,
+    "total_output_tokens": 953,
+    "total_tokens": 4015,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2844,
+        "output_tokens": 813,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 218,
+        "output_tokens": 140,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

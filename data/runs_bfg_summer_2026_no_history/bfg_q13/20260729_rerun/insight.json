@@ -1,0 +1,117 @@
+{
+  "records": [
+    {
+      "id": "ins-f44d286de258",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "World",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 180545.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-27T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases as of April 27, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:05:41.675150+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2156ac47a8084d70a24c01fc2704b3c2",
+          "chunk_id": "doc-2156ac47a8084d70a24c01fc2704b3c2-c0",
+          "source_url": "https://web.archive.org/web/20260721045938id_/https://ourworldindata.org/mpox",
+          "quote": "cumulative confirmed cases (World): 180,545"
+        }
+      ]
+    },
+    {
+      "id": "ins-c88e280e1fee",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 100000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2022-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ongoing global outbreak of clade IIb monkeypox has caused more than 100,000 cases in 122 total countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:05:44.284878+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0673018d26ba4b02bbd5f9a0f155da8c",
+          "chunk_id": "doc-0673018d26ba4b02bbd5f9a0f155da8c-c0",
+          "source_url": "https://web.archive.org/web/20260725193630id_/https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "has caused more than 100,000 cases in 122 total countries"
+        },
+        {
+          "document_id": "doc-7ba3f4b367c74848a74eff84b666f6d0",
+          "chunk_id": "doc-7ba3f4b367c74848a74eff84b666f6d0-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "has caused more than 100,000 cases in 122 total countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-faf4ee7a5976",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 55000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total since January 2024",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:05:53.257101+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e6da9c0218cf48e4bb20e09869ccfecb",
+          "chunk_id": "doc-e6da9c0218cf48e4bb20e09869ccfecb-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "more than 55,000 confirmed cases of clade I monkeypox have been reported globally"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 102005,
+    "total_output_tokens": 638,
+    "total_tokens": 102643,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 102005,
+        "output_tokens": 638,
+        "calls": 48
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 1,
+  "notes": [
+    "Skipped document doc-6673dfc50a4f4762b60af9a807fb946a: failed"
+  ]
+}

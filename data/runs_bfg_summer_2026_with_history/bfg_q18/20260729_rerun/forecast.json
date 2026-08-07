@@ -1,0 +1,203 @@
+{
+  "question_id": "bfg_q18",
+  "options": [
+    "under 1.5M",
+    "1.5M to 1.99M",
+    "2.0M to 2.99M",
+    "3.0M to 4.49M",
+    "4.5M or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 1.5M": 0.13224776065337773,
+        "1.5M to 1.99M": 0.26558787002336703,
+        "2.0M to 2.99M": 0.3493980540729207,
+        "3.0M to 4.49M": 0.16259547203444788,
+        "4.5M or more": 0.09017084321588666
+      }
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 1.5M": 0.25,
+        "1.5M to 1.99M": 0.3,
+        "2.0M to 2.99M": 0.2,
+        "3.0M to 4.49M": 0.15,
+        "4.5M or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "under 1.5M",
+      "probability": 0.13224776065337773,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "1.5M to 1.99M",
+      "probability": 0.26558787002336703,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "2.0M to 2.99M",
+      "probability": 0.3493980540729207,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "3.0M to 4.49M",
+      "probability": 0.16259547203444788,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "4.5M or more",
+      "probability": 0.09017084321588666,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 1.5M",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1.5M to 1.99M",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2.0M to 2.99M",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3.0M to 4.49M",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4.5M or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.106,
+        0.223,
+        0.362,
+        0.197,
+        0.112
+      ],
+      "ok": true,
+      "reference_class": "Annual suspected dengue cases reported in the Americas from past years.",
+      "base_rate": 0.198,
+      "drivers_up": [
+        "Early 2026 data shows a significant number of suspected cases already reported, with 1,169,325 cases by epidemiological week 21.",
+        "Dengue cases can surge due to seasonal variations, especially in the latter half of the year."
+      ],
+      "drivers_down": [
+        "The number of suspected cases in early 2026 is significantly lower compared to previous years, indicating a downward trend.",
+        "There was a substantial drop in suspected cases reported in 2025 compared to 2024, suggesting a possible continued decrease in 2026."
+      ],
+      "why_might_be_wrong": "The prediction might be off if there are unexpected events such as outbreaks in the later months of 2026 that drastically increase cases.",
+      "rationale": "Based on the data from early 2026, there have been 1,169,325 suspected dengue cases reported by week 21. This figure suggests that the total for the year might exceed 1.5M but could struggle to reach the high levels of 2025, which were around 3.85M. Given the potential for seasonal increase in cases towards the end of the year, it is reasonable to estimate a probability distribution that centers on the 1.5M to 2.99M range. However, a continued downward trend could keep the total below 3.0M.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.35,
+        0.3,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual suspected dengue cases in the Americas",
+      "base_rate": 0.198,
+      "drivers_up": [
+        "Mid-year data for 2026 shows over 1.2 million cases, which suggests a potential for a higher annual total.",
+        "Historical data shows variability in dengue cases year to year, with potential spikes."
+      ],
+      "drivers_down": [
+        "2026 mid-year data indicates a decrease compared to 2025.",
+        "There was a significant reduction in cases from 2024 to 2025, indicating possible continued downward trends."
+      ],
+      "why_might_be_wrong": "There could be a resurgence in dengue cases later in the year, driven by seasonal or environmental factors not accounted for in mid-year data.",
+      "rationale": "As of mid-2026, over 1.2 million suspected cases have been reported, suggesting a significant reduction compared to 2025's nearly 3.85 million cases. Given historical variability and potential seasonal spikes, the most likely outcome is between 1.5M and 2.99M cases. The existing trend supports a decrease, making outcomes below 3.0M more probable.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.22,
+        0.36,
+        0.2,
+        0.12
+      ],
+      "ok": true,
+      "reference_class": "Annual dengue suspected cases in the Americas",
+      "base_rate": 0.198,
+      "drivers_up": [
+        "As of June 2026, over 1.2 million suspected cases have already been reported, indicating a high base level of cases early in the year.",
+        "Historical data shows that dengue cases can increase significantly during certain times of the year due to seasonal factors."
+      ],
+      "drivers_down": [
+        "There is a reported 66% decrease in cases compared to 2025, suggesting a potential downward trend in 2026.",
+        "Efforts in public health interventions and preventive measures could reduce the total number of cases reported by the end of the year."
+      ],
+      "why_might_be_wrong": "The estimate could be inaccurate due to unforeseen outbreaks later in the year or inaccuracies in early-year reporting that does not reflect the full year trend.",
+      "rationale": "The base rate for the most likely outcome based on historical data is around the 2.0M to 2.99M range, as indicated by 2025's figure of approximately 3.85 million cases and early 2026 data. The 66% decrease in cases compared to 2025 suggests downward pressure, but the over 1.2 million cases reported by June 2026 indicates a significant base. Given seasonal trends, it's plausible that the final count will fall in the 2.0M to 2.99M range, while acknowledging the potential for fluctuations.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data and trends in dengue outbreaks in the Americas, it is reasonable to expect that the majority of cases will fall under 1.5 million or between 1.5 million and 1.99 million, given the cyclical nature of dengue epidemics. The probabilities reflect a decreasing likelihood for higher case counts, as extreme outbreaks are less common.",
+  "evidence_record_ids": [
+    "ins-d7aaa9e5e999",
+    "ins-2446f99d8b7f"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6754,
+    "total_output_tokens": 970,
+    "total_tokens": 7724,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6513,
+        "output_tokens": 869,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 241,
+        "output_tokens": 101,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

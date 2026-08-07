@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "id": "ins-2b5ff821b504",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:38:13.967339+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0cbf6defe230423ca3dfc7183db57763",
+          "chunk_id": "doc-0cbf6defe230423ca3dfc7183db57763-c0",
+          "source_url": "https://web.archive.org/web/20260728102153id_/https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-558a05e3dac4",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2124.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in DRC as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:38:25.944519+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0040b7903529487a94479327ba158104",
+          "chunk_id": "doc-0040b7903529487a94479327ba158104-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "a total of 2124 confirmed cases, including 828 deaths (crude case fatality ratio [CFR] 39%) have been reported in the Democratic Republic of Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-88618072add7",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 896.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The reported CFR is likely an underestimation, as many deaths that occurred before the outbreak declaration remain under investigation.",
+      "event_date": "2026-06-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in DRC as of 17 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:38:30.487208+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1d540b20c2e9407eac54b18cb506ed1d",
+          "chunk_id": "doc-1d540b20c2e9407eac54b18cb506ed1d-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608",
+          "quote": "a total of 896 confirmed cases including 232 deaths (case fatality ratio [CFR] 26%) have been reported from the Democratic Republic of Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-267da9e42cb6",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in Uganda as of 14 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:38:25.949812+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0040b7903529487a94479327ba158104",
+          "chunk_id": "doc-0040b7903529487a94479327ba158104-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "a cumulative total of 20 confirmed cases have been reported, including two deaths in imported cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-cadf70e4c58a",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 19.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-18T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in Uganda as of 18 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:38:30.487992+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1d540b20c2e9407eac54b18cb506ed1d",
+          "chunk_id": "doc-1d540b20c2e9407eac54b18cb506ed1d-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608",
+          "quote": "a cumulative of 19 confirmed cases including two deaths in imported cases (reported on 15 May and 5 June), and one probable case who has died, have been reported."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 140382,
+    "total_output_tokens": 907,
+    "total_tokens": 141289,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 140382,
+        "output_tokens": 907,
+        "calls": 63
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

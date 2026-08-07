@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-9152baf61a1d",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "hospitalizations",
+      "metric_value": 6.7,
+      "metric_unit": "hospitalizations/100,000",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Modeling suggests a higher peak weekly COVID-19 hospitalization rate if a variant with moderate immune-escape properties emerges.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T09:00:03.359497+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3e4b19d58b924da3b38c7348f2f47af6",
+          "chunk_id": "doc-3e4b19d58b924da3b38c7348f2f47af6-c2",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/season-outlook25-26.html",
+          "quote": "modeling suggests a higher peak weekly COVID-19 hospitalization rate (6.7-9.5 hospitalizations/100,000; Scenario B)"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 90859,
+    "total_output_tokens": 288,
+    "total_tokens": 91147,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 90859,
+        "output_tokens": 288,
+        "calls": 38
+      }
+    }
+  },
+  "documents_processed": 8,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,141 @@
+{
+  "records": [
+    {
+      "id": "ins-d83884f0210b",
+      "question_id": "bfg_q9",
+      "event_type": "other",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "affected_herds",
+      "metric_value": 20.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Total affected states reporting H5N1 in livestock since outbreak declared in 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:56:39.115779+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d37616ce14f3444db5c501647a4590d3",
+          "chunk_id": "doc-d37616ce14f3444db5c501647a4590d3-c0",
+          "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+          "quote": "Total affected states: 20."
+        }
+      ]
+    },
+    {
+      "id": "ins-3d0464b88b4f",
+      "question_id": "bfg_q9",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "unknown",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-03-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative states reporting H5N1 in livestock since outbreak declared in 2024: 15 states confirmed by December 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:56:39.260337+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d37616ce14f3444db5c501647a4590d3",
+          "chunk_id": "doc-d37616ce14f3444db5c501647a4590d3-c1",
+          "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+          "quote": "Texas 2024-03-25"
+        }
+      ]
+    },
+    {
+      "id": "ins-5b6535a7d33b",
+      "question_id": "bfg_q9",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "affected_herds",
+      "metric_value": 18.0,
+      "metric_unit": "states",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative states reporting H5N1 in livestock since outbreak was declared in 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:56:40.229710+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d37616ce14f3444db5c501647a4590d3",
+          "chunk_id": "doc-d37616ce14f3444db5c501647a4590d3-c7",
+          "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+          "quote": "State case_count California 773 Idaho 172 Colorado 64 Texas 34 Michigan 31 Utah 27 Iowa 13 Nevada 11 New Mexico 9 Minnesota 9 South Dakota 7 Arizona 5 Kansas 4 Oklahoma 2 Ohio 1 Oregon 1 North Carolin"
+        }
+      ]
+    },
+    {
+      "id": "ins-04fabf2102e8",
+      "question_id": "bfg_q9",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "affected_herds",
+      "metric_value": 33.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-11-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative states reporting H5N1 in livestock since outbreak declared in 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:56:40.461268+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d37616ce14f3444db5c501647a4590d3",
+          "chunk_id": "doc-d37616ce14f3444db5c501647a4590d3-c5",
+          "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+          "quote": "33"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 62137,
+    "total_output_tokens": 582,
+    "total_tokens": 62719,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 62137,
+        "output_tokens": 582,
+        "calls": 28
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

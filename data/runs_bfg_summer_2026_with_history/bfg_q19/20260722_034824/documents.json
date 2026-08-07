@@ -1,0 +1,41 @@
+[
+  {
+    "id": "doc-c9cf464a720643b984b1837bc593117e",
+    "result_id": "c9cf464a720643b984b1837bc593117e",
+    "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+    "domain": "ecdc.europa.eu",
+    "fetched_at": "2026-07-22T04:06:21.066005+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://ecdc.europa.eu/en/chikungunya-monthly",
+    "title": "ECDC \u2014 Seasonal surveillance of chikungunya virus disease in the EU/EEA",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 766,
+    "token_count": 198,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-c9cf464a720643b984b1837bc593117e-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.ecdc.europa.eu/en/chikungunya-monthly (EU/EEA seasonal report https://chik-weekly.ecdc.europa.eu/), retrieved 2026-07-22.\nAs of 2026-07-22, a cumulative total of 0 (zero) EU/EEA countries have reported locally-acquired (autochthonous) chikungunya virus disease in 2026 (year-to-date). The 2026 seasonal surveillance cycle in the EU/EEA has not yet begun (no cases entered into ECDC EpiPulse).\nNote: this custom scraper renders ECDC's client-side EU/EEA seasonal surveillance report into compact HTML because the count of EU/EEA countries with locally-acquired chikungunya is injected client-side and is absent from the statically served page. The count is a cumulative year-to-date number of EU/EEA countries reporting autochthonous transmission.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 198,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-07-22"
+    ],
+    "fetch_strategy": "custom:ecdc_chikungunya",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

@@ -1,0 +1,295 @@
+{
+  "records": [
+    {
+      "id": "ins-ce99b97c3e75",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2371.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed measles cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:50:58.735925+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5c8e6dc926224822abe3fa7bca2708be",
+          "chunk_id": "doc-5c8e6dc926224822abe3fa7bca2708be-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,371 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-cea1e697afdc",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-23T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed measles cases reported in the US as of July 23, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:02.209317+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a353d9501155406f8a762ddc79db2002",
+          "chunk_id": "doc-a353d9501155406f8a762ddc79db2002-c1",
+          "source_url": "https://www.usatoday.com/story/news/health/2026/07/24/us-measles-cases-2026-surpass-2025-july/91034980007",
+          "quote": "2,318 confirmed measles cases were reported in the United States."
+        }
+      ]
+    },
+    {
+      "id": "ins-8ba94885c950",
+      "question_id": "bfg_q14",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed deaths from measles reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:50:58.736062+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5c8e6dc926224822abe3fa7bca2708be",
+          "chunk_id": "doc-5c8e6dc926224822abe3fa7bca2708be-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-9baf0eac3c60",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-23T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of measles cases reported in the US since the beginning of 2026, surpassing last year's total.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:02.706777+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a353d9501155406f8a762ddc79db2002",
+          "chunk_id": "doc-a353d9501155406f8a762ddc79db2002-c0",
+          "source_url": "https://www.usatoday.com/story/news/health/2026/07/24/us-measles-cases-2026-surpass-2025-july/91034980007",
+          "quote": "approximately 2,318 measles cases from 35 separate outbreaks have reached 43 states and Washington, D.C., since the beginning of 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-02f00ce318db",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "At least 2,318 cases have been reported with more than five months left in the year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:05.572577+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0",
+          "chunk_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0-c2",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "At least 2,318 cases have been reported with more than five months left in the year."
+        },
+        {
+          "document_id": "doc-e77b5fc1777b49ff879abda82b303fb2",
+          "chunk_id": "doc-e77b5fc1777b49ff879abda82b303fb2-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+          "quote": "The United States has confirmed 2,318 measles infections this year"
+        }
+      ]
+    },
+    {
+      "id": "ins-53ff6e427cfb",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases of measles in the US for 2026, just seven months into the year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:11.615330+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3861e0559742494fa8877bc1e2636edd",
+          "chunk_id": "doc-3861e0559742494fa8877bc1e2636edd-c0",
+          "source_url": "https://www.bbc.com/news/articles/c36dw75dkw5o",
+          "quote": "The US has seen 2,318 confirmed cases of measles in 2026, just seven months into the year"
+        }
+      ]
+    },
+    {
+      "id": "ins-90b3decb78e5",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Virginia",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 150.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "More than 150 cases have now been linked to the outbreak, centered in Buckingham County.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:06.690504+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0",
+          "chunk_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0-c3",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "More than 150 cases have now been linked to the outbreak"
+        }
+      ]
+    },
+    {
+      "id": "ins-a0c5fdc200e3",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Pennsylvania",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 100.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "More than 100 cases have been reported this year in Lancaster County, none of whom received both MMR doses.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:06.691142+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0",
+          "chunk_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0-c3",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "More than 100 cases have been reported this year"
+        }
+      ]
+    },
+    {
+      "id": "ins-136e150f58fd",
+      "question_id": "bfg_q14",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "An outbreak started raging across Spartanburg County in October; it would become the largest the largest the US has seen in decades, with nearly 1,000 cases, before ending in April this year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:05.889447+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0",
+          "chunk_id": "doc-18d1e350edc74feca8d149c0ff6ae4b0-c0",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "with nearly 1,000 cases, before ending in April this year."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 32264,
+    "total_output_tokens": 1328,
+    "total_tokens": 33592,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 32264,
+        "output_tokens": 1328,
+        "calls": 14
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

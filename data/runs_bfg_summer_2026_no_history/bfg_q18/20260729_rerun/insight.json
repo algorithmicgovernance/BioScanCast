@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "id": "ins-79e8be76db74",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 1189325.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported in the Americas as of EW 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:31:43.621595+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f845dd1542784c1599d0c0ab41e1f610",
+          "chunk_id": "doc-f845dd1542784c1599d0c0ab41e1f610-c0",
+          "source_url": "https://reliefweb.int/report/brazil/report-epidemiological-situation-dengue-americas-epidemiological-week-21-2026-update-jun-17-2026-324pm-gtm-5",
+          "quote": "a total of 1,169,325 suspected cases of dengue were reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-3b01a11168c3",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 1105019.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported in EW 20 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:31:46.246799+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d524d36c6c6744ce95142f58a021908f",
+          "chunk_id": "doc-d524d36c6c6744ce95142f58a021908f-c0",
+          "source_url": "https://reliefweb.int/report/world/dengue-epidemiological-situation-region-americas-epidemiological-week-20-2026",
+          "quote": "a total of 1,105,019 suspected cases of dengue were reported"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 21705,
+    "total_output_tokens": 262,
+    "total_tokens": 21967,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 21705,
+        "output_tokens": 262,
+        "calls": 10
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

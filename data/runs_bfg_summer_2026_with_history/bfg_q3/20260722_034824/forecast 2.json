@@ -1,0 +1,151 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.5671690256229078,
+        "NO": 0.43283097437709217
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.5671690256229078,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.43283097437709217,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "Ebola PHEIC duration",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The Bundibugyo Ebola outbreak is the third-largest Ebola outbreak on record, suggesting a significant and ongoing health threat.",
+        "The presence of a funding gap of more than $400 million for response efforts indicates challenges in controlling the outbreak.",
+        "The outbreak is occurring in conflict-affected areas of eastern DRC, which may hinder containment efforts and prolong the emergency status."
+      ],
+      "drivers_down": [
+        "There is a significant international focus and response effort, including from WHO and Africa CDC, which could lead to eventual containment.",
+        "Historically, PHEICs are often lifted once initial outbreak control measures take effect and international response ramps up."
+      ],
+      "why_might_be_wrong": "The situation is highly unpredictable due to the volatile region and potential for under-reporting or new developments in the outbreak.",
+      "rationale": "The Bundibugyo Ebola outbreak is significant and ongoing, with a large number of cases and a substantial funding gap, indicating that containment is not imminent. Historical PHEICs show varied durations, but the severity and current challenges increase the likelihood of the PHEIC persisting into 2027. However, international response efforts can lead to containment, so there remains a reasonable chance it could be lifted by then.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Past PHEICs for Ebola and similar outbreaks",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The PHEIC was declared recently in May 2026, indicating the situation is currently severe.",
+        "The outbreak is the third-largest Ebola outbreak on record, suggesting significant ongoing challenges.",
+        "There is a significant funding gap of $400 million, which might hinder effective response and prolong the PHEIC."
+      ],
+      "drivers_down": [
+        "Historically, most PHEICs are resolved within a few years.",
+        "International efforts and pressure might increase to control the outbreak, especially given past experiences with Ebola.",
+        "The global community has improved experience and protocols for managing Ebola outbreaks, which might lead to quicker resolution."
+      ],
+      "why_might_be_wrong": "The conflict-affected areas in eastern DRC could severely impede efforts to control the outbreak, making the PHEIC last longer than expected.",
+      "rationale": "The declaration of a PHEIC as recently as May 2026 suggests the situation is severe. Given the historical base rate for PHEICs lasting several years, and the significant challenges such as the funding gap and the record size of the outbreak, the likelihood of the PHEIC still being in effect by the end of 2026 is substantial. However, previous Ebola PHEICs have been resolved within a few years due to international efforts, and this historical trend suggests the possibility of resolution by the target date. Balancing these factors, the probability of the PHEIC still being in effect is moderately high but not overwhelming.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.35
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations related to Ebola outbreaks",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The Bundibugyo Ebola outbreak has become the third-largest Ebola outbreak on record, indicating significant spread and impact.",
+        "There is a substantial funding gap for the response plan, suggesting difficulties in controlling the outbreak.",
+        "The outbreak is occurring in conflict-affected areas of eastern DRC, which complicates containment efforts and increases the likelihood of prolonged transmission."
+      ],
+      "drivers_down": [
+        "There is international attention and response efforts coordinated by WHO and Africa CDC, which could lead to eventual containment.",
+        "Ebola outbreaks, even large ones, have historically been brought under control within a few years."
+      ],
+      "why_might_be_wrong": "The situation is highly dynamic, and significant international efforts could successfully contain the outbreak earlier than expected.",
+      "rationale": "The Bundibugyo Ebola outbreak has been declared a PHEIC and is the third-largest on record, with significant challenges in containment due to conflict and funding gaps. Historically, Ebola outbreaks have been resolved within a few years, but the current conditions suggest a prolonged situation. Therefore, the probability of the PHEIC still being in effect by the end of 2026 is moderately high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "The Bundibugyo virus, a strain of Ebola, has shown potential for outbreaks in the past, particularly in the DRC and Uganda. However, the effectiveness of biosecurity measures, vaccination efforts, and public health responses could lead to a decrease in the incidence of the disease by 2026. Therefore, while there is a significant chance that the disease could still be classified as a Public Health Emergency of International Concern (PHEIC) due to potential outbreaks, there is also a reasonable expectation that improved measures could lead to its resolution, resulting in a higher probability for 'NO'.",
+  "evidence_record_ids": [
+    "ins-8f9880bd79f0",
+    "ins-7d01c7e60f19",
+    "ins-8f98b0ed636d",
+    "ins-b0e9529837f1",
+    "ins-76b9c843d109",
+    "ins-33bbd90d9336"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4182,
+    "total_output_tokens": 980,
+    "total_tokens": 5162,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3993,
+        "output_tokens": 845,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 135,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

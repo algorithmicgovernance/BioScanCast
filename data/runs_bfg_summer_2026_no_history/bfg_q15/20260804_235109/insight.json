@@ -1,0 +1,829 @@
+{
+  "records": [
+    {
+      "id": "ins-e641577d0bea",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2371.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed measles cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:32.773285+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b394f5fd881b4848843c1a0772013287",
+          "chunk_id": "doc-b394f5fd881b4848843c1a0772013287-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,371 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-c135c7a374e5",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2289.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed measles cases reported in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:32.773800+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b394f5fd881b4848843c1a0772013287",
+          "chunk_id": "doc-b394f5fd881b4848843c1a0772013287-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,289 confirmed measles cases were reported in the United States in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-d36bd044a703",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "An outbreak in Spartanburg County had nearly 1,000 cases before ending in April 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:47.219769+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c0",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "with nearly 1,000 cases, before ending in April this year."
+        }
+      ]
+    },
+    {
+      "id": "ins-21d542a622a0",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 35.0,
+      "metric_unit": "years",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Measles cases have reached a 35-year high in the US, surpassing previous records.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:47.220126+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c0",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "Measles has continued its historic resurgence in the United States this year, with a second record-breaking year in a row."
+        }
+      ]
+    },
+    {
+      "id": "ins-8a60869808e9",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 25.0,
+      "metric_unit": "years",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "More cases have been recorded in the past 18 months than in the previous 25 years combined.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:47.220443+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c0",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "more cases have been recorded in the past 18 months than there have been in the previous 25 years combined."
+        }
+      ]
+    },
+    {
+      "id": "ins-270493204e8f",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "U.S. measles case count for this year has surged past last year's total, now at 2,295.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:55.369950+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-17c2d29f58fb4a2fbb924dd598bf209a",
+          "chunk_id": "doc-17c2d29f58fb4a2fbb924dd598bf209a-c0",
+          "source_url": "https://www.axios.com/2026/07/22/measles-cases-surge-past-last-year",
+          "quote": "The U.S. measles case count for this year has surged past last year's total and now stands at 2,295"
+        }
+      ]
+    },
+    {
+      "id": "ins-e26c04073bdb",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2260.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-07-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The CDC reported 2,260 confirmed cases in its last update on July 16.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:55.370225+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-17c2d29f58fb4a2fbb924dd598bf209a",
+          "chunk_id": "doc-17c2d29f58fb4a2fbb924dd598bf209a-c0",
+          "source_url": "https://www.axios.com/2026/07/22/measles-cases-surge-past-last-year",
+          "quote": "The Centers for Disease Control and Prevention reported 2,260 confirmed cases in its last update on July 16."
+        }
+      ]
+    },
+    {
+      "id": "ins-e99c54e173a9",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:32.773716+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b394f5fd881b4848843c1a0772013287",
+          "chunk_id": "doc-b394f5fd881b4848843c1a0772013287-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-dbea4b65339c",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed deaths from measles in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:32.773873+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b394f5fd881b4848843c1a0772013287",
+          "chunk_id": "doc-b394f5fd881b4848843c1a0772013287-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There were 3 confirmed deaths from measles in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-bb65a7000f4b",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "measles_elimination_status",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "It appears highly likely that the USA will lose its measles elimination status in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:36.249847+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c3",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "Given the current epidemiological context, it appears highly likely that the USA will lose its measles elimination status in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-55e545458719",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.9,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2288.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The US had 2,288 confirmed cases in 2025, indicating a significant outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:37.728039+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c0",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "With 2,288 confirmed cases in 2025"
+        }
+      ]
+    },
+    {
+      "id": "ins-80b23ba564f7",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.9,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1814.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "As of last week, the US had 1,814 confirmed cases, part of the largest measles outbreak in decades.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:37.728191+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c0",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "1,814 confirmed cases as of last week"
+        }
+      ]
+    },
+    {
+      "id": "ins-3659a77d0111",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.9,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 90.0,
+      "metric_unit": "cases per 10 million",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "The United States reported more than 90 cases per 10 million in early 2026, exceeding elimination thresholds.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:37.969179+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c2",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "the United States reported more than 90 cases per 10 million in early 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-395fac76a4c4",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.9,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "reproductive_number",
+      "metric_value": 1.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Transmission was likely ongoing in the USA for the majority of the previous year, with rates above 1 for 285 out of 376 days studied.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:37.969744+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c2",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "the estimated transmission rate stayed above 1, meaning that each infected person was likely infecting at least one other person."
+        }
+      ]
+    },
+    {
+      "id": "ins-f04acf5a04cd",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Utah",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 441.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed measles cases in Utah for the year 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:37.496482+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c1",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "total of 441 cases in the state in 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-96e8a170a4cf",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Utah",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 514.0,
+      "metric_unit": "cases",
+      "count_basis": "active",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "largest active measles outbreak",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:42.097091+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e35270c200be490185b5bb3c0ef964bc",
+          "chunk_id": "doc-e35270c200be490185b5bb3c0ef964bc-c1",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-adds-53-more-measles-cases-its-2026-total",
+          "quote": "the state with the largest active measles outbreak (514 cases in 2026)"
+        }
+      ]
+    },
+    {
+      "id": "ins-6d8e082c068c",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Colorado",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed measles cases in Colorado for the year 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:37.496586+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700",
+          "chunk_id": "doc-7ff4e128ff694b34b8d0c1dc6b628700-c1",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns",
+          "quote": "Colorado has confirmed 20 measles cases this year"
+        }
+      ]
+    },
+    {
+      "id": "ins-ae110c226e0f",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2371.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed measles cases for the year 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:41.343417+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e35270c200be490185b5bb3c0ef964bc",
+          "chunk_id": "doc-e35270c200be490185b5bb3c0ef964bc-c0",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-adds-53-more-measles-cases-its-2026-total",
+          "quote": "bringing the total for the year to 2,371 cases."
+        }
+      ]
+    },
+    {
+      "id": "ins-6daffc40f635",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases reported in 2026 has already surpassed last year\u2019s total with more than five months left in the year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:47.489271+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c2",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "At least 2,318 cases have been reported with more than five months left in the year."
+        }
+      ]
+    },
+    {
+      "id": "ins-73641d424575",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Pennsylvania",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 167.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "total cases for the year",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:42.096800+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e35270c200be490185b5bb3c0ef964bc",
+          "chunk_id": "doc-e35270c200be490185b5bb3c0ef964bc-c1",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-adds-53-more-measles-cases-its-2026-total",
+          "quote": "now has 167 cases for the year"
+        }
+      ]
+    },
+    {
+      "id": "ins-636ed356594f",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Pennsylvania",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 100.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "More than 100 cases have been reported this year in Pennsylvania's Lancaster County.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:45.820916+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c3",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "More than 100 cases have been reported this year"
+        }
+      ]
+    },
+    {
+      "id": "ins-7ceef4cb561a",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Ohio",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "week",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "new cases in unvaccinated individuals this week",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:42.096964+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e35270c200be490185b5bb3c0ef964bc",
+          "chunk_id": "doc-e35270c200be490185b5bb3c0ef964bc-c1",
+          "source_url": "https://www.cidrap.umn.edu/measles/us-adds-53-more-measles-cases-its-2026-total",
+          "quote": "confirmed four new cases in unvaccinated individuals"
+        }
+      ]
+    },
+    {
+      "id": "ins-118d5564a417",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-11-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "International health officials will assess whether the US can still claim to have measles elimination status.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:47.489973+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c2",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "a key milestone that international health officials will assess when they meet in November to discuss whether the US can still claim to have measles elimination status."
+        }
+      ]
+    },
+    {
+      "id": "ins-9333bcc74715",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Virginia",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 150.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "More than 150 cases have now been linked to the outbreak, centered in Buckingham County.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:45.820614+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-efb4092124e94837b01494b34472b45f",
+          "chunk_id": "doc-efb4092124e94837b01494b34472b45f-c3",
+          "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+          "quote": "More than 150 cases have now been linked to the outbreak"
+        }
+      ]
+    },
+    {
+      "id": "ins-73ffd6b3f5a8",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-11-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "The United States' measles elimination status is due to be reviewed in November.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:55.370139+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-17c2d29f58fb4a2fbb924dd598bf209a",
+          "chunk_id": "doc-17c2d29f58fb4a2fbb924dd598bf209a-c0",
+          "source_url": "https://www.axios.com/2026/07/22/measles-cases-surge-past-last-year",
+          "quote": "the United States' measles elimination status, which is due to be reviewed in November."
+        }
+      ]
+    },
+    {
+      "id": "ins-846c781b0941",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 95000.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Estimated measles deaths in 2024, mostly children under five.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:59.695941+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-28437d45b6c840d4bf165db86ec7b008",
+          "chunk_id": "doc-28437d45b6c840d4bf165db86ec7b008-c1",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/measles",
+          "quote": "An estimated 95 000 people died from measles in 2024 - mostly children under the age of five years, despite the availability of a safe and cost-effective vaccine."
+        }
+      ]
+    },
+    {
+      "id": "ins-0881682df4c9",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 780000.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2000-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Estimated measles deaths in 2000 before vaccination efforts.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:51:59.696027+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-28437d45b6c840d4bf165db86ec7b008",
+          "chunk_id": "doc-28437d45b6c840d4bf165db86ec7b008-c1",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/measles",
+          "quote": "Vaccination decreased an estimated measles deaths from 780 000 in 2000 to 95 000 in 2024"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 48180,
+    "total_output_tokens": 3439,
+    "total_tokens": 51619,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 48180,
+        "output_tokens": 3439,
+        "calls": 22
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

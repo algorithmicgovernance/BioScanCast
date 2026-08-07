@@ -1,0 +1,111 @@
+{
+  "records": [
+    {
+      "id": "ins-45408ad54ad8",
+      "question_id": "bfg_q21",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 64.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The last Ebola disease outbreak in the DRC was declared on 4 September 2025 with total of 64 cases (53 confirmed, 11 probable).",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:07:40.217585+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5e14dc1f154d4caf8524ae6c2a130d26",
+          "chunk_id": "doc-5e14dc1f154d4caf8524ae6c2a130d26-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "total of 64 cases (53 confirmed, 11 probable)"
+        }
+      ]
+    },
+    {
+      "id": "ins-c17790ef36d4",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported from three health zones as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:07:41.284899+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5e14dc1f154d4caf8524ae6c2a130d26",
+          "chunk_id": "doc-5e14dc1f154d4caf8524ae6c2a130d26-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-9fe7dc19e9f9",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported from three health zones as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:07:41.285372+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5e14dc1f154d4caf8524ae6c2a130d26",
+          "chunk_id": "doc-5e14dc1f154d4caf8524ae6c2a130d26-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 64164,
+    "total_output_tokens": 483,
+    "total_tokens": 64647,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 64164,
+        "output_tokens": 483,
+        "calls": 30
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

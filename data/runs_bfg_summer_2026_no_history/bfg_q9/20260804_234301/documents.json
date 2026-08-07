@@ -1,0 +1,1572 @@
+[
+  {
+    "id": "doc-c09ec14afe564627905e2da0cf270a25",
+    "result_id": "c09ec14afe564627905e2da0cf270a25",
+    "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+    "domain": "aphis.usda.gov",
+    "fetched_at": "2026-08-04T23:43:19.787009+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+    "title": "HPAI Confirmed Cases in Livestock | Animal and Plant Health Inspection Service",
+    "published_date": "2024-06-14T07:12:01-04:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 492,
+    "token_count": 99,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-c09ec14afe564627905e2da0cf270a25-c0",
+        "chunk_index": 0,
+        "text": "This map is updated each weekday to depict the number of new confirmed cases in livestock in the last 30 days and the cumulative number of confirmed cases in livestock by State.\nFor information related to the National Milk Testing Strategy, visit Testing.\nUsers may need to refresh the page to see the latest map and table data. To refresh the page, hold down the SHIFT key and click the Reload Page button in the upper left corner of your browser. You can also use SHIFT+F5 on your keyboard.",
+        "chunk_type": "prose",
+        "heading": "HPAI Confirmed Cases in Livestock",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 99,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-2cdc52b90cd7422ca809032651d0a844",
+    "result_id": "2cdc52b90cd7422ca809032651d0a844",
+    "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+    "domain": "who.int",
+    "fetched_at": "2026-08-04T23:43:19.997150+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+    "title": "WHO - Cumulative confirmed human cases of avian influenza A(H5N1) reported to WHO",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 1416,
+    "token_count": 401,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-2cdc52b90cd7422ca809032651d0a844-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus (cumulative-table PDF https://cdn.who.int/media/docs/default-source/influenza/h5n1-human-case-cumulative-table/cumulative-number-of-confirmed-human-cases-for-avian-influenza-a(h5n1)-reported-to-who--2003-2026a3d7aca3-8692-40f9-a083-34bf1bb0f6ac.pdf?sfvrsn=7d16160d_2&download=true), retrieved 2026-08-04.\nAs of 7 July 2026, the cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003 is 1000 cases, including 479 deaths. In 2026 (year-to-date) 7 confirmed human A(H5N1) cases and 2 deaths have been reported to WHO globally. In 2025 the total was 30 cases and 12 deaths.\nCountries reporting confirmed human A(H5N1) cases in 2026: Bangladesh (2 cases), Cambodia (4 cases), India (1 case).\nNote: this custom scraper renders the WHO cumulative A(H5N1) human-case table into compact prose because the count lives only in a linked PDF whose wide per-country table does not extract cleanly. Counts are laboratory-confirmed human cases of avian influenza A(H5N1) reported to WHO (dates refer to onset of illness; the case total includes deaths; for the United States, cases reported as A(H5) are included). A(H5N1) is the predominant subtype among reported human H5 infections; other H5 subtypes (e.g. A(H5N6)) are covered by the WHO influenza-at-the-human-animal-interface assessments.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 401,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "7 July 2026",
+      "2026-08-04"
+    ],
+    "fetch_strategy": "custom:who_h5n1_cumulative",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-9a52709f8357413487892d1203332f94",
+    "result_id": "9a52709f8357413487892d1203332f94",
+    "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza",
+    "domain": "who.int",
+    "fetched_at": "2026-08-04T23:43:20.538513+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/teams/global-influenza-programme/avian-influenza",
+    "title": "Human-animal interface",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 1578,
+    "token_count": 279,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-9a52709f8357413487892d1203332f94-c0",
+        "chunk_index": 0,
+        "text": "Birds are the natural hosts for avian influenza viruses. Avian influenza refers to an infectious disease of birds caused by infection with avian influenza viruses. Avian influenza viruses can also infect non-avian species including wild and domestic (including companion and farmed) terrestrial and marine mammals. Avian influenza viruses primarily spread from infected birds to humans through close contact with birds or contaminated environments, such as in backyard poultry farm settings and at markets where birds are sold.\nThere have also been limited reports of transmission from other infected animals to humans.\nSwine influenza is a respiratory disease of pigs caused by influenza A viruses. Most swine influenza viruses do not cause disease in humans, but some countries have reported cases of human infection from certain swine influenza viruses. Close proximity to infected pigs or visiting locations where pigs are exhibited has been reported for most human cases, but some limited human-to-human transmission has occurred.\nJust like birds and pigs, other animals such as horses and dogs, can be infected with their own influenza viruses (canine influenza viruses, equine influenza viruses, etc.).",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 216,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9a52709f8357413487892d1203332f94-c1",
+        "chunk_index": 1,
+        "text": "Dive in\nTechnical guidance",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 6,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9a52709f8357413487892d1203332f94-c2",
+        "chunk_index": 2,
+        "text": "Protocol to investigate non-seasonal influenza and other emerging acute respiratory diseases\nInfluenza Investigations & Studies (Unity Studies)",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus > Surveillance and investigations",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 25,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9a52709f8357413487892d1203332f94-c3",
+        "chunk_index": 3,
+        "text": "Clinical care of severe acute respiratory infections \u2013 Tool kit\nGuidelines for the clinical management of severe illness from influenza virus infections",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus > Clinical management",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 24,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9a52709f8357413487892d1203332f94-c4",
+        "chunk_index": 4,
+        "text": "Five keys to safer food manual",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus > Food safety",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 6,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9a52709f8357413487892d1203332f94-c5",
+        "chunk_index": 5,
+        "text": "Training materials",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Terminology",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 2,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-48e42209987145b5b86b7c80bee154c6",
+    "result_id": "48e42209987145b5b86b7c80bee154c6",
+    "source_url": "https://www.cdc.gov/bird-flu/situation-summary/",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-04T23:43:20.729311+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/bird-flu/situation-summary",
+    "title": "A(H5) Bird Flu: Current Situation",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 1145,
+    "token_count": 243,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-48e42209987145b5b86b7c80bee154c6-c0",
+        "chunk_index": 0,
+        "text": "\u2022 A(H5) bird flu is widespread in wild birds worldwide and is causing outbreaks in poultry and U.S. dairy cows with sporadic human cases in U.S. dairy and poultry workers.\n\u2022 While the current public health risk is low, CDC is watching the situation carefully and working with states to monitor people with animal exposures.\n\u2022 CDC is using its flu surveillance systems to monitor for A(H5) bird flu activity in people.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 87,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-48e42209987145b5b86b7c80bee154c6-c1",
+        "chunk_index": 1,
+        "text": "Footnote: Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024, seven were detected through national flu surveillance and 64 were detected through human monitoring.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > National situation summary since 2024",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 45,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-48e42209987145b5b86b7c80bee154c6-c2",
+        "chunk_index": 2,
+        "text": "When a case tests positive for A(H5) at a public health laboratory but testing at CDC is not able to confirm A(H5) infection, per Council of State and Territorial Epidemiologists (CSTE) guidance, a case is reported as probable. In January 2025, CDC updated requirements. After a public health laboratory's first three cases of influenza A(H5) virus have been confirmed by CDC, subsequent detections by that laboratory can be considered confirmatory.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Situation summary of confirmed and probable human cases since 2024",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 96,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-48e42209987145b5b86b7c80bee154c6-c3",
+        "chunk_index": 3,
+        "text": "For data on HPAI detections in animals, visit the USDA website.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Detections in Animals",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 15,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-344cf9e4d6fb486c9367b16da1a6cd29",
+    "result_id": "344cf9e4d6fb486c9367b16da1a6cd29",
+    "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+    "domain": "who.int",
+    "fetched_at": "2026-08-04T23:43:21.915326+00:00",
+    "document_type": "pdf",
+    "status": "success",
+    "canonical_url": "https://who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+    "title": "WHO Influenza at the human-animal interface (monthly risk assessment)",
+    "published_date": "2026-07-09T00:00:00",
+    "language": null,
+    "page_count": 6,
+    "char_count": 24654,
+    "token_count": 5348,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "chunks": [
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c0",
+        "chunk_index": 0,
+        "text": "1",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 1,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c1",
+        "chunk_index": 1,
+        "text": "\u2022\nNew human cases 2 : From 13 June to 7 July 2026, based on reporting date, detections of\ninfluenza A(H5) in one human, influenza A(H9N2) in two humans, and an influenza A(H3N2)\nvariant ((H3N2)v) virus in one human were officially reported.\n\u2022\nCirculation of influenza viruses with zoonotic potential in animals: High pathogenicity avian\ninfluenza (HPAI) events in poultry and non-poultry animal species continue to be reported to the\nWorld Organisation for Animal Health (WOAH). 3 The Food and Agriculture Organization of the\nUnited Nations (FAO) also provides a global update on avian influenza viruses with pandemic\npotential. 4 Additionally, low pathogenicity avian influenza viruses as well as swine influenza\nviruses continue to circulate in animal populations.\n\u2022\nRisk assessment 5 : There have been no reports of sustained human-to-human transmission\nassociated with the above-mentioned human infection events. Based on information available at\nthe time of this risk assessment update, the overall public health risk from currently known\ninfluenza A viruses detected at the human-animal interface has not changed and - At present,\nthese viruses are not thought to be capable of sustained human - to - human transmission,\nalthough this could change as they evolve. Although human infections with viruses of animal\norigin are infrequent, they are not unexpected at the human-animal interface.\n\u2022\nIHR compliance 6 : This includes any influenza A virus that has demonstrated the capacity to infect\na human and its haemagglutinin (HA) gene (or protein) is not a mutated form of those, i.e. A(H1)\nor A(H3), circulating widely in the human population. Information from these notifications is\ncritical to inform risk assessments for influenza at the human-animal interface.\nAvian influenza viruses in humans\nA(H5), Bangladesh\nOn 15 June 2026, Bangladesh notified WHO of one laboratory-confirmed human case of avian\ninfluenza A(H5) infection in Bangladesh in a child from Sylhet Division. The case was detected\nnotified through the National Influenza Surveillance, Bangladesh (NISB) platform as an influenza like-\nillness (ILI) case.\n1 This summary and assessment covers information confirmed during this period and may include information\nreceived outside of this period.\n2 For epidemiological and virological features of human infections with animal influenza viruses not reported in\nthis assessment, see the reports on human cases of influenza at the human-animal interface published in the\nWeekly Epidemiological Record here .\n3 World Organisation for Animal Health (WOAH). Avian influenza. Global situation. Available at:\nhttps://www.woah.org/en/disease/avian-influenza/#ui-id-2 .\n4 Food and Agriculture Organization of the United Nations (FAO). Global Avian Influenza Viruses with Zoonotic\nPotential situation update. Available at: https://www.fao.org/animal-health/situation-updates/global-aiv-with-\nzoonotic-potential .\n5 World Health Organization (2012). Rapid risk assessment of acute public health events. World Health\nOrganization. Available at: https://iris.who.int/handle/10665/70810 .\n6 World Health Organization. Case definitions for the four diseases requiring notification in all circumstances\nunder the International Health Regulations (2005). Available at:\nhttps://www.who.int/publications/m/item/case-definitions-for-the-four-diseases-requiring-notification-to-\nwho-in-all-circumstances-under-the-ihr-(2005) .",
+        "chunk_type": "prose",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 13 June to 7 July 2026 1",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 772,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c2",
+        "chunk_index": 2,
+        "text": "2\nThe patient developed respiratory symptoms on 17 May 2026, received outpatient healthcare on 20\nMay. A clinical sample was collected that day and was received by the Institute of Epidemiology,\nDisease Control and Research (IEDCR) on 4 June as part of routine surveillance. The sample tested\npositive for influenza A(H5) virus by real-time reverse transcription polymerase chain reaction (RT-\nPCR) on 11 June.\nThe patient is now in good health and reported no travel history and no history of exposure to\npoultry. However, poultry deaths were reported in the area surrounding the patient\u2019s residence. The\noutbreak investigation team identified and followed close and possible contacts. Samples from some\nof the close contacts as well as animal and environmental samples were collected for testing for\ninfluenza. All contacts remained asymptomatic and all samples tested negative for influenza.\nThis is the third laboratory-confirmed human case of avian influenza A(H5) reported in Bangladesh in\n2026, and the 15th human case of avian influenza A(H5) reported to WHO from Bangladesh since\n2008, including two fatal cases, one reported in 2013 and one in 2026.\nRisk assessment for avian influenza A(H5) viruses:\n1. What is the current global public health risk of additional human cases of infection with avian\ninfluenza A(H5) viruses?\nMost human infections so far have been reported in people exposed to A(H5) viruses, for example,\nthrough contact with infected poultry or contaminated environments, including live poultry markets,\nand occasionally infected mammals and contaminated environments. As long as the viruses continue\nto be detected in animals and related environments humans are exposed to, further human cases\nassociated with such exposures are expected but remain unusual. The impact for public health\nif additional sporadic cases are detected is minimal. The current overall global public health risk is\nlow.\n2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H5)\nviruses related to the events above?\nNo sustained human-to-human transmission has been identified associated with the recent reported\nhuman infections with avian influenza A(H5) viruses. There has been no reported human-to-human\ntransmission of A(H5N1) viruses since 2007, although there may be gaps in investigations. In 2007\nand the years prior, small clusters of A(H5) virus infections in humans were reported, including some\ninvolving health care workers, where limited human-to-human transmission could not be excluded;\nhowever, sustained human-to-human transmission was not reported. Current evidence suggests\nthat influenza A(H5) viruses related to these events did not acquire the ability to\nefficiently transmit between people.\n3. What is the likelihood of international spread of avian influenza A(H5) viruses by travellers?\nShould infected individuals from affected areas travel internationally, their infection may be\ndetected in another country during travel or after arrival. If this were to occur, further community-\nlevel spread is considered unlikely as current evidence suggests these viruses have not acquired the\nability to transmit easily among humans.\nA(H9N2), China\nBetween 12 and 23 June 2026, two laboratory-confirmed cases of A(H9N2) virus infection were\ndetected in China. Both cases had mild illness and were hospitalized in isolation wards at the time of\nreporting.",
+        "chunk_type": "prose",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 13 June to 7 July 2026 1",
+        "page_number": 2,
+        "table_data": null,
+        "token_count": 703,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c3",
+        "chunk_index": 3,
+        "text": "\t\t\tSymptom\t\n\tAge and sex\tArea\t\t\n\t\t\tonset\t\n\t< 5-year-old male\tHong Kong Special Administrative Region (SAR)\t9 June 2026\t\n\t< 5-year-old female\tGuangdong\t12 June 2026\t\nBoth cases had exposure to local live bird markets. Samples from environments associated with the\t\t\t\t\nlikely area of exposure of the cases tested positive for A(H9) viruses. No further cases were detected\t\t\t\t\namong contacts of these cases.\t\t\t\t\nRisk assessment for avian influenza A(H9N2):\t\t\t\t\n1. What is the global public health risk of additional human cases of infection with avian influenza\t\t\t\t\nA(H9N2) viruses?\t\t\t\t\nMost human cases follow exposure to the A(H9N2) virus through contact with infected poultry or\t\t\t\t\ncontaminated environments. Most human infections of A(H9N2) to date have resulted in mild\t\t\t\t\nclinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional\t\t\t\t\nhuman cases associated with exposure to infected poultry or contaminated environments are\t\t\t\t\nexpected but remain unusual. The impact to public health if additional sporadic cases are detected is\t\t\t\t\nminimal. The overall global public health risk is low.\t\t\t\t\n2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)\t\t\t\t\nviruses related to these events?\t\t\t\t\nAt the present time, no sustained human-to-human transmission has been identified associated with\t\t\t\t\nthe recently reported human infections with A(H9N2) viruses. Current evidence suggests that\t\t\t\t\nA(H9N2) viruses from these cases did not acquire the ability of sustained transmission among\t\t\t\t\nhumans.\t\t\t\t\n3. What is the likelihood of international spread of avian influenza A(H9N2) virus by travellers?\t\t\t\t\nShould infected individuals from affected areas travel internationally, their infection may be\t\t\t\t\ndetected in another country during travel or after arrival. If this were to occur, further community\t\t\t\t\nlevel spread is considered unlikely as current evidence suggests the A(H9N2) virus subtype has not\t\t\t\t\nacquired the ability to transmit easily among humans.\t\t\t\t\nSwine influenza viruses in humans\t\t\t\t\nInfluenza A(H3N2)v, Brazil\t\t\t\t\nOn 25 June 2026, Brazil notified PAHO/WHO of a laboratory-confirmed human infection with an\t\t\t\t\ninfluenza A(H3N2)v virus detected in a child in Santa Catarina state. The patient had symptom onset\t\t\t\t\non 12 June 2026 and due to worsening respiratory symptoms, healthcare was sought on 16 June.\t\t\t\t\nThe patient was referred for hospital admission with a diagnosis of Severe Acute Respiratory\t\t\t\t\nInfection (SARI). Upon admission, an antigen test confirmed influenza A and the patient was placed\t\t\t\t\nin a private respiratory isolation room and antiviral treatment was initiated. The patient was\t\t\t\t\ndischarged on 19 June.\t\t\t\t\nA nasopharyngeal swab sample was collected on 16 June and sent to the State public health\t\t\t\t\nlaboratory for real-time RT-PCR. On 18 June, a swine-origin influenza H3 variant was suspected, and\t\t\t\t\nthe sample was sent to the Laboratory of Respiratory Viruses, Exanthems, Enteroviruses, and Viral\t\t\t\t\nEmergencies (LVRE) at the Oswaldo Cruz Institute (Fiocruz/Rio de Janeiro) on 19 June. Analyses\t\t\t\t\nconfirmed the presence of an influenza A(H3N2)v virus via molecular testing and genomic\t\t\t\t\nsequencing.\t\t\t\t\nAn investigation by the state and municipality epidemiological surveillance team found that all\t\t\t\t\ncontacts were asymptomatic before, during and after the child\u2019s illness. The child's grandfather\t\t\t\t",
+        "chunk_type": "table",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 13 June to 7 July 2026 1",
+        "page_number": 3,
+        "table_data": [
+          [
+            "",
+            "",
+            "",
+            "Symptom",
+            ""
+          ],
+          [
+            "",
+            "Age and sex",
+            "Area",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "onset",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "< 5-year-old male",
+            "Hong Kong Special Administrative Region (SAR)",
+            "9 June 2026",
+            ""
+          ],
+          [
+            "",
+            "< 5-year-old female",
+            "Guangdong",
+            "12 June 2026",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Both cases had exposure to local live bird markets. Samples from environments associated with the",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "likely area of exposure of the cases tested positive for A(H9) viruses. No further cases were detected",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "among contacts of these cases.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Risk assessment for avian influenza A(H9N2):",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "1. What is the global public health risk of additional human cases of infection with avian influenza",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "A(H9N2) viruses?",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Most human cases follow exposure to the A(H9N2) virus through contact with infected poultry or",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "contaminated environments. Most human infections of A(H9N2) to date have resulted in mild",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "clinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "human cases associated with exposure to infected poultry or contaminated environments are",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "expected but remain unusual. The impact to public health if additional sporadic cases are detected is",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "minimal. The overall global public health risk is low.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "viruses related to these events?",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "At the present time, no sustained human-to-human transmission has been identified associated with",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "the recently reported human infections with A(H9N2) viruses. Current evidence suggests that",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "A(H9N2) viruses from these cases did not acquire the ability of sustained transmission among",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "humans.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3. What is the likelihood of international spread of avian influenza A(H9N2) virus by travellers?",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Should infected individuals from affected areas travel internationally, their infection may be",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "detected in another country during travel or after arrival. If this were to occur, further community",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "level spread is considered unlikely as current evidence suggests the A(H9N2) virus subtype has not",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "acquired the ability to transmit easily among humans.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Swine influenza viruses in humans",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Influenza A(H3N2)v, Brazil",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "On 25 June 2026, Brazil notified PAHO/WHO of a laboratory-confirmed human infection with an",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "influenza A(H3N2)v virus detected in a child in Santa Catarina state. The patient had symptom onset",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "on 12 June 2026 and due to worsening respiratory symptoms, healthcare was sought on 16 June.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "The patient was referred for hospital admission with a diagnosis of Severe Acute Respiratory",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Infection (SARI). Upon admission, an antigen test confirmed influenza A and the patient was placed",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "in a private respiratory isolation room and antiviral treatment was initiated. The patient was",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "discharged on 19 June.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "A nasopharyngeal swab sample was collected on 16 June and sent to the State public health",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "laboratory for real-time RT-PCR. On 18 June, a swine-origin influenza H3 variant was suspected, and",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "the sample was sent to the Laboratory of Respiratory Viruses, Exanthems, Enteroviruses, and Viral",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Emergencies (LVRE) at the Oswaldo Cruz Institute (Fiocruz/Rio de Janeiro) on 19 June. Analyses",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "confirmed the presence of an influenza A(H3N2)v virus via molecular testing and genomic",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "sequencing.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "An investigation by the state and municipality epidemiological surveillance team found that all",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "contacts were asymptomatic before, during and after the child\u2019s illness. The child's grandfather",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "token_count": 757,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c4",
+        "chunk_index": 4,
+        "text": "3",
+        "chunk_type": "prose",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 13 June to 7 July 2026 1",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 1,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c5",
+        "chunk_index": 5,
+        "text": "onset\n< 5-year-old male\nHong Kong Special Administrative Region (SAR)\n9 June 2026\n< 5-year-old female\nGuangdong\n12 June 2026\nBoth cases had exposure to local live bird markets. Samples from environments associated with the\nlikely area of exposure of the cases tested positive for A(H9) viruses. No further cases were detected\namong contacts of these cases.\nRisk assessment for avian influenza A(H9N2):\n1. What is the global public health risk of additional human cases of infection with avian influenza\nA(H9N2) viruses?\nMost human cases follow exposure to the A(H9N2) virus through contact with infected poultry or\ncontaminated environments. Most human infections of A(H9N2) to date have resulted in mild\nclinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional\nhuman cases associated with exposure to infected poultry or contaminated environments are\nexpected but remain unusual. The impact to public health if additional sporadic cases are detected is\nminimal. The overall global public health risk is low.\n2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)\nviruses related to these events?\nAt the present time, no sustained human-to-human transmission has been identified associated with\nthe recently reported human infections with A(H9N2) viruses. Current evidence suggests that\nA(H9N2) viruses from these cases did not acquire the ability of sustained transmission among\nhumans.\n3. What is the likelihood of international spread of avian influenza A(H9N2) virus by travellers?\nShould infected individuals from affected areas travel internationally, their infection may be\ndetected in another country during travel or after arrival. If this were to occur, further community\nlevel spread is considered unlikely as current evidence suggests the A(H9N2) virus subtype has not\nacquired the ability to transmit easily among humans.\nSwine influenza viruses in humans\nInfluenza A(H3N2)v, Brazil\nOn 25 June 2026, Brazil notified PAHO/WHO of a laboratory-confirmed human infection with an\ninfluenza A(H3N2)v virus detected in a child in Santa Catarina state. The patient had symptom onset\non 12 June 2026 and due to worsening respiratory symptoms, healthcare was sought on 16 June.\nThe patient was referred for hospital admission with a diagnosis of Severe Acute Respiratory\nInfection (SARI). Upon admission, an antigen test confirmed influenza A and the patient was placed\nin a private respiratory isolation room and antiviral treatment was initiated. The patient was\ndischarged on 19 June.\nA nasopharyngeal swab sample was collected on 16 June and sent to the State public health\nlaboratory for real-time RT-PCR. On 18 June, a swine-origin influenza H3 variant was suspected, and\nthe sample was sent to the Laboratory of Respiratory Viruses, Exanthems, Enteroviruses, and Viral\nEmergencies (LVRE) at the Oswaldo Cruz Institute (Fiocruz/Rio de Janeiro) on 19 June. Analyses\nconfirmed the presence of an influenza A(H3N2)v virus via molecular testing and genomic\nsequencing.\nAn investigation by the state and municipality epidemiological surveillance team found that all\ncontacts were asymptomatic before, during and after the child\u2019s illness. The child's grandfather",
+        "chunk_type": "prose",
+        "heading": "Age and sex\nArea\nSymptom",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 729,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c6",
+        "chunk_index": 6,
+        "text": "4\nworked at a swine nursery housing approximately 5,000 animals, though he noted that sanitary\nbarriers were in place. The child frequently visited the grandfather's home and had contact with him\nseveral days a week.\nThis is the first human A(H3N2)v infection detected in the Brazil in 2026 and the first case reported\nin the state of Santa Catarina.\nRisk assessment for swine influenza viruses:\n1. What is the public health risk of additional human cases of infection with swine influenza\nviruses?\nSwine influenza viruses circulate in swine populations in many regions of the world. Depending on\ngeographic location, the genetic characteristics of these viruses differ. Most human cases are\nexposed to swine influenza viruses through contact with infected animals or contaminated\nenvironments. Human infection tends to result in mild clinical illness in most cases. Since these\nviruses continue to be detected in swine populations, further human cases are expected. The\nimpact to public health if additional sporadic cases are detected is minimal. The overall risk\nof additional sporadic human cases is low.\n2. What is the likelihood of sustained human-to-human transmission of swine influenza viruses?\nNo sustained human-to-human transmission was identified associated with the event described\nabove. Current evidence suggests that contemporary swine influenza viruses have not acquired the\nability of sustained transmission among humans.\n3. What is the likelihood of international spread of swine influenza viruses by travellers?\nShould infected individuals from affected areas travel internationally, their infection may be\ndetected in another country during travel or after arrival. If this were to occur, further community\nlevel spread is considered unlikely as current evidence suggests that these viruses have\nnot acquired the ability to transmit easily among humans.\nOverall risk management recommendations:\nSurveillance and investigations\n\u2022\nDue to the constantly evolving nature of influenza viruses, WHO continues to stress the\nimportance of global strategic surveillance in animals and humans to detect virologic,\nepidemiologic and clinical changes associated with circulating influenza viruses that may affect\nhuman (or animal) health. Continued vigilance is needed within affected and neighbouring areas\nto detect infections in animals and humans. Close collaboration with the animal health and\nenvironment sectors is essential to understand the extent of the risk of human exposure and to\nprevent and control the spread of animal influenza. WHO has published guidance on surveillance\nfor human infections with avian influenza A(H5) viruses .\n\u2022\nAs the extent of influenza virus circulation in animals is not clear, epidemiologic and virologic\nsurveillance and the follow-up of suspected human cases should continue systematically.\nGuidance on investigation of non-seasonal influenza and other emerging acute respiratory\ndiseases has been published on the WHO website.\n\u2022\nCountries should increase avian influenza surveillance in domestic and wild birds, enhance\nsurveillance for early detection in cattle populations in countries where HPAI is known to be\ncirculating, include HPAI as a differential diagnosis in non-avian species, including cattle and\nother livestock populations, with high risk of exposure to HPAI viruses; monitor and investigate\ncases in non-avian species, including livestock, report cases of HPAI in all animal species,\nincluding unusual hosts, to WOAH and other international organizations, share genetic\nsequences of avian influenza viruses in publicly available databases, implement preventive and",
+        "chunk_type": "prose",
+        "heading": "Age and sex\nArea\nSymptom",
+        "page_number": 4,
+        "table_data": null,
+        "token_count": 688,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c7",
+        "chunk_index": 7,
+        "text": "5\nearly response measures to break the HPAI transmission cycle among animals through\nmovement restrictions of infected livestock holdings and strict biosecurity measures in all\nholdings, employ good production and hygiene practices when handing animal products, and\nprotect persons in contact with suspected/infected animals. 7 More guidance can be found from\nWOAH and FAO .\n\u2022\nWhen there has been human exposure to a known outbreak of an influenza A virus in domestic\npoultry, wild birds or other animals \u2013 or when there has been an identified human case of\ninfection with such a virus \u2013 enhanced surveillance in potentially exposed human populations\nbecomes necessary. Enhanced surveillance should consider the health care seeking behaviour of\nthe population, and could include a range of active and passive health care and/or community-\nbased approaches, including: enhanced surveillance in local influenza-like illness (ILI)/SARI\nsystems, active screening in hospitals and of groups that may be at higher occupational risk of\nexposure, and inclusion of other sources such as traditional healers, private practitioners and\nprivate diagnostic laboratories.\n\u2022\nVigilance for the emergence of novel influenza viruses with pandemic potential should be\nmaintained at all times including during a non-influenza emergency. In the context of the co-\ncirculation of SARS-CoV-2 and influenza viruses, WHO has updated and published practical\nguidance for integrated surveillance .\nNotifying WHO\n\u2022\nAll human infections caused by a new subtype of influenza virus are notifiable under the\nInternational Health Regulations (IHR, 2005). 8,9 State Parties to the IHR (2005) are required to\nimmediately notify WHO of any laboratory-confirmed 10 case of a recent human infection caused\nby an influenza A virus with the potential to cause a pandemic 11 . Evidence of illness is not\nrequired for this report. Evidence of illness is not required for this report.\n\u2022\nWHO published the case definition for human infections with avian influenza A(H5) virus\nrequiring notification under IHR (2005): https://www.who.int/teams/global-influenza-\nprogramme/avian-influenza/case-definitions .\nVirus sharing and risk assessment\n\u2022\nIt is critical that these influenza viruses from animals or from humans are fully characterized in\nappropriate animal or human health influenza reference laboratories. Under WHO\u2019s Pandemic\nInfluenza Preparedness (PIP) Framework, Member States are expected to share influenza viruses\nwith pandemic potential on a timely basis 12 with a WHO Collaborating Centre for influenza of\nGISRS. The viruses are used by the public health laboratories to assess the risk of pandemic\ninfluenza and to develop candidate vaccine viruses.\n7 World Organisation for Animal Health. Statement on High Pathogenicity Avian Influenza in Cattle, 6\nDecember 2024 ( https://www.woah.org/en/high-pathogenicity-avian-influenza-hpai-in-cattle/ ).\n8 World Health Organization. International Health Regulations (2005), as amended through resolutions\nWHA67.13 (2014), WHA75.12 (2022), and WHA77.17 (2024) ( https://apps.who.int/gb/bd/pdf_files/IHR_2014-\n2022-2024-en.pdf ).\n9 World Health Organization. Case definitions for the four diseases requiring notification in all circumstances\nunder the International Health Regulations (2005) ( https://www.who.int/publications/m/item/case-\ndefinitions-for-the-four-diseases-requiring-notification-to-who-in-all-circumstances-under-the-ihr-(2005) ).\n10 World Health Organization. Manual for the laboratory diagnosis and virological surveillance of influenza\n(2011) ( https://apps.who.int/iris/handle/10665/44518 ).\n11 World Health Organization. Pandemic influenza preparedness framework for the sharing of influenza viruses\nand access to vaccines and other benefits, 2nd edition ( https://iris.who.int/handle/10665/341850 ).\n12 World Health Organization. Operational guidance on sharing influenza viruses with human pandemic\npotential (IVPP) under the Pandemic Influenza Preparedness (PIP) Framework (2017)\n( https://apps.who.int/iris/handle/10665/259402 ).",
+        "chunk_type": "prose",
+        "heading": "Age and sex\nArea\nSymptom",
+        "page_number": 5,
+        "table_data": null,
+        "token_count": 898,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-344cf9e4d6fb486c9367b16da1a6cd29-c8",
+        "chunk_index": 8,
+        "text": "6\n\u2022\nThe Tool for Influenza Pandemic Risk Assessment (TIPRA) provides an in-depth assessment of\nrisk associated with some zoonotic influenza viruses \u2013 notably the likelihood of the virus gaining\nhuman-to-human transmissibility, and the impact should the virus gain such transmissibility.\nTIPRA maps relative risk amongst viruses assessed using multiple risk elements. The results of\nTIPRA complement those of the risk assessment provided here, and those of prior TIPRA risk\nassessments are published at http://www.who.int/teams/global-influenza-programme/avian-\ninfluenza/tool-for-influenza-pandemic-risk-assessment-(tipra) .\nRisk reduction\n\u2022\nGiven the observed extent and frequency of avian influenza in poultry, wild birds and some wild\nand domestic mammals, the public should avoid contact with animals that are sick or dead from\nunknown causes, including wild animals, and should report dead birds and mammals or request\ntheir removal by contacting local wildlife or veterinary authorities.\n\u2022\nEggs, poultry meat and other poultry food products should be properly cooked and properly\nhandled during food preparation. Due to the potential health risks to consumers, raw milk\nshould be avoided. WHO advises consuming pasteurized milk. If pasteurized milk isn\u2019t available,\nheating raw milk until it boils makes it safer for consumption.\n\u2022\nWHO has published practical interim guidance to reduce the risk of infection in people exposed\nto avian influenza viruses.\nTrade and travellers\n\u2022\nWHO advises that travellers to countries with known outbreaks of animal influenza should avoid\nfarms, contact with animals in live animal markets, entering areas where animals may be\nslaughtered, or contact with any surfaces that appear to be contaminated with animal excreta.\nTravelers should also wash their hands often with soap and water. All individuals should follow\ngood food safety and hygiene practices.\n\u2022\nWHO does not advise special traveller screening at points of entry or restrictions with regards to\nthe current situation of influenza viruses at the human-animal interface. For recommendations\non safe trade in animals and related products from countries affected by these influenza viruses,\nrefer to WOAH guidance.\nLinks:\nWHO Human-Animal Interface web page\nhttps://www.who.int/teams/global-influenza-programme/avian-influenza\nWHO Influenza (Avian and other zoonotic) fact sheet\nhttps://www.who.int/news-room/fact-sheets/detail/influenza-(avian-and-other-zoonotic)\nWHO Protocol to investigate non-seasonal influenza and other emerging acute respiratory diseases\nhttps://www.who.int/publications/i/item/WHO-WHE-IHM-GIP-2018.2\nWHO Public health resource pack for countries experiencing outbreaks of influenza in animals:\nhttps://www.who.int/publications/i/item/9789240076884\nCumulative Number of Confirmed Human Cases of Avian Influenza A(H5N1) Reported to WHO\nhttps://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus\nAvian Influenza A(H7N9) Information\nhttps://www.who.int/teams/global-influenza-programme/avian-influenza/avian-influenza-a-( h7n9 )-\nvirus\nWorld Organisation of Animal Health (WOAH) web page: Avian Influenza\nhttps://www.woah.org/en/home/\nFood and Agriculture Organization of the United Nations (FAO) webpage: Avian Influenza\nhttps://www.fao.org/animal-health/avian-flu-qa/en/\nWOAH/FAO Network of Expertise on Animal Influenza (OFFLU)\nhttp://www.offlu.org/",
+        "chunk_type": "prose",
+        "heading": "Age and sex\nArea\nSymptom",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 799,
+        "extractor": "pymupdf"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "",
+          "",
+          "",
+          "Symptom",
+          ""
+        ],
+        [
+          "",
+          "Age and sex",
+          "Area",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "onset",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "< 5-year-old male",
+          "Hong Kong Special Administrative Region (SAR)",
+          "9 June 2026",
+          ""
+        ],
+        [
+          "",
+          "< 5-year-old female",
+          "Guangdong",
+          "12 June 2026",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Both cases had exposure to local live bird markets. Samples from environments associated with the",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "likely area of exposure of the cases tested positive for A(H9) viruses. No further cases were detected",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "among contacts of these cases.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Risk assessment for avian influenza A(H9N2):",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1. What is the global public health risk of additional human cases of infection with avian influenza",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "A(H9N2) viruses?",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Most human cases follow exposure to the A(H9N2) virus through contact with infected poultry or",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "contaminated environments. Most human infections of A(H9N2) to date have resulted in mild",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "clinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "human cases associated with exposure to infected poultry or contaminated environments are",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "expected but remain unusual. The impact to public health if additional sporadic cases are detected is",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "minimal. The overall global public health risk is low.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "viruses related to these events?",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "At the present time, no sustained human-to-human transmission has been identified associated with",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "the recently reported human infections with A(H9N2) viruses. Current evidence suggests that",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "A(H9N2) viruses from these cases did not acquire the ability of sustained transmission among",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "humans.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3. What is the likelihood of international spread of avian influenza A(H9N2) virus by travellers?",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Should infected individuals from affected areas travel internationally, their infection may be",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "detected in another country during travel or after arrival. If this were to occur, further community",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "level spread is considered unlikely as current evidence suggests the A(H9N2) virus subtype has not",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "acquired the ability to transmit easily among humans.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Swine influenza viruses in humans",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Influenza A(H3N2)v, Brazil",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "On 25 June 2026, Brazil notified PAHO/WHO of a laboratory-confirmed human infection with an",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "influenza A(H3N2)v virus detected in a child in Santa Catarina state. The patient had symptom onset",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "on 12 June 2026 and due to worsening respiratory symptoms, healthcare was sought on 16 June.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "The patient was referred for hospital admission with a diagnosis of Severe Acute Respiratory",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Infection (SARI). Upon admission, an antigen test confirmed influenza A and the patient was placed",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "in a private respiratory isolation room and antiviral treatment was initiated. The patient was",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "discharged on 19 June.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "A nasopharyngeal swab sample was collected on 16 June and sent to the State public health",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "laboratory for real-time RT-PCR. On 18 June, a swine-origin influenza H3 variant was suspected, and",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "the sample was sent to the Laboratory of Respiratory Viruses, Exanthems, Enteroviruses, and Viral",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Emergencies (LVRE) at the Oswaldo Cruz Institute (Fiocruz/Rio de Janeiro) on 19 June. Analyses",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "confirmed the presence of an influenza A(H3N2)v virus via molecular testing and genomic",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "sequencing.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "An investigation by the state and municipality epidemiological surveillance team found that all",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "contacts were asymptomatic before, during and after the child\u2019s illness. The child's grandfather",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "7 July 2026",
+      "15 June 2026",
+      "17 May 2026",
+      "23 June 2026",
+      "9 June 2026",
+      "12 June 2026",
+      "25 June 2026",
+      "6\nDecember 2024"
+    ],
+    "fetch_strategy": "custom:who_h5_hai",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-f759095f6ef84ebd8b1a580b0e598514",
+    "result_id": "f759095f6ef84ebd8b1a580b0e598514",
+    "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-livestock",
+    "domain": "aphis.usda.gov",
+    "fetched_at": "2026-08-04T23:43:29.271812+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-livestock",
+    "title": "Secure Our Herds | Animal and Plant Health Inspection Service",
+    "published_date": "2024-11-06T12:27:13-05:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 455,
+    "token_count": 92,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-f759095f6ef84ebd8b1a580b0e598514-c0",
+        "chunk_index": 0,
+        "text": "The U.S. Department of Agriculture (USDA), Food and Drug Administration (FDA), Centers for Disease Control and Prevention (CDC), and State veterinary and public health officials are working together to protect livestock, farms, and communities from avian influenza.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 50,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f759095f6ef84ebd8b1a580b0e598514-c1",
+        "chunk_index": 1,
+        "text": "If you suspect a possible HPAI infection on your farm, report it!\nIsolate sick animals and contact your veterinarian, State animal health official , or the APHIS Area Veterinarian in Charge.",
+        "chunk_type": "prose",
+        "heading": "Our Response to Avian Influenza > Resources > Look for Signs of Illness and Report",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 42,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-68e414a9e8394ca28468b66b661e5d07",
+    "result_id": "68e414a9e8394ca28468b66b661e5d07",
+    "source_url": "https://www.cdc.gov/bird-flu/situation-summary/mammals.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-04T23:43:29.592777+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/bird-flu/situation-summary/mammals.html",
+    "title": "Current Situation: Bird Flu in Dairy Cows",
+    "published_date": "2026-07-16T15:30:25+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4040,
+    "token_count": 896,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c0",
+        "chunk_index": 0,
+        "text": "A multistate outbreak of HPAI A(H5N1) bird flu in dairy cows was first reported on March 25, 2024. This is the first time that these bird flu viruses had been found in cows. In the United States, since 2022, USDA APHIS has reported HPAI A(H5N1) virus detections in more than 200 mammals.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 82,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c1",
+        "chunk_index": 1,
+        "text": "On April 1, CDC confirmed one human HPAI A(H5N1) infection in a person with exposure to dairy cows in Texas that were presumed to be infected with the virus. This is thought to be the first instance of likely mammal to human spread of HPAI A(H5N1) virus. In May 2024, CDC began reporting additional, sporadic human cases in people who had exposure to infected dairy cows. That latest human case counts are available at H5N1 Bird Flu: Current Situation Summary.",
+        "chunk_type": "prose",
+        "heading": "What to know > Domestic Summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 110,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c2",
+        "chunk_index": 2,
+        "text": "CDC systems that monitor national, state, and local level influenza data are being used during the current avian influenza A(H5N1) situation. These systems show no indicators of unusual influenza activity in people, including avian influenza A(H5N1).",
+        "chunk_type": "prose",
+        "heading": "What to know > Domestic Summary > Monitoring for H5 in People",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 52,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c3",
+        "chunk_index": 3,
+        "text": "While rare, mammals can be infected with highly pathogenic avian influenza (HPAI) A(H5N1) (\"H5N1 bird flu\") viruses. Reports of these sporadic infections in mammals have occurred globally amid widespread outbreaks of bird flu infections in wild birds and poultry.\nMammals can be infected with H5N1 bird flu viruses when they eat infected birds, poultry, or other animals and/or if they are exposed to environments contaminated with virus. Spread of H5N1 bird flu viruses from mammal to mammal is thought to be rare, but possible.",
+        "chunk_type": "prose",
+        "heading": "What to know > Background",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 119,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c4",
+        "chunk_index": 4,
+        "text": "In recent years, HPAI H5N1 infections have been detected in mammals including but not limited to wild or feral animals such as foxes, bears, and seals; stray or domestic animals such as cats and dogs; farm animals, such as goats, cows, and mink, and zoo animals such as tigers and leopards.",
+        "chunk_type": "prose",
+        "heading": "What to know > Background > Other documented mammalian infections",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 72,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c5",
+        "chunk_index": 5,
+        "text": "Globally, sporadic HPAI A(H5N1) virus infections in mammals have been reported across the continents of Asia, North America, South America, and Europe. More information about the global impact of avian influenza can be found here: Avian Influenza - WOAH - World Organisation for Animal Health.\nSpecifically, recent HPAI A(H5N1) infections in mammals have been detected in sea lions in Peru and Chile, sea elephants in Argentina, and foxes in Canada, France, and other countries.",
+        "chunk_type": "prose",
+        "heading": "What to know > Global Summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 113,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c6",
+        "chunk_index": 6,
+        "text": "The wide geographic spread of HPAI A(H5N1) viruses in wild birds, poultry, and some other mammals, including in cows, could create additional opportunities for people to be exposed to these viruses. Therefore, there could be an increase in sporadic human infections resulting from bird and animal exposures, even if the risk of these viruses spreading from birds to people has not increased. CDC believes the current risk to the general public from bird flu viruses is low. People who have job-related or recreational exposure to infected birds or animals, including cows, are at greater risk of contracting HPAI A(H5N1) virus. CDC has recommendations related to testing, treatment of HPAI A(H5N1) infection and prevention of exposure to these viruses: Highly Pathogenic Avian Influenza A(H5N1) Virus in Animals: Interim Recommendations for Prevention, Monitoring, and Public Health Investigations.",
+        "chunk_type": "prose",
+        "heading": "What to know > Risk to Humans",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 187,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-68e414a9e8394ca28468b66b661e5d07-c7",
+        "chunk_index": 7,
+        "text": "While getting a seasonal flu vaccine only prevents seasonal flu and will not protect against H5N1 bird flu, it is important that people who may have frequent exposure to infected or potentially infected birds or other animals get a seasonal flu vaccine, ideally 2 weeks before their potential exposure. This is because it can reduce the prevalence and severity of seasonal flu and might reduce the very rare risk of coinfection with a human seasonal virus and an avian virus at the same time, and the theoretical risk that reassortment between the two could result in a new virus. Such dual infections, while very rare, could theoretically result in genetic reassortment of the two different influenza A viruses and lead to a new influenza A virus that has a different combination of genes, and which could pose a significant public health concern.",
+        "chunk_type": "prose",
+        "heading": "What to know > Vaccination > Getting a seasonal flu vaccine will not protect against H5N1 bird flu",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 161,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "March 25, 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-2b5f692659f74675a34bc735f2601cde",
+    "result_id": "2b5f692659f74675a34bc735f2601cde",
+    "source_url": "https://www.cdc.gov/bird-flu/spotlights/bird-flu-response-10-29-24.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-04T23:43:30.265714+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/bird-flu/spotlights/bird-flu-response-10-29-24.html",
+    "title": "CDC A(H5N1) Bird Flu Response Update October 29, 2024",
+    "published_date": "2026-01-08T14:23:49+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 11821,
+    "token_count": 2476,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c0",
+        "chunk_index": 0,
+        "text": "CDC provides an update on its response activities related to the multistate outbreak of avian influenza A(H5N1) virus, or \"H5N1 bird flu,\" in dairy cows and other animals in the United States.",
+        "chunk_type": "prose",
+        "heading": "At a glance",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 47,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c1",
+        "chunk_index": 1,
+        "text": "In this week's spotlight, CDC reports six confirmed human cases of H5 bird flu in Washington state as well as three more cases in California for a total of 36 cases in the United States, and shares updated results of ongoing outreach efforts.",
+        "chunk_type": "prose",
+        "heading": "At a glance > What to Know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 49,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c2",
+        "chunk_index": 2,
+        "text": "October 29, 2024 \u2013 CDC continues to respond to the public health challenge posed by a multistate outbreak of avian influenza A(H5N1) virus, or \"H5N1 bird flu,\" in dairy cows, poultry and other animals in the United States. CDC is working in collaboration with the U.S. Department of Agriculture (USDA), the Food and Drug Administration (FDA), Administration for Strategic Preparedness and Response (ASPR), state public health and animal health officials, and other partners using a One Health approach.\nSince April 2024, CDC, working with state public health departments, has confirmed H5 bird flu infections in 36 people in the United States. Fifteen of these cases were associated with exposure to H5N1 bird flu-infected poultry and 20 were associated with exposure to sick or infected dairy cows12. The source of the exposure in one case, which was reported by Missouri on September 6, could not be determined. Serological testing of the contacts of the Missouri case have been reported, and that investigation has concluded.\nThe 36 cases include 16 cases in California, three of which were confirmed last week. CDC also confirmed six human cases of H5 bird flu in poultry farm workers in Washington state last week. These are the first cases of H5 bird flu in Washington. Testing of additional specimens from Washington is ongoing. Cases in California and Washington have occurred in workers on affected farms. All available data so far suggest sporadic instances of animal-to-human spread. The farm workers in California and Washington state all described mild symptoms, many with eye redness or discharge (conjunctivitis). Some cases in Washington reported some mild upper respiratory symptoms. None of the workers were hospitalized. Updated case counts, including by state and source of exposure, are reflected in a table on CDC's website. To date, person-to-person spread of H5 bird flu has not been identified in the United States. CDC believes the immediate risk to the general public from H5 bird flu remains low, but people with exposure to infected animals are at higher risk of infection.\nOn the animal health side, since March 2024, USDA has confirmed infected cattle in 387 dairy herds in 14 U.S. states. The number of affected herds continues to grow nationally, with almost all new infections identified in herds in California. USDA reports that, since April 2024, there have been H5 detections in 39 commercial poultry flocks and 28 backyard flocks, for a total of 22.23 million birds affected.\nAmong other activities reported in previous spotlights and ongoing, recent highlights of CDC's response to this include:",
+        "chunk_type": "prose",
+        "heading": "At a glance > Situation Update",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 545,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c3",
+        "chunk_index": 3,
+        "text": "To date, CDC has confirmed infection of 16 farm workers with H5N1 bird flu in California. Genetic sequencing of nine of these cases confirms that all are H5N1 viruses from clade 2.3.4.4b and that all are closely related genetically to the virus causing infections in domestic dairy cattle. CDC has sequenced the full genomes of viruses detected in four cases from California (A/California/135/2024, A/California/147/2024, A/California/152/2024, and A/California/153/2024) and confirmed that all are B3.13 genotype viruses. Various gene sequences were successfully obtained from specimens from five other California cases. That sequencing information showed no changes in the hemagglutinin (HA) associated with increased infectivity or transmissibility among people. Additionally, there were no mutations associated with reduced susceptibility to available antiviral treatments (e.g., neuraminidase inhibitors or polymerase acid endonuclease inhibitors) and no mutations identified in other genes indicating additional mammalian adaptation. Genetic data have been posted in GISAID and GenBank. Additional data will be posted as they become available. CDC has successfully isolated virus from specimens from nine of the 16 cases. Attempts to isolate virus from additional specimens are ongoing. Antigenic characterization and antiviral susceptibility testing are underway. Antigenic characterization will inform whether existing H5 bird flu candidate vaccine viruses (CVVs) would provide good inhibition of these viruses.\nOn Thursday, October 24, CDC posted a spotlight describing the results of serology testing for evidence of prior infection with H5N1 bird flu in blood samples provided by seven people in Missouri.\nEfforts to isolate and sequence viruses from specimens from the Washington cases are in progress, and sequencing information will be reported and posted to public databases when available.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Situation Update > Laboratory Update",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 381,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c4",
+        "chunk_index": 4,
+        "text": "A multilingual CDC field team continues to assist the California Department of Public Health in its efforts to learn more about how this outbreak in California began and how to lower the risk to farm workers with exposure to infected cows. Two staff are on the ground, and additional staff are ready to deploy if needed. CDC staff are assisting with active surveillance efforts, including field assessments of suspected cases and household contacts; testing and treatment; and dissemination of information to farm workers and the community. CDC also deployed a separate multilingual field team to Washington state to assist the local health district with monitoring activities related to depopulation of an infected poultry farm, including on-site symptom screening, testing of workers coming on shift, and provision of oseltamivir. The three CDC staff worked with local epidemiologists on data management, epidemiological summaries, and case and contact investigations. There is no evidence of any person-to-person spread in either of the two states or anywhere in the United States.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Situation Update > Epidemiology Update",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 194,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c5",
+        "chunk_index": 5,
+        "text": "On Wednesday, October 23, CDC received specimens from multiple presumptive positive cases of H5 bird flu in poultry farm workers in Washington state. As noted above, CDC has so far confirmed six cases in Washington. Testing of additional specimens is pending.\nCDC continues to support states that are monitoring people with exposure to cows, birds, or other domestic or wild animals infected, or potentially infected, with H5N1 bird flu. To date, more than 6,100 people have been monitored as a result of their exposure to infected or potentially infected animals, and at least 300 people who have developed flu-like symptoms have been tested as part of this targeted, situation-specific testing. More information on monitoring can be found at Symptom Monitoring Among Persons Exposed to HPAI. In addition, since February 25, 2024, more than 55,000 specimens have been tested for avian influenza A(H5) virus or other novel influenza viruses at public health labs. One of the specimens, collected as a part of routine surveillance, was identified as presumptive positive for avian influenza A(H5) virus and was confirmed as H5N1 bird flu positive by CDC.\nCDC also continues to monitor flu surveillance data using CDC's 2024-2025 influenza surveillance strategy, especially in areas where avian influenza A(H5N1) viruses have been detected in dairy cows or other animals, for any unusual trends, including in flu-like illness, conjunctivitis, or influenza virus activity. Overall, for the most recent week of data, CDC flu surveillance systems show no indicators of unusual flu activity in people.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Situation Update > Surveillance Update",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 330,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c6",
+        "chunk_index": 6,
+        "text": "CDC continues to support outreach to farm workers around the topic of H5N1 bird flu. This includes targeted outreach to farm workers in affected counties through Meta (Facebook and Instagram) and digital display and audio (Pandora). CDC also is running advertisements on local radio stations about 30 times each week to reach people who may not be on social media platforms. These resources provide information in English and Spanish about potential risks of H5N1 bird flu infection, recommended preventive actions, symptoms to be on the lookout for, and what to do if people develop symptoms. Outreach metrics are summarized in Table 1 (below). CDC also is developing an outreach strategy to raise awareness about the free seasonal flu vaccinations being offered to farm workers in affected states this season.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Situation Update > Outreach Update",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 152,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c7",
+        "chunk_index": 7,
+        "text": "As a reminder, CDC recommends that:\n\u2022 People should avoid exposures to sick or dead animals, including wild birds, poultry, other domesticated birds, and other wild or domesticated animals (including cows), if possible.\n\u2022 People should also avoid exposures to animal poop, bedding (litter), unpasteurized (\"raw\") milk, or materials that have been touched by, or close to, birds or other animals with suspected or confirmed avian influenza A(H5N1) virus, if possible.\n\u2022 People should not drink raw milk. Pasteurization kills avian influenza A(H5N1) viruses, and pasteurized milk is safe to drink.\n\u2022 People who have job-related contact with infected or potentially infected birds or other animals should be aware of the risk of exposure to avian influenza viruses and should take proper precautions. People should wear appropriate and recommended personal protective equipment when exposed to an infected or potentially infected animal(s). CDC has recommendations for worker protection and use of personal protective equipment (PPE).\n\u2022 CDC has interim recommendations for prevention, monitoring, and public health investigations of avian influenza A(H5N1) virus infections in people.\nFollowing these recommendations is central to reducing a person's risk and containing the overall public health risk.\nIn addition to limiting interactions between infected animals and people, containing the outbreak among animals also is important, which underscores the urgency of the work being done by USDA and animal health and industry partners.\nThis is an evolving situation and CDC is committed to providing frequent and timely updates.",
+        "chunk_type": "prose",
+        "heading": "At a glance > CDC Recommendations",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 308,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c8",
+        "chunk_index": 8,
+        "text": "Channel\tPartner\tPlacement\tImpressions\nSocial\tEnglish In-Feed\t26,322,130\nSpanish In-Feed\t5,422,472\nEnglish In-Feed\t7,694,694\nSpanish In-Feed\t567,243\nSocial Totals\t40,007,539\nDisplay\tFusable\tEnglish Display\t9,305,925\nSpanish Display\t1,600,404\nDisplay Totals\t10,906,329\nAudio\tPandora\tEnglish Audio + Display\t6,786,448\nSpanish Audio + Display\t2,561,892\nAudio Totals\t9,348,340\nLanguage Totals\tEnglish Language\t49,831,924\nSpanish Language\t9,979,886\nSocial/Digital Media Campaign Totals\t59,811,810",
+        "chunk_type": "table",
+        "heading": "At a glance > CDC Recommendations",
+        "page_number": null,
+        "table_data": [
+          [
+            "Channel",
+            "Partner",
+            "Placement",
+            "Impressions"
+          ],
+          [
+            "Social",
+            "English In-Feed",
+            "26,322,130"
+          ],
+          [
+            "Spanish In-Feed",
+            "5,422,472"
+          ],
+          [
+            "English In-Feed",
+            "7,694,694"
+          ],
+          [
+            "Spanish In-Feed",
+            "567,243"
+          ],
+          [
+            "Social Totals",
+            "40,007,539"
+          ],
+          [
+            "Display",
+            "Fusable",
+            "English Display",
+            "9,305,925"
+          ],
+          [
+            "Spanish Display",
+            "1,600,404"
+          ],
+          [
+            "Display Totals",
+            "10,906,329"
+          ],
+          [
+            "Audio",
+            "Pandora",
+            "English Audio + Display",
+            "6,786,448"
+          ],
+          [
+            "Spanish Audio + Display",
+            "2,561,892"
+          ],
+          [
+            "Audio Totals",
+            "9,348,340"
+          ],
+          [
+            "Language Totals",
+            "English Language",
+            "49,831,924"
+          ],
+          [
+            "Spanish Language",
+            "9,979,886"
+          ],
+          [
+            "Social/Digital Media Campaign Totals",
+            "59,811,810"
+          ]
+        ],
+        "token_count": 168,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-2b5f692659f74675a34bc735f2601cde-c9",
+        "chunk_index": 9,
+        "text": "\u2022 The first human case of H5N1 bird flu linked to an outbreak in dairy cows in the United States was reported on April 1, 2024, in Texas. It was also likely the first human infection with avian influenza A(H5N1) virus from a cow globally. A second human case associated with the dairy cow outbreak was identified in Michigan on May 22, 2024, followed by a third case in Michigan on May 30, 2024. The fourth human case was identified in Colorado on July 3, 2024. None of these cases were associated with the others.\n\u2022 Cumulatively, there have been 37 human cases of H5 bird flu reported in the United States. On July 14, 2024, CDC confirmed four human cases of H5 bird flu in Colorado, and additional (fifth and sixth) cases in Colorado were confirmed at CDC and were reported on July 19, 2024. Three additional cases in Colorado from a different farm were confirmed by CDC on July 25, 2024. The first human case of H5N1 bird flu in the United States was reported on April 28, 2022, in a person in Colorado who had direct exposure to poultry and who was involved in depopulating poultry with presumptive H5N1 bird flu. The 2022 human case was not related to dairy cows. The person only reported fatigue without any other symptoms and recovered.",
+        "chunk_type": "prose",
+        "heading": "At a glance > CDC Recommendations",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 302,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Channel",
+          "Partner",
+          "Placement",
+          "Impressions"
+        ],
+        [
+          "Social",
+          "English In-Feed",
+          "26,322,130"
+        ],
+        [
+          "Spanish In-Feed",
+          "5,422,472"
+        ],
+        [
+          "English In-Feed",
+          "7,694,694"
+        ],
+        [
+          "Spanish In-Feed",
+          "567,243"
+        ],
+        [
+          "Social Totals",
+          "40,007,539"
+        ],
+        [
+          "Display",
+          "Fusable",
+          "English Display",
+          "9,305,925"
+        ],
+        [
+          "Spanish Display",
+          "1,600,404"
+        ],
+        [
+          "Display Totals",
+          "10,906,329"
+        ],
+        [
+          "Audio",
+          "Pandora",
+          "English Audio + Display",
+          "6,786,448"
+        ],
+        [
+          "Spanish Audio + Display",
+          "2,561,892"
+        ],
+        [
+          "Audio Totals",
+          "9,348,340"
+        ],
+        [
+          "Language Totals",
+          "English Language",
+          "49,831,924"
+        ],
+        [
+          "Spanish Language",
+          "9,979,886"
+        ],
+        [
+          "Social/Digital Media Campaign Totals",
+          "59,811,810"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "October 29, 2024",
+      "February 25, 2024",
+      "April 1, 2024",
+      "May 22, 2024",
+      "May 30, 2024",
+      "July 3, 2024",
+      "July 14, 2024",
+      "July 19, 2024",
+      "July 25, 2024",
+      "April 28, 2022"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

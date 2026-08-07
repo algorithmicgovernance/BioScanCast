@@ -1,0 +1,210 @@
+{
+  "question_id": "bfg_q1",
+  "options": [
+    "under 2,500",
+    "2,500 to 4,999",
+    "5,000 to 9,999",
+    "10,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,500": 0.00029772221727926527,
+        "2,500 to 4,999": 0.41962748086794266,
+        "5,000 to 9,999": 0.438727210520748,
+        "10,000 to 19,999": 0.14119548816514052,
+        "20,000 or more": 0.00015209822888948246
+      }
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,500": 0.25,
+        "2,500 to 4,999": 0.35,
+        "5,000 to 9,999": 0.2,
+        "10,000 to 19,999": 0.1,
+        "20,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "under 2,500",
+      "probability": 0.00029772221727926527,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "2,500 to 4,999",
+      "probability": 0.41962748086794266,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "5,000 to 9,999",
+      "probability": 0.438727210520748,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "10,000 to 19,999",
+      "probability": 0.14119548816514052,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.00015209822888948246,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,500",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,500 to 4,999",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 to 9,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "10,000 to 19,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.4,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in DRC and Uganda",
+      "base_rate": 0.6,
+      "drivers_up": [
+        "Rapid increase in confirmed cases from May to July 2026, indicating high transmission rates.",
+        "High number of deaths (1,033) suggests significant spread and severity."
+      ],
+      "drivers_down": [
+        "The outbreak has only been ongoing for a few months, which might limit total spread by October 2026.",
+        "Previous Ebola outbreaks have been controlled before reaching the highest figures projected."
+      ],
+      "why_might_be_wrong": "The actual spread could be much faster or slower than anticipated, due to factors such as changes in public health response effectiveness or viral mutation.",
+      "rationale": "By July 23, 2026, there were already 2,536 confirmed cases. Given the rapid increase from 676 in June to over 2,500 by late July, and considering the typical growth patterns of Ebola outbreaks, it is likely that the number will continue to rise significantly by October 31, 2026. However, reaching the highest tiers of 10,000 or more would require a continued high rate of transmission without effective intervention, which is less common in recent outbreaks. Therefore, a range of 5,000 to 9,999 seems plausible given the current data.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.0,
+        0.6,
+        0.3,
+        0.1,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola virus outbreaks in DRC and Uganda",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Rapid increase in cases from June to July, suggesting a high transmission rate.",
+        "Significant number of confirmed cases already reported by July 23, 2026 (2,536 cases).",
+        "Presence of cases in both DRC and Uganda, indicating cross-border spread potential."
+      ],
+      "drivers_down": [
+        "Previous outbreaks of Bundibugyo virus have not reached extremely high numbers, usually contained below 10,000 cases.",
+        "International responses and interventions typically limit the spread after initial spikes.",
+        "Under-reporting of deaths suggests some cases might not be captured, possibly indicating an overestimation of current spread."
+      ],
+      "why_might_be_wrong": "The trajectory of the outbreak could change significantly with new interventions or changes in virus transmissibility.",
+      "rationale": "The cumulative confirmed cases by July 23, 2026, were already at 2,536. Given the rapid increase from June to July and the cross-border nature of the outbreak, it is reasonable to expect further increases. However, historical containment of similar outbreaks and the potential for international intervention suggest it is unlikely to exceed 10,000 cases. Thus the most probable range is 2,500 to 4,999, with some chance of reaching 5,000 to 9,999 but less likely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.35,
+        0.4,
+        0.08,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola virus disease outbreaks in Africa",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Rapid increase in cases from 676 on June 10 to 2,536 by July 23, indicating a high transmission rate.",
+        "High number of deaths (1,033) suggesting possible under-reporting of cases."
+      ],
+      "drivers_down": [
+        "Interventions and international aid might be ramped up to control the outbreak, as seen in past Ebola outbreaks.",
+        "The outbreak is already receiving significant media and health organization attention, which could lead to increased control measures."
+      ],
+      "why_might_be_wrong": "The actual effectiveness of interventions and the true under-reporting level are unknown, which could significantly alter the trajectory of the outbreak.",
+      "rationale": "The rapid increase in cases from mid-June to late July suggests a high transmission rate, already surpassing the 2,500 case threshold. Given the growth trajectory and potential for under-reporting, it is plausible the outbreak could reach the 5,000 to 9,999 range. However, with significant attention and potential interventions, it is less likely to exceed this range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo virus outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative cases will likely be under 5,000 due to effective containment measures. However, the possibility of a larger outbreak cannot be completely ruled out, hence the distribution of probabilities.",
+  "evidence_record_ids": [
+    "ins-8bb1728b87db",
+    "ins-09b135e4fe08",
+    "ins-0a15a159c654",
+    "ins-5be200aafa23",
+    "ins-72af3acb9af3",
+    "ins-1073d6e11d43",
+    "ins-9bf143100b48"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4597,
+    "total_output_tokens": 910,
+    "total_tokens": 5507,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4347,
+        "output_tokens": 817,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 250,
+        "output_tokens": 93,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

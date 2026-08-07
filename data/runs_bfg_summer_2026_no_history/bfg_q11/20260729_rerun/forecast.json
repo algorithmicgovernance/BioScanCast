@@ -1,0 +1,214 @@
+{
+  "question_id": "bfg_q11",
+  "options": [
+    "under 200,000",
+    "200,000 to 299,999",
+    "300,000 to 449,999",
+    "450,000 to 649,999",
+    "650,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 200,000": 0.06392087863730526,
+        "200,000 to 299,999": 0.41817886525628556,
+        "300,000 to 449,999": 0.30440420997476997,
+        "450,000 to 649,999": 0.13296078560872276,
+        "650,000 or more": 0.08053526052291643
+      }
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 200,000": 0.4,
+        "200,000 to 299,999": 0.3,
+        "300,000 to 449,999": 0.2,
+        "450,000 to 649,999": 0.1,
+        "650,000 or more": 0.0
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "under 200,000",
+      "probability": 0.06392087863730526,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "200,000 to 299,999",
+      "probability": 0.41817886525628556,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "300,000 to 449,999",
+      "probability": 0.30440420997476997,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "450,000 to 649,999",
+      "probability": 0.13296078560872276,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast",
+      "option": "650,000 or more",
+      "probability": 0.08053526052291643,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 200,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "200,000 to 299,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "300,000 to 449,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "450,000 to 649,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q11",
+      "forecast_source": "bioscancast_baseline",
+      "option": "650,000 or more",
+      "probability": 0.0,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.4,
+        0.3,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Chikungunya outbreaks in the Americas in recent years",
+      "base_rate": 0.4,
+      "drivers_up": [
+        "164,889 suspected cases as of July 9, 2026, indicating ongoing transmission",
+        "Previous year (2025) had over 313,000 cases, suggesting potential for large outbreaks",
+        "Seasonal patterns often see increases in cases during warmer months"
+      ],
+      "drivers_down": [
+        "As of February 28, 2026, only 32,758 confirmed cases, which is significantly lower than suspected cases",
+        "Nine deaths suggest relatively low case fatality, possibly indicating effective public health response",
+        "Data from early 2026 shows a decline from the previous year"
+      ],
+      "why_might_be_wrong": "There might be significant under-reporting or a sudden outbreak in the second half of 2026, skewing the numbers higher.",
+      "rationale": "The base rate is informed by the 2025 outbreak with over 313,000 cases. However, with only 32,758 confirmed cases by February 2026 and 164,889 suspected cases by July, it suggests a slower spread this year. Given the current numbers, option 1 (200,000 to 299,999) seems most likely, but the potential for rapid spread or underestimation keeps options 2 and 3 as significant possibilities.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.5,
+        0.3,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual chikungunya cases in the Americas",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "The baseline number of suspected cases is already at 164,889 as of July 2026, indicating a strong likelihood of continued case reporting.",
+        "Historically, the number of chikungunya cases in the Americas has been high, with over 313,000 cases reported in 2025."
+      ],
+      "drivers_down": [
+        "The cumulative confirmed cases as of February 2026 are only 32,758, suggesting a slower confirmation rate.",
+        "If the pattern of 4,361 new confirmed cases per month continues, it may not reach the higher thresholds."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is a significant under-reporting of cases or a sudden outbreak that significantly increases the numbers.",
+      "rationale": "The baseline of 164,889 suspected cases as of July 2026 suggests a high likelihood of reaching at least 200,000 cases by the end of the year. Historical data shows the potential for high numbers, as seen in 2025 with over 313,000 cases. However, the confirmed cases are currently much lower, which might limit the upper range. Given these considerations, the most likely outcome is 200,000 to 299,999 cases, with a decent probability of the next bracket given past trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.35,
+        0.3,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Annual chikungunya cases in the Americas",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The Americas had over 313,000 cases in 2025, suggesting a potential for high case numbers.",
+        "The current suspected cases as of July 2026 are already at 164,889, indicating a significant number.",
+        "High transmission potential in tropical and subtropical climates prevalent in the Americas."
+      ],
+      "drivers_down": [
+        "Cumulative confirmed cases as of February 2026 are only 32,758, indicating potential over-reporting or misclassification in suspected cases.",
+        "Efforts to control outbreaks, such as vector control measures, may reduce case numbers.",
+        "Public health initiatives and awareness may lead to better prevention and reporting, potentially skewing numbers downward."
+      ],
+      "why_might_be_wrong": "The large discrepancy between suspected and confirmed cases suggests uncertainty in the data, which could lead to under- or overestimation.",
+      "rationale": "Given the historical data of over 313,000 cases in 2025 and the current high suspected cases of 164,889 as of July 2026, it seems likely that the total will exceed 200,000. However, the confirmed case count is much lower, indicating possible over-reporting of suspected cases. Considering these factors and the base rate, the most probable range is 200,000 to 299,999, but there remains a significant chance that it could be higher if suspected cases translate into confirmed cases or there is a surge in transmission.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Chikungunya outbreaks can vary significantly based on factors such as climate, vector control measures, and public health interventions. Given the historical data and trends, it is reasonable to expect that the number of cases will remain below 200,000 due to improved surveillance and control measures. However, there is still a possibility of outbreaks leading to higher case numbers, hence the probabilities reflect a decreasing likelihood as the case numbers increase.",
+  "evidence_record_ids": [
+    "ins-a7b923a5addf",
+    "ins-e3ab65a943cf",
+    "ins-ea6e434857aa",
+    "ins-5a08d4e034d0",
+    "ins-8a536e97d64c",
+    "ins-8128815a3d9e",
+    "ins-72cf76d7af71",
+    "ins-461184c8889a",
+    "ins-2dc5a14ac526"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4980,
+    "total_output_tokens": 1023,
+    "total_tokens": 6003,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4746,
+        "output_tokens": 911,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 234,
+        "output_tokens": 112,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,115 @@
+{
+  "records": [
+    {
+      "id": "ins-1cae3f9ff362",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:53:01.679362+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d406a20751364749ae463dc0e3a3429c",
+          "chunk_id": "doc-d406a20751364749ae463dc0e3a3429c-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        },
+        {
+          "document_id": "doc-c2829b387ad74d94aaa099ce5e1a5b6e",
+          "chunk_id": "doc-c2829b387ad74d94aaa099ce5e1a5b6e-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+          "quote": "no deaths have been reported from the disease since January 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-f43817fc240a",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:53:01.679466+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d406a20751364749ae463dc0e3a3429c",
+          "chunk_id": "doc-d406a20751364749ae463dc0e3a3429c-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There were 3 confirmed deaths from measles in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-e4d20d93a477",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Three people died from measles in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:53:07.020005+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1e98934f9802474fa641ca460742a297",
+          "chunk_id": "doc-1e98934f9802474fa641ca460742a297-c0-p2",
+          "source_url": "https://www.theguardian.com/us-news/2026/mar/02/measles-south-carolina-rfk-jr-vaccine-laws",
+          "quote": "three people died and hundreds were hospitalized."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 73496,
+    "total_output_tokens": 543,
+    "total_tokens": 74039,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 73496,
+        "output_tokens": 543,
+        "calls": 34
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,85 @@
+{
+  "records": [
+    {
+      "id": "ins-7cadc6612151",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Three people, including two young girls, died in the U.S. from measles last year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:12:17.705630+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-68430a6ee1964131a159f94b1756e618",
+          "chunk_id": "doc-68430a6ee1964131a159f94b1756e618-c0",
+          "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+          "quote": "Three people, including two young girls, died in the U.S. from measles last year."
+        },
+        {
+          "document_id": "doc-94d53b4ef600447dacfc1dcde44bc481",
+          "chunk_id": "doc-94d53b4ef600447dacfc1dcde44bc481-c0",
+          "source_url": "https://abcnews.com/Health/us-measles-cases-surpass-2000-2nd-year-row/story?id=133618006",
+          "quote": "The U.S. also saw its first measles deaths in more than a decade last year, including two among unvaccinated school-aged children in Texas and one among an unvaccinated adult in New Mexico."
+        }
+      ]
+    },
+    {
+      "id": "ins-5d1fac9358ca",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Last year\u2019s largest outbreak, centered on West Texas, killed two school-age children, both of whom were unvaccinated.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:12:23.620378+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-aaff9f1581c341f5ab6e2131ea9314e7",
+          "chunk_id": "doc-aaff9f1581c341f5ab6e2131ea9314e7-c0-p1",
+          "source_url": "https://www.theatlantic.com/health/2026/02/measles-death/686122",
+          "quote": "Last year's largest outbreak, centered on West Texas, killed two school-age children, both of whom were unvaccinated."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 63077,
+    "total_output_tokens": 511,
+    "total_tokens": 63588,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 63077,
+        "output_tokens": 511,
+        "calls": 28
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

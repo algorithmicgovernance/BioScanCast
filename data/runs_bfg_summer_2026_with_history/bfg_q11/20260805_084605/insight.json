@@ -1,0 +1,171 @@
+{
+  "records": [
+    {
+      "id": "ins-c26238bd7ecd",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 32529.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed CHIKVD cases reported in the Americas in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:46:25.286429+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-65359ac00ea549c6bd432a306857dd88",
+          "chunk_id": "doc-65359ac00ea549c6bd432a306857dd88-c3",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "In 2026, there have been 32 529 CHIKVD cases and nine associated deaths reported in the region."
+        }
+      ]
+    },
+    {
+      "id": "ins-94be2b3bc535",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 32758.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-02-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of chikungunya cases detected from 18 countries as of 28 February 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:46:24.002478+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-65359ac00ea549c6bd432a306857dd88",
+          "chunk_id": "doc-65359ac00ea549c6bd432a306857dd88-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "32 758 chikungunya virus disease (CHIKVD) cases and nine associated deaths have been detected from 18 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-14639545e6d9",
+      "question_id": "bfg_q11",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "deaths",
+      "metric_value": 9.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths associated with CHIKVD reported in the Americas in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:46:25.286752+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-65359ac00ea549c6bd432a306857dd88",
+          "chunk_id": "doc-65359ac00ea549c6bd432a306857dd88-c3",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "In 2026, there have been 32 529 CHIKVD cases and nine associated deaths reported in the region."
+        }
+      ]
+    },
+    {
+      "id": "ins-73c6828af6da",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 32729.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of chikungunya cases reported worldwide in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:46:23.852742+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-65359ac00ea549c6bd432a306857dd88",
+          "chunk_id": "doc-65359ac00ea549c6bd432a306857dd88-c7",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "In 2026, there have been 32 729 CHIKVD cases and nine associated deaths reported worldwide."
+        }
+      ]
+    },
+    {
+      "id": "ins-781beb1ec535",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Pakistan",
+      "iso_country_code": "PK",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 16.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Total reported cases in Pakistan for 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:46:24.593859+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-65359ac00ea549c6bd432a306857dd88",
+          "chunk_id": "doc-65359ac00ea549c6bd432a306857dd88-c4",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "A total of 16 CHIKVD case has been reported in the country in 2026."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 75605,
+    "total_output_tokens": 732,
+    "total_tokens": 76337,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 75605,
+        "output_tokens": 732,
+        "calls": 36
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

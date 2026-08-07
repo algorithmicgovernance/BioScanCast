@@ -1,0 +1,212 @@
+{
+  "question_id": "bfg_q6",
+  "options": [
+    "0 to 4",
+    "5 to 14",
+    "15 to 29",
+    "30 to 59",
+    "60 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0 to 4": 0.8297946881656526,
+        "5 to 14": 0.14406157780653694,
+        "15 to 29": 0.023049852449045918,
+        "30 to 59": 0.002513061692814217,
+        "60 or more": 0.0005808198859504764
+      }
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0 to 4": 0.5,
+        "5 to 14": 0.3,
+        "15 to 29": 0.15,
+        "30 to 59": 0.04,
+        "60 or more": 0.01
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "0 to 4",
+      "probability": 0.8297946881656526,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "5 to 14",
+      "probability": 0.14406157780653694,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "15 to 29",
+      "probability": 0.023049852449045918,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "30 to 59",
+      "probability": 0.002513061692814217,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "60 or more",
+      "probability": 0.0005808198859504764,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0 to 4",
+      "probability": 0.5,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5 to 14",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 29",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "30 to 59",
+      "probability": 0.04,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "60 or more",
+      "probability": 0.01,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global human H5 influenza infection reports in recent years",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Recent confirmed cases in Bangladesh and India suggest ongoing transmission.",
+        "The presence of H5N1 cases in multiple countries indicates potential for further spread."
+      ],
+      "drivers_down": [
+        "No significant increase in reported cases since early 2026, indicating control measures might be effective.",
+        "The number of cases in North America was concentrated in a specific outbreak, which may not repeat."
+      ],
+      "why_might_be_wrong": "There may be under-reporting or delayed detection of cases, especially in regions with less robust surveillance.",
+      "rationale": "The recent pattern of H5 infections shows sporadic cases in Bangladesh and India, with a few cases reported in 2026. The absence of a large outbreak since the North American cases suggests that while transmission continues, it is not escalating rapidly. The base rate indicates a low probability of high case numbers, supported by the lack of recent surges. Therefore, it is most probable that the number of cases will remain in the 0 to 4 range, with a decreasing likelihood for higher counts.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.04,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Past periods of reported human H5 influenza cases globally",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Recent confirmed cases in Bangladesh suggest ongoing transmission",
+        "Expanded subtyping protocols could lead to more cases being detected",
+        "Historical precedent of significant case numbers in North America indicates potential for outbreaks"
+      ],
+      "drivers_down": [
+        "Recent reports indicate only isolated cases, not widespread outbreaks",
+        "No widespread outbreaks reported globally outside specific regions",
+        "Past cases primarily confined to specific regions with limited spread"
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is an unexpected outbreak or significant under-reporting.",
+      "rationale": "The evidence suggests a current low level of human H5 infections globally, with isolated cases in Bangladesh and some historical cases in North America. The current trend indicates a lower likelihood of large numbers of cases within the next six months. However, the possibility of under-reporting and expanded detection methods could introduce variability. Balancing these factors, the most likely outcome is a small number of cases, but not zero, with a probability skewed towards the lower range of the options.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global human H5 avian influenza cases in recent years",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Recent detection of cases in multiple countries (e.g., Bangladesh and India) suggests ongoing transmission potential.",
+        "Expanded subtyping protocols could lead to more case detections.",
+        "Past instances of higher case numbers, such as 70 cases in North America from April 2024 to May 2025."
+      ],
+      "drivers_down": [
+        "Recent reports show only isolated cases rather than outbreaks.",
+        "The cumulative cases in 2026 are low so far, with only a few cases reported in Bangladesh and India.",
+        "Historically, human H5 infections are relatively rare and sporadic."
+      ],
+      "why_might_be_wrong": "The detection of a few cases could indicate the start of a larger outbreak, which the current evidence does not fully capture.",
+      "rationale": "The evidence shows a low number of cases reported in the first half of 2026, with a few isolated cases in Bangladesh and potentially India. Historically, human H5 infections have been rare and not widespread. However, the previous occurrence of 70 cases in North America over a year suggests potential for higher numbers if conditions change. The expanded subtyping protocol might increase detection rates, but currently, the situation does not indicate a large outbreak. Thus, the most likely outcome is 0 to 4 cases, but there's a moderate chance for a slightly higher count if conditions change.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Historically, human infections with H5 avian influenza have been relatively rare, with most years reporting few cases. The majority of outbreaks are contained within poultry populations, and human cases typically arise from direct contact with infected birds. Given the timeframe and the nature of the virus, it is reasonable to predict that the majority of reported cases will fall within the lower range of the options provided.",
+  "evidence_record_ids": [
+    "ins-7fc5e6d191f7",
+    "ins-5afb3e3076a1",
+    "ins-acbb0ff29b22",
+    "ins-eec3eab8f237",
+    "ins-bd8e71e619bd",
+    "ins-e4a807eaf4c0",
+    "ins-621e46d78066"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4656,
+    "total_output_tokens": 900,
+    "total_tokens": 5556,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4431,
+        "output_tokens": 795,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 225,
+        "output_tokens": 105,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

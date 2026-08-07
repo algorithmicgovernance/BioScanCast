@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-aa26cce835c1",
+      "question_id": "bfg_q19",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Saint Lucia",
+      "iso_country_code": "LC",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-02-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "First autochthonous case since 2021 reported in Saint Lucia in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:55:54.873479+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-61e508d5941f41849d93c30e629bb6ba",
+          "chunk_id": "doc-61e508d5941f41849d93c30e629bb6ba-c3",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "In 2026, Saint Lucia reported a locally acquired CHIKVD case."
+        }
+      ]
+    },
+    {
+      "id": "ins-4eb8b242bbc6",
+      "question_id": "bfg_q19",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "France",
+      "iso_country_code": "FR",
+      "pathogen": "chikungunya",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "first locally acquired cases of chikungunya reported in France during the week of July 25\u201331, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:55:57.519670+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6b4e967172104ddeabb70ae7f36fd6e2",
+          "chunk_id": "doc-6b4e967172104ddeabb70ae7f36fd6e2-c0",
+          "source_url": "https://en.protothema.gr/2026/08/04/infections-worrying-europe-what-the-new-ecdc-report-shows",
+          "quote": "the first locally acquired cases of chikungunya and dengue fever in France"
+        }
+      ]
+    },
+    {
+      "id": "ins-9b200af78cdf",
+      "question_id": "bfg_q19",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "France",
+      "iso_country_code": "FR",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-29T00:00:00",
+      "event_date_precision": "day",
+      "summary": "First locally acquired case recorded during the current season.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:55:57.280994+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6b4e967172104ddeabb70ae7f36fd6e2",
+          "chunk_id": "doc-6b4e967172104ddeabb70ae7f36fd6e2-c2",
+          "source_url": "https://en.protothema.gr/2026/08/04/infections-worrying-europe-what-the-new-ecdc-report-shows",
+          "quote": "France was the only European country to report a locally transmitted chikungunya case."
+        }
+      ]
+    },
+    {
+      "id": "ins-75416a632142",
+      "question_id": "bfg_q19",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Spain",
+      "iso_country_code": "ES",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-29T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Three locally acquired cases of chikungunya reported in Spain by July 29, 2026, including one new case during the latest week.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:55:57.444475+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6b4e967172104ddeabb70ae7f36fd6e2",
+          "chunk_id": "doc-6b4e967172104ddeabb70ae7f36fd6e2-c4",
+          "source_url": "https://en.protothema.gr/2026/08/04/infections-worrying-europe-what-the-new-ecdc-report-shows",
+          "quote": "By July 29, three cases had been recorded, including one new case reported during the latest week."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 79297,
+    "total_output_tokens": 613,
+    "total_tokens": 79910,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 79297,
+        "output_tokens": 613,
+        "calls": 38
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

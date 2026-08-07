@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "id": "ins-00a7b9bdd176",
+      "question_id": "bfg_q6",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-09T00:00:00",
+      "event_date_precision": "day",
+      "summary": "third laboratory-confirmed human case of avian influenza A(H5) reported in Bangladesh in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:43:50.339439+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e7cf892f5c74444ebc736507ab8af9a8",
+          "chunk_id": "doc-e7cf892f5c74444ebc736507ab8af9a8-c2",
+          "source_url": "https://web.archive.org/web/20260722032732id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "This is the third laboratory-confirmed human case of avian influenza A(H5) reported in Bangladesh in 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-510f8e462e0b",
+      "question_id": "bfg_q6",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": "National Influenza Surveillance, Bangladesh (NISB)",
+      "data_quality": null,
+      "event_date": "2026-06-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "One laboratory-confirmed human case of avian influenza A(H5) infection in a child from Sylhet Division.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:43:50.816830+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e7cf892f5c74444ebc736507ab8af9a8",
+          "chunk_id": "doc-e7cf892f5c74444ebc736507ab8af9a8-c1",
+          "source_url": "https://web.archive.org/web/20260722032732id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "one laboratory-confirmed human case of avian influenza A(H5) infection in Bangladesh in a child from Sylhet Division."
+        }
+      ]
+    },
+    {
+      "id": "ins-0f32dbe2d6f5",
+      "question_id": "bfg_q6",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-03-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Human infections caused by avian influenza A(H5N1) reported in Bangladesh.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:44:13.875760+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fb4a65cef60142338bd12492ed3cbc5a",
+          "chunk_id": "doc-fb4a65cef60142338bd12492ed3cbc5a-c0-p0",
+          "source_url": "https://www.who.int/southeastasia/news/detail/12-04-2026-vaccine-composition-meetings",
+          "quote": "human infections caused by avian influenza A(H5N1) reported in countries such as Bangladesh and India."
+        }
+      ]
+    },
+    {
+      "id": "ins-282d1b7d3a7a",
+      "question_id": "bfg_q6",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 71.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-02-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Total reported human cases of A(H5) bird flu in the United States since February 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:43:56.416315+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2af230c0799442a2a0e37f018e45207b",
+          "chunk_id": "doc-2af230c0799442a2a0e37f018e45207b-c1",
+          "source_url": "https://web.archive.org/web/20260726001007id_/https://www.cdc.gov/bird-flu/situation-summary/",
+          "quote": "Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024"
+        }
+      ]
+    },
+    {
+      "id": "ins-22ae2cb066d4",
+      "question_id": "bfg_q6",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "India",
+      "iso_country_code": "IN",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-03-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Human infections caused by avian influenza A(H5N1) reported in India.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:44:13.876452+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fb4a65cef60142338bd12492ed3cbc5a",
+          "chunk_id": "doc-fb4a65cef60142338bd12492ed3cbc5a-c0-p0",
+          "source_url": "https://www.who.int/southeastasia/news/detail/12-04-2026-vaccine-composition-meetings",
+          "quote": "human infections caused by avian influenza A(H5N1) reported in countries such as Bangladesh and India."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 152759,
+    "total_output_tokens": 899,
+    "total_tokens": 153658,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 152759,
+        "output_tokens": 899,
+        "calls": 70
+      }
+    }
+  },
+  "documents_processed": 10,
+  "documents_skipped": 0,
+  "notes": []
+}

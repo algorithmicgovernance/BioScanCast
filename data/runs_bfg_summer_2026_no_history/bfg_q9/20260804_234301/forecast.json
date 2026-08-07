@@ -1,0 +1,188 @@
+{
+  "question_id": "bfg_q9",
+  "options": [
+    "exactly 20",
+    "21 to 23",
+    "24 to 26",
+    "27 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 20": 0.11669523453014656,
+        "21 to 23": 0.2980821964527638,
+        "24 to 26": 0.3567993702467486,
+        "27 or more": 0.22842319877034095
+      }
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 20": 0.15,
+        "21 to 23": 0.25,
+        "24 to 26": 0.3,
+        "27 or more": 0.3
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "exactly 20",
+      "probability": 0.11669523453014656,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "21 to 23",
+      "probability": 0.2980821964527638,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "24 to 26",
+      "probability": 0.3567993702467486,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "27 or more",
+      "probability": 0.22842319877034095,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 20",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "21 to 23",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "24 to 26",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "27 or more",
+      "probability": 0.3,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.4,
+        0.35,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Past outbreaks of H5N1 or similar avian influenza strains in livestock across multiple US states.",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The disease has already spread to 14 states in a relatively short period since its emergence in 2024, indicating high transmissibility.",
+        "H5N1 is known for its ability to spread rapidly among animal populations, particularly if biosecurity measures are not stringent.",
+        "The US has a large number of dairy farms spread across many states, increasing the likelihood of further spread."
+      ],
+      "drivers_down": [
+        "Biosecurity measures might become more effective over time, reducing the spread to new states.",
+        "Increased awareness and surveillance as a result of the outbreak could lead to quicker containment and control measures.",
+        "The spread may slow as the initial rapid spread is often followed by a plateau as measures take effect."
+      ],
+      "why_might_be_wrong": "The model might underestimate the effectiveness of biosecurity measures or overestimate the virus's ability to spread across states.",
+      "rationale": "Given that 14 states have reported cases in just a few months, the spread of H5N1 appears rapid. With 14 states already affected and assuming a similar or slightly reduced rate of spread, it's reasonable to expect that more states will report incidents. However, considering potential improvements in containment, the spread may not be unchecked. Therefore, the most likely scenario is that 21 to 23 states will report cases, but there's a significant chance it could reach 24 to 26 states.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.35,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Past livestock disease outbreaks in the US, particularly those affecting cattle and poultry",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The outbreak has already spread to 14 states within a short time frame, indicating a potentially rapid spread.",
+        "H5N1 is a highly transmissible virus, which may cause rapid geographical spread across states.",
+        "The existing 387 infected herds suggest that containment may be challenging."
+      ],
+      "drivers_down": [
+        "Biosecurity measures and containment strategies may limit the spread beyond the already affected states.",
+        "USDA and state-level interventions may become more effective over time, slowing the spread.",
+        "Potential under-reporting or misclassification issues could mean the spread is less severe than reported."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if the outbreak response is significantly more effective than expected, or if reporting from states is inconsistent.",
+      "rationale": "Given that H5N1 has already been detected in 14 states shortly after the outbreak began, and considering the high transmissibility of the virus, it is plausible that the number of affected states will continue to grow. Historical patterns of livestock disease spread suggest that without significant containment, the spread could reach a large number of states. However, the probability of it reaching 27 or more states is tempered by potential containment efforts and interventions.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.25,
+        0.35,
+        0.3
+      ],
+      "ok": true,
+      "reference_class": "Past outbreaks of livestock diseases in the US, particularly avian influenza.",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The disease has already spread to 14 states within a short period since the outbreak was declared.",
+        "H5N1 is known for its high transmissibility among birds, and similar patterns might occur among cattle under certain conditions.",
+        "Interstate livestock trade can facilitate the spread of the virus to more states."
+      ],
+      "drivers_down": [
+        "US biosecurity measures are generally robust and could effectively contain further spread.",
+        "There may be increased surveillance and rapid response due to the high-profile nature of H5N1, limiting its spread.",
+        "The initial 14 states might have been particularly vulnerable, and other states might have better preventive measures."
+      ],
+      "why_might_be_wrong": "The base rate might not account for the unique characteristics of H5N1 and dairy cattle, leading to an inaccurate forecast of spread intensity.",
+      "rationale": "Starting with 14 states already affected by March 2024, the spread to additional states is plausible. The base rate for similar livestock diseases suggests a moderate spread, but given the rapid initial spread and H5N1's characteristics, more than 20 states seems likely. However, strong biosecurity measures could limit spread, making it less likely to reach 27 or more states.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of H5N1 outbreaks and the nature of its spread, it is plausible that a significant number of states will report detections by the end of 2026. The probabilities reflect a moderate expectation for a range of states reporting cases, with a slight inclination towards the higher end due to potential increases in surveillance and reporting.",
+  "evidence_record_ids": [
+    "ins-d8ae74e3fadd"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3038,
+    "total_output_tokens": 974,
+    "total_tokens": 4012,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2817,
+        "output_tokens": 881,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 221,
+        "output_tokens": 93,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

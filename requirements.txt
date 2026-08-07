@@ -10,6 +10,7 @@ pdfplumber>=0.11,<1.0 # Fallback PDF table extraction for cases PyMuPDF mishandl
 docling[chunking]>=2.90,<3.0 # TableFormer-based refinement for borderless / merged-cell PDF tables (first-run downloads ~40 MB to the HuggingFace cache)
 tiktoken>=0.7,<1.0 # Approximate token counting (cl100k_base encoding)
 openai>=1.0,<2.0 # OpenAI API client (used by filtering stage LLM calls)
+tavily-python>=0.5,<1.0 # Tavily API client for the live search backend
 pycountry>=24.0 # ISO 3166-1 country name → alpha-2 lookup (insight stage location resolution)
 playwright>=1.40,<2.0 # Headless-browser Tableau crosstab export for the USDA APHIS livestock scraper (requires a one-time `playwright install chromium`)
 pytest>=8.0,<9.0 # Testing

@@ -1,0 +1,168 @@
+{
+  "question_id": "bfg_q12",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.09099866707639068,
+        "NO": 0.9090013329236094
+      }
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.09099866707639068,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9090013329236094,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.25,
+        0.75
+      ],
+      "ok": true,
+      "reference_class": "Past WHO PHEIC declarations for infectious diseases",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "There have been significant clusters of mpox cases in multiple regions, including 689 cases in Madagascar and 129 cases in the EU/EEA in June 2026.",
+        "The disease continues to have a global presence with confirmed cases in multiple continents, indicating sustained transmission.",
+        "The cumulative global cases reached 184,531 with 164 deaths, showing a persistent burden."
+      ],
+      "drivers_down": [
+        "The overall death rate remains low, with fewer than 0.1% mortality for clade II, indicating low lethality.",
+        "There is no evidence of a sharp increase in incidence or new, more virulent strain emerging.",
+        "The previous PHEIC was lifted in September 2025, suggesting the situation was previously deemed manageable."
+      ],
+      "why_might_be_wrong": "The emergence of new strains or significantly increased transmission rates could rapidly alter the situation, making a PHEIC more likely.",
+      "rationale": "The base rate for WHO declaring a PHEIC for infectious diseases is relatively low. While there are significant clusters of mpox cases globally, the disease's low mortality rate and lack of evidence for increasing virulence or transmission suggest that a new PHEIC declaration is unlikely. However, the sustained global presence of the disease and the potential for changes in epidemiological trends necessitate a moderate probability for a declaration.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Past Public Health Emergency of International Concern (PHEIC) declarations for infectious diseases",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Mpox cases are present in various regions, including North America, Africa, and Europe, indicating potential for spread.",
+        "There are significant cumulative case numbers reported globally and in specific regions like North America and Africa.",
+        "The presence of deaths related to mpox, although low, indicates a non-negligible severity of cases."
+      ],
+      "drivers_down": [
+        "The overall global mortality rate is very low, with fewer than 0.1% for clade II.",
+        "The cumulative number of cases does not show explosive growth typical of other PHEIC declarations.",
+        "The prior mpox PHEIC was recently lifted, suggesting improved control measures or reduced perceived threat."
+      ],
+      "why_might_be_wrong": "There might be a sudden spike in cases or an unexpected mutation increasing severity or transmissibility, leading to a new PHEIC.",
+      "rationale": "The base rate for a PHEIC declaration for infectious diseases is relatively low. While mpox is present globally with a substantial number of cases, the low mortality rate and the recent lifting of the PHEIC suggest improved management and reduced immediate threat. However, the existing spread across continents and the potential for changes in the situation warrant a moderate probability of a new PHEIC declaration. Balancing these factors, the probability of a new mpox PHEIC being declared in the specified time frame is moderate, but slightly leaning towards not being declared.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for mpox and other infectious diseases",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The presence of 15 mpox cases in Guinea over six weeks indicates ongoing transmission.",
+        "Madagascar reported 689 cases, suggesting a concentrated outbreak.",
+        "129 cases in EU/EEA in a month indicate some level of spread.",
+        "Previous PHEIC for mpox shows WHO's willingness to declare for this pathogen."
+      ],
+      "drivers_down": [
+        "Mpox cases globally are dispersed and not concentrated in one area, making a focused outbreak less likely.",
+        "The cumulative global cases and deaths do not show a large increase, suggesting limited spread.",
+        "The recent lifting of the previous PHEIC in September 2025 suggests conditions might not yet meet the threshold for a new PHEIC.",
+        "The mortality rate of mpox is relatively low, at less than 0.1% for clade II."
+      ],
+      "why_might_be_wrong": "The spread of mpox could accelerate unexpectedly, or a new clade could emerge that is more virulent or transmissible.",
+      "rationale": "The WHO declares a PHEIC when an infectious disease poses a significant global health threat. While there are multiple regions with mpox cases and some areas like Madagascar have significant numbers, the overall global spread and mortality do not appear to meet the typical thresholds for a PHEIC. Previous PHEIC declarations for mpox were likely due to higher transmission rates or novel circumstances. Given the current evidence, the base rate for PHEIC declarations and these specific drivers, we estimate a low probability for a new PHEIC declaration within the window.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Considering the current global health landscape and the historical context of mpox outbreaks, it is plausible that the WHO may monitor the situation closely. However, given the relatively low incidence of mpox compared to other infectious diseases and the effectiveness of existing public health measures, the likelihood of a new Public Health Emergency of International Concern (PHEIC) declaration seems lower. Therefore, I estimate a 30% probability for 'YES' and a 70% probability for 'NO'.",
+  "evidence_record_ids": [
+    "ins-917cf26175b1",
+    "ins-23013c17aa81",
+    "ins-94a3c30a10d3",
+    "ins-a7acd23778fe",
+    "ins-3ba25a7767bf",
+    "ins-93b4f4dcc45e",
+    "ins-af7a5da0d923",
+    "ins-806882e74e5b",
+    "ins-f954ff2f62d1",
+    "ins-2bc31f2b33f1",
+    "ins-1fcbef7b64d5",
+    "ins-031137898408",
+    "ins-4a6260db05af",
+    "ins-432dda56aa2b",
+    "ins-1a4878cad904",
+    "ins-c4c3da4072fa",
+    "ins-9d7a3051e749",
+    "ins-7f7ffbee3e7b",
+    "ins-c80e5429b94b"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6575,
+    "total_output_tokens": 1058,
+    "total_tokens": 7633,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6387,
+        "output_tokens": 947,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 188,
+        "output_tokens": 111,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

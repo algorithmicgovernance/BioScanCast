@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "id": "ins-10babba8ce58",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-23T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed measles cases reported in the United States as of July 23, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:45:49.608179+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dcd88428da36402f98bfd8866f44a45e",
+          "chunk_id": "doc-dcd88428da36402f98bfd8866f44a45e-c1",
+          "source_url": "https://web.archive.org/web/20260728221833id_/https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "2,318 confirmed* measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-e60e958c0347",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed measles cases in the U.S. for 2026 so far.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:45:54.523501+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c5f95bfd6c6a41d59adbc695c88c1172",
+          "chunk_id": "doc-c5f95bfd6c6a41d59adbc695c88c1172-c0",
+          "source_url": "https://abcnews.com/Health/us-measles-cases-hit-2318-2026-surpassing-years/story?id=134813573",
+          "quote": "The number of confirmed measles cases in the U.S. so far this year has hit 2,318"
+        }
+      ]
+    },
+    {
+      "id": "ins-9f3994054986",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total reported cases in the U.S. as of July 19, 2026, surpassing last year's total.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:45:56.834036+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9cfb7f94f1c84fec924108555b3e32e8",
+          "chunk_id": "doc-9cfb7f94f1c84fec924108555b3e32e8-c1",
+          "source_url": "https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026",
+          "quote": "the nation reported 2,295 cases as of Tuesday."
+        }
+      ]
+    },
+    {
+      "id": "ins-3e9f9d591b24",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-23T00:00:00",
+      "event_date_precision": "day",
+      "summary": "35 new outbreaks reported in 2026, with 93% of confirmed cases outbreak-associated.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:45:49.608524+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dcd88428da36402f98bfd8866f44a45e",
+          "chunk_id": "doc-dcd88428da36402f98bfd8866f44a45e-c1",
+          "source_url": "https://web.archive.org/web/20260728221833id_/https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 35 new outbreaks** reported in 2026, and 93% of confirmed cases (2,153 of 2,318) are outbreak-associated"
+        }
+      ]
+    },
+    {
+      "id": "ins-d4314c459322",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.3,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "suspected_cases",
+      "metric_value": 21000000.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Nearly 21 million children missed their routine first dose of measles, indicating a potential increase in cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:46:03.984604+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-45ef313832c04c239822de32dcd5b27c",
+          "chunk_id": "doc-45ef313832c04c239822de32dcd5b27c-c1",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage",
+          "quote": "nearly 21 million children missed their routine first dose of measles"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 67621,
+    "total_output_tokens": 716,
+    "total_tokens": 68337,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 67621,
+        "output_tokens": 716,
+        "calls": 31
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,147 @@
+{
+  "records": [
+    {
+      "id": "ins-f87b6e135e81",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "World",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 180545.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-27T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases as of April 27, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T15:57:31.162287+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ec1fb74ca2a743e7b176e7cc539f5852",
+          "chunk_id": "doc-ec1fb74ca2a743e7b176e7cc539f5852-c0",
+          "source_url": "https://web.archive.org/web/20260721045938id_/https://ourworldindata.org/mpox",
+          "quote": "cumulative confirmed cases (World): 180,545"
+        }
+      ]
+    },
+    {
+      "id": "ins-19ab8721906a",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 100000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2022-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The ongoing global outbreak of clade IIb monkeypox has caused more than 100,000 cases in 122 total countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T15:57:34.830703+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8ed76956df124af6a3a8912c3ef9b40e",
+          "chunk_id": "doc-8ed76956df124af6a3a8912c3ef9b40e-c0",
+          "source_url": "https://web.archive.org/web/20260725193630id_/https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "has caused more than 100,000 cases in 122 total countries"
+        },
+        {
+          "document_id": "doc-3d9786426d7f4fbda3fb44f7394d542b",
+          "chunk_id": "doc-3d9786426d7f4fbda3fb44f7394d542b-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "has caused more than 100,000 cases in 122 total countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-bcc99943ce14",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 55000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total since January 2024",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T15:57:44.674751+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a44c469ce4ee40b5a715d8a4007291e0",
+          "chunk_id": "doc-a44c469ce4ee40b5a715d8a4007291e0-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "more than 55,000 confirmed cases of clade I monkeypox have been reported globally"
+        }
+      ]
+    },
+    {
+      "id": "ins-5a377f32e686",
+      "question_id": "bfg_q13",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 30.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "More than 30 clade I monkeypox cases reported in the United States as of July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T15:57:44.818947+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a44c469ce4ee40b5a715d8a4007291e0",
+          "chunk_id": "doc-a44c469ce4ee40b5a715d8a4007291e0-c1",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "there have been more than 30 clade I monkeypox cases reported in the United States."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 127434,
+    "total_output_tokens": 895,
+    "total_tokens": 128329,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 127434,
+        "output_tokens": 895,
+        "calls": 57
+      }
+    }
+  },
+  "documents_processed": 10,
+  "documents_skipped": 1,
+  "notes": [
+    "Skipped document doc-c938476a66094bf3a19088397f8d4180: failed"
+  ]
+}

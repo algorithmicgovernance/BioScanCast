@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "id": "ins-2f94b2e2fc92",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:52:33.915098+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-aaad5a463cd24c49aed9473359a84c81",
+          "chunk_id": "doc-aaad5a463cd24c49aed9473359a84c81-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-0ea7de66b48d",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "U.S.",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Three people died in the U.S. from measles last year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:52:40.347245+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-da8b4fa3c5e64a768f1ff63821992df9",
+          "chunk_id": "doc-da8b4fa3c5e64a768f1ff63821992df9-c0",
+          "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+          "quote": "Three people, including two young girls, died in the U.S. from measles last year."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 25698,
+    "total_output_tokens": 265,
+    "total_tokens": 25963,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 25698,
+        "output_tokens": 265,
+        "calls": 12
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

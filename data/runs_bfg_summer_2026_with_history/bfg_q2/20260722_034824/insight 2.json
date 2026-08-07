@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "id": "ins-ffbf1b5af131",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of the outbreak declaration on 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:49:26.587609+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eae64584e0114acaa76e4c8dcf4fc70d",
+          "chunk_id": "doc-eae64584e0114acaa76e4c8dcf4fc70d-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 64704,
+    "total_output_tokens": 238,
+    "total_tokens": 64942,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 64704,
+        "output_tokens": 238,
+        "calls": 30
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

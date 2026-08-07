@@ -1,0 +1,319 @@
+{
+  "records": [
+    {
+      "id": "ins-8412d3d6ce15",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of the outbreak declaration on 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:34:49.625803+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-30cad13b736e4d67bcb30a26b6bd8e1a",
+          "chunk_id": "doc-30cad13b736e4d67bcb30a26b6bd8e1a-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-d6d698dc920c",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1487.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths recorded since the outbreak declaration on 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:34:58.810232+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c4d1c712d25d4c488c4e80c968ad231c",
+          "chunk_id": "doc-c4d1c712d25d4c488c4e80c968ad231c-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "with 1,487 deaths recorded"
+        }
+      ]
+    },
+    {
+      "id": "ins-c21b29311762",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 1521.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The sharp rise since last week partly reflects a backlog of cases and deaths that had not yet been confirmed or recorded",
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported as of July 30, 2026, during the Bundibugyo outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:34:56.122528+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f38d3ed2a9d84928a21b08c6e112e06b",
+          "chunk_id": "doc-f38d3ed2a9d84928a21b08c6e112e06b-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-death-toll-bundibugyo-virus-response-treatment-269eac4d8a93be912459486428ef2f94",
+          "quote": "1,521 deaths, according to the latest government update."
+        }
+      ]
+    },
+    {
+      "id": "ins-afa1f7c8c79b",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 830.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of deaths reported in the Democratic Republic of the Congo and Uganda as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:01.902492+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-017297549efd4713ad0250a014ca2da7",
+          "chunk_id": "doc-017297549efd4713ad0250a014ca2da7-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "A total of 830 deaths has been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-a33208386e52",
+      "question_id": "bfg_q2",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_deaths",
+      "metric_value": 13.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Thirteen front-line health workers died; this is part of suspected deaths before the outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:07.532408+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2fb143176edf4009bcecaadb55a5f625",
+          "chunk_id": "doc-2fb143176edf4009bcecaadb55a5f625-c1",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/08/04/the-bundibugyo-ebola-outbreak-congo-declared-in-may-began-in-january",
+          "quote": "Thirteen front-line health workers died."
+        }
+      ]
+    },
+    {
+      "id": "ins-3be17213cefe",
+      "question_id": "bfg_q2",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 500.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "They counted more than 500 suspected cases between mid-January and the declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:07.532802+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2fb143176edf4009bcecaadb55a5f625",
+          "chunk_id": "doc-2fb143176edf4009bcecaadb55a5f625-c1",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/08/04/the-bundibugyo-ebola-outbreak-congo-declared-in-may-began-in-january",
+          "quote": "They counted more than 500 suspected cases between mid-January and the declaration."
+        }
+      ]
+    },
+    {
+      "id": "ins-d0681fd75a5d",
+      "question_id": "bfg_q2",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "affected_herds",
+      "metric_value": 20.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The cemetery was managing as many as 20 burials in a day.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:07.532856+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2fb143176edf4009bcecaadb55a5f625",
+          "chunk_id": "doc-2fb143176edf4009bcecaadb55a5f625-c1",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/08/04/the-bundibugyo-ebola-outbreak-congo-declared-in-may-began-in-january",
+          "quote": "The cemetery was managing as many as 20 burials in a day."
+        }
+      ]
+    },
+    {
+      "id": "ins-d189e89c7018",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1707.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-03T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of deaths as of August 3, 2026, during the Bundibugyo outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:04.546896+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2fb143176edf4009bcecaadb55a5f625",
+          "chunk_id": "doc-2fb143176edf4009bcecaadb55a5f625-c0",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/08/04/the-bundibugyo-ebola-outbreak-congo-declared-in-may-began-in-january",
+          "quote": "1,707 deaths as of August 3."
+        }
+      ]
+    },
+    {
+      "id": "ins-71640115fb89",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 1589.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed and probable deaths reported in the outbreak as of 30 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:14.578636+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e783e586a2664d89b6e1f42547ff7b1d",
+          "chunk_id": "doc-e783e586a2664d89b6e1f42547ff7b1d-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
+          "quote": "A total of 1589 deaths have been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-d1fd02f1a28d",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 282.0,
+      "metric_unit": null,
+      "count_basis": "incident",
+      "time_window": "week",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Reported deaths within the past week during the outbreak as of 30 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:35:14.579128+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e783e586a2664d89b6e1f42547ff7b1d",
+          "chunk_id": "doc-e783e586a2664d89b6e1f42547ff7b1d-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
+          "quote": "During this period, 641 confirmed cases, including 282 confirmed deaths, were reported."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 106265,
+    "total_output_tokens": 1517,
+    "total_tokens": 107782,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 106265,
+        "output_tokens": 1517,
+        "calls": 47
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

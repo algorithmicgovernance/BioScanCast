@@ -41,6 +41,9 @@ from bioscancast.llm.pricing import (
 )
 from bioscancast.orchestration import persistence
 
+from bioscancast.stages.evaluation.forecast_exports import (
+    append_forecast_rows_to_output,
+)
 from bioscancast.stages.evaluation.loaders import (
     load_options_for_question,
     load_question_by_id,
@@ -716,6 +719,12 @@ def run_pipeline(args: argparse.Namespace) -> "ForecastResult | InsightRunResult
                     historical_insight_context=historical_insight_context,
                 )
                 persistence.save_forecast(run_dir, forecast_result)
+                append_forecast_rows_to_output(
+                    out_root,
+                    question.id,
+                    run_id,
+                    forecast_result,
+                )
             stage_usage["forecast"] = (
                 forecast_result.budget_summary.get("per_model") or {}
             )

@@ -1,0 +1,212 @@
+{
+  "question_id": "bfg_q1",
+  "options": [
+    "under 2,500",
+    "2,500 to 4,999",
+    "5,000 to 9,999",
+    "10,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,500": 0.13449458780926724,
+        "2,500 to 4,999": 0.22475381310937062,
+        "5,000 to 9,999": 0.13449458780926724,
+        "10,000 to 19,999": 0.2531285056360474,
+        "20,000 or more": 0.2531285056360474
+      }
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,500": 0.1,
+        "2,500 to 4,999": 0.3,
+        "5,000 to 9,999": 0.4,
+        "10,000 to 19,999": 0.15,
+        "20,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "under 2,500",
+      "probability": 0.13449458780926724,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "2,500 to 4,999",
+      "probability": 0.22475381310937062,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "5,000 to 9,999",
+      "probability": 0.13449458780926724,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "10,000 to 19,999",
+      "probability": 0.2531285056360474,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.2531285056360474,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,500",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,500 to 4,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 to 9,999",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "10,000 to 19,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in the DRC and Uganda",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The outbreak has already surpassed 1,000 confirmed cases within a short period, indicating rapid spread.",
+        "The outbreak is described as the fastest-growing in the history of the virus, suggesting high transmission rates.",
+        "The disease is affecting people in five provinces, expanding its geographic reach."
+      ],
+      "drivers_down": [
+        "Previous outbreaks have been contained successfully with coordinated international response efforts.",
+        "The case fatality rate is relatively high, which may limit the spread as the virus quickly incapacitates its hosts."
+      ],
+      "why_might_be_wrong": "The data provided includes inconsistencies in case counts, which could lead to over- or underestimation.",
+      "rationale": "The evidence indicates a rapidly spreading outbreak, with the number of confirmed cases reaching 3,360 by mid-July 2026. Given the description of this outbreak as the fastest-growing in history and the rapid increase from 20 to over 1,000 cases in less than two months, it is reasonable to expect the cumulative cases to fall into a higher category. However, the data shows inconsistencies, and while the outbreak is spreading quickly, past containment efforts and high fatality rates might slow the spread. Therefore, placing the probability in the 10,000 to 19,999 range seems justified, accounting for ongoing efforts to contain it.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ok": true,
+      "reference_class": "Past Bundibugyo virus disease outbreaks",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The outbreak is described as the fastest-growing in the history of the virus, indicating a high transmission rate.",
+        "A cumulative 34,700 confirmed cases were reported by June 24, 2026, indicating a rapid spread.",
+        "The outbreak affects multiple provinces in the DRC, suggesting widespread dissemination."
+      ],
+      "drivers_down": [
+        "The outbreak has been ongoing for several months, which may lead to increased containment efforts and a slowdown in new cases.",
+        "There is no specific information indicating a significant increase in cases after June 24, 2026."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there were substantial containment measures or changes in reporting that led to a rapid decrease in case numbers after the last data point.",
+      "rationale": "By June 24, 2026, there were already 34,700 confirmed cases, suggesting a very high likelihood of exceeding the lower thresholds. Given the description of the outbreak as the fastest-growing in history and the high number of cases already reported, it is highly probable that the number will surpass 20,000 by the end of October 2026. The lack of more recent data might introduce some uncertainty, but the rapid rate of increase observed suggests that containment measures have not yet significantly slowed the spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.7,
+        0.15,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in DRC and Uganda",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "As of July 15, 2026, there were already 3,360 confirmed cases in the DRC alone, indicating a rapid spread.",
+        "The outbreak is noted as the fastest-growing in the history of the virus.",
+        "Outbreaks in densely populated or difficult to access regions can escalate quickly."
+      ],
+      "drivers_down": [
+        "Rapid response measures could be implemented to slow the spread.",
+        "International aid and intervention might help control the outbreak more effectively.",
+        "Past outbreaks have sometimes been contained before reaching the highest levels."
+      ],
+      "why_might_be_wrong": "The situation could change dramatically with either a breakthrough in containment or a worsening crisis.",
+      "rationale": "The cumulative case count as of July 15, 2026, was 3,360 in the DRC alone, which already places the outbreak in the '2,500 to 4,999' range. The report of it being the fastest-growing outbreak suggests a likelihood of this number increasing significantly. However, the base rate for Ebola outbreaks to reach extremely high numbers (over 10,000) is low, with historical interventions often managing to contain outbreaks before they reach such levels. Given the evidence, a continued increase is likely, but not to the highest thresholds. Thus, a probability of 0.70 for the 2,500 to 4,999 range reflects this, with some probability allocated to both lower and higher ranges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo virus outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative cases will likely be under 5,000 due to effective containment measures. However, the possibility of a larger outbreak cannot be entirely ruled out, hence the distribution of probabilities.",
+  "evidence_record_ids": [
+    "ins-783dcc194b3a",
+    "ins-070a2669dd93",
+    "ins-9a95654a6d98",
+    "ins-7395d8ad8c47",
+    "ins-456af2093ceb",
+    "ins-465e08f37236",
+    "ins-9dd11b436b5b"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7276,
+    "total_output_tokens": 1013,
+    "total_tokens": 8289,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7026,
+        "output_tokens": 920,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 250,
+        "output_tokens": 93,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

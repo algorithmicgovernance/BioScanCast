@@ -1,0 +1,81 @@
+[
+  {
+    "result_id": "46582182a5d3424a8931e3d7df92c585",
+    "question_id": "bfg_q19",
+    "url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+    "canonical_url": "https://ecdc.europa.eu/en/chikungunya-monthly",
+    "domain": "ecdc.europa.eu",
+    "title": "ECDC Chikungunya worldwide overview (monthly)",
+    "snippet": "Europe",
+    "published_date": null,
+    "file_type": null,
+    "relevance_score": 0.14285714285714285,
+    "credibility_score": 1.0,
+    "final_score": 1.0,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "dashboard_lookup_bypass"
+    ],
+    "extraction_priority": 1,
+    "extraction_mode": "html",
+    "expected_value": "high",
+    "source_id": "ecdc_chikungunya",
+    "region": "eu-eea",
+    "question_text": "How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?"
+  },
+  {
+    "result_id": "0c361f48b5774f929fd2ddfff39529de",
+    "question_id": "bfg_q19",
+    "url": "https://www.gov.uk/government/news/ukhsa-and-partners-publish-first-one-health-annual-vector-borne-disease-surveillance-report",
+    "canonical_url": "https://gov.uk/government/news/ukhsa-and-partners-publish-first-one-health-annual-vector-borne-disease-surveillance-report",
+    "domain": "gov.uk",
+    "title": "UKHSA and partners publish first One Health annual Vector-Borne Disease surveillance report - GOV.UK",
+    "snippet": "The Aedes albopictus mosquito, which transmits dengue and chikungunya viruses, is now established in 16 European countries, and during 2025, a record number of locally acquired chikungunya cases were reported in Europe, following a record number of locally acquired cases of dengue fever in 2024.\n\nProfessor Lea BerrangFord, Deputy Director, Centre for Climate & Health Security, at UKHSA said: [...] Trends across Europe show a growing risk of transmission of a number of different mosquito-borne infections. During 2025, France reported their largest outbreaks of West Nile virus to date, including outbreaks in northern areas of the country and urban Paris. [...] The updated invasive National contingency plan for invasive Aedes mosquitoes in England supersedes the 2020 plan and is expanded to include actions to manage established invasive Aedes populations and local transmission of dengue and chikungunya virus.",
+    "published_date": "2026-05-21T00:00:00+00:00",
+    "file_type": null,
+    "relevance_score": 0.9,
+    "credibility_score": 0.8,
+    "final_score": 0.85,
+    "source_tier": "official",
+    "is_official_domain": false,
+    "selection_reasons": [
+      "official_source",
+      "event_specific",
+      "recent"
+    ],
+    "extraction_priority": 2,
+    "extraction_mode": "html",
+    "expected_value": "medium",
+    "source_id": null,
+    "region": "eu-eea",
+    "question_text": "How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?"
+  },
+  {
+    "result_id": "d7763d2531fc4e5b98c3655f822f64c4",
+    "question_id": "bfg_q19",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "canonical_url": "https://who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+    "domain": "who.int",
+    "title": "Dengue",
+    "snippet": "Dengue is spreading to new areas, including the European and Eastern Mediterranean regions. In 2024, 308 cases were reported to WHO from three European countries (France, Italy and Spain) and an additional 1291 cases and four deaths were recorded in the French overseas territories of Mayotte and R\u00e9union.\n\nTransmission\n\n### Transmission through the mosquito bite [...] In 2024, more cases of dengue were recorded than ever before in a 12-month period, affecting over 100 countries on all continents. During 2024, ongoing transmission, combined with an unexpected spike in dengue cases, resulted in a historic high of over 14.6 million cases and more than 12 000 dengue-related deaths reported. The Region of the Americas contributed a significant proportion of the global burden, with over 13 million cases reported to WHO. [...] One modelling estimate indicates 390 million dengue virus infections per year, of which 96 million manifest clinically(1).A recent study on the prevalence of dengue estimates that 5.6 billion people are at risk of infection with dengue and other arboviruses(2).",
+    "published_date": "2025-08-21T00:00:00+00:00",
+    "file_type": null,
+    "relevance_score": 0.14285714285714285,
+    "credibility_score": 1.0,
+    "final_score": 0.4736320939334637,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "official_domain",
+      "has_publication_date",
+      "official_recall_guarantee"
+    ],
+    "extraction_priority": 3,
+    "extraction_mode": "html",
+    "expected_value": "medium",
+    "source_id": null,
+    "region": "eu-eea",
+    "question_text": "How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?"
+  }
+]

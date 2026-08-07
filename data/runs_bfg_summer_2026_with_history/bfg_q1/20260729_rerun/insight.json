@@ -1,0 +1,199 @@
+{
+  "records": [
+    {
+      "id": "ins-ddde4a7cea37",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of the outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:00:36.349469+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2731ab03a03a47ce992a098254372b64",
+          "chunk_id": "doc-2731ab03a03a47ce992a098254372b64-c0",
+          "source_url": "https://web.archive.org/web/20260728102153id_/https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-245efcb3ee79",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 808.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of laboratory-confirmed cases in DRC as of 14 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:00:45.526790+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7eff371b639e44b0a532542459b749f0",
+          "chunk_id": "doc-7eff371b639e44b0a532542459b749f0-c0",
+          "source_url": "https://reliefweb.int/report/democratic-republic-congo/ebola-bundibugyo-virus-disease-outbreak-democratic-republic-congo-uganda-weekly-external-situation-report-05-data-14-june-2026",
+          "quote": "a cumulative total of 808 laboratory-confirmed cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-075d6c293141",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 676.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The reported CFR is likely an underestimation, as many deaths that occurred before the outbreak declaration remain under investigation.",
+      "event_date": "2026-06-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in DRC as of 10 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:00:58.357486+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-511d854b748349979bb694e06d1b8a38",
+          "chunk_id": "doc-511d854b748349979bb694e06d1b8a38-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON607",
+          "quote": "a total of 676 confirmed cases including 136 deaths (CFR 20.1%) have been reported from the Democratic Republic of Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-7b37f8fb220a",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 808.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in DRC as of 14 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:00:48.518531+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5628f2541ae542338cff8ec5c88e130f",
+          "chunk_id": "doc-5628f2541ae542338cff8ec5c88e130f-c0",
+          "source_url": "https://reliefweb.int/report/democratic-republic-congo/africa-region-ebola-bvd-epidemic-operation-update-mdrs1007",
+          "quote": "the cumulative confirmed cases stand at 827 (DRC 808; Uganda 19)"
+        }
+      ]
+    },
+    {
+      "id": "ins-65aa38771a20",
+      "question_id": "bfg_q1",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 830.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported in DRC and Uganda as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:00:53.099268+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-12b2d90be5454fb5b45b2d5332dcfcce",
+          "chunk_id": "doc-12b2d90be5454fb5b45b2d5332dcfcce-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "A total of 830 deaths has been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-db7ae06dc0d6",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 19.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in Uganda as of 10 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T14:00:58.363912+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-511d854b748349979bb694e06d1b8a38",
+          "chunk_id": "doc-511d854b748349979bb694e06d1b8a38-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON607",
+          "quote": "a cumulative of 19 confirmed cases including two deaths in imported cases"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 107197,
+    "total_output_tokens": 1037,
+    "total_tokens": 108234,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 107197,
+        "output_tokens": 1037,
+        "calls": 46
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

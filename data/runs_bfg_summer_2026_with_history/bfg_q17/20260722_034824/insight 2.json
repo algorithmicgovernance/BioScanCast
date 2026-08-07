@@ -1,0 +1,417 @@
+{
+  "records": [
+    {
+      "id": "ins-19be957d5d93",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 114829.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "Potential underreporting and reporting delays may affect timeliness and accuracy",
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cholera and AWD cases reported from 1 January to 31 May 2026 across 23 countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:04.554590+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c2",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a total of 114 829 cholera and AWD cases and 1318 deaths were reported from 23 countries across four WHO regions"
+        },
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c4",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a cumulative total of 114 829 cholera and AWD cases and 1318 deaths were reported from 23 countries across four WHO regions."
+        }
+      ]
+    },
+    {
+      "id": "ins-244255585c6b",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 114829.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed cholera cases since January 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:08.188603+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c0",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "Cases - 114 829 Since Jan. 202 6"
+        }
+      ]
+    },
+    {
+      "id": "ins-0c188361b86a",
+      "question_id": "bfg_q17",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 1318.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of cholera-related deaths reported from 1 January to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:05.749458+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c4",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a cumulative total of 114 829 cholera and AWD cases and 1318 deaths were reported from 23 countries across four WHO regions."
+        }
+      ]
+    },
+    {
+      "id": "ins-ac95c2080e6e",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "African Region",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 61288.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cholera cases reported from 1 January 2026 to 31 May 2026 across 16 countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:05.626834+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c9",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a total of 61 888 cholera cases were reported across 16 countries in the African Region."
+        }
+      ]
+    },
+    {
+      "id": "ins-7c455ac20f48",
+      "question_id": "bfg_q17",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "African Region",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 1230.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cholera-related deaths reported from 1 January 2026 to 31 May 2026 across 12 countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:05.626924+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c9",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a total of 1230 deaths were reported from 12 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-5bd4e9f887b6",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Myanmar",
+      "iso_country_code": "MM",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 205.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cholera or AWD cases reported in Myanmar from 1 January to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:05.921929+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c12",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "Cases were reported from Myanmar (205) and India (36)."
+        }
+      ]
+    },
+    {
+      "id": "ins-426351fc9dd9",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Haiti",
+      "iso_country_code": "HT",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 529.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "total cases reported from 1 January to 31 May 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:05.127853+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c11",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a total of 529 cholera cases and two deaths were reported from Haiti."
+        }
+      ]
+    },
+    {
+      "id": "ins-bdeb2a37bf7f",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Nigeria",
+      "iso_country_code": "NG",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 6860.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total reported cases in Nigeria from 1 January to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:06.127774+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c20",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "Nigeria reported a total of 6860 cases and 80 deaths (CFR: 1.2%)."
+        }
+      ]
+    },
+    {
+      "id": "ins-bb228bf29c06",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Eastern Mediterranean Region",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 52171.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cholera and AWD cases reported from 1 January 2026 to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:07.834284+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c10",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a total of 52 171 cholera and AWD cases were reported across five countries in the Eastern Mediterranean Region."
+        }
+      ]
+    },
+    {
+      "id": "ins-758e537481d8",
+      "question_id": "bfg_q17",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Eastern Mediterranean Region",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 86.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cholera-related deaths reported from 1 January 2026 to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:07.834335+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c10",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "a total of 86 deaths were reported from three countries: Sudan (61), Afghanistan (18), and Yemen (seven deaths)."
+        }
+      ]
+    },
+    {
+      "id": "ins-31d691c9cf8c",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "South Sudan",
+      "iso_country_code": "SS",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7712.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in South Sudan from 1 January to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:06.794974+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c22",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "South Sudan reported a total of 7712 cases and 84 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-f5059cf846bd",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 28567.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported from 1 January to 31 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:07.165410+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c18",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "the Democratic Republic of the Congo reported a total of 28 567 cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-f8cbf850ba6a",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Angola",
+      "iso_country_code": "AO",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4852.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "total cases reported in Angola from January to May 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:05:07.651241+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f86ddfa02224874934cd0af899af3de",
+          "chunk_id": "doc-7f86ddfa02224874934cd0af899af3de-c16",
+          "source_url": "https://www.who.int/emergencies/situations/cholera-upsurge",
+          "quote": "Angola reported a total of 4852 cases"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 42826,
+    "total_output_tokens": 1970,
+    "total_tokens": 44796,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 42826,
+        "output_tokens": 1970,
+        "calls": 20
+      }
+    }
+  },
+  "documents_processed": 1,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 1 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

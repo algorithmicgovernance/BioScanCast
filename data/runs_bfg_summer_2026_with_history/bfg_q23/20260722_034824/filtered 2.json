@@ -1,0 +1,77 @@
+[
+  {
+    "result_id": "9512be9e34984d2ab633ef7ad088b029",
+    "question_id": "bfg_q23",
+    "url": "https://www.who.int/activities/tracking-SARS-CoV-2-variants",
+    "canonical_url": "https://who.int/activities/tracking-SARS-CoV-2-variants",
+    "domain": "who.int",
+    "title": "WHO Tracking SARS-CoV-2 variants",
+    "snippet": "Global",
+    "published_date": null,
+    "file_type": null,
+    "relevance_score": 0.0967741935483871,
+    "credibility_score": 1.0,
+    "final_score": 1.0,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "dashboard_lookup_bypass"
+    ],
+    "extraction_priority": 1,
+    "extraction_mode": "html",
+    "expected_value": "high",
+    "source_id": "who_variant_tracking",
+    "region": "world",
+    "question_text": "Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?"
+  },
+  {
+    "result_id": "33e573a2253246a4961fb0f3ba452094",
+    "question_id": "bfg_q23",
+    "url": "https://ourworldindata.org/coronavirus",
+    "canonical_url": "https://ourworldindata.org/coronavirus",
+    "domain": "ourworldindata.org",
+    "title": "Our World in Data - COVID-19",
+    "snippet": "Global",
+    "published_date": null,
+    "file_type": null,
+    "relevance_score": 0.06451612903225806,
+    "credibility_score": 1.0,
+    "final_score": 1.0,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "dashboard_lookup_bypass"
+    ],
+    "extraction_priority": 2,
+    "extraction_mode": "html",
+    "expected_value": "high",
+    "source_id": "ourworldindata_covid",
+    "region": "world",
+    "question_text": "Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?"
+  },
+  {
+    "result_id": "70d14edc9c4b492cbb1620fbefc7d018",
+    "question_id": "bfg_q23",
+    "url": "https://www.cdc.gov/covid/php/surveillance/index.html",
+    "canonical_url": "https://cdc.gov/covid/php/surveillance/index.html",
+    "domain": "cdc.gov",
+    "title": "CDC COVID-19",
+    "snippet": "Global",
+    "published_date": null,
+    "file_type": null,
+    "relevance_score": 0.0,
+    "credibility_score": 1.0,
+    "final_score": 1.0,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "dashboard_lookup_bypass"
+    ],
+    "extraction_priority": 3,
+    "extraction_mode": "html",
+    "expected_value": "high",
+    "source_id": "cdc_covid",
+    "region": "world",
+    "question_text": "Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?"
+  }
+]

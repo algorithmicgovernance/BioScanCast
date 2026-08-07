@@ -4,6 +4,7 @@
 # Python
 __pycache__/
 .pytest_cache/
+.venv/
 *.py[cod]
 *.egg-info/
 dist/
@@ -16,15 +17,8 @@ build/
 # Claude Code
 .claude/
 
-# Data / cache
-data/cache/
-data/runs/
-*.sqlite
-
-# Docling eval — keep FINDINGS.md and sources/, ignore generated run artifacts
-data/docling_eval/*
-!data/docling_eval/FINDINGS.md
-!data/docling_eval/sources/
+# Data
+data/runs/demo/
 
 # OS
 .DS_Store

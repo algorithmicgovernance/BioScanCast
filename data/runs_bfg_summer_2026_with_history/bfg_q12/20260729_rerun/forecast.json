@@ -1,0 +1,169 @@
+{
+  "question_id": "bfg_q12",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.0038564281288835825,
+        "NO": 0.9961435718711164
+      }
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.0038564281288835825,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9961435718711164,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.08,
+        0.92
+      ],
+      "ok": true,
+      "reference_class": "Past WHO PHEIC declarations for infectious diseases",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "Mpox has caused more than 100,000 cases in 122 countries, indicating widespread transmission.",
+        "Clusters of cases are still being reported in various regions, such as 689 cases in Madagascar and 15 in Guinea recently.",
+        "A past PHEIC was declared for mpox in 2024 due to an upsurge, showing the potential for resurgence."
+      ],
+      "drivers_down": [
+        "The previous PHEIC for mpox was recently lifted in September 2025, suggesting the situation may be under control.",
+        "The case fatality rate for mpox clade II is below 0.1%, indicating low mortality risk.",
+        "Current global cumulative confirmed cases are not significantly increasing at a rapid rate."
+      ],
+      "why_might_be_wrong": "Unreported cases or a sudden increase in transmission in a highly populated area could lead to a reassessment by WHO.",
+      "rationale": "The likelihood of WHO declaring a PHEIC for mpox between July 2026 and December 2026 is fairly low. Although there is some ongoing transmission and historical precedent for declaration, the recent lifting of the PHEIC and the low case fatality rate suggest stability. The base rate for WHO PHEIC declarations is low, and specific evidence does not strongly indicate an imminent emergency. Therefore, the probability of a PHEIC being declared is adjusted slightly above the base rate but remains low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.95
+      ],
+      "ok": true,
+      "reference_class": "Past WHO declarations of Public Health Emergency of International Concern (PHEIC) for infectious diseases.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Mpox cases continue globally, with significant case numbers in regions like Africa and EU/EEA.",
+        "New cases reported in multiple countries, indicating ongoing transmission.",
+        "The history of declaring mpox a PHEIC in the past shows precedent."
+      ],
+      "drivers_down": [
+        "The previous PHEIC for mpox was recently lifted in September 2025, suggesting control over the outbreak.",
+        "Mortality rate for mpox remains low, under 0.1%.",
+        "No evidence of increased virulence or major mutations making the disease more severe or transmissible.",
+        "Cumulative global case count is not rapidly increasing, indicating current containment measures may be effective."
+      ],
+      "why_might_be_wrong": "There might be unreported increases in transmission or severity that could prompt a PHEIC re-declaration.",
+      "rationale": "Despite ongoing mpox cases globally, the recent lifting of the PHEIC in September 2025 suggests that the outbreak is under control. The low mortality rate and lack of significant mutation reduce the urgency for a renewed PHEIC. While cases are still present, the cumulative numbers do not indicate a rapid escalation. Thus, the probability of declaring a new PHEIC between 15 July 2026 and 31 December 2026 remains low, though not impossible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.95
+      ],
+      "ok": true,
+      "reference_class": "Past WHO PHEIC declarations for viral outbreaks",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Significant number of cases globally, with 180,545 cumulative confirmed cases as of April 2026.",
+        "Previous PHEIC was declared for mpox in August 2024, indicating potential for concern if conditions worsen.",
+        "Presence of significant clusters in regions like Africa and the EU/EEA.",
+        "Surveillance gaps and under-reporting may mean true case numbers are higher than reported."
+      ],
+      "drivers_down": [
+        "The previous PHEIC for mpox was lifted in September 2025, indicating the situation was under control at that time.",
+        "Low mortality rate of less than 0.1%, suggesting mpox may not be seen as severe enough to warrant a PHEIC.",
+        "No significant increase in virulence or transmission rate reported.",
+        "Current evidence does not suggest a rapid escalation in case numbers or severity."
+      ],
+      "why_might_be_wrong": "If there are sudden increases in cases or new data showing higher virulence or transmission, the WHO might declare a new PHEIC unexpectedly.",
+      "rationale": "The cumulative case count of 180,545 and the presence of clusters suggest the potential for concern, but the low mortality rate and lack of recent escalation in cases reduce the likelihood of a PHEIC. The WHO recently lifted the PHEIC, indicating the situation was previously under control, which suggests a lower probability of re-declaration unless significant new developments occur. Surveillance gaps might mean cases are underreported, but without evidence of a rapid escalation, the probability of a new PHEIC remains low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current understanding of mpox and its epidemiology, it is likely that the WHO will not declare a new Public Health Emergency of International Concern (PHEIC) for mpox between July and December 2026. The probability of a declaration is influenced by factors such as the prevalence of the disease, public health responses, and global health priorities at that time. Therefore, a higher probability is assigned to 'NO'.",
+  "evidence_record_ids": [
+    "ins-99c48431deff",
+    "ins-042f3c6e50ea",
+    "ins-5cbc923d0836",
+    "ins-39b111baf6a3",
+    "ins-370216800d36",
+    "ins-0a4e339c2177",
+    "ins-50601926fb66",
+    "ins-d9fd65bc1740",
+    "ins-ef3e1e1797e0",
+    "ins-09344c358f55",
+    "ins-cba209ed6844",
+    "ins-dce06d5fd639",
+    "ins-c02571460aad",
+    "ins-5ec04d245440",
+    "ins-7eabb399764b",
+    "ins-b34b86ca47bf",
+    "ins-e4d5eb640a1f",
+    "ins-f89bff6708a9",
+    "ins-039c868f1e4d"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 9566,
+    "total_output_tokens": 1039,
+    "total_tokens": 10605,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 9372,
+        "output_tokens": 937,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 194,
+        "output_tokens": 102,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

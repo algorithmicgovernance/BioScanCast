@@ -1,0 +1,150 @@
+{
+  "question_id": "bfg_q7",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.037796929619526985,
+        "NO": 0.962203070380473
+      }
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.037796929619526985,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.962203070380473,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Past instances of avian influenza outbreaks and their transmission patterns",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Continued detection of H5 cases in humans globally, albeit isolated",
+        "High-volume monitoring and genetic characterization of influenza viruses in the U.S. suggest vigilance"
+      ],
+      "drivers_down": [
+        "No reports of sustained human-to-human transmission to date",
+        "All recent human infections appear to be isolated cases without onward transmission",
+        "Stringent global monitoring and reporting mechanisms may prevent unnoticed transmission clusters"
+      ],
+      "why_might_be_wrong": "H5 viruses could mutate, leading to sustained transmission that hasn't been detected yet or is rapidly emerging.",
+      "rationale": "The absence of any confirmed clusters of sustained human-to-human transmission of H5 viruses up to this point suggests a low likelihood of this occurring by the end of 2026. The base rate of such transmission events historically is quite low, and despite isolated human cases, there is no evidence of onward transmission. However, the possibility of virus mutation or changes in surveillance efficacy means the probability is not negligible, so a small probability is still assigned to the possibility of such an event occurring.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.8
+      ],
+      "ok": true,
+      "reference_class": "Past instances of avian influenza outbreaks and their human-to-human transmission potential.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Increased genetic diversity of H5 viruses, potentially increasing the chance of mutation allowing sustained transmission.",
+        "The presence of H5 cases in multiple countries indicates global exposure and potential for wider human interaction."
+      ],
+      "drivers_down": [
+        "Current evidence shows no sustained human-to-human transmission of H5 viruses.",
+        "Single confirmed human cases without sustained transmission events suggest limited current transmission capability.",
+        "The WHO and national authorities have not reported any clusters of sustained transmission as of the latest updates."
+      ],
+      "why_might_be_wrong": "Unexpected mutations in the H5 virus could lead to rapid changes in transmission potential, which are not currently observed.",
+      "rationale": "The base rate of confirmed sustained human-to-human transmission of avian influenza viruses has historically been low. Despite some cases of H5 infections globally, there is no evidence of sustained human-to-human transmission as of July 2026. While genetic diversity and exposure might raise the likelihood slightly, the absence of current transmission events and authority confirmations suggests that widespread transmission is unlikely within the target timeframe.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Emergence of new zoonotic influenza strains with sustained human-to-human transmission",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Increasing number of cases in humans globally, indicating higher exposure",
+        "Global interconnectedness and travel that could facilitate spread"
+      ],
+      "drivers_down": [
+        "No current reports of sustained human-to-human transmission",
+        "Stringent surveillance and control measures in place globally",
+        "Historical rarity of H5 strains achieving sustained human-to-human transmission"
+      ],
+      "why_might_be_wrong": "The virus could mutate in ways that enhance human-to-human transmissibility unexpectedly, or there could be unreported clusters that emerge later.",
+      "rationale": "While there have been human cases of avian influenza H5, there have been no confirmed reports of sustained human-to-human transmission as of July 2026. The base rate for zoonotic influenza strains achieving sustained human-to-human transmission is relatively low. Although there is potential for the virus to change and global travel could facilitate spread, current data and historical trends suggest it remains unlikely within the specified timeframe.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical patterns of avian influenza H5 viruses and their transmission dynamics, while there is a possibility of sustained human-to-human transmission, it remains relatively low. The global public health measures and surveillance systems in place are designed to mitigate such risks, making it more likely that a confirmed cluster will not occur by the target date.",
+  "evidence_record_ids": [
+    "ins-60c7715f353a",
+    "ins-4079ee042a17",
+    "ins-4c09858d37b8",
+    "ins-4f22ec8eeba1",
+    "ins-0e515776b6c4",
+    "ins-accff5bc2fae"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4246,
+    "total_output_tokens": 770,
+    "total_tokens": 5016,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4041,
+        "output_tokens": 688,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 205,
+        "output_tokens": 82,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

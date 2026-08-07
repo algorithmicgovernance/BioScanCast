@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "id": "ins-2156ca22df66",
+      "question_id": "bfg_q25",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 7598.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of cholera-related deaths reported from 1 January to 28 December 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T08:15:36.617068+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-455dea4a81b24613a710eca5f14684a2",
+          "chunk_id": "doc-455dea4a81b24613a710eca5f14684a2-c1",
+          "source_url": "https://www.who.int/publications/m/item/multi-country-outbreak-of-cholera--epidemiological-update--33--27-january-2026",
+          "quote": "a cumulative total of 614 828 cholera cases and 7598 deaths were reported from 33 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-f4e311717330",
+      "question_id": "bfg_q25",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 182.0,
+      "metric_unit": "deaths",
+      "count_basis": "incident",
+      "time_window": "month",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "182 cholera-related deaths reported globally in January 2026, a 20% increase from December 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T08:15:39.864627+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c51ea8ef47044fd1a505f6b6d050db29",
+          "chunk_id": "doc-c51ea8ef47044fd1a505f6b6d050db29-c1",
+          "source_url": "https://www.who.int/publications/m/item/multi-country-outbreak-of-cholera--epidemiological-update--34--21-february-2026",
+          "quote": "This period also saw 182 cholera-related deaths globally, highlighting a 20% increase from the previous month."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 32133,
+    "total_output_tokens": 308,
+    "total_tokens": 32441,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 32133,
+        "output_tokens": 308,
+        "calls": 16
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

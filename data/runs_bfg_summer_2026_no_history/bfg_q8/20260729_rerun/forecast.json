@@ -1,0 +1,188 @@
+{
+  "question_id": "bfg_q8",
+  "options": [
+    "H5N1",
+    "H5N5",
+    "Another H5Nx",
+    "No human H5 cases reported in the period"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "H5N1": 0.952178803812535,
+        "H5N5": 0.0046693625498786615,
+        "Another H5Nx": 0.02447438343807165,
+        "No human H5 cases reported in the period": 0.018677450199514646
+      }
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "H5N1": 0.6,
+        "H5N5": 0.1,
+        "Another H5Nx": 0.2,
+        "No human H5 cases reported in the period": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "H5N1",
+      "probability": 0.952178803812535,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "H5N5",
+      "probability": 0.0046693625498786615,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "Another H5Nx",
+      "probability": 0.02447438343807165,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "No human H5 cases reported in the period",
+      "probability": 0.018677450199514646,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "H5N1",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "H5N5",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "Another H5Nx",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "No human H5 cases reported in the period",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.8,
+        0.05,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past global avian influenza outbreaks in humans",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Recent confirmed cases of H5 in Bangladesh and Australia indicate ongoing transmission.",
+        "H5N1 has historically been the most common H5 subtype in human cases."
+      ],
+      "drivers_down": [
+        "Limited number of total human H5 cases reported so far suggests low transmission rates.",
+        "Potential under-reporting in regions with limited surveillance."
+      ],
+      "why_might_be_wrong": "The forecast could be incorrect if there is a sudden outbreak of a different H5 subtype or better reporting from regions with currently limited data.",
+      "rationale": "The evidence shows recent human H5 cases in Bangladesh and Australia, suggesting active transmission. Historically, H5N1 has been the most common subtype in human cases, which supports the likelihood of it being the predominant subtype in the upcoming period. While there is potential for under-reporting, the current evidence aligns with the established pattern of H5N1 prevalence.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.7,
+        0.05,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past global avian influenza H5 subtype outbreaks in humans.",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "H5N1 has historically been the most prevalent H5 subtype in human cases.",
+        "Recent cases in Australia mention H5N1 specifically, indicating its continued presence.",
+        "H5N1 has a higher zoonotic potential compared to other subtypes."
+      ],
+      "drivers_down": [
+        "Only a small number of cases have been reported recently, suggesting low overall human transmission.",
+        "Other subtypes like H5N5 could emerge or be underreported due to limited surveillance in some regions.",
+        "There might be no further spillover events, leading to no cases."
+      ],
+      "why_might_be_wrong": "The emergence of a new H5 subtype or changes in reporting practices could shift the predominant subtype unexpectedly.",
+      "rationale": "Historically, H5N1 has been the most common subtype affecting humans, and recent cases continue to highlight its presence. Although the number of cases is low, H5N1 remains the most likely predominant subtype given its history and recent confirmations. However, the possibility of underreporting or emergence of a new subtype cannot be entirely ruled out, nor can the scenario of no cases occurring in the given period.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.05,
+        0.1,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "Past global outbreaks of avian influenza H5 subtypes in humans",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "H5N1 is currently the most reported subtype in Australia, suggesting it is prevalent and active.",
+        "H5N1 historically has been the most common H5 subtype to infect humans, with prior outbreaks primarily involving H5N1."
+      ],
+      "drivers_down": [
+        "The evidence does not specify the subtypes for cases outside of Australia, potentially indicating other subtypes could be present.",
+        "H5N5 and other H5Nx subtypes have occasionally been reported in avian populations, suggesting a possibility of spillover."
+      ],
+      "why_might_be_wrong": "The specific subtypes of the recent cases in Bangladesh are not mentioned, which could mean there are other circulating H5 subtypes not previously dominant.",
+      "rationale": "Given the current data, H5N1 appears to be the predominant subtype in recent cases from Australia and historically has been the most common subtype in human cases. However, the subtype of the recent cases in Bangladesh is not specified, which leaves room for uncertainty. Considering the historical dominance of H5N1 and its current presence, it is likely to remain the predominant subtype. The base rate for H5N1 being the predominant subtype is adjusted slightly downwards due to the uncertainty about the specific subtypes in other regions.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "H5N1 has historically been the most prevalent subtype of avian influenza in humans, and while other subtypes like H5N5 may emerge, they have not shown the same level of transmission to humans. The possibility of 'Another H5Nx' subtype emerging is present but less likely than H5N1. Additionally, while there is a chance that no human cases will be reported, it is relatively low given the ongoing presence of H5 viruses in avian populations.",
+  "evidence_record_ids": [
+    "ins-8241fb69f7fd",
+    "ins-6afc6be50bf0",
+    "ins-4849bbdd9519",
+    "ins-ec0ae250f84c",
+    "ins-a7f4386da913"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4172,
+    "total_output_tokens": 889,
+    "total_tokens": 5061,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3954,
+        "output_tokens": 768,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 218,
+        "output_tokens": 121,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

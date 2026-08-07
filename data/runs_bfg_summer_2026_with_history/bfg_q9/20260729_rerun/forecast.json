@@ -1,0 +1,187 @@
+{
+  "question_id": "bfg_q9",
+  "options": [
+    "exactly 20",
+    "21 to 23",
+    "24 to 26",
+    "27 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 20": 0.07999999999999999,
+        "21 to 23": 0.2,
+        "24 to 26": 0.39,
+        "27 or more": 0.33
+      }
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 20": 0.15,
+        "21 to 23": 0.25,
+        "24 to 26": 0.35,
+        "27 or more": 0.25
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "exactly 20",
+      "probability": 0.07999999999999999,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "21 to 23",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "24 to 26",
+      "probability": 0.39,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "27 or more",
+      "probability": 0.33,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 20",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "21 to 23",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "24 to 26",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "27 or more",
+      "probability": 0.25,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.08,
+        0.2,
+        0.39,
+        0.33
+      ],
+      "ok": true,
+      "reference_class": "US states with animal disease outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "H5N1 has already spread to 20 states by mid-2026, indicating active transmission.",
+        "Historical patterns show that diseases spreading to multiple states tend to continue spreading.",
+        "USDA reported 387 infected dairy herds, indicating significant spread potential."
+      ],
+      "drivers_down": [
+        "The rate of spread could slow down due to containment efforts and biosecurity measures.",
+        "The spread to additional states might be limited by geographic and climatic factors.",
+        "Surveillance and rapid response might limit further state detections."
+      ],
+      "why_might_be_wrong": "Containment efforts could be more effective than anticipated, significantly limiting spread.",
+      "rationale": "The base rate for animal diseases spreading to a significant number of states is moderate, but given that H5N1 has already been detected in 20 states by mid-2026 and historical patterns of disease spread, it is likely that the number of affected states will increase. However, containment and biosecurity measures could slow the spread, and thus the most probable outcome is 24 to 26 states affected by the end of 2026. This is balanced against the possibility of a faster spread reaching 27 or more states.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.08,
+        0.2,
+        0.39,
+        0.33
+      ],
+      "ok": true,
+      "reference_class": "Livestock disease spread across US states",
+      "base_rate": 0.39,
+      "drivers_up": [
+        "H5N1 has already spread to 20 states, indicating a significant level of transmission.",
+        "Historical patterns of disease spread in livestock suggest continued spread once multiple states are affected.",
+        "USDA reports indicate ongoing outbreaks in multiple herds across various states."
+      ],
+      "drivers_down": [
+        "The rate of spread may be slowing as 20 states have been affected for some time with no recent significant increase.",
+        "Containment measures might have improved, reducing the spread rate.",
+        "Certain states may have better biosecurity measures preventing further spread."
+      ],
+      "why_might_be_wrong": "Disease spread patterns can be highly unpredictable and influenced by multiple unforeseen factors, including changes in biosecurity measures and virus mutations.",
+      "rationale": "Given that H5N1 has already spread to 20 states, and considering historical patterns of livestock disease spread which suggest that diseases typically continue to proliferate once they reach a certain level of spread, it is reasonable to expect further spread. However, the rate of spread might slow down, leading to a slightly higher probability for the 24 to 26 states option. The probabilities account for potential containment measures that could limit further spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.08,
+        0.2,
+        0.39,
+        0.33
+      ],
+      "ok": true,
+      "reference_class": "Livestock disease spread in the US, specifically past avian influenza outbreaks and their spread among states.",
+      "base_rate": 0.39,
+      "drivers_up": [
+        "H5N1 has already spread to 20 states by mid-2026, indicating a pattern of spread.",
+        "Historical trends show that livestock diseases tend to spread once they have affected multiple states.",
+        "The presence of H5N1 in 387 dairy herds suggests active transmission dynamics."
+      ],
+      "drivers_down": [
+        "There may be containment efforts that slow the spread as awareness and response increase.",
+        "Geographical and biosecurity barriers might limit further spread in some states."
+      ],
+      "why_might_be_wrong": "Containment and biosecurity measures might be more effective than anticipated, slowing the spread significantly.",
+      "rationale": "The evidence suggests that H5N1 had already spread to 20 states by mid-2026, with a notable presence in dairy herds. Historical patterns of livestock disease spread and the presence in multiple states indicate a likely increase in the number of affected states by the end of 2026. However, containment efforts could slow the spread. The base rate for the 24 to 26 states range is 0.39, which reflects a balanced view of further spread being likely but not guaranteed, given potential containment measures.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of H5N1 outbreaks and the potential for spread in livestock, it's reasonable to expect a moderate number of states to report detections. The probabilities reflect a belief that while a significant number of states may be affected, the exact number reaching 20 is less likely than a range of 21 to 26, with a smaller chance of exceeding 27.",
+  "evidence_record_ids": [
+    "ins-a961d9d42cfe"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5372,
+    "total_output_tokens": 905,
+    "total_tokens": 6277,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5145,
+        "output_tokens": 805,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 227,
+        "output_tokens": 100,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}
