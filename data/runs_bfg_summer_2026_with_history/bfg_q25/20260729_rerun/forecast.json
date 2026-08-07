@@ -1,0 +1,209 @@
+{
+  "question_id": "bfg_q25",
+  "options": [
+    "under 2,000",
+    "2,000 to 2,999",
+    "3,000 to 3,999",
+    "4,000 to 5,499",
+    "5,500 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,000": 0.07116510672240876,
+        "2,000 to 2,999": 0.1667177836438649,
+        "3,000 to 3,999": 0.3297393023631938,
+        "4,000 to 5,499": 0.2620345937318108,
+        "5,500 or more": 0.17034321353872175
+      }
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,000": 0.25,
+        "2,000 to 2,999": 0.3,
+        "3,000 to 3,999": 0.2,
+        "4,000 to 5,499": 0.15,
+        "5,500 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "under 2,000",
+      "probability": 0.07116510672240876,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "2,000 to 2,999",
+      "probability": 0.1667177836438649,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 3,999",
+      "probability": 0.3297393023631938,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "4,000 to 5,499",
+      "probability": 0.2620345937318108,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "5,500 or more",
+      "probability": 0.17034321353872175,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,000",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,000 to 2,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 3,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4,000 to 5,499",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,500 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.07,
+        0.15,
+        0.32,
+        0.26,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "Annual global cholera-related deaths reported by WHO",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "By mid-2026, there are already 1,318 reported deaths, suggesting a steady increase.",
+        "Historical data shows that annual deaths often exceed 4,000.",
+        "Underreporting is likely, as suggested by WHO's acknowledgment of surveillance and reporting gaps."
+      ],
+      "drivers_down": [
+        "The cumulative deaths by mid-2026 (1,318) are lower than in some previous years.",
+        "Efforts to improve cholera prevention and response could mitigate the number of deaths."
+      ],
+      "why_might_be_wrong": "The forecast could be off due to unexpected changes in reporting practices or a large-scale outbreak post-July 2026.",
+      "rationale": "The cumulative deaths by mid-2026 are 1,318. Historically, annual deaths often exceed 4,000. However, the current count is lower than in some previous years, but underreporting is likely. Therefore, the most probable range is 3,000 to 3,999, with a significant chance of reaching 4,000 to 5,499 due to historical trends and underreporting biases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.15,
+        0.32,
+        0.28,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "Global cholera outbreaks in recent years",
+      "base_rate": 0.6,
+      "drivers_up": [
+        "Cumulative mid-year deaths in 2026 were 1,318, indicating a significant ongoing outbreak.",
+        "Historical data shows that annual reported deaths can exceed 4,000, as seen in 2025.",
+        "Cholera is present in regions with weak healthcare systems, leading to continued vulnerability and potential underreporting."
+      ],
+      "drivers_down": [
+        "Cumulative deaths by mid-year 2026 (1,318) are lower than at the same point in some prior years.",
+        "Efforts to improve surveillance and reporting might slightly reduce underreporting.",
+        "Public health responses could mitigate the spread in the second half of the year."
+      ],
+      "why_might_be_wrong": "Underreporting is a significant issue, and the actual number of deaths could be higher than reported.",
+      "rationale": "By mid-2026, 1,318 cholera-related deaths were reported globally, suggesting a substantial but not unprecedented outbreak year. Given recent years where deaths exceeded 4,000, and considering the possibility of underreporting, the base rate for a high death count remains relevant. However, the cumulative count by mid-year is somewhat lower than in prior years with high totals, warranting a slight adjustment downward. Balancing these factors, the probability distribution is tilted towards the higher end, though not overwhelmingly so, recognizing both the historical patterns and current trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.34,
+        0.24,
+        0.12
+      ],
+      "ok": true,
+      "reference_class": "Global cholera-related deaths in past years",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "As of mid-2026, 1,318 cumulative deaths have been reported, indicating a significant number already.",
+        "Cholera is present in regions with weak healthcare systems, potentially leading to continued deaths.",
+        "Historical data suggests annual deaths often exceed 4,000."
+      ],
+      "drivers_down": [
+        "Official figures may underestimate the true burden due to reporting gaps, but adjustments could occur.",
+        "Mid-year cumulative deaths are lower compared to some previous years.",
+        "Efforts to contain outbreaks and improve healthcare may reduce deaths."
+      ],
+      "why_might_be_wrong": "Cholera outbreaks can fluctuate significantly and are influenced by environmental and socio-political factors, which are unpredictable.",
+      "rationale": "By mid-2026, 1,318 cholera-related deaths have been reported. The historical base rate suggests annual deaths often exceed 4,000. Despite this, the mid-year cumulative figures are lower than some prior years. Given the potential for underreporting and the presence of cholera in regions with weak healthcare systems, the outcome is likely to be in the 3,000 to 3,999 range, but efforts to contain outbreaks could keep it lower.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Cholera is a significant public health concern, particularly in regions with inadequate water and sanitation. Historical data suggests that cholera outbreaks can lead to thousands of deaths, but effective interventions and vaccination campaigns can mitigate these numbers. Given the global efforts to control cholera, it is reasonable to estimate that the majority of deaths will remain under 5,500, with a higher probability for lower ranges due to improved health measures.",
+  "evidence_record_ids": [
+    "ins-d59538c338c4",
+    "ins-38e9f8f531e1",
+    "ins-b3751968a30a"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7033,
+    "total_output_tokens": 952,
+    "total_tokens": 7985,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6804,
+        "output_tokens": 841,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 229,
+        "output_tokens": 111,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

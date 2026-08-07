@@ -1,0 +1,218 @@
+{
+  "question_id": "bfg_q13",
+  "options": [
+    "under 3,000",
+    "3,000 to 6,999",
+    "7,000 to 11,999",
+    "12,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 3,000": 0.20280471271217482,
+        "3,000 to 6,999": 0.39638781641617304,
+        "7,000 to 11,999": 0.24045157492165503,
+        "12,000 to 19,999": 0.1053062274585575,
+        "20,000 or more": 0.055049668491439614
+      }
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 3,000": 0.4,
+        "3,000 to 6,999": 0.3,
+        "7,000 to 11,999": 0.15,
+        "12,000 to 19,999": 0.1,
+        "20,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "under 3,000",
+      "probability": 0.20280471271217482,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 6,999",
+      "probability": 0.39638781641617304,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "7,000 to 11,999",
+      "probability": 0.24045157492165503,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "12,000 to 19,999",
+      "probability": 0.1053062274585575,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.055049668491439614,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 3,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 6,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7,000 to 11,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12,000 to 19,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.4,
+        0.2,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Cumulative cases of mpox globally during specific time windows.",
+      "base_rate": 0.4,
+      "drivers_up": [
+        "Recent cumulative cases in the EU/EEA and United States suggest ongoing spread.",
+        "Global case count as of April 2026 is significantly high, indicating potential for continued cases."
+      ],
+      "drivers_down": [
+        "The rate of new cases reported in specific regions like Guinea is relatively low.",
+        "The overall global cumulative case count has not increased dramatically in recent months."
+      ],
+      "why_might_be_wrong": "There might be significant underreporting or new outbreaks that alter current trends.",
+      "rationale": "The base rate was set considering the historical precedent of mpox case counts over specific periods. While there is ongoing transmission with recent cases in the EU/EEA and the US, the rate of new cases does not suggest a dramatic increase globally. Given the provided evidence, the most likely bin for new cases globally from July to December 2026 is 3,000 to 6,999, which aligns with a moderately increasing trend but not an explosive one. Hence, the probability is highest for the 3,000 to 6,999 bin, followed by the under 3,000 bin.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.35,
+        0.25,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Cumulative global infectious disease cases in similar outbreak situations",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Recent outbreaks in Guinea and other regions indicate ongoing transmission",
+        "The global cumulative cases in 2026 have reached 184,531, suggesting a potential for further increases",
+        "Historical trends show periodic increases in mpox cases, indicating potential for a rise in the coming months"
+      ],
+      "drivers_down": [
+        "Current case counts in major regions like the United States and EU/EEA are relatively low",
+        "The total cumulative cases in some regions have plateaued, indicating control measures might be effective",
+        "The global response and control measures might have improved, reducing further increases"
+      ],
+      "why_might_be_wrong": "The availability and implementation of effective control measures between July and December 2026 could significantly alter case numbers.",
+      "rationale": "The global cumulative mpox cases have shown significant past increases, with 184,531 cases reported globally by April 2026. Although recent outbreaks suggest ongoing transmission, the relatively low case counts in key regions like the US and EU/EEA indicate potential containment. Given these factors, the probability distribution leans towards lower case increases but acknowledges the possibility of a moderate rise.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.4,
+        0.25,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Cumulative global mpox cases over a six-month period in recent years.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Recent cumulative global cases suggest ongoing transmission with 184,531 cases by April 2026.",
+        "Recent six-week incident reports from Guinea show active transmission.",
+        "Cases in North America are still notable with 45,183 cases cumulatively."
+      ],
+      "drivers_down": [
+        "Cumulative cases in the EU/EEA for the past year were only 829, showing potential regional containment.",
+        "The United States reported only 30 cases cumulatively, indicating low incidence in some regions.",
+        "Global awareness and response strategies may reduce transmission rates."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is an unexpected surge in cases due to a new variant or if containment measures fail globally.",
+      "rationale": "The base rate for 3,000 to 6,999 cases in a six-month period is about 0.3 given the historical context. While there are active cases and ongoing transmission, particularly in North America, the spread seems somewhat contained in other regions like the EU/EEA and the United States. Considering both the active transmission and regional containment, the most likely scenario is that new cases will fall into the 3,000 to 6,999 range. However, ongoing transmission in certain regions like North America suggests a non-negligible chance of exceeding this range, but with a lower probability.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current trends in mpox cases and the global response to outbreaks, it is reasonable to predict that the number of cases will remain relatively low, especially with increased awareness and vaccination efforts. The highest probability is assigned to 'under 3,000' due to effective containment measures, while the probabilities decrease for higher case ranges as they become less likely.",
+  "evidence_record_ids": [
+    "ins-f92e4e49d8a2",
+    "ins-8f82f34904af",
+    "ins-38f6dd642573",
+    "ins-1bc777202271",
+    "ins-9a8c7e9f4c63",
+    "ins-cc29d7428f9e",
+    "ins-ae2945f6f435",
+    "ins-419a8a303f73",
+    "ins-686f2c34c3ba",
+    "ins-9d1a67aef736",
+    "ins-0319e72714d4",
+    "ins-a913c94a6181",
+    "ins-15495b038362"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5412,
+    "total_output_tokens": 936,
+    "total_tokens": 6348,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5187,
+        "output_tokens": 837,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 225,
+        "output_tokens": 99,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

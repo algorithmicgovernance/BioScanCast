@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "id": "ins-38e9f8f531e1",
+      "question_id": "bfg_q25",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "suspected_deaths",
+      "metric_value": 143000.0,
+      "metric_unit": "deaths",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "Official figures likely underestimate the true burden due to persistent surveillance and reporting gaps.",
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Research suggests that cholera causes between 1.3 and 4.0 million cases, and from 21 000 to 143 000 deaths annually worldwide.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:56:53.708029+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4a35d6cd3dbc4d45b1a0b1df44ea7c49",
+          "chunk_id": "doc-4a35d6cd3dbc4d45b1a0b1df44ea7c49-c0",
+          "source_url": "https://gh.bmj.com/content/11/1/e020187",
+          "quote": "from 21 000 to 143 000 deaths annually worldwide."
+        }
+      ]
+    },
+    {
+      "id": "ins-b3751968a30a",
+      "question_id": "bfg_q25",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 7598.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of cholera-related deaths reported from 1 January to 28 December 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:56:56.462394+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ecf161725ac840bbaacc97cfa732d9c7",
+          "chunk_id": "doc-ecf161725ac840bbaacc97cfa732d9c7-c1",
+          "source_url": "https://www.who.int/publications/m/item/multi-country-outbreak-of-cholera--epidemiological-update--33--27-january-2026",
+          "quote": "a cumulative total of 614 828 cholera cases and 7598 deaths were reported from 33 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-d59538c338c4",
+      "question_id": "bfg_q25",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 182.0,
+      "metric_unit": "deaths",
+      "count_basis": "incident",
+      "time_window": "month",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Reported cholera-related deaths in January 2026, showing a 20% increase from the previous month.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:56:59.571227+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5c47086eeffb487fbd64530ce13a4482",
+          "chunk_id": "doc-5c47086eeffb487fbd64530ce13a4482-c1",
+          "source_url": "https://www.who.int/publications/m/item/multi-country-outbreak-of-cholera--epidemiological-update--34--21-february-2026",
+          "quote": "This period also saw 182 cholera-related deaths globally"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 57319,
+    "total_output_tokens": 482,
+    "total_tokens": 57801,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 57319,
+        "output_tokens": 482,
+        "calls": 28
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 1,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12).",
+    "Skipped document doc-8f5ccc0cb42a4566b970a880b42592e2: failed"
+  ]
+}

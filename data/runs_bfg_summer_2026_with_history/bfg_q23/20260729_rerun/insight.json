@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-9669b0ad9167",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "suspected_cases",
+      "metric_value": 4.0,
+      "metric_unit": "%",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-12T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The model assumes that a variant is introduced with moderate immune-escape properties, similar to properties of XEC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:43:57.981686+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-73bc4b2c522846d487d1d09c30331f6f",
+          "chunk_id": "doc-73bc4b2c522846d487d1d09c30331f6f-c3",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/2026covid-19outlook.html",
+          "quote": "its prevalence within the U.S. has remained relatively low, at 4% (95% CI = 3-7%) of sequences collected during March 15, 2026- April 11, 2026."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 61201,
+    "total_output_tokens": 259,
+    "total_tokens": 61460,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 61201,
+        "output_tokens": 259,
+        "calls": 28
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,20 @@
+{
+  "records": [],
+  "budget_summary": {
+    "total_input_tokens": 16718,
+    "total_output_tokens": 32,
+    "total_tokens": 16750,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 16718,
+        "output_tokens": 32,
+        "calls": 8
+      }
+    }
+  },
+  "documents_processed": 3,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 3 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

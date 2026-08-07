@@ -1,0 +1,160 @@
+{
+  "question_id": "bfg_q21",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.13445396690289976,
+        "NO": 0.8655460330971002
+      }
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.13445396690289976,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.8655460330971002,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Global filovirus outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High current incidence of Bundibugyo virus may strain resources, potentially leading to missed containment of new outbreaks.",
+        "Filovirus outbreaks are known to occur sporadically and unpredictably, with potential for new outbreaks during ongoing ones."
+      ],
+      "drivers_down": [
+        "Current outbreak already declared as a public health emergency, likely focusing global surveillance and resources to prevent new outbreaks.",
+        "No specific reports or evidence indicating emergence of a new filovirus event distinct from the current outbreak."
+      ],
+      "why_might_be_wrong": "Unreported or undetected filovirus activity could lead to an unexpected outbreak declaration.",
+      "rationale": "The base rate for new filovirus outbreaks is relatively low but non-negligible, given their sporadic nature. The current situation involves a significant ongoing Bundibugyo outbreak, which can either divert or enhance detection efforts for new outbreaks. While there is a heightened risk due to the current outbreak, the intense focus on containing it could reduce the likelihood of a distinct new outbreak going undetected. Balancing these considerations, a moderate probability for a new outbreak declaration is reasonable, but leans towards no new outbreak given the lack of evidence for another distinct outbreak currently.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past WHO declarations of new filovirus outbreaks not linked to ongoing events",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filovirus outbreaks have been declared at least every few years historically, suggesting a non-zero base rate.",
+        "Ongoing Bundibugyo outbreak may increase surveillance and detection efforts, potentially identifying new outbreaks.",
+        "Filoviruses can re-emerge in areas with previous outbreaks, and the current crisis may create conditions conducive to new outbreaks."
+      ],
+      "drivers_down": [
+        "Current focus on Bundibugyo outbreak may divert resources away from detecting new outbreaks.",
+        "The timeframe until the end of 2026 is relatively short, reducing the period for a new outbreak to be identified and declared.",
+        "Filovirus outbreaks are relatively rare and unpredictable, with significant variation in timing."
+      ],
+      "why_might_be_wrong": "The assumption of increased surveillance leading to new outbreak detection might not hold if resources are overly strained by the current Bundibugyo outbreak.",
+      "rationale": "The historical base rate of new filovirus outbreaks being declared by WHO, not linked to ongoing events, is relatively low but not negligible, around 20%. Given the current Bundibugyo outbreak, there is increased global surveillance and awareness, which may facilitate the detection of new outbreaks. However, the short timeframe and the intense resource focus on the current outbreak may limit the likelihood of a new outbreak being declared. Weighing these factors, the probability of WHO declaring a new, distinct filovirus outbreak by the end of 2026 is slightly higher than the base rate but remains under 50%.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.75
+      ],
+      "ok": true,
+      "reference_class": "Past filovirus outbreaks worldwide not linked to ongoing events",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filovirus outbreaks can occur sporadically and unpredictably in different regions, making new outbreaks a possibility.",
+        "Current Bundibugyo outbreak is declared a public health emergency of international concern, increasing surveillance and detection efforts.",
+        "High case fatality rates in past outbreaks indicate a potential for unnoticed spread."
+      ],
+      "drivers_down": [
+        "The ongoing Bundibugyo outbreak is receiving significant attention and resources, which might prevent new unrelated outbreaks.",
+        "The historical frequency of separate filovirus outbreaks occurring within short timeframes is relatively low.",
+        "Improved global health monitoring and response systems may reduce the likelihood of new outbreaks going undetected until they become significant."
+      ],
+      "why_might_be_wrong": "There may be unknown factors or undetected cases that could lead to a new outbreak declaration.",
+      "rationale": "Given the base rate for new filovirus outbreaks and the specific context of increased global surveillance due to the Bundibugyo outbreak, there is a moderate chance of a new outbreak being declared. However, the strong international focus on the current outbreak and improved monitoring systems might lower the likelihood compared to historical rates.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing Bundibugyo event, it is less likely that a new distinct filovirus outbreak would be declared within the same year. The WHO typically monitors outbreaks closely and may prioritize existing events over new declarations unless there is significant evidence of a new outbreak.",
+  "evidence_record_ids": [
+    "ins-6eb1edf9b50b",
+    "ins-186895d48d81",
+    "ins-fb6090bbc3d3",
+    "ins-2064b6c17638",
+    "ins-d6df59ab69a5",
+    "ins-e51b0162902b",
+    "ins-a5d32713610e",
+    "ins-43b00f2454a6",
+    "ins-82978e362275",
+    "ins-08072066ce08",
+    "ins-f002b8aef544",
+    "ins-e70f824e8eed",
+    "ins-23ca714ea164",
+    "ins-ca8a236f50d2",
+    "ins-b664f66b76d8"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6209,
+    "total_output_tokens": 897,
+    "total_tokens": 7106,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6012,
+        "output_tokens": 829,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 197,
+        "output_tokens": 68,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

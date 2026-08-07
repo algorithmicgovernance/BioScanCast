@@ -1,0 +1,141 @@
+{
+  "records": [
+    {
+      "id": "ins-6e0251e2b503",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2260.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "total confirmed measles cases reported in the United States in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:09:27.367228+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3d51b9f400dc4058a51eec0eadad93d3",
+          "chunk_id": "doc-3d51b9f400dc4058a51eec0eadad93d3-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,260 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-5f3c9c9fe137",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total reported cases in the U.S. as of July 19, 2026, surpassing last year's total.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:09:31.135046+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-71c562550eb84ab09d2a0f3df57939a5",
+          "chunk_id": "doc-71c562550eb84ab09d2a0f3df57939a5-c1",
+          "source_url": "https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026/",
+          "quote": "the nation reported 2,295 cases as of Tuesday."
+        }
+      ]
+    },
+    {
+      "id": "ins-34a0982dbfb9",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "U.S. measles case count for this year has surged past last year's total.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:09:33.597970+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3444e8abcb9f4157ae886c24f071a571",
+          "chunk_id": "doc-3444e8abcb9f4157ae886c24f071a571-c0",
+          "source_url": "https://www.axios.com/2026/07/22/measles-cases-surge-past-last-year",
+          "quote": "now stands at 2,295 - a level that hasn't been seen in 35 years"
+        }
+      ]
+    },
+    {
+      "id": "ins-2f02221c1df5",
+      "question_id": "bfg_q24",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "total confirmed deaths from measles reported in the United States in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:09:27.367441+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3d51b9f400dc4058a51eec0eadad93d3",
+          "chunk_id": "doc-3d51b9f400dc4058a51eec0eadad93d3-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 23270,
+    "total_output_tokens": 498,
+    "total_tokens": 23768,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 23270,
+        "output_tokens": 498,
+        "calls": 11
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q20",
+  "options": [
+    "8 or fewer",
+    "9 to 11",
+    "12 to 14",
+    "15 to 17",
+    "18 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "8 or fewer": 0.160289249744311,
+        "9 to 11": 0.36950168712399567,
+        "12 to 14": 0.26825726330697935,
+        "15 to 17": 0.15146384986853537,
+        "18 or more": 0.05048794995617847
+      }
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "8 or fewer": 0.25,
+        "9 to 11": 0.3,
+        "12 to 14": 0.2,
+        "15 to 17": 0.15,
+        "18 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "8 or fewer",
+      "probability": 0.160289249744311,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "9 to 11",
+      "probability": 0.36950168712399567,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "12 to 14",
+      "probability": 0.26825726330697935,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "15 to 17",
+      "probability": 0.15146384986853537,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "18 or more",
+      "probability": 0.05048794995617847,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8 or fewer",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "9 to 11",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12 to 14",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 17",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "18 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.2,
+        0.35,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Emerging viral outbreaks in the Americas",
+      "base_rate": 0.4,
+      "drivers_up": [
+        "Oropouche virus has been reported in 11 countries in 2024, indicating a spread pattern.",
+        "Reports of outbreaks in several countries as of late 2023 show ongoing transmission.",
+        "The virus affects both South America and the Caribbean, which suggests a broad geographical spread."
+      ],
+      "drivers_down": [
+        "There may be effective containment efforts in place to limit further spread.",
+        "Reporting and confirmation of cases might be limited by healthcare infrastructure and diagnostic capabilities.",
+        "Limited awareness and surveillance might lead to underreporting in some regions."
+      ],
+      "why_might_be_wrong": "There could be significant underreporting or late recognition of cases, leading to fewer confirmed reports than actual cases.",
+      "rationale": "The base rate for emerging viral outbreaks spreading to multiple countries in the region suggests moderate spread potential. With 11 countries already reporting outbreaks in 2024, it is likely that the number could increase by 2026. Transmission in both South America and the Caribbean suggests further spread is possible. However, containment efforts and reporting limitations could constrain the number of confirmed reports. Given these factors, the probability is weighted towards the 9 to 11 range, with some likelihood for the 12 to 14 range as well.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.4,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious disease outbreaks in the Americas",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "11 countries reported outbreaks in 2024, suggesting potential for spread.",
+        "Oropouche virus is transmitted by insects, which can facilitate rapid spread across regions."
+      ],
+      "drivers_down": [
+        "Surveillance or reporting issues could lead to under-reporting of cases.",
+        "Control measures may have been implemented effectively, limiting spread beyond the 11 countries."
+      ],
+      "why_might_be_wrong": "There might be significant under-reporting or misclassification of cases due to limited diagnostic capabilities in some regions.",
+      "rationale": "The fact that 11 countries reported Oropouche outbreaks in 2024 indicates a potential for spread. However, there is limited additional data beyond 2024, making it difficult to predict significant increases. Given the transmission mode and the previous number of affected countries, a modest expansion is plausible, but not certain. Therefore, the most reasonable estimate is a slight increase from 11, with 9 to 11 being the most likely outcome, as control measures might limit the spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.35,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious disease outbreaks in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "11 countries and territories reported outbreaks in 2024, indicating potential for further spread",
+        "Ongoing reports of outbreaks in South America and the Caribbean as of late 2023 suggest active transmission",
+        "The geographic distribution in 2024 reflects a wider spread than earlier years"
+      ],
+      "drivers_down": [
+        "Oropouche virus is primarily transmitted by specific midge species, which may limit its spread geographically",
+        "Public health interventions and surveillance may contain the spread",
+        "Limited awareness and testing infrastructure in some regions may lead to underreporting rather than actual spread"
+      ],
+      "why_might_be_wrong": "The actual spread of Oropouche could be larger due to undetected cases or smaller due to successful containment efforts.",
+      "rationale": "The evidence suggests that Oropouche virus has been reported in 11 countries in 2024, with ongoing outbreaks in South America and the Caribbean. Given the presence in 11 countries and the potential for further spread by 2026, there is a reasonable likelihood that the number of reporting countries will increase slightly. However, the spread is likely constrained by the specific transmission vectors and possible containment efforts. Therefore, the most probable range is 9 to 11 countries, with a slightly lower probability for 12 to 14 and decreasing probabilities for other ranges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical patterns of Oropouche virus outbreaks in the Americas, it is reasonable to expect that the number of countries reporting confirmed cases will not exceed 17. The probabilities reflect a moderate expectation of continued surveillance and reporting, with a slight inclination towards fewer than 12 confirmed cases due to potential control measures and public health interventions.",
+  "evidence_record_ids": [
+    "ins-efa93abd7ba9",
+    "ins-602a5dc7944c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3398,
+    "total_output_tokens": 911,
+    "total_tokens": 4309,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3183,
+        "output_tokens": 817,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 215,
+        "output_tokens": 94,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

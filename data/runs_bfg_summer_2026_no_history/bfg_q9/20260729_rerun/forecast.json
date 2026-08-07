@@ -1,0 +1,184 @@
+{
+  "question_id": "bfg_q9",
+  "options": [
+    "exactly 20",
+    "21 to 23",
+    "24 to 26",
+    "27 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 20": 0.1273023637490868,
+        "21 to 23": 0.3191023386497036,
+        "24 to 26": 0.3191023386497036,
+        "27 or more": 0.23449295895150593
+      }
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 20": 0.15,
+        "21 to 23": 0.25,
+        "24 to 26": 0.35,
+        "27 or more": 0.25
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "exactly 20",
+      "probability": 0.1273023637490868,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "21 to 23",
+      "probability": 0.3191023386497036,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "24 to 26",
+      "probability": 0.3191023386497036,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast",
+      "option": "27 or more",
+      "probability": 0.23449295895150593,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 20",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "21 to 23",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "24 to 26",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q9",
+      "forecast_source": "bioscancast_baseline",
+      "option": "27 or more",
+      "probability": 0.25,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.35,
+        0.3,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Number of US states with livestock disease detections in similar outbreaks",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "H5N1 is highly transmissible among birds, and if similar dynamics occur in cattle, it could spread widely.",
+        "Increased interstate cattle transport could facilitate the spread of H5N1 across states.",
+        "The US has a large number of states with significant dairy cattle populations, increasing potential exposure."
+      ],
+      "drivers_down": [
+        "H5N1 has historically been primarily a bird pathogen, and its transmission to cattle might be limited.",
+        "US biosecurity measures for livestock are relatively strong, potentially limiting the spread.",
+        "There might be limited contact between poultry and dairy cattle, reducing cross-species transmission."
+      ],
+      "why_might_be_wrong": "The actual spread could be significantly different due to unknown factors in H5N1 cattle transmission dynamics.",
+      "rationale": "Given the lack of specific evidence, we start with a base rate estimation using the spread patterns of livestock diseases in the US. Historically, infectious livestock diseases can spread to a significant number of states, but biosecurity measures often limit this spread. The transmissibility of H5N1 and the number of states with high cattle populations suggest a moderate to high spread potential. The base rate suggests a lower range, but the potential for widespread transmission adjusts this upward slightly. Therefore, the most likely scenario is 21 to 23 states, with some probability of going higher.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.3,
+        0.35,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "US states with livestock disease outbreaks",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "H5N1 is highly transmissible among birds and potentially could affect livestock if measures are not stringent.",
+        "The US has a large and diverse dairy industry spread across many states, increasing exposure risk."
+      ],
+      "drivers_down": [
+        "Strict biosecurity and monitoring measures in the US could limit the spread to fewer states.",
+        "H5N1 primarily affects birds, and transmission to dairy cattle may be less common."
+      ],
+      "why_might_be_wrong": "Limited specific data on H5N1 affecting dairy cattle in the US makes it difficult to accurately predict spread, and the base rate may not perfectly apply to this particular scenario.",
+      "rationale": "Given the transmissibility of H5N1 and the widespread nature of the US dairy industry, it is plausible for the virus to spread to multiple states, but strong biosecurity measures might limit this. The lack of specific evidence on H5N1 in dairy cattle creates uncertainty. The base rate suggests a moderate number of states, but the possibility of rapid spread given the right conditions cannot be ignored. Consequently, the probabilities favor the middle ranges, with a slight tilt towards fewer states being affected due to biosecurity measures.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.3,
+        0.3,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "US states with livestock disease detections",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "H5N1 has shown the capability to spread rapidly in certain animal populations.",
+        "The US has many states with significant dairy cattle populations, increasing the risk of detection in multiple states."
+      ],
+      "drivers_down": [
+        "Strict biosecurity measures and surveillance programs may limit the spread of H5N1.",
+        "The time frame from outbreak declaration to target date is relatively short for widespread diffusion across states."
+      ],
+      "why_might_be_wrong": "The spread of H5N1 could be either significantly more contained or more widespread than assumed, leading to a misjudgment of the number of affected states.",
+      "rationale": "Given the base rate and potential for H5N1 to spread among dairy cattle, it's reasonable to expect a moderate number of states to report detections by the end of 2026. However, biosecurity measures may limit the spread, and the timeframe is relatively short, suggesting a lower likelihood for very high state counts. The probabilities reflect a balance between these factors.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of H5N1 outbreaks and the potential for spread in livestock, it's reasonable to expect a moderate number of states reporting detections. The option for '24 to 26' states is the most likely, considering the cumulative nature of the detections and the increasing awareness and response measures that may limit spread. The extremes (exactly 20 or 27 or more) are less likely due to the unpredictability of outbreaks and response effectiveness.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 2951,
+    "total_output_tokens": 921,
+    "total_tokens": 3872,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2724,
+        "output_tokens": 804,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 227,
+        "output_tokens": 117,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

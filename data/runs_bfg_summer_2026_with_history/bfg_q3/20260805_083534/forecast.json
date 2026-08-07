@@ -1,0 +1,184 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.6624878275017536,
+        "NO": 0.33751217249824644
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.6624878275017536,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.33751217249824644,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola virus disease outbreaks declared as PHEICs",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The outbreak is the third-largest Ebola outbreak on record, indicating significant spread and difficulty in control.",
+        "A large funding gap of over $400 million suggests that resources for containment are lacking, which could prolong the emergency.",
+        "The risk in the Democratic Republic of the Congo is assessed as very high due to ongoing transmission and expansion into new health zones.",
+        "The reproductive number (Rt) is above 1, indicating ongoing transmission of the virus."
+      ],
+      "drivers_down": [
+        "Historically, PHEICs for Ebola outbreaks have been lifted once control measures are effectively implemented, which could occur before 2027 if international support increases.",
+        "Uganda has a relatively small number of cases, which could indicate successful control measures in at least part of the affected region."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong due to potential changes in international response efforts or a breakthrough in vaccine distribution, which could lead to significant containment of the outbreak before 2027.",
+      "rationale": "The Bundibugyo virus outbreak in the DRC and Uganda is significant, with a high number of cases and deaths. The situation is exacerbated by a large funding gap and ongoing transmission, as indicated by an Rt greater than 1. While the risk remains high, the historical base rate for PHEICs persisting beyond a few years is relatively low. However, given the current challenges in containment and resource allocation, the probability of the PHEIC still being in effect by the end of 2026 is moderately high, though not certain.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.55,
+        0.45
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola PHEICs",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "The outbreak has become the third-largest Ebola outbreak on record, indicating significant spread and difficulty in containment.",
+        "There is a significant funding gap of over $400 million for the response effort, suggesting challenges in managing the outbreak effectively.",
+        "The confirmed cases have plateaued at a high daily rate, indicating ongoing transmission.",
+        "The reproductive number (Rt) is above 1 (1.28), suggesting continued spread of the virus."
+      ],
+      "drivers_down": [
+        "PHEICs are typically declared and then rescinded once the situation is under control, and there is potential for improvements in outbreak management over the next three years.",
+        "The reproductive number has decreased from approximately 2.9 to 1.28, indicating some progress in controlling the spread.",
+        "The outbreak is localized to specific regions (DRC and Uganda), which might allow for targeted interventions."
+      ],
+      "why_might_be_wrong": "The situation could significantly improve with international support or a successful vaccination campaign, leading to the termination of the PHEIC sooner than expected.",
+      "rationale": "The Bundibugyo Ebola outbreak is severe, with a high number of cases and deaths, and significant transmission ongoing. The substantial funding gap and high reproductive number suggest continued challenges in containment. Historical PHEICs for Ebola have varied in duration, but the severity and current challenges make it plausible that the PHEIC could still be in effect by the target date. However, improvements in containment strategies could still lead to a resolution before the deadline.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "Past PHEICs for Ebola outbreaks",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "The outbreak is the third-largest Ebola outbreak on record, indicating significant spread and impact.",
+        "There is a substantial funding gap for the preparedness-and-response plan, suggesting resource constraints.",
+        "The reproductive number was above 1 as recently as July 2026, indicating ongoing transmission.",
+        "The risk in DRC is assessed as very high and in Uganda as high due to cross-border spread."
+      ],
+      "drivers_down": [
+        "PHEICs typically do not last for multiple years; they often get resolved as outbreaks are controlled.",
+        "The reproductive number has decreased from its peak, suggesting potential control measures are having an effect."
+      ],
+      "why_might_be_wrong": "The outbreak could be controlled more rapidly than expected if new interventions are effective or if international support increases significantly.",
+      "rationale": "The Bundibugyo Ebola outbreak has significant factors suggesting prolonged challenges, such as its large scale, ongoing transmission, and a substantial funding gap. These factors make the continued existence of the PHEIC likely into 2027. However, typical PHEICs for Ebola do not last multiple years, and the decreasing reproductive number suggests some control is being achieved. Balancing these aspects, the likelihood of the PHEIC still being in effect by the end of 2026 is slightly higher than not.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical patterns of Ebola outbreaks and the ongoing efforts in biosecurity and public health in the DRC and Uganda, there is a significant chance that the Bundibugyo virus could still pose a threat by the end of 2026. However, advancements in vaccine development, surveillance, and response strategies may reduce the likelihood of a Public Health Emergency of International Concern (PHEIC) being in effect. Therefore, I estimate a 40% probability for 'YES' and a 60% probability for 'NO'.",
+  "evidence_record_ids": [
+    "ins-b335e6480eaa",
+    "ins-5e6b5927cdd3",
+    "ins-932f13b31a10",
+    "ins-6b5335ea7c20",
+    "ins-c7c2e003962b",
+    "ins-72d03190b0b5",
+    "ins-cd45b7340748",
+    "ins-817e01fde992",
+    "ins-04bcba2a29e2",
+    "ins-6db413f77279",
+    "ins-cc282f6f3546",
+    "ins-83f61b963b49",
+    "ins-3d08bce45add",
+    "ins-4d4bf2d141ba",
+    "ins-500139841c79",
+    "ins-cc084965144f",
+    "ins-062380c3bc1f",
+    "ins-4eec8606e944",
+    "ins-4448f22af929",
+    "ins-f338aa18277d",
+    "ins-c019b95b587a",
+    "ins-af117741b23e",
+    "ins-5e438828a0a3",
+    "ins-5092c795ff88",
+    "ins-112943d5c4d9",
+    "ins-da820305fc97",
+    "ins-05629186d04b",
+    "ins-2ade26f1bcf6",
+    "ins-3e05c111216c",
+    "ins-f63cb12601f0",
+    "ins-2b548866bcb7",
+    "ins-342d5a3d4706",
+    "ins-cbb25aa51b31",
+    "ins-f6b24b05f0a0",
+    "ins-245137eb1f63",
+    "ins-7d147bd761f1"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 13545,
+    "total_output_tokens": 1068,
+    "total_tokens": 14613,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 13356,
+        "output_tokens": 946,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 122,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

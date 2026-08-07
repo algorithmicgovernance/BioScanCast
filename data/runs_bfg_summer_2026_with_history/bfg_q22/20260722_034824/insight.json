@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "id": "ins-3c07c6cc944c",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "South Sudan",
+      "iso_country_code": "SS",
+      "pathogen": "poliovirus",
+      "metric_name": "suspected_cases",
+      "metric_value": 7.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cVDPV1 cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:08:11.911178+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20f11e38515e466186f20a620c3d12a4",
+          "chunk_id": "doc-20f11e38515e466186f20a620c3d12a4-c0-p2",
+          "source_url": "https://polioeradication.org/about-polio/polio-this-week/",
+          "quote": "There are seven cVDPV1 cases reported in 2026 (most recent case: 15 May 2026)."
+        }
+      ]
+    },
+    {
+      "id": "ins-75cecdc8cbd4",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 11.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-12T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total number of WPV1 cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:08:11.887682+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20f11e38515e466186f20a620c3d12a4",
+          "chunk_id": "doc-20f11e38515e466186f20a620c3d12a4-c0-p1",
+          "source_url": "https://polioeradication.org/about-polio/polio-this-week/",
+          "quote": "The total number of cases in 2026 is eleven (most recent case: 12 June 2026)."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7626,
+    "total_output_tokens": 241,
+    "total_tokens": 7867,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 7626,
+        "output_tokens": 241,
+        "calls": 3
+      }
+    }
+  },
+  "documents_processed": 1,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 1 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

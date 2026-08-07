@@ -1,0 +1,535 @@
+{
+  "records": [
+    {
+      "id": "ins-f429c94d7313",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2371.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed measles cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:55.835515+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-044fea6eaee24ebea4113574cb35cae4",
+          "chunk_id": "doc-044fea6eaee24ebea4113574cb35cae4-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,371 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-c5052a3f05ba",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2289.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed measles cases reported in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:55.835841+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-044fea6eaee24ebea4113574cb35cae4",
+          "chunk_id": "doc-044fea6eaee24ebea4113574cb35cae4-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,289 confirmed measles cases were reported in the United States in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-db7f301540a3",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed deaths from measles reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:55.835731+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-044fea6eaee24ebea4113574cb35cae4",
+          "chunk_id": "doc-044fea6eaee24ebea4113574cb35cae4-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-df886b5745df",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed deaths from measles reported in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:51:55.835946+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-044fea6eaee24ebea4113574cb35cae4",
+          "chunk_id": "doc-044fea6eaee24ebea4113574cb35cae4-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There were 3 confirmed deaths from measles in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-b890be6e08df",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "suspected_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The U.S. has had more than 1,000 measles cases already in 2026, with most in South Carolina.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:06.410019+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-89562ac81d5b4674964cfed910133ab7",
+          "chunk_id": "doc-89562ac81d5b4674964cfed910133ab7-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/meeting-determine-us-measles-elimination-status-delayed-november-nyt-reports-2026-03-02",
+          "quote": "the U.S. has had more than 1,000 measles cases already in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-575fcd84348e",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "suspected_cases",
+      "metric_value": 997.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "the 997 total is likely an undercount",
+      "event_date": "2026-11-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "In South Carolina, the 997 total is likely an undercount, but it doesn't know by how much.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:11.724063+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p2",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "the 997 total is likely an undercount, the state health department has said, but it doesn't know by how much."
+        }
+      ]
+    },
+    {
+      "id": "ins-0e36538349cf",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The U.S. has had more than 1,000 measles cases already in 2026, with most in South Carolina.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:06.410450+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-89562ac81d5b4674964cfed910133ab7",
+          "chunk_id": "doc-89562ac81d5b4674964cfed910133ab7-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/meeting-determine-us-measles-elimination-status-delayed-november-nyt-reports-2026-03-02",
+          "quote": "the U.S. has had more than 1,000 measles cases already in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-920dcd6a61a3",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": "outbreaks",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "An outbreak in Texas began in January last year, contributing to the current situation.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:06.410830+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-89562ac81d5b4674964cfed910133ab7",
+          "chunk_id": "doc-89562ac81d5b4674964cfed910133ab7-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/meeting-determine-us-measles-elimination-status-delayed-november-nyt-reports-2026-03-02",
+          "quote": "ongoing spread of measles in the U.S., which began January last year with an outbreak in Texas"
+        }
+      ]
+    },
+    {
+      "id": "ins-223a5135690b",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "official counts are incomplete, because some people get sick and don't seek out treatment",
+      "event_date": "2026-07-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The number of measles cases in the U.S. has surpassed the record-breaking tally for all of 2025, with 2,318 cases logged as of July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:12.632635+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p0",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "The U.S. Centers for Disease Control and Prevention logged 2,318 cases of measles as of Thursday"
+        },
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p1",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "The U.S. Centers for Disease Control and Prevention logged 2,318 cases of measles as of Thursday"
+        }
+      ]
+    },
+    {
+      "id": "ins-35cbb2be5c42",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2289.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The U.S. had 2,289 cases in 2025, the worst year for measles in more than three decades.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:12.633042+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p0",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "The nation had 2,289 cases in 2025, the worst year for measles in more than three decades."
+        }
+      ]
+    },
+    {
+      "id": "ins-d010e89f8150",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed measles cases in the US for 2026, just seven months into the year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:16.126758+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ab7e9732b0c748569a5d3cbd5c935474",
+          "chunk_id": "doc-ab7e9732b0c748569a5d3cbd5c935474-c0",
+          "source_url": "https://www.bbc.com/news/articles/c36dw75dkw5o",
+          "quote": "The US has seen 2,318 confirmed cases of measles in 2026, just seven months into the year"
+        }
+      ]
+    },
+    {
+      "id": "ins-616a2fda1a41",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Utah",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 700.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "In Utah, the virus has sickened more than 700 people during that time, according to the state health department.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:12.633436+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p0",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "the virus has sickened more than 700 people during that time, according to the state health department."
+        }
+      ]
+    },
+    {
+      "id": "ins-a2f239e19c9f",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "South Carolina",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 997.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "the total is likely an undercount, the state health department has said, but it doesn't know by how much",
+      "event_date": "2026-07-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "South Carolina had the nation's largest outbreak in 35 years, with a total of 997 cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:12.634084+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p0",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "There, the 997 total is likely an undercount, the state health department has said"
+        }
+      ]
+    },
+    {
+      "id": "ins-594f863be3bb",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "vaccination_rate",
+      "metric_value": 92.5,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-09-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "National vaccination rates for measles, mumps and rubella dropped to 92.5% among kindergartners in the 2024-25 school year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:11.725264+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p2",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "National vaccination rates for measles, mumps and rubella - which dropped to 92.5% among kindergartners in the 2024-25 school year"
+        }
+      ]
+    },
+    {
+      "id": "ins-786338cdada9",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "vaccination_rate",
+      "metric_value": 95.2,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2020-09-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "National vaccination rates for measles, mumps and rubella were 95.2% in 2019-20.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:11.726097+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p2",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "which dropped to 92.5% among kindergartners in the 2024-25 school year, from 95.2% in 2019-20"
+        }
+      ]
+    },
+    {
+      "id": "ins-e5551433a1e4",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "suspected_cases",
+      "metric_value": 182.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "almost always an underestimate of what actually occurred",
+      "event_date": "2025-03-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "182 probable measles cases went unconfirmed in March 2025 due to a lack of information.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:08.823339+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47",
+          "chunk_id": "doc-5ac7a254e7f64aa6b44b0ab354f69a47-c0-p3",
+          "source_url": "https://www.pbs.org/newshour/health/there-are-already-more-u-s-measles-cases-this-year-than-in-all-of-2025",
+          "quote": "The state health department previously reported that 182 probable measles cases went unconfirmed in March 2025"
+        }
+      ]
+    },
+    {
+      "id": "ins-5a9ee01acd90",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-11-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "A panel is set to decide whether the US will lose its status of having eliminated measles.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:52:16.127074+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ab7e9732b0c748569a5d3cbd5c935474",
+          "chunk_id": "doc-ab7e9732b0c748569a5d3cbd5c935474-c0",
+          "source_url": "https://www.bbc.com/news/articles/c36dw75dkw5o",
+          "quote": "In November, a panel is set to decide whether the US will lose its status of having eliminated measles"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 31316,
+    "total_output_tokens": 2313,
+    "total_tokens": 33629,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 31316,
+        "output_tokens": 2313,
+        "calls": 14
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

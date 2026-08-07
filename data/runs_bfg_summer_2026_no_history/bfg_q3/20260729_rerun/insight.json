@@ -1,0 +1,715 @@
+{
+  "records": [
+    {
+      "id": "ins-84f86ca72dbb",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "public_health_emergency",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Epidemic of Ebola Disease caused by Bundibugyo virus determined a public health emergency of international concern.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:44:55.500776+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-945df30b86e4446abd5bd451d6b0b67f",
+          "chunk_id": "doc-945df30b86e4446abd5bd451d6b0b67f-c5",
+          "source_url": "https://web.archive.org/web/20260728102153id_/https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "determined a public health emergency of international concern."
+        }
+      ]
+    },
+    {
+      "id": "ins-52a58a6601d5",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "WHO declared a public health emergency of international concern due to high suspected case numbers and risk of spread.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:03.691391+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f0df95368ded4327b090edbdd6ebc201",
+          "chunk_id": "doc-f0df95368ded4327b090edbdd6ebc201-c1",
+          "source_url": "https://www.nature.com/articles/s44298-026-00204-6",
+          "quote": "On May 17th 2026 the WHO declared this outbreak a public health emergency of international concern, based on the already high suspected case numbers"
+        }
+      ]
+    },
+    {
+      "id": "ins-a98d511f9588",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 169.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "There have only been two previously recognized BDBV outbreaks totaling 169 cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:03.693169+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f0df95368ded4327b090edbdd6ebc201",
+          "chunk_id": "doc-f0df95368ded4327b090edbdd6ebc201-c1",
+          "source_url": "https://www.nature.com/articles/s44298-026-00204-6",
+          "quote": "there have so far only been two previously recognized BDBV outbreaks totaling 169 cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-aafce5577add",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "case_fatality_ratio",
+      "metric_value": 33.0,
+      "metric_unit": "%",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "The average case fatality rate for BDBV outbreaks has so far been reported to be 33%.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:03.693411+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f0df95368ded4327b090edbdd6ebc201",
+          "chunk_id": "doc-f0df95368ded4327b090edbdd6ebc201-c1",
+          "source_url": "https://www.nature.com/articles/s44298-026-00204-6",
+          "quote": "the average CFR for BDBV outbreaks has so far been reported to be 33%"
+        }
+      ]
+    },
+    {
+      "id": "ins-b704b5c84471",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The outbreak was declared a PHEIC on 17 May 2026, requiring international coordination and cooperation for the response.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:06.183460+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e542afc125444bed958725297619a472",
+          "chunk_id": "doc-e542afc125444bed958725297619a472-c0",
+          "source_url": "https://www.afro.who.int/health-topics/ebola-disease/outbreak-drc-26",
+          "quote": "the outbreak, which was declared on 17 May 2026, constitutes a Public Health Emergency of International Concern (PHEIC)"
+        },
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "the WHO Director-General declared this outbreak a public health emergency of international concern"
+        }
+      ]
+    },
+    {
+      "id": "ins-8f29a8cdb7b0",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 82.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases reported as of May 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:16.786982+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "As of May 21, 2026, the Democratic Republic of the Congo National Public Health Institute reported 82 laboratory-confirmed cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-43f6024fceba",
+      "question_id": "bfg_q3",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 7.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths from confirmed cases reported as of May 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:16.787882+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "of which seven led to death"
+        }
+      ]
+    },
+    {
+      "id": "ins-4b8cec00476f",
+      "question_id": "bfg_q3",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 178.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths from confirmed or suspected cases reported as of May 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:16.790642+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "of which 178 resulted in death"
+        }
+      ]
+    },
+    {
+      "id": "ins-0a9b309b628b",
+      "question_id": "bfg_q3",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 830.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported in DRC and Uganda as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:26.588880+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "A total of 830 deaths has been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-5353879783c6",
+      "question_id": "bfg_q3",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 376.0,
+      "metric_unit": null,
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Additional confirmed deaths reported in DRC since 3 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:26.590211+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "including 376 confirmed deaths, have been reported in the Democratic Republic of the Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-84afc160a668",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 668.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases under investigation as of May 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:16.788018+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "668 suspected cases, of which 171 led to death, were under investigation for final classification"
+        }
+      ]
+    },
+    {
+      "id": "ins-15c86b4fea69",
+      "question_id": "bfg_q3",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_deaths",
+      "metric_value": 171.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths from suspected cases reported as of May 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:16.788423+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "of which 171 led to death"
+        }
+      ]
+    },
+    {
+      "id": "ins-255877ef0126",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 750.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed or suspected cases reported as of May 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:16.789125+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p0",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "In total, 750 confirmed or suspected cases, of which 178 resulted in death, have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-6925c4c274e7",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo & Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "public_health_emergency",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ebola disease caused by Bundibugyo virus determined a public health emergency of international concern.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:09.724080+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c4",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "Epidemic of Ebola disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda determined a public health emergency of international concern."
+        }
+      ]
+    },
+    {
+      "id": "ins-6c64530f3296",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Ituri, Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 8.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "8 samples tested positive for Bundibugyo virus out of 20 collected from suspected cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:09.525595+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-364aeee46604498da8706b78900e63a7",
+          "chunk_id": "doc-364aeee46604498da8706b78900e63a7-c2-p1",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext?rss=yes",
+          "quote": "eight tested positive for Bundibugyo virus."
+        }
+      ]
+    },
+    {
+      "id": "ins-4ed94bbe461a",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "risk_assessment",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The risk in the Democratic Republic of the Congo remains assessed as very high due to ongoing transmission and expansion of the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:22.812560+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "The risk in the Democratic Republic of the Congo remains assessed as very high due to ongoing transmission and the continued expansion of the outbreak into new health zones"
+        }
+      ]
+    },
+    {
+      "id": "ins-b3a781e1519e",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "risk_assessment",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The risk in Uganda is still assessed as high due to confirmed cross-border spread through imported cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:22.812731+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "The risk in Uganda is still assessed as high due to confirmed cross-border spread through imported cases and ongoing epidemiological links"
+        }
+      ]
+    },
+    {
+      "id": "ins-0a2eef707069",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "African Region",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "risk_assessment",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The risk for the rest of the African region and at the global level is assessed as low.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:22.812804+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "The risk for the rest of the African region and at the global level is assessed as low."
+        }
+      ]
+    },
+    {
+      "id": "ins-2daa0ade9450",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases reported in Uganda as of 14 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:26.590474+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "As of 14 July 2026, a cumulative total of 20 confirmed cases have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-d5327ca3c973",
+      "question_id": "bfg_q3",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported in Uganda as of 14 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:26.590675+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "including two deaths in imported cases (reported on 15 May and 5 June)"
+        }
+      ]
+    },
+    {
+      "id": "ins-9ca9784a864a",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "case_fatality_ratio",
+      "metric_value": 30.0,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2007-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "CFR in the past BVD outbreak in Uganda was 30%.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:21.688359+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c1",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "CFRs in the past two BVD outbreaks, reported in Uganda and in the Democratic Republic of the Congo in 2007 and 2012 were 30% and 50%, respectively."
+        }
+      ]
+    },
+    {
+      "id": "ins-68f6159dace2",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "case_fatality_ratio",
+      "metric_value": 50.0,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2012-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "CFR in the past BVD outbreak in DRC was 50%.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:21.688665+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c1",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "CFRs in the past two BVD outbreaks, reported in Uganda and in the Democratic Republic of the Congo in 2007 and 2012 were 30% and 50%, respectively."
+        }
+      ]
+    },
+    {
+      "id": "ins-62aef986b35a",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Epidemic of Ebola Disease caused by Bundibugyo virus determined a public health emergency of international concern.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:45:19.820180+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf",
+          "chunk_id": "doc-eb196c61ed9749eb9d61d2b1e4311caf-c5",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "Epidemic of Ebola Disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda determined a public health emergency of international concern"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 129289,
+    "total_output_tokens": 3701,
+    "total_tokens": 132990,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 129289,
+        "output_tokens": 3701,
+        "calls": 58
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

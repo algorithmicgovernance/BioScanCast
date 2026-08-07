@@ -1,0 +1,171 @@
+{
+  "records": [
+    {
+      "id": "ins-d68bf796a50d",
+      "question_id": "bfg_q17",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "The World Health Organization estimates the real figure is closer to 1.3 million to 4 million cases each year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:28:20.570420+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1cf150ec1adf4e18be15e70ae91ae402",
+          "chunk_id": "doc-1cf150ec1adf4e18be15e70ae91ae402-c1",
+          "source_url": "https://theconversation.com/cholera-still-kills-thousands-each-year-in-places-without-clean-water-its-far-from-history-288170",
+          "quote": "The World Health Organization estimates the real figure is closer to 1.3 million to 4 million cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-a043a244dacf",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Sudan",
+      "iso_country_code": "SD",
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1330.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "More than 1,330 confirmed cases as of July 10, 2026, during an outbreak in Sudan.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:28:21.906464+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1cf150ec1adf4e18be15e70ae91ae402",
+          "chunk_id": "doc-1cf150ec1adf4e18be15e70ae91ae402-c3",
+          "source_url": "https://theconversation.com/cholera-still-kills-thousands-each-year-in-places-without-clean-water-its-far-from-history-288170",
+          "quote": "causing more than 1,330 confirmed cases and 114 deaths as of July 10."
+        }
+      ]
+    },
+    {
+      "id": "ins-7c9e19e15c5d",
+      "question_id": "bfg_q17",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Sudan",
+      "iso_country_code": "SD",
+      "pathogen": "cholera",
+      "metric_name": "deaths",
+      "metric_value": 114.0,
+      "metric_unit": "deaths",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "114 deaths reported as of July 10, 2026, during the outbreak in Sudan.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:28:21.907015+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1cf150ec1adf4e18be15e70ae91ae402",
+          "chunk_id": "doc-1cf150ec1adf4e18be15e70ae91ae402-c3",
+          "source_url": "https://theconversation.com/cholera-still-kills-thousands-each-year-in-places-without-clean-water-its-far-from-history-288170",
+          "quote": "causing more than 1,330 confirmed cases and 114 deaths as of July 10."
+        }
+      ]
+    },
+    {
+      "id": "ins-eb7b6eaf3292",
+      "question_id": "bfg_q17",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 614828.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total reported from 1 January to 28 December 2025",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:28:24.759877+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-823331dca03a4204bfd091b9fc8ce09d",
+          "chunk_id": "doc-823331dca03a4204bfd091b9fc8ce09d-c1",
+          "source_url": "https://www.who.int/publications/m/item/multi-country-outbreak-of-cholera--epidemiological-update--33--27-january-2026",
+          "quote": "a cumulative total of 614 828 cholera cases and 7598 deaths were reported from 33 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-d8ccd23a4615",
+      "question_id": "bfg_q17",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Southern Africa",
+      "iso_country_code": null,
+      "pathogen": "cholera",
+      "metric_name": "confirmed_cases",
+      "metric_value": 12000.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "projected 12,000 to 22,000 additional cholera cases under the most probable scenarios between March and August 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:28:29.613566+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9786b15bd7a648f18b232b215ac8516e",
+          "chunk_id": "doc-9786b15bd7a648f18b232b215ac8516e-c0",
+          "source_url": "https://www.afro.who.int/news/southern-africa-faces-acute-surge-cholera-due-floods-displacement",
+          "quote": "a projected 12 000 to 22 000 additional cholera cases under the most probable scenarios."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 49766,
+    "total_output_tokens": 687,
+    "total_tokens": 50453,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 49766,
+        "output_tokens": 687,
+        "calls": 24
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

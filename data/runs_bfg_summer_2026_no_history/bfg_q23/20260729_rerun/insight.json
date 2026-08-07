@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-9c39e3655cf7",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "U.S.",
+      "iso_country_code": "US",
+      "pathogen": "sars-cov-2",
+      "metric_name": "suspected_cases",
+      "metric_value": 132.0,
+      "metric_unit": "samples",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-02-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "BA.3.2 variant detected in 132 wastewater samples from 25 U.S. states; monitoring for potential immunity evasion.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T05:33:10.585347+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3c186edd72a549599675588c0ca7ff4b",
+          "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c0",
+          "source_url": "https://health.stonybrookmedicine.edu/new-covid-variant-ba32-cicada-what-to-know",
+          "quote": "132 wastewater samples from 25 U.S. states"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 77576,
+    "total_output_tokens": 255,
+    "total_tokens": 77831,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 77576,
+        "output_tokens": 255,
+        "calls": 35
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

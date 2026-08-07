@@ -1,0 +1,196 @@
+{
+  "run_id": "20260804_235521",
+  "question_id": "bfg_q20",
+  "csv_path": "bioscancast/stages/evaluation/bfg_summer_2026_questions.csv",
+  "started_at": "2026-08-04T23:55:21.183149+00:00",
+  "completed_at": "2026-08-04T23:56:09.748076+00:00",
+  "stage_timings": {
+    "search": 9.477,
+    "filter": 3.513,
+    "extract": 10.088,
+    "insight": 13.54,
+    "forecast": 11.547
+  },
+  "current_stage": null,
+  "errored_stage": null,
+  "error_message": null,
+  "config": {
+    "filter": {
+      "blocked_domains": [
+        "facebook.com",
+        "instagram.com",
+        "pinterest.com",
+        "tiktok.com"
+      ],
+      "low_value_url_keywords": [
+        "/about",
+        "/account",
+        "/advertise",
+        "/careers",
+        "/contact",
+        "/login",
+        "/privacy",
+        "/register",
+        "/signup",
+        "/terms"
+      ],
+      "low_value_title_keywords": [
+        "cookie policy",
+        "login",
+        "privacy policy",
+        "register",
+        "sign in",
+        "terms of use"
+      ],
+      "source_tier_scores": {
+        "official": 1.0,
+        "academic": 0.9,
+        "trusted_media": 0.65,
+        "ngo": 0.6,
+        "unknown": 0.35
+      },
+      "heuristic_weights": {
+        "keyword_overlap": 0.5,
+        "freshness": 0.2,
+        "domain": 0.1,
+        "official_bonus": 0.2
+      },
+      "heuristic_keep_threshold": 0.65,
+      "heuristic_borderline_threshold": 0.45,
+      "reranker_weights": {
+        "heuristic_priority": 0.6,
+        "reranker_score": 0.4
+      },
+      "auto_keep_after_rerank": 0.82,
+      "auto_reject_after_rerank": 0.3,
+      "max_llm_filter_candidates": 10,
+      "no_llm_soft_fallback": false,
+      "no_llm_fallback_relevance_threshold": 0.5,
+      "max_docs_per_domain": 2,
+      "max_docs_per_type": 5,
+      "near_duplicate_similarity_threshold": 0.92
+    },
+    "extraction": {
+      "fetch_timeout_seconds": 30.0,
+      "fetch_max_bytes": 25000000,
+      "pdf_max_pages": 100,
+      "chunk_target_tokens": 800,
+      "chunk_max_tokens": 1500,
+      "thin_extraction_min_chars": 500,
+      "user_agent": "BioScanCast/0.1 (+https://github.com/algorithmicgovernance/BioScanCast)",
+      "enable_docling_refiner": true,
+      "docling_source_allowlist": [
+        "cdc.gov/mmwr/",
+        "cdn.who.int/media/docs/default-source/_sage-",
+        "cdn.who.int/media/docs/default-source/documents/emergencies/situation-reports/"
+      ],
+      "docling_sparse_cell_threshold": 0.5,
+      "impersonate": "chrome"
+    },
+    "insight": {
+      "retrieval_top_k": 12,
+      "bm25_weight": 0.5,
+      "embedding_weight": 0.5,
+      "cheap_model": "gpt-4o-mini",
+      "embedding_model": "text-embedding-3-small",
+      "max_input_tokens_per_run": 500000,
+      "max_chunks_per_document": 12,
+      "extraction_max_output_tokens": 4096,
+      "chunk_workers": 6,
+      "low_survival_doc_threshold": 5,
+      "low_survival_top_k": 20
+    },
+    "forecast": {
+      "model": "gpt-4o",
+      "ensemble_samples": 3,
+      "temperature": 0.7,
+      "seed": 42,
+      "aggregation": "geometric_mean_of_odds",
+      "extremize": 1.0,
+      "extremize_gate": 0.5,
+      "reasoning_max_tokens": 4096,
+      "max_evidence_records": 40,
+      "max_input_tokens_per_run": 1000000,
+      "forecast_source": "bioscancast",
+      "emit_baseline": true,
+      "baseline_source": "bioscancast_baseline",
+      "baseline_model": "gpt-4o-mini"
+    },
+    "history_context": false
+  },
+  "forecast_options": [
+    "8 or fewer",
+    "9 to 11",
+    "12 to 14",
+    "15 to 17",
+    "18 or more"
+  ],
+  "forecast_options_source": "forecasts_csv:bioscancast/stages/evaluation/bfg_summer_2026_options.csv",
+  "thin_extractions": [
+    {
+      "doc_id": "doc-7bc2dc641ce24b10bc10b372434e7b5c",
+      "result_id": "7bc2dc641ce24b10bc10b372434e7b5c",
+      "domain": "nature.com",
+      "source_url": "https://www.nature.com/articles/s41591-026-04411-9",
+      "document_type": "html",
+      "char_count": 165,
+      "min_chars": 500,
+      "reason": "thin_extraction"
+    }
+  ],
+  "docling_refiner": [],
+  "combined_usage": {
+    "gpt-4o-mini-2024-07-18": {
+      "input_tokens": 80204,
+      "output_tokens": 1136,
+      "calls": 40
+    },
+    "gpt-4o-2024-08-06": {
+      "input_tokens": 3546,
+      "output_tokens": 945,
+      "calls": 3
+    }
+  },
+  "stage_usage": {
+    "search": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 377,
+        "output_tokens": 95,
+        "calls": 2
+      }
+    },
+    "filter": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 1647,
+        "output_tokens": 210,
+        "calls": 1
+      }
+    },
+    "insight": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 77971,
+        "output_tokens": 715,
+        "calls": 36
+      }
+    },
+    "forecast": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3546,
+        "output_tokens": 945,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 116,
+        "calls": 1
+      }
+    }
+  },
+  "stage_costs_usd": {
+    "search": 0.000114,
+    "filter": 0.000373,
+    "insight": 0.012125,
+    "forecast": 0.018416
+  },
+  "estimated_cost_usd": 0.031027
+}

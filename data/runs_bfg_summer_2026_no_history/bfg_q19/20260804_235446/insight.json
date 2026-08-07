@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "id": "ins-47634e26f9da",
+      "question_id": "bfg_q19",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Saint Lucia",
+      "iso_country_code": "LC",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-02-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "First autochthonous case since 2021 reported in Saint Lucia in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:55:02.402510+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-46582182a5d3424a8931e3d7df92c585",
+          "chunk_id": "doc-46582182a5d3424a8931e3d7df92c585-c3",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "In 2026, Saint Lucia reported a locally acquired CHIKVD case."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 45602,
+    "total_output_tokens": 197,
+    "total_tokens": 45799,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 45602,
+        "output_tokens": 197,
+        "calls": 21
+      }
+    }
+  },
+  "documents_processed": 3,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 3 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

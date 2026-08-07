@@ -1,0 +1,291 @@
+{
+  "records": [
+    {
+      "id": "ins-c134192c8578",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2260.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative year-to-date total for 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:36.519621+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dbdb185b6d5748979939d97e1819bc5f",
+          "chunk_id": "doc-dbdb185b6d5748979939d97e1819bc5f-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,260 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-4e6c53dcb07c",
+      "question_id": "bfg_q15",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2289.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative year-to-date total for 2025",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:36.519962+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dbdb185b6d5748979939d97e1819bc5f",
+          "chunk_id": "doc-dbdb185b6d5748979939d97e1819bc5f-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,289 confirmed measles cases were reported in the United States in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-857c58a9d99c",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative year-to-date total for 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:36.519859+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dbdb185b6d5748979939d97e1819bc5f",
+          "chunk_id": "doc-dbdb185b6d5748979939d97e1819bc5f-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-d86d56ba3b9e",
+      "question_id": "bfg_q15",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative year-to-date total for 2025",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:36.520037+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dbdb185b6d5748979939d97e1819bc5f",
+          "chunk_id": "doc-dbdb185b6d5748979939d97e1819bc5f-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There were 3 confirmed deaths from measles in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-d8bde1ec0e54",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2231.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-09T00:00:00",
+      "event_date_precision": "day",
+      "summary": "As of July 9, 2026, the U.S. has reported 2,231 measles cases, nearing the total for all of 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:45.655839+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8bc45ce66f4c4360a65fded758e6170d",
+          "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p0",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "the U.S. has reported 2,231 cases as of July 9, which is just 58 shy of the 2,289 cases reported for the entirety of 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-7ea58dff1cb1",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2289.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "The total reported measles cases for the entirety of 2025 was 2,289, the highest in over 30 years.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:45.661470+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8bc45ce66f4c4360a65fded758e6170d",
+          "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p0",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "the 2,289 cases reported for the entirety of 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-4814cb6cffc9",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 85.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2000-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "In 2000, annual recorded cases had fallen to just 85, leading to the declaration of measles elimination.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:45.662083+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8bc45ce66f4c4360a65fded758e6170d",
+          "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p0",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "By 2000, annual recorded cases had fallen to just 85, and measles was declared eliminated"
+        }
+      ]
+    },
+    {
+      "id": "ins-0974c05a4fb1",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "vaccination_rate",
+      "metric_value": 92.5,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": null,
+      "event_date_precision": null,
+      "summary": "During the 2024-2025 school year, 92.5% of kindergartners received the MMR vaccine, a decline from previous years.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:45.662534+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8bc45ce66f4c4360a65fded758e6170d",
+          "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p0",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "During the 2024-2025 school year, 92.5% of kindergartners received the MMR vaccine"
+        }
+      ]
+    },
+    {
+      "id": "ins-c65e5ee8768c",
+      "question_id": "bfg_q15",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "vaccination_rate",
+      "metric_value": 95.2,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": null,
+      "event_date_precision": null,
+      "summary": "Prior to the COVID-19 pandemic, 95.2% of kindergartners received the MMR vaccine in the 2019-2020 school year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T04:03:45.663340+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8bc45ce66f4c4360a65fded758e6170d",
+          "chunk_id": "doc-8bc45ce66f4c4360a65fded758e6170d-c0-p0",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "the 95.2% seen in the 2019-2020 school year, prior to the COVID-19 pandemic."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 11906,
+    "total_output_tokens": 1241,
+    "total_tokens": 13147,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 11906,
+        "output_tokens": 1241,
+        "calls": 5
+      }
+    }
+  },
+  "documents_processed": 3,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 3 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

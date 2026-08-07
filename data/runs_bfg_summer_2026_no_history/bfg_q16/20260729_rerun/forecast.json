@@ -1,0 +1,206 @@
+{
+  "question_id": "bfg_q16",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 6",
+    "7 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.17969830610475648,
+        "1": 0.2526057021135739,
+        "2 to 3": 0.3359352590598746,
+        "4 to 6": 0.15156342126814434,
+        "7 or more": 0.08019731145365057
+      }
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.6,
+        "1": 0.2,
+        "2 to 3": 0.1,
+        "4 to 6": 0.05,
+        "7 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.17969830610475648,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.2526057021135739,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.3359352590598746,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "4 to 6",
+      "probability": 0.15156342126814434,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "7 or more",
+      "probability": 0.08019731145365057,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 6",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.25,
+        0.25,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "US measles-associated deaths in recent years",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Recent deaths reported in 2025 indicate an increase in measles-associated mortality in the US.",
+        "Vaccination hesitancy or gaps can lead to outbreaks and increase the risk of fatalities.",
+        "Two deaths have already occurred in the first half of 2025, suggesting a possible trend."
+      ],
+      "drivers_down": [
+        "Measles vaccination coverage in the US is generally high, reducing the likelihood of widespread outbreaks.",
+        "Public health response and containment measures can be expected to mitigate outbreaks."
+      ],
+      "why_might_be_wrong": "The available data may not accurately reflect the current vaccination coverage or public health interventions in place, leading to an underestimation or overestimation of outbreak risks.",
+      "rationale": "The base rate for measles-associated deaths in the US has been low historically, but recent increases suggest a potential change in trend. With two deaths already reported by mid-2025 and three by the end of the year, it is reasonable to expect some continued fatalities in 2026. Vaccination gaps and recent outbreaks make it more likely that deaths will continue in the 2 to 3 range, but not exceed 6 given the general effectiveness of public health measures.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.35,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the U.S. over recent years",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Recent increase in measles-associated deaths in 2025, with three deaths reported, suggests potential for continued outbreaks.",
+        "Reported measles deaths in 2025 indicate possible gaps in vaccination coverage, increasing risk."
+      ],
+      "drivers_down": [
+        "Measles deaths in the U.S. have historically been very low due to high vaccination coverage.",
+        "Public health responses may improve following recent deaths, such as increased vaccination campaigns."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there are significant changes in vaccination policies or unpredicted outbreaks that significantly alter the current trends.",
+      "rationale": "The base rate of zero deaths is low, given three deaths in 2025, suggesting an upward trend. However, the historical context of low measles deaths and potential public health responses warrant caution. Balancing these factors, the most likely scenario is a small number of deaths, with zero and one death also plausible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.35,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the U.S. in recent years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Recent increase in deaths in 2025 compared to previous years, indicating potential trend",
+        "Presence of unvaccinated populations, as evidenced by deaths in unvaccinated children in 2025"
+      ],
+      "drivers_down": [
+        "Historically low death rates from measles in the U.S. due to high vaccination coverage",
+        "Potential for public health interventions to reduce unvaccinated populations after recent deaths"
+      ],
+      "why_might_be_wrong": "There may be an unexpected measles outbreak or change in vaccination trends that significantly alters the death rates.",
+      "rationale": "Historically, measles deaths in the U.S. have been rare due to high vaccination rates. However, in 2025 there were 3 reported deaths, suggesting an uptick. If this trend continues, it is plausible that 1 or more deaths could occur in 2026, but the number is unlikely to exceed 6. I assign a higher probability to 1 and 2-3 deaths occurring than to 0 or 4+ deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the high vaccination rates in the U.S. and the effectiveness of the measles vaccine, it is likely that there will be very few, if any, measles-associated deaths reported in 2026. The majority of the population is vaccinated, which significantly reduces the risk of severe outbreaks. Therefore, the highest probability is assigned to '0' deaths, followed by a small chance of '1' death, and even smaller probabilities for the other options.",
+  "evidence_record_ids": [
+    "ins-3303534638bc",
+    "ins-d24fd6b1ec32",
+    "ins-958130f90040",
+    "ins-954ab2d06c6d"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3713,
+    "total_output_tokens": 876,
+    "total_tokens": 4589,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3501,
+        "output_tokens": 756,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 212,
+        "output_tokens": 120,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

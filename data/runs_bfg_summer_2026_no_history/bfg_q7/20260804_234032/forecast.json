@@ -1,0 +1,154 @@
+{
+  "question_id": "bfg_q7",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.0337766500778186,
+        "NO": 0.9662233499221814
+      }
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.0337766500778186,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9662233499221814,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.9
+      ],
+      "ok": true,
+      "reference_class": "Past outbreaks of avian influenza H5 viruses with human cases",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "There have been 1000 cumulative confirmed cases of H5N1 since 2003, indicating some level of transmission to humans.",
+        "Global travel and connectivity could facilitate the spread of the virus if human-to-human transmission is achieved.",
+        "The virus has caused significant mortality in past outbreaks, which means it could potentially sustain transmission if mutations occur."
+      ],
+      "drivers_down": [
+        "The current cumulative number of cases remains low compared to the long time span since 2003, suggesting limited transmission.",
+        "There is no recent evidence of sustained human-to-human transmission beyond a single generation.",
+        "Past H5 outbreaks have not led to sustained transmission despite occasional human cases."
+      ],
+      "why_might_be_wrong": "An unexpected mutation could lead to a sudden increase in human-to-human transmission capability, which would not be captured by past data.",
+      "rationale": "The base rate of sustained human-to-human transmission of H5 viruses is low, given that there have been 1000 cases since 2003 without confirmed sustained transmission. The current evidence does not indicate any recent cases of sustained transmission, and the number of cases remains relatively low. However, the potential for mutation and the interconnectedness of the world could increase the risk slightly, but not enough to make it a probable outcome by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.75
+      ],
+      "ok": true,
+      "reference_class": "Past outbreaks of avian influenza H5 viruses with potential human-to-human transmission.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Increasing number of cumulative cases and deaths globally, suggesting wider spread.",
+        "Recent confirmed case in Bangladesh indicates ongoing transmission potential.",
+        "Historical precedent for highly pathogenic avian influenza viruses evolving to facilitate human-to-human transmission."
+      ],
+      "drivers_down": [
+        "No confirmed sustained human-to-human transmission reported yet.",
+        "Low number of cases and deaths reported in recent years suggests limited human impact so far.",
+        "Strict surveillance and control measures could prevent sustained transmission."
+      ],
+      "why_might_be_wrong": "H5 viruses could mutate or recombine, leading to unexpected transmission dynamics.",
+      "rationale": "The base rate for sustained human-to-human transmission of avian influenza H5 viruses is low, given historical data. Despite a recent increase in cases, no sustained transmission has been reported yet. However, the potential for viral mutation and the increase in cumulative cases provide some risk. Balancing these factors, the likelihood of confirmed sustained human-to-human transmission by the end of 2026 remains relatively low, but not negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Past instances of avian influenza outbreaks with potential human-to-human transmission",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "The cumulative number of cases has reached 1000, indicating a significant presence and possible increased opportunities for mutation and adaptation for human-to-human transmission.",
+        "There has been a global spread of cases, including in countries like the United States and Bangladesh, suggesting the virus is widespread among avian populations.",
+        "H5 viruses, specifically H5N1, have shown potential for adaptation to human transmission in the past."
+      ],
+      "drivers_down": [
+        "To date, there has been no confirmed sustained human-to-human transmission of H5 viruses, indicating a significant biological barrier.",
+        "Current evidence shows a low number of annual cases and deaths, suggesting limited human infection and spread.",
+        "Public health interventions and surveillance are likely to contain outbreaks and reduce the risk of sustained transmission."
+      ],
+      "why_might_be_wrong": "The virus could undergo a mutation that significantly increases its human-to-human transmission capability, which is hard to predict.",
+      "rationale": "The base rate of confirmed sustained human-to-human transmission for H5 viruses historically is low, as no such transmission has been confirmed to date despite over 1000 cases. While the number of cases and global spread increase the risk, significant biological and intervention barriers exist. Thus, the probability of WHO or a national authority confirming sustained human-to-human transmission by the end of 2026 remains relatively low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical patterns of avian influenza H5 viruses, while there have been instances of human infections, sustained human-to-human transmission has not been commonly observed. The global health community, including the WHO, has robust surveillance and response mechanisms in place, which may mitigate the risk of sustained transmission. Therefore, the probability of confirmation of such a cluster remains low.",
+  "evidence_record_ids": [
+    "ins-7e83733a143f",
+    "ins-77d2f8efeafa",
+    "ins-f5f1cca70e27",
+    "ins-187856fac9f4",
+    "ins-ca9bf5a06c6a",
+    "ins-237fd29a8a76",
+    "ins-535d5fc0cfaa"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4168,
+    "total_output_tokens": 905,
+    "total_tokens": 5073,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3969,
+        "output_tokens": 817,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 199,
+        "output_tokens": 88,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

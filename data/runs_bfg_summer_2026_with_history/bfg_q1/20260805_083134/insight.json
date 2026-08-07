@@ -1,0 +1,229 @@
+{
+  "records": [
+    {
+      "id": "ins-465e08f37236",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:08.338558+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1ae93dd3f7a844bf867db9d5d492c309",
+          "chunk_id": "doc-1ae93dd3f7a844bf867db9d5d492c309-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-783dcc194b3a",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3360.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases of Ebola in DRC as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:18.230054+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-77f990fdc61a4c6bb784db21fa04e1d4",
+          "chunk_id": "doc-77f990fdc61a4c6bb784db21fa04e1d4-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "At 3,360 confirmed cases, the disease is now affecting people in five provinces in the east of the DRC"
+        }
+      ]
+    },
+    {
+      "id": "ins-070a2669dd93",
+      "question_id": "bfg_q1",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1487.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths from Ebola in DRC as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:18.230882+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-77f990fdc61a4c6bb784db21fa04e1d4",
+          "chunk_id": "doc-77f990fdc61a4c6bb784db21fa04e1d4-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "with 1,487 deaths recorded, representing an overall case fatality rate estimated at about 45%"
+        }
+      ]
+    },
+    {
+      "id": "ins-9dd11b436b5b",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Approximately 20 confirmed cases reported in Uganda since the outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:20.814619+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-890e3086944f4a56a271a6ee7862881b",
+          "chunk_id": "doc-890e3086944f4a56a271a6ee7862881b-c1",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/06/24/ebola-has-passed-1000-cases-this-outbreak-is-different-from-any-before",
+          "quote": "approximately 20 confirmed cases and 2 deaths have been reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-456af2093ceb",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of Congo",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases of Ebola in DRC as of June 21, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:21.140481+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-890e3086944f4a56a271a6ee7862881b",
+          "chunk_id": "doc-890e3086944f4a56a271a6ee7862881b-c0",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/06/24/ebola-has-passed-1000-cases-this-outbreak-is-different-from-any-before",
+          "quote": "surpassed 1,000 confirmed cases of Ebola as of June 21, 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-9a95654a6d98",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "DRC and Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 34700.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "At day 37 from declaration, the 2026 outbreak had accumulated roughly ten times as many confirmed cases as the 2018\u20132020 outbreak at the same point.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:23.240578+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-890e3086944f4a56a271a6ee7862881b",
+          "chunk_id": "doc-890e3086944f4a56a271a6ee7862881b-c2",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/06/24/ebola-has-passed-1000-cases-this-outbreak-is-different-from-any-before",
+          "quote": "the 2026 outbreak had accumulated roughly ten times as many confirmed cases as the 2018-2020 outbreak at the same point."
+        }
+      ]
+    },
+    {
+      "id": "ins-7395d8ad8c47",
+      "question_id": "bfg_q1",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "DRC and Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 267.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-24T00:00:00",
+      "event_date_precision": "day",
+      "summary": "With 267 confirmed deaths, the case fatality rate sits near 25%.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:32:23.241088+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-890e3086944f4a56a271a6ee7862881b",
+          "chunk_id": "doc-890e3086944f4a56a271a6ee7862881b-c2",
+          "source_url": "https://www.forbes.com/sites/johndrake/2026/06/24/ebola-has-passed-1000-cases-this-outbreak-is-different-from-any-before",
+          "quote": "With 267 confirmed deaths, the case fatality rate sits near 25%"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 95251,
+    "total_output_tokens": 1151,
+    "total_tokens": 96402,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 95251,
+        "output_tokens": 1151,
+        "calls": 43
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

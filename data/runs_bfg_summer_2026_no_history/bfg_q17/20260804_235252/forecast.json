@@ -1,0 +1,216 @@
+{
+  "question_id": "bfg_q17",
+  "options": [
+    "under 175,000",
+    "175,000 to 274,999",
+    "275,000 to 399,999",
+    "400,000 to 599,999",
+    "600,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 175,000": 0.05009075637060383,
+        "175,000 to 274,999": 0.10018151274120767,
+        "275,000 to 399,999": 0.15027226911181146,
+        "400,000 to 599,999": 0.21583452634952893,
+        "600,000 or more": 0.48362093542684814
+      }
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 175,000": 0.25,
+        "175,000 to 274,999": 0.35,
+        "275,000 to 399,999": 0.2,
+        "400,000 to 599,999": 0.15,
+        "600,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast",
+      "option": "under 175,000",
+      "probability": 0.05009075637060383,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast",
+      "option": "175,000 to 274,999",
+      "probability": 0.10018151274120767,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast",
+      "option": "275,000 to 399,999",
+      "probability": 0.15027226911181146,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast",
+      "option": "400,000 to 599,999",
+      "probability": 0.21583452634952893,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast",
+      "option": "600,000 or more",
+      "probability": 0.48362093542684814,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 175,000",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast_baseline",
+      "option": "175,000 to 274,999",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast_baseline",
+      "option": "275,000 to 399,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast_baseline",
+      "option": "400,000 to 599,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q17",
+      "forecast_source": "bioscancast_baseline",
+      "option": "600,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.5
+      ],
+      "ok": true,
+      "reference_class": "Global cholera cases reported annually",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "114,829 cases reported by May 2026, suggesting a potential continuation of high incidence if trends persist.",
+        "High incidence of cases in the African Region (61,888 cases) and Eastern Mediterranean Region (52,171 cases) indicating regional outbreaks.",
+        "Historical precedent of 614,828 cases in 2025, suggesting a possibility of similar or higher numbers in 2026.",
+        "Potential for underreporting and reporting delays could mean actual cases are higher than reported."
+      ],
+      "drivers_down": [
+        "Cholera outbreaks can be controlled with effective public health interventions, which may reduce case numbers by end of 2026.",
+        "Seasonal variations could lead to a reduction in cases as certain regions may experience lower incidence outside peak periods.",
+        "Increased awareness and preventative measures post-2025 might have been implemented to curb the spread."
+      ],
+      "why_might_be_wrong": "The potential for significant underreporting or changes in reporting systems could lead to a misestimation of the actual case count.",
+      "rationale": "Given the 2025 global cholera case count of 614,828 and the 114,829 cases already reported by May 2026, the likelihood of reaching or exceeding 600,000 cases in 2026 is significant if current trends continue. However, interventions could lead to reductions. The potential for underreporting adds uncertainty but aligns with a higher estimate. Thus, the highest probability is assigned to 600,000 or more cases, followed by a lower probability for 400,000 to 599,999 cases, consistent with historical data and current trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.15,
+        0.25,
+        0.45
+      ],
+      "ok": true,
+      "reference_class": "Global cholera cases reported annually",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "As of May 31, 2026, there are already 114,829 reported cases, indicating a high incidence rate early in the year.",
+        "In 2025, there were 614,828 reported cases, suggesting a potential for high case numbers if similar trends continue."
+      ],
+      "drivers_down": [
+        "There is potential underreporting and reporting delays which might lead to lower official numbers.",
+        "Efforts to control outbreaks and improve water sanitation could reduce case numbers."
+      ],
+      "why_might_be_wrong": "The data from 2026 so far might not accurately predict the full year trend, especially if interventions change the rate of new cases.",
+      "rationale": "The 2025 cumulative case count was significantly above 600,000, and by mid-2026, the case count is already 114,829. While there is potential underreporting, the early high numbers suggest a trend that could lead to a total above 400,000 by year-end if it follows a similar trajectory to 2025. Given these factors, the most likely range is the highest bin, but because this is only midway through the year, there is still some uncertainty, hence the spread across the higher bins.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.5
+      ],
+      "ok": true,
+      "reference_class": "Global cholera cases in recent years",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "As of mid-2026, 114,829 cases were already reported, indicating a high trajectory.",
+        "Historical data shows that in 2025 there were over 600,000 cases reported globally."
+      ],
+      "drivers_down": [
+        "Potential underreporting and reporting delays may affect the accuracy of the current numbers.",
+        "Case definitions and reporting systems may vary, leading to inconsistent data."
+      ],
+      "why_might_be_wrong": "If the reporting systems improve significantly or if there is a major outbreak, the number of cases might exceed the expectations.",
+      "rationale": "The base rate of cholera cases in recent years, especially the 2025 figure of over 600,000 cases, suggests a high likelihood of a significant number of cases in 2026. By mid-2026, 114,829 cases have been reported, which already indicates a substantial number. Given these factors and considering potential underreporting, the most probable outcome is that the number of cases in 2026 will exceed 600,000. The presence of significant drivers both increasing and decreasing this number has been considered, but the substantial historical base rate and mid-year data strongly influence this projection.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Cholera cases fluctuate based on various factors including climate, sanitation, and healthcare access. Given historical data, it's reasonable to expect a significant number of cases but not an extreme rise. The probabilities reflect a moderate expectation of cases, with a higher likelihood of being under 275,000.",
+  "evidence_record_ids": [
+    "ins-45b8d2393076",
+    "ins-8192a8ab5f58",
+    "ins-639598feea1e",
+    "ins-755cff2a960c",
+    "ins-f8c36727d4a5",
+    "ins-8a8b872cad76",
+    "ins-86c4c4122f5c",
+    "ins-7c0d781e4f7c",
+    "ins-7c035a3e649a",
+    "ins-874bf2846f5e",
+    "ins-49fbfa2c2c37",
+    "ins-9e3d35031612"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5434,
+    "total_output_tokens": 996,
+    "total_tokens": 6430,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5211,
+        "output_tokens": 911,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 85,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

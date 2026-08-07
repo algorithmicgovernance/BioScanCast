@@ -1,0 +1,205 @@
+{
+  "question_id": "bfg_q16",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 6",
+    "7 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.9853851875340334,
+        "1": 0.012981526200294656,
+        "2 to 3": 0.0015183285151494645,
+        "4 to 6": 0.0001149577504817642,
+        "7 or more": 4.072027954780116e-14
+      }
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.6,
+        "1": 0.2,
+        "2 to 3": 0.1,
+        "4 to 6": 0.05,
+        "7 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.9853851875340334,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.012981526200294656,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.0015183285151494645,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "4 to 6",
+      "probability": 0.0001149577504817642,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "7 or more",
+      "probability": 4.072027954780116e-14,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 6",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.8,
+        0.12,
+        0.06,
+        0.015,
+        0.005
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the U.S. in recent years",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Recent occurrence of 3 deaths in 2025 indicates potential for similar events in subsequent years.",
+        "Vaccine hesitancy and misinformation may lead to lower vaccination rates, increasing measles cases and potential deaths."
+      ],
+      "drivers_down": [
+        "Historically, the U.S. has had very low measles-associated deaths due to strong vaccination programs.",
+        "Public health measures are robust and can quickly address outbreaks to prevent deaths."
+      ],
+      "why_might_be_wrong": "Vaccine hesitancy could lead to larger outbreaks than anticipated, increasing the death toll.",
+      "rationale": "The base rate of zero deaths is high given the effectiveness of vaccination programs in the U.S., but the recent occurrence of 3 deaths in 2025 suggests that the possibility of deaths is non-zero. Vaccine hesitancy and misinformation remain concerns that could impact vaccination rates and lead to outbreaks. However, public health measures are generally effective at preventing deaths. Therefore, while zero deaths is still the most likely outcome, the probability of at least one death is not negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.8,
+        0.15,
+        0.04,
+        0.01,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "US measles-associated deaths per year",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "Increase in vaccine hesitancy leading to potential outbreaks",
+        "Measles cases in 2025 resulted in 3 deaths, indicating potential vulnerability"
+      ],
+      "drivers_down": [
+        "Highly effective vaccination programs in the US",
+        "Low historical death rates from measles in recent years",
+        "Strong public health infrastructure and response capabilities"
+      ],
+      "why_might_be_wrong": "Vaccine hesitancy could lead to outbreaks larger than anticipated, increasing the death count.",
+      "rationale": "The historical base rate for measles deaths in the US is low, with many years seeing zero deaths due to effective vaccination programs and public health measures. However, 2025 saw an unusual spike with 3 deaths, likely due to increased vaccine hesitancy, which could persist into 2026. Although the base rate suggests zero deaths, the recent spike and ongoing vaccine hesitancy justify a modest increase in the probability of 1 or more deaths, but zero deaths remains the most likely outcome given the strong public health measures in place.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.93,
+        0.05,
+        0.015,
+        0.005,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "US measles-associated deaths per year",
+      "base_rate": 0.94,
+      "drivers_up": [
+        "Vaccine hesitancy could lead to higher infection rates and potential deaths.",
+        "Changes in public health policy or funding could impact vaccination rates."
+      ],
+      "drivers_down": [
+        "Strong public health infrastructure and vaccination programs in the US.",
+        "Historically low rates of measles deaths in the US."
+      ],
+      "why_might_be_wrong": "There could be an unexpected outbreak or significant change in vaccination rates due to policy changes or misinformation.",
+      "rationale": "The historically low base rate of measles-associated deaths in the US, supported by effective public health measures and vaccination programs, suggests a high probability of zero deaths in 2026. However, the potential for increased vaccine hesitancy and policy changes introduces some risk, thus slightly lowering the probability of zero deaths compared to previous years. The evidence of occasional deaths in recent years, like in 2025, supports a small probability for 1 or more deaths. As such, the probabilities are skewed towards zero but account for these risks.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Measles is a highly contagious disease, but vaccination rates in the U.S. are generally high, which significantly reduces the likelihood of outbreaks and associated deaths. Given the effectiveness of the measles vaccine and the public health measures in place, it is reasonable to predict that the majority of the time, there will be no reported deaths. A small number of deaths could occur in unvaccinated populations, but these would likely be limited.",
+  "evidence_record_ids": [
+    "ins-1cae3f9ff362",
+    "ins-f43817fc240a",
+    "ins-e4d20d93a477"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4520,
+    "total_output_tokens": 846,
+    "total_tokens": 5366,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4314,
+        "output_tokens": 731,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 206,
+        "output_tokens": 115,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

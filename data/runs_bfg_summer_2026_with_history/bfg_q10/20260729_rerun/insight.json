@@ -1,0 +1,60 @@
+{
+  "records": [
+    {
+      "id": "ins-e25a9f77246d",
+      "question_id": "bfg_q10",
+      "event_type": "outbreak_declared",
+      "confidence": 0.9,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "pheic",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ebola disease caused by Bundibugyo virus declared a PHEIC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T15:35:27.141959+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7f8345cecb0a4f16b1dea7afdb56bc82",
+          "chunk_id": "doc-7f8345cecb0a4f16b1dea7afdb56bc82-c0",
+          "source_url": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern",
+          "quote": "the Ebola disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda constitutes a public health emergency of international concern (PHEIC)"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 78915,
+    "total_output_tokens": 280,
+    "total_tokens": 79195,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 78915,
+        "output_tokens": 280,
+        "calls": 36
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 10,
+  "notes": [
+    "Skipped document doc-915e2e5bf1144f8086ac471cb1c79c2e: failed",
+    "Skipped document doc-2801efc8b50d4d5b9ebeee013dda8ed7: failed",
+    "Skipped document doc-ea9a759094744699a67e509d8141f769: failed",
+    "Skipped document doc-10d6a1d5d227494a83d437535fc87528: failed",
+    "Skipped document doc-4db27df2b9c14175bf40613458ca2807: failed",
+    "Skipped document doc-64b4eb46193e4807a9cedb4f5312a76f: failed",
+    "Skipped document doc-5114b93162e547dc990f2c3a981fcedd: failed",
+    "Skipped document doc-3362b2421bf04984808352ecdae9a7b3: failed",
+    "Skipped document doc-acfc243c02144b3d97fd1c994884e7d6: failed",
+    "Skipped document doc-647cdd9534db45b399019f8d81c2ac59: failed"
+  ]
+}

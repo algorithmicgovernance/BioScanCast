@@ -1,0 +1,147 @@
+{
+  "question_id": "bfg_q23",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.7217809506630847,
+        "NO": 0.2782190493369153
+      }
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.7217809506630847,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.2782190493369153,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "Past periods of SARS-CoV-2 variant emergence and WHO designations of variants of interest or concern.",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Ongoing presence of SARS-CoV-2 in the population, as evidenced by wastewater samples.",
+        "Historical precedent of new variants emerging over time.",
+        "Global travel and population movement increases the likelihood of new variant spread and detection."
+      ],
+      "drivers_down": [
+        "Possible increased immunity in the population reducing the impact of new variants.",
+        "Potential improvements in public health measures and surveillance reducing the emergence of concerning variants.",
+        "No current reports of a significant increase in cases or a new variant as of February 2026."
+      ],
+      "why_might_be_wrong": "Unexpected changes in the virus's mutation rate or spread could lead to a sudden emergence of a variant, surprising current expectations.",
+      "rationale": "Given the ongoing presence of SARS-CoV-2 and historical trends of variant emergence, there remains a reasonable likelihood of a new variant being designated. However, the absence of a current significant rise in cases or variant reports slightly tempers this likelihood. The balance of these factors leads to a moderate probability of a new variant designation.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.35
+      ],
+      "ok": true,
+      "reference_class": "SARS-CoV-2 variant designations from 2020 to 2025",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Ongoing detection of new variants in various regions, such as the U.S., indicating continuous viral evolution.",
+        "The historical pattern of multiple new variant designations each year by WHO.",
+        "Increased surveillance and sampling, such as the 132 wastewater samples in the U.S., which may lead to new variant identifications."
+      ],
+      "drivers_down": [
+        "The possibility that new variants may not meet the criteria for VOI or VOC designation due to reduced impact or transmissibility.",
+        "Potential decrease in the rate of significant mutations as the virus stabilizes over time."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if the virus undergoes unexpected changes in mutation rates or if surveillance and designation criteria shift significantly.",
+      "rationale": "Given the historical base rate of WHO designating new variants of interest or concern within a year and the detection of potential new variants in recent samples, it is reasonable to expect a new designation in the latter half of 2026. The evidence of ongoing sampling and viral evolution supports this likelihood. However, the virus's mutation rate could stabilize, reducing the chance of meeting WHO's criteria for a new designation.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "SARS-CoV-2 variant designations by WHO in past years",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "There are ongoing detections of new SARS-CoV-2 variants, as evidenced by the 132 wastewater samples from 25 U.S. states indicating potential variant spread.",
+        "SARS-CoV-2 continues to mutate, and new variants have historically been designated as VOI or VOC when they show increased transmissibility or immune escape.",
+        "The WHO has consistently monitored and designated new variants since the start of the pandemic, and the virus remains endemic."
+      ],
+      "drivers_down": [
+        "The rate of new variant designations might decrease as global immunity increases and the virus becomes less impactful on public health.",
+        "Increased vaccination and natural immunity could lead to fewer variants of significant concern.",
+        "There might be delays in designation if new variants do not exhibit significant differences in transmissibility or severity."
+      ],
+      "why_might_be_wrong": "The forecast could be off if a new variant emerges but lacks the distinct characteristics necessary for WHO designation as a VOI or VOC.",
+      "rationale": "Given the ongoing mutation of the virus and recent evidence of variant spread in the U.S., there is a moderate likelihood of WHO designating a new variant of interest or concern in the second half of 2026. Historical patterns suggest a reasonable base rate for such designations, but increased immunity and reduced impact of new variants could lower the likelihood.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing evolution of SARS-CoV-2 and the potential for new variants to emerge, it is plausible that the WHO may designate a new variant of interest or concern by the end of 2026. However, the rate of variant emergence and the criteria for designation may also lead to a scenario where no new variants are classified, hence a lower probability for 'NO'.",
+  "evidence_record_ids": [
+    "ins-9c39e3655cf7"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 2910,
+    "total_output_tokens": 891,
+    "total_tokens": 3801,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2715,
+        "output_tokens": 799,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 195,
+        "output_tokens": 92,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,619 @@
+{
+  "records": [
+    {
+      "id": "ins-c5339bc920cc",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 53.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total of 64 cases (53 confirmed, 11 probable) reported from the last outbreak declared on 4 September 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:34.239981+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ca141fd896f44524b807d71097a0a74a",
+          "chunk_id": "doc-ca141fd896f44524b807d71097a0a74a-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "total of 64 cases (53 confirmed, 11 probable), including 45 deaths (CFR 70.3%), reported from six health areas in Bulape Health Zone, Kasai Province."
+        }
+      ]
+    },
+    {
+      "id": "ins-3db5664f8f3e",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 38.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2012-11-26T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The last BVD outbreak was reported on 17 August 2012 with a total of 59 cases, including 38 confirmed.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:34.240722+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ca141fd896f44524b807d71097a0a74a",
+          "chunk_id": "doc-ca141fd896f44524b807d71097a0a74a-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "A total of 59 cases, 38 confirmed and 21 probable cases, including 34 deaths were reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-b46f82323258",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 534.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The reported CFR is likely an underestimation as many deaths that occurred before the outbreak declaration remain under investigation.",
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases of Bundibugyo virus disease reported from both countries as of 6 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:48.776406+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fe33c2bad1748618490f0f99b4f5874",
+          "chunk_id": "doc-4fe33c2bad1748618490f0f99b4f5874-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "quote": "In total, 534 confirmed cases including 93 deaths (case fatality rate [CFR] 17.4%) have been reported from both countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-b47da6a9f511",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 515.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The reported CFR is likely an underestimation as many deaths that occurred before the outbreak declaration remain under investigation.",
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases reported from the Democratic Republic of the Congo as of 6 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:48.777255+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fe33c2bad1748618490f0f99b4f5874",
+          "chunk_id": "doc-4fe33c2bad1748618490f0f99b4f5874-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "quote": "As of 6 June 2026, a total of 515 confirmed cases including 91 deaths (CFR 17.7%) have been reported from the Democratic Republic of Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-9271dbb3ff80",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2145.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases reported in the Democratic Republic of the Congo and Uganda as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:57:02.073967+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "In total, 2145 confirmed cases have been reported: 2124 in the Democratic Republic of the Congo (including two cases with diagnosis in the Democratic Republic of the Congo and subsequent treatment in "
+        }
+      ]
+    },
+    {
+      "id": "ins-b8248859d529",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 664.0,
+      "metric_unit": null,
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Additional confirmed cases reported in the Democratic Republic of the Congo since 3 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:57:02.075053+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "Since 3 July 2026, an additional 664 confirmed cases, including 376 confirmed deaths, have been reported in the Democratic Republic of the Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-f9f111b496aa",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 969.0,
+      "metric_unit": null,
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases reported in the past 21 days in the Democratic Republic of the Congo.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:57:02.075977+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "In the past 21 days, 969 confirmed cases, including 524 confirmed deaths, have been reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-8e9a79256ba3",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 45.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total of 64 cases (53 confirmed, 11 probable) reported from the last outbreak declared on 4 September 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:34.240389+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ca141fd896f44524b807d71097a0a74a",
+          "chunk_id": "doc-ca141fd896f44524b807d71097a0a74a-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "including 45 deaths (CFR 70.3%), reported from six health areas in Bulape Health Zone, Kasai Province."
+        }
+      ]
+    },
+    {
+      "id": "ins-c2cf82788f75",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 34.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2012-11-26T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The last BVD outbreak was reported on 17 August 2012 with a total of 59 cases, including 34 deaths.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:34.241142+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ca141fd896f44524b807d71097a0a74a",
+          "chunk_id": "doc-ca141fd896f44524b807d71097a0a74a-c3",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "including 34 deaths were reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-50a9f22dd73d",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "Bundibugyo virus",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:31.075107+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ca141fd896f44524b807d71097a0a74a",
+          "chunk_id": "doc-ca141fd896f44524b807d71097a0a74a-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-64c9a1fe4810",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 93.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The reported CFR is likely an underestimation as many deaths that occurred before the outbreak declaration remain under investigation.",
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported from both countries as of 6 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:48.776911+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fe33c2bad1748618490f0f99b4f5874",
+          "chunk_id": "doc-4fe33c2bad1748618490f0f99b4f5874-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "quote": "In total, 534 confirmed cases including 93 deaths (case fatality rate [CFR] 17.4%) have been reported from both countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-72b39198dfa0",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 91.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The reported CFR is likely an underestimation as many deaths that occurred before the outbreak declaration remain under investigation.",
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported from the Democratic Republic of the Congo as of 6 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:48.777703+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fe33c2bad1748618490f0f99b4f5874",
+          "chunk_id": "doc-4fe33c2bad1748618490f0f99b4f5874-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "quote": "As of 6 June 2026, a total of 515 confirmed cases including 91 deaths (CFR 17.7%) have been reported from the Democratic Republic of Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-a6c21b4d47c8",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 830.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported in the Democratic Republic of the Congo and Uganda as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:57:02.074568+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "A total of 830 deaths has been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-37069633bd65",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 376.0,
+      "metric_unit": null,
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Additional confirmed deaths reported in the Democratic Republic of the Congo since 3 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:57:02.075518+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "Since 3 July 2026, an additional 664 confirmed cases, including 376 confirmed deaths, have been reported in the Democratic Republic of the Congo."
+        }
+      ]
+    },
+    {
+      "id": "ins-65edf3643317",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 524.0,
+      "metric_unit": null,
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed deaths reported in the past 21 days in the Democratic Republic of the Congo.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:57:02.076432+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "In the past 21 days, 969 confirmed cases, including 524 confirmed deaths, have been reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-98cef921d8a6",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "Bundibugyo virus",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:31.074860+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ca141fd896f44524b807d71097a0a74a",
+          "chunk_id": "doc-ca141fd896f44524b807d71097a0a74a-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-3c71ce71715c",
+      "question_id": "bfg_q21",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "filovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 19.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases reported from Uganda as of 6 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:48.784335+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fe33c2bad1748618490f0f99b4f5874",
+          "chunk_id": "doc-4fe33c2bad1748618490f0f99b4f5874-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "quote": "As of 6 June 2026, a total of 19 confirmed cases including two deaths in imported cases, and one probable case who has died, have been reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-1b82b373f551",
+      "question_id": "bfg_q21",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "filovirus",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported from Uganda as of 6 June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:48.784737+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fe33c2bad1748618490f0f99b4f5874",
+          "chunk_id": "doc-4fe33c2bad1748618490f0f99b4f5874-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON606",
+          "quote": "As of 6 June 2026, a total of 19 confirmed cases including two deaths in imported cases, and one probable case who has died, have been reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-0cf1d4c29dee",
+      "question_id": "bfg_q21",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo & Uganda",
+      "iso_country_code": null,
+      "pathogen": "filovirus",
+      "metric_name": "case_fatality_ratio",
+      "metric_value": 30.0,
+      "metric_unit": "%",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2007-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "CFR in the past BVD outbreak in Uganda was 30%.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:52.820227+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c1",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "CFRs in the past two BVD outbreaks, reported in Uganda and in the Democratic Republic of the Congo in 2007 and 2012 were 30% and 50%, respectively."
+        }
+      ]
+    },
+    {
+      "id": "ins-800f43cea01c",
+      "question_id": "bfg_q21",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo & Uganda",
+      "iso_country_code": null,
+      "pathogen": "filovirus",
+      "metric_name": "case_fatality_ratio",
+      "metric_value": 50.0,
+      "metric_unit": "%",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2012-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "CFR in the past BVD outbreak in the Democratic Republic of the Congo was 50%.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:56:52.820460+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b7376eab84fd4adca5e3cd1984c29670",
+          "chunk_id": "doc-b7376eab84fd4adca5e3cd1984c29670-c1",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "CFRs in the past two BVD outbreaks, reported in Uganda and in the Democratic Republic of the Congo in 2007 and 2012 were 30% and 50%, respectively."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 91147,
+    "total_output_tokens": 3126,
+    "total_tokens": 94273,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 91147,
+        "output_tokens": 3126,
+        "calls": 41
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

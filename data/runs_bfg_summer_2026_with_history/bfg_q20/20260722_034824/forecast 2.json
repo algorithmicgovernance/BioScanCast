@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q20",
+  "options": [
+    "8 or fewer",
+    "9 to 11",
+    "12 to 14",
+    "15 to 17",
+    "18 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "8 or fewer": 0.28180645817251493,
+        "9 to 11": 0.31525376856471604,
+        "12 to 14": 0.22366993407724126,
+        "15 to 17": 0.11723621097524024,
+        "18 or more": 0.06203362821028741
+      }
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "8 or fewer": 0.25,
+        "9 to 11": 0.35,
+        "12 to 14": 0.2,
+        "15 to 17": 0.1,
+        "18 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "8 or fewer",
+      "probability": 0.28180645817251493,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "9 to 11",
+      "probability": 0.31525376856471604,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "12 to 14",
+      "probability": 0.22366993407724126,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "15 to 17",
+      "probability": 0.11723621097524024,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "18 or more",
+      "probability": 0.06203362821028741,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8 or fewer",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "9 to 11",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12 to 14",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 17",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "18 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.15,
+        0.35,
+        0.25,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious diseases in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Oropouche virus identified in new areas in South America as of late 2023.",
+        "Cuba reported its first confirmed case in June 2024, indicating spread beyond endemic areas.",
+        "Several countries in South America and the Caribbean reported outbreaks since late 2023."
+      ],
+      "drivers_down": [
+        "Oropouche virus is not as widely known or monitored as other major viruses like Zika or dengue, potentially slowing spread and recognition.",
+        "Containment and response measures may be more effective due to previous experiences with similar outbreaks."
+      ],
+      "why_might_be_wrong": "The actual spread of Oropouche could be underestimated due to limited surveillance and reporting, leading to a higher number of affected countries than anticipated.",
+      "rationale": "The emergence of Oropouche in new areas of South America and the Caribbean, along with the first case in Cuba, indicates potential for wider spread. While the base rate for rapid spread of new diseases is moderate, the specific drivers suggest an increased probability of more countries reporting cases. However, containment measures and less focus on Oropouche compared to other diseases may limit the spread. Given these factors, the most likely range is 9 to 11 countries, but there is a significant chance it could be more or less.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.3,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious diseases in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Oropouche virus identified causing large outbreaks in new areas in South America in late 2023.",
+        "Cuba reported its first confirmed case in June 2024, indicating potential spread to the Caribbean.",
+        "Historical patterns of infectious diseases like Zika and Chikungunya show rapid spread across multiple countries once introduced."
+      ],
+      "drivers_down": [
+        "Oropouche virus primarily affects rural and riverine communities, which might limit its spread compared to urban-centric diseases.",
+        "Lack of strong vector control measures or public health infrastructure could slow reporting or containment."
+      ],
+      "why_might_be_wrong": "The forecast could be off if Oropouche spreads more rapidly than anticipated due to unforeseen factors such as new transmission vectors or ineffective containment measures.",
+      "rationale": "Given the recent spread to both endemic and new areas, including the Caribbean, and historical patterns of similar diseases, it is likely that Oropouche will be confirmed in a growing number of countries. However, considering the disease's rural focus and potential public health challenges, significant spread is not guaranteed. A balanced probability distribution reflects the potential for moderate spread while acknowledging uncertainties.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.5,
+        0.25,
+        0.15,
+        0.06,
+        0.04
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious disease spread in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Oropouche virus causing large outbreaks in both endemic and new areas in South America since late 2023.",
+        "Cuba reported its first confirmed case in June 2024, indicating spread beyond South America.",
+        "Recent reports indicate the virus is affecting several countries in South America and the Caribbean, suggesting an expanding geographic reach."
+      ],
+      "drivers_down": [
+        "Limited historical data on Oropouche virus spread compared to other more well-documented viruses.",
+        "Ongoing containment and public health measures could mitigate further spread.",
+        "The virus is not as well-known as other vector-borne diseases, potentially limiting its spread."
+      ],
+      "why_might_be_wrong": "There may be under-reporting or delayed reporting that affects the perceived spread of the virus.",
+      "rationale": "Given the recent emergence of the Oropouche virus in new areas and its presence in several South American and Caribbean countries, the probability of a moderate spread (9 to 11 countries or territories) is reasonable. However, the base rate for such diseases suggests caution. The likelihood of 8 or fewer countries reporting is higher due to the relatively low base rate for widespread outbreaks of emerging diseases, despite recent spread indicators.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Oropouche virus outbreaks in the Americas, it is reasonable to predict that the number of countries or territories reporting confirmed cases will likely remain moderate. The majority of countries may experience sporadic cases, leading to a higher probability for the lower ranges (8 or fewer and 9 to 11). The likelihood of a significant increase to 12 or more is lower due to existing biosecurity measures and the nature of the virus's transmission.",
+  "evidence_record_ids": [
+    "ins-ec7e399550af",
+    "ins-87e5ddd709d8"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3365,
+    "total_output_tokens": 944,
+    "total_tokens": 4309,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3156,
+        "output_tokens": 824,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 120,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

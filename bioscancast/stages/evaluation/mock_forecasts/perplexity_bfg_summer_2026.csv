@@ -100,3 +100,205 @@ bfg_q25;perplexity;1;2,000 to 2,999;0,08;2026-07-22
 bfg_q25;perplexity;1;3,000 to 3,999;0,12;2026-07-22
 bfg_q25;perplexity;1;4,000 to 5,499;0,25;2026-07-22
 bfg_q25;perplexity;1;5,500 or more;0,5;2026-07-22
+bfg_q1;perplexity;2;under 2,500;0,64;2026-07-30
+bfg_q1;perplexity;2;2,500 to 4,999;0,2;2026-07-30
+bfg_q1;perplexity;2;5,000 to 9,999;0,1;2026-07-30
+bfg_q1;perplexity;2;10,000 to 19,999;0,04;2026-07-30
+bfg_q1;perplexity;2;20,000 or more;0,02;2026-07-30
+bfg_q2;perplexity;2;under 750;0,01;2026-07-30
+bfg_q2;perplexity;2;750 to 1,499;0,35;2026-07-30
+bfg_q2;perplexity;2;1,500 to 2,999;0,45;2026-07-30
+bfg_q2;perplexity;2;3,000 to 4,999;0,15;2026-07-30
+bfg_q2;perplexity;2;5,000 or more;0,04;2026-07-30
+bfg_q3;perplexity;2;YES;0,65;2026-07-30
+bfg_q3;perplexity;2;NO;0,35;2026-07-30
+bfg_q4;perplexity;2;exactly 1;0,6;2026-07-30
+bfg_q4;perplexity;2;2;0,25;2026-07-30
+bfg_q4;perplexity;2;3;0,1;2026-07-30
+bfg_q4;perplexity;2;4 or more;0,05;2026-07-30
+bfg_q5;perplexity;2;trials ongoing, no efficacy results reported;0,3;2026-07-30
+bfg_q5;perplexity;2;interim efficacy results reported from any BVD vaccine or therapeutic trial;0,4;2026-07-30
+bfg_q5;perplexity;2;emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic;0,2;2026-07-30
+bfg_q5;perplexity;2;vaccine or therapeutic deployed at scale in affected countries beyond the trials;0,1;2026-07-30
+bfg_q6;perplexity;2;0 to 4;0,25;2026-07-30
+bfg_q6;perplexity;2;5 to 14;0,45;2026-07-30
+bfg_q6;perplexity;2;15 to 29;0,18;2026-07-30
+bfg_q6;perplexity;2;30 to 59;0,08;2026-07-30
+bfg_q6;perplexity;2;60 or more;0,04;2026-07-30
+bfg_q7;perplexity;2;YES;0,15;2026-07-30
+bfg_q7;perplexity;2;NO;0,85;2026-07-30
+bfg_q8;perplexity;2;H5N1;0,6;2026-07-30
+bfg_q8;perplexity;2;H5N5;0,05;2026-07-30
+bfg_q8;perplexity;2;Another H5Nx;0,15;2026-07-30
+bfg_q8;perplexity;2;No human H5 cases reported in the period;0,2;2026-07-30
+bfg_q9;perplexity;2;exactly 20;0,45;2026-07-30
+bfg_q9;perplexity;2;21 to 23;0,35;2026-07-30
+bfg_q9;perplexity;2;24 to 26;0,12;2026-07-30
+bfg_q9;perplexity;2;27 or more;0,08;2026-07-30
+bfg_q10;perplexity;2;0;0,7;2026-07-30
+bfg_q10;perplexity;2;1;0,23;2026-07-30
+bfg_q10;perplexity;2;2 or more;0,07;2026-07-30
+bfg_q11;perplexity;2;under 200,000;0,02;2026-07-30
+bfg_q11;perplexity;2;200,000 to 299,999;0,38;2026-07-30
+bfg_q11;perplexity;2;300,000 to 449,999;0,4;2026-07-30
+bfg_q11;perplexity;2;450,000 to 649,999;0,18;2026-07-30
+bfg_q11;perplexity;2;650,000 or more;0,02;2026-07-30
+bfg_q12;perplexity;2;YES;0,2;2026-07-30
+bfg_q12;perplexity;2;NO;0,8;2026-07-30
+bfg_q13;perplexity;2;under 3,000;0,15;2026-07-30
+bfg_q13;perplexity;2;3,000 to 6,999;0,35;2026-07-30
+bfg_q13;perplexity;2;7,000 to 11,999;0,3;2026-07-30
+bfg_q13;perplexity;2;12,000 to 19,999;0,15;2026-07-30
+bfg_q13;perplexity;2;20,000 or more;0,05;2026-07-30
+bfg_q14;perplexity;2;under 3,000;0,12;2026-07-30
+bfg_q14;perplexity;2;3,000 to 3,999;0,3;2026-07-30
+bfg_q14;perplexity;2;4,000 to 5,499;0,34;2026-07-30
+bfg_q14;perplexity;2;5,500 to 7,999;0,16;2026-07-30
+bfg_q14;perplexity;2;8,000 or more;0,08;2026-07-30
+bfg_q15;perplexity;2;YES;0,78;2026-07-30
+bfg_q15;perplexity;2;NO;0,22;2026-07-30
+bfg_q16;perplexity;2;0;0,78;2026-07-30
+bfg_q16;perplexity;2;1;0,16;2026-07-30
+bfg_q16;perplexity;2;2 to 3;0,04;2026-07-30
+bfg_q16;perplexity;2;4 to 6;0,015;2026-07-30
+bfg_q16;perplexity;2;7 or more;0,005;2026-07-30
+bfg_q17;perplexity;2;under 175,000;0,005;2026-07-30
+bfg_q17;perplexity;2;175,000 to 274,999;0,015;2026-07-30
+bfg_q17;perplexity;2;275,000 to 399,999;0,08;2026-07-30
+bfg_q17;perplexity;2;400,000 to 599,999;0,35;2026-07-30
+bfg_q17;perplexity;2;600,000 or more;0,55;2026-07-30
+bfg_q18;perplexity;2;under 1.5M;0,14;2026-07-30
+bfg_q18;perplexity;2;1.5M to 1.99M;0,23;2026-07-30
+bfg_q18;perplexity;2;2.0M to 2.99M;0,33;2026-07-30
+bfg_q18;perplexity;2;3.0M to 4.49M;0,22;2026-07-30
+bfg_q18;perplexity;2;4.5M or more;0,08;2026-07-30
+bfg_q19;perplexity;2;0;0,01;2026-07-30
+bfg_q19;perplexity;2;1;0,02;2026-07-30
+bfg_q19;perplexity;2;2 to 3;0,7;2026-07-30
+bfg_q19;perplexity;2;4 to 5;0,23;2026-07-30
+bfg_q19;perplexity;2;6 or more;0,04;2026-07-30
+bfg_q20;perplexity;2;8 or fewer;0,05;2026-07-30
+bfg_q20;perplexity;2;9 to 11;0,15;2026-07-30
+bfg_q20;perplexity;2;12 to 14;0,35;2026-07-30
+bfg_q20;perplexity;2;15 to 17;0,25;2026-07-30
+bfg_q20;perplexity;2;18 or more;0,2;2026-07-30
+bfg_q21;perplexity;2;YES;0,3;2026-07-30
+bfg_q21;perplexity;2;NO;0,7;2026-07-30
+bfg_q22;perplexity;2;15 or fewer;0,3;2026-07-30
+bfg_q22;perplexity;2;16 to 30;0,25;2026-07-30
+bfg_q22;perplexity;2;31 to 50;0,2;2026-07-30
+bfg_q22;perplexity;2;51 to 79;0,15;2026-07-30
+bfg_q22;perplexity;2;80 or more;0,1;2026-07-30
+bfg_q23;perplexity;2;YES;0,55;2026-07-30
+bfg_q23;perplexity;2;NO;0,45;2026-07-30
+bfg_q24;perplexity;2;under 250,000;0,3;2026-07-30
+bfg_q24;perplexity;2;250,000 to 374,999;0,35;2026-07-30
+bfg_q24;perplexity;2;375,000 to 524,999;0,2;2026-07-30
+bfg_q24;perplexity;2;525,000 to 749,999;0,1;2026-07-30
+bfg_q24;perplexity;2;750,000 or more;0,05;2026-07-30
+bfg_q25;perplexity;2;under 2,000;0,05;2026-07-30
+bfg_q25;perplexity;2;2,000 to 2,999;0,08;2026-07-30
+bfg_q25;perplexity;2;3,000 to 3,999;0,12;2026-07-30
+bfg_q25;perplexity;2;4,000 to 5,499;0,25;2026-07-30
+bfg_q25;perplexity;2;5,500 or more;0,5;2026-07-30
+bfg_q1;perplexity;3;under 2,500;0,6;2026-08-05
+bfg_q1;perplexity;3;2,500 to 4,999;0,25;2026-08-05
+bfg_q1;perplexity;3;5,000 to 9,999;0,09;2026-08-05
+bfg_q1;perplexity;3;10,000 to 19,999;0,04;2026-08-05
+bfg_q1;perplexity;3;20,000 or more;0,02;2026-08-05
+bfg_q2;perplexity;3;under 750;0,7;2026-08-05
+bfg_q2;perplexity;3;750 to 1,499;0,2;2026-08-05
+bfg_q2;perplexity;3;1,500 to 2,999;0,07;2026-08-05
+bfg_q2;perplexity;3;3,000 to 4,999;0,02;2026-08-05
+bfg_q2;perplexity;3;5,000 or more;0,01;2026-08-05
+bfg_q3;perplexity;3;YES;0,8;2026-08-05
+bfg_q3;perplexity;3;NO;0,2;2026-08-05
+bfg_q4;perplexity;3;exactly 1;0,6;2026-08-05
+bfg_q4;perplexity;3;2;0,23;2026-08-05
+bfg_q4;perplexity;3;3;0,11;2026-08-05
+bfg_q4;perplexity;3;4 or more;0,06;2026-08-05
+bfg_q5;perplexity;3;trials ongoing, no efficacy results reported;0,4;2026-08-05
+bfg_q5;perplexity;3;interim efficacy results reported from any BVD vaccine or therapeutic trial;0,4;2026-08-05
+bfg_q5;perplexity;3;emergency use authorization or WHO emergency use listing granted for any BVD vaccine or therapeutic;0,15;2026-08-05
+bfg_q5;perplexity;3;vaccine or therapeutic deployed at scale in affected countries beyond the trials;0,05;2026-08-05
+bfg_q6;perplexity;3;0 to 4;0,25;2026-08-05
+bfg_q6;perplexity;3;5 to 14;0,45;2026-08-05
+bfg_q6;perplexity;3;15 to 29;0,18;2026-08-05
+bfg_q6;perplexity;3;30 to 59;0,08;2026-08-05
+bfg_q6;perplexity;3;60 or more;0,04;2026-08-05
+bfg_q7;perplexity;3;YES;0,04;2026-08-05
+bfg_q7;perplexity;3;NO;0,96;2026-08-05
+bfg_q8;perplexity;3;H5N1;0,7;2026-08-05
+bfg_q8;perplexity;3;H5N5;0,05;2026-08-05
+bfg_q8;perplexity;3;Another H5Nx;0,2;2026-08-05
+bfg_q8;perplexity;3;No human H5 cases reported in the period;0,05;2026-08-05
+bfg_q9;perplexity;3;exactly 20;0,35;2026-08-05
+bfg_q9;perplexity;3;21 to 23;0,4;2026-08-05
+bfg_q9;perplexity;3;24 to 26;0,18;2026-08-05
+bfg_q9;perplexity;3;27 or more;0,07;2026-08-05
+bfg_q10;perplexity;3;0;0,7;2026-08-05
+bfg_q10;perplexity;3;1;0,25;2026-08-05
+bfg_q10;perplexity;3;2 or more;0,05;2026-08-05
+bfg_q11;perplexity;3;under 200,000;0,05;2026-08-05
+bfg_q11;perplexity;3;200,000 to 299,999;0,2;2026-08-05
+bfg_q11;perplexity;3;300,000 to 449,999;0,47;2026-08-05
+bfg_q11;perplexity;3;450,000 to 649,999;0,25;2026-08-05
+bfg_q11;perplexity;3;650,000 or more;0,03;2026-08-05
+bfg_q12;perplexity;3;YES;0,1;2026-08-05
+bfg_q12;perplexity;3;NO;0,9;2026-08-05
+bfg_q13;perplexity;3;under 3,000;0,03;2026-08-05
+bfg_q13;perplexity;3;3,000 to 6,999;0,07;2026-08-05
+bfg_q13;perplexity;3;7,000 to 11,999;0,25;2026-08-05
+bfg_q13;perplexity;3;12,000 to 19,999;0,4;2026-08-05
+bfg_q13;perplexity;3;20,000 or more;0,25;2026-08-05
+bfg_q14;perplexity;3;under 3,000;0,35;2026-08-05
+bfg_q14;perplexity;3;3,000 to 3,999;0,4;2026-08-05
+bfg_q14;perplexity;3;4,000 to 5,499;0,18;2026-08-05
+bfg_q14;perplexity;3;5,500 to 7,999;0,06;2026-08-05
+bfg_q14;perplexity;3;8,000 or more;0,01;2026-08-05
+bfg_q15;perplexity;3;YES;0,62;2026-08-05
+bfg_q15;perplexity;3;NO;0,38;2026-08-05
+bfg_q16;perplexity;3;0;0,55;2026-08-05
+bfg_q16;perplexity;3;1;0,2;2026-08-05
+bfg_q16;perplexity;3;2 to 3;0,15;2026-08-05
+bfg_q16;perplexity;3;4 to 6;0,07;2026-08-05
+bfg_q16;perplexity;3;7 or more;0,03;2026-08-05
+bfg_q17;perplexity;3;under 175,000;0,02;2026-08-05
+bfg_q17;perplexity;3;175,000 to 274,999;0,03;2026-08-05
+bfg_q17;perplexity;3;275,000 to 399,999;0,05;2026-08-05
+bfg_q17;perplexity;3;400,000 to 599,999;0,2;2026-08-05
+bfg_q17;perplexity;3;600,000 or more;0,7;2026-08-05
+bfg_q18;perplexity;3;under 1.5M;0,03;2026-08-05
+bfg_q18;perplexity;3;1.5M to 1.99M;0,05;2026-08-05
+bfg_q18;perplexity;3;2.0M to 2.99M;0,12;2026-08-05
+bfg_q18;perplexity;3;3.0M to 4.49M;0,35;2026-08-05
+bfg_q18;perplexity;3;4.5M or more;0,45;2026-08-05
+bfg_q19;perplexity;3;0;0,24;2026-08-05
+bfg_q19;perplexity;3;1;0,32;2026-08-05
+bfg_q19;perplexity;3;2 to 3;0,38;2026-08-05
+bfg_q19;perplexity;3;4 to 5;0,04;2026-08-05
+bfg_q19;perplexity;3;6 or more;0,02;2026-08-05
+bfg_q20;perplexity;3;8 or fewer;0,05;2026-08-05
+bfg_q20;perplexity;3;9 to 11;0,3;2026-08-05
+bfg_q20;perplexity;3;12 to 14;0,4;2026-08-05
+bfg_q20;perplexity;3;15 to 17;0,15;2026-08-05
+bfg_q20;perplexity;3;18 or more;0,1;2026-08-05
+bfg_q21;perplexity;3;YES;0,35;2026-08-05
+bfg_q21;perplexity;3;NO;0,65;2026-08-05
+bfg_q22;perplexity;3;15 or fewer;0,2;2026-08-05
+bfg_q22;perplexity;3;16 to 30;0,35;2026-08-05
+bfg_q22;perplexity;3;31 to 50;0,25;2026-08-05
+bfg_q22;perplexity;3;51 to 79;0,12;2026-08-05
+bfg_q22;perplexity;3;80 or more;0,08;2026-08-05
+bfg_q23;perplexity;3;YES;0,35;2026-08-05
+bfg_q23;perplexity;3;NO;0,65;2026-08-05
+bfg_q24;perplexity;3;under 250,000;0,08;2026-08-05
+bfg_q24;perplexity;3;250,000 to 374,999;0,17;2026-08-05
+bfg_q24;perplexity;3;375,000 to 524,999;0,25;2026-08-05
+bfg_q24;perplexity;3;525,000 to 749,999;0,25;2026-08-05
+bfg_q24;perplexity;3;750,000 or more;0,25;2026-08-05
+bfg_q25;perplexity;3;under 2,000;0,03;2026-08-05
+bfg_q25;perplexity;3;2,000 to 2,999;0,27;2026-08-05
+bfg_q25;perplexity;3;3,000 to 3,999;0,4;2026-08-05
+bfg_q25;perplexity;3;4,000 to 5,499;0,2;2026-08-05
+bfg_q25;perplexity;3;5,500 or more;0,1;2026-08-05

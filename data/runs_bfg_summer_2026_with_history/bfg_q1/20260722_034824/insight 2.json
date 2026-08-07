@@ -1,0 +1,175 @@
+{
+  "records": [
+    {
+      "id": "ins-3621a52b2942",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:48:42.814196+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-89b138a5f31b4f40ba289339811ffd1c",
+          "chunk_id": "doc-89b138a5f31b4f40ba289339811ffd1c-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-4681da79d962",
+      "question_id": "bfg_q1",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 930.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported in the ongoing Ebola outbreak in Congo.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:48:51.889799+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3a776543aa05405fa765fe2352ce406a",
+          "chunk_id": "doc-3a776543aa05405fa765fe2352ce406a-c0",
+          "source_url": "https://www.nbcnews.com/world/africa/least-930-people-died-congo-ebola-outbreak-rcna588327",
+          "quote": "At least 930 people have died in Congo's Ebola outbreak"
+        },
+        {
+          "document_id": "doc-731c3507b60b4906817ddd65b30a8634",
+          "chunk_id": "doc-731c3507b60b4906817ddd65b30a8634-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-deaths-cd70fcfeb7c7d0b172c4fef7a9c3a93f",
+          "quote": "The death toll in Congo's Ebola outbreak has risen to at least 930"
+        }
+      ]
+    },
+    {
+      "id": "ins-5e1ab2cef1d9",
+      "question_id": "bfg_q1",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 754.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of deaths since the outbreak began on May 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:48:58.522361+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-702f590a3334410db6d0fb9902bef35f",
+          "chunk_id": "doc-702f590a3334410db6d0fb9902bef35f-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-outbreak-who-2000-cases-b0645a84c4f95c7101e343484edeac1b",
+          "quote": "including 754 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-1358049219f9",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2344.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in Congo's Ebola outbreak as of July 20, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:48:55.146296+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-731c3507b60b4906817ddd65b30a8634",
+          "chunk_id": "doc-731c3507b60b4906817ddd65b30a8634-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-deaths-cd70fcfeb7c7d0b172c4fef7a9c3a93f",
+          "quote": "2,344 cases confirmed as of Saturday"
+        }
+      ]
+    },
+    {
+      "id": "ins-5b1a5a90e36a",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2011.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed cases since the outbreak began on May 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-07-22T03:48:58.522173+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-702f590a3334410db6d0fb9902bef35f",
+          "chunk_id": "doc-702f590a3334410db6d0fb9902bef35f-c0",
+          "source_url": "https://apnews.com/article/congo-ebola-outbreak-who-2000-cases-b0645a84c4f95c7101e343484edeac1b",
+          "quote": "The number of confirmed cases of Ebola in Congo has reached 2,011"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 70130,
+    "total_output_tokens": 897,
+    "total_tokens": 71027,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 70130,
+        "output_tokens": 897,
+        "calls": 32
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

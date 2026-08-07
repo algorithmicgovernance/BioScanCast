@@ -1,0 +1,166 @@
+{
+  "question_id": "bfg_q21",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.13445396690289976,
+        "NO": 0.8655460330971002
+      }
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.13445396690289976,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.8655460330971002,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past WHO declarations of new filovirus outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Frequent occurrence of filovirus outbreaks in the Democratic Republic of the Congo and surrounding regions.",
+        "Recent high number of cases and deaths suggest active transmission chains.",
+        "Filoviruses have historically emerged in new locations."
+      ],
+      "drivers_down": [
+        "Current outbreak activity might focus resources and attention on containment, reducing the likelihood of a new, separate outbreak.",
+        "The ongoing Bundibugyo event might overshadow or contain potential new outbreaks."
+      ],
+      "why_might_be_wrong": "Filovirus outbreaks are unpredictable and can emerge rapidly due to zoonotic transmission, potentially leading to a new outbreak declaration.",
+      "rationale": "The base rate for new filovirus outbreak declarations by WHO is low, as these are relatively rare events. However, given the historical and ongoing activity in the Democratic Republic of the Congo, along with the nature of filoviruses to emerge in new locations, there is a reasonable possibility for a new outbreak. Current containment efforts may reduce this risk, but the unpredictable nature of zoonotic spillover events justifies a modest increase from the base rate.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.75
+      ],
+      "ok": true,
+      "reference_class": "Historical filovirus outbreaks worldwide",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filovirus outbreaks have a history of occurring in multiple regions, sometimes concurrently.",
+        "High recent activity in Democratic Republic of the Congo suggests heightened risk of spread or new emergence.",
+        "Underestimation of case fatality rate suggests potential for unreported cases elsewhere."
+      ],
+      "drivers_down": [
+        "Current outbreak is significant, possibly drawing resources and focus away from detecting new outbreaks.",
+        "Limited evidence of new distinct outbreaks in regions outside Democratic Republic of the Congo.",
+        "Potential underreporting biases might limit detection of new outbreaks."
+      ],
+      "why_might_be_wrong": "There could be emerging outbreaks in regions with limited surveillance that are not being captured in the current data.",
+      "rationale": "The current data shows a significant ongoing outbreak in the Democratic Republic of the Congo, with a high number of cases and deaths. Historically, filovirus outbreaks can occur simultaneously or in different regions, suggesting the possibility of another outbreak. However, the significant resources likely focused on the current outbreak might delay detection or reporting of a new outbreak elsewhere. Given these factors, while the base rate for a new outbreak is around 20%, the current situation and data adjust this probability slightly in favor of another outbreak being declared, though the evidence is not overwhelmingly supportive of a new distinct outbreak by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past global filovirus outbreaks declared by WHO",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High incidence of filovirus cases in the Democratic Republic of the Congo indicates potential for new outbreaks.",
+        "Filoviruses are known for sporadic outbreaks, and the region has a history of such events.",
+        "The rapid increase in cases (664 new cases since July 3, 2026) suggests potential for further spread."
+      ],
+      "drivers_down": [
+        "Current outbreak management might prevent the spread to new areas.",
+        "No reports of new geographical regions affected outside the current Democratic Republic of the Congo outbreak.",
+        "Recent outbreaks have been linked to known sources, reducing the likelihood of a distinct new event."
+      ],
+      "why_might_be_wrong": "Underestimation of case spread or emergence in unmonitored regions could lead to a new outbreak declaration.",
+      "rationale": "The base rate for WHO declaring a new filovirus outbreak distinct from existing ones is relatively low, given the historical frequency of such declarations. The current situation in the Democratic Republic of the Congo shows a significant number of cases, which raises the probability of further outbreaks. However, there is no current evidence suggesting the spread to new geographical areas or a new strain distinct from the ongoing event. Therefore, the likelihood of a new outbreak being declared remains moderate.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing Bundibugyo event, it is plausible that new outbreaks could occur, but the likelihood of a distinct new filovirus outbreak being declared by WHO within the specified timeframe is relatively low. Therefore, the probability of 'NO' is higher.",
+  "evidence_record_ids": [
+    "ins-9271dbb3ff80",
+    "ins-b8248859d529",
+    "ins-f9f111b496aa",
+    "ins-a6c21b4d47c8",
+    "ins-37069633bd65",
+    "ins-65edf3643317",
+    "ins-b46f82323258",
+    "ins-b47da6a9f511",
+    "ins-64c9a1fe4810",
+    "ins-72b39198dfa0",
+    "ins-3c71ce71715c",
+    "ins-1b82b373f551",
+    "ins-50a9f22dd73d",
+    "ins-98cef921d8a6",
+    "ins-c5339bc920cc",
+    "ins-8e9a79256ba3",
+    "ins-3db5664f8f3e",
+    "ins-c2cf82788f75",
+    "ins-800f43cea01c",
+    "ins-0cf1d4c29dee"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7697,
+    "total_output_tokens": 848,
+    "total_tokens": 8545,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7506,
+        "output_tokens": 781,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 191,
+        "output_tokens": 67,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

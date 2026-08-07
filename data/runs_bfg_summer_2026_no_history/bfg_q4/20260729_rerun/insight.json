@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-d43734610c07",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 82.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases of Bundibugyo Ebola in Congo.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:53:26.188369+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7bc969a704da414e83c83cff4183c694",
+          "chunk_id": "doc-7bc969a704da414e83c83cff4183c694-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/who-raises-risk-ebola-outbreak-congo-very-high-national-level-2026-05-22",
+          "quote": "So far, 82 cases have been confirmed in Congo"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 112609,
+    "total_output_tokens": 303,
+    "total_tokens": 112912,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 112609,
+        "output_tokens": 303,
+        "calls": 50
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

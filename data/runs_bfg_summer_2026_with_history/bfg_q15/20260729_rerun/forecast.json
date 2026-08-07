@@ -1,0 +1,171 @@
+{
+  "question_id": "bfg_q15",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.19936771286075058,
+        "NO": 0.8006322871392494
+      }
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.19936771286075058,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.8006322871392494,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Countries that have lost measles elimination status",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Significant increase in measles cases over recent years",
+        "Decline in vaccination rates",
+        "35 new outbreaks reported in 2026",
+        "Public health specialists' concerns about losing elimination status",
+        "A decision panel is set to review the status in November"
+      ],
+      "drivers_down": [
+        "No confirmed deaths from measles in 2026 despite increased cases",
+        "Measles was declared eliminated in the United States in 2000 and has maintained status since then",
+        "Efforts to control outbreaks and increase vaccination rates may be underway"
+      ],
+      "why_might_be_wrong": "The forecast might underestimate the impact of interventions to control outbreaks and increase vaccination rates, which could maintain the elimination status.",
+      "rationale": "The significant rise in measles cases, declining vaccination rates, and multiple outbreaks increase the likelihood of the US losing measles elimination status. While no deaths have been reported and efforts might be in place to control the situation, the presence of a decision panel suggests a serious risk. The base rate of countries losing elimination status is low, but given the specific US context, the probability of losing status is moderately high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Countries that have lost measles elimination status after previously achieving it.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Significant increase in measles cases in recent years.",
+        "Decline in vaccination rates, leading to lower herd immunity.",
+        "High number of outbreak-associated cases indicating widespread transmission."
+      ],
+      "drivers_down": [
+        "No confirmed deaths from measles in 2026, which could indicate effective treatment or containment.",
+        "Potential public health interventions to boost vaccination rates and control outbreaks.",
+        "Historical context of the U.S. maintaining elimination status since 2000."
+      ],
+      "why_might_be_wrong": "The decision by PAHO or WHO can be influenced by factors not fully captured by case numbers alone, such as changes in policy or public health strategies.",
+      "rationale": "The cumulative measles cases in the U.S. have increased significantly in recent years, with 2,318 cases reported in 2026 alone, which surpasses previous years substantially. This increase, combined with a decline in vaccination rates and numerous outbreaks, raises the risk of the U.S. losing its measles elimination status. Despite this, the absence of measles-related deaths and possible interventions to control the situation could mean the U.S. maintains its status. Given these factors, the probability of losing the status is moderate but not dominant.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Countries with measles elimination status and subsequent loss or retention of status.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Significant increase in measles cases over recent years, exceeding past decades.",
+        "Decrease in MMR vaccination coverage in the US.",
+        "Public health specialists believe the U.S. is on track to lose elimination status.",
+        "High number of outbreaks reported in recent years."
+      ],
+      "drivers_down": [
+        "No confirmed deaths from measles in 2026 despite high case numbers.",
+        "Potential for increased public health efforts to address the rise in cases.",
+        "The decision by PAHO or WHO may consider broader criteria beyond just case numbers."
+      ],
+      "why_might_be_wrong": "The decision by PAHO or WHO could be influenced by factors not captured in the current evidence, such as political considerations or sudden improvements in vaccination rates.",
+      "rationale": "The probability that the US will lose its measles elimination status is influenced by the significant increase in cases and declining vaccination rates. However, the absence of deaths and potential public health countermeasures make it less certain. The evidence suggests a substantial risk, leading to a moderate probability adjustment from the base rate.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current trends in measles vaccination rates and outbreaks in the United States, there is a significant risk that PAHO or WHO may determine that the U.S. has lost its measles elimination status by the target date. However, ongoing public health efforts and vaccination campaigns may mitigate this risk, leading to a lower probability of a 'NO' outcome.",
+  "evidence_record_ids": [
+    "ins-4f900329b7d0",
+    "ins-fc82e8b7eac7",
+    "ins-19ed4216c26f",
+    "ins-9c2dd7552e96",
+    "ins-bf7528c16fb0",
+    "ins-aaf327a7faa4",
+    "ins-768d22f0dadc",
+    "ins-605b8ac3fa74",
+    "ins-3e9607e01da4",
+    "ins-2f3037e440ec",
+    "ins-7f0a128dcb48",
+    "ins-761262600193",
+    "ins-81c41bba9bde",
+    "ins-ac4d67c9ea9d",
+    "ins-c3f0476994c0",
+    "ins-3e4618a360b1",
+    "ins-e50cf67aad43",
+    "ins-67cc2a272c6a",
+    "ins-64e0ddf7f16f",
+    "ins-1b5f63118a3c",
+    "ins-46b551996bb5"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 10365,
+    "total_output_tokens": 844,
+    "total_tokens": 11209,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 10173,
+        "output_tokens": 757,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 192,
+        "output_tokens": 87,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

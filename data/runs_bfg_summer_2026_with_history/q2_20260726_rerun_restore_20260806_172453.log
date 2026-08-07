@@ -1,0 +1,27 @@
+=== Pipeline run: bfg_q2 (20260726_rerun) ===
+question:  How many cumulative reported deaths (confirmed plus probable) will there be in the Bundibugyo outbreak since the outbreak declaration on 14 May 2026 to 31 December 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q2/20260726_rerun
+
+[search] starting...
+[search] 37 results (51.7s)
+[filter] starting...
+[filter] 9 docs (6.3s)
+[extract] starting...
+[extract] 9/9 success (146.9s)
+[insight] starting...
+[insight] 6 records | in=128,057 out=1,091 (24.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=7,749 out=991 (13.6s)
+
+=== Pipeline complete: bfg_q2 ===
+  search     51.69s  $0.0001
+  filter      6.29s  $0.0009
+  extract   146.91s
+  insight    24.93s  $0.0199
+  forecast   13.62s  $0.0278
+  total cost:  $0.0488
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q2/20260726_rerun

@@ -1,0 +1,144 @@
+{
+  "question_id": "bfg_q10",
+  "options": [
+    "0",
+    "1",
+    "2 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.782608695652174,
+        "1": 0.1956521739130435,
+        "2 or more": 0.021739130434782608
+      }
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.3,
+        "2 or more": 0.3
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.782608695652174,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.1956521739130435,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "2 or more",
+      "probability": 0.021739130434782608,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 or more",
+      "probability": 0.3,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [],
+      "ok": false,
+      "reference_class": null,
+      "base_rate": null,
+      "drivers_up": [],
+      "drivers_down": [],
+      "why_might_be_wrong": null,
+      "rationale": null,
+      "model": "gpt-4o",
+      "seed": 42
+    },
+    {
+      "probabilities": [],
+      "ok": false,
+      "reference_class": null,
+      "base_rate": null,
+      "drivers_up": [],
+      "drivers_down": [],
+      "why_might_be_wrong": null,
+      "rationale": null,
+      "model": "gpt-4o",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past periods of PHEIC declarations by WHO within six-month windows.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Emergence of new infectious diseases due to increased human-animal interactions and environmental changes.",
+        "Global travel and trade can facilitate the rapid spread of pathogens.",
+        "Increased awareness and surveillance may lead to more frequent declarations."
+      ],
+      "drivers_down": [
+        "PHEIC declarations are relatively rare and reserved for significant events.",
+        "There are strict criteria for declaring a PHEIC, which limits frequency.",
+        "The time window is only six months, reducing the chance of multiple events."
+      ],
+      "why_might_be_wrong": "The base rate might not accurately capture the current risk environment or the impact of emerging global health threats.",
+      "rationale": "The base rate for new PHEICs in a six-month period is low, as these declarations are rare and require significant justification. While factors like increased surveillance and potential new pathogens could raise the likelihood, the six-month window limits the probability of multiple events. Thus, a low probability is assigned to 2 or more declarations, with a slightly higher chance of 1 declaration due to ongoing global health challenges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical trends of Public Health Emergencies of International Concern (PHEICs), it is reasonable to estimate that there is a moderate chance of no new declarations (0), a slightly lower chance of one new declaration (1), and a similar chance for two or more new declarations (2 or more). The probabilities reflect the uncertainty and variability in global health events.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 1099,
+    "total_output_tokens": 337,
+    "total_tokens": 1436,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 886,
+        "output_tokens": 243,
+        "calls": 1
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 213,
+        "output_tokens": 94,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

@@ -1,0 +1,1083 @@
+[
+  {
+    "id": "doc-abb0817b1cdb4f5f9f28a028ec525c8c",
+    "result_id": "abb0817b1cdb4f5f9f28a028ec525c8c",
+    "source_url": "https://web.archive.org/web/20260728071050id_/https://www.who.int/activities/tracking-SARS-CoV-2-variants",
+    "domain": "who.int",
+    "fetched_at": "2026-08-05T22:55:37.142377+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://web.archive.org/web/20260728071050id_/https://www.who.int/activities/tracking-SARS-CoV-2-variants",
+    "title": "Tracking SARS-CoV-2 variants",
+    "published_date": "2026-07-28T07:10:50+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2140,
+    "token_count": 428,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-abb0817b1cdb4f5f9f28a028ec525c8c-c0",
+        "chunk_index": 0,
+        "text": "All viruses, including SARS-CoV-2, the virus that causes COVID-19, change over time. Most changes have little to no impact on the virus\u2019s properties. However, some changes may affect the virus\u2019s properties, such as how easily it spreads, the associated disease severity, or the performance of vaccines, therapeutic medicines, diagnostic tools, or other public health and social measures.\nIn June 2020, the WHO Virus Evolution Working Group was established with a specific focus on SARS-CoV-2 variants, their phenotype and their impact on countermeasures. This later became the Technical Advisory Group on SARS-CoV-2 Virus Evolution. In late 2020, the emergence of variants that posed an increased risk to global public health prompted WHO to characterize some as variants of interest (VOIs) and variants of concern (VOCs) in order to prioritize global monitoring and research, and to inform and adjust the COVID-19 response. From May 2021 onwards, WHO began assigning simple, easy-to-say labels for key variants.\nConsiderable progress has been made in establishing and strengthening a global system to detect signals of potential VOIs or VOCs and rapidly assess the risk posed by SARS-CoV-2 variants to public health. More specifically, in 2024 WHO launched a WHO Coronavirus Network (CoViNet) to facilitate early and accurate detection of coronaviruses and variant tracking including coordinating risk evaluations. It remains critical that these systems are maintained, and data are shared, according to good principles and in a timely fashion, as SARS-CoV-2 continues to circulate at high levels around the world. While monitoring the circulation of SARS-CoV-2 globally, it also remains essential to monitor their spread in animal populations and chronically infected individuals, which are crucial aspects of the global strategy to reduce the occurrence of mutations that have negative public health implications. In March 2023, WHO updated its tracking system and working definitions for variants of concern, variants of interest and variants under monitoring. They can be found here. The previous working definitions can be found here.",
+        "chunk_type": "prose",
+        "heading": "Tracking SARS-CoV-2 variants",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 428,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "wayback_fallback_to_live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  },
+  {
+    "id": "doc-3c9b833849374677b3e780cf48bc825b",
+    "result_id": "3c9b833849374677b3e780cf48bc825b",
+    "source_url": "https://web.archive.org/web/20260728190602id_/https://ourworldindata.org/coronavirus",
+    "domain": "ourworldindata.org",
+    "fetched_at": "2026-08-05T22:55:50.798647+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://web.archive.org/web/20260728190602id_/https://ourworldindata.org/coronavirus",
+    "title": "Our World in Data \u2014 COVID-19 summary",
+    "published_date": "2026-07-28T19:06:02+00:00",
+    "language": null,
+    "page_count": null,
+    "char_count": 2781,
+    "token_count": 1113,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-3c9b833849374677b3e780cf48bc825b-c0",
+        "chunk_index": 0,
+        "text": "CSV source: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv\nCutoff: 2026-07-29; locations with usable rows: 246; region hint: world\nOur World in Data \u2014 COVID-19 (World). As of 2024-08-04, World: cumulative confirmed cases (World): 775,866,783; cumulative deaths (World): 7,057,132. Source: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv.\nLatest total_cases (2024-08-04): 775,866,783; delta_4_rows: 47169.0; delta_12_rows: 103185.0\nTrend summary (total_cases, World): points=1674, span_days=1673, delta_7_rows=47,169, delta_30_rows=248,883, recent_increment_stats=n=1673, mean=463,757.79, std=2,189,988.44, min=0, median=0, max=44,236,227.\nLinear fit on recent cumulative trend (total_cases, last 30 rows): intercept=775635242.116129, slope=7230.667853 per row, R^2=0.945095.\nIncident trend stats (new_cases, World): n=30, mean=8,296.10, std=18,930.51, min=0, median=0, max=56,016.\nExponential fit on recent new_cases (last 30 rows): a=47669.550427, b=0.002704, R^2=0.129916.\nRegion/question-target focus: World trend statistics and model-fit outputs are included in this section.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 387,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c9b833849374677b3e780cf48bc825b-c1",
+        "chunk_index": 1,
+        "text": "date\tnew_cases\ttotal_cases\n2024-07-20\t0\t775711519\n2024-07-21\t52079\t775763598\n2024-07-22\t0\t775763598\n2024-07-23\t0\t775763598\n2024-07-24\t0\t775763598\n2024-07-25\t0\t775763598\n2024-07-26\t0\t775763598\n2024-07-27\t0\t775763598\n2024-07-28\t56016\t775819614\n2024-07-29\t0\t775819614\n2024-07-30\t0\t775819614\n2024-07-31\t0\t775819614\n2024-08-01\t0\t775819614\n2024-08-02\t0\t775819614\n2024-08-03\t0\t775819614\n2024-08-04\t47169\t775866783",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": null,
+        "table_data": [
+          [
+            "date",
+            "new_cases",
+            "total_cases"
+          ],
+          [
+            "2024-07-20",
+            "0",
+            "775711519"
+          ],
+          [
+            "2024-07-21",
+            "52079",
+            "775763598"
+          ],
+          [
+            "2024-07-22",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-23",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-24",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-25",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-26",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-27",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-28",
+            "56016",
+            "775819614"
+          ],
+          [
+            "2024-07-29",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-07-30",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-07-31",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-01",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-02",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-03",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-04",
+            "47169",
+            "775866783"
+          ]
+        ],
+        "token_count": 216,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c9b833849374677b3e780cf48bc825b-c2",
+        "chunk_index": 2,
+        "text": "Location\tDate\ttotal_cases\nHigh-income countries\t2024-08-04\t429,044,049\nAsia\t2024-08-04\t301,499,099\nEurope\t2024-08-04\t252,916,868\nUpper-middle-income countries\t2024-08-04\t251,753,518\nEuropean Union (27)\t2024-08-04\t185,822,587\nNorth America\t2024-08-04\t124,492,666\nUnited States\t2024-08-04\t103,436,829\nChina\t2024-08-04\t99,373,219\nLower-middle-income countries\t2024-08-04\t91,954,400\nSouth America\t2024-08-04\t68,809,418\nIndia\t2024-08-04\t45,041,748\nFrance\t2024-08-04\t38,997,490\nGermany\t2024-08-04\t38,437,756\nBrazil\t2024-08-04\t37,511,921\nSouth Korea\t2024-08-04\t34,571,873\nJapan\t2024-08-04\t33,803,572\nItaly\t2024-08-04\t26,781,078\nUnited Kingdom\t2024-08-04\t24,974,629\nRussia\t2024-08-04\t24,268,728\nTurkey\t2024-08-04\t17,004,718\nOceania\t2024-08-04\t15,003,352\nSpain\t2024-08-04\t13,980,340\nAfrica\t2024-08-04\t13,145,380\nAustralia\t2024-08-04\t11,861,161\nVietnam\t2024-08-04\t11,624,000\nArgentina\t2024-08-04\t10,101,218\nNetherlands\t2024-08-04\t8,640,008\nIran\t2024-08-04\t7,627,863\nMexico\t2024-08-04\t7,619,458\nIndonesia\t2024-08-04\t6,829,399",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": null,
+        "table_data": [
+          [
+            "Location",
+            "Date",
+            "total_cases"
+          ],
+          [
+            "High-income countries",
+            "2024-08-04",
+            "429,044,049"
+          ],
+          [
+            "Asia",
+            "2024-08-04",
+            "301,499,099"
+          ],
+          [
+            "Europe",
+            "2024-08-04",
+            "252,916,868"
+          ],
+          [
+            "Upper-middle-income countries",
+            "2024-08-04",
+            "251,753,518"
+          ],
+          [
+            "European Union (27)",
+            "2024-08-04",
+            "185,822,587"
+          ],
+          [
+            "North America",
+            "2024-08-04",
+            "124,492,666"
+          ],
+          [
+            "United States",
+            "2024-08-04",
+            "103,436,829"
+          ],
+          [
+            "China",
+            "2024-08-04",
+            "99,373,219"
+          ],
+          [
+            "Lower-middle-income countries",
+            "2024-08-04",
+            "91,954,400"
+          ],
+          [
+            "South America",
+            "2024-08-04",
+            "68,809,418"
+          ],
+          [
+            "India",
+            "2024-08-04",
+            "45,041,748"
+          ],
+          [
+            "France",
+            "2024-08-04",
+            "38,997,490"
+          ],
+          [
+            "Germany",
+            "2024-08-04",
+            "38,437,756"
+          ],
+          [
+            "Brazil",
+            "2024-08-04",
+            "37,511,921"
+          ],
+          [
+            "South Korea",
+            "2024-08-04",
+            "34,571,873"
+          ],
+          [
+            "Japan",
+            "2024-08-04",
+            "33,803,572"
+          ],
+          [
+            "Italy",
+            "2024-08-04",
+            "26,781,078"
+          ],
+          [
+            "United Kingdom",
+            "2024-08-04",
+            "24,974,629"
+          ],
+          [
+            "Russia",
+            "2024-08-04",
+            "24,268,728"
+          ],
+          [
+            "Turkey",
+            "2024-08-04",
+            "17,004,718"
+          ],
+          [
+            "Oceania",
+            "2024-08-04",
+            "15,003,352"
+          ],
+          [
+            "Spain",
+            "2024-08-04",
+            "13,980,340"
+          ],
+          [
+            "Africa",
+            "2024-08-04",
+            "13,145,380"
+          ],
+          [
+            "Australia",
+            "2024-08-04",
+            "11,861,161"
+          ],
+          [
+            "Vietnam",
+            "2024-08-04",
+            "11,624,000"
+          ],
+          [
+            "Argentina",
+            "2024-08-04",
+            "10,101,218"
+          ],
+          [
+            "Netherlands",
+            "2024-08-04",
+            "8,640,008"
+          ],
+          [
+            "Iran",
+            "2024-08-04",
+            "7,627,863"
+          ],
+          [
+            "Mexico",
+            "2024-08-04",
+            "7,619,458"
+          ],
+          [
+            "Indonesia",
+            "2024-08-04",
+            "6,829,399"
+          ]
+        ],
+        "token_count": 476,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c9b833849374677b3e780cf48bc825b-c3",
+        "chunk_index": 3,
+        "text": "Note: this custom scraper summarizes OWID CSV rows into compact HTML so the existing HTML extraction pipeline can process them deterministically. Figures are cumulative totals as of the cutoff.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 34,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "date",
+          "new_cases",
+          "total_cases"
+        ],
+        [
+          "2024-07-20",
+          "0",
+          "775711519"
+        ],
+        [
+          "2024-07-21",
+          "52079",
+          "775763598"
+        ],
+        [
+          "2024-07-22",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-23",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-24",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-25",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-26",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-27",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-28",
+          "56016",
+          "775819614"
+        ],
+        [
+          "2024-07-29",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-07-30",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-07-31",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-01",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-02",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-03",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-04",
+          "47169",
+          "775866783"
+        ]
+      ],
+      [
+        [
+          "Location",
+          "Date",
+          "total_cases"
+        ],
+        [
+          "High-income countries",
+          "2024-08-04",
+          "429,044,049"
+        ],
+        [
+          "Asia",
+          "2024-08-04",
+          "301,499,099"
+        ],
+        [
+          "Europe",
+          "2024-08-04",
+          "252,916,868"
+        ],
+        [
+          "Upper-middle-income countries",
+          "2024-08-04",
+          "251,753,518"
+        ],
+        [
+          "European Union (27)",
+          "2024-08-04",
+          "185,822,587"
+        ],
+        [
+          "North America",
+          "2024-08-04",
+          "124,492,666"
+        ],
+        [
+          "United States",
+          "2024-08-04",
+          "103,436,829"
+        ],
+        [
+          "China",
+          "2024-08-04",
+          "99,373,219"
+        ],
+        [
+          "Lower-middle-income countries",
+          "2024-08-04",
+          "91,954,400"
+        ],
+        [
+          "South America",
+          "2024-08-04",
+          "68,809,418"
+        ],
+        [
+          "India",
+          "2024-08-04",
+          "45,041,748"
+        ],
+        [
+          "France",
+          "2024-08-04",
+          "38,997,490"
+        ],
+        [
+          "Germany",
+          "2024-08-04",
+          "38,437,756"
+        ],
+        [
+          "Brazil",
+          "2024-08-04",
+          "37,511,921"
+        ],
+        [
+          "South Korea",
+          "2024-08-04",
+          "34,571,873"
+        ],
+        [
+          "Japan",
+          "2024-08-04",
+          "33,803,572"
+        ],
+        [
+          "Italy",
+          "2024-08-04",
+          "26,781,078"
+        ],
+        [
+          "United Kingdom",
+          "2024-08-04",
+          "24,974,629"
+        ],
+        [
+          "Russia",
+          "2024-08-04",
+          "24,268,728"
+        ],
+        [
+          "Turkey",
+          "2024-08-04",
+          "17,004,718"
+        ],
+        [
+          "Oceania",
+          "2024-08-04",
+          "15,003,352"
+        ],
+        [
+          "Spain",
+          "2024-08-04",
+          "13,980,340"
+        ],
+        [
+          "Africa",
+          "2024-08-04",
+          "13,145,380"
+        ],
+        [
+          "Australia",
+          "2024-08-04",
+          "11,861,161"
+        ],
+        [
+          "Vietnam",
+          "2024-08-04",
+          "11,624,000"
+        ],
+        [
+          "Argentina",
+          "2024-08-04",
+          "10,101,218"
+        ],
+        [
+          "Netherlands",
+          "2024-08-04",
+          "8,640,008"
+        ],
+        [
+          "Iran",
+          "2024-08-04",
+          "7,627,863"
+        ],
+        [
+          "Mexico",
+          "2024-08-04",
+          "7,619,458"
+        ],
+        [
+          "Indonesia",
+          "2024-08-04",
+          "6,829,399"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "2026-07-29",
+      "2024-08-04",
+      "2024-07-20",
+      "2024-07-21",
+      "2024-07-22",
+      "2024-07-23",
+      "2024-07-24",
+      "2024-07-25",
+      "2024-07-26",
+      "2024-07-27",
+      "2024-07-28",
+      "2024-07-29",
+      "2024-07-30",
+      "2024-07-31",
+      "2024-08-01",
+      "2024-08-02",
+      "2024-08-03"
+    ],
+    "fetch_strategy": "custom:ourworldindata_covid",
+    "snapshot_timestamp": null,
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  },
+  {
+    "id": "doc-cf196ecfae4940cb99f5b9c0d01ba731",
+    "result_id": "cf196ecfae4940cb99f5b9c0d01ba731",
+    "source_url": "https://web.archive.org/web/20260726212421id_/https://www.cdc.gov/covid/php/surveillance/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-06T00:20:55.131610+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://web.archive.org/web/20260726212421id_/https://www.cdc.gov/covid/php/surveillance/index.html",
+    "title": "Surveillance and Data Analytics",
+    "published_date": "2026-07-26T21:24:21+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 717,
+    "token_count": 139,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-cf196ecfae4940cb99f5b9c0d01ba731-c0",
+        "chunk_index": 0,
+        "text": "This page provides an overview of COVID-19 data and trends over time. Other COVID-19 related data visualizations (previously on CDC\u2019s COVID Data Tracker) are provided in the resources section at the bottom of this page.",
+        "chunk_type": "prose",
+        "heading": "Purpose",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 46,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-cf196ecfae4940cb99f5b9c0d01ba731-c1",
+        "chunk_index": 1,
+        "text": "Test positivity (the percentage of total reported tests that are positive) and the percentage of total emergency department visits due to COVID-19 are key metrics to assess the impact of COVID-19 on communities. For public health professionals, these metrics act as early indicators of potential increases in COVID-19 activity.",
+        "chunk_type": "prose",
+        "heading": "Purpose > COVID-19 Surveillance Data in the United States > Early Indicators",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 60,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-cf196ecfae4940cb99f5b9c0d01ba731-c2",
+        "chunk_index": 2,
+        "text": "Hospitalizations and deaths are key metrics for assessing the severity and disease burden of COVID-19, including which groups are at the increased risk of severe COVID-19.",
+        "chunk_type": "prose",
+        "heading": "Purpose > COVID-19 Surveillance Data in the United States > Severity Indicators",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 33,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "wayback_fallback_to_live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  },
+  {
+    "id": "doc-3c186edd72a549599675588c0ca7ff4b",
+    "result_id": "3c186edd72a549599675588c0ca7ff4b",
+    "source_url": "https://health.stonybrookmedicine.edu/new-covid-variant-ba32-cicada-what-to-know",
+    "domain": "health.stonybrookmedicine.edu",
+    "fetched_at": "2026-08-06T00:58:48.546283+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://health.stonybrookmedicine.edu/new-covid-variant-ba32-cicada-what-to-know",
+    "title": "Understanding the COVID-19 Cicada Variant (BA.3.2): Symptoms, Spread and Protection",
+    "published_date": "2026-03-30T14:07:24+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4670,
+    "token_count": 1015,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c0",
+        "chunk_index": 0,
+        "text": "COVID-19 continues to evolve, and new variants remain part of that cycle. The latest variant gaining attention is officially known as SARS-CoV-2 Variant BA.3.2, or more commonly called the \u201cCicada\u201d variant. Like other recent subvariants, such as Nimbus and Stratus, BA.3.2 is part of the ongoing evolution of the virus, with mutations that may influence how easily it spreads and how the immune system responds.\nAs of early February 2026, \u201cBA.3.2 was detected in nasal swabs from four travelers, three airplane wastewater samples, clinical samples from five patients and 132 wastewater samples from 25 U.S. states,\u201d according to the U.S. Centers for Disease Control and Prevention.\n\u201cMonitoring the spread of BA.3.2 provides valuable information about the potential for this new SARS-CoV-2 lineage to evade immunity from a previous infection or vaccination,\u201d the CDC says. Meaning, the agency is watching how BA.3.2 spreads to learn if it can infect people who already have some protection from COVID vaccines or past illness.\nAs COVID-19 and other respiratory viruses continue to circulate, understanding the Cicada variant \u2014 its symptoms, how it spreads and how to protect yourself \u2014 can help you make informed decisions for your health.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 267,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c1",
+        "chunk_index": 1,
+        "text": "The Cicada variant (BA.3.2) is a newer Omicron-related subvariant identified through global and U.S. monitoring systems. Like other recent strains, it has evolved with mutations that may influence how easily it spreads and how the immune system responds.\nThe CDC is currently evaluating BA.3.2 for:\n\u2022 Transmissibility: How quickly it spreads\n\u2022 Immune evasion: Ability to partially bypass prior immunity\n\u2022 Clinical impact: Severity of illness and outcomes\nAt this stage, BA.3.2 is being monitored and has not been classified as a high-concern variant, meaning there is no evidence it causes more severe disease than recent strains.",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)?",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 136,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c2",
+        "chunk_index": 2,
+        "text": "Early data suggests the BA.3.2 \u201cCicada\u201d variant may spread easily from person to person similar to other recent Omicron subvariants.\nHealth experts note:\n\u2022 It may have a slight transmission advantage in certain settings\n\u2022 It can infect individuals with prior immunity (from vaccines or past infection)\n\u2022 Protection against severe illness remains strong, especially for those up to date on vaccines\nOverall, while the Cicada variant may contribute to seasonal increases in cases, it does not currently appear to dramatically change the risk landscape.",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > Is the Cicada Variant More Contagious?",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 107,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c3",
+        "chunk_index": 3,
+        "text": "Health experts say that the BA.3.2 \u201cCicada\u201d variantdoesn\u2019t seem to cause any new or unusual symptoms compared to other Omicron COVID\u201119 variants. Right now, health organizations are mostly tracking how the virus spreads and changes, rather than listing new symptoms.\nMost common symptoms:\n\u2022 Cough\n\u2022 Fatigue or low energy\n\u2022 Fever\n\u2022 Body aches\nAdditional symptoms may include:\n\u2022 Sore throat\n\u2022 Runny nose or congestion\n\u2022 Headache\n\u2022 Shortness of breath\n\u2022 Nausea or reduced appetite\n\u2022 Brain fog or difficulty concentrating\nLoss of taste or smell is now less common but still possible.",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > COVID Cicada Variant Symptoms",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 136,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c4",
+        "chunk_index": 4,
+        "text": "The BA.3.2 variant spreads like other COVID-19 variants. You can stay safe by:\n\u2022 Getting vaccinated and boosted\n\u2022 Wearing a good mask (N95 or KN95) indoors in crowded spaces\n\u2022 Keeping rooms ventilated\n\u2022 Washing your hands often\n\u2022 Avoiding people who are sick\n\u2022 Being extra careful if you have health conditions or are older\n\u2022 Checking local COVID levels before traveling or going to events\nThese steps are especially important during cold and flu season.",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > Protect Yourself from the BA.3.2 \u201cCicada\u201d Variant",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 101,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c5",
+        "chunk_index": 5,
+        "text": "If you test positive for BA.3.2, most people can recover at home. Ways to feel better include:\n\u2022 Taking antiviral medicine (like Paxlovid) if a doctor recommends it, especially for people at higher risk\n\u2022 Getting plenty of rest and drinking fluids\n\u2022 Using over-the-counter medicine for fever or body aches\n\u2022 Following isolation rules to keep others from getting sick",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > Treatment Options for the Cicada Variant (BA.3.2)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 81,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c6",
+        "chunk_index": 6,
+        "text": "Most people with COVID-19 have mild symptoms, but sometimes medical help is needed.",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > When to See a Doctor for COVID-19",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 17,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c7",
+        "chunk_index": 7,
+        "text": "\u2022 Fever over 103\u00b0F (100.4\u00b0F in children) that lasts more than a few days\n\u2022 Symptoms that get worse after starting to feel better\n\u2022 Trouble drinking enough fluids (especially in kids)",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > When to See a Doctor for COVID-19 > Call your doctor if you have:",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 43,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-3c186edd72a549599675588c0ca7ff4b-c8",
+        "chunk_index": 8,
+        "text": "\u2022 Chest pain or pressure that doesn\u2019t go away\n\u2022 Severe trouble breathing\n\u2022 Confusion or trouble staying awake\n\u2022 Signs of dehydration (very little urine, dizziness)\n\u2022 Oxygen levels under 95 percent\nPeople who are older, have chronic health problems, or have weak immune systems should contact a doctor early, even if symptoms are mild.\nBA.3.2 is a new version of the COVID-19 virus. It can spread easily, but vaccines and treatments still protect most people from getting very sick. Staying up to date on vaccines and following simple safety steps can help you stay safe with this variant.",
+        "chunk_type": "prose",
+        "heading": "What Is the COVID-19 Cicada Variant (BA.3.2)? > When to See a Doctor for COVID-19 > Go to the emergency room if you have:",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 127,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "wayback",
+    "snapshot_timestamp": "2026-04-17T18:49:57+00:00",
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  },
+  {
+    "id": "doc-519506b511ff44778765c4a37e29b94c",
+    "result_id": "519506b511ff44778765c4a37e29b94c",
+    "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/2026covid-19outlook.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-06T01:30:25.661847+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/cfa-qualitative-assessments/php/data-research/2026covid-19outlook.html",
+    "title": "2026 COVID-19 Summer Outlook",
+    "published_date": "2026-06-12T11:17:18+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 8854,
+    "token_count": 1710,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-519506b511ff44778765c4a37e29b94c-c0",
+        "chunk_index": 0,
+        "text": "Since SARS-CoV-2 emerged in late 2019, hospitalizations due to COVID-19 have varied seasonally, with peaks occurring in both summer and winter months (Figure 1). Although peak hospitalization rates due to COVID-19 vary by state and region, the magnitude of national peak hospitalization rates due to COVID-19 during both summer and winter increases have decreased over time. Following the increase in COVID-19 during the 2023/2024 fall and winter respiratory season, the national peak hospitalization rate due to COVID-19 has been lower in each subsequent wave of transmission. The decreasing levels of national COVID-19 hospitalizations over time could be due to several potential factors, which are not mutually exclusive, including:\n\u2022 No new variants with significant immune-escape properties: A variant with significant immune-escape properties has not emerged and achieved predominance since the emergence of JN.1 in 2024. COVID-19 hospitalizations could be declining over time because no new variants with increased abilities to evade an individual's prior immunity have emerged and reached predominance in the past 2 years.\n\u2022 Lower disease severity:Due to lower virulence of predominating variants: If disease severity of predominating variants has decreased compared to earlier waves, the number of COVID-19 hospitalizations could be lower.Due to diverse individual-level immunity: Most people have some level of immunity to COVID-19 from multiple past infections and vaccinations. Hospitalizations may be decreasing over time because individuals' immunity is more effective at preventing severe outcomes when infections occur. The diversity of immunity (e.g. history of heterogeneous immune exposures within individuals) continues to expand over time as people experience reinfections and/or receive COVID-19 vaccinations.\n\u2022 Reduced case reporting: Decreases in testing for SARS-CoV-2 infection in hospitals or decreases in hospitals reporting to national surveillance systems may be contributing to lower reported numbers of hospitalizations due to COVID-19.\nGiven the historical trend nationally of significant increases of COVID-19 activity occurring in the summer months, this outlook is intended to provide decision-makers with information to assist in public health preparedness for COVID-19 activity during summer 2026. CDC's outlook is based on historical trends, expert opinion, and scenario modeling results. See our Respiratory Disease Season Outlooks from the 2024-2025 season and 2025-2026 season for insights into how scenario modeling has been used in the past to demonstrate the range of possibilities for how the respiratory disease season could unfold.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Overview",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 508,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-519506b511ff44778765c4a37e29b94c-c1",
+        "chunk_index": 1,
+        "text": "While the past several waves have shown a trend of declining hospitalizations nationally, it remains possible that there could be a larger increase this summer. There is regional variability in both the timing and magnitude of COVID-19 activity. We developed two COVID-19 modeling scenarios for the summer to demonstrate the range of possibilities for how COVID-19 activity could unfold nationally. One scenario assumes that no variant with significant immune-escape properties emerges; the other is based on the possible emergence of a variant with moderate immune-escape properties that achieves predominance. The latter scenario is based on the characteristics that were observed in variants that emerged in the United States in the pastA. While not specifically modeled in this scenario, we note that since its first detection in the U.S. in 2025, there have been detections of BA.3.2 in at least 29 U.S. states and Puerto RicoB. These modeling results show that in the absence of the emergence of a variant with moderate immune-escape properties, we do not expect an increase substantially larger than that experienced this past winter (Figure 2). If such a variant does emerge, there is substantial uncertainty (Figure 2), but modeling suggests increases would likely be within the range of what has been observed in the past 3 years (Figure 1).",
+        "chunk_type": "prose",
+        "heading": "At a glance > Outlook for the summer months > National Outlook",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 262,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-519506b511ff44778765c4a37e29b94c-c2",
+        "chunk_index": 2,
+        "text": "There is regional variability in both the timing and magnitude of COVID-19 hospitalization across the United States (Figure 3). Historical data from the past two years indicates that in many regions of the United States, one COVID-19 wave is occurring each year (either during the summer or fall/winter months), instead of two waves. Scenario modeling results by HHS Region indicate that broadly, regions fall into two groups:\n\u2022 Regions with projected lower levels of transmission during summer 2026: In regions that experienced substantial COVID-19 activity during the most recent winter months (the 2025-2026 fall and winter respiratory season), scenario modeling suggests that there will be a lower level of COVID-19 transmission relative to both the past winter and the other regions, and therefore lower numbers of hospitalizations, during the upcoming summer months (Figure 4). Lower projected activity during the summer could be due to increased population immunity to COVID-19 following higher levels of infection during the preceding fall and winter months.This group includes HHS Regions 1, 2, 3, 5, 7, and 8, which make up the northeast and midwestern parts of the country. We note that HHS Region 2 has intermediate projected dynamics, with somewhat higher projected activity during summer 2026 than the other regions in this group, but lower than the second group.\n\u2022 Regions with projected higher levels of transmission during summer 2026: In regions that did not experience substantial COVID-19 activity during the most recent winter months (the 2025-2026 fall and winter respiratory season), scenario modeling suggests that there will be a higher level of COVID-19 transmission relative to both the past winter and the other regions, and therefore higher numbers of hospitalizations, during the upcoming summer months (Figure 5). Higher projected activity during the summer could be due to lower population immunity to COVID-19 following low levels of infection during the preceding fall and winter months.This group includes HHS Regions 4, 6, 9, and 10, which make up the southern and western parts of the country.\nFor all regions, we note that the emergence of a variant with moderate immune-escape properties could lead to higher numbers of hospitalizations and drive higher summer increases in any part of the country. Also, trends observed in these two groups\u2014primarily winter vs primarily summer transmission\u2014may persist or change over time. We note uncertainty in the following areas:\n\u2022 COVID-19 dynamics are evolving, and there is uncertainty in the role of seasonality on transmission of SARS-CoV-2. Many behavioral or environmental factors could contribute to more effective transmission of the virus at certain times of the year and in certain geographic regions.\n\u2022 This model represents the 50 states individually and does not include the possibility that high levels of transmission in one state will spill over into other states as people move between regions. It is possible that the movement of infected people across state and regional boundaries could contribute to small increases in areas where the model does not currently project significant activity.\n\u2022 The model does not account for the upcoming 2026 World Cup, co-hosted by the United States. There is uncertainty in how social mixing during the World Cup will affect COVID-19 dynamics this summer, although the current modeling approach does include wide bands of uncertainty that likely account for modest increases in COVID-19 activity occurring due to the World Cup.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Outlook for the summer months > Regional Outlook",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 687,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-519506b511ff44778765c4a37e29b94c-c3",
+        "chunk_index": 3,
+        "text": "This outlook is based on expert opinion, historical data, and scenario modeling results. We have moderate confidence in our assessment, based on information availability and information gaps and assumptions.\nWe project COVID-19 dynamics under different scenarios using a transmission model with a compartmental modeling structure that takes into account population age structure, infection history, vaccination history, immunity waning status, and SARS-CoV-2 variants. See our Scenario Modeling Methods page to learn more about our methods.\n\u2022 The model assumes that a variant is introduced with moderate immune-escape properties, similar to properties of XEC. The variant is introduced across projections with a peak introduction time that varies randomly between model runs, between June 15, 2026 and September 13, 2026. This range is intended to capture uncertainty in when variant emergence might occur. Each introduction gradually increases over the two weeks prior to the peak and decreases for the two weeks following the peak.\n\u2022 In laboratory studies BA.3.2 was found to possess immune escape properties; however, its prevalence within the U.S. has remained relatively low, at 4% (95% CI = 3-7%) of sequences collected during March 15, 2026- April 11, 2026.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Methods",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 253,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "June 15, 2026",
+      "September 13, 2026",
+      "March 15, 2026",
+      "April 11, 2026"
+    ],
+    "fetch_strategy": "wayback",
+    "snapshot_timestamp": "2026-07-25T19:12:56+00:00",
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  },
+  {
+    "id": "doc-af1a341fd38048acbc808f3ea36fb36f",
+    "result_id": "af1a341fd38048acbc808f3ea36fb36f",
+    "source_url": "https://www.who.int/news/item/16-05-2026-statement-on-the-antigen-composition-of-covid-19-vaccines",
+    "domain": "who.int",
+    "fetched_at": "2026-08-06T05:31:29.191227+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/news/item/16-05-2026-statement-on-the-antigen-composition-of-covid-19-vaccines",
+    "title": "Statement on the antigen composition of COVID-19 vaccines",
+    "published_date": "2026-05-16T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 14582,
+    "token_count": 3107,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c0",
+        "chunk_index": 0,
+        "text": "\u2022 The WHO Technical Advisory Group on COVID-19 Vaccine Composition (TAG-CO-VAC) held its twice-yearly decision-making meeting in May 2026 to review the evolution of SARS-CoV-2, the effectiveness of currently approved COVID-19 vaccines and the implications for COVID-19 vaccine antigen composition.\n\u2022 The objective of any update to COVID-19 vaccine antigen composition is to enhance vaccine-induced immune responses to circulating SARS-CoV-2 variants, when needed.\n\u2022 Following this meeting, the TAG-CO-VAC advises vaccine manufacturers that monovalent LP.8.1 is the recommended vaccine antigen.\n\u2022 Other antigens (e.g. XFG, NB.1.8.1) or other approaches that demonstrate broad and robust neutralizing antibody responses or efficacy against currently circulating SARS-CoV-2 variants could also be used.\n\u2022 Vaccination remains an important public health countermeasure against COVID-19 and vaccination should not be delayed in anticipation of access to vaccines with an updated antigen composition. As per the March 2026 WHO Strategic Advisory Group of Experts on Immunization (SAGE) recommendations, Member States should consider routine COVID-19 vaccination of groups at highest risk of severe COVID-19 disease.\nThe WHO Technical Advisory Group on COVID-19 Vaccine Composition (TAG-CO-VAC) continues to closely monitor the genetic and antigenic evolution of SARS-CoV-2 variants, immune responses to SARS-CoV-2 infection and COVID-19 vaccination, and the effectiveness of COVID-19 vaccines against circulating variants. Based on these evaluations, WHO advises vaccine manufacturers and regulatory authorities on the implications for future updates to COVID-19 vaccine antigen composition. In December 2025, the TAG-CO-VAC advised vaccine manufacturers that monovalent LP.8.1 is the recommended vaccine antigen. Multiple manufacturers (using mRNA or recombinant protein-based vaccines) have updated COVID-19 vaccine antigen composition to monovalent LP.8.1 formulation. Several of these vaccines have been approved for use by regulatory authorities and have been introduced into vaccination programmes. Previous statements from the TAG-CO-VAC can be found on the WHO website.\nThe TAG-CO-VAC reconvened on 7-8 May 2026 to review the genetic and antigenic evolution of SARS-CoV-2; immune responses to SARS-CoV-2 infection and/or COVID-19 vaccination; the effectiveness of currently approved vaccines against circulating SARS-CoV-2 variants; and the implications for COVID-19 vaccine antigen composition.",
+        "chunk_type": "prose",
+        "heading": "Key points:",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 517,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c1",
+        "chunk_index": 1,
+        "text": "The published and unpublished evidence reviewed by the TAG-CO-VAC included: (1) SARS-CoV-2 genetic evolution, with additional support from the WHO Technical Advisory Group on Virus Evolution (TAG-VE); (2) Antigenic characterization of previous and emerging SARS-CoV-2 variants using virus neutralization tests with animal antisera and further analysis of antigenic relationships using antigenic cartography; (3) Immunogenicity data on the breadth of neutralizing antibody responses elicited by currently approved vaccine antigens against circulating SARS-CoV-2 variants using animal and human sera, with additional support from WHO Coronavirus Network (CoViNet); (4) Preliminary clinical immunogenicity data on immune responses following infection with circulating SARS-CoV-2 variants; (5) Available COVID-19 vaccine effectiveness (VE) estimates of currently approved vaccines; and (6) Preliminary non-clinical and clinical immunogenicity data on the performance of candidate vaccines with updated antigens shared by vaccine manufacturers with TAG-CO-VAC. Further details on the data reviewed by the TAG-CO-VAC can be found in the accompanying data annex. Confidential data reviewed by the TAG-CO-VAC are not shown.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Evidence reviewed",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 250,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c2-p0",
+        "chunk_index": 2,
+        "text": "\u2022 There are persistent and increasing gaps and delays in the surveillance and reporting of cases, hospitalizations and deaths from WHO Member States, limiting the interpretation and comparability of epidemiological trends over time.\n\nIn 2026, SARS-CoV-2 continues to circulate globally, causing severe disease, post COVID-19 condition, and death.\n\nHowever, the impact on health systems has reduced substantially compared to 2020-2021 due to multiple factors, including increased population immunity from infection and/or vaccination and improved clinical management.\n\nIn 2026, all WHO regions are reporting lower SARS-CoV-2 test positivity rates than during the corresponding period in previous years.\n\n\u2022 Globally, the current predominant variant among SARS-CoV-2 sequences remains Variant Under Monitoring (VUM) XFG, however the weekly proportion is now declining.\n\nIn contrast, in countries in the WHO Western Pacific Region where sequencing continues, VUM NB.1.8.1 is the predominant variant.\n\nGlobally, the proportion of VUM BA.3.2 is increasing, with heterogeneous dynamics across countries where genomic surveillance continues.\n\nBA.3.2 appears to have lower fitness than JN.1-descendant variants, which may explain why BA.3.2 has not displaced JN.1-descendant variants in regions where it has been detected.\n\nTo date, the increase in the proportion of BA.3.2 does not appear to be associated with a substantial increase in disease burden, unlike increases associated with previous Variants of Interest and JN.1-descendant variants.\n\nIn several countries, BA.3.2 appears to account for a higher proportion of sequences from young children than adults, suggesting possible differences in susceptibility to BA.3.2 related to a lack of cross-reactive immunity generated by previous exposure to early SARS-CoV-2 variants.\n\nHowever, sequence numbers and the reported number of infected individuals, including those with severe disease, remain low; this observation should therefore be interpreted with caution.\n\n\u2022 Neutralization data using antisera from na\u00efve animals infected or vaccinated with JN.1, LP.8.1, NB.1.8.1 or XFG, indicated that recent JN.1-descendant variants are antigenically closely related.\n\nThese variants differed by approximately 1 antigenic unit in cartographic analyses, corresponding to a two-fold-difference in neutralization, with XFG often the most antigenically distant from JN.1 within the JN.1 cluster.\n\nIn contrast, these antisera showed limited neutralizing activity against BA.3.2.\n\nAntisera from na\u00efve animals infected with BA.3.2 showed very limited cross-reactivity with recent JN.1-descendant variants.\n\nTogether, these results indicate that BA.3.2 is antigenically distinct from JN.1- descendant variants.\n\n\u2022 Sera from cohorts that are representative of recent population immunity and pre-LP.8.1 vaccination sera demonstrated cross-reactivity with recent JN.1-descendant variants and with BA.3.2.\n\n\u2022 Pre- and post-vaccination sera from individuals immunized with LP.8.1 demonstrated significant increases in neutralizing activity against JN.1 and its descendant variants, including NB.1.8.1 and XFG.\n\nPost-vaccination neutralizing antibody titers and the fold change against BA.3.2 were lower than against the homologous LP.8.1 antigen and other JN.1- descendant variants.\n\n\u2022 Pre- and post-vaccination sera from individuals immunized with JN.1 or KP.2 demonstrated significant increases in neutralizing activity against JN.1 and its descendant variants.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Summary of available evidence",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 752,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c2-p1",
+        "chunk_index": 3,
+        "text": "However, post-vaccination neutralizing antibody titers against NB.1.8.1 and XFG were lower than those against the homologous JN.1 or KP.2 antigens, with even larger reductions typically observed for BA.3.2.\n\n\u2022 Contemporary vaccine effectiveness (VE) estimates are relative (rVE) and demonstrate the added or incremental protection of recent vaccination over and above pre-existing infection- and vaccine-derived immunity.\n\nMonovalent JN.1 and KP.2 mRNA vaccines demonstrated additional protection\u2014relative to pre-existing immunity\u2014against symptomatic and severe COVID-19.\n\nThe limited number of rVE estimates using monovalent LP.8.1 vaccines also demonstrated additional protection against symptomatic and severe COVID-19.\n\n\u2022 Data shared with the TAG-CO-VAC by vaccine manufacturers showed that: Immunization of na\u00efve mice with monovalent LP.8.1, XFG or NB.1.8.1 induced high neutralizing antibody titers against the homologous antigen, as well as other JN.1-descendant variants.\n\nLow or non-detectable neutralizing antibody titers were consistently observed against BA.3.2.\n\nIn contrast, immunization of na\u00efve mice with monovalent BA.3.2 induced immune responses largely restricted to the homologous antigen.\n\nOverall immunogenicity of BA.3.2 was lower than after LP.8.1, XFG or NB.1.8.1 immunization.Immunization of mice previously immunized with SARS-CoV-2 variants and then immunized with LP.8.1, XFG or NB.1.8.1 induced high neutralizing antibody titers against JN.1-descendant variants.\n\nLower neutralizing antibody titers against BA.3.2 were observed.\n\nImmunization with BA.3.2 induced neutralizing titers against the homologous antigen, and to a lesser extent against JN.1-descedant variants.\n\nHowever, overall immunogenicity of BA.3.2 was lower than after LP.8.1, XFG or NB.1.8.1 immunization.In humans, vaccination with LP.8.1 induced strong increases in neutralizing antibody titers against JN.1, LP.8.1, NB.1.8.1 and XFG.\n\nAs in mice, post- vaccination neutralizing antibody titers against BA.3.2 were lower than those against the homologous LP.8.1 antigen.\n\nA single clinical immunogenicity study using a BA.3.2 vaccine candidate showed increased neutralizing antibody titers against the homologous antigen, and a back boost against JN.1-descendant variants, but overall lower immunogenicity than the LP.8.1 vaccine.\n\nOverall, LP.8.1 as a vaccine antigen in populations with high levels of prior infection and / or vaccination continues to induce broadly cross-reactive immune responses to circulating SARS-CoV-2 variants.\n\nThe TAG-CO-VAC acknowledges several limitations of available data:\n\u2022 There are persistent and increasing gaps and delays in the reporting of cases, hospitalizations and deaths, from WHO Member States, as well as in genetic/genomic surveillance of SARS-CoV-2 globally, including low numbers of samples sequenced and limited geographic diversity.\n\nThe TAG-CO-VAC strongly supports the ongoing work of the WHO Coronavirus Network (CoViNet) and the Global Influenza Surveillance and Response System (GISRS) to address this information gap.\n\n\u2022 The timing, specific mutations and antigenic characteristics of emerging and future variants are difficult to predict, and the potential public health impact of these variants remain unknown.\n\nCurrently, two antigenically distinct lineages (JN.1-descendant and BA.3.2-descendant variants) are circulating and the comparative evolutionary potential of these lineages remains uncertain.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Summary of available evidence",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 798,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c2-p2",
+        "chunk_index": 4,
+        "text": "Variants derived from these lineages will continue to be monitored and/or characterized, and the TAG-CO-VAC strongly supports the ongoing work of the TAG-VE.\n\n\u2022 Although neutralizing antibody titers have been shown to be important correlates of protection from SARS-CoV-2 infection and of estimates of vaccine effectiveness, there are multiple components of immune protection elicited by infection and/or vaccination.\n\nData on the immune responses following JN.1-descendant variant infection or monovalent LP.8.1 vaccination are largely restricted to neutralizing antibodies.\n\nData and interpretation of other aspects of the immune response, including cellular immunity, are limited.\n\n\u2022 Immunogenicity data against currently circulating SARS-CoV-2 variants are not available for all COVID-19 vaccines.\n\n\u2022 Recent estimates of rVE are limited in terms of the number of studies, geographic diversity, vaccine platforms evaluated, populations assessed, duration of follow-up, and contemporary comparisons of vaccines with different antigen composition.\n\nThere are currently only a limited number of available rVE estimates using monovalent LP.8.1 mRNA vaccines; there are no rVE estimates in populations in which BA.3.2 was the predominant variant.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Summary of available evidence",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 240,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c3",
+        "chunk_index": 5,
+        "text": "Monovalent LP.8.1 (Nextstrain: 25A; GenBank: PV074550.1; GISAID: EPI_ISL_19467828) is the recommended COVID-19 vaccine antigen.\nOther antigens (e.g. XFG, NB.1.8.1) or other approaches that demonstrate broad and robust neutralizing antibody responses or efficacy against currently circulating SARS-CoV-2 variants could also be used.\nAs per the March 2026 WHO Strategic Advisory Group of Experts on Immunization (SAGE) recommendations, Member States should consider routine COVID-19 vaccination of groups at highest risk of severe COVID-19 disease and vaccination should not be delayed in anticipation of access to vaccines with an updated antigen composition.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Recommendations for COVID-19 vaccine antigen composition",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 154,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-af1a341fd38048acbc808f3ea36fb36f-c4",
+        "chunk_index": 6,
+        "text": "Given the limitations of the evidence upon which the recommendations above are derived and the anticipated continued evolution of the virus, the TAG-CO-VAC strongly encourages generation of the following data (in addition to the types of data outlined in March 2026)\n\u2022 Immune responses and clinical endpoints (i.e. VE and/or comparator rates of infection and severe disease) in varied human populations who receive currently approved COVID-19 vaccines against emerging SARS-CoV-2 variants, across different vaccine platforms.\n\u2022 Strengthened epidemiological and virological surveillance, as per the Standing Recommendations for COVID-19 in accordance with the International Health Regulations (2005), to determine if emerging variants are antigenically distinct and able to displace circulating variants.\n\u2022 Strengthened epidemiological surveillance to characterize disease severity in immunologically na\u00efve and/ or immature individuals (e.g. young pediatric cohorts), particularly for BA.3.2 infections.\n\u2022 Non-clinical and clinical immunogenicity data against circulating SARS-CoV-2 variants for vaccine candidates with different SARS-CoV-2 antigens.\nAs previously stated, the TAG-CO-VAC continues to encourage the further development of vaccines that may improve protection against infection and reduce transmission of SARS-CoV-2.\nThe TAG-CO-VAC will continue to closely monitor the genetic and antigenic evolution of SARS-CoV-2 variants, immune responses to SARS-CoV-2 infection and COVID-19 vaccination, and the effectiveness of COVID-19 vaccines against circulating variants. The TAG-CO-VAC will also continue to reconvene every six months, or as needed, to evaluate the implications for COVID-19 vaccine antigen composition. At each meeting, recommendations to either maintain current vaccine composition or to consider updates will be issued. Prior to each meeting, the TAG-CO-VAC will publish an update to the statement on the types of data requested to inform COVID-19 vaccine antigen composition deliberations.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Further data requested",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 396,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "8 May 2026"
+    ],
+    "fetch_strategy": "wayback",
+    "snapshot_timestamp": "2026-07-21T00:34:25+00:00",
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  },
+  {
+    "id": "doc-c79d7db4a00e4e1e850cc9ce99553f26",
+    "result_id": "c79d7db4a00e4e1e850cc9ce99553f26",
+    "source_url": "https://www.who.int/news/item/18-12-2025-statement-on-the-antigen-composition-of-covid-19-vaccines",
+    "domain": "who.int",
+    "fetched_at": "2026-08-06T05:32:04.126408+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/news/item/18-12-2025-statement-on-the-antigen-composition-of-covid-19-vaccines",
+    "title": "Statement on the antigen composition of COVID-19 vaccines",
+    "published_date": "2025-12-18T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 13743,
+    "token_count": 3001,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c0",
+        "chunk_index": 0,
+        "text": "\u2022 The WHO Technical Advisory Group on COVID-19 Vaccine Composition (TAG-CO-VAC) held its twice-yearly decision-making meeting in December 2025 to review the evolution of SARS-CoV-2, the performance of currently approved COVID-19 vaccines and the implications for COVID-19 vaccine antigen composition.\n\u2022 The objective of an update to COVID-19 vaccine antigen composition is to enhance vaccine-induced immune responses to circulating SARS-CoV-2 variants.\n\u2022 Following this meeting, the TAG-CO-VAC advises vaccine manufacturers that monovalent LP.8.1 is the recommended vaccine antigen.\n\u2022 The previously recommended JN.1 lineage (JN.1 or KP.2) antigens remain suitable alternatives and vaccination should not be delayed in anticipation of access to vaccines with the LP.8.1 composition.\n\u2022 Other approaches that demonstrate broad and robust neutralizing antibody responses or efficacy against currently circulating SARS-CoV-2 variants could also be considered.\n\u2022 Vaccination remains an important public health countermeasure against COVID-19. As per the WHO Director General\u2019s standing recommendations for COVID-19, Member States are recommended to continue to offer COVID-19 vaccination based on the recommendations of the WHO Strategic Advisory Group of Experts on Immunization (SAGE).\nThe WHO Technical Advisory Group on COVID-19 Vaccine Composition (TAG-CO-VAC) continues to closely monitor the genetic and antigenic evolution of SARS-CoV-2 variants, immune responses to SARS-CoV-2 infection and COVID-19 vaccination, and the performance of COVID-19 vaccines against circulating variants. Based on these evaluations, WHO advises vaccine manufacturers and regulatory authorities on the implications for future updates to COVID-19 vaccine antigen composition. In May 2025, the TAG-CO-VAC recommended that monovalent JN.1 or KP.2 remain appropriate vaccine antigens and that monovalent LP.8.1 is a suitable alternative vaccine antigen. Multiple manufacturers (using mRNA or recombinant protein-based vaccines) have updated COVID-19 vaccine antigen composition to monovalent JN.1 lineage formulations (JN.1, KP.2 or LP.8.1). Several of these vaccines have been approved for use by regulatory authorities and have been introduced into vaccination programmes. Previous statements from the TAG-CO-VAC can be found on the WHO website.\nThe TAG-CO-VAC reconvened on 8-9 December 2025 to review the genetic and antigenic evolution of SARS-CoV-2; immune responses to SARS-CoV-2 infection and/or COVID-19 vaccination; the performance of currently approved vaccines against circulating SARS-CoV-2 variants; and the implications for COVID-19 vaccine antigen composition.",
+        "chunk_type": "prose",
+        "heading": "Key points:",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 557,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c1",
+        "chunk_index": 1,
+        "text": "The published and unpublished evidence reviewed by the TAG-CO-VAC included: (1) SARS-CoV-2 genetic evolution with additional support from the WHO Technical Advisory Group on Virus Evolution (TAG-VE); (2) Antigenic characterization of previous and emerging SARS-CoV-2 variants using virus neutralization tests with animal antisera and further analysis of antigenic relationships using antigenic cartography; (3) Immunogenicity data on the breadth of neutralizing antibody responses elicited by currently approved vaccine antigens against circulating SARS-CoV-2 variants using animal and human sera; (4) Preliminary clinical immunogenicity data on immune responses following infection with circulating SARS-CoV-2 variants; (5) Available relative vaccine effectiveness (VE) estimates of currently approved vaccines during periods of JN.1 lineage circulation; and (6) Preliminary non-clinical and clinical immunogenicity data on the performance of candidate vaccines with updated antigens shared confidentially by vaccine manufacturers with TAG-CO-VAC. Further details on the data reviewed by the TAG-CO-VAC can be found in the accompanying data annex. Confidential data reviewed by the TAG-CO-VAC are not shown.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Evidence reviewed",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 246,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c2-p0",
+        "chunk_index": 2,
+        "text": "\u2022 There are persistent and increasing gaps in the reporting of cases, hospitalizations and deaths, from WHO Member States, limiting the interpretation of epidemiological trends.\n\nNonetheless, in 2025, SARS-CoV-2 continues to circulate globally, causing severe disease, post COVID-19 condition, and death.\n\nGlobally, the majority of COVID-19 deaths continue to occur in individuals aged 65 years and older and those with underlying comorbidities.\n\n\u2022 As of early December 2025, most circulating SARS-CoV-2 variants worldwide remain derived from JN.1.\n\nIn most regions, SARS-CoV-2 Variant Under Monitoring (VUM) XFG is the predominant variant among SARS-CoV-2 sequences submitted to GISAID, typically accounting for 70-80% of all variants reported.\n\nIn contrast, in several countries in the WHO Western Pacific Region in which SARS-CoV-2 sequencing continues, VUM NB.1.8.1 has been the most recent predominant variant, with XFG detected at lower levels.\n\nVUM BA.3.2, first detected in November 2024, continues to be detected at low levels globally; however, higher levels have been reported in limited geographic areas, particularly in wastewater and clinical samples in Western Australia.\n\nThe proportions of JN.1 (Variant of Interest) and all other VUMs (KP.3.1.1 and LP.8.1) are declining and are now detected at low levels.\n\n\u2022 Published and unpublished neutralization data using antisera from na\u00efve mice and hamsters infected with JN.1 or XFG, as well as mice immunized with mRNA vaccine antigens JN.1, LP.1.8.1, NB.1.8.1 or XFG, indicate that recent JN.1-derived variants are antigenically closely related.\n\nThese variants differ by approximately 1 antigenic unit in cartographic analyses, corresponding to a two-fold-difference in neutralization, with XFG often the most antigenically distant from JN.1 within the JN.1 cluster.\n\nIn contrast, these antisera showed limited neutralization activity against BA.3.2, indicating that BA.3.2 is antigenically distinct from circulating JN.1-derived variants.\n\n\u2022 Sera collected in 2025 from individuals with prior SARS-CoV-2 infection or COVID-19 vaccination showed a moderate reduction in neutralizing antibody titers against BA.3.2, as compared to those against JN.1 and LP.8.1.\n\n\u2022 Published and unpublished human serological data of pre- and post-vaccination sera from individuals immunized with JN.1 or KP.2 demonstrated significant increases in neutralizing activity against JN.1 and its descendent lineages.\n\nPost-vaccination neutralizing antibody titers against NB.1.8.1 and XFG were lower than those against the homologous JN.1 or KP.2 antigens, with even larger reductions observed for BA.3.2.\n\n\u2022 Pre- and post-vaccination sera from individuals immunized with LP.8.1 demonstrated significant increases in neutralizing activity against JN.1 and its descendent lineages, including NB.1.8.1 and XFG.\n\nPost-vaccination neutralizing antibody titers against BA.3.2 were lower than against the homologous LP.8.1 antigen and other JN.1-derived variants.\n\n\u2022 Contemporary vaccine effectiveness (VE) estimates are relative (rVE), rather than absolute (comparing vaccinated to unvaccinated individuals), and demonstrate the added or incremental protection of recent vaccination over and above pre-existing infection- and vaccine-derived immunity.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Summary of available evidence",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 769,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c2-p1",
+        "chunk_index": 3,
+        "text": "Monovalent JN.1 and KP.2 mRNA vaccines demonstrated additional protection\u2014relative to pre-existing immunity\u2014against symptomatic and severe COVID-19.\n\nThere are currently no studies reporting VE or rVE estimates using monovalent LP.8.1 vaccines.\n\n\u2022 Data shared confidentially with the TAG-CO-VAC by vaccine manufacturers showed that:Immunization of na\u00efve mice and mice previously immunized with SARS-CoV-2 variants with monovalent JN.1 elicited high neutralizing antibody titers against JN.1, XEC, LP.8.1, NB.1.8.1.\n\nNeutralization titers against XFG were typically lower than those against the homologous immunizing antigen, with further reductions observed against BA.3.2.Immunization of na\u00efve mice and mice previously immunized with SARS-CoV-2 variants with monovalent LP.8.1 induced high neutralizing antibody titers against the homologous antigen, JN.1, NB.1.8.1 and XFG.\n\nReductions in antibody titers were consistently observed against BA.3.2.In humans, vaccination with monovalent JN.1 elicited robust neutralizing antibody responses against JN.1, XEC, LP.8.1 and NB.1.8.1.\n\nAs observed in mice, post-monovalent JN.1 vaccination neutralizing antibody titers against XFG and BA.3.2 were lower than those against the homologous JN.1 antigen.\n\nVaccination with 8.1 induced strong increases in neutralizing antibody titers against JN.1, LP.8.1, NB.1.8.1 and XFG.\n\nAs in mice, post-monovalent LP.8.1 vaccination neutralizing antibody titers against BA.3.2 were lower than those against the homologous LP.8.1 antigen.\n\nOverall, LP.8.1 as a vaccine antigen offers modestly but significantly increased cross-reactive antibody responses to currently circulating JN.1-derived variants, as compared to monovalent JN.1 or KP.2 vaccines.\n\nThe TAG-CO-VAC acknowledges several limitations of available data:\n\u2022 There are persistent and increasing gaps in the reporting of cases, hospitalizations and deaths, from WHO Member States, as well as in genetic/genomic surveillance of SARS-CoV-2 globally, including low numbers of samples sequenced and limited geographic diversity.\n\nThe TAG-CO-VAC strongly supports the ongoing work of the WHO Coronavirus Network (CoViNet) and the Global Influenza Surveillance and Response System (GISRS) to address this information gap.\n\n\u2022 The timing, specific mutations and antigenic characteristics of emerging and future variants are difficult to predict, and the potential public health impact of these variants remain unknown.\n\nWhile most circulating variants are currently derived from JN.1, there are long branch saltation variants, such as BA.3.2, that are currently detected in low proportions of SARS-CoV-2 variants sequenced globally.\n\nAvailable data indicate that BA.3.2 does not currently exhibit a clear fitness advantage over JN.1-derived variants; however, its future evolutionary potential remains uncertain.\n\nThese variants will continue to be monitored and/or characterized and the TAG-CO-VAC strongly supports the ongoing work of the TAG-VE.\n\n\u2022 Although neutralizing antibody titers have been shown to be important correlates of protection from SARS-CoV-2 infection and of estimates of vaccine effectiveness, there are multiple components of immune protection elicited by infection and/or vaccination.\n\nData on the immune responses following JN.1 descendent lineage infection or monovalent JN.1, KP.2 or LP.8.1 vaccination are largely restricted to neutralizing antibodies.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Summary of available evidence",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 788,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c2-p2",
+        "chunk_index": 4,
+        "text": "Data and interpretation of other aspects of the immune response, including cellular immunity, are limited.\n\n\u2022 Immunogenicity data against currently circulating SARS-CoV-2 variants are not available for all COVID-19 vaccines.\n\n\u2022 Estimates of rVE against recently circulating JN.1 variants are limited in terms of the number of studies, geographic diversity, vaccine platforms evaluated, populations assessed, duration of follow-up, and contemporary comparisons of vaccines with different antigen composition.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Summary of available evidence",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 91,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c3",
+        "chunk_index": 5,
+        "text": "Monovalent LP.8.1 (NextStrain: 25A; GenBank: PV074550.1; GISAID: EPI_ISL_19467828) is the recommended COVID-19 vaccine antigen.\nAs vaccination should not be delayed in anticipation of access to vaccines with an LP.8.1 composition, previously recommended JN.1 lineage (JN.1 or KP.2) antigens remain suitable alternatives.\nOther approaches that demonstrate broad and robust neutralizing antibody responses or efficacy against currently circulating SARS-CoV-2 variants could also be considered.\nAs per the WHO Director General\u2019s standing recommendations for COVID-19, Member States are recommended to continue to offer COVID-19 vaccination based on the recommendations of the WHO SAGE.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Recommendations for COVID-19 vaccine antigen composition",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 156,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c79d7db4a00e4e1e850cc9ce99553f26-c4",
+        "chunk_index": 6,
+        "text": "Given the limitations of the evidence upon which the recommendations above are derived and the anticipated continued evolution of the virus, the TAG-CO-VAC strongly encourages generation of the following data (in addition to the types of data outlined in September 2025):\n\u2022 Immune responses and clinical endpoints (i.e. VE and/or comparator rates of infection and severe disease) in varied human populations who receive currently approved COVID-19 vaccines against emerging SARS-CoV-2 variants, across different vaccine platforms.\n\u2022 Strengthened epidemiological and virological surveillance, as per the Standing Recommendations for COVID-19 in accordance with the International Health Regulations (2005), to determine if emerging variants are antigenically distinct and able to displace circulating variants.\n\u2022 Strengthened epidemiological surveillance to characterize disease severity in immunologically na\u00efve and/ or immature individuals (i.e. birth cohorts).\n\u2022 Non-clinical and clinical immunogenicity data against circulating SARS-CoV-2 variants for vaccine candidates with different SARS-CoV-2 antigens, such as BA.3.2.\nAs previously stated, the TAG-CO-VAC continues to encourage the further development of vaccines that may improve protection against infection and reduce transmission of SARS-CoV-2.\nThe TAG-CO-VAC will continue to closely monitor the genetic and antigenic evolution of SARS-CoV-2 variants, immune responses to SARS-CoV-2 infection and COVID-19 vaccination, and the performance of COVID-19 vaccines against circulating variants. The TAG-CO-VAC will also continue to reconvene every six months, or as needed, to evaluate the implications for COVID-19 vaccine antigen composition. At each meeting, recommendations to either maintain current vaccine composition or to consider updates will be issued. Prior to each meeting, the TAG-CO-VAC will publish an update to the statement on the types of data requested to inform COVID-19 vaccine antigen composition deliberations.",
+        "chunk_type": "prose",
+        "heading": "Key points: > Further data requested",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 394,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "9 December 2025"
+    ],
+    "fetch_strategy": "wayback",
+    "snapshot_timestamp": "2026-05-16T13:21:33+00:00",
+    "cutoff_applied": "2026-07-29T00:00:00+00:00"
+  }
+]

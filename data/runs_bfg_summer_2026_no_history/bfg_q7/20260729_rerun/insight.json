@@ -1,0 +1,199 @@
+{
+  "records": [
+    {
+      "id": "ins-4079ee042a17",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": "National Influenza Surveillance, Bangladesh (NISB)",
+      "data_quality": null,
+      "event_date": "2026-06-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "One laboratory-confirmed human case of avian influenza A(H5) infection in a child.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:36:07.663852+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-78b2340208874a17ae2f48cda6a68272",
+          "chunk_id": "doc-78b2340208874a17ae2f48cda6a68272-c1",
+          "source_url": "https://web.archive.org/web/20260722032732id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "On 15 June 2026, Bangladesh notified WHO of one laboratory-confirmed human case of avian influenza A(H5) infection in Bangladesh in a child from Sylhet Division."
+        }
+      ]
+    },
+    {
+      "id": "ins-60c7715f353a",
+      "question_id": "bfg_q7",
+      "event_type": "other",
+      "confidence": 0.7,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "No reports of sustained human-to-human transmission associated with the human infection events.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:36:07.664812+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-78b2340208874a17ae2f48cda6a68272",
+          "chunk_id": "doc-78b2340208874a17ae2f48cda6a68272-c1",
+          "source_url": "https://web.archive.org/web/20260722032732id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "There have been no reports of sustained human-to-human transmission associated with the above-mentioned human infection events."
+        }
+      ]
+    },
+    {
+      "id": "ins-accff5bc2fae",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 71.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-02-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total reported human cases of A(H5) bird flu since February 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:36:12.573673+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c4c1d6cef671462f97ce34c2dcf45d7d",
+          "chunk_id": "doc-c4c1d6cef671462f97ce34c2dcf45d7d-c1",
+          "source_url": "https://web.archive.org/web/20260726001007id_/https://www.cdc.gov/bird-flu/situation-summary/",
+          "quote": "Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024"
+        }
+      ]
+    },
+    {
+      "id": "ins-4c09858d37b8",
+      "question_id": "bfg_q7",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "human_to_human_transmission",
+      "metric_value": 0.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-02T00:00:00",
+      "event_date_precision": "day",
+      "summary": "No confirmed human-to-human transmission of avian influenza A(H5) virus has been identified in the United States.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:36:16.341211+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-60934a6a987a4dabac9650ce10c217c5",
+          "chunk_id": "doc-60934a6a987a4dabac9650ce10c217c5-c7",
+          "source_url": "https://www.cdc.gov/fluview/surveillance/2026-week-17.html",
+          "quote": "human-to-human transmission of avian influenza A(H5) virus (H5 bird flu) has not been identified in the United States."
+        }
+      ]
+    },
+    {
+      "id": "ins-4f22ec8eeba1",
+      "question_id": "bfg_q7",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4313.0,
+      "metric_unit": "viruses",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-09-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "CDC has genetically characterized 4,313 influenza viruses collected since September 28, 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:36:16.750245+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-60934a6a987a4dabac9650ce10c217c5",
+          "chunk_id": "doc-60934a6a987a4dabac9650ce10c217c5-c8",
+          "source_url": "https://www.cdc.gov/fluview/surveillance/2026-week-17.html",
+          "quote": "CDC has genetically characterized 4,313 influenza viruses collected since September 28, 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-0e515776b6c4",
+      "question_id": "bfg_q7",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2696.0,
+      "metric_unit": "viruses",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-09-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Genetic characterization of influenza viruses collected since September 28, 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T18:36:20.329554+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c634cb3b5f224536bee511cff408c98c",
+          "chunk_id": "doc-c634cb3b5f224536bee511cff408c98c-c8",
+          "source_url": "https://www.cdc.gov/fluview/surveillance/2026-week-09.html",
+          "quote": "CDC has genetically characterized 2,696 influenza viruses collected since September 28, 2025."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 123309,
+    "total_output_tokens": 966,
+    "total_tokens": 124275,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 123309,
+        "output_tokens": 966,
+        "calls": 56
+      }
+    }
+  },
+  "documents_processed": 8,
+  "documents_skipped": 0,
+  "notes": []
+}

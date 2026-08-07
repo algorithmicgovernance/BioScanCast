@@ -1,0 +1,836 @@
+--- bfg_q2 13:33:09 ---
+=== Pipeline run: bfg_q2 (20260726_rerun) ===
+question:  How many cumulative reported deaths (confirmed plus probable) will there be in the Bundibugyo outbreak since the outbreak declaration on 14 May 2026 to 31 December 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q2/20260726_rerun
+
+[search] starting...
+2026-08-06 14:33:12,970 ERROR bioscancast.stages.searching.query_decomposition: Question classification failed, defaulting to 'unknown'
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/query_decomposition.py", line 233, in classify_question_type
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/main.py", line 99, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-06 14:33:14,378 ERROR bioscancast.stages.searching.query_decomposition: LLM decomposition failed, using fallback sub-queries
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/query_decomposition.py", line 328, in decompose_question
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/main.py", line 99, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-06 14:33:14,442 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Femergencies%2Fsituations%2Febola-outbreak---drc-2026&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:16,416 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Femergencies%2Fdisease-outbreak-news%2Fitem%2F2026-DON602&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:18,423 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.afro.who.int%2Fhealth-topics%2Febola-disease&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:20,425 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cdc.gov%2Febola%2Fabout%2Findex.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:21,718 ERROR bioscancast.stages.searching.query_decomposition: Source routing failed, defaulting to 'general_sources'
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/query_decomposition.py", line 74, in route_sources
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/main.py", line 99, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-06 14:33:22,431 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Femergencies%2Fdisease-outbreak-news&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:24,435 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Fteams%2Fihr%2Fihr-emergency-committees&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:26,439 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Factivities%2Ftracking-SARS-CoV-2-variants&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:28,442 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cdc.gov%2Foutbreaks%2Findex.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:30,449 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fafricacdc.org%2Fdownload%2Fafrica-cdc-epidemic-intelligence-weekly-report-april-2026%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:32,446 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.paho.org%2Fen%2Fepidemiological-alerts-and-updates&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:34,463 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.gov.uk%2Fgovernment%2Fpublications%2Foutbreaks-under-monitoring-in-2026&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:36,469 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.ecdc.europa.eu%2Fen%2Fpublications-data%2Fmonitoring%2Fweekly-threats-reports&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:38,469 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fpromedmail.org%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:40,475 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.healthmap.org%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:42,509 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwahis.woah.org%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:44,476 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fempres-i.apps.fao.org%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:46,477 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.fao.org%2Fone-health%2Fhighlights%2Fthe-global-early-warning-system%2Fen&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:48,479 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Fteams%2Fglobal-influenza-programme%2Fsurveillance-and-monitoring%2Ffluid&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:50,487 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error Tunnel connection failed: 403 Forbidden> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fnextstrain.org%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 14:33:50,575 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda latest cases 2024 2025 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 776, in connect
+    self._tunnel()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 979, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-08-06 14:33:50,584 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda outbreak trend 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 776, in connect
+    self._tunnel()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 979, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-08-06 14:33:50,586 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda government response policy 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 776, in connect
+    self._tunnel()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 979, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-08-06 14:33:50,589 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda latest cases 2024 2025 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 776, in connect
+    self._tunnel()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 979, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-08-06 14:33:50,591 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda outbreak trend 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 776, in connect
+    self._tunnel()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 979, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-08-06 14:33:50,594 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda government response policy 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 776, in connect
+    self._tunnel()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 979, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-08-06 14:33:50,595 WARNING bioscancast.stages.searching.pipeline: Historical top-up exhausted: 0 survivors after 1 round(s) (target was 10). Returning what we have.
+[search] 0 results (39.2s)
+[filter] starting...
+[filter] 0 docs (0.0s)
+[extract] starting...
+[extract] 0/0 success (0.0s)
+[insight] starting...
+[insight] 0 records | in=0 out=0 (0.0s)
+[forecast] starting...
+2026-08-06 14:33:51,826 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 0 failed for question bfg_q2
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-06 14:33:53,253 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 1 failed for question bfg_q2
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-06 14:33:54,590 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 2 failed for question bfg_q2
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-06 14:33:55,961 ERROR bioscancast.stages.evaluation.contamination: Retrieval-free baseline LLM call failed for bfg_q2
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/http_proxy.py", line 297, in handle_request
+    raise ProxyError(msg)
+httpcore.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ProxyError: 403 Forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/evaluation/contamination.py", line 169, in retrieval_free_baseline_forecast
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 64, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+[forecast] 2 distribution(s) over 5 options | in=0 out=0 (5.4s)
+
+=== Pipeline complete: bfg_q2 ===
+  search     39.25s  $0.0000
+  filter      0.00s  $0.0000
+  extract     0.00s
+  insight     0.00s  $0.0000
+  forecast    5.37s  $0.0000
+  total cost:  $0.0000
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q2/20260726_rerun
+bfg_q2 OK
+--- bfg_q3 13:33:56 ---
+=== Pipeline run: bfg_q3 (20260726_rerun) ===
+question:  Will the Bundibugyo virus disease PHEIC still be in effect on 31 December 2026?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q3/20260726_rerun
+
+[search] starting...

@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "id": "ins-79f624f6521c",
+      "question_id": "bfg_q20",
+      "event_type": "outbreak_declared",
+      "confidence": 0.5,
+      "location": "Brasil",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": "outbreaks",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-08-03T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:56:52.319757+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4a77e50d934e4babb293139d06163ed7",
+          "chunk_id": "doc-4a77e50d934e4babb293139d06163ed7-c0-p0",
+          "source_url": "https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    },
+    {
+      "id": "ins-c6b8f1926c48",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Oropouche virus has been identified in many countries, including Argentina, Bolivia, Brazil, Colombia, Ecuador, French Guiana, Panama, and Peru, with Cuba reporting its first case in June 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:57:00.047437+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-68af4459648942638f9da664522763a8",
+          "chunk_id": "doc-68af4459648942638f9da664522763a8-c1",
+          "source_url": "https://www.cdc.gov/oropouche/hcp/clinical-overview/index.html",
+          "quote": "In the last 25 years, cases of Oropouche have been identified in many countries, including Argentina, Bolivia, Brazil, Colombia, Ecuador, French Guiana, Panama, and Peru."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 55436,
+    "total_output_tokens": 412,
+    "total_tokens": 55848,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 55436,
+        "output_tokens": 412,
+        "calls": 26
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

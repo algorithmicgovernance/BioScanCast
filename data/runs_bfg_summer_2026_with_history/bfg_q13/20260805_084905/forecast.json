@@ -1,0 +1,219 @@
+{
+  "question_id": "bfg_q13",
+  "options": [
+    "under 3,000",
+    "3,000 to 6,999",
+    "7,000 to 11,999",
+    "12,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 3,000": 0.177,
+        "3,000 to 6,999": 0.324,
+        "7,000 to 11,999": 0.268,
+        "12,000 to 19,999": 0.14900000000000002,
+        "20,000 or more": 0.082
+      }
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 3,000": 0.4,
+        "3,000 to 6,999": 0.3,
+        "7,000 to 11,999": 0.15,
+        "12,000 to 19,999": 0.1,
+        "20,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "under 3,000",
+      "probability": 0.177,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 6,999",
+      "probability": 0.324,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "7,000 to 11,999",
+      "probability": 0.268,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "12,000 to 19,999",
+      "probability": 0.14900000000000002,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.082,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 3,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 6,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7,000 to 11,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12,000 to 19,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.177,
+        0.324,
+        0.268,
+        0.149,
+        0.082
+      ],
+      "ok": true,
+      "reference_class": "Past global mpox outbreaks between 2022 and 2026",
+      "base_rate": 0.268,
+      "drivers_up": [
+        "Ongoing global transmission of mpox",
+        "Cumulative cases have been steadily increasing over several years",
+        "Presence of mpox in multiple world regions, including North America and EU/EEA",
+        "Significant number of countries reporting mpox cases"
+      ],
+      "drivers_down": [
+        "Recent data shows only 964 new cases globally in April 2026",
+        "Some regions have shown low numbers of new cases"
+      ],
+      "why_might_be_wrong": "The actual spread of mpox could accelerate or decelerate unpredictably due to changes in public health measures or viral mutations.",
+      "rationale": "The base rate for significant outbreaks suggests continued transmission potential. With 184,531 cumulative cases by April 2026, and historical data indicating steady increase, the range of 7,000 to 11,999 new cases seems plausible. While recent monthly incident cases are low (964 in April 2026), the broad geographic spread and historical growth support a continued increase. Thus, the most likely range is 3,000 to 6,999, but a notable probability remains for the 7,000 to 11,999 range given historical trends and global distribution.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.177,
+        0.324,
+        0.268,
+        0.149,
+        0.082
+      ],
+      "ok": true,
+      "reference_class": "Global mpox outbreaks from 2022 to 2026",
+      "base_rate": 0.324,
+      "drivers_up": [
+        "Recent high cumulative cases reported globally (184,531 by April 2026) suggest ongoing transmission potential.",
+        "Mpox cases have been reported in 145 countries, indicating widespread distribution."
+      ],
+      "drivers_down": [
+        "Recent monthly and yearly incident case reports are relatively low, suggesting potential stabilization.",
+        "Prior high case numbers could lead to increased immunity and control measures, reducing transmission."
+      ],
+      "why_might_be_wrong": "The prediction might be wrong if there is a significant under-reporting of cases or if a new variant significantly increases transmissibility.",
+      "rationale": "The base rate from prior forecasts indicated a moderate likelihood of 3,000 to 6,999 new cases. The global spread and high cumulative numbers reported by April 2026 suggest continued transmission, but recent incident reports show a lower number of new cases, indicating potential stabilization. Balancing these factors, the most likely scenario remains 3,000 to 6,999 cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.177,
+        0.324,
+        0.268,
+        0.149,
+        0.082
+      ],
+      "ok": true,
+      "reference_class": "Global outbreaks of mpox within a similar time frame (6 months)",
+      "base_rate": 0.324,
+      "drivers_up": [
+        "Global cumulative cases reached 184,531 by April 2026, indicating potential for further spread.",
+        "High number of cases reported in North America (45,183 cases), suggesting active transmission in some regions.",
+        "Historical data shows mpox spreading to 145 countries, indicating a widespread reach."
+      ],
+      "drivers_down": [
+        "Recent case reports show a decrease in new cases, with only 964 incident cases reported in April 2026 globally.",
+        "Preventative measures and public health responses have likely improved since earlier outbreaks, potentially reducing spread.",
+        "Emergence of clade-specific data might indicate more localized and controlled outbreaks."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there are unreported cases due to limited testing or if a new variant increases transmission rates unexpectedly.",
+      "rationale": "The base rate for significant mpox outbreaks suggests ongoing transmission potential, with historical data showing a large number of global cases and spread across many countries. However, recent data indicates a reduction in new cases, possibly due to improved public health measures. Therefore, the most likely range remains 3,000 to 6,999, with some possibility of fewer or more cases depending on future developments.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current trends in mpox cases and the global response to outbreaks, it is reasonable to predict that the number of cases will remain relatively low, especially with increased awareness and vaccination efforts. The highest probability is assigned to 'under 3,000' due to effective containment measures, while the probabilities decrease for higher case ranges as they become less likely.",
+  "evidence_record_ids": [
+    "ins-558bad8e125e",
+    "ins-abf14030fa7b",
+    "ins-98313dc6b33c",
+    "ins-efb43bbc7167",
+    "ins-13b978640187",
+    "ins-17842784266d",
+    "ins-cc88ea0c9880",
+    "ins-786d7a872c7a",
+    "ins-0e064793466b",
+    "ins-164b183a1dcd",
+    "ins-377f349210db",
+    "ins-90cc02fa6e1c",
+    "ins-6869404bd52c",
+    "ins-cef940e5b8d3"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 8199,
+    "total_output_tokens": 893,
+    "total_tokens": 9092,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7974,
+        "output_tokens": 794,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 225,
+        "output_tokens": 99,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

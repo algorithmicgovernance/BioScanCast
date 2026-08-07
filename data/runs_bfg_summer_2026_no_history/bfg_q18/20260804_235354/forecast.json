@@ -1,0 +1,218 @@
+{
+  "question_id": "bfg_q18",
+  "options": [
+    "under 1.5M",
+    "1.5M to 1.99M",
+    "2.0M to 2.99M",
+    "3.0M to 4.49M",
+    "4.5M or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 1.5M": 0.1021340840324837,
+        "1.5M to 1.99M": 0.2986418733871058,
+        "2.0M to 2.99M": 0.3492936540628072,
+        "3.0M to 4.49M": 0.1855899473254743,
+        "4.5M or more": 0.064340441192129
+      }
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 1.5M": 0.25,
+        "1.5M to 1.99M": 0.3,
+        "2.0M to 2.99M": 0.2,
+        "3.0M to 4.49M": 0.15,
+        "4.5M or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "under 1.5M",
+      "probability": 0.1021340840324837,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "1.5M to 1.99M",
+      "probability": 0.2986418733871058,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "2.0M to 2.99M",
+      "probability": 0.3492936540628072,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "3.0M to 4.49M",
+      "probability": 0.1855899473254743,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "4.5M or more",
+      "probability": 0.064340441192129,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 1.5M",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1.5M to 1.99M",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2.0M to 2.99M",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3.0M to 4.49M",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4.5M or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.25,
+        0.4,
+        0.2,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual dengue suspected cases reported in the Americas",
+      "base_rate": 0.33,
+      "drivers_up": [
+        "There is a historical precedent of very high incidence years, such as 3.85 million cases in 2025, due to cyclical outbreaks.",
+        "Outbreak years can lead to increased awareness and control measures that are implemented more strictly in subsequent years."
+      ],
+      "drivers_down": [
+        "There was a significant 66% decrease in suspected cases from 2024 to 2026, indicating a recent trend of decreasing cases.",
+        "Initial data for 2026 shows significantly lower numbers of suspected cases compared to 2025.",
+        "Public health measures and awareness are likely to have increased following high-incidence years, potentially reducing future cases."
+      ],
+      "why_might_be_wrong": "Dengue cases can be highly variable and subject to sudden increases due to factors like weather changes, resistance to control measures, or new virus strains.",
+      "rationale": "The base rate suggests that in non-peak years, dengue cases in the Americas can be significantly lower than in peak years. Given the evidence of a 66% decrease in cases from 2024 to 2026 and the relatively low starting figures for 2026, it seems likely that 2026 will not be a peak year. Although cyclical outbreaks could cause another spike, the recent trend and initial data suggest a continued lower incidence. Therefore, the probability is highest for the 2.0M to 2.99M range, with a significant chance for the 1.5M to 1.99M range given the recent trend of decreasing cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.4,
+        0.25,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Dengue suspected cases in the Americas in previous years",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Dengue is endemic in many parts of the Americas, suggesting a persistent risk of outbreaks.",
+        "Climate conditions in the Americas can be conducive to mosquito breeding, potentially increasing case numbers.",
+        "Population growth and urbanization can lead to more human-mosquito interactions, facilitating transmission."
+      ],
+      "drivers_down": [
+        "The 2026 cumulative suspected cases as of early in the year are significantly lower than in the previous two years.",
+        "There has been a 66% decrease in suspected cases reported compared to 2024.",
+        "Increased awareness and preventive measures may be reducing transmission."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is a sudden outbreak or if reporting improves significantly, leading to higher numbers.",
+      "rationale": "The base rate for large dengue outbreaks in the Americas suggests a moderate probability for higher case numbers. However, early data from 2026 indicates a significant decrease compared to previous years, likely due to effective interventions or natural variability. This suggests a shift towards lower case numbers, but the possibility of a resurgence remains. Considering these factors, the highest probability is assigned to the 1.5M to 1.99M range, balancing between historical patterns and current trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.25,
+        0.4,
+        0.2,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual dengue suspected cases in the Americas as reported by PAHO",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Dengue cases can increase rapidly if conditions such as vector population growth are favorable.",
+        "The year 2025 experienced a high number of cases (3.85 million), indicating potential for large outbreaks."
+      ],
+      "drivers_down": [
+        "There was a significant decrease in cases in early 2026 compared to 2025, suggesting possible control measures or lower transmission rates.",
+        "The cumulative cases at the start of 2026 (240,198) show a 66% decrease compared to the same period in 2024."
+      ],
+      "why_might_be_wrong": "Dengue outbreaks can be highly unpredictable due to environmental factors and human interventions, leading to sudden increases or decreases in case numbers.",
+      "rationale": "The base rate of 0.2 for the 3.0M to 4.49M range reflects the historical tendency for dengue cases to usually fall within this range. However, the early 2026 data shows a significant decline compared to previous years, suggesting the likelihood of a year with lower case numbers. The drivers for a decrease are stronger currently, as there is a 66% drop in cases compared to 2024 and the first few weeks of 2026 show relatively low numbers. However, given the history of rapid increases in dengue cases and the high numbers in 2025, there remains a non-negligible chance of a resurgence. Therefore, the most likely range is adjusted to 2.0M to 2.99M, with a smaller probability for higher ranges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data and trends, dengue fever cases in the Americas have shown fluctuations influenced by climate, urbanization, and public health measures. The majority of cases tend to fall under 1.5 million or between 1.5 to 1.99 million, with a decreasing probability for higher case counts due to improved vector control and vaccination efforts.",
+  "evidence_record_ids": [
+    "ins-c110310eb9d2",
+    "ins-8476ba98db91",
+    "ins-9825f1d938cb",
+    "ins-50d98c20a2a7",
+    "ins-6c1b629d1ebf",
+    "ins-92e4e237e94d",
+    "ins-b4a62d8e50be",
+    "ins-a5d3735d9511",
+    "ins-23f3ff0aa8b1",
+    "ins-a3788a6eda8d",
+    "ins-6702b766321f",
+    "ins-3f22093b27bd",
+    "ins-d60d11b6a59b",
+    "ins-20d10cc2734c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5236,
+    "total_output_tokens": 1080,
+    "total_tokens": 6316,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5001,
+        "output_tokens": 981,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 235,
+        "output_tokens": 99,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

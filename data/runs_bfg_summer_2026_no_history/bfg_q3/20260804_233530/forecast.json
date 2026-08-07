@@ -1,0 +1,173 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.17256115514831757,
+        "NO": 0.8274388448516824
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.17256115514831757,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.8274388448516824,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for Ebola outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Ongoing transmission with a reproductive number above 1, indicating continued spread.",
+        "High cumulative number of cases (over 2000) and high number of deaths (830), suggesting a severe outbreak.",
+        "Recent determination of the outbreak as a PHEIC in May 2026, indicating international concern."
+      ],
+      "drivers_down": [
+        "Risk for the rest of the African region and at the global level is assessed as low, potentially reducing international pressure for prolonged PHEIC status.",
+        "Prior Ebola-related PHEICs have typically been resolved in under a year."
+      ],
+      "why_might_be_wrong": "The outbreak could either intensify or show significant decline, affecting the PHEIC status unpredictably.",
+      "rationale": "The base rate for past Ebola PHEICs lasting beyond a year is relatively low, as these emergencies are often resolved within months. However, the current Bundibugyo outbreak shows significant ongoing transmission and high case/death numbers, suggesting the situation remains severe. The reproductive number above 1 is concerning for continued spread. Although global risk is low, the outbreak's severity in the DRC and Uganda could sustain the PHEIC status. Balancing these factors, the probability of the PHEIC still being in effect by the end of 2026 is moderate but not high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.6
+      ],
+      "ok": true,
+      "reference_class": "Past WHO-declared Public Health Emergencies of International Concern (PHEIC) for viral outbreaks in Africa.",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "Ongoing transmission in the Democratic Republic of the Congo with a reproductive number above 1, indicating the outbreak is still expanding.",
+        "High cumulative death toll and confirmed cases, suggesting significant impact and concern.",
+        "The outbreak has exceeded the size of previous Bundibugyo virus outbreaks, indicating a more severe situation."
+      ],
+      "drivers_down": [
+        "The risk for the rest of the African region and at the global level is assessed as low, which might lead to a de-escalation of international concern.",
+        "Some outbreaks are eventually controlled and the PHEIC status is lifted after sufficient containment measures are put in place."
+      ],
+      "why_might_be_wrong": "The trajectory of the outbreak could change significantly in the remaining months of 2026, leading to either a rapid containment or a much worse escalation.",
+      "rationale": "The Bundibugyo virus outbreak in the Democratic Republic of the Congo and Uganda has been declared a PHEIC due to its severity and ongoing transmission. With a reproductive number above 1 and a significant number of deaths, the situation is serious. However, the global and regional risk is still considered low, which could influence the WHO to lift the PHEIC if the situation improves by the end of 2026. Given the historical base rate of PHEICs being sustained for several years after declaration, and the current situation, the probability of the PHEIC still being in effect at the end of December 2026 is moderate but not high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.25,
+        0.75
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for similar outbreaks (e.g., Ebola, Zika, MERS) and their durations.",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The outbreak has already resulted in a significant number of cases and deaths, indicating a severe situation.",
+        "The reproductive number is above 1, which suggests ongoing transmission.",
+        "The outbreak has spread across borders, affecting both DRC and Uganda.",
+        "The risk in the Democratic Republic of the Congo is assessed as very high, with ongoing transmission and expansion."
+      ],
+      "drivers_down": [
+        "The global risk and the risk for the rest of the African region are assessed as low.",
+        "There is no mention of the outbreak spreading beyond the immediate region significantly.",
+        "Historical PHEICs for similar diseases often do not last multiple years."
+      ],
+      "why_might_be_wrong": "The situation might change significantly over the next few months or years, with either significant containment measures or further escalation beyond current predictions.",
+      "rationale": "The current situation with the Bundibugyo virus in the DRC and Uganda is severe, with significant case and death counts, and a reproductive number indicating ongoing transmission. However, the historical base rate for similar PHEICs lasting multiple years is relatively low, and the global risk remains low. This suggests that while the situation is serious, it may not sustain a PHEIC status for the duration until the end of 2026. Therefore, the probability of the PHEIC still being in effect by 31 December 2026 is moderately low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo virus outbreaks and the ongoing challenges in managing Ebola viruses in the DRC and Uganda, there is a significant chance that the disease could still be classified as a Public Health Emergency of International Concern (PHEIC) by the end of 2026. However, improvements in public health responses, vaccination efforts, and international cooperation could lead to a decrease in the incidence of the virus, making it more likely that the PHEIC status could be lifted by that time.",
+  "evidence_record_ids": [
+    "ins-33d31b6ae8d1",
+    "ins-0ebbca0bd202",
+    "ins-76d3a14eac75",
+    "ins-ec3ef572fb4e",
+    "ins-07786165e892",
+    "ins-226c70504379",
+    "ins-b01b71dcaa8d",
+    "ins-00e3fb291da7",
+    "ins-4d7277230697",
+    "ins-1ce3da2a64d2",
+    "ins-8a3653dee2e6",
+    "ins-0110e5aedd7e",
+    "ins-fdbc24233680",
+    "ins-cde192df8ec2",
+    "ins-1f2007833b8c",
+    "ins-e191be5b2475",
+    "ins-d328cca3c152",
+    "ins-2426b4d380fc",
+    "ins-5ced07cc8295",
+    "ins-3334b6491ab0",
+    "ins-12ecf9742932",
+    "ins-75c3436d36ee",
+    "ins-926aa32f2197",
+    "ins-75d098d38548",
+    "ins-da9700482ee9",
+    "ins-915c145004e8",
+    "ins-dcdb11bf8142"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 9705,
+    "total_output_tokens": 1060,
+    "total_tokens": 10765,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 9516,
+        "output_tokens": 942,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 118,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,761 @@
+--- bfg_q3 14:06:33 ---
+=== Pipeline run: bfg_q3 (20260726_rerun) ===
+question:  Will the Bundibugyo virus disease PHEIC still be in effect on 31 December 2026?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q3/20260726_rerun
+
+[search] starting...
+[search] 33 results (72.4s)
+[filter] starting...
+[filter] 9 docs (10.2s)
+[extract] starting...
+2026-08-06 15:08:22,241 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260725182803id_%2Fhttps%3A%2F%2Fwww.cdc.gov%2Febola%2Fabout%2Findex.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 15:08:22,390 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260725182803id_/https://www.cdc.gov/ebola/about/index.html: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 144 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 15:08:24,131 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs44298-026-00204-6&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 15:08:26,198 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.afro.who.int%2Fhealth-topics%2Febola-disease%2Foutbreak-drc-26&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 15:08:28,143 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Femergencies%2Fdisease-outbreak-news%2Fitem%2F2026-DON613&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 15:08:30,413 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Freliefweb.int%2Freport%2Fdemocratic-republic-congo%2Fafrica-region-ebola-bvd-epidemic-operation-update-mdrs1007&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 15:08:33,540 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260724171014id_/https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 173 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 8/9 success, 1 thin (38.4s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/africa-region-ebola-bvd-epidemic-operation-update-mdrs1007
+[insight] starting...
+2026-08-06 15:08:42,981 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-7d594a776ace48d9bdd4ae25b7d65a7f-c0, quote='On 17 May 2026, the Director-General of WHO...determined that the Ebola disease caused by Bundibugyo'
+2026-08-06 15:08:42,990 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-7d594a776ace48d9bdd4ae25b7d65a7f-c3, quote='On 17 May 2026, WHO Director-General... determined that the Ebola disease caused by Bundibugyo virus'
+2026-08-06 15:09:14,699 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-cbbb6ce7c2f34b42acfae3d21ddbe41a-c0, quote='In total, 2145 confirmed cases have been reported: 2124 in the Democratic Republic of the Congo... 2'
+2026-08-06 15:09:14,702 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-cbbb6ce7c2f34b42acfae3d21ddbe41a-c0, quote='Since 3 July 2026, an additional 664 confirmed cases... have been reported in the Democratic Republi'
+[insight] 16 records | in=103,051 out=2,786 (43.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=9,060 out=977 (14.4s)
+
+=== Pipeline complete: bfg_q3 ===
+  search     72.41s  $0.0001
+  filter     10.20s  $0.0009
+  extract    38.35s
+  insight    43.41s  $0.0171
+  forecast   14.43s  $0.0308
+  total cost:  $0.0490
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q3/20260726_rerun
+bfg_q3 OK
+--- bfg_q4 14:09:34 ---
+=== Pipeline run: bfg_q4 (20260726_rerun) ===
+question:  How many countries other than DRC or Uganda will report at least one laboratory-confirmed Bundibugyo case linked to this outbreak by 31 December 2026? (Baseline is 1 â€“ France)
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q4/20260726_rerun
+
+[search] starting...
+[search] 32 results (54.8s)
+[filter] starting...
+[filter] 9 docs (9.9s)
+[extract] starting...
+[extract] 9/9 success, 1 thin (285.3s)
+  ! thin extraction: nature.com (286 chars < 500) https://www.nature.com/articles/d41586-026-01646-x
+[insight] starting...
+2026-08-06 15:15:47,920 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-463176f1ed2248fdad8ed21700d7b688-c0, quote='1 in France.'
+[insight] 3 records | in=124,931 out=634 (21.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=5,908 out=847 (11.3s)
+
+=== Pipeline complete: bfg_q4 ===
+  search     54.81s  $0.0001
+  filter      9.88s  $0.0012
+  extract   285.35s
+  insight    21.59s  $0.0191
+  forecast   11.29s  $0.0218
+  total cost:  $0.0422
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q4/20260726_rerun
+bfg_q4 OK
+--- bfg_q5 14:15:59 ---
+=== Pipeline run: bfg_q5 (20260726_rerun) ===
+question:  Which is the furthest Bundibugyo countermeasure milestone reached by 31 December 2026? (Baseline: Oxford Phase I Bundibugyo vaccine trial launched 13 July 2026. WHO therapeutic trial, remdesivir and MBP134, began enrolling patients on 2 July 2026)
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2026-08-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q5/20260726_rerun
+
+[search] starting...
+[search] 44 results (38.9s)
+[filter] starting...
+[filter] 9 docs (10.0s)
+[extract] starting...
+2026-08-06 15:23:07,703 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cdc.gov%2Febola%2Fsituation-summary%2Freturning-travelers.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 15:23:09,660 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Femergencies%2Fdisease-outbreak-news%2Fitem%2F2026-DON613&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+[extract] 9/9 success, 1 thin (378.7s)
+  ! thin extraction: science.org (41 chars < 500) https://www.science.org/content/article/rapid-spread-ebola-spurs-remarkably-quick-drug-and-vaccine-trials
+[insight] starting...
+2026-08-06 15:23:15,450 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-58c45c009bf144ccb4c50575d7297116-c3, quote='WHO Director-General... determined that the Ebola disease caused by Bundibugyo virus... constitutes '
+[insight] 7 records | in=137,499 out=1,370 (30.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=7,312 out=874 (17.9s)
+
+=== Pipeline complete: bfg_q5 ===
+  search     38.88s  $0.0001
+  filter     10.02s  $0.0007
+  extract   378.66s
+  insight    30.02s  $0.0214
+  forecast   17.89s  $0.0253
+  total cost:  $0.0476
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q5/20260726_rerun
+bfg_q5 OK
+--- bfg_q6 14:23:58 ---
+=== Pipeline run: bfg_q6 (20260726_rerun) ===
+question:  How many human H5 infections (any neuraminidase subtype) will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q6/20260726_rerun
+
+[search] starting...
+2026-08-06 15:33:01,792 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 5 attempt(s): The read operation timed out for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.aphis.usda.gov%2Flivestock-poultry-disease%2Favian%2Favian-influenza%2Fhpai-detections%2Fhpai-confirmed-cases-livestock&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+[search] 44 results (550.4s)
+[filter] starting...
+[filter] 8 docs (2.5s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-06 15:34:54,516 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-06 15:34:54,518 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-06 15:34:54,624 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-06 15:34:54,697 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 8/8 success, docling 0/1 PDFs (655.8s)
+[insight] starting...
+[insight] 6 records | in=125,371 out=977 (24.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=8,457 out=918 (20.9s)
+
+=== Pipeline complete: bfg_q6 ===
+  search    550.42s  $0.0001
+  filter      2.48s  $0.0002
+  extract   655.79s
+  insight    24.61s  $0.0194
+  forecast   20.87s  $0.0285
+  total cost:  $0.0482
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q6/20260726_rerun
+bfg_q6 OK
+--- bfg_q7 14:44:56 ---
+=== Pipeline run: bfg_q7 (20260726_rerun) ===
+question:  Will WHO or a national public health authority confirm at least one cluster meeting its stated criteria for sustained human-to-human transmission of an H5 virus on or before 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q7/20260726_rerun
+
+[search] starting...
+[search] 42 results (56.2s)
+[filter] starting...
+[filter] 9 docs (5.0s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-06 15:47:01,859 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-06 15:47:01,859 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-06 15:47:02,011 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-06 15:47:02,032 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 9/9 success, 1 thin, docling 0/1 PDFs (226.0s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://web.archive.org/web/20260706123718id_/https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+[insight] 5 records | in=135,730 out=988 (32.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=7,480 out=919 (15.2s)
+
+=== Pipeline complete: bfg_q7 ===
+  search     56.21s  $0.0001
+  filter      5.04s  $0.0003
+  extract   225.97s
+  insight    32.37s  $0.0210
+  forecast   15.21s  $0.0265
+  total cost:  $0.0479
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q7/20260726_rerun
+bfg_q7 OK
+--- bfg_q8 14:50:36 ---
+=== Pipeline run: bfg_q8 (20260726_rerun) ===
+question:  What will be the predominant H5 subtype among human cases reported globally from 1 July 2026 to 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q8/20260726_rerun
+
+[search] starting...
+[search] 36 results (143.5s)
+[filter] starting...
+[filter] 10 docs (3.7s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-06 15:53:39,876 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-06 15:53:39,878 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-06 15:53:39,985 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-06 15:53:40,031 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+2026-08-06 15:57:25,708 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260725180910id_/https://www.who.int/news-room/fact-sheets/detail/influenza-(avian-and-other-zoonotic): Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 175 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 10/10 success, 1 thin, docling 0/1 PDFs (260.4s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://web.archive.org/web/20260706123718id_/https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+[insight] 6 records | in=125,896 out=950 (29.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=8,111 out=846 (17.2s)
+
+=== Pipeline complete: bfg_q8 ===
+  search    143.52s  $0.0001
+  filter      3.69s  $0.0005
+  extract   260.37s
+  insight    29.44s  $0.0195
+  forecast   17.25s  $0.0271
+  total cost:  $0.0472
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q8/20260726_rerun
+bfg_q8 OK
+--- bfg_q9 14:58:14 ---
+=== Pipeline run: bfg_q9 (20260726_rerun) ===
+question:  How many US states will have H5N1 dairy-cattle detections by 31 December 2026? Number is cumulative states reporting H5N1 in livestock since outbreak was declared in 2024.
+pathogen:  'h5n1'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q9/20260726_rerun
+
+[search] starting...
+[search] 41 results (248.0s)
+[filter] starting...
+[filter] 8 docs (3.0s)
+[extract] starting...
+2026-08-06 16:04:00,949 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260722032732id_%2Fhttps%3A%2F%2Fwww.who.int%2Fteams%2Fglobal-influenza-programme%2Favian-influenza%2Fmonthly-risk-assessment-summary&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:04:01,148 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260722032732id_/https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 191 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 16:04:02,954 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.aphis.usda.gov%2Flivestock-poultry-disease%2Favian%2Favian-influenza&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:04:04,963 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cdc.gov%2Fflu%2Fwhats-new%2F2025-2026-influenza-activity.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:04:07,050 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cdc.gov%2Ffluview%2Fsurveillance%2F2026-week-05.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+[extract] 7/8 success, 1 thin (100.8s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://web.archive.org/web/20260706123718id_/https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+2026-08-06 16:04:20,442 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-447a87b66d7a43248afd24d55139a1b2-c11, quote='...from nine states (37-CA, 1-IA, 1-LA, 1-NV, 1-OR, 1-OH, 11-WA, 1-WI, 1-WY).'
+[insight] 0 records | in=111,619 out=346 (16.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=5,504 out=873 (14.8s)
+
+=== Pipeline complete: bfg_q9 ===
+  search    248.03s  $0.0001
+  filter      2.99s  $0.0003
+  extract   100.78s
+  insight    16.80s  $0.0169
+  forecast   14.78s  $0.0209
+  total cost:  $0.0383
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q9/20260726_rerun
+bfg_q9 OK
+--- bfg_q10 15:04:40 ---
+=== Pipeline run: bfg_q10 (20260726_rerun) ===
+question:  How many new PHEICs will be declared for events not already under a PHEIC as of 1 July 2026, during 1 July 2026 to 31 December 2026?
+pathogen:  'pheic'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q10/20260726_rerun
+
+[search] starting...
+[search] 54 results (576.4s)
+[filter] starting...
+[filter] 17 docs (1.8s)
+[extract] starting...
+2026-08-06 16:14:32,595 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260607085938id_/https://www.who.int/teams/ihr/ihr-emergency-committees: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 163 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 16:14:32,740 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260724170157id_%2Fhttps%3A%2F%2Fwww.who.int%2Femergencies%2Fdisease-outbreak-news&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:14:32,903 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260724170157id_/https://www.who.int/emergencies/disease-outbreak-news: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 161 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 16:14:54,960 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260717222334id_%2Fhttps%3A%2F%2Fwww.who.int%2Factivities%2Ftracking-SARS-CoV-2-variants&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:14:56,115 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260717222334id_/https://www.who.int/activities/tracking-SARS-CoV-2-variants: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 1150 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 16:14:57,021 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260618035523id_%2Fhttps%3A%2F%2Fwww.who.int%2Fteams%2Fglobal-influenza-programme%2Fsurveillance-and-monitoring%2Ffluid&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:14:57,166 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260618035523id_/https://www.who.int/teams/global-influenza-programme/surveillance-and-monitoring/fluid: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 141 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 16:15:49,987 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260725101101id_%2Fhttps%3A%2F%2Fpromedmail.org%2F&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:15:50,143 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260725101101id_/https://promedmail.org/: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 149 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 12/17 success, 3 thin (1145.9s)
+  ! thin extraction: cdc.gov (421 chars < 500) https://web.archive.org/web/20260725182304id_/https://www.cdc.gov/outbreaks/index.html
+  ! thin extraction: wahis.woah.org (0 chars < 500) https://web.archive.org/web/20260724235556id_/https://wahis.woah.org/
+  ! thin extraction: empres-i.apps.fao.org (0 chars < 500) https://web.archive.org/web/20260721233104id_/https://empres-i.apps.fao.org/
+[insight] starting...
+[insight] 2 records | in=95,150 out=391 (22.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 3 options | in=6,159 out=927 (14.3s)
+
+=== Pipeline complete: bfg_q10 ===
+  search    576.41s  $0.0001
+  filter      1.82s  $0.0002
+  extract  1145.88s
+  insight    22.77s  $0.0145
+  forecast   14.33s  $0.0228
+  total cost:  $0.0376
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q10/20260726_rerun
+bfg_q10 OK
+--- bfg_q11 15:34:04 ---
+=== Pipeline run: bfg_q11 (20260726_rerun) ===
+question:  How many chikungunya cases will be in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'chikungunya'
+region:    'americas'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q11/20260726_rerun
+
+[search] starting...
+[search] 29 results (49.9s)
+[filter] starting...
+[filter] 2 docs (2.9s)
+[extract] starting...
+[extract] 2/2 success (16.5s)
+[insight] starting...
+[insight] 7 records | in=40,943 out=903 (6.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=7,845 out=924 (17.8s)
+
+=== Pipeline complete: bfg_q11 ===
+  search     49.90s  $0.0001
+  filter      2.91s  $0.0003
+  extract    16.52s
+  insight     6.75s  $0.0067
+  forecast   17.84s  $0.0272
+  total cost:  $0.0343
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q11/20260726_rerun
+bfg_q11 OK
+--- bfg_q12 15:35:40 ---
+=== Pipeline run: bfg_q12 (20260726_rerun) ===
+question:  Will WHO declare a new PHEIC for mpox at any point between 15 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q12/20260726_rerun
+
+[search] starting...
+[search] 39 results (162.9s)
+[filter] starting...
+[filter] 9 docs (3.1s)
+[extract] starting...
+[extract] 8/9 success (205.8s)
+[insight] starting...
+2026-08-06 16:42:09,819 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-ec02699e81574d64b618dd86d3c00d22-c0, quote='In the past 12 months, 17 countries reported 1 016 clade II cases'
+[insight] 16 records | in=122,092 out=2,177 (24.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=9,194 out=949 (13.3s)
+
+=== Pipeline complete: bfg_q12 ===
+  search    162.90s  $0.0001
+  filter      3.08s  $0.0002
+  extract   205.85s
+  insight    24.48s  $0.0196
+  forecast   13.31s  $0.0308
+  total cost:  $0.0507
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q12/20260726_rerun
+bfg_q12 OK
+--- bfg_q13 15:42:32 ---
+=== Pipeline run: bfg_q13 (20260726_rerun) ===
+question:  How many cumulative human mpox cases will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q13/20260726_rerun
+
+[search] starting...
+[search] 46 results (194.9s)
+[filter] starting...
+[filter] 11 docs (1.6s)
+[extract] starting...
+2026-08-06 16:51:48,144 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260131201717id_/https://www.who.int/publications/m/item/multi-country-outbreak-of-mpox--external-situation-report--59---30-october-2025: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 220 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 10/11 success, 1 thin (356.9s)
+  ! thin extraction: who.int (408 chars < 500) https://www.who.int/publications/m/item/multi-country-outbreak-of-mpox--external-situation-report--59---30-october-2025
+[insight] starting...
+[insight] 7 records | in=97,309 out=962 (27.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=6,693 out=937 (12.5s)
+
+=== Pipeline complete: bfg_q13 ===
+  search    194.90s  $0.0001
+  filter      1.63s  $0.0002
+  extract   356.92s
+  insight    27.39s  $0.0152
+  forecast   12.52s  $0.0244
+  total cost:  $0.0398
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q13/20260726_rerun
+bfg_q13 OK
+--- bfg_q14 15:52:29 ---
+=== Pipeline run: bfg_q14 (20260726_rerun) ===
+question:  How many US confirmed measles cases will be reported from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q14/20260726_rerun
+
+[search] starting...
+[search] 27 results (64.9s)
+[filter] starting...
+[filter] 7 docs (9.0s)
+[extract] starting...
+2026-08-06 16:54:41,818 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cnn.com%2F2026%2F07%2F24%2Fhealth%2Fus-measles-cases-record&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:54:46,688 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.nbcnews.com%2Fdata-graphics%2Ftrack-measles-outbreak-cases-us-map-rcna198932&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:54:48,698 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.washingtonpost.com%2Fhealth%2F2026%2F07%2F21%2Fus-measles-cases-hit-35-year-record-with-months-left-2026&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+[extract] 7/7 success, 1 thin (63.0s)
+  ! thin extraction: washingtonpost.com (421 chars < 500) https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026
+[insight] starting...
+2026-08-06 16:55:01,103 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-e61784e883e04e9a908bd5ed92b3a5b6-c1, quote='CDC records over 2300 measles cases so far 2026'
+[insight] 8 records | in=52,325 out=1,352 (24.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=6,916 out=942 (23.4s)
+
+=== Pipeline complete: bfg_q14 ===
+  search     64.94s  $0.0001
+  filter      8.99s  $0.0011
+  extract    62.97s
+  insight    24.77s  $0.0087
+  forecast   23.43s  $0.0250
+  total cost:  $0.0349
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q14/20260726_rerun
+bfg_q14 OK
+--- bfg_q15 15:55:37 ---
+=== Pipeline run: bfg_q15 (20260726_rerun) ===
+question:  Will PAHO or WHO determine that the United States has lost measles elimination status on or before 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q15/20260726_rerun
+
+[search] starting...
+[search] 33 results (42.4s)
+[filter] starting...
+[filter] 7 docs (7.3s)
+[extract] starting...
+2026-08-06 16:57:28,270 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cnn.com%2F2026%2F07%2F24%2Fhealth%2Fus-measles-cases-record&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 16:57:30,280 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fabcnews.com%2FHealth%2Fmeasles-cases-2026-set-surpass-years-total%2Fstory%3Fid%3D134740486&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+[extract] 7/7 success, 1 thin (61.0s)
+  ! thin extraction: nytimes.com (43 chars < 500) https://www.nytimes.com/2026/07/24/well/measles-record-united-states-numbers.html
+[insight] starting...
+[insight] 31 records | in=55,443 out=4,052 (32.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=11,532 out=968 (15.7s)
+
+=== Pipeline complete: bfg_q15 ===
+  search     42.45s  $0.0001
+  filter      7.25s  $0.0008
+  extract    60.99s
+  insight    32.84s  $0.0107
+  forecast   15.69s  $0.0372
+  total cost:  $0.0488
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q15/20260726_rerun
+bfg_q15 OK
+--- bfg_q16 15:58:19 ---
+=== Pipeline run: bfg_q16 (20260726_rerun) ===
+question:  How many measles-associated deaths will be reported in the U.S. from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q16/20260726_rerun
+
+[search] starting...
+[search] 30 results (143.7s)
+[filter] starting...
+[filter] 4 docs (10.8s)
+[extract] starting...
+[extract] 4/4 success (101.5s)
+[insight] starting...
+[insight] 0 records | in=71,297 out=132 (11.1s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,532 out=908 (14.2s)
+
+=== Pipeline complete: bfg_q16 ===
+  search    143.68s  $0.0001
+  filter     10.76s  $0.0010
+  extract   101.45s
+  insight    11.14s  $0.0108
+  forecast   14.16s  $0.0188
+  total cost:  $0.0307
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q16/20260726_rerun
+bfg_q16 OK
+--- bfg_q17 16:03:03 ---
+=== Pipeline run: bfg_q17 (20260726_rerun) ===
+question:  How many global cholera cases will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q17/20260726_rerun
+
+[search] starting...
+[search] 41 results (16.3s)
+[filter] starting...
+[filter] 4 docs (2.9s)
+[extract] starting...
+[extract] 4/4 success (75.6s)
+[insight] starting...
+[insight] 1 records | in=49,453 out=215 (9.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,791 out=935 (17.3s)
+
+=== Pipeline complete: bfg_q17 ===
+  search     16.30s  $0.0001
+  filter      2.85s  $0.0004
+  extract    75.60s
+  insight     9.34s  $0.0075
+  forecast   17.26s  $0.0222
+  total cost:  $0.0303
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q17/20260726_rerun
+bfg_q17 OK
+--- bfg_q18 16:05:07 ---
+=== Pipeline run: bfg_q18 (20260726_rerun) ===
+question:  How many dengue suspected cases will be reported in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'dengue'
+region:    'americas'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q18/20260726_rerun
+
+[search] starting...
+[search] 37 results (62.4s)
+[filter] starting...
+[filter] 6 docs (7.3s)
+[extract] starting...
+2026-08-06 17:08:13,027 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260713175039id_/https://reliefweb.int/report/brazil/report-epidemiological-situation-dengue-americas-epidemiological-week-21-2026-update-jun-17-2026-324pm-gtm-5: Failed to perform, curl: (7) Failed to connect to web.archive.org port 443 after 154 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-06 17:08:13,843 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Freliefweb.int%2Freport%2Fworld%2Fdengue-epidemiological-situation-region-americas-epidemiological-week-22-2026&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 17:08:15,775 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.cdc.gov%2Fglobal-health%2Fcountries%2Fcentral-america.html&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 17:08:17,785 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Fnews%2Fitem%2F04-03-2026-chile-becomes-the-first-country-in-the-americas-to-be-verified-by-who-for-the-elimination-of-leprosy&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-06 17:08:19,797 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 61] Connection refused> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Fnews-room%2Ffact-sheets%2Fdetail%2Fchagas-disease-%28american-trypanosomiasis%29&to=20260726000000&limit=-1&output=json&filter=statuscode%3A200
+[extract] 6/6 success, 2 thin (120.8s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/brazil/report-epidemiological-situation-dengue-americas-epidemiological-week-21-2026-update-jun-17-2026-324pm-gtm-5
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/world/dengue-epidemiological-situation-region-americas-epidemiological-week-22-2026
+[insight] starting...
+[insight] 0 records | in=59,066 out=112 (18.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,716 out=908 (13.1s)
+
+=== Pipeline complete: bfg_q18 ===
+  search     62.40s  $0.0001
+  filter      7.34s  $0.0009
+  extract   120.75s
+  insight    17.95s  $0.0089
+  forecast   13.12s  $0.0216
+  total cost:  $0.0315
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q18/20260726_rerun
+bfg_q18 OK
+--- bfg_q19 16:08:52 ---
+=== Pipeline run: bfg_q19 (20260726_rerun) ===
+question:  How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?
+pathogen:  'chikungunya'
+region:    'eu-eea'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q19/20260726_rerun
+
+[search] starting...
+[search] 32 results (128.8s)
+[filter] starting...
+[filter] 6 docs (3.1s)
+[extract] starting...
+[extract] 6/6 success, 1 thin (254.9s)
+  ! thin extraction: ecdc.europa.eu (481 chars < 500) https://www.ecdc.europa.eu/en/publications-data/weekly-respiratory-virus-update-week-10-march-2026
+[insight] starting...
+[insight] 1 records | in=69,625 out=241 (11.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,934 out=986 (14.0s)
+
+=== Pipeline complete: bfg_q19 ===
+  search    128.84s  $0.0001
+  filter      3.12s  $0.0003
+  extract   254.89s
+  insight    11.85s  $0.0106
+  forecast   13.99s  $0.0204
+  total cost:  $0.0314
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q19/20260726_rerun
+bfg_q19 OK
+--- bfg_q20 16:15:47 ---
+=== Pipeline run: bfg_q20 (20260726_rerun) ===
+question:  How many Americas countries or territories will report confirmed Oropouche in 2026, as of 31 December 2026?
+pathogen:  'oropouche'
+region:    'americas'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q20/20260726_rerun
+
+[search] starting...
+[search] 31 results (99.3s)
+[filter] starting...
+[filter] 7 docs (3.2s)
+[extract] starting...
+[extract] 7/7 success (219.1s)
+[insight] starting...
+[insight] 1 records | in=95,801 out=310 (16.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,285 out=952 (12.8s)
+
+=== Pipeline complete: bfg_q20 ===
+  search     99.27s  $0.0001
+  filter      3.24s  $0.0004
+  extract   219.06s
+  insight    16.88s  $0.0146
+  forecast   12.83s  $0.0210
+  total cost:  $0.0360
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q20/20260726_rerun
+bfg_q20 OK
+--- bfg_q21 16:21:41 ---
+=== Pipeline run: bfg_q21 (20260726_rerun) ===
+question:  Will WHO declare a new filovirus outbreak distinct from the ongoing Bundibugyo event between 1 July 2026 and 31 December 2026?
+pathogen:  'filovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q21/20260726_rerun
+
+[search] starting...
+[search] 32 results (190.4s)
+[filter] starting...
+[filter] 7 docs (2.2s)
+[extract] starting...
+[extract] 7/7 success (295.2s)
+[insight] starting...
+2026-08-06 17:30:05,333 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-5aad5ca5865a4349afb29876c3d6e6af-c18, quote='DR Congo has 267 deaths'
+2026-08-06 17:30:08,180 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-5aad5ca5865a4349afb29876c3d6e6af-c14, quote='Median cumulative confirmed cases 990'
+2026-08-06 17:30:08,186 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-5aad5ca5865a4349afb29876c3d6e6af-c14, quote='Median cumulative confirmed cases 2114'
+2026-08-06 17:30:08,191 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-5aad5ca5865a4349afb29876c3d6e6af-c14, quote='Median cumulative confirmed cases 4242'
+2026-08-06 17:30:08,196 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-5aad5ca5865a4349afb29876c3d6e6af-c14, quote='Median cumulative confirmed cases 8210'
+[insight] 16 records | in=108,689 out=2,653 (23.1s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=8,918 out=898 (15.9s)
+
+=== Pipeline complete: bfg_q21 ===
+  search    190.39s  $0.0001
+  filter      2.17s  $0.0002
+  extract   295.17s
+  insight    23.11s  $0.0179
+  forecast   15.88s  $0.0301
+  total cost:  $0.0484
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q21/20260726_rerun
+bfg_q21 OK
+--- bfg_q22 16:30:31 ---
+=== Pipeline run: bfg_q22 (20260726_rerun) ===
+question:  How many wild poliovirus type 1 cases will be reported globally in 2026, as of 31 December 2026?
+pathogen:  'poliovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q22/20260726_rerun
+
+[search] starting...
+[search] 26 results (34.6s)
+[filter] starting...
+[filter] 3 docs (0.0s)
+[extract] starting...
+[extract] 3/3 success (45.0s)
+[insight] starting...
+[insight] 8 records | in=67,496 out=1,024 (13.7s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=6,890 out=974 (15.6s)
+
+=== Pipeline complete: bfg_q22 ===
+  search     34.58s  $0.0001
+  filter      0.01s  $0.0000
+  extract    45.01s
+  insight    13.75s  $0.0107
+  forecast   15.63s  $0.0256
+  total cost:  $0.0364
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q22/20260726_rerun
+bfg_q22 OK
+--- bfg_q23 16:32:22 ---
+=== Pipeline run: bfg_q23 (20260726_rerun) ===
+question:  Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?
+pathogen:  'sars-cov-2'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q23/20260726_rerun
+
+[search] starting...
+[search] 40 results (189.5s)
+[filter] starting...
+[filter] 6 docs (3.6s)
+[extract] starting...
+[extract] 6/6 success (201.4s)
+[insight] starting...
+[insight] 3 records | in=69,193 out=511 (15.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=5,466 out=818 (13.8s)
+
+=== Pipeline complete: bfg_q23 ===
+  search    189.51s  $0.0001
+  filter      3.60s  $0.0005
+  extract   201.40s
+  insight    15.46s  $0.0107
+  forecast   13.77s  $0.0205
+  total cost:  $0.0318
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q23/20260726_rerun
+bfg_q23 OK
+--- bfg_q24 16:39:28 ---
+=== Pipeline run: bfg_q24 (20260726_rerun) ===
+question:  How many measles cases will be reported to WHO globally in 2026, as of 31 December 2026?
+pathogen:  'measles'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q24/20260726_rerun
+
+[search] starting...
+[search] 37 results (17.5s)
+[filter] starting...
+[filter] 7 docs (6.5s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (343.9s)
+  ! thin extraction: washingtonpost.com (421 chars < 500) https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026
+[insight] starting...
+[insight] 9 records | in=77,567 out=1,231 (23.7s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=8,785 out=972 (16.3s)
+
+=== Pipeline complete: bfg_q24 ===
+  search     17.46s  $0.0001
+  filter      6.46s  $0.0010
+  extract   343.89s
+  insight    23.65s  $0.0124
+  forecast   16.32s  $0.0300
+  total cost:  $0.0435
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q24/20260726_rerun
+bfg_q24 OK
+--- bfg_q25 16:46:18 ---
+=== Pipeline run: bfg_q25 (20260726_rerun) ===
+question:  How many cholera-related deaths will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-26
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q25/20260726_rerun
+
+[search] starting...
+[search] 40 results (24.6s)
+[filter] starting...
+[filter] 4 docs (2.2s)
+[extract] starting...
+[extract] 4/4 success (83.0s)
+[insight] starting...
+[insight] 2 records | in=32,133 out=294 (9.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,746 out=1,050 (14.9s)
+
+=== Pipeline complete: bfg_q25 ===
+  search     24.59s  $0.0001
+  filter      2.22s  $0.0002
+  extract    83.03s
+  insight     9.48s  $0.0050
+  forecast   14.91s  $0.0231
+  total cost:  $0.0283
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q25/20260726_rerun
+bfg_q25 OK
+SWEEP_DONE

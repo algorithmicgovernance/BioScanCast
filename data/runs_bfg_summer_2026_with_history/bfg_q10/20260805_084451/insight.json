@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "id": "ins-91c38496431a",
+      "question_id": "bfg_q10",
+      "event_type": "outbreak_declared",
+      "confidence": 0.9,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "Bundibugyo virus",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ebola disease caused by Bundibugyo virus declared a PHEIC in the Democratic Republic of the Congo and Uganda.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:45:35.752552+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-66d127fbce2044a79ec1995c1293b520",
+          "chunk_id": "doc-66d127fbce2044a79ec1995c1293b520-c0",
+          "source_url": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern",
+          "quote": "the Ebola disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda constitutes a public health emergency of international concern (PHEIC)"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 140067,
+    "total_output_tokens": 412,
+    "total_tokens": 140479,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 140067,
+        "output_tokens": 412,
+        "calls": 66
+      }
+    }
+  },
+  "documents_processed": 16,
+  "documents_skipped": 2,
+  "notes": [
+    "Skipped document doc-03510062740d4081a504a9f50d855938: no chunks",
+    "Skipped document doc-54432c0b9a0946d7bb323a4317f3d868: no chunks"
+  ]
+}

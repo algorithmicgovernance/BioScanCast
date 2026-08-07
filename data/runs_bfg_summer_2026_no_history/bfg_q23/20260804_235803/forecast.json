@@ -1,0 +1,148 @@
+{
+  "question_id": "bfg_q23",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.6923076923076923,
+        "NO": 0.30769230769230776
+      }
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.6923076923076923,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.30769230769230776,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "WHO designations of SARS-CoV-2 variants of interest or concern in previous years.",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The SARS-CoV-2 virus has shown the ability to mutate frequently, leading to new variants over time.",
+        "Historical precedent where new variants have been designated as VOIs or VOCs regularly since the initial outbreak.",
+        "Ongoing global transmission of SARS-CoV-2 increases the chance of new variants emerging."
+      ],
+      "drivers_down": [
+        "By 2026, global vaccination and natural immunity levels may be high, potentially reducing the emergence of significantly different or concerning variants.",
+        "Improved treatments and public health measures may reduce the impact of new variants, affecting their designation as VOIs or VOCs.",
+        "Surveillance and reporting improvements might change the criteria for designation, potentially leading to fewer designations."
+      ],
+      "why_might_be_wrong": "The situation in 2026 could be influenced by unforeseen factors, such as new scientific insights, changes in WHO's designation criteria, or unexpected global events affecting virus transmission.",
+      "rationale": "The base rate for WHO designating a new SARS-CoV-2 variant as a VOI or VOC in a six-month period is moderately high, given the history of the pandemic. Factors such as the virus's mutation rate and the ongoing global transmission make it plausible that new variants could arise. However, increased immunity and advancements in public health could reduce the likelihood of new designations. Balancing these factors suggests a slightly more probable outcome for a designation, but with substantial uncertainty.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "SARS-CoV-2 variant designations by WHO",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "SARS-CoV-2 has shown a history of mutating and giving rise to new variants.",
+        "Global travel and population density increase the chances of new variants spreading.",
+        "Previous patterns suggest regular updates and designations of new variants by WHO."
+      ],
+      "drivers_down": [
+        "As of 2023, the rate of new variant designations has slowed compared to earlier in the pandemic.",
+        "Increased vaccination and natural immunity might reduce the impact or spread of new variants.",
+        "WHO criteria for variant designation may become more stringent over time."
+      ],
+      "why_might_be_wrong": "The mutation rate of SARS-CoV-2 could change, or WHO's criteria for designation might shift significantly, affecting the likelihood of new designations.",
+      "rationale": "The historical pattern of SARS-CoV-2 variant emergence suggests a reasonable likelihood of a new variant of interest or concern being designated by WHO in the second half of 2026, despite a slowdown in designations after the initial pandemic years. Global conditions that facilitate the emergence of new variants, such as high population density and international travel, remain relevant. Although the rate of new designations has decreased, the virus's capacity for mutation and WHO's continued monitoring practices support a balanced probability for a new designation within the specified timeframe.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "Designation of SARS-CoV-2 variants of interest or concern by WHO in prior years.",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "SARS-CoV-2 has shown a high mutation rate, leading to frequent emergence of new variants.",
+        "Global surveillance systems have improved, potentially increasing detection of new variants.",
+        "Continued global circulation of the virus increases the chances of significant mutations."
+      ],
+      "drivers_down": [
+        "The rate of new variants being designated has decreased in recent years.",
+        "Widespread vaccination and immunity could reduce the impact and importance of new variants.",
+        "Potential reduction in funding or interest for global surveillance systems over time."
+      ],
+      "why_might_be_wrong": "The actual mutation and transmission dynamics of SARS-CoV-2 in 2026 might differ significantly from current trends, affecting the likelihood of new variants emerging.",
+      "rationale": "Historically, WHO has regularly designated new variants of interest or concern for SARS-CoV-2, reflecting the virus's high mutation rate and global spread. However, the rate of such designations has slowed as vaccination rates increased and global immunity improved. Despite this, the persistent nature of the virus and improved surveillance systems suggest a reasonable likelihood of a new designation. The lack of specific evidence for 2026 necessitates a balanced approach, relying on historical patterns and potential future changes in virus dynamics.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing monitoring of SARS-CoV-2 variants by WHO and the potential for new variants to emerge, there is a reasonable probability that a new variant of interest or concern could be designated by 2026. However, the situation is also contingent on the global vaccination efforts and the effectiveness of current vaccines against emerging variants, which could reduce the likelihood of new designations.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 2718,
+    "total_output_tokens": 968,
+    "total_tokens": 3686,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2529,
+        "output_tokens": 877,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 91,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

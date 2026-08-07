@@ -1,0 +1,1009 @@
+--- bfg_q10 19:05:16 ---
+=== Pipeline run: bfg_q10 (20260729_rerun) ===
+question:  How many new PHEICs will be declared for events not already under a PHEIC as of 1 July 2026, during 1 July 2026 to 31 December 2026?
+pathogen:  'pheic'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q10/20260729_rerun
+
+[search] starting...
+2026-08-05 20:20:12,447 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 2 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.who.int%2Fteams%2Fglobal-influenza-programme%2Fsurveillance-and-monitoring%2Ffluid&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:14,443 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fnextstrain.org%2F&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:14,621 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: latest data on PHEIC declarations 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-08-05 20:20:14,642 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: trends in global health emergencies 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-08-05 20:20:14,644 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: policy changes affecting PHEICs 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-08-05 20:20:14,646 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: historical PHEIC declaration patterns 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-08-05 20:20:14,648 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: future predictions for PHEICs 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[search] 12 results (449.4s)
+[filter] starting...
+[filter] 12 docs (0.0s)
+[extract] starting...
+2026-08-05 20:20:16,452 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260728071050id_%2Fhttps%3A%2F%2Fwww.who.int%2Factivities%2Ftracking-SARS-CoV-2-variants&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:16,478 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260728071050id_/https://www.who.int/activities/tracking-SARS-CoV-2-variants: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:18,462 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260727093148id_%2Fhttps%3A%2F%2Fwww.who.int%2Femergencies%2Fdisease-outbreak-news&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:18,466 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260727093148id_/https://www.who.int/emergencies/disease-outbreak-news: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:20,462 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260607085938id_%2Fhttps%3A%2F%2Fwww.who.int%2Fteams%2Fihr%2Fihr-emergency-committees&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:20,467 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260607085938id_/https://www.who.int/teams/ihr/ihr-emergency-committees: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:22,472 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260724010231id_%2Fhttps%3A%2F%2Fwww.gov.uk%2Fgovernment%2Fpublications%2Foutbreaks-under-monitoring-in-2026&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:22,475 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260724010231id_/https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:24,481 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260727093153id_%2Fhttps%3A%2F%2Fwww.paho.org%2Fen%2Fepidemiological-alerts-and-updates&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:24,485 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260727093153id_/https://www.paho.org/en/epidemiological-alerts-and-updates: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:26,482 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260726172154id_%2Fhttps%3A%2F%2Fwww.cdc.gov%2Foutbreaks%2Findex.html&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:26,486 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260726172154id_/https://www.cdc.gov/outbreaks/index.html: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:28,490 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260725101101id_%2Fhttps%3A%2F%2Fpromedmail.org%2F&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:28,494 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260725101101id_/https://promedmail.org/: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:20:30,497 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260724235556id_%2Fhttps%3A%2F%2Fwahis.woah.org%2F&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:20:30,501 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260724235556id_/https://wahis.woah.org/: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:21:10,859 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260721233104id_%2Fhttps%3A%2F%2Fempres-i.apps.fao.org%2F&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:21:10,864 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260721233104id_/https://empres-i.apps.fao.org/: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:21:12,864 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260518013527id_%2Fhttps%3A%2F%2Fafricacdc.org%2Fdownload%2Fafrica-cdc-epidemic-intelligence-weekly-report-april-2026%2F&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:21:12,868 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260518013527id_/https://africacdc.org/download/africa-cdc-epidemic-intelligence-weekly-report-april-2026/: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:21:14,874 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260423005741id_%2Fhttps%3A%2F%2Fwww.fao.org%2Fone-health%2Fhighlights%2Fthe-global-early-warning-system%2Fen&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:21:14,878 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260423005741id_/https://www.fao.org/one-health/highlights/the-global-early-warning-system/en: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-05 20:21:16,877 WARNING bioscancast.stages.searching.wayback: Wayback CDX gave up after 1 attempt(s): <urlopen error [Errno 8] nodename nor servname provided, or not known> for https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20260110143603id_%2Fhttps%3A%2F%2Fwww.healthmap.org%2F&to=20260729000000&limit=-1&output=json&filter=statuscode%3A200
+2026-08-05 20:21:16,881 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260110143603id_/https://www.healthmap.org/: Failed to perform, curl: (6) Could not resolve host: web.archive.org. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 0/12 success (23.9s)
+[insight] starting...
+[insight] 0 records | in=0 out=0 (0.0s)
+[forecast] starting...
+2026-08-05 20:21:18,419 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 0 failed for question bfg_q10
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-05 20:21:19,781 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 1 failed for question bfg_q10
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+[forecast] 2 distribution(s) over 3 options | in=1,099 out=337 (614.3s)
+
+=== Pipeline complete: bfg_q10 ===
+  search    449.39s  $0.0001
+  filter      0.00s  $0.0000
+  extract    23.88s
+  insight     0.00s  $0.0000
+  forecast  614.26s  $0.0047
+  total cost:  $0.0049
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q10/20260729_rerun
+bfg_q10 OK
+--- bfg_q11 21:40:38 ---
+=== Pipeline run: bfg_q11 (20260729_rerun) ===
+question:  How many chikungunya cases will be in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'chikungunya'
+region:    'americas'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q11/20260729_rerun
+
+[search] starting...
+[search] 31 results (28.2s)
+[filter] starting...
+[filter] 3 docs (2.4s)
+[extract] starting...
+[extract] 3/3 success (161.6s)
+[insight] starting...
+[insight] 9 records | in=59,044 out=1,136 (21.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,980 out=1,023 (14.2s)
+
+=== Pipeline complete: bfg_q11 ===
+  search     28.25s  $0.0001
+  filter      2.39s  $0.0001
+  extract   161.63s
+  insight    21.43s  $0.0095
+  forecast   14.21s  $0.0211
+  total cost:  $0.0309
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q11/20260729_rerun
+bfg_q11 OK
+--- bfg_q12 21:45:25 ---
+=== Pipeline run: bfg_q12 (20260729_rerun) ===
+question:  Will WHO declare a new PHEIC for mpox at any point between 15 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q12/20260729_rerun
+
+[search] starting...
+[search] 40 results (180.5s)
+[filter] starting...
+[filter] 11 docs (3.6s)
+[extract] starting...
+[extract] 10/11 success (173.5s)
+[insight] starting...
+2026-08-05 22:51:48,732 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nNorth America\t2026-04-27\t46,383'
+2026-08-05 22:51:48,740 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nUnited States\t2026-04-27\t37,789'
+2026-08-05 22:51:48,740 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nDemocratic Republic of Congo\t2026-04-26\t34,054'
+2026-08-05 22:51:48,741 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nEurope\t2026-04-15\t32,315'
+2026-08-05 22:51:48,741 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nSouth America\t2026-04-27\t28,297'
+2026-08-05 22:51:48,742 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nBrazil\t2026-04-27\t15,027'
+2026-08-05 22:51:48,742 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nSpain\t2026-04-15\t9,517'
+2026-08-05 22:51:48,742 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nUganda\t2026-04-05\t8,512'
+2026-08-05 22:51:48,742 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f5d3189ed6b47e289e0b1d4b4669f96-c2, quote='total_cases\nAsia\t2026-04-24\t7,762'
+2026-08-05 22:52:01,656 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-c595912438774c1c8df8197c6ecd8651-c0, quote='In the past 12 months, 17 countries reported 1 016 clade II cases.'
+[insight] 20 records | in=167,486 out=3,712 (48.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=6,893 out=1,046 (15.2s)
+
+=== Pipeline complete: bfg_q12 ===
+  search    180.50s  $0.0001
+  filter      3.56s  $0.0005
+  extract   173.48s
+  insight    48.03s  $0.0273
+  forecast   15.17s  $0.0262
+  total cost:  $0.0542
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q12/20260729_rerun
+bfg_q12 OK
+--- bfg_q13 21:52:42 ---
+=== Pipeline run: bfg_q13 (20260729_rerun) ===
+question:  How many cumulative human mpox cases will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q13/20260729_rerun
+
+[search] starting...
+[search] 42 results (205.5s)
+[filter] starting...
+[filter] 10 docs (2.8s)
+[extract] starting...
+[extract] 9/10 success (560.1s)
+[insight] starting...
+[insight] 3 records | in=102,005 out=638 (22.1s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,513 out=918 (15.0s)
+
+=== Pipeline complete: bfg_q13 ===
+  search    205.51s  $0.0001
+  filter      2.81s  $0.0003
+  extract   560.09s
+  insight    22.07s  $0.0157
+  forecast   14.99s  $0.0162
+  total cost:  $0.0323
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q13/20260729_rerun
+bfg_q13 OK
+--- bfg_q14 22:06:15 ---
+=== Pipeline run: bfg_q14 (20260729_rerun) ===
+question:  How many US confirmed measles cases will be reported from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q14/20260729_rerun
+
+[search] starting...
+[search] 33 results (137.4s)
+[filter] starting...
+[filter] 7 docs (10.3s)
+[extract] starting...
+2026-08-05 23:10:38,140 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://web.archive.org/web/20260725185424id_/https://www.cdc.gov/pertussis/php/surveillance/index.html: Failed to perform, curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 30 seconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 7/7 success (143.6s)
+[insight] starting...
+2026-08-05 23:11:29,508 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-0db7c683550740058cfbdee9ca32a4ec-c1, quote='CDC records over 2300 measles cases so far 2026'
+[insight] 8 records | in=72,455 out=1,379 (23.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,537 out=959 (13.5s)
+
+=== Pipeline complete: bfg_q14 ===
+  search    137.42s  $0.0001
+  filter     10.26s  $0.0011
+  extract   143.62s
+  insight    22.99s  $0.0117
+  forecast   13.52s  $0.0193
+  total cost:  $0.0322
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q14/20260729_rerun
+bfg_q14 OK
+--- bfg_q15 22:12:02 ---
+=== Pipeline run: bfg_q15 (20260729_rerun) ===
+question:  Will PAHO or WHO determine that the United States has lost measles elimination status on or before 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q15/20260729_rerun
+
+[search] starting...
+[search] 42 results (139.8s)
+[filter] starting...
+[filter] 7 docs (5.9s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (363.4s)
+  ! thin extraction: nytimes.com (43 chars < 500) https://www.nytimes.com/2026/07/24/well/measles-record-united-states-numbers.html
+[insight] starting...
+[insight] 26 records | in=50,247 out=3,712 (30.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=8,433 out=1,046 (10.3s)
+
+=== Pipeline complete: bfg_q15 ===
+  search    139.77s  $0.0001
+  filter      5.90s  $0.0008
+  extract   363.41s
+  insight    30.83s  $0.0098
+  forecast   10.32s  $0.0302
+  total cost:  $0.0409
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q15/20260729_rerun
+bfg_q15 OK
+--- bfg_q16 22:21:32 ---
+=== Pipeline run: bfg_q16 (20260729_rerun) ===
+question:  How many measles-associated deaths will be reported in the U.S. from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q16/20260729_rerun
+
+[search] starting...
+[search] 35 results (40.2s)
+[filter] starting...
+[filter] 7 docs (7.0s)
+[extract] starting...
+[extract] 7/7 success (110.3s)
+[insight] starting...
+[insight] 4 records | in=67,697 out=637 (18.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,713 out=876 (14.7s)
+
+=== Pipeline complete: bfg_q16 ===
+  search     40.24s  $0.0001
+  filter      6.97s  $0.0011
+  extract   110.33s
+  insight    17.97s  $0.0105
+  forecast   14.65s  $0.0164
+  total cost:  $0.0282
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q16/20260729_rerun
+bfg_q16 OK
+--- bfg_q17 22:25:12 ---
+=== Pipeline run: bfg_q17 (20260729_rerun) ===
+question:  How many global cholera cases will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q17/20260729_rerun
+
+[search] starting...
+[search] 41 results (77.8s)
+[filter] starting...
+[filter] 5 docs (7.6s)
+[extract] starting...
+[extract] 5/5 success (62.0s)
+[insight] starting...
+[insight] 5 records | in=49,766 out=687 (13.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,120 out=1,040 (12.5s)
+
+=== Pipeline complete: bfg_q17 ===
+  search     77.82s  $0.0001
+  filter      7.56s  $0.0004
+  extract    61.98s
+  insight    13.36s  $0.0079
+  forecast   12.51s  $0.0191
+  total cost:  $0.0275
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q17/20260729_rerun
+bfg_q17 OK
+--- bfg_q18 22:28:45 ---
+=== Pipeline run: bfg_q18 (20260729_rerun) ===
+question:  How many dengue suspected cases will be reported in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'dengue'
+region:    'americas'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q18/20260729_rerun
+
+[search] starting...
+[search] 37 results (59.9s)
+[filter] starting...
+[filter] 4 docs (4.2s)
+[extract] starting...
+[extract] 4/4 success (93.3s)
+[insight] starting...
+[insight] 2 records | in=21,705 out=262 (9.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,460 out=964 (13.6s)
+
+=== Pipeline complete: bfg_q18 ===
+  search     59.92s  $0.0001
+  filter      4.21s  $0.0006
+  extract    93.26s
+  insight     9.95s  $0.0034
+  forecast   13.55s  $0.0166
+  total cost:  $0.0207
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q18/20260729_rerun
+bfg_q18 OK
+--- bfg_q19 22:32:11 ---
+=== Pipeline run: bfg_q19 (20260729_rerun) ===
+question:  How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?
+pathogen:  'chikungunya'
+region:    'eu-eea'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q19/20260729_rerun
+
+[search] starting...
+[search] 35 results (23.7s)
+[filter] starting...
+[filter] 5 docs (3.1s)
+[extract] starting...
+[extract] 5/5 success, 1 thin (117.2s)
+  ! thin extraction: ecdc.europa.eu (481 chars < 500) https://www.ecdc.europa.eu/en/publications-data/weekly-respiratory-virus-update-week-10-march-2026
+[insight] starting...
+[insight] 1 records | in=62,852 out=224 (11.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,062 out=953 (13.5s)
+
+=== Pipeline complete: bfg_q19 ===
+  search     23.68s  $0.0001
+  filter      3.14s  $0.0003
+  extract   117.22s
+  insight    11.62s  $0.0096
+  forecast   13.51s  $0.0154
+  total cost:  $0.0253
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q19/20260729_rerun
+bfg_q19 OK
+--- bfg_q20 22:35:22 ---
+=== Pipeline run: bfg_q20 (20260729_rerun) ===
+question:  How many Americas countries or territories will report confirmed Oropouche in 2026, as of 31 December 2026?
+pathogen:  'oropouche'
+region:    'americas'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q20/20260729_rerun
+
+[search] starting...
+[search] 44 results (44.6s)
+[filter] starting...
+[filter] 6 docs (2.6s)
+[extract] starting...
+[extract] 6/6 success (136.9s)
+[insight] starting...
+[insight] 2 records | in=80,666 out=430 (30.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,398 out=911 (13.8s)
+
+=== Pipeline complete: bfg_q20 ===
+  search     44.59s  $0.0001
+  filter      2.58s  $0.0003
+  extract   136.89s
+  insight    30.32s  $0.0124
+  forecast   13.84s  $0.0162
+  total cost:  $0.0289
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q20/20260729_rerun
+bfg_q20 OK
+--- bfg_q21 22:39:35 ---
+=== Pipeline run: bfg_q21 (20260729_rerun) ===
+question:  Will WHO declare a new filovirus outbreak distinct from the ongoing Bundibugyo event between 1 July 2026 and 31 December 2026?
+pathogen:  'filovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q21/20260729_rerun
+
+[search] starting...
+[search] 29 results (172.9s)
+[filter] starting...
+[filter] 7 docs (2.4s)
+[extract] starting...
+[extract] 7/7 success (408.2s)
+[insight] starting...
+2026-08-05 23:50:07,068 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-c5a2c8841b8a4927bae284ec16d097b7-c0, quote='In total, 2145 confirmed cases have been reported: 2124 in the Democratic Republic of the Congo... 2'
+2026-08-05 23:50:07,097 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-c5a2c8841b8a4927bae284ec16d097b7-c0, quote='Since 3 July 2026, an additional 664 confirmed cases... have been reported in the Democratic Republi'
+[insight] 15 records | in=100,814 out=2,234 (41.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=6,209 out=897 (12.4s)
+
+=== Pipeline complete: bfg_q21 ===
+  search    172.87s  $0.0001
+  filter      2.36s  $0.0001
+  extract   408.20s
+  insight    41.53s  $0.0165
+  forecast   12.38s  $0.0234
+  total cost:  $0.0401
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q21/20260729_rerun
+bfg_q21 OK
+--- bfg_q22 22:50:36 ---
+=== Pipeline run: bfg_q22 (20260729_rerun) ===
+question:  How many wild poliovirus type 1 cases will be reported globally in 2026, as of 31 December 2026?
+pathogen:  'poliovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q22/20260729_rerun
+
+[search] starting...
+[search] 41 results (40.5s)
+[filter] starting...
+[filter] 3 docs (1.6s)
+[extract] starting...
+[extract] 3/3 success (51.8s)
+[insight] starting...
+[insight] 8 records | in=67,496 out=998 (16.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,796 out=1,048 (12.1s)
+
+=== Pipeline complete: bfg_q22 ===
+  search     40.48s  $0.0001
+  filter      1.64s  $0.0001
+  extract    51.77s
+  insight    16.54s  $0.0107
+  forecast   12.13s  $0.0211
+  total cost:  $0.0320
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q22/20260729_rerun
+bfg_q22 OK
+--- bfg_q23 22:53:00 ---
+=== Pipeline run: bfg_q23 (20260729_rerun) ===
+question:  Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?
+pathogen:  'sars-cov-2'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q23/20260729_rerun
+
+[search] starting...
+[search] 40 results (71.4s)
+[filter] starting...
+[filter] 7 docs (4.7s)
+[extract] starting...
+[extract] 7/7 success (972.1s)
+[insight] starting...
+[insight] 1 records | in=77,576 out=255 (21.2s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=2,910 out=891 (613.9s)
+
+=== Pipeline complete: bfg_q23 ===
+  search     71.39s  $0.0001
+  filter      4.68s  $0.0005
+  extract   972.10s
+  insight    21.25s  $0.0118
+  forecast  613.88s  $0.0149
+  total cost:  $0.0273
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q23/20260729_rerun
+bfg_q23 OK
+--- bfg_q24 08:07:53 ---
+=== Pipeline run: bfg_q24 (20260729_rerun) ===
+question:  How many measles cases will be reported to WHO globally in 2026, as of 31 December 2026?
+pathogen:  'measles'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q24/20260729_rerun
+
+[search] starting...
+[search] 49 results (50.4s)
+[filter] starting...
+[filter] 7 docs (9.3s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (228.3s)
+  ! thin extraction: washingtonpost.com (421 chars < 500) https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026
+[insight] starting...
+2026-08-06 09:12:56,025 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-505be1cc55cf424d9944ad734e081f09-c2, quote='India has reported 26,627 measles cases in the first half of 2026.'
+[insight] 9 records | in=58,951 out=1,408 (20.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,176 out=1,012 (17.1s)
+
+=== Pipeline complete: bfg_q24 ===
+  search     50.38s  $0.0001
+  filter      9.28s  $0.0011
+  extract   228.34s
+  insight    20.57s  $0.0097
+  forecast   17.15s  $0.0214
+  total cost:  $0.0323
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q24/20260729_rerun
+bfg_q24 OK
+--- bfg_q25 08:13:25 ---
+=== Pipeline run: bfg_q25 (20260729_rerun) ===
+question:  How many cholera-related deaths will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     2026-07-29
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q25/20260729_rerun
+
+[search] starting...
+[search] 44 results (64.9s)
+[filter] starting...
+[filter] 4 docs (2.1s)
+[extract] starting...
+[extract] 4/4 success (57.6s)
+[insight] starting...
+[insight] 2 records | in=32,133 out=308 (9.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,406 out=909 (16.0s)
+
+=== Pipeline complete: bfg_q25 ===
+  search     64.91s  $0.0001
+  filter      2.09s  $0.0001
+  extract    57.64s
+  insight     9.35s  $0.0050
+  forecast   16.00s  $0.0160
+  total cost:  $0.0213
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q25/20260729_rerun
+bfg_q25 OK
+SWEEP_DONE

@@ -1,0 +1,217 @@
+{
+  "question_id": "bfg_q2",
+  "options": [
+    "under 750",
+    "750 to 1,499",
+    "1,500 to 2,999",
+    "3,000 to 4,999",
+    "5,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 750": 8.731365074743918e-14,
+        "750 to 1,499": 3.465044526191725e-08,
+        "1,500 to 2,999": 0.9186087699314761,
+        "3,000 to 4,999": 0.08139114414478359,
+        "5,000 or more": 5.127320789152041e-08
+      }
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 750": 0.2,
+        "750 to 1,499": 0.3,
+        "1,500 to 2,999": 0.25,
+        "3,000 to 4,999": 0.15,
+        "5,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "under 750",
+      "probability": 8.731365074743918e-14,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "750 to 1,499",
+      "probability": 3.465044526191725e-08,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "1,500 to 2,999",
+      "probability": 0.9186087699314761,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 4,999",
+      "probability": 0.08139114414478359,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "5,000 or more",
+      "probability": 5.127320789152041e-08,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 750",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750 to 1,499",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1,500 to 2,999",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 4,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.7,
+        0.3,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in the DRC and Uganda",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The death toll is already high, particularly in the context of Bundibugyo Ebola outbreaks.",
+        "The outbreak has been described as the fastest-growing in the history of the virus.",
+        "There is a backlog of unconfirmed cases and deaths that might increase the reported numbers significantly."
+      ],
+      "drivers_down": [
+        "Bundibugyo Ebola is known to have a lower fatality rate compared to other Ebola strains.",
+        "There is a possibility of international intervention and support to control the outbreak.",
+        "The outbreak was declared in May 2026, providing ample time for containment efforts before the end of the year."
+      ],
+      "why_might_be_wrong": "The dynamics of the outbreak could change significantly with unexpected interventions or mutations in the virus, affecting the fatality rate.",
+      "rationale": "Given the current cumulative death toll of 1,707 as of August 3, and considering the outbreak's characterization as rapidly growing, the likelihood of cumulative deaths remaining under 750 is very low. The evidence points towards a higher death toll, likely in the range of 1,500 to 2,999, as the outbreak is already within this range. Although Bundibugyo Ebola generally has a lower fatality rate, the current outbreak's dynamics suggest a more severe impact. However, significant international interventions could still alter this trajectory, but without such evidence, the most reasonable estimate is 1,500 to 2,999 deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.0,
+        0.05,
+        0.75,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks in the Democratic Republic of the Congo",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The outbreak is already showing a high death count, with 1,707 cumulative deaths reported as of August 3, 2026, which is significantly higher than earlier reports.",
+        "The pace of the outbreak appears to have increased, with a sharp rise in cases and deaths noted in late July 2026, possibly due to backlog but also indicative of rapid spread.",
+        "Bundibugyo ebola virus can be highly contagious in certain contexts, and the outbreak began earlier than the official declaration date, potentially allowing it to spread widely."
+      ],
+      "drivers_down": [
+        "The initial death count was relatively low, suggesting that earlier measures might have been effective.",
+        "There might be better containment and healthcare interventions in place now compared to earlier in the outbreak, which could slow the rate of deaths.",
+        "The Bundibugyo strain historically has a lower fatality rate compared to the Zaire strain of Ebola."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if the rate of new deaths slows significantly due to effective interventions, or if the high recent numbers are largely due to a backlog that doesn't reflect current spread.",
+      "rationale": "The cumulative death count as of August 3, 2026, is already quite high at 1,707, suggesting a trend that could lead to a total higher than 1,500 by the end of 2026. The sharp increase in reported deaths in a short period, despite the possibility of backlog, indicates that the situation is severe and possibly worsening. While interventions might slow the spread, the current trajectory suggests a higher probability for the 1,500 to 2,999 range. Therefore, the probabilities are adjusted to reflect this new information, with a notable likelihood that the count could exceed 1,500.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.01,
+        0.05,
+        0.65,
+        0.2,
+        0.09
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks in Africa",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Rapid increase in reported deaths and cases as of August 2026",
+        "Reporting backlog suggesting underreporting of cases and deaths",
+        "Recent reports indicate over 1,700 deaths by August 2026"
+      ],
+      "drivers_down": [
+        "Bundibugyo strain historically has a lower fatality rate compared to other Ebola strains",
+        "Initial forecasts and past runs heavily weighted towards under 750 outcomes",
+        "Containment efforts and international support may reduce further spread"
+      ],
+      "why_might_be_wrong": "The reporting backlog and rapid rise in deaths may indicate a larger outbreak than historical patterns suggest, leading to higher numbers than estimated.",
+      "rationale": "The evidence shows a significant increase in deaths, with the cumulative death count reaching 1,707 by August 2026. Given this rapid rise and the potential for underreported cases, the likelihood of deaths exceeding the lower two thresholds is high. Although the Bundibugyo strain typically results in fewer fatalities, the current outbreak's dynamics suggest a higher death toll. Therefore, I estimate the probability of cumulative deaths falling in the 1,500 to 2,999 range as most likely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative deaths will likely be under 750 or within the range of 750 to 1,499. The higher ranges (1,500 to 4,999 and 5,000 or more) are less likely due to improved biosecurity measures and response strategies that have been implemented in recent years.",
+  "evidence_record_ids": [
+    "ins-d189e89c7018",
+    "ins-c21b29311762",
+    "ins-71640115fb89",
+    "ins-d1fd02f1a28d",
+    "ins-afa1f7c8c79b",
+    "ins-8412d3d6ce15",
+    "ins-d6d698dc920c",
+    "ins-a33208386e52",
+    "ins-3be17213cefe",
+    "ins-d0681fd75a5d"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6678,
+    "total_output_tokens": 1101,
+    "total_tokens": 7779,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6435,
+        "output_tokens": 983,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 243,
+        "output_tokens": 118,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

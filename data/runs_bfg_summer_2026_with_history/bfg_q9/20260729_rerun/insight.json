@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-a961d9d42cfe",
+      "question_id": "bfg_q9",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "affected_herds",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "A(H5N1) viruses spread to dairy cattle in the United States of America and caused outbreaks.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T15:14:28.803106+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-aaf29c36ff104856981a33140d29f774",
+          "chunk_id": "doc-aaf29c36ff104856981a33140d29f774-c4",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(avian-and-other-zoonotic)",
+          "quote": "In 2024, A(H5N1) viruses spread to dairy cattle in the United States of America and caused outbreaks."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 148712,
+    "total_output_tokens": 394,
+    "total_tokens": 149106,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 148712,
+        "output_tokens": 394,
+        "calls": 68
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

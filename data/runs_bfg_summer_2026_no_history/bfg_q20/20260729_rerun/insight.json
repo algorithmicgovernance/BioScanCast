@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "id": "ins-602a5dc7944c",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:38:44.477073+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a72e0e1daf514b2e830fa3cac5320373",
+          "chunk_id": "doc-a72e0e1daf514b2e830fa3cac5320373-c0-p0",
+          "source_url": "https://web.archive.org/web/20260510055316id_/https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    },
+    {
+      "id": "ins-efa93abd7ba9",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.9,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 11.0,
+      "metric_unit": "countries",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "In 2024, events of concern related to Oropouche virus disease were registered in 11 countries and territories, all of them reported in the Americas.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T22:39:00.316068+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d821f3d4fe6547428e003e8e6538f02c",
+          "chunk_id": "doc-d821f3d4fe6547428e003e8e6538f02c-c0",
+          "source_url": "https://gh.bmj.com/content/11/2/e020708",
+          "quote": "In 2024, events of concern related to Oropouche virus disease were registered in 11 countries and territories, all of them reported in the Americas"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 80666,
+    "total_output_tokens": 430,
+    "total_tokens": 81096,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 80666,
+        "output_tokens": 430,
+        "calls": 35
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

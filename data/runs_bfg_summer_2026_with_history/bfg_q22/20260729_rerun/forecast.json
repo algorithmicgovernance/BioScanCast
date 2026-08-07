@@ -1,0 +1,213 @@
+{
+  "question_id": "bfg_q22",
+  "options": [
+    "15 or fewer",
+    "16 to 30",
+    "31 to 50",
+    "51 to 79",
+    "80 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "15 or fewer": 0.44284372402293576,
+        "16 to 30": 0.2992738868866062,
+        "31 to 50": 0.15104869609575738,
+        "51 to 79": 0.06741131615563198,
+        "80 or more": 0.0394223768390687
+      }
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "15 or fewer": 0.4,
+        "16 to 30": 0.3,
+        "31 to 50": 0.15,
+        "51 to 79": 0.1,
+        "80 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "15 or fewer",
+      "probability": 0.44284372402293576,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "16 to 30",
+      "probability": 0.2992738868866062,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "31 to 50",
+      "probability": 0.15104869609575738,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "51 to 79",
+      "probability": 0.06741131615563198,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "80 or more",
+      "probability": 0.0394223768390687,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 or fewer",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "16 to 30",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "31 to 50",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "51 to 79",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "80 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.42,
+        0.35,
+        0.15,
+        0.05,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Wild poliovirus type 1 global cases reported annually",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "15 cases reported as of late July 2026, indicating a downward trend from previous years",
+        "Consistent global efforts in polio eradication, with substantial resources devoted to vaccination and surveillance",
+        "Environmental surveillance detecting the virus before transmission leads to cases, aiding in preemptive measures"
+      ],
+      "drivers_down": [
+        "Endemic areas like Afghanistan and Pakistan continue to report new cases, indicating persistent transmission challenges",
+        "History of fluctuating case numbers with potential for unforeseen outbreaks",
+        "Regions with weak health infrastructure might face challenges in maintaining vaccination coverage"
+      ],
+      "why_might_be_wrong": "There could be unforeseen outbreaks in the remaining months of 2026, especially in areas with weak surveillance.",
+      "rationale": "With 15 cases reported as of late July 2026 and considering the eradication efforts, it is likely the total number of cases will remain relatively low by year-end. However, the presence of endemic regions like Afghanistan and Pakistan and the potential for unforeseen outbreaks necessitate some probability for higher bins. Given the trend and efforts, the most likely scenario is 15 or fewer cases, but with significant probabilities for the 16 to 30 case range as well.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.45,
+        0.3,
+        0.15,
+        0.06,
+        0.04
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 cases in recent years",
+      "base_rate": 0.4,
+      "drivers_up": [
+        "The total number of cases in 2026 is currently at 15 cases as of late July, which is relatively low compared to previous years.",
+        "Consistent efforts in polio eradication have been ongoing, possibly reducing the number of cases.",
+        "There has been a significant reduction in cases from 99 in 2024 to lower numbers in subsequent years."
+      ],
+      "drivers_down": [
+        "The presence of cases in endemic countries like Afghanistan and Pakistan, which reported multiple new cases in 2026, indicates continued circulation of the virus.",
+        "Environmental samples showing WPV1 presence suggest possible underreporting or potential for future cases.",
+        "Historical fluctuations in case numbers highlight the potential for unexpected increases."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks in endemic or susceptible areas could lead to a higher number of reported cases by year-end.",
+      "rationale": "The base rate for low case counts is informed by the trend of decreasing cases since 2024. With 15 cases reported by July 2026 and ongoing eradication efforts, it is reasonable to expect that the total number of cases by the end of the year will likely remain low. However, due to continued reports from endemic regions, the potential for environmental spread, and historical variability, there remains a significant chance that the final count could be higher than the lowest bin. Balancing these factors leads to assigning the highest probability to the '15 or fewer' bin, but with non-negligible probabilities for the '16 to 30' and '31 to 50' bins.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.45,
+        0.25,
+        0.15,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Annual global wild poliovirus type 1 case counts",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "As of June 2026, there have been 15 reported cases, indicating a downward trend from the previous high in 2024.",
+        "Global efforts in polio eradication continue to show effectiveness, with significant reductions in case numbers in recent years."
+      ],
+      "drivers_down": [
+        "There have been recent weeks with new cases being reported, indicating that transmission is ongoing.",
+        "The presence of poliovirus in environmental samples suggests potential for further case discovery."
+      ],
+      "why_might_be_wrong": "Polio eradication efforts can be unpredictable due to geopolitical instability, vaccine resistance, or unforeseen outbreaks, which could increase the number of cases.",
+      "rationale": "The number of wild poliovirus type 1 cases has seen a significant decline from 99 in 2024 to 15 reported cases by mid-2026. This trend suggests that eradication efforts are effective. However, ongoing reported cases and positive environmental samples indicate that transmission is not yet fully halted. Given the current trajectory and global eradication efforts, the probability of 15 or fewer cases by the end of 2026 is the highest, but recent activity suggests a non-negligible chance of case numbers in the next higher bracket as well.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing global efforts to eradicate poliovirus, including vaccination campaigns and surveillance, it is likely that the number of wild poliovirus type 1 cases will continue to decline. The majority of cases are expected to be 15 or fewer, reflecting the success of these initiatives. However, there remains a possibility of localized outbreaks, which could lead to a small number of cases in the 16 to 30 range. The probabilities decrease for higher case counts due to the effectiveness of vaccination and public health measures.",
+  "evidence_record_ids": [
+    "ins-3c72cc0bba80",
+    "ins-bce9369732eb",
+    "ins-00260012108d",
+    "ins-572b8b4f24fc",
+    "ins-b61b041ea348",
+    "ins-53042af95c88",
+    "ins-de99c15956cf",
+    "ins-6c5b9247391f"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 8138,
+    "total_output_tokens": 1037,
+    "total_tokens": 9175,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7923,
+        "output_tokens": 908,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 215,
+        "output_tokens": 129,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-a667b90e401c",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-08-03T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-06T16:35:39.435691+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dd89fcc125f24fcbb7d0db6c97124fec",
+          "chunk_id": "doc-dd89fcc125f24fcbb7d0db6c97124fec-c0-p0",
+          "source_url": "https://web.archive.org/web/20260510055316id_/https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 113634,
+    "total_output_tokens": 346,
+    "total_tokens": 113980,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 113634,
+        "output_tokens": 346,
+        "calls": 50
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

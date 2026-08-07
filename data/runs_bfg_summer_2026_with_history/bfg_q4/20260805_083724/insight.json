@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "id": "ins-dd0f74892ca2",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3360.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed cases in the DRC as of January 1, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:38:22.191274+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6affb37a60af4e40bb58792e8dbc979d",
+          "chunk_id": "doc-6affb37a60af4e40bb58792e8dbc979d-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "At 3,360 confirmed cases, the disease is now affecting people in five provinces in the east of the DRC"
+        }
+      ]
+    },
+    {
+      "id": "ins-ee5883b80eee",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1487.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of deaths recorded in the DRC as of January 1, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:38:22.191432+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6affb37a60af4e40bb58792e8dbc979d",
+          "chunk_id": "doc-6affb37a60af4e40bb58792e8dbc979d-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "with 1,487 deaths recorded, representing an overall case fatality rate estimated at about 45%"
+        }
+      ]
+    },
+    {
+      "id": "ins-fcb58cfe150d",
+      "question_id": "bfg_q4",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The Bundibugyo strain has spread faster than any of the country\u2019s 16 previous Ebola outbreaks.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:38:22.191570+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6affb37a60af4e40bb58792e8dbc979d",
+          "chunk_id": "doc-6affb37a60af4e40bb58792e8dbc979d-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "Since officially declared by the Congolese authorities on 15 May, the Bundibugyo strain of the virus has spread faster than any of the country's 16 previous Ebola outbreaks"
+        }
+      ]
+    },
+    {
+      "id": "ins-b984667f9c6c",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1354.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Death toll from the latest Ebola outbreak in DRC has surged above 1,354.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:38:35.922103+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5457a31458384b77b1f7693d61a8a944",
+          "chunk_id": "doc-5457a31458384b77b1f7693d61a8a944-c0",
+          "source_url": "https://www.aljazeera.com/news/2026/7/25/ebola-deaths-in-drc-surge-past-1300-as-virus-spreading-like-a-wildfire",
+          "quote": "The death toll from the latest Ebola outbreak in the Democratic Republic of Congo has surged above 1,354"
+        }
+      ]
+    },
+    {
+      "id": "ins-d6c456e5feca",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3075.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total number of confirmed cases, including deaths, had climbed to 3,075.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-05T08:38:35.922357+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5457a31458384b77b1f7693d61a8a944",
+          "chunk_id": "doc-5457a31458384b77b1f7693d61a8a944-c0",
+          "source_url": "https://www.aljazeera.com/news/2026/7/25/ebola-deaths-in-drc-surge-past-1300-as-virus-spreading-like-a-wildfire",
+          "quote": "the total number of confirmed cases, including deaths, had climbed to 3,075"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 117748,
+    "total_output_tokens": 942,
+    "total_tokens": 118690,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 117748,
+        "output_tokens": 942,
+        "calls": 53
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

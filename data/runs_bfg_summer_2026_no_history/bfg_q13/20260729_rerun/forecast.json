@@ -1,0 +1,209 @@
+{
+  "question_id": "bfg_q13",
+  "options": [
+    "under 3,000",
+    "3,000 to 6,999",
+    "7,000 to 11,999",
+    "12,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 3,000": 0.30563551556411894,
+        "3,000 to 6,999": 0.2991306474684829,
+        "7,000 to 11,999": 0.22040134549651685,
+        "12,000 to 19,999": 0.11853394814881098,
+        "20,000 or more": 0.056298543322070405
+      }
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 3,000": 0.25,
+        "3,000 to 6,999": 0.35,
+        "7,000 to 11,999": 0.2,
+        "12,000 to 19,999": 0.1,
+        "20,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "under 3,000",
+      "probability": 0.30563551556411894,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 6,999",
+      "probability": 0.2991306474684829,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "7,000 to 11,999",
+      "probability": 0.22040134549651685,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "12,000 to 19,999",
+      "probability": 0.11853394814881098,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.056298543322070405,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 3,000",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 6,999",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7,000 to 11,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12,000 to 19,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q13",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.15,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Cumulative mpox cases in recent years",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "Mpox has shown a declining trend globally with limited new outbreaks reported in recent years.",
+        "Increased global awareness and vaccination efforts have potentially reduced transmission rates."
+      ],
+      "drivers_down": [
+        "Mpox has a history of periodic resurgences, which could lead to higher cases.",
+        "Limited surveillance and under-reporting could mask the true number of cases.",
+        "Potential for new variant emergence that could increase transmission rates."
+      ],
+      "why_might_be_wrong": "Unexpected resurgence of mpox due to new variants or breakdown in public health measures could lead to higher cases than estimated.",
+      "rationale": "Based on historical data, the number of cumulative cases reported has been decreasing over the years. From 2024 to 2026, the increase appears modest, suggesting that ongoing public health efforts are effective. The base rate is adjusted slightly upwards due to the possibility of under-reporting and potential for new outbreaks, but is balanced with global awareness and vaccination efforts. Thus, the most likely outcome is under 3,000 cases, but with non-negligible probability for higher bins given historical unpredictability.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Cumulative case counts of viral outbreaks reported to WHO",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Global cumulative cases have increased from 55,000 in 2024 to 180,545 by mid-2026, indicating ongoing spread.",
+        "Continued international travel and movement can facilitate transmission.",
+        "Potential under-reporting or delayed reporting could mean actual cases are higher."
+      ],
+      "drivers_down": [
+        "Increasing awareness and vaccination efforts could reduce transmission rates.",
+        "Previous major outbreaks tend to lead to stronger public health responses over time.",
+        "Seasonal or natural decline in transmission rates could occur."
+      ],
+      "why_might_be_wrong": "The forecast could be off due to significant changes in public health policy or unforeseen epidemiological developments that alter transmission dynamics.",
+      "rationale": "The evidence shows a substantial increase in cumulative cases from 2024 to 2026, implying ongoing transmission. While public health measures and vaccinations could reduce the rate, historical patterns suggest a moderate likelihood of cases continuing to rise. The base rate suggests a 30% probability for the largest category, but given the recent increase in cases, it's prudent to adjust upwards, particularly for the middle categories. Thus, the probability distribution reflects a balanced view of potential outcomes given current trends and uncertainties.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Global outbreaks of mpox over six-month periods.",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "Recent reports indicate no new major outbreaks or resurgence of mpox.",
+        "Previous global containment measures have been effective in reducing the spread.",
+        "Increased global awareness and improved vaccination rates since the 2022 outbreak."
+      ],
+      "drivers_down": [
+        "The virus has shown capacity for rapid spread in the past, as seen in the 2022-2024 period.",
+        "Potential for under-reporting or delays in reporting cases to WHO.",
+        "Possibility of new strains that might evade current vaccines."
+      ],
+      "why_might_be_wrong": "Unexpected factors such as changes in the virus's transmissibility or reporting practices could alter the case numbers significantly.",
+      "rationale": "The cumulative cases of mpox have increased significantly over the years, nearly tripling from 2024 to 2026. However, recent reports do not indicate a major outbreak or resurgence, suggesting effective containment. Given the historical data and current trends, the base rate suggests moderate growth. Most cases should fall under 7,000 based on current containment efforts, but potential for rapid spread necessitates a non-negligible probability for higher bins.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current trends in mpox cases and the global response to outbreaks, it is reasonable to expect that the number of cases will remain relatively controlled. The highest probability is assigned to the '3,000 to 6,999' range, reflecting a moderate increase in cases due to ongoing monitoring and vaccination efforts. The 'under 3,000' option is also likely, but less probable as cases may rise. The higher ranges (7,000 and above) are less likely due to effective public health measures.",
+  "evidence_record_ids": [
+    "ins-f44d286de258",
+    "ins-faf4ee7a5976",
+    "ins-c88e280e1fee"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3513,
+    "total_output_tokens": 918,
+    "total_tokens": 4431,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3282,
+        "output_tokens": 786,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 231,
+        "output_tokens": 132,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

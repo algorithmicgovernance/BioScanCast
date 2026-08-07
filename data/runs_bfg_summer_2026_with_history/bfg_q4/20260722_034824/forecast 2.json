@@ -1,0 +1,195 @@
+{
+  "question_id": "bfg_q4",
+  "options": [
+    "exactly 1",
+    "2",
+    "3",
+    "4 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 1": 0.7858858612560996,
+        "2": 0.15889040989940773,
+        "3": 0.044856480107705266,
+        "4 or more": 0.010367248736787465
+      }
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 1": 0.25,
+        "2": 0.35,
+        "3": 0.25,
+        "4 or more": 0.15
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "exactly 1",
+      "probability": 0.7858858612560996,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "2",
+      "probability": 0.15889040989940773,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "3",
+      "probability": 0.044856480107705266,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "4 or more",
+      "probability": 0.010367248736787465,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 1",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 or more",
+      "probability": 0.15,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.2,
+        0.1,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks with international spread",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High number of confirmed cases in DRC and Uganda, increasing the risk of international spread",
+        "Historical precedent of Ebola spreading to other countries during outbreaks, such as the 2014-2016 West Africa outbreak",
+        "Proximity of affected regions to international travel routes"
+      ],
+      "drivers_down": [
+        "Current evidence only confirms France as the additional country with cases, indicating limited international spread so far",
+        "Enhanced surveillance and preparedness in neighboring countries may limit further international spread",
+        "Bundibugyo strain is less transmissible than Zaire Ebola virus, potentially limiting spread"
+      ],
+      "why_might_be_wrong": "The dynamics of the outbreak could change rapidly, leading to sudden international spread that current trends don't predict.",
+      "rationale": "The Bundibugyo Ebola outbreak in DRC and Uganda has a high number of cases, increasing the potential for international spread, especially given past Ebola outbreaks that have spread internationally. However, as of the current evidence, only France has reported a case, and neighboring countries are likely increasing preparedness. The less transmissible nature of the Bundibugyo strain compared to other Ebola strains also suggests a lower likelihood of widespread international cases. Balancing these factors, the probability of exactly 1 additional country (France) remains highest, with decreasing likelihoods for more countries reporting cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.55,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past international spread of Ebola outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High number of cumulative cases in DRC indicating potential for spread",
+        "International travel and trade could lead to cases being reported in other countries"
+      ],
+      "drivers_down": [
+        "Limited historical international spread of Bundibugyo strain",
+        "Disease control measures may be more effective now",
+        "Increased awareness and preparedness in neighboring countries"
+      ],
+      "why_might_be_wrong": "The potential for unreported cases or changes in international travel patterns could alter the spread dynamics.",
+      "rationale": "The base rate for international spread of Ebola, particularly the Bundibugyo strain, is low given its historical containment within localized regions. However, the high number of cases in DRC suggests some potential for spread. The presence of a case in France indicates the possibility of further international transmission, but historically, outbreaks are well-contained with few countries reporting cases. Given these factors, the probability of exactly 1 country reporting a case remains highest, but there is a non-negligible chance for additional countries to be affected, hence assigning some probability to 2 and 3 countries reporting cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.5,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in Africa and their international spread",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High number of cases in DRC (2,344) increases risk of cross-border transmission.",
+        "Historical precedent of Ebola outbreaks spreading internationally, albeit rarely.",
+        "France has already reported a case, indicating potential for further spread."
+      ],
+      "drivers_down": [
+        "Bundibugyo virus generally has lower transmission rates compared to other Ebola strains.",
+        "Geographical containment within DRC and Uganda reduces likelihood of spread to other countries.",
+        "Strong regional preparedness and response efforts may limit international spread."
+      ],
+      "why_might_be_wrong": "The potential for under-reported cases or rapid international travel could lead to more countries being affected than anticipated.",
+      "rationale": "The Bundibugyo Ebola outbreak in DRC and Uganda has led to a significant number of cases, increasing the risk of international spread. However, the virus's lower transmission rate and geographical containment efforts may limit this. Historically, such outbreaks rarely spread beyond a few countries. The baseline of one affected country (France) suggests a moderate probability of additional international cases, but not a high likelihood of widespread dissemination. Given these factors, the probabilities are moderately weighted towards exactly one or two additional countries reporting cases, with diminishing probabilities for three or more.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the geographical proximity of DRC and Uganda to other countries, it is plausible that at least one additional country may report cases. However, the likelihood of multiple countries reporting cases decreases due to the limited spread of the virus outside the immediate region. Therefore, the probabilities reflect a higher chance of exactly one or two countries reporting cases, with diminishing probabilities for three or four or more countries.",
+  "evidence_record_ids": [
+    "ins-689d3592cc3b",
+    "ins-a6fa0ada0613",
+    "ins-1b96cb33a373",
+    "ins-21e8846bacf1",
+    "ins-5befb8214f09",
+    "ins-9c7d9bf34e1c",
+    "ins-6f3d82234d04",
+    "ins-0b24074de5bf",
+    "ins-28a4f5b43413"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4755,
+    "total_output_tokens": 923,
+    "total_tokens": 5678,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4536,
+        "output_tokens": 811,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 219,
+        "output_tokens": 112,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q19",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 5",
+    "6 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.2016016057765844,
+        "1": 0.22222098371937227,
+        "2 to 3": 0.3830084769424209,
+        "4 to 5": 0.12261816889651433,
+        "6 or more": 0.07055076466510797
+      }
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.3,
+        "2 to 3": 0.2,
+        "4 to 5": 0.1,
+        "6 or more": 0.0
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.2016016057765844,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.22222098371937227,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.3830084769424209,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "4 to 5",
+      "probability": 0.12261816889651433,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "6 or more",
+      "probability": 0.07055076466510797,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 5",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "6 or more",
+      "probability": 0.0,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.25,
+        0.4,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya cases in past years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "First locally acquired cases reported in France in July 2026",
+        "France and Spain both reported cases by July 2026"
+      ],
+      "drivers_down": [
+        "As of July 2026, only two countries (France and Spain) reported cases",
+        "Historically low incidence of chikungunya in EU/EEA countries"
+      ],
+      "why_might_be_wrong": "If conditions favorable to mosquito-borne transmission worsen or if there is an undetected spread, more countries could report cases.",
+      "rationale": "The base rate for locally acquired chikungunya cases in EU/EEA countries is very low, but the recent reports of cases in France and Spain suggest a slight increase in risk. With cases already reported in two countries by mid-2026, it is plausible that a few more might report cases by the end of the year. However, given the historically low incidence and no evidence of large outbreaks, it is unlikely that many more countries will report cases. Therefore, the most probable scenario is 2 to 3 countries reporting cases, with a significant chance that it remains only 1 or none.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.15,
+        0.4,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya cases in past years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "First locally acquired cases reported in France during July 2026.",
+        "Three cases reported in Spain by July 2026.",
+        "Increased awareness and surveillance might lead to more detections."
+      ],
+      "drivers_down": [
+        "Historically low occurrence of chikungunya in EU/EEA countries.",
+        "By late July 2026, only France and Spain have reported cases.",
+        "Spread typically requires specific ecological conditions unlikely in many EU/EEA countries."
+      ],
+      "why_might_be_wrong": "Chikungunya might spread more rapidly than anticipated due to environmental changes or increased travel, leading to outbreaks in more countries.",
+      "rationale": "As of July 2026, locally acquired chikungunya cases have been reported in France and Spain. Historically, such occurrences are low in the EU/EEA region, but the presence of cases in two countries suggests a non-negligible risk of further spread. However, considering the historical base rate and current data, it seems more plausible that the number of countries will remain low, possibly increasing slightly by the year's end. Therefore, the most likely scenario is that 2 to 3 countries will report cases by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.35,
+        0.25,
+        0.3,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya cases in previous years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "France and Spain have already reported locally acquired cases in 2026, indicating potential spread within these countries.",
+        "Climate change may be increasing the range of the Aedes mosquito, which transmits chikungunya, making more areas in Europe susceptible."
+      ],
+      "drivers_down": [
+        "Historically, locally acquired chikungunya cases in EU/EEA countries have been rare.",
+        "As of July 2026, only France and Spain have reported cases, and no other countries have shown evidence of local transmission yet."
+      ],
+      "why_might_be_wrong": "The spread of chikungunya could accelerate unexpectedly due to environmental changes or reporting improvements.",
+      "rationale": "Given the historical rarity of locally acquired chikungunya cases in the EU/EEA, the base rate is low. However, with France and Spain already reporting cases in 2026, there is a higher likelihood of more countries reporting by the end of the year. Climate change and increased mosquito range also support potential spread. Balancing these factors, there is a reasonable probability of 2 to 3 countries reporting cases, but the most likely outcome remains 0 or 1 country based on historical data and current reports.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Chikungunya is primarily transmitted by Aedes mosquitoes, which are present in some EU/EEA countries. However, the overall incidence of locally acquired cases has been low in recent years, and effective vector control measures are in place. Given the historical data and current trends, it is likely that most countries will not report any cases, with a small chance of a few countries reporting limited outbreaks.",
+  "evidence_record_ids": [
+    "ins-4eb8b242bbc6",
+    "ins-9b200af78cdf",
+    "ins-75416a632142",
+    "ins-aa26cce835c1"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5162,
+    "total_output_tokens": 945,
+    "total_tokens": 6107,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4950,
+        "output_tokens": 837,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 212,
+        "output_tokens": 108,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

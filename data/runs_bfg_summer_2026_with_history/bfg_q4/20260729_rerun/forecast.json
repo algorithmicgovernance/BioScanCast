@@ -1,0 +1,187 @@
+{
+  "question_id": "bfg_q4",
+  "options": [
+    "exactly 1",
+    "2",
+    "3",
+    "4 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 1": 0.9861344858245656,
+        "2": 0.013208583950788446,
+        "3": 0.0005255441797166192,
+        "4 or more": 0.00013138604492915493
+      }
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 1": 0.4,
+        "2": 0.3,
+        "3": 0.2,
+        "4 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "exactly 1",
+      "probability": 0.9861344858245656,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "2",
+      "probability": 0.013208583950788446,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "3",
+      "probability": 0.0005255441797166192,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "4 or more",
+      "probability": 0.00013138604492915493,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 1",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.9,
+        0.07,
+        0.02,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "International spread of Ebola outbreaks",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Severe outbreak with over 3,000 confirmed cases in DRC, increasing potential for international spread",
+        "Historical instances of Ebola spreading to multiple countries, although rare"
+      ],
+      "drivers_down": [
+        "Current evidence only confirms international spread to France",
+        "Containment efforts in affected regions may have been effective",
+        "Low base rate for Ebola outbreaks spreading beyond a single additional country"
+      ],
+      "why_might_be_wrong": "The lack of specific evidence about the current situation might mean the outbreak is more contained or more widespread than assumed.",
+      "rationale": "The base rate for Ebola outbreaks spreading beyond one additional country is low, given historical precedence. While the outbreak is particularly severe in the DRC, only France has reported a linked case outside the immediate region. Given the lack of further evidence of spread and typical containment efforts, it's reasonable to assume the outbreak will not spread to more countries by the target date.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.12,
+        0.02,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "International spread of Ebola virus during outbreaks",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The Bundibugyo strain has spread faster than previous outbreaks, indicating higher transmissibility.",
+        "The outbreak in DRC is severe, with over 3,000 confirmed cases, increasing the chance of international spread.",
+        "There is already a confirmed spread to France, indicating some level of international transmission."
+      ],
+      "drivers_down": [
+        "Historically, most Ebola outbreaks do not spread to many countries outside the initial region, especially in a sustained way.",
+        "Containment efforts in Uganda and DRC may reduce further international spread.",
+        "Lack of confirmed cases in countries other than France suggests limited spread so far."
+      ],
+      "why_might_be_wrong": "If the virus's transmissibility is higher than currently estimated or if containment efforts weaken, the virus might spread to more countries than anticipated.",
+      "rationale": "The outside view suggests a low base rate for international spread of Ebola beyond the initial region. Despite the severe outbreak in DRC, only France has reported confirmed cases outside of DRC and Uganda, indicating limited international spread so far. Given these factors, the most likely outcome is that no additional countries will report cases, but the possibility of spread to one more country is non-negligible due to the severity of the outbreak.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.12,
+        0.02,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "International spread of Ebola virus disease during outbreaks.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The Bundibugyo strain is spreading faster than previous strains in the DRC.",
+        "High number of confirmed cases in DRC increases potential for wider spread.",
+        "Previous international spread has already reached France."
+      ],
+      "drivers_down": [
+        "As of the latest information, only France outside of DRC and Uganda has reported cases.",
+        "Efforts to contain the outbreak in Uganda and neighboring countries may limit further international spread.",
+        "International awareness and surveillance have improved since previous Ebola outbreaks, potentially reducing spread."
+      ],
+      "why_might_be_wrong": "Lack of recent evidence or developments could mean significant changes in outbreak dynamics have occurred since the last assessment.",
+      "rationale": "The base rate for international spread beyond the initial region for Ebola outbreaks is low, typically around 10%. Despite the severity of the outbreak in DRC and the presence of cases in France, containment efforts and improved surveillance reduce the likelihood of further international spread. The evidence provided suggests that only France has reported cases outside of DRC and Uganda so far, which supports a cautious prediction. Given the possibility of unknown recent developments, a slight adjustment allows for the potential of one additional country being affected, but the probability remains highest for the status quo of exactly one country (France) being affected.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the geographical proximity of DRC and Uganda to other countries, it is plausible that at least one additional country may report cases. However, the likelihood of multiple countries reporting cases decreases due to the typically localized nature of such outbreaks and the effectiveness of biosecurity measures in preventing spread. Therefore, the highest probability is assigned to exactly one additional country, followed by a decreasing probability for two, three, or four or more countries.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 6331,
+    "total_output_tokens": 893,
+    "total_tokens": 7224,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6096,
+        "output_tokens": 773,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 235,
+        "output_tokens": 120,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

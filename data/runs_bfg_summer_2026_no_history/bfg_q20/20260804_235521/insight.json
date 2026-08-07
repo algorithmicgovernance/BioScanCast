@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-925f910f00fb",
+      "question_id": "bfg_q20",
+      "event_type": "outbreak_declared",
+      "confidence": 0.7,
+      "location": "Brasil",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": "outbreaks",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe, incluidas \u00e1reas sin historial previo de esta enfermedad.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:55:47.244284+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-325e3301ee8a462c80b6b34a8cbe056a",
+          "chunk_id": "doc-325e3301ee8a462c80b6b34a8cbe056a-c0-p0",
+          "source_url": "https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    },
+    {
+      "id": "ins-a8fa4e1ef474",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": 11.0,
+      "metric_unit": "countries",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Events of concern related to Oropouche virus disease were registered in 11 countries and territories, all of them reported in the Americas.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:55:52.712092+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d835d2703ed24b65b91873840034f400",
+          "chunk_id": "doc-d835d2703ed24b65b91873840034f400-c0",
+          "source_url": "https://gh.bmj.com/content/11/2/e020708",
+          "quote": "In 2024, events of concern related to Oropouche virus disease were registered in 11 countries and territories, all of them reported in the Americas"
+        }
+      ]
+    },
+    {
+      "id": "ins-fabe46ef705f",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Oropouche virus was identified as causing large outbreaks in endemic areas and new areas in South America in late 2023 and Cuba reported its first confirmed case in June 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:55:55.255659+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-867a9d752a5f4428b63da62f78c47437",
+          "chunk_id": "doc-867a9d752a5f4428b63da62f78c47437-c1",
+          "source_url": "https://www.cdc.gov/oropouche/hcp/clinical-overview/index.html",
+          "quote": "In late 2023, Oropouche virus was identified as causing large outbreaks in endemic areas and new areas in South America."
+        }
+      ]
+    },
+    {
+      "id": "ins-33fc37831fa2",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Latin America and the Caribbean",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7.0,
+      "metric_unit": "countries",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "In 2024, locally transmitted Oropouche virus disease was reported in seven countries in Latin America and the Caribbean.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-04T23:55:57.915192+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3a1be625fda34d2ead66876386d244e0",
+          "chunk_id": "doc-3a1be625fda34d2ead66876386d244e0-c2",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/oropouche-virus-disease",
+          "quote": "In 2024, locally transmitted Oropouche virus disease was reported in seven countries in Latin America and the Caribbean: Brazil, Bolivia, Colombia, Cuba, Guyana, Peru and the Dominican Republic"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 77971,
+    "total_output_tokens": 715,
+    "total_tokens": 78686,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 77971,
+        "output_tokens": 715,
+        "calls": 36
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,146 @@
+{
+  "question_id": "bfg_q23",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.879921852289303,
+        "NO": 0.12007814771069693
+      }
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.879921852289303,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.12007814771069693,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.75,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Past WHO designations of SARS-CoV-2 variants of interest or concern",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Historical frequency of new variant designations by WHO",
+        "Ongoing mutations and global spread of SARS-CoV-2",
+        "Active hospitalizations and cases, indicating continued virus circulation"
+      ],
+      "drivers_down": [
+        "Decreasing trend in hospital settings cases",
+        "Low prevalence of suspected variants in the U.S."
+      ],
+      "why_might_be_wrong": "The evidence of ongoing mutations may not result in variants meeting WHO's criteria for designation.",
+      "rationale": "The base rate of WHO designating variants of interest or concern has been quite high throughout the pandemic and its aftermath, suggesting a tendency to identify new variants as they emerge. Current data show ongoing viral activity and mutations, which increase the probability of new significant variants. However, there is also evidence of a declining trend in hospital cases, and the low prevalence of suspected variants in the U.S. could indicate limited potential for a new designation. Balancing these factors, the probability of WHO designating a new variant remains moderately high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.72,
+        0.28
+      ],
+      "ok": true,
+      "reference_class": "WHO designations of SARS-CoV-2 variants post-pandemic",
+      "base_rate": 0.65,
+      "drivers_up": [
+        "Historical frequency of WHO designating new variants since the COVID-19 pandemic indicates a relatively high likelihood.",
+        "Ongoing mutations and global spread of SARS-CoV-2 could lead to the emergence of new variants with significant properties.",
+        "Modeling suggests a higher peak weekly COVID-19 hospitalization rate if a variant with moderate immune-escape properties emerges."
+      ],
+      "drivers_down": [
+        "Current prevalence of potential new variants remains relatively low, indicating no immediate threat.",
+        "The decreasing trend in confirmed COVID-19 cases in hospital settings might suggest a reduced immediate pressure for new designations."
+      ],
+      "why_might_be_wrong": "The assumptions about the virus's mutation rate and potential impact might not hold if surveillance is incomplete or if the virus's evolution slows unexpectedly.",
+      "rationale": "The base rate for WHO designating new variants post-pandemic is fairly high, given the historical frequency. Despite relatively low current prevalence and declining hospital cases, the ongoing mutation and potential for immune-escape variants suggest a substantial chance for a new designation. Therefore, the probability of a new VOI or VOC being designated in the latter half of 2026 remains significant.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.72,
+        0.28
+      ],
+      "ok": true,
+      "reference_class": "WHO SARS-CoV-2 variant designations post-pandemic",
+      "base_rate": 0.65,
+      "drivers_up": [
+        "Historical frequency of WHO designating new variants post-pandemic suggests regular updates.",
+        "Ongoing mutation of SARS-CoV-2 and its global spread increases the probability of new variants.",
+        "Current evidence indicates ongoing viral mutations and some suspected variants with moderate immune-escape properties.",
+        "Active surveillance and detection of SARS-CoV-2 cases globally."
+      ],
+      "drivers_down": [
+        "Prevalence of suspected variant with moderate immune-escape properties remains low.",
+        "Hospitalization rates have been decreasing, suggesting effective control measures."
+      ],
+      "why_might_be_wrong": "The evidence on specific variant developments or WHO designation intentions may not be fully captured, leading to over or underestimation.",
+      "rationale": "The base rate for WHO designating a new SARS-CoV-2 variant post-pandemic is moderately high. Given ongoing mutations and active global surveillance, the probability is bolstered. However, the declining hospitalization rates and low prevalence of specific variants suggest some control over spread and mutation impact. Balancing these factors, the probability of a new variant designation remains significant but not overwhelming.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing evolution of SARS-CoV-2 and the potential for new variants to emerge, it is plausible that the WHO may designate a new variant of interest or concern by the end of 2026. However, the rate of mutation and the effectiveness of current vaccines and treatments may also play a role in this decision, leading to a slightly lower probability for a new designation.",
+  "evidence_record_ids": [
+    "ins-9669b0ad9167"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5118,
+    "total_output_tokens": 823,
+    "total_tokens": 5941,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4923,
+        "output_tokens": 731,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 195,
+        "output_tokens": 92,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}
