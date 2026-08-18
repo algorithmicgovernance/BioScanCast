@@ -1,0 +1,502 @@
+=== no-history run started 2026-08-18T01:28:14Z run_id=20260818_012814_nohist ===
+--- bfg_q1 01:28:14 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q1 FAILED
+--- bfg_q2 01:28:14 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q2 FAILED
+--- bfg_q3 01:28:15 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q3 FAILED
+--- bfg_q4 01:28:15 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q4 FAILED
+--- bfg_q5 01:28:16 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q5 FAILED
+--- bfg_q6 01:28:16 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q6 FAILED
+--- bfg_q7 01:28:16 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q7 FAILED
+--- bfg_q8 01:28:17 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q8 FAILED
+--- bfg_q9 01:28:17 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q9 FAILED
+--- bfg_q10 01:28:18 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q10 FAILED
+--- bfg_q11 01:28:18 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q11 FAILED
+--- bfg_q12 01:28:19 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q12 FAILED
+--- bfg_q13 01:28:19 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q13 FAILED
+--- bfg_q14 01:28:19 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q14 FAILED
+--- bfg_q15 01:28:20 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q15 FAILED
+--- bfg_q16 01:28:20 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q16 FAILED
+--- bfg_q17 01:28:21 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q17 FAILED
+--- bfg_q18 01:28:21 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q18 FAILED
+--- bfg_q19 01:28:21 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q19 FAILED
+--- bfg_q20 01:28:22 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q20 FAILED
+--- bfg_q21 01:28:22 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q21 FAILED
+--- bfg_q22 01:28:23 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q22 FAILED
+--- bfg_q23 01:28:23 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q23 FAILED
+--- bfg_q24 01:28:23 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q24 FAILED
+--- bfg_q25 01:28:24 ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/main.py", line 42, in <module>
+    from bioscancast.orchestration import persistence
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/orchestration/persistence.py", line 17, in <module>
+    from bioscancast.stages.forecasting.schemas import ForecastResult
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/__init__.py", line 10, in <module>
+    from .pipeline import ForecastingPipeline
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 33, in <module>
+    from bioscancast.stages.evaluation.contamination import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/__init__.py", line 22, in <module>
+    from .pipeline import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/pipeline.py", line 24, in <module>
+    from bioscancast.stages.evaluation.visualisation import (
+  File "/home/runner/work/BioScanCast/BioScanCast/bioscancast/stages/evaluation/visualisation.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+    bfg_q25 FAILED
+=== no-history run complete 2026-08-18T01:28:24Z fails=25 ===
