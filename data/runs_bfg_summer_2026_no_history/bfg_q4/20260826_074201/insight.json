@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-0e6aeb757afd",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases reported in Uganda linked to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:46:14.656351+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-525af1d7f077458cb41906d33b4272cc",
+          "chunk_id": "doc-525af1d7f077458cb41906d33b4272cc-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
+          "quote": "20 in Uganda"
+        }
+      ]
+    },
+    {
+      "id": "ins-6f3b6da50af8",
+      "question_id": "bfg_q4",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3605.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases reported in the Democratic Republic of the Congo linked to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:46:14.656588+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-525af1d7f077458cb41906d33b4272cc",
+          "chunk_id": "doc-525af1d7f077458cb41906d33b4272cc-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
+          "quote": "3605 in the Democratic Republic of the Congo"
+        }
+      ]
+    },
+    {
+      "id": "ins-0c672247e358",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported in Uganda linked to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:46:14.656742+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-525af1d7f077458cb41906d33b4272cc",
+          "chunk_id": "doc-525af1d7f077458cb41906d33b4272cc-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
+          "quote": "including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-f1f780cec3d4",
+      "question_id": "bfg_q4",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1587.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported in the Democratic Republic of the Congo linked to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:46:14.656891+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-525af1d7f077458cb41906d33b4272cc",
+          "chunk_id": "doc-525af1d7f077458cb41906d33b4272cc-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614",
+          "quote": "including 1587 deaths"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 105719,
+    "total_output_tokens": 706,
+    "total_tokens": 106425,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 105719,
+        "output_tokens": 706,
+        "calls": 49
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

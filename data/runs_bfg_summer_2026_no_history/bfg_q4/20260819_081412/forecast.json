@@ -1,0 +1,186 @@
+{
+  "question_id": "bfg_q4",
+  "options": [
+    "exactly 1",
+    "2",
+    "3",
+    "4 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 1": 0.726426199362473,
+        "2": 0.18160654984061833,
+        "3": 0.06210856639728,
+        "4 or more": 0.029858684399628754
+      }
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 1": 0.4,
+        "2": 0.3,
+        "3": 0.2,
+        "4 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "exactly 1",
+      "probability": 0.726426199362473,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "2",
+      "probability": 0.18160654984061833,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "3",
+      "probability": 0.06210856639728,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "4 or more",
+      "probability": 0.029858684399628754,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 1",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.5,
+        0.25,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past international spread of Ebola outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "There is already one confirmed international transmission to France, indicating potential for further spread.",
+        "The WHO has raised the risk level to 'very high' at the national level in Congo, suggesting significant outbreak spread potential.",
+        "Ebola outbreaks, while often contained regionally, have seen international cases in past outbreaks due to global travel."
+      ],
+      "drivers_down": [
+        "Ebola, including the Bundibugyo strain, tends to have a lower transmission rate compared to other viruses, which could limit spread.",
+        "International responses and containment measures for Ebola tend to be robust, potentially limiting further international spread.",
+        "Only 82 cases have been confirmed so far, which is relatively low for an Ebola outbreak, possibly indicating effective containment."
+      ],
+      "why_might_be_wrong": "The effectiveness of international containment measures could be overestimated, or travel patterns may change unexpectedly, leading to more international cases.",
+      "rationale": "Given the current situation with Bundibugyo Ebola in Congo, there is a moderate potential for spread beyond the DRC and Uganda, especially since one case has already reached France. However, considering past outbreaks, international spread beyond a few additional countries is less common due to containment efforts. Thus, while the base rate for additional countries is low, the current risk level and existing international case support the potential for a small increase in affected countries.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past Bundibugyo ebola outbreaks and their international spread.",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The current outbreak in Congo has reached 82 confirmed cases, indicating a significant spread that could increase the likelihood of international dissemination.",
+        "The WHO has raised the risk level of the outbreak to very high at the national level, suggesting a severe situation that might lead to international spread."
+      ],
+      "drivers_down": [
+        "Bundibugyo ebola outbreaks have historically shown limited international spread beyond neighboring countries.",
+        "International travel restrictions and enhanced screening due to the ongoing outbreak may reduce the chance of further spread to other countries."
+      ],
+      "why_might_be_wrong": "There could be unreported cases or spread to countries with less robust health surveillance systems, leading to underestimation of international spread.",
+      "rationale": "The evidence suggests a significant outbreak in Congo with 82 confirmed cases, and the WHO has raised the risk to very high, indicating increased potential for international spread. However, historically, Bundibugyo ebola has not spread widely internationally. Given the base rate of similar outbreaks and the current situation, it is reasonable to assign moderate probabilities to the options, with a slight increase for 2 countries due to the scale and severity of the current outbreak.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.2,
+        0.1,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past international Ebola outbreaks and their spread to countries outside the initial outbreak region.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Bundibugyo ebola has been confirmed in 82 cases in Congo, indicating a significant outbreak.",
+        "Ebola can spread internationally through travel or contact with infected individuals.",
+        "The WHO has raised the risk level to 'very high' at the national level, which might indicate potential for spread."
+      ],
+      "drivers_down": [
+        "Bundibugyo ebola is less well-known compared to other Ebola strains, potentially leading to slower international spread.",
+        "Historical spread of Ebola to countries outside the initial region is relatively rare.",
+        "International health measures and travel restrictions may be more stringent post-COVID-19, limiting spread."
+      ],
+      "why_might_be_wrong": "The forecast might underestimate the potential for further international spread if new, faster transmission mechanisms or mutations occur.",
+      "rationale": "The base rate for international spread of Ebola beyond a single additional country is low, given historical patterns. The current situation shows a significant outbreak in Congo but no current reports of additional countries beyond the baseline of France. While the risk level is high, international spread historically has been contained effectively. Thus, the probability of exactly one country remains highest, but the potential for additional countries cannot be ignored given the current outbreak size and risk levels.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the geographical proximity of DRC and Uganda to other countries, it is plausible that only a limited number of countries will report cases. The baseline of 1 confirmed case in France suggests that the spread may be contained, leading to a higher probability for exactly 1 additional country reporting cases. The probabilities decrease for 2, 3, or 4 or more countries as the likelihood of widespread transmission outside the immediate region is lower.",
+  "evidence_record_ids": [
+    "ins-fb915066ed7c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3118,
+    "total_output_tokens": 972,
+    "total_tokens": 4090,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2889,
+        "output_tokens": 850,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 229,
+        "output_tokens": 122,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

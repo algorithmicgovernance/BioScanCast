@@ -1,0 +1,144 @@
+{
+  "question_id": "bfg_q23",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.6500531395934809,
+        "NO": 0.34994686040651907
+      }
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.6500531395934809,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.34994686040651907,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "SARS-CoV-2 VOI/VOC designations by WHO in previous years",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Modeling suggests a higher peak weekly COVID-19 hospitalization rate which may indicate increased virus activity or new variants.",
+        "Scenario modeling indicates the potential emergence of a new variant with moderate immune-escape properties."
+      ],
+      "drivers_down": [
+        "The pandemic has been ongoing for several years, and the frequency of new variant designations may decrease as the virus stabilizes.",
+        "Global vaccination efforts and natural immunity may reduce the impact and spread of new variants, lowering the likelihood of a variant reaching VOI or VOC status."
+      ],
+      "why_might_be_wrong": "The actual emergence and designation of a new variant can be influenced by unpredictable factors such as changes in virus evolution dynamics, reporting practices, or shifts in public health focus.",
+      "rationale": "The base rate for WHO designating new variants of interest or concern is approximately 0.5, considering historical patterns of variant designations. The recent modeling suggesting potential new variants with immune escape capabilities and increased hospitalization rates slightly increases the likelihood of a new designation. However, the potential stabilization of the virus and increased immunity levels globally could counteract this. Balancing these factors, a moderate increase in probability from the base rate is justified.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.55,
+        0.45
+      ],
+      "ok": true,
+      "reference_class": "SARS-CoV-2 variants designated by WHO",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Scenario modeling from 2025 suggests the potential emergence of a new variant with moderate immune-escape properties, which could lead to a VOI or VOC designation.",
+        "The base rate for new variants being designated as VOI or VOC by WHO has historically been influenced by the emergence of new immune-escape variants."
+      ],
+      "drivers_down": [
+        "Current global COVID-19 hospitalization rates do not indicate a significant surge, suggesting that existing variants are being managed effectively and reducing the likelihood of new designations.",
+        "There is no current evidence of a significant increase in SARS-CoV-2 transmission or impact that would necessitate a new VOI or VOC designation."
+      ],
+      "why_might_be_wrong": "The forecast could be off if a new, unforeseen variant emerges that significantly increases transmission or severity, prompting WHO to make a new designation.",
+      "rationale": "Given the historical base rate and the potential for new variants with immune-escape properties, there is a reasonable chance of a new VOI or VOC designation. However, the current hospitalization rates do not indicate an immediate threat, suggesting a balanced probability between the options.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.58,
+        0.42
+      ],
+      "ok": true,
+      "reference_class": "SARS-CoV-2 variant designations by WHO",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Global scenario modeling suggests the potential emergence of a new variant with moderate immune-escape properties in the near term.",
+        "The history of SARS-CoV-2 shows a pattern of periodic new variant designations based on mutation and immune escape.",
+        "Hospitalization rates indicate ongoing significant transmission, which could lead to new variant emergence."
+      ],
+      "drivers_down": [
+        "No specific evidence of a new variant having emerged by early 2026.",
+        "The current hospitalization rate is relatively low, suggesting manageable levels of disease activity."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if current conditions suppress new variant emergence or if WHO criteria for designation change.",
+      "rationale": "The base rate for WHO designating a new variant of interest or concern is assumed to be around 0.5, given the historical frequency of such events with SARS-CoV-2. Scenario modeling suggests potential for a new variant with immune-escape properties, supporting a higher likelihood of a new designation. However, no specific variant has emerged by early 2026, and the current hospitalization rates, while significant, are not exceptionally high. Balancing these factors, there is a slightly higher probability for a new designation than not.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing evolution of SARS-CoV-2 and the potential for new variants to emerge, it is plausible that the WHO may designate a new variant of interest or concern by the end of 2026. However, the rate of significant mutations and the global response to variants may influence this outcome, leading to a lower probability for a new designation.",
+  "evidence_record_ids": [
+    "ins-6adeffa80210",
+    "ins-71bcf5cdb419"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3156,
+    "total_output_tokens": 876,
+    "total_tokens": 4032,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2967,
+        "output_tokens": 790,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 86,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "id": "ins-9ed46eb4ccef",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:20:41.605565+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4f243105051e4a45890089013a8a6f37",
+          "chunk_id": "doc-4f243105051e4a45890089013a8a6f37-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-3ea6b5e32874",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "U.S.",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Pennsylvania confirmed two measles-associated deaths in 2026, the first for the U.S. in 35 years.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:20:44.572588+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4fb55a8fc8ce4cc7a8181a524feafe21",
+          "chunk_id": "doc-4fb55a8fc8ce4cc7a8181a524feafe21-c0",
+          "source_url": "https://www.medpagetoday.com/infectiousdisease/publichealth/122744",
+          "quote": "Pennsylvania confirmed two measles-associated deaths, the state's first in 35 years and the first for the U.S. in a record-breaking 2026."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 50988,
+    "total_output_tokens": 337,
+    "total_tokens": 51325,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 50988,
+        "output_tokens": 337,
+        "calls": 24
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

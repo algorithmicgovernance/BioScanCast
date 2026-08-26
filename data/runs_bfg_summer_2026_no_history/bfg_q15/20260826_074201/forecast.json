@@ -1,0 +1,171 @@
+{
+  "question_id": "bfg_q15",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.3624224860614227,
+        "NO": 0.6375775139385774
+      }
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.3624224860614227,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.6375775139385774,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Countries losing measles elimination status",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The US has recorded more measles cases in the past 18 months than in the previous 25 years combined.",
+        "The number of measles cases in 2026 is already higher than in 2025, with 2,777 cases reported as of August 2026.",
+        "There are active outbreaks across 31 locations in the US.",
+        "Vaccination rates in U.S. kindergartens have inched down, with exemptions at an all-time high."
+      ],
+      "drivers_down": [
+        "The cumulative number of deaths from measles in 2026 is relatively low (2 deaths).",
+        "Despite the increase in cases, the US has systems in place for outbreak control and vaccination campaigns."
+      ],
+      "why_might_be_wrong": "The decision to revoke elimination status is subjective and can be influenced by political and public health considerations that are not fully captured by case numbers alone.",
+      "rationale": "The base rate for countries losing measles elimination status is relatively low, but the current situation in the US shows concerning trends. Case numbers have significantly increased, and vaccination rates have declined, contributing to the risk of losing elimination status. The upcoming review by international health officials in November 2026 suggests this possibility is being seriously considered. However, the relatively low death toll and potential for intervention efforts to mitigate outbreaks could prevent the loss of status. Given these factors, the probability of the US losing measles elimination status by the end of 2026 is moderate but not overwhelming.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.7,
+        0.3
+      ],
+      "ok": true,
+      "reference_class": "Countries with previously eliminated diseases that face re-assessment for elimination status",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "PAHO and WHO are meeting specifically to discuss the US's measles elimination status, indicating serious consideration of revocation.",
+        "The US has experienced more measles cases in the past 18 months than in the previous 25 years combined.",
+        "The cumulative number of measles cases in 2026 is already higher than in 2025, indicating a worsening trend.",
+        "There have been multiple active outbreaks and two deaths reported in 2026, reflecting poor control over the disease spread.",
+        "Vaccination rates have decreased, and exemptions are at an all-time high, reducing herd immunity."
+      ],
+      "drivers_down": [
+        "The US has historically had strong public health infrastructure capable of addressing outbreaks.",
+        "There have been no confirmed deaths in 2026, suggesting the outbreaks might still be under control to some extent.",
+        "International health bodies may give the US more time to address the outbreaks before revoking elimination status."
+      ],
+      "why_might_be_wrong": "International health organizations might consider the US's overall health infrastructure and efforts to control the outbreaks as sufficient to maintain elimination status, despite the high case numbers.",
+      "rationale": "The measles incidence in the US has increased significantly, with more cases in the past 18 months than in the prior 25 years combined. This, along with decreasing vaccination rates and an increase in exemptions, suggests a significant threat to the country's elimination status. The focused attention of PAHO and WHO on the US's status further indicates a serious possibility of revocation. However, the robust US health system and potential international leniency could weigh against immediate status loss. Balancing these factors, the probability of the US losing its measles elimination status by the target date is moderately high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Countries with previously confirmed measles elimination status losing that status",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "The US has seen a significant increase in measles cases, with 2,777 cases reported in 2026, surpassing the 2025 count.",
+        "There have been two deaths from measles in 2026, indicating severity of outbreaks.",
+        "Vaccination rates in U.S. kindergarten have decreased while exemptions have increased, contributing to vulnerability.",
+        "31 active measles outbreaks were reported in 2026, suggesting widespread transmission."
+      ],
+      "drivers_down": [
+        "The US has historically maintained measles elimination status since it was declared in 2000.",
+        "The cumulative number of cases, while high, still represents a small fraction of the overall population.",
+        "There have been instances of high case counts in the past without loss of elimination status, such as in 2019 when the US faced a similar threat but managed to maintain status."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if the PAHO or WHO apply criteria or thresholds for losing elimination status that are stricter than in past assessments, or if there is a significant under-reporting of cases.",
+      "rationale": "The US is facing a significant increase in measles cases and outbreaks, with vaccination rates declining and exemptions rising, which suggests a higher risk of losing measles elimination status. However, the US has successfully maintained its status in the past despite high case counts, and the base rate of countries losing this status is low. The historical resilience of the US in maintaining its elimination status despite challenges suggests a cautious probability of losing it. The upcoming PAHO review is a critical factor, but prior experience suggests the US might still retain its status. Therefore, the probability of losing the status is higher than the base rate but still not the majority likelihood.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the current trends in measles vaccination rates and outbreaks in the United States, there is a significant chance that PAHO or WHO may determine that the U.S. has lost its measles elimination status by the end of 2026. However, there are also efforts in place to improve vaccination coverage and control outbreaks, which provides a reasonable probability that the status may be maintained.",
+  "evidence_record_ids": [
+    "ins-8a7c58ef11e6",
+    "ins-ebdd80569272",
+    "ins-dc822598b391",
+    "ins-e3a10dfdca24",
+    "ins-37e8e5f7990f",
+    "ins-fb4b55999079",
+    "ins-45b35252976c",
+    "ins-52162e33e8c8",
+    "ins-ee8ef3e30262",
+    "ins-89e5476acedc",
+    "ins-9f5f0ffb4627",
+    "ins-460a5a4f5da2",
+    "ins-c43b31475102",
+    "ins-8ea9fd0e42f9",
+    "ins-cc92b7d222ea",
+    "ins-cf8ba6f55d74",
+    "ins-7eefdad1cd7c",
+    "ins-b076db6ddb9c",
+    "ins-1f07fcc03d83",
+    "ins-f11cbc09a8da",
+    "ins-dcedfbb06e4e"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7116,
+    "total_output_tokens": 1158,
+    "total_tokens": 8274,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6930,
+        "output_tokens": 1066,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 186,
+        "output_tokens": 92,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

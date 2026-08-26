@@ -1,0 +1,208 @@
+{
+  "question_id": "bfg_q2",
+  "options": [
+    "under 750",
+    "750 to 1,499",
+    "1,500 to 2,999",
+    "3,000 to 4,999",
+    "5,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 750": 8.6380047611675e-05,
+        "750 to 1,499": 0.00017276009522335003,
+        "1,500 to 2,999": 0.163248060415306,
+        "3,000 to 4,999": 0.4983263462042869,
+        "5,000 or more": 0.3381664532375721
+      }
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 750": 0.2,
+        "750 to 1,499": 0.3,
+        "1,500 to 2,999": 0.25,
+        "3,000 to 4,999": 0.15,
+        "5,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "under 750",
+      "probability": 8.6380047611675e-05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "750 to 1,499",
+      "probability": 0.00017276009522335003,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "1,500 to 2,999",
+      "probability": 0.163248060415306,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 4,999",
+      "probability": 0.4983263462042869,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "5,000 or more",
+      "probability": 0.3381664532375721,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 750",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750 to 1,499",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1,500 to 2,999",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 4,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.01,
+        0.04,
+        0.15,
+        0.4,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in the Democratic Republic of the Congo (DRC) and Uganda",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Rapid increase in cumulative deaths to 2,000 within 86 days suggests a high transmission and fatality rate.",
+        "Historical challenges in containing Ebola outbreaks in the region due to logistical, political, and infrastructural issues.",
+        "Potential underreporting and investigation of deaths may increase the count retrospectively."
+      ],
+      "drivers_down": [
+        "Efforts to control outbreaks often intensify as they progress, which can mitigate further spread and fatalities.",
+        "International aid and intervention may increase in response to the rapid escalation, potentially reducing future death rates."
+      ],
+      "why_might_be_wrong": "The rapid escalation in deaths could be mitigated by intensified control measures, leading to fewer deaths than projected.",
+      "rationale": "The outbreak has seen a rapid increase in the number of deaths, with over 2,000 reported just 86 days after the outbreak was declared. This suggests a high transmission and fatality rate, which could continue to escalate if not effectively controlled. Historical challenges in managing Ebola outbreaks in the region further support the potential for a high death toll. However, with intensified control measures and international aid, the rate of increase could slow. Given this balance of factors, I estimate a higher probability for the 3,000 to 4,999 range, but also consider the possibility of exceeding 5,000 if containment is not achieved.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.15,
+        0.4,
+        0.3
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in Africa, particularly in the DRC and Uganda.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High cumulative death count of 2,000 by early August 2026, indicating rapid spread and high mortality.",
+        "The outbreak is occurring in a region with past Ebola outbreaks, suggesting potential for widespread transmission.",
+        "The cumulative death count increased from 254 to over 2,000 in less than three months."
+      ],
+      "drivers_down": [
+        "Initial reports indicated potential underestimation of deaths, but large increase suggests reporting is catching up.",
+        "Containment measures might be more effective in the latter part of the outbreak as lessons from previous outbreaks are applied."
+      ],
+      "why_might_be_wrong": "Containment efforts might drastically reduce new cases and deaths, or reporting might be significantly lagging.",
+      "rationale": "The rapid increase in deaths from 254 to over 2,000 in less than three months suggests a high potential for further fatalities. Given the escalation observed, it is plausible that the cumulative death toll could continue to rise significantly. However, as outbreaks often follow an exponential then plateau phase, the growth might slow down significantly due to containment measures. Therefore, while the current trend supports a higher death toll, the probability of reaching over 5,000 by the end of 2026 is moderate but non-negligible. The evidence supports a likelihood of the total reaching between 3,000 and 4,999, aligning with observed rapid spread but considering potential containment.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.15,
+        0.6,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks with similar pathogens and regions",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The outbreak reached 2,000 deaths within just 86 days, indicating a rapid spread and high death toll early on.",
+        "The Democratic Republic of the Congo (DRC) has historically struggled with controlling Ebola outbreaks, leading to potential for high death totals.",
+        "There were 2,011 confirmed or probable cases by early August, indicating a continuing spread with potential for further deaths."
+      ],
+      "drivers_down": [
+        "There could be an eventual international response that helps curb the outbreak, as has happened in past Ebola outbreaks.",
+        "Seasonal changes or improved local containment measures could lead to a slowdown in transmission rates."
+      ],
+      "why_might_be_wrong": "The data might not fully capture the situation due to under-reporting or delayed reporting, leading to an underestimation or overestimation of the death toll.",
+      "rationale": "The outbreak of Bundibugyo Ebola in the DRC has already resulted in over 2,000 deaths by August, indicating a severe situation. Given the rapid increase in deaths and the historical difficulty in controlling Ebola outbreaks in this region, it is more likely that the cumulative deaths will be in higher ranges. The possibility of international intervention or natural containment could slow the outbreak, but the current trend suggests a significant death toll. Thus, the probability of the death toll reaching between 3,000 to 4,999 by the end of the year seems plausible given the rapid early increase in reported deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the typical scale of such events, it is reasonable to estimate that the cumulative reported deaths will likely be under 1,500. The probabilities reflect a higher likelihood of lower death counts, with a decreasing probability for higher counts due to the nature of previous outbreaks.",
+  "evidence_record_ids": [
+    "ins-93ac26307b45",
+    "ins-ea896c880509",
+    "ins-7393eb8c55a3",
+    "ins-2bcd25cbdfd1"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3987,
+    "total_output_tokens": 1048,
+    "total_tokens": 5035,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3744,
+        "output_tokens": 956,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 243,
+        "output_tokens": 92,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

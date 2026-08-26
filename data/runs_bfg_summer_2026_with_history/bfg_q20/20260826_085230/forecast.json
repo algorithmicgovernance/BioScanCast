@@ -1,0 +1,210 @@
+{
+  "question_id": "bfg_q20",
+  "options": [
+    "8 or fewer",
+    "9 to 11",
+    "12 to 14",
+    "15 to 17",
+    "18 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "8 or fewer": 0.28006683420194955,
+        "9 to 11": 0.323376371093108,
+        "12 to 14": 0.22005251258724606,
+        "15 to 17": 0.12002864322940696,
+        "18 or more": 0.05647563888828941
+      }
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "8 or fewer": 0.25,
+        "9 to 11": 0.35,
+        "12 to 14": 0.2,
+        "15 to 17": 0.1,
+        "18 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "8 or fewer",
+      "probability": 0.28006683420194955,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "9 to 11",
+      "probability": 0.323376371093108,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "12 to 14",
+      "probability": 0.22005251258724606,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "15 to 17",
+      "probability": 0.12002864322940696,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "18 or more",
+      "probability": 0.05647563888828941,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8 or fewer",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "9 to 11",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12 to 14",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 17",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "18 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.28,
+        0.32,
+        0.22,
+        0.12,
+        0.06
+      ],
+      "ok": true,
+      "reference_class": "Arbovirus spread in the Americas",
+      "base_rate": 0.32,
+      "drivers_up": [
+        "Oropouche has been identified in many countries, including new outbreaks in South America.",
+        "Cuba reported its first confirmed case in June 2024, indicating spread to new areas.",
+        "Historically, arboviruses like Zika and Chikungunya have spread to new countries over time."
+      ],
+      "drivers_down": [
+        "The spread from endemic to new areas has been described as gradual rather than explosive.",
+        "There is no indication of a rapid increase in the number of affected countries since the initial outbreaks.",
+        "Efforts to contain and monitor the spread may limit the number of new countries affected."
+      ],
+      "why_might_be_wrong": "The spread of the virus could accelerate unexpectedly due to changes in vector behavior, climate, or human movement, leading to more countries affected than anticipated.",
+      "rationale": "The Oropouche virus has been spreading gradually in the Americas with confirmed outbreaks in several countries. The historical spread of arboviruses like Zika and Chikungunya shows a pattern of gradual geographic expansion, which aligns with the current spread of Oropouche. While recent cases in new areas like Cuba suggest continued spread, the rate has been slow. Thus, the most likely outcome is that Oropouche will be confirmed in 9 to 11 countries by the end of 2026, consistent with prior forecasts and base rates for arbovirus spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.28,
+        0.33,
+        0.22,
+        0.12,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Arbovirus spread in the Americas",
+      "base_rate": 0.28,
+      "drivers_up": [
+        "Ongoing outbreaks in multiple countries since 2023",
+        "Spread to new areas like Cuba indicating potential for further expansion",
+        "Climate and environmental conditions in the Americas that support mosquito vectors"
+      ],
+      "drivers_down": [
+        "The spread has been gradual rather than explosive",
+        "Limited historical spread to less than 10 countries by 2024",
+        "Potential containment efforts and public health responses"
+      ],
+      "why_might_be_wrong": "The virus could either spread more quickly than anticipated due to unobserved factors or be contained effectively by public health measures.",
+      "rationale": "The spread of arboviruses like Oropouche in the Americas is typically gradual. By 2024, Oropouche was reported in seven countries, with new areas like Cuba being affected. This suggests a moderate spread rate that aligns with historical arbovirus patterns. Ongoing outbreaks and environmental conditions support further spread, but historical and current data suggest a limited number of new territories affected by 2026. Considering these factors, the most likely scenario remains 9 to 11 countries affected, with a base rate of 0.28 adjusted slightly upwards for the ongoing spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.28,
+        0.32,
+        0.22,
+        0.12,
+        0.06
+      ],
+      "ok": true,
+      "reference_class": "Spread of arboviruses in the Americas",
+      "base_rate": 0.28,
+      "drivers_up": [
+        "Oropouche virus identified in multiple countries by 2024, indicating spread",
+        "Historical pattern of arbovirus spread in the region suggests gradual expansion",
+        "Cuba reported first case in 2024, showing spread to new areas"
+      ],
+      "drivers_down": [
+        "Spread has been gradual rather than explosive, which may limit the number of new countries reporting cases",
+        "Control measures and awareness might slow the spread",
+        "No evidence of rapid, multi-country outbreak patterns similar to other arboviruses like Zika"
+      ],
+      "why_might_be_wrong": "Unexpected factors such as climate change, migration, or changes in vector ecology could accelerate the spread beyond current projections.",
+      "rationale": "The spread of the Oropouche virus in the Americas appears to be gradual, with confirmed cases in a moderate number of countries so far. Historically, arboviruses have spread to new countries over time, but often at a slow pace. The historical base rate suggests that 8 or fewer countries will report confirmed cases. However, the identification of the virus in new areas like Cuba and continued outbreaks indicate a potential for further spread. Balancing these factors, the probabilities are adjusted slightly higher for the 9 to 11 range while recognizing the chance for 12 to 14 countries is non-negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Oropouche virus outbreaks in the Americas, it is reasonable to predict that the number of countries or territories reporting confirmed cases will likely remain moderate. The majority of outbreaks have been localized, and while there may be an increase in awareness and reporting, the overall spread is expected to be limited. Therefore, the probabilities reflect a higher likelihood of reporting 8 or fewer cases, with decreasing probabilities for higher ranges.",
+  "evidence_record_ids": [
+    "ins-3e60654a9f02",
+    "ins-999f05bacdab",
+    "ins-dd40b13f256d"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7460,
+    "total_output_tokens": 984,
+    "total_tokens": 8444,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7251,
+        "output_tokens": 870,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 114,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

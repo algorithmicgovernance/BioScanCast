@@ -1,0 +1,145 @@
+{
+  "question_id": "bfg_q23",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.9,
+        "NO": 0.1
+      }
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.9,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.75,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Past WHO designations of SARS-CoV-2 variants of interest or concern post-pandemic",
+      "base_rate": 0.75,
+      "drivers_up": [
+        "Historical frequency of WHO designating new variants post-pandemic suggests a moderately high probability.",
+        "Ongoing global presence and mutation ability of SARS-CoV-2.",
+        "Modeling suggests potential for new variants with moderate immune-escape properties."
+      ],
+      "drivers_down": [
+        "Possible reduced impact of new variants as global immunity increases.",
+        "No recent evidence of significant SARS-CoV-2 outbreaks or new variant emergence."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if the global situation changes significantly, either through better global control of SARS-CoV-2 or significant new outbreaks that change the dynamics rapidly.",
+      "rationale": "The base rate for WHO designating new variants of interest or concern remains moderately high due to the ongoing mutation and spread of SARS-CoV-2. Historical patterns show a tendency for new variants to be identified regularly. Despite potential for increased global immunity to reduce the impact of new variants, current modeling supports the possibility of new variants with immune-escape properties. Therefore, the probability of a new designation remains above average.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Post-pandemic WHO variant designations for SARS-CoV-2",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Historical frequency of WHO designating variants of interest or concern post-pandemic is high.",
+        "Ongoing global presence and mutation of SARS-CoV-2.",
+        "Modeling suggests potential for new variants with moderate immune-escape properties."
+      ],
+      "drivers_down": [
+        "There may be improved global immunity due to vaccination and past infections.",
+        "Stricter monitoring and containment measures could reduce variant spread and impact."
+      ],
+      "why_might_be_wrong": "New variants might not exhibit significant changes to warrant a WHO designation.",
+      "rationale": "The base rate for WHO designating new variants post-pandemic is relatively high, suggesting a tendency to identify new variants as they emerge. The ongoing presence and mutation ability of SARS-CoV-2, along with modeling suggesting potential new variants with immune-escape properties, support the likelihood of a new designation. However, improvements in global immunity and monitoring could mitigate the emergence of variants that meet the criteria for a new designation.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Historical frequency of WHO designating SARS-CoV-2 variants of interest or concern",
+      "base_rate": 0.75,
+      "drivers_up": [
+        "SARS-CoV-2 continues to mutate, which could lead to the emergence of new variants.",
+        "Ongoing global spread of the virus increases the likelihood of variant emergence.",
+        "Historical data suggests WHO frequently designates new variants."
+      ],
+      "drivers_down": [
+        "Global vaccination efforts and natural immunity may reduce the impact of new variants.",
+        "Surveillance and reporting might be less intensive compared to earlier pandemic phases."
+      ],
+      "why_might_be_wrong": "The virus could mutate in ways that do not result in significant new variants of interest or concern.",
+      "rationale": "The historical base rate for WHO designating new variants of interest or concern remains significant post-pandemic, suggesting a moderately high likelihood. Current data indicate ongoing viral activity and mutation potential, supporting this likelihood. However, the effects of widespread immunity from vaccination and past infections could mitigate the emergence of significant new variants. Balancing these factors, a probability of approximately 0.75 for a new designation is reasonable.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing evolution of SARS-CoV-2 and the potential for new variants to emerge, it is plausible that the WHO may designate a new variant of interest or concern by the end of 2026. However, the rate of new variants being classified has slowed down as the pandemic has progressed, leading to a lower probability for this outcome.",
+  "evidence_record_ids": [
+    "ins-63782431f542"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4710,
+    "total_output_tokens": 780,
+    "total_tokens": 5490,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4521,
+        "output_tokens": 695,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 85,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

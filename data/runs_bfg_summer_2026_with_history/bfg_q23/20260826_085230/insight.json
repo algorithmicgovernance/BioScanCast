@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-4a8a1caf4fad",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "unknown",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-12T00:00:00",
+      "event_date_precision": "day",
+      "summary": "We project COVID-19 dynamics under different scenarios using a transmission model...",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:35:47.177116+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e022b12f529d405ca1f7b09c4761024a",
+          "chunk_id": "doc-e022b12f529d405ca1f7b09c4761024a-c3",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/2026covid-19outlook.html",
+          "quote": "We project COVID-19 dynamics under different scenarios using a transmission model with a compartmental modeling structure"
+        }
+      ]
+    },
+    {
+      "id": "ins-b723f3fd1dd1",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "U.S.",
+      "iso_country_code": "US",
+      "pathogen": "sars-cov-2",
+      "metric_name": "suspected_cases",
+      "metric_value": 4.0,
+      "metric_unit": "%",
+      "count_basis": "prevalence",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-12T00:00:00",
+      "event_date_precision": "day",
+      "summary": "BA.3.2 was found to possess immune escape properties; however, its prevalence within the U.S. has remained relatively low...",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:35:47.177519+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e022b12f529d405ca1f7b09c4761024a",
+          "chunk_id": "doc-e022b12f529d405ca1f7b09c4761024a-c3",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/2026covid-19outlook.html",
+          "quote": "its prevalence within the U.S. has remained relatively low, at 4% (95% CI = 3-7%) of sequences collected during March 15, 2026- April 11, 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-e01d4b64f1fa",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "hospitalizations",
+      "metric_value": 6.7,
+      "metric_unit": "hospitalizations/100,000",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Modeling suggests a higher peak weekly COVID-19 hospitalization rate if a variant with moderate immune-escape properties emerges.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:35:54.156954+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1cb027e759284b978ece8186db4df697",
+          "chunk_id": "doc-1cb027e759284b978ece8186db4df697-c2",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/season-outlook25-26.html",
+          "quote": "modeling suggests a higher peak weekly COVID-19 hospitalization rate (6.7-9.5 hospitalizations/100,000; Scenario B)"
+        }
+      ]
+    },
+    {
+      "id": "ins-6d50567b2c33",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-08-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Scenario modeling indicates that a new variant with moderate immune-escape properties may emerge this fall.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:35:54.258089+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-1cb027e759284b978ece8186db4df697",
+          "chunk_id": "doc-1cb027e759284b978ece8186db4df697-c1",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/season-outlook25-26.html",
+          "quote": "Scenario modeling indicates that the peak weekly hospitalization rate due to COVID-19 may be higher than that of the 2024-2025 season, particularly if a variant with moderate immune-escape properties "
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 60088,
+    "total_output_tokens": 764,
+    "total_tokens": 60852,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 60088,
+        "output_tokens": 764,
+        "calls": 26
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

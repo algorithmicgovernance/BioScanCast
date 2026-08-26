@@ -1,0 +1,232 @@
+{
+  "records": [
+    {
+      "id": "ins-005f771f6001",
+      "question_id": "bfg_q10",
+      "event_type": "outbreak_declared",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "pheic",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": "outbreak",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-18T00:00:00",
+      "event_date_precision": "day",
+      "summary": "WHO declared the outbreak a public health emergency of international concern (PHEIC).",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:00.820410+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c56c33d02b644d82a8114b27fad0b939",
+          "chunk_id": "doc-c56c33d02b644d82a8114b27fad0b939-c1",
+          "source_url": "https://arstechnica.com/health/2026/05/ebola-outbreak-who-declares-emergency-us-restricts-travel-american-infected/",
+          "quote": "the World Health Organization declared the outbreak a public health emergency of international concern (PHEIC)"
+        }
+      ]
+    },
+    {
+      "id": "ins-e81432d832ce",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "pheic",
+      "metric_name": "confirmed_cases",
+      "metric_value": 10.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases as of May 17, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:03.603937+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c56c33d02b644d82a8114b27fad0b939",
+          "chunk_id": "doc-c56c33d02b644d82a8114b27fad0b939-c0",
+          "source_url": "https://arstechnica.com/health/2026/05/ebola-outbreak-who-declares-emergency-us-restricts-travel-american-infected/",
+          "quote": "there were 10 confirmed cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-691b711f466a",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "pheic",
+      "metric_name": "suspected_cases",
+      "metric_value": 336.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Suspected cases as of May 17, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:03.604090+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c56c33d02b644d82a8114b27fad0b939",
+          "chunk_id": "doc-c56c33d02b644d82a8114b27fad0b939-c0",
+          "source_url": "https://arstechnica.com/health/2026/05/ebola-outbreak-who-declares-emergency-us-restricts-travel-american-infected/",
+          "quote": "336 suspected cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-22a45c325bc5",
+      "question_id": "bfg_q10",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "pheic",
+      "metric_name": "deaths",
+      "metric_value": 88.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Deaths as of May 17, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:03.604208+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c56c33d02b644d82a8114b27fad0b939",
+          "chunk_id": "doc-c56c33d02b644d82a8114b27fad0b939-c0",
+          "source_url": "https://arstechnica.com/health/2026/05/ebola-outbreak-who-declares-emergency-us-restricts-travel-american-infected/",
+          "quote": "88 deaths in the DRC"
+        }
+      ]
+    },
+    {
+      "id": "ins-a45c1d53bdf4",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "pheic",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases in Uganda as of May 17, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:03.611625+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c56c33d02b644d82a8114b27fad0b939",
+          "chunk_id": "doc-c56c33d02b644d82a8114b27fad0b939-c0",
+          "source_url": "https://arstechnica.com/health/2026/05/ebola-outbreak-who-declares-emergency-us-restricts-travel-american-infected/",
+          "quote": "two confirmed cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-5cfb4147eed6",
+      "question_id": "bfg_q10",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "pheic",
+      "metric_name": "deaths",
+      "metric_value": 1.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Deaths in Uganda as of May 17, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:03.611792+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c56c33d02b644d82a8114b27fad0b939",
+          "chunk_id": "doc-c56c33d02b644d82a8114b27fad0b939-c0",
+          "source_url": "https://arstechnica.com/health/2026/05/ebola-outbreak-who-declares-emergency-us-restricts-travel-american-infected/",
+          "quote": "one death in neighboring Uganda"
+        }
+      ]
+    },
+    {
+      "id": "ins-aaa1ea812c04",
+      "question_id": "bfg_q10",
+      "event_type": "outbreak_declared",
+      "confidence": 0.9,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "pheic",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ebola disease caused by Bundibugyo virus declared a PHEIC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:42:06.222466+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-28a23163b30b4282bbec5771432e083c",
+          "chunk_id": "doc-28a23163b30b4282bbec5771432e083c-c0",
+          "source_url": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern",
+          "quote": "the Ebola disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda constitutes a public health emergency of international concern (PHEIC)"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 143279,
+    "total_output_tokens": 1004,
+    "total_tokens": 144283,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 143279,
+        "output_tokens": 1004,
+        "calls": 67
+      }
+    }
+  },
+  "documents_processed": 18,
+  "documents_skipped": 2,
+  "notes": [
+    "Skipped document doc-5dd4b1a032474ae3803cc3a3faff8ad4: no chunks",
+    "Skipped document doc-417901b07020484796624ba781019433: no chunks"
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "question_id": "bfg_q16",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 6",
+    "7 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.9723565724664048,
+        "1": 0.01969878748148615,
+        "2 to 3": 0.007265600377135224,
+        "4 to 6": 0.0006790360176268726,
+        "7 or more": 3.657346880391103e-09
+      }
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.6,
+        "1": 0.2,
+        "2 to 3": 0.1,
+        "4 to 6": 0.05,
+        "7 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.9723565724664048,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.01969878748148615,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.007265600377135224,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "4 to 6",
+      "probability": 0.0006790360176268726,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "7 or more",
+      "probability": 3.657346880391103e-09,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 6",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.04,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the US historically",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Two measles-associated deaths have already been reported in Pennsylvania in 2026, indicating the possibility of more deaths within the year.",
+        "Vaccine hesitancy and misinformation could lead to lower vaccination rates, increasing the risk of outbreaks and associated deaths."
+      ],
+      "drivers_down": [
+        "Historically, measles-associated deaths in the US are extremely rare due to effective vaccination programs and public health measures.",
+        "High vaccination coverage typically prevents large outbreaks, which reduces the likelihood of deaths."
+      ],
+      "why_might_be_wrong": "There could be unexpected outbreaks or changes in public health policy or vaccine coverage that increase the risk of additional measles-associated deaths.",
+      "rationale": "Historically, measles-associated deaths in the US have been very rare, with a high base rate of zero deaths per year due to effective vaccination programs. However, the occurrence of two deaths in Pennsylvania in 2026 suggests a departure from the historical norm. This increases the probability of having more than zero deaths this year compared to previous years. Still, given the overall effectiveness of public health measures and vaccination coverage, the probability of more than a few deaths remains low. Therefore, I assign a moderate probability to 0 deaths, with a slightly higher probability for 1 death, and lower probabilities for 2 to 3 and 4 to 6 deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.1,
+        0.04,
+        0.01,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the US historically",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Reports of 2 measles-associated deaths in Pennsylvania in 2026",
+        "Increased cases of measles in the US could lead to more severe outcomes"
+      ],
+      "drivers_down": [
+        "High vaccination rates in the US historically keep measles deaths low",
+        "Public health measures are robust and typically effective in controlling outbreaks",
+        "2026 started with 0 confirmed deaths, indicating potential control"
+      ],
+      "why_might_be_wrong": "There might be a resurgence or outbreak that leads to higher than expected deaths, especially if public health measures weaken or vaccination rates drop.",
+      "rationale": "Historically, the US has maintained a high base rate of zero measles-associated deaths due to effective vaccination programs and public health measures. However, in 2026, there have already been reports of 2 deaths associated with measles in Pennsylvania, indicating an increase in risk compared to previous years. Considering these factors, the probability of zero deaths is still high, but not as dominant as in previous years. Hence, probabilities are adjusted to reflect a small but notable chance of additional deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.05,
+        0.07,
+        0.02,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the U.S. in recent decades",
+      "base_rate": 0.99,
+      "drivers_up": [
+        "Two confirmed deaths in Pennsylvania in 2026, breaking a long period without such deaths in the U.S.",
+        "A record-breaking 2026 with measles-associated deaths noted in public health data, indicating potential for more cases."
+      ],
+      "drivers_down": [
+        "Historically high vaccination rates in the U.S. that have kept measles associated deaths near zero.",
+        "No other states have reported measles-associated deaths in 2026 aside from Pennsylvania.",
+        "Strong public health measures in place to control measles outbreaks."
+      ],
+      "why_might_be_wrong": "The forecast might underestimate the potential for additional deaths if there are unreported outbreaks or if public health measures fail.",
+      "rationale": "The base rate for measles-associated deaths in the U.S. has been near zero due to effective vaccination programs and public health measures. However, recent evidence of two deaths in Pennsylvania suggests an increase in risk. While the probability of zero deaths remains high, the occurrence of these deaths warrants a slight upward adjustment in probability for 1 death or more. Given the lack of additional reports from other states, the likelihood of more than 2-3 deaths remains relatively low but not negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Measles is a highly contagious disease, but vaccination rates in the U.S. are generally high, which significantly reduces the likelihood of widespread outbreaks and associated deaths. Given the effectiveness of the measles vaccine, it is reasonable to predict that the majority of the population will remain protected, leading to a high probability of zero deaths. A small number of deaths could occur due to unvaccinated individuals or complications in rare cases, hence the probabilities for 1 death and for small clusters of deaths (2 to 3) are lower. The probabilities for higher death counts (4 to 6 and 7 or more) are very low due to the current vaccination coverage.",
+  "evidence_record_ids": [
+    "ins-613ae87bbfcc",
+    "ins-99e72e268609",
+    "ins-565192cc8cf2"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6851,
+    "total_output_tokens": 1000,
+    "total_tokens": 7851,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6645,
+        "output_tokens": 838,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 206,
+        "output_tokens": 162,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

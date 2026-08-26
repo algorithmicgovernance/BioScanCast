@@ -1,0 +1,209 @@
+{
+  "question_id": "bfg_q22",
+  "options": [
+    "15 or fewer",
+    "16 to 30",
+    "31 to 50",
+    "51 to 79",
+    "80 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "15 or fewer": 0.9761938597583258,
+        "16 to 30": 0.020039342141702717,
+        "31 to 50": 0.002719757166720524,
+        "51 to 79": 0.000661684498676105,
+        "80 or more": 0.00038535643457485115
+      }
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "15 or fewer": 0.6,
+        "16 to 30": 0.2,
+        "31 to 50": 0.1,
+        "51 to 79": 0.05,
+        "80 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "15 or fewer",
+      "probability": 0.9761938597583258,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "16 to 30",
+      "probability": 0.020039342141702717,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "31 to 50",
+      "probability": 0.002719757166720524,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "51 to 79",
+      "probability": 0.000661684498676105,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "80 or more",
+      "probability": 0.00038535643457485115,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 or fewer",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "16 to 30",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "31 to 50",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "51 to 79",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "80 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.75,
+        0.15,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Annual global wild poliovirus type 1 case counts",
+      "base_rate": 0.75,
+      "drivers_up": [
+        "Significant reduction in cases from 2024 to 2026 indicates effective control measures.",
+        "The low number of cases in 2026 (3 reported cases) suggests successful containment."
+      ],
+      "drivers_down": [
+        "Historical fluctuation in case numbers such as the increase from 2024 to 2025 when cases rose from 99 to 40, though still significant.",
+        "Ongoing cases in endemic regions like Afghanistan and Pakistan could lead to new outbreaks."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong due to unforeseen outbreaks or changes in virus transmissibility, especially in regions with weak healthcare infrastructure.",
+      "rationale": "The base rate for the most likely outcome (15 or fewer cases) is informed by the significant reduction in cases from 2024 to 2026, with only 3 cases reported globally in 2026. This suggests effective control measures are in place, making it more probable for the number of cases to remain low. While there are concerns about endemic regions potentially causing outbreaks, the current data strongly supports a low case count. Consequently, the probability for 15 or fewer cases is substantially higher.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.8,
+        0.1,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Annual global wild poliovirus type 1 cases",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Current reports show only 3 cases in 2026, suggesting strong control measures are effective.",
+        "2025 also reported lower numbers compared to 2024, indicating a declining trend."
+      ],
+      "drivers_down": [
+        "Historical fluctuations in case numbers show potential for sudden increases.",
+        "Persistent polio reservoirs in regions like Afghanistan and Pakistan may lead to unexpected outbreaks."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or under-reporting could skew the current low case numbers upward.",
+      "rationale": "The evidence shows a significant reduction in reported cases from 2024 to 2026, with only 3 cases reported in 2026 so far. This suggests effective control efforts and a declining trend, making it highly likely that the final number will be 15 or fewer. However, given historical volatility and persistent endemic regions, there remains a possibility for a higher count, but this is less probable given current trends.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.1,
+        0.03,
+        0.01,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Annual global wild poliovirus type 1 case counts",
+      "base_rate": 0.4,
+      "drivers_up": [
+        "The total number of cases in 2026 is reported as 15, which fits exactly into the first bin, suggesting recent success in containment efforts.",
+        "The number of cases has decreased significantly since 2024, indicating effective interventions."
+      ],
+      "drivers_down": [
+        "There could be reporting delays or under-reporting which might mean actual numbers are higher.",
+        "There is ongoing transmission in endemic countries like Afghanistan and Pakistan, which could lead to unexpected surges."
+      ],
+      "why_might_be_wrong": "There may be under-reporting or unexpected outbreaks in endemic regions that are not captured in the data, leading to a higher actual case count.",
+      "rationale": "The evidence indicates that the number of reported cases in 2026 is 15, which directly aligns with the first option (15 or fewer). This is a strong indicator that containment measures have been effective. While there are concerns about potential under-reporting or unforeseen outbreaks, the observed trend from 2024 to 2026 shows a clear decline in cases. Therefore, assigning a high probability to the first bin is justified.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the global efforts in vaccination and eradication programs for poliovirus, particularly wild poliovirus type 1, it is likely that the number of cases will remain low. The majority of cases are expected to be 15 or fewer due to ongoing immunization efforts and surveillance. However, there is a small chance of localized outbreaks, which could lead to 16 to 30 cases. The probabilities decrease significantly for higher case ranges due to the effectiveness of current biosecurity measures.",
+  "evidence_record_ids": [
+    "ins-e4a2818ed25c",
+    "ins-57a962e1562e",
+    "ins-cc5860e71901",
+    "ins-a2b46268b98c",
+    "ins-be6cdde53d11",
+    "ins-c86011eab1e4",
+    "ins-4053d360d5ec",
+    "ins-b51c4d89b86b"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4541,
+    "total_output_tokens": 874,
+    "total_tokens": 5415,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4332,
+        "output_tokens": 751,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 123,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,187 @@
+{
+  "question_id": "bfg_q12",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.07038432447562123,
+        "NO": 0.9296156755243788
+      }
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.07038432447562123,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9296156755243788,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.25,
+        0.75
+      ],
+      "ok": true,
+      "reference_class": "Past Public Health Emergency of International Concern (PHEIC) declarations for infectious disease outbreaks.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Mpox cases are spread across multiple continents, including significant numbers in North America and Africa.",
+        "There have been recent deaths associated with mpox, indicating severity.",
+        "The global cumulative case count is relatively high, with over 180,000 confirmed cases as of April 2026."
+      ],
+      "drivers_down": [
+        "The prior PHEIC for mpox was lifted recently in September 2025, suggesting the situation was considered under control then.",
+        "Monthly new case counts in EU/EEA are relatively low, with less than 200 cases reported in recent months.",
+        "There is no indication of a rapid escalation or new surge in cases that would typically trigger a PHEIC declaration."
+      ],
+      "why_might_be_wrong": "There could be an unreported surge in cases or new evidence of significant international spread and impact that emerges after the current data, leading to a PHEIC declaration.",
+      "rationale": "The base rate for declaring a PHEIC for infectious diseases is relatively low, and while there are some factors such as deaths and significant case numbers that could push towards a new PHEIC for mpox, the lack of a recent surge or significant escalation in cases reduces the likelihood. The WHO previously lifted the PHEIC in September 2025, indicating a controlled situation. Thus, the probability of a new PHEIC declaration within the given timeframe is lower.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.8
+      ],
+      "ok": true,
+      "reference_class": "Previous PHEIC declarations for mpox and other diseases",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "There have been 689 cases of mpox reported in Madagascar, indicating a potential outbreak in Africa.",
+        "The number of cases in North America remains high, with 45,183 cumulative cases reported.",
+        "Mpox continues to be reported globally, with 184,531 cumulative cases since 2022."
+      ],
+      "drivers_down": [
+        "The current numbers do not indicate an unusually high increase in cases or deaths globally.",
+        "The death rate from mpox remains low, with only 164 deaths reported globally since 2022.",
+        "A PHEIC was recently lifted in 2025, suggesting the situation had been under control."
+      ],
+      "why_might_be_wrong": "An unexpected surge in cases or new clade emergence could occur, prompting a PHEIC declaration.",
+      "rationale": "The base rate for PHEIC declarations is low, and while mpox cases continue to be reported, they do not appear to be at an alarming rate that would typically prompt a PHEIC declaration. The recent lifting of the PHEIC in 2025 suggests the situation was under control at that time. However, localized outbreaks, such as in Madagascar, could potentially escalate. Given these factors, the probability of WHO declaring a new PHEIC for mpox by the end of 2026 is relatively low.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.8
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for similar outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "There are confirmed cases in multiple regions including the United States, Africa, and the EU/EEA, indicating a global spread.",
+        "Recent increases in cases in specific regions such as Madagascar and the EU/EEA suggest potential for further spread.",
+        "The history of mpox includes previous PHEIC declarations, indicating potential for recurrence if conditions worsen."
+      ],
+      "drivers_down": [
+        "The total number of cases globally is not extremely high compared to past outbreak peaks.",
+        "There is no indication of a large number of deaths relative to the number of cases.",
+        "The previous PHEIC was recently lifted in September 2025, suggesting current conditions may not yet warrant a new declaration."
+      ],
+      "why_might_be_wrong": "The situation could change rapidly if there is a significant outbreak in a densely populated area or if a new, more virulent strain emerges.",
+      "rationale": "The probability of WHO declaring a new PHEIC for mpox between July 15, 2026, and December 31, 2026, is influenced by the current spread of cases and the recent history of PHEIC declarations. While there is ongoing transmission in multiple regions, the overall number of cases and deaths does not suggest an immediate crisis. However, the potential for the situation to escalate remains, especially given past PHEIC declarations. Balancing these factors, the likelihood of a new PHEIC is modest.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Considering the current trends in global health and the response to previous outbreaks, it is likely that the WHO will assess the situation carefully. However, given the historical context of mpox and the effectiveness of vaccination and public health measures, the probability of a new Public Health Emergency of International Concern (PHEIC) being declared is lower than the probability of it not being declared.",
+  "evidence_record_ids": [
+    "ins-c806276e0cab",
+    "ins-5c95898d72b6",
+    "ins-7531abc2a580",
+    "ins-ccf60782b4cc",
+    "ins-75a445755ef4",
+    "ins-427f5bfc601a",
+    "ins-9d17c4acb2f9",
+    "ins-355684604427",
+    "ins-a3dc943c1f50",
+    "ins-08add63d3752",
+    "ins-b66991d51dde",
+    "ins-459acb9f0f20",
+    "ins-77c33013dce8",
+    "ins-344c87f223f7",
+    "ins-8631323013f9",
+    "ins-f43ef0da3f42",
+    "ins-5e5bbdda2a9c",
+    "ins-a34814e38025",
+    "ins-5392cd4a93c9",
+    "ins-4a9a218b376c",
+    "ins-45a37973a6b0",
+    "ins-a7a0acac428d",
+    "ins-7df73bd6cd60",
+    "ins-a0097b78cfeb",
+    "ins-92b8f6bd43ac",
+    "ins-0fcad624eaab",
+    "ins-a17554a9cfca",
+    "ins-d598feda5743",
+    "ins-dedfe2c3db9a",
+    "ins-c7b6115526e7",
+    "ins-4fbf9ac57cb1",
+    "ins-5d81ebd66924",
+    "ins-da46404db2aa",
+    "ins-9fc363039f0f",
+    "ins-1b5d63bd3903",
+    "ins-07e82aef4d78",
+    "ins-45171c27f9ab",
+    "ins-2aebc08db135",
+    "ins-5fe3cf1e4a7a",
+    "ins-7381f538470c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 10523,
+    "total_output_tokens": 1002,
+    "total_tokens": 11525,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 10335,
+        "output_tokens": 912,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 188,
+        "output_tokens": 90,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

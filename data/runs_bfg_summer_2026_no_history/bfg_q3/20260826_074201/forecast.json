@@ -1,0 +1,171 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.4993127142355535,
+        "NO": 0.5006872857644465
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.4993127142355535,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.5006872857644465,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.4,
+        0.6
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola PHEICs, such as the 2014-2016 West Africa Ebola outbreak and the 2018-2020 DRC Ebola outbreak.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Rapid increase in confirmed cases within a few months indicates a significant outbreak.",
+        "The PHEIC was recently declared in May 2026, suggesting an ongoing and escalating situation.",
+        "Both DR Congo and Uganda are affected, indicating cross-border transmission potential."
+      ],
+      "drivers_down": [
+        "Ebola outbreaks can be controlled with effective public health interventions.",
+        "The Bundibugyo virus has historically been associated with smaller outbreaks compared to other Ebola viruses.",
+        "International response and experience from past outbreaks could help in quickly controlling the outbreak."
+      ],
+      "why_might_be_wrong": "The situation could evolve unexpectedly, with either a rapid containment or an unforeseen escalation.",
+      "rationale": "The rapid increase in confirmed cases from 35 in May to over 8210 in September 2026, coupled with the cross-border nature of the outbreak affecting both DR Congo and Uganda, suggests a significant and escalating situation. The declaration of a PHEIC in May 2026 denotes international concern and the need for a coordinated response. Historically, the resolution of PHEICs for Ebola can vary, with some lasting several years and others being resolved more quickly depending on the response effectiveness. Given the recentness of the PHEIC declaration and the current trajectory of the outbreak, there is a moderate likelihood that the PHEIC could still be in effect by the end of 2026. However, considering past experiences where interventions have successfully controlled outbreaks, there is also a substantial chance that the PHEIC could be lifted by then. Balancing these factors, the probabilities are slightly tilted towards the PHEIC not being in effect by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.55,
+        0.45
+      ],
+      "ok": true,
+      "reference_class": "Past Public Health Emergency of International Concern (PHEIC) declarations for Ebola outbreaks.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Rapid increase in confirmed cases from 35 on May 15 to 8210 by September 16, indicating the outbreak is not yet under control.",
+        "Declaration of the PHEIC was recent (May 2026), suggesting it might still be in effect by December 2026 if the situation remains severe.",
+        "High number of deaths and cases in a short timeframe could warrant continued international focus and response."
+      ],
+      "drivers_down": [
+        "Past Ebola PHEICs have been lifted within months to a few years once outbreaks were contained or managed.",
+        "Improvements in surveillance, containment measures, and international aid could lead to the termination of the PHEIC before December 2026.",
+        "The outbreak is currently concentrated in specific regions, which may limit its spread with effective intervention."
+      ],
+      "why_might_be_wrong": "Containment efforts might be more effective than anticipated, leading to an earlier termination of the PHEIC than expected.",
+      "rationale": "Given the rapid increase in cases and recent declaration of the PHEIC, the likelihood of the emergency still being in effect by December 2026 is moderately high. Historical trends show that while Ebola PHEICs can persist for years, they are also resolved once outbreaks are controlled. Considering the current situation and the potential for effective containment, there is a reasonable chance it could still be active.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.55,
+        0.45
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for viral outbreaks in Africa, particularly Ebola outbreaks.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Rapid increase in confirmed cases from 35 to 8210 in just a few months indicates an uncontrolled outbreak.",
+        "The outbreak has spread across international borders to Uganda, which complicates containment efforts.",
+        "Bundibugyo ebola has shown potential for high morbidity and mortality, which could delay resolution."
+      ],
+      "drivers_down": [
+        "PHEIC declarations are typically lifted once control measures are effective, and international attention can mobilize resources for containment.",
+        "Historical PHEICs for Ebola have been resolved within a few years due to international response and containment efforts.",
+        "The outbreak is confined to a specific region, which could allow for targeted interventions."
+      ],
+      "why_might_be_wrong": "The rate of increase in cases could slow significantly with effective interventions, making the PHEIC unnecessary by end of 2026.",
+      "rationale": "The rapid increase in cases and cross-border spread suggest a significant and uncontrolled outbreak that may take time to contain. Although past Ebola PHEICs have been resolved within a few years, the current situation's dynamics and the potential challenges in resource mobilization and coordination across borders increase the chances that the PHEIC might still be in effect by December 2026. However, international efforts could mitigate the situation faster than expected.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical patterns of Ebola outbreaks and the ongoing challenges in the DRC and Uganda regarding healthcare infrastructure, surveillance, and response capabilities, there is a significant chance that Bundibugyo virus disease could still be a concern by the end of 2026. However, advancements in public health measures and potential vaccine developments could lead to a decrease in cases, making it plausible that the PHEIC could be lifted by that time.",
+  "evidence_record_ids": [
+    "ins-02dae0a548fa",
+    "ins-caa755d9f97b",
+    "ins-0484dd1f0e39",
+    "ins-9b9d1cdfb6ad",
+    "ins-bfb4b668e1aa",
+    "ins-3f6c9d0dce59",
+    "ins-5df7c23aab53",
+    "ins-cd82b8284fba",
+    "ins-0cdc903911f8",
+    "ins-341686ca68e5",
+    "ins-a1d684f04afd",
+    "ins-65bd984b6863",
+    "ins-9678bd78d5b8",
+    "ins-a7e5fe1cd0a5",
+    "ins-0c1a87b993f0",
+    "ins-b7ed3d9b186a",
+    "ins-fba26653cafc",
+    "ins-31ee71024e41",
+    "ins-1ac1ced0aebb",
+    "ins-2ff6d556d612",
+    "ins-324b82c05e9a",
+    "ins-ff64a174e08a",
+    "ins-feadc321ea09",
+    "ins-a0b67a52ece0"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 8280,
+    "total_output_tokens": 1069,
+    "total_tokens": 9349,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 8091,
+        "output_tokens": 967,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 102,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

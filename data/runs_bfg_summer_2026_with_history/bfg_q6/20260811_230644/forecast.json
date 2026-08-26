@@ -1,0 +1,210 @@
+{
+  "question_id": "bfg_q6",
+  "options": [
+    "0 to 4",
+    "5 to 14",
+    "15 to 29",
+    "30 to 59",
+    "60 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0 to 4": 0.9993004396057511,
+        "5 to 14": 0.0006849201820741044,
+        "15 to 29": 1.4639962959251787e-05,
+        "30 to 59": 1.413472882817716e-10,
+        "60 or more": 1.0786816936162404e-10
+      }
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0 to 4": 0.5,
+        "5 to 14": 0.3,
+        "15 to 29": 0.1,
+        "30 to 59": 0.05,
+        "60 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "0 to 4",
+      "probability": 0.9993004396057511,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "5 to 14",
+      "probability": 0.0006849201820741044,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "15 to 29",
+      "probability": 1.4639962959251787e-05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "30 to 59",
+      "probability": 1.413472882817716e-10,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "60 or more",
+      "probability": 1.0786816936162404e-10,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0 to 4",
+      "probability": 0.5,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5 to 14",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 29",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "30 to 59",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "60 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.988,
+        0.01,
+        0.001,
+        0.0005,
+        0.0005
+      ],
+      "ok": true,
+      "reference_class": "Global human H5 infections reported to WHO",
+      "base_rate": 0.988,
+      "drivers_up": [
+        "Potential underreporting or detection of cases not yet evident",
+        "Possible outbreaks in areas with less stringent surveillance"
+      ],
+      "drivers_down": [
+        "Historically low incidence of human H5 infections",
+        "Only 7 cases reported globally in the first half of 2026",
+        "No large outbreaks reported recently",
+        "Most outbreaks remain localized and small"
+      ],
+      "why_might_be_wrong": "There might be an unforeseen outbreak or changes in surveillance/reporting methods, leading to a higher number of reported cases.",
+      "rationale": "The historical base rate of human H5 infections is low, with only 7 cases reported globally in the first half of 2026. This trend aligns with historical data showing infrequent and small outbreaks of human H5 cases. Despite potential underreporting or an unforeseen outbreak, the lack of recent large outbreaks and the cumulative evidence suggest maintaining a high probability for the 0 to 4 cases range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.95,
+        0.04,
+        0.01,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Global annual human H5 influenza infections",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Potential for underreporting in some regions could lead to unexpected case discovery.",
+        "Seasonal variations might cause an increase in avian influenza transmission."
+      ],
+      "drivers_down": [
+        "Historically low incidence of human H5 cases globally, with only 7 cases reported in the first half of 2026.",
+        "No large ongoing outbreaks reported, indicating controlled transmission.",
+        "Past trends show that high case counts (e.g., 60+) are rare."
+      ],
+      "why_might_be_wrong": "There could be an unexpected outbreak or change in reporting practices that significantly increases the case count.",
+      "rationale": "The base rate of human H5 infections is low globally, with only 7 cases reported in the first half of 2026. Historically, there have been few large outbreaks, and the ongoing situation does not suggest any significant change in transmission dynamics. While there is always a potential for underreporting or a sudden outbreak, these are balanced by the historically low incidence and lack of current large-scale outbreaks. Therefore, the probability of 0 to 4 cases remains high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.95,
+        0.04,
+        0.005,
+        0.003,
+        0.002
+      ],
+      "ok": true,
+      "reference_class": "Global yearly human H5 avian influenza cases",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Global surveillance and reporting may improve, capturing more cases.",
+        "Seasonal patterns or new strains could lead to increased transmission."
+      ],
+      "drivers_down": [
+        "Historically low incidence of human H5 cases globally.",
+        "Only 7 cases reported globally in the first half of 2026, suggesting a continued low trend.",
+        "No significant outbreaks reported recently."
+      ],
+      "why_might_be_wrong": "The situation could change rapidly due to new strains or improved detection methods, leading to more cases than expected.",
+      "rationale": "The base rate for human H5 cases is low, with only 7 cases reported globally in the first half of 2026. Historically, human H5N1 infections have been rare, and no significant outbreaks have been reported recently. While there is always the potential for changes in strain virulence or transmission, the current evidence supports a continued low incidence rate. Therefore, the probability is highest for the 0 to 4 cases range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data, human infections with H5 avian influenza are relatively rare, often occurring sporadically. The majority of reported cases tend to fall within the lower range of infections, particularly between 0 to 4 cases. The likelihood of a moderate increase (5 to 14 cases) exists but is less probable given the nature of the virus and previous trends. Higher ranges (15 to 29, 30 to 59, and 60 or more) are considered highly unlikely due to the limited transmission potential of H5 viruses to humans.",
+  "evidence_record_ids": [
+    "ins-60065b64aa14",
+    "ins-4f9c881cf1dc",
+    "ins-78c4de868953",
+    "ins-6e9fcdadf382",
+    "ins-cf8ac6a64b5c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 8022,
+    "total_output_tokens": 850,
+    "total_tokens": 8872,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7803,
+        "output_tokens": 710,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 219,
+        "output_tokens": 140,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

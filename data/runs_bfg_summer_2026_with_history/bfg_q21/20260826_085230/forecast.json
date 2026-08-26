@@ -1,0 +1,150 @@
+{
+  "question_id": "bfg_q21",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.0173397655249323,
+        "NO": 0.9826602344750677
+      }
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.0173397655249323,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9826602344750677,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Historical frequency of WHO declarations of new filovirus outbreaks distinct from ongoing events.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filoviruses like Ebola and Marburg have sporadic outbreaks in various regions, particularly in Africa, which could lead to new, distinct outbreaks.",
+        "The Democratic Republic of the Congo and Uganda have ongoing significant filovirus activity, suggesting environmental and epidemiological conditions that could support new outbreaks."
+      ],
+      "drivers_down": [
+        "The ongoing Bundibugyo outbreak may overshadow other filovirus surveillance efforts, potentially delaying detection of distinct new outbreaks.",
+        "Historical data suggests a relatively low base rate for distinct new filovirus outbreaks being declared by WHO within a short time frame."
+      ],
+      "why_might_be_wrong": "There may be undetected or emerging outbreaks in regions with limited surveillance which could be declared later as distinct events.",
+      "rationale": "The base rate for WHO declaring a new filovirus outbreak distinct from ongoing events is relatively low (0.2). Despite the significant activity in the Democratic Republic of Congo and Uganda, which suggests environmental conditions conducive to outbreaks, the ongoing Bundibugyo event may overshadow other surveillance efforts. Thus, the likelihood remains low but not negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "WHO-declared filovirus outbreaks distinct from ongoing events",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Significant recent activity of filovirus outbreaks in high-risk areas like the Democratic Republic of the Congo and Uganda",
+        "Underestimation of case fatality rates suggesting possible under-reporting or wider spread"
+      ],
+      "drivers_down": [
+        "Current outbreaks are being monitored thoroughly, which reduces the chance of unnoticed spillover leading to a new outbreak",
+        "The Bundibugyo event currently absorbs significant WHO resources and focus"
+      ],
+      "why_might_be_wrong": "There could be unknown or emerging factors leading to a new outbreak that are not captured in the current data or analysis.",
+      "rationale": "The historical base rate for WHO declaring new distinct filovirus outbreaks is relatively low at 0.2. Despite this, recent significant activity in countries like the Democratic Republic of the Congo and Uganda, combined with potential under-reporting of fatalities, suggests some risk of new outbreaks. However, the ongoing Bundibugyo event is a major focus, likely reducing resources available for identifying new outbreaks. Given these mixed drivers, the likelihood of WHO declaring a new outbreak remains moderately low, but not negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.07,
+        0.93
+      ],
+      "ok": true,
+      "reference_class": "WHO-declared filovirus outbreaks distinct from ongoing events",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Historical presence of filoviruses in endemic regions like the Democratic Republic of the Congo and Uganda.",
+        "Ongoing surveillance and reporting can detect new outbreaks if they occur."
+      ],
+      "drivers_down": [
+        "Current significant activity of the Bundibugyo virus makes it less likely for a distinct new outbreak to emerge.",
+        "The majority of recent cases are linked to the ongoing Bundibugyo event."
+      ],
+      "why_might_be_wrong": "Unexpected zoonotic spillover or a new outbreak in a previously unaffected area could occur, leading to a new declaration.",
+      "rationale": "The base rate for WHO declaring a new filovirus outbreak distinct from ongoing events is relatively low, around 0.2. While there is significant filovirus activity linked to the current Bundibugyo event, the emergence of a new, distinct outbreak is less likely due to the concentration of current cases. However, given the historical pattern of filovirus outbreaks and continuous surveillance, there remains a small but non-negligible chance for a new outbreak. Thus, I estimate the probability of a new declaration by WHO to be around 0.07, with a higher probability (0.93) that no new outbreak will be declared.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing Bundibugyo event, it is plausible that new outbreaks could occur, but the likelihood of a distinct new filovirus outbreak being declared by WHO within the specified timeframe is relatively low. Therefore, the probability of 'NO' is higher.",
+  "evidence_record_ids": [
+    "ins-2d6e75355aa5",
+    "ins-3b119de16526",
+    "ins-f8852ec21b1d",
+    "ins-c9fa046946d8",
+    "ins-1e5f2226ca9a",
+    "ins-b6fc854ff0ae",
+    "ins-95deca823c46",
+    "ins-155d364d0e17",
+    "ins-1e502d3f6fc1"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 9215,
+    "total_output_tokens": 829,
+    "total_tokens": 10044,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 9024,
+        "output_tokens": 762,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 191,
+        "output_tokens": 67,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

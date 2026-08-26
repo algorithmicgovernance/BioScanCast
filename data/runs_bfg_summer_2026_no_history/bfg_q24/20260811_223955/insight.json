@@ -1,0 +1,379 @@
+{
+  "records": [
+    {
+      "id": "ins-64a1f80c91a9",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2465.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-11T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of confirmed measles cases reported in the United States in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:06.094318+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4d4053c9ab7346a3873af6ea1d60c592",
+          "chunk_id": "doc-4d4053c9ab7346a3873af6ea1d60c592-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,465 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-150a5bc37fa2",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases recorded by CDC for the year as of late July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:20.728500+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8",
+          "chunk_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8-c0",
+          "source_url": "https://www.axios.com/2026/07/25/measles-record-cases-states-numbers",
+          "quote": "the CDC had recorded 2,318 cases for the year."
+        }
+      ]
+    },
+    {
+      "id": "ins-e9f0a2cdff82",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2026.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of measles cases reported in the United States for the year 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:22.910077+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-96e2fdf0e78e47f3aff272a0209c58c9",
+          "chunk_id": "doc-96e2fdf0e78e47f3aff272a0209c58c9-c2",
+          "source_url": "https://www.cidrap.umn.edu/measles/cdc-adds-almost-100-new-cases-expanding-us-measles-outbreak",
+          "quote": "Of the 2026 cases, 20% involve children age 5 and under, and 68% involve kids and young adults to age 19."
+        }
+      ]
+    },
+    {
+      "id": "ins-b62630a5a530",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2465.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed measles cases in the US for the year 2026 as of August 7.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:22.740820+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-96e2fdf0e78e47f3aff272a0209c58c9",
+          "chunk_id": "doc-96e2fdf0e78e47f3aff272a0209c58c9-c0",
+          "source_url": "https://www.cidrap.umn.edu/measles/cdc-adds-almost-100-new-cases-expanding-us-measles-outbreak",
+          "quote": "bringing the US total for the year to 2,465"
+        }
+      ]
+    },
+    {
+      "id": "ins-ca2a7cfe8167",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 226.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "year",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "New cases reported in Pennsylvania for the year 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:22.738788+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-96e2fdf0e78e47f3aff272a0209c58c9",
+          "chunk_id": "doc-96e2fdf0e78e47f3aff272a0209c58c9-c3",
+          "source_url": "https://www.cidrap.umn.edu/measles/cdc-adds-almost-100-new-cases-expanding-us-measles-outbreak",
+          "quote": "226 for the year"
+        }
+      ]
+    },
+    {
+      "id": "ins-e97b4b0b4fdf",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2295.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total reported cases in the U.S. as of July 19, 2026, surpassing last year's total.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:25.375421+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-336a4e5977674907ae919b5b56014516",
+          "chunk_id": "doc-336a4e5977674907ae919b5b56014516-c1",
+          "source_url": "https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026",
+          "quote": "the nation reported 2,295 cases as of Tuesday."
+        }
+      ]
+    },
+    {
+      "id": "ins-abea3d0132ed",
+      "question_id": "bfg_q24",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-11T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of confirmed deaths from measles in the United States in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:06.094583+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4d4053c9ab7346a3873af6ea1d60c592",
+          "chunk_id": "doc-4d4053c9ab7346a3873af6ea1d60c592-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-5b7be17d2363",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "South Carolina",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 670.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases recorded by CDC for South Carolina for the year as of late July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:20.728821+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8",
+          "chunk_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8-c0",
+          "source_url": "https://www.axios.com/2026/07/25/measles-record-cases-states-numbers",
+          "quote": "South Carolina has reported 670 cases, while Utah has reported 522 cases."
+        }
+      ]
+    },
+    {
+      "id": "ins-59c9f7c215af",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Utah",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 522.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases recorded by CDC for Utah for the year as of late July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:20.728984+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8",
+          "chunk_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8-c0",
+          "source_url": "https://www.axios.com/2026/07/25/measles-record-cases-states-numbers",
+          "quote": "South Carolina has reported 670 cases, while Utah has reported 522 cases."
+        }
+      ]
+    },
+    {
+      "id": "ins-3ac1117957f4",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Florida",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 141.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases recorded by CDC for Florida for the year as of late July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:20.735884+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8",
+          "chunk_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8-c0",
+          "source_url": "https://www.axios.com/2026/07/25/measles-record-cases-states-numbers",
+          "quote": "Florida has seen 141 cases in 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-3090944a9712",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Pennsylvania",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 134.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases recorded by CDC for Pennsylvania for the year as of late July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:20.736109+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8",
+          "chunk_id": "doc-f86d0082b9904d6ea21da1fa6dc926b8-c0",
+          "source_url": "https://www.axios.com/2026/07/25/measles-record-cases-states-numbers",
+          "quote": "Pennsylvania has seen a surge of cases over the last week, rising from 110 to 134"
+        }
+      ]
+    },
+    {
+      "id": "ins-aaf334ec46c9",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.3,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "suspected_cases",
+      "metric_value": 21000000.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Nearly 21 million children missed their routine first dose of measles, indicating a potential increase in cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:04:27.444936+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-cf2dbb2c480f48ababfb58ced666adb5",
+          "chunk_id": "doc-cf2dbb2c480f48ababfb58ced666adb5-c1",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage",
+          "quote": "nearly 21 million children missed their routine first dose of measles"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 45348,
+    "total_output_tokens": 1756,
+    "total_tokens": 47104,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 45348,
+        "output_tokens": 1756,
+        "calls": 21
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

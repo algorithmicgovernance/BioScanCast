@@ -1,0 +1,203 @@
+{
+  "question_id": "bfg_q22",
+  "options": [
+    "15 or fewer",
+    "16 to 30",
+    "31 to 50",
+    "51 to 79",
+    "80 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "15 or fewer": 0.42798618534215976,
+        "16 to 30": 0.3825783640498514,
+        "31 to 50": 0.12514391976505346,
+        "51 to 79": 0.044746636909529,
+        "80 or more": 0.019544893933406384
+      }
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "15 or fewer": 0.6,
+        "16 to 30": 0.2,
+        "31 to 50": 0.1,
+        "51 to 79": 0.05,
+        "80 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "15 or fewer",
+      "probability": 0.42798618534215976,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "16 to 30",
+      "probability": 0.3825783640498514,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "31 to 50",
+      "probability": 0.12514391976505346,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "51 to 79",
+      "probability": 0.044746636909529,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "80 or more",
+      "probability": 0.019544893933406384,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 or fewer",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "16 to 30",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "31 to 50",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "51 to 79",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "80 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.5,
+        0.3,
+        0.08,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Annual global wild poliovirus type 1 cases in recent years",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Current cumulative cases for 2026 are 19, indicating a significant presence of the virus this year.",
+        "The trend from mid-year to end-year suggests an increase from 4 to 19 cases, showing active transmission."
+      ],
+      "drivers_down": [
+        "Efforts in polio eradication have been ongoing and might intensify given the increase in cases.",
+        "Global surveillance and vaccination efforts are typically ramped up in response to new cases, potentially curbing further outbreaks."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or under-reporting in certain regions could lead to a higher number of cases than anticipated.",
+      "rationale": "The current data shows 19 cases reported for 2026, and while there is a risk of further spread, the most recent trends suggest stabilization or a slight increase. The base rate reflects recent years where such numbers are often below 30, but considering the current count, the most likely range is 16 to 30. Polio eradication efforts continue to impact the likelihood of a significant rise beyond this range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.7,
+        0.2,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 cases reported annually in recent years.",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Ongoing global eradication efforts are likely to maintain or reduce current case levels.",
+        "Historical trend shows a declining number of cases over recent years."
+      ],
+      "drivers_down": [
+        "There could be an unexpected outbreak or resurgence, which has occurred in past eradication efforts with other diseases.",
+        "Political instability or vaccine hesitancy in certain regions could hinder eradication efforts."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or unforeseen challenges in eradication efforts could lead to a higher number of cases than anticipated.",
+      "rationale": "The base rate for cases being 15 or fewer is high given the current trend of declining cases and strong global eradication efforts. The current cumulative figure for 2026 is 19, which suggests the count is likely to stabilize or decrease as eradication efforts continue. However, there is a possibility of slight increases, reflected in the lower probabilities for higher case counts.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.07,
+        0.02,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 cases in recent years",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Effective global polio vaccination campaigns continue to reduce case numbers.",
+        "Global surveillance and response strategies are improving."
+      ],
+      "drivers_down": [
+        "Potential for outbreaks in regions with low vaccination coverage.",
+        "Political instability and conflict could hinder vaccination efforts in certain regions."
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks due to vaccine-derived poliovirus or lapses in vaccination coverage could lead to higher than expected case counts.",
+      "rationale": "The current cumulative number of wild poliovirus type 1 cases for 2026 is 19, which is consistent with recent trends in reduction of cases due to effective vaccination and surveillance. Given the historical trend and current evidence, it is likely that the final count will remain close to this number, with a small probability of increasing significantly due to unforeseen outbreaks or challenges. Therefore, the likelihood is highest for the '15 or fewer' and '16 to 30' bins, with diminishing probabilities for higher case counts.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the global efforts in vaccination and eradication programs for poliovirus, particularly wild poliovirus type 1, it is likely that the number of cases will remain low. The majority of projections suggest that with continued vaccination efforts, the number of cases will be 15 or fewer. However, there is a small chance of localized outbreaks, which is why options with slightly higher case numbers are also considered.",
+  "evidence_record_ids": [
+    "ins-a24d570879b5",
+    "ins-ec12d3f813dc"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3140,
+    "total_output_tokens": 817,
+    "total_tokens": 3957,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2931,
+        "output_tokens": 709,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 108,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,289 @@
+{
+  "records": [
+    {
+      "id": "ins-1baeeba93ab8",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1002.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:22.297831+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5d1abd8e28e7428cad5b113b305ef94c",
+          "chunk_id": "doc-5d1abd8e28e7428cad5b113b305ef94c-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "the cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003 is 1002 cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-f5f91d8d51a4",
+      "question_id": "bfg_q7",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "deaths",
+      "metric_value": 479.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative number of confirmed deaths due to avian influenza A(H5N1) reported to WHO since 2003",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:22.298069+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5d1abd8e28e7428cad5b113b305ef94c",
+          "chunk_id": "doc-5d1abd8e28e7428cad5b113b305ef94c-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "including 479 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-371b78cff284",
+      "question_id": "bfg_q7",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "incident",
+      "time_window": "year",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "confirmed deaths due to avian influenza A(H5N1) reported to WHO in 2026 (year-to-date)",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:22.307677+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5d1abd8e28e7428cad5b113b305ef94c",
+          "chunk_id": "doc-5d1abd8e28e7428cad5b113b305ef94c-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "and 2 deaths have been reported to WHO globally"
+        }
+      ]
+    },
+    {
+      "id": "ins-19564353040e",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Cambodia",
+      "iso_country_code": "KH",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 39.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of laboratory-confirmed human cases of avian influenza A(H5N1) in Cambodia since 2023.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:26.039128+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2e2afeabc04b4f5992b583d18c5e5095",
+          "chunk_id": "doc-2e2afeabc04b4f5992b583d18c5e5095-c2",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "Cambodia has reported 39 laboratory-confirmed human cases, including 16 deaths."
+        }
+      ]
+    },
+    {
+      "id": "ins-4ed00c586ecc",
+      "question_id": "bfg_q7",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Cambodia",
+      "iso_country_code": "KH",
+      "pathogen": "avian influenza h5",
+      "metric_name": "deaths",
+      "metric_value": 16.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of deaths due to avian influenza A(H5N1) in Cambodia since 2023.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:26.039288+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2e2afeabc04b4f5992b583d18c5e5095",
+          "chunk_id": "doc-2e2afeabc04b4f5992b583d18c5e5095-c2",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "Cambodia has reported 39 laboratory-confirmed human cases, including 16 deaths."
+        }
+      ]
+    },
+    {
+      "id": "ins-f51c4ce20c16",
+      "question_id": "bfg_q7",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Cambodia",
+      "iso_country_code": "KH",
+      "pathogen": "avian influenza h5",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "No sustained human-to-human transmission has been identified associated with the recent reported human infections.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:26.039408+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2e2afeabc04b4f5992b583d18c5e5095",
+          "chunk_id": "doc-2e2afeabc04b4f5992b583d18c5e5095-c2",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "No sustained human-to-human transmission has been identified associated with the recent reported human infections with avian influenza A(H5N1) viruses."
+        }
+      ]
+    },
+    {
+      "id": "ins-dc59269a3f50",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed case of A(H5N1) virus infection in a child from Sylhet Division.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:24.533519+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2e2afeabc04b4f5992b583d18c5e5095",
+          "chunk_id": "doc-2e2afeabc04b4f5992b583d18c5e5095-c1",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "The case included in the risk assessment of 7 July 2026 in a child from Sylhet Division was confirmed as an A(H5N1) virus infection."
+        }
+      ]
+    },
+    {
+      "id": "ins-5efbc2acaa78",
+      "question_id": "bfg_q7",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 71.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-02-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Total reported human cases of A(H5) bird flu since February 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:29.979786+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-052fb2de1ef14a6692e215b547a841c5",
+          "chunk_id": "doc-052fb2de1ef14a6692e215b547a841c5-c1",
+          "source_url": "https://www.cdc.gov/bird-flu/situation-summary/",
+          "quote": "Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024"
+        }
+      ]
+    },
+    {
+      "id": "ins-67209594c5ab",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 71.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-02-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Total reported human cases of A(H5) bird flu since February 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:56:31.789369+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-cdf2b47c9efd46678451abc23fd2eddf",
+          "chunk_id": "doc-cdf2b47c9efd46678451abc23fd2eddf-c1",
+          "source_url": "https://www.cdc.gov/bird-flu/situation-summary/index.html",
+          "quote": "Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 53835,
+    "total_output_tokens": 1299,
+    "total_tokens": 55134,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 53835,
+        "output_tokens": 1299,
+        "calls": 25
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

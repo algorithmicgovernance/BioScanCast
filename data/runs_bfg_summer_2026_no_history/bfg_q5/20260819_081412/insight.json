@@ -1,0 +1,199 @@
+{
+  "records": [
+    {
+      "id": "ins-e573a4d873c0",
+      "question_id": "bfg_q5",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:18:42.331717+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b0e35d4b31be4e80bfae6d43b7582ddf",
+          "chunk_id": "doc-b0e35d4b31be4e80bfae6d43b7582ddf-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-1fae149a4de0",
+      "question_id": "bfg_q5",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:18:42.332207+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b0e35d4b31be4e80bfae6d43b7582ddf",
+          "chunk_id": "doc-b0e35d4b31be4e80bfae6d43b7582ddf-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-76c98d7b4d94",
+      "question_id": "bfg_q5",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 2325.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported during the outbreak declared on May 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:18:50.646539+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3543caaf8b8145e1b3c6cc5cae112b7f",
+          "chunk_id": "doc-3543caaf8b8145e1b3c6cc5cae112b7f-c0",
+          "source_url": "https://www.theguardian.com/world/2026/aug/17/what-is-ebola-why-who-says-drc-uganda-outbreak-global-health-emergency",
+          "quote": "As of Sunday, 2,325 people had died"
+        }
+      ]
+    },
+    {
+      "id": "ins-fc83822005a2",
+      "question_id": "bfg_q5",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 100.0,
+      "metric_unit": "fatalities",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "More than 100 fatalities reported in the first week of July.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:18:55.323153+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5eb2d5ee78a043759e37e69da455f9b1",
+          "chunk_id": "doc-5eb2d5ee78a043759e37e69da455f9b1-c1",
+          "source_url": "https://www.cdc.gov/ebola/situation-summary/index.html",
+          "quote": "more than 100 fatalities reported in the first week of July."
+        }
+      ]
+    },
+    {
+      "id": "ins-1db8cbb151f8",
+      "question_id": "bfg_q5",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4945.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases reported during the outbreak declared on May 15, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:18:50.646759+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3543caaf8b8145e1b3c6cc5cae112b7f",
+          "chunk_id": "doc-3543caaf8b8145e1b3c6cc5cae112b7f-c0",
+          "source_url": "https://www.theguardian.com/world/2026/aug/17/what-is-ebola-why-who-says-drc-uganda-outbreak-global-health-emergency",
+          "quote": "the number of confirmed cases stood at 4,945"
+        }
+      ]
+    },
+    {
+      "id": "ins-70a57520ff94",
+      "question_id": "bfg_q5",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "This Ebola outbreak surpassed 1,000 confirmed cases within 40 days of response activation.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:18:55.322746+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5eb2d5ee78a043759e37e69da455f9b1",
+          "chunk_id": "doc-5eb2d5ee78a043759e37e69da455f9b1-c1",
+          "source_url": "https://www.cdc.gov/ebola/situation-summary/index.html",
+          "quote": "This Ebola outbreak surpassed 1,000 confirmed cases within 40 days of response activation."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 94402,
+    "total_output_tokens": 988,
+    "total_tokens": 95390,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 94402,
+        "output_tokens": 988,
+        "calls": 44
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

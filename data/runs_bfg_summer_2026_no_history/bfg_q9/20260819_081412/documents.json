@@ -1,0 +1,1913 @@
+[
+  {
+    "id": "doc-fb82c8873b6a4246824f64a4774d773f",
+    "result_id": "fb82c8873b6a4246824f64a4774d773f",
+    "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+    "domain": "aphis.usda.gov",
+    "fetched_at": "2026-08-19T08:38:40.096665+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock",
+    "title": "HPAI Confirmed Cases in Livestock | Animal and Plant Health Inspection Service",
+    "published_date": "2024-06-14T07:12:01-04:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 492,
+    "token_count": 99,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-fb82c8873b6a4246824f64a4774d773f-c0",
+        "chunk_index": 0,
+        "text": "This map is updated each weekday to depict the number of new confirmed cases in livestock in the last 30 days and the cumulative number of confirmed cases in livestock by State.\nFor information related to the National Milk Testing Strategy, visit Testing.\nUsers may need to refresh the page to see the latest map and table data. To refresh the page, hold down the SHIFT key and click the Reload Page button in the upper left corner of your browser. You can also use SHIFT+F5 on your keyboard.",
+        "chunk_type": "prose",
+        "heading": "HPAI Confirmed Cases in Livestock",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 99,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-64e6ed6520964922a5ef2826eb08e3e6",
+    "result_id": "64e6ed6520964922a5ef2826eb08e3e6",
+    "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+    "domain": "who.int",
+    "fetched_at": "2026-08-19T08:38:40.356621+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+    "title": "WHO - Cumulative confirmed human cases of avian influenza A(H5N1) reported to WHO",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 1418,
+    "token_count": 406,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-64e6ed6520964922a5ef2826eb08e3e6-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus (cumulative-table PDF https://cdn.who.int/media/docs/default-source/influenza/h5n1-human-case-cumulative-table/cumulative-number-of-confirmed-human-cases-for-avian-influenza-a(h5n1)-reported-to-who--2003-20267f2be8b2-0de2-43f6-9d81-7d7c8c2b7670.pdf?sfvrsn=8cdec10c_3&download=true), retrieved 2026-08-19.\nAs of 7 August 2026, the cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003 is 1002 cases, including 479 deaths. In 2026 (year-to-date) 9 confirmed human A(H5N1) cases and 2 deaths have been reported to WHO globally. In 2025 the total was 30 cases and 12 deaths.\nCountries reporting confirmed human A(H5N1) cases in 2026: Bangladesh (3 cases), Cambodia (5 cases), India (1 case).\nNote: this custom scraper renders the WHO cumulative A(H5N1) human-case table into compact prose because the count lives only in a linked PDF whose wide per-country table does not extract cleanly. Counts are laboratory-confirmed human cases of avian influenza A(H5N1) reported to WHO (dates refer to onset of illness; the case total includes deaths; for the United States, cases reported as A(H5) are included). A(H5N1) is the predominant subtype among reported human H5 infections; other H5 subtypes (e.g. A(H5N6)) are covered by the WHO influenza-at-the-human-animal-interface assessments.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 406,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "7 August 2026",
+      "2026-08-19"
+    ],
+    "fetch_strategy": "custom:who_h5n1_cumulative",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-84f9d2a3297a437f94d07b81b2113114",
+    "result_id": "84f9d2a3297a437f94d07b81b2113114",
+    "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza",
+    "domain": "who.int",
+    "fetched_at": "2026-08-19T08:38:42.641191+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/teams/global-influenza-programme/avian-influenza",
+    "title": "Human-animal interface",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 1578,
+    "token_count": 279,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-84f9d2a3297a437f94d07b81b2113114-c0",
+        "chunk_index": 0,
+        "text": "Birds are the natural hosts for avian influenza viruses. Avian influenza refers to an infectious disease of birds caused by infection with avian influenza viruses. Avian influenza viruses can also infect non-avian species including wild and domestic (including companion and farmed) terrestrial and marine mammals. Avian influenza viruses primarily spread from infected birds to humans through close contact with birds or contaminated environments, such as in backyard poultry farm settings and at markets where birds are sold.\nThere have also been limited reports of transmission from other infected animals to humans.\nSwine influenza is a respiratory disease of pigs caused by influenza A viruses. Most swine influenza viruses do not cause disease in humans, but some countries have reported cases of human infection from certain swine influenza viruses. Close proximity to infected pigs or visiting locations where pigs are exhibited has been reported for most human cases, but some limited human-to-human transmission has occurred.\nJust like birds and pigs, other animals such as horses and dogs, can be infected with their own influenza viruses (canine influenza viruses, equine influenza viruses, etc.).",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 216,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-84f9d2a3297a437f94d07b81b2113114-c1",
+        "chunk_index": 1,
+        "text": "Dive in\nTechnical guidance",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 6,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-84f9d2a3297a437f94d07b81b2113114-c2",
+        "chunk_index": 2,
+        "text": "Protocol to investigate non-seasonal influenza and other emerging acute respiratory diseases\nInfluenza Investigations & Studies (Unity Studies)",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus > Surveillance and investigations",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 25,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-84f9d2a3297a437f94d07b81b2113114-c3",
+        "chunk_index": 3,
+        "text": "Clinical care of severe acute respiratory infections \u2013 Tool kit\nGuidelines for the clinical management of severe illness from influenza virus infections",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus > Clinical management",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 24,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-84f9d2a3297a437f94d07b81b2113114-c4",
+        "chunk_index": 4,
+        "text": "Five keys to safer food manual",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Focus > Food safety",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 6,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-84f9d2a3297a437f94d07b81b2113114-c5",
+        "chunk_index": 5,
+        "text": "Training materials",
+        "chunk_type": "prose",
+        "heading": "Human-animal interface > Terminology",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 2,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-e60e1b70e1c34f9faf1d613351030374",
+    "result_id": "e60e1b70e1c34f9faf1d613351030374",
+    "source_url": "https://www.cdc.gov/bird-flu/situation-summary/",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T08:38:42.914203+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/bird-flu/situation-summary",
+    "title": "A(H5) Bird Flu: Current Situation",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 1145,
+    "token_count": 243,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-e60e1b70e1c34f9faf1d613351030374-c0",
+        "chunk_index": 0,
+        "text": "\u2022 A(H5) bird flu is widespread in wild birds worldwide and is causing outbreaks in poultry and U.S. dairy cows with sporadic human cases in U.S. dairy and poultry workers.\n\u2022 While the current public health risk is low, CDC is watching the situation carefully and working with states to monitor people with animal exposures.\n\u2022 CDC is using its flu surveillance systems to monitor for A(H5) bird flu activity in people.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 87,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e60e1b70e1c34f9faf1d613351030374-c1",
+        "chunk_index": 1,
+        "text": "Footnote: Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024, seven were detected through national flu surveillance and 64 were detected through human monitoring.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > National situation summary since 2024",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 45,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e60e1b70e1c34f9faf1d613351030374-c2",
+        "chunk_index": 2,
+        "text": "When a case tests positive for A(H5) at a public health laboratory but testing at CDC is not able to confirm A(H5) infection, per Council of State and Territorial Epidemiologists (CSTE) guidance, a case is reported as probable. In January 2025, CDC updated requirements. After a public health laboratory's first three cases of influenza A(H5) virus have been confirmed by CDC, subsequent detections by that laboratory can be considered confirmatory.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Situation summary of confirmed and probable human cases since 2024",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 96,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e60e1b70e1c34f9faf1d613351030374-c3",
+        "chunk_index": 3,
+        "text": "For data on HPAI detections in animals, visit the USDA website.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Detections in Animals",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 15,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-3ebe85f351b94b8a83294d84a3dd7a05",
+    "result_id": "3ebe85f351b94b8a83294d84a3dd7a05",
+    "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+    "domain": "who.int",
+    "fetched_at": "2026-08-19T08:38:43.431789+00:00",
+    "document_type": "pdf",
+    "status": "success",
+    "canonical_url": "https://who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+    "title": "WHO Influenza at the human-animal interface (monthly risk assessment)",
+    "published_date": "2026-08-18T00:00:00",
+    "language": null,
+    "page_count": 6,
+    "char_count": 21330,
+    "token_count": 4745,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "chunks": [
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c0",
+        "chunk_index": 0,
+        "text": "1",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 1,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c1",
+        "chunk_index": 1,
+        "text": "\u2022\nNew human cases 2 : From 8 July to 7 August 2026, based on reporting date, detections of\ninfluenza A(H5N1) in one human and influenza A(H9N2) in eight humans were officially reported.\n\u2022\nCirculation of influenza viruses with zoonotic potential in animals: High pathogenicity avian\ninfluenza (HPAI) events in poultry and non-poultry animal species continue to be reported to the\nWorld Organisation for Animal Health (WOAH). 3 The Food and Agriculture Organization of the\nUnited Nations (FAO) also provides a global update on avian influenza viruses with pandemic\npotential. 4 Additionally, low pathogenicity avian influenza viruses as well as swine influenza\nviruses continue to circulate in animal populations.\n\u2022\nRisk assessment 5 : There have been no reports of sustained human-to-human transmission\nassociated with the above-mentioned human infection events. Based on information available at\nthe time of this risk assessment update, the overall public health risk from currently known\ninfluenza A viruses detected at the human-animal interface has not changed and , at present,\nthese viruses are not thought to be capable of sustained human - to - human transmission,\nalthough this could change as they evolve. Although human infections with viruses of animal\norigin are infrequent, they are not unexpected at the human-animal interface.\n\u2022\nIHR compliance 6 : This includes any influenza A virus that has demonstrated the capacity to infect\na human and its haemagglutinin (HA) gene (or protein) is not a mutated form of those, i.e. A(H1)\nor A(H3), circulating widely in the human population. Information from these notifications is\ncritical to inform risk assessments for influenza at the human-animal interface.\nAvian influenza viruses in humans\nA(H5N1), Bangladesh\nThe case included in the risk assessment of 7 July 2026 in a child from Sylhet Division was confirmed\nas an A(H5N1) virus infection.\n1 This summary and assessment covers information confirmed during this period and may include information\nreceived outside of this period.\n2 For epidemiological and virological features of human infections with animal influenza viruses not reported in\nthis assessment, see the reports on human cases of influenza at the human-animal interface published in the\nWeekly Epidemiological Record here .\n3 World Organisation for Animal Health (WOAH). Avian influenza. Global situation. Available at:\nhttps://www.woah.org/en/disease/avian-influenza/#ui-id-2 .\n4 Food and Agriculture Organization of the United Nations (FAO). Global Avian Influenza Viruses with Zoonotic\nPotential situation update. Available at: https://www.fao.org/animal-health/situation-updates/global-aiv-with-\nzoonotic-potential .\n5 World Health Organization (2012). Rapid risk assessment of acute public health events. World Health\nOrganization. Available at: https://iris.who.int/handle/10665/70810 .\n6 World Health Organization. Case definitions for the four diseases requiring notification in all circumstances\nunder the International Health Regulations (2005). Available at:\nhttps://www.who.int/publications/m/item/case-definitions-for-the-four-diseases-requiring-notification-to-\nwho-in-all-circumstances-under-the-ihr-(2005) .",
+        "chunk_type": "prose",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 8 July to 7 August 2026 1",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 713,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c2",
+        "chunk_index": 2,
+        "text": "2\nA(H5N1), Cambodia\nOn 10 July 2026, Cambodia notified WHO of one laboratory-confirmed human case of avian\ninfluenza A(H5N1) infection detected in a child in Phnom Penh who developed a fever on 30 June\n2026. After several days of treatment at a private clinic without improvement, she was admitted to\nhospital on 7 July with bronchopneumonia. Oropharyngeal and nasopharyngeal swabs collected on 8\nJuly were tested at the Institut Pasteur du Cambodge and reverse transcription polymerase chain\nreaction (RT-PCR) testing confirmed influenza A(H5N1) on 10 July, with positive results confirmed\nthrough repeat testing. The specimen was subsequently tested at the National Institute of Public\nHealth, which also confirmed influenza A(H5N1). The patient was in stable clinical condition, treated\nwith oseltamivir and subsequently recovered.\nSequence analysis identified the virus as a clade 2.3.2.1e virus, closely related to viruses that have\nbeen circulating in poultry and causing sporadic human infections in Cambodia since 2023.\nFollowing laboratory confirmation, the national and Phnom Penh Municipal Rapid Response Teams,\nin collaboration with the Ministry of Agriculture, Forestry and Fisheries and local authorities,\ninitiated epidemiological, environmental and animal health investigations, including active case\nfinding and assessments of potential poultry and environmental exposures. Neighbouring\nhouseholds kept fighting cocks and free-range chickens and the patient visited one of these\nhouseholds prior to symptom onset. The child also had exposure to areas where chicken droppings\nwere found. At the time of reporting, three animal samples collected from poultry in neighbouring\nhouseholds for laboratory testing tested negative for influenza A(H5N1).\nContacts of the case tested negative for influenza A(H5N1) and two tested positive for SARS-CoV-2.\nSince 2023, Cambodia has reported 39 laboratory-confirmed human cases, including 16 deaths.\nRisk assessment for avian influenza A(H5N1) viruses:\n1. What is the current global public health risk of additional human cases of infection with avian\ninfluenza A(H5N1) viruses?\nMost human infections so far have been reported in people exposed to A(H5N1) viruses, for\nexample, through contact with infected poultry or contaminated environments, including live\npoultry markets, and occasionally infected mammals and contaminated environments. As long as\nthe viruses continue to be detected in animals and related environments humans are exposed to,\nfurther human cases associated with such exposures are expected but remain unusual. The impact\nfor public health if additional sporadic cases are detected is minimal. The current overall global\npublic health risk is low.\n2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H5N1)\nviruses related to the events above?\nNo sustained human-to-human transmission has been identified associated with the recent reported\nhuman infections with avian influenza A(H5N1) viruses. There has been no reported human-to-\nhuman transmission of A(H5N1) viruses since 2007, although there may be gaps in investigations. In\n2007 and the years prior, small clusters of A(H5) virus infections in humans were reported, including\nsome involving health care workers, where limited human-to-human transmission could not be\nexcluded; however, sustained human-to-human transmission was not reported. Current evidence\nsuggests that influenza A(H5N1) viruses related to these events did not acquire the ability to\nefficiently transmit between people.",
+        "chunk_type": "prose",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 8 July to 7 August 2026 1",
+        "page_number": 2,
+        "table_data": null,
+        "token_count": 756,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c3",
+        "chunk_index": 3,
+        "text": "A(H9N2), China\t\t\t\t\nBetween 7 July and 5 August 2026, China notified WHO of eight laboratory-confirmed human cases\t\t\t\t\nof A(H9N2) virus infection.\t\t\t\t\n\t\t\tDetected in influenza-like\nillness surveillance\tStatus\nAge and sex\tProvince\tSymptom onset\t\t\n\t\t\tYes\tRecovered\n< 5-year-old male\tJiangsu\t22 June 2026\t\t\n< 5-year-old male\tGuangxi\t26 June 2026\tYes\tRecovered\nAdult male\tGuangdong\t26 June 2026\tNo; had underlying medical\ncondition and was hospitalized\tremained\nhospitalized at the\ntime of reporting\nAdult female\tJiangxi\t5 July 2026\tYes\tRecovered\n5-15-year-old\tJiangsu\t6 July 2026\tYes\tRecovered\nmale\t\t\t\t\n< 5-year-old\tGansu\t11 July 2026\tYes\tRecovered\nfemale\t\t\t\t\nAdult female\tYunnan\t13 July 2026\tNo; sought medical care for\nfollow-up of underlying medical\ncondition\tRecovered\n< 5-year-old\tYunnan\t28 July 2026\tYes; also had underlying medical\nconditions\tDischarged\nfemale\t\t\t\t\nAll cases had direct or indirect exposure to poultry and/or local live bird markets. Samples from\t\t\t\t\nenvironments associated with the likely area of exposure of the cases tested positive for A(H9)\t\t\t\t\nviruses. No further cases were detected among contacts of these cases.\t\t\t\t\nRisk assessment for avian influenza A(H9N2):\t\t\t\t\n1. What is the global public health risk of additional human cases of infection with avian influenza\t\t\t\t\nA(H9N2) viruses?\t\t\t\t\nMost human cases follow exposure to the A(H9N2) virus through contact with infected poultry or\t\t\t\t\ncontaminated environments. Most human infections of A(H9N2) to date have resulted in mild\t\t\t\t\nclinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional\t\t\t\t\nhuman cases associated with exposure to infected poultry or contaminated environments are\t\t\t\t\nexpected but remain unusual. The impact to public health if additional sporadic cases are detected is\t\t\t\t\nminimal. The overall global public health risk is low.\t\t\t\t\n2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)\t\t\t\t\nviruses related to these events?\t\t\t\t\nAt the present time, no sustained human-to-human transmission has been identified associated with\t\t\t\t\nthe recently reported human infections with A(H9N2) viruses. Current evidence suggests that\t\t\t\t\nA(H9N2) viruses from these cases did not acquire the ability of sustained transmission among\t\t\t\t\nhumans.\t\t\t\t",
+        "chunk_type": "table",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 8 July to 7 August 2026 1",
+        "page_number": 3,
+        "table_data": [
+          [
+            "A(H9N2), China",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Between 7 July and 5 August 2026, China notified WHO of eight laboratory-confirmed human cases",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "of A(H9N2) virus infection.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "Detected in influenza-like\nillness surveillance",
+            "Status"
+          ],
+          [
+            "Age and sex",
+            "Province",
+            "Symptom onset",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "Yes",
+            "Recovered"
+          ],
+          [
+            "< 5-year-old male",
+            "Jiangsu",
+            "22 June 2026",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "< 5-year-old male",
+            "Guangxi",
+            "26 June 2026",
+            "Yes",
+            "Recovered"
+          ],
+          [
+            "Adult male",
+            "Guangdong",
+            "26 June 2026",
+            "No; had underlying medical\ncondition and was hospitalized",
+            "remained\nhospitalized at the\ntime of reporting"
+          ],
+          [
+            "Adult female",
+            "Jiangxi",
+            "5 July 2026",
+            "Yes",
+            "Recovered"
+          ],
+          [
+            "5-15-year-old",
+            "Jiangsu",
+            "6 July 2026",
+            "Yes",
+            "Recovered"
+          ],
+          [
+            "male",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "< 5-year-old",
+            "Gansu",
+            "11 July 2026",
+            "Yes",
+            "Recovered"
+          ],
+          [
+            "female",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Adult female",
+            "Yunnan",
+            "13 July 2026",
+            "No; sought medical care for\nfollow-up of underlying medical\ncondition",
+            "Recovered"
+          ],
+          [
+            "< 5-year-old",
+            "Yunnan",
+            "28 July 2026",
+            "Yes; also had underlying medical\nconditions",
+            "Discharged"
+          ],
+          [
+            "female",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "All cases had direct or indirect exposure to poultry and/or local live bird markets. Samples from",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "environments associated with the likely area of exposure of the cases tested positive for A(H9)",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "viruses. No further cases were detected among contacts of these cases.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Risk assessment for avian influenza A(H9N2):",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "1. What is the global public health risk of additional human cases of infection with avian influenza",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "A(H9N2) viruses?",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Most human cases follow exposure to the A(H9N2) virus through contact with infected poultry or",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "contaminated environments. Most human infections of A(H9N2) to date have resulted in mild",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "clinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "human cases associated with exposure to infected poultry or contaminated environments are",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "expected but remain unusual. The impact to public health if additional sporadic cases are detected is",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "minimal. The overall global public health risk is low.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "viruses related to these events?",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "At the present time, no sustained human-to-human transmission has been identified associated with",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "the recently reported human infections with A(H9N2) viruses. Current evidence suggests that",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "A(H9N2) viruses from these cases did not acquire the ability of sustained transmission among",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "humans.",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "token_count": 551,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c4",
+        "chunk_index": 4,
+        "text": "3\n3. What is the likelihood of international spread of avian influenza A(H5N1) viruses by travellers?\nShould infected individuals from affected areas travel internationally, their infection may be\ndetected in another country during travel or after arrival. If this were to occur, further community-\nlevel spread is considered unlikely as current evidence suggests these viruses have not acquired the\nability to transmit easily among humans.\nA(H9N2), China\nBetween 7 July and 5 August 2026, China notified WHO of eight laboratory-confirmed human cases\nof A(H9N2) virus infection.",
+        "chunk_type": "prose",
+        "heading": "Influenza at the human-animal interface\nSummary and risk assessment, from 8 July to 7 August 2026 1",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 123,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c5",
+        "chunk_index": 5,
+        "text": "< 5-year-old male\nJiangsu\n22 June 2026\nYes\nRecovered\n< 5-year-old male\nGuangxi\n26 June 2026\nYes\nRecovered\nAdult male\nGuangdong\n26 June 2026\nNo; had underlying medical\ncondition and was hospitalized\nremained\nhospitalized at the\ntime of reporting\nAdult female\nJiangxi\n5 July 2026\nYes\nRecovered\n5-15-year-old\nmale\nJiangsu\n6 July 2026\nYes\nRecovered\n< 5-year-old\nfemale\nGansu\n11 July 2026\nYes\nRecovered\nAdult female\nYunnan\n13 July 2026\nNo; sought medical care for\nfollow-up of underlying medical\ncondition\nRecovered\n< 5-year-old\nfemale\nYunnan\n28 July 2026\nYes; also had underlying medical\nconditions\nDischarged\nAll cases had direct or indirect exposure to poultry and/or local live bird markets. Samples from\nenvironments associated with the likely area of exposure of the cases tested positive for A(H9)\nviruses. No further cases were detected among contacts of these cases.\nRisk assessment for avian influenza A(H9N2):\n1. What is the global public health risk of additional human cases of infection with avian influenza\nA(H9N2) viruses?\nMost human cases follow exposure to the A(H9N2) virus through contact with infected poultry or\ncontaminated environments. Most human infections of A(H9N2) to date have resulted in mild\nclinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional\nhuman cases associated with exposure to infected poultry or contaminated environments are\nexpected but remain unusual. The impact to public health if additional sporadic cases are detected is\nminimal. The overall global public health risk is low.\n2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)\nviruses related to these events?\nAt the present time, no sustained human-to-human transmission has been identified associated with\nthe recently reported human infections with A(H9N2) viruses. Current evidence suggests that\nA(H9N2) viruses from these cases did not acquire the ability of sustained transmission among\nhumans.",
+        "chunk_type": "prose",
+        "heading": "illness surveillance\nStatus",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 484,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c6",
+        "chunk_index": 6,
+        "text": "4\n3. What is the likelihood of international spread of avian influenza A(H9N2) virus by travellers?\nShould infected individuals from affected areas travel internationally, their infection may be\ndetected in another country during travel or after arrival. If this were to occur, further community\nlevel spread is considered unlikely as current evidence suggests the A(H9N2) virus subtype has not\nacquired the ability to transmit easily among humans.\nOverall risk management recommendations:\nSurveillance and investigations\n\u2022\nDue to the constantly evolving nature of influenza viruses, WHO continues to stress the\nimportance of global strategic surveillance in animals and humans to detect virologic,\nepidemiologic and clinical changes associated with circulating influenza viruses that may affect\nhuman (or animal) health. Continued vigilance is needed within affected and neighbouring areas\nto detect infections in animals and humans. Close collaboration with the animal health and\nenvironment sectors is essential to understand the extent of the risk of human exposure and to\nprevent and control the spread of animal influenza. WHO has published guidance on surveillance\nfor human infections with avian influenza A(H5) viruses .\n\u2022\nAs the extent of influenza virus circulation in animals is not clear, epidemiologic and virologic\nsurveillance and the follow-up of suspected human cases should continue systematically.\nGuidance on investigation of non-seasonal influenza and other emerging acute respiratory\ndiseases has been published on the WHO website.\n\u2022\nCountries should increase avian influenza surveillance in domestic and wild birds, enhance\nsurveillance for early detection in cattle populations in countries where HPAI is known to be\ncirculating, include HPAI as a differential diagnosis in non-avian species, including cattle and\nother livestock populations, with high risk of exposure to HPAI viruses; monitor and investigate\ncases in non-avian species, including livestock, report cases of HPAI in all animal species,\nincluding unusual hosts, to WOAH and other international organizations, share genetic\nsequences of avian influenza viruses in publicly available databases, implement preventive and\nearly response measures to break the HPAI transmission cycle among animals through\nmovement restrictions of infected livestock holdings and strict biosecurity measures in all\nholdings, employ good production and hygiene practices when handing animal products, and\nprotect persons in contact with suspected/infected animals. 7 More guidance can be found from\nWOAH and FAO .\n\u2022\nWhen there has been human exposure to a known outbreak of an influenza A virus in domestic\npoultry, wild birds or other animals \u2013 or when there has been an identified human case of\ninfection with such a virus \u2013 enhanced surveillance in potentially exposed human populations\nbecomes necessary. Enhanced surveillance should consider the health care seeking behaviour of\nthe population, and could include a range of active and passive health care and/or community-\nbased approaches, including: enhanced surveillance in local influenza-like illness (ILI)/SARI\nsystems, active screening in hospitals and of groups that may be at higher occupational risk of\nexposure, and inclusion of other sources such as traditional healers, private practitioners and\nprivate diagnostic laboratories.\n\u2022\nVigilance for the emergence of novel influenza viruses with pandemic potential should be\nmaintained at all times including during a non-influenza emergency. In the context of the co-\ncirculation of SARS-CoV-2 and influenza viruses, WHO has updated and published practical\nguidance for integrated surveillance .\n7 World Organisation for Animal Health. Statement on High Pathogenicity Avian Influenza in Cattle, 6\nDecember 2024 ( https://www.woah.org/en/high-pathogenicity-avian-influenza-hpai-in-cattle/ ).",
+        "chunk_type": "prose",
+        "heading": "illness surveillance\nStatus",
+        "page_number": 4,
+        "table_data": null,
+        "token_count": 760,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c7",
+        "chunk_index": 7,
+        "text": "5\nNotifying WHO\n\u2022\nAll human infections caused by a new subtype of influenza virus are notifiable under the\nInternational Health Regulations (IHR, 2005). 8,9 State Parties to the IHR (2005) are required to\nimmediately notify WHO of any laboratory-confirmed 10 case of a recent human infection caused\nby an influenza A virus with the potential to cause a pandemic 11 . Evidence of illness is not\nrequired for this report. Evidence of illness is not required for this report.\n\u2022\nWHO published the case definition for human infections with avian influenza A(H5) virus\nrequiring notification under IHR (2005): https://www.who.int/teams/global-influenza-\nprogramme/avian-influenza/case-definitions .\nVirus sharing and risk assessment\n\u2022\nIt is critical that these influenza viruses from animals or from humans are fully characterized in\nappropriate animal or human health influenza reference laboratories. Under WHO\u2019s Pandemic\nInfluenza Preparedness (PIP) Framework, Member States are expected to share influenza viruses\nwith pandemic potential on a timely basis 12 with a WHO Collaborating Centre for influenza of\nGISRS. The viruses are used by the public health laboratories to assess the risk of pandemic\ninfluenza and to develop candidate vaccine viruses.\n\u2022\nThe Tool for Influenza Pandemic Risk Assessment (TIPRA) provides an in-depth assessment of\nrisk associated with some zoonotic influenza viruses \u2013 notably the likelihood of the virus gaining\nhuman-to-human transmissibility, and the impact should the virus gain such transmissibility.\nTIPRA maps relative risk amongst viruses assessed using multiple risk elements. The results of\nTIPRA complement those of the risk assessment provided here, and those of prior TIPRA risk\nassessments are published at http://www.who.int/teams/global-influenza-programme/avian-\ninfluenza/tool-for-influenza-pandemic-risk-assessment-(tipra) .\nRisk reduction\n\u2022\nGiven the observed extent and frequency of avian influenza in poultry, wild birds and some wild\nand domestic mammals, the public should avoid contact with animals that are sick or dead from\nunknown causes, including wild animals, and should report dead birds and mammals or request\ntheir removal by contacting local wildlife or veterinary authorities.\n\u2022\nEggs, poultry meat and other poultry food products should be properly cooked and properly\nhandled during food preparation. Due to the potential health risks to consumers, raw milk\nshould be avoided. WHO advises consuming pasteurized milk. If pasteurized milk isn\u2019t available,\nheating raw milk until it boils makes it safer for consumption.\n\u2022\nWHO has published practical interim guidance to reduce the risk of infection in people exposed\nto avian influenza viruses.\n8 World Health Organization. International Health Regulations (2005), as amended through resolutions\nWHA67.13 (2014), WHA75.12 (2022), and WHA77.17 (2024) ( https://apps.who.int/gb/bd/pdf_files/IHR_2014-\n2022-2024-en.pdf ).\n9 World Health Organization. Case definitions for the four diseases requiring notification in all circumstances\nunder the International Health Regulations (2005) ( https://www.who.int/publications/m/item/case-\ndefinitions-for-the-four-diseases-requiring-notification-to-who-in-all-circumstances-under-the-ihr-(2005) ).\n10 World Health Organization. Manual for the laboratory diagnosis and virological surveillance of influenza\n(2011) ( https://apps.who.int/iris/handle/10665/44518 ).\n11 World Health Organization. Pandemic influenza preparedness framework for the sharing of influenza viruses\nand access to vaccines and other benefits, 2nd edition ( https://iris.who.int/handle/10665/341850 ).\n12 World Health Organization. Operational guidance on sharing influenza viruses with human pandemic\npotential (IVPP) under the Pandemic Influenza Preparedness (PIP) Framework (2017)\n( https://apps.who.int/iris/handle/10665/259402 ).",
+        "chunk_type": "prose",
+        "heading": "illness surveillance\nStatus",
+        "page_number": 5,
+        "table_data": null,
+        "token_count": 868,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-3ebe85f351b94b8a83294d84a3dd7a05-c8",
+        "chunk_index": 8,
+        "text": "6\nTrade and travellers\n\u2022\nWHO advises that travellers to countries with known outbreaks of animal influenza should avoid\nfarms, contact with animals in live animal markets, entering areas where animals may be\nslaughtered, or contact with any surfaces that appear to be contaminated with animal excreta.\nTravelers should also wash their hands often with soap and water. All individuals should follow\ngood food safety and hygiene practices.\n\u2022\nWHO does not advise special traveller screening at points of entry or restrictions with regards to\nthe current situation of influenza viruses at the human-animal interface. For recommendations\non safe trade in animals and related products from countries affected by these influenza viruses,\nrefer to WOAH guidance.\nLinks:\nWHO Human-Animal Interface web page\nhttps://www.who.int/teams/global-influenza-programme/avian-influenza\nWHO Influenza (Avian and other zoonotic) fact sheet\nhttps://www.who.int/news-room/fact-sheets/detail/influenza-(avian-and-other-zoonotic)\nWHO Protocol to investigate non-seasonal influenza and other emerging acute respiratory diseases\nhttps://www.who.int/publications/i/item/WHO-WHE-IHM-GIP-2018.2\nWHO Public health resource pack for countries experiencing outbreaks of influenza in animals:\nhttps://www.who.int/publications/i/item/9789240076884\nCumulative Number of Confirmed Human Cases of Avian Influenza A(H5N1) Reported to WHO\nhttps://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus\nAvian Influenza A(H7N9) Information\nhttps://www.who.int/teams/global-influenza-programme/avian-influenza/avian-influenza-a-( h7n9 )-\nvirus\nWorld Organisation of Animal Health (WOAH) web page: Avian Influenza\nhttps://www.woah.org/en/home/\nFood and Agriculture Organization of the United Nations (FAO) webpage: Avian Influenza\nhttps://www.fao.org/animal-health/avian-flu-qa/en/\nWOAH/FAO Network of Expertise on Animal Influenza (OFFLU)\nhttp://www.offlu.org/",
+        "chunk_type": "prose",
+        "heading": "illness surveillance\nStatus",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 489,
+        "extractor": "pymupdf"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "A(H9N2), China",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Between 7 July and 5 August 2026, China notified WHO of eight laboratory-confirmed human cases",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "of A(H9N2) virus infection.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Detected in influenza-like\nillness surveillance",
+          "Status"
+        ],
+        [
+          "Age and sex",
+          "Province",
+          "Symptom onset",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Yes",
+          "Recovered"
+        ],
+        [
+          "< 5-year-old male",
+          "Jiangsu",
+          "22 June 2026",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "< 5-year-old male",
+          "Guangxi",
+          "26 June 2026",
+          "Yes",
+          "Recovered"
+        ],
+        [
+          "Adult male",
+          "Guangdong",
+          "26 June 2026",
+          "No; had underlying medical\ncondition and was hospitalized",
+          "remained\nhospitalized at the\ntime of reporting"
+        ],
+        [
+          "Adult female",
+          "Jiangxi",
+          "5 July 2026",
+          "Yes",
+          "Recovered"
+        ],
+        [
+          "5-15-year-old",
+          "Jiangsu",
+          "6 July 2026",
+          "Yes",
+          "Recovered"
+        ],
+        [
+          "male",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "< 5-year-old",
+          "Gansu",
+          "11 July 2026",
+          "Yes",
+          "Recovered"
+        ],
+        [
+          "female",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult female",
+          "Yunnan",
+          "13 July 2026",
+          "No; sought medical care for\nfollow-up of underlying medical\ncondition",
+          "Recovered"
+        ],
+        [
+          "< 5-year-old",
+          "Yunnan",
+          "28 July 2026",
+          "Yes; also had underlying medical\nconditions",
+          "Discharged"
+        ],
+        [
+          "female",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "All cases had direct or indirect exposure to poultry and/or local live bird markets. Samples from",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "environments associated with the likely area of exposure of the cases tested positive for A(H9)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "viruses. No further cases were detected among contacts of these cases.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Risk assessment for avian influenza A(H9N2):",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1. What is the global public health risk of additional human cases of infection with avian influenza",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "A(H9N2) viruses?",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Most human cases follow exposure to the A(H9N2) virus through contact with infected poultry or",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "contaminated environments. Most human infections of A(H9N2) to date have resulted in mild",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "clinical illness. Since the virus is endemic in poultry in multiple countries in Africa and Asia, additional",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "human cases associated with exposure to infected poultry or contaminated environments are",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "expected but remain unusual. The impact to public health if additional sporadic cases are detected is",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "minimal. The overall global public health risk is low.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2. What is the likelihood of sustained human-to-human transmission of avian influenza A(H9N2)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "viruses related to these events?",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "At the present time, no sustained human-to-human transmission has been identified associated with",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "the recently reported human infections with A(H9N2) viruses. Current evidence suggests that",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "A(H9N2) viruses from these cases did not acquire the ability of sustained transmission among",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "humans.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "7 August 2026",
+      "7 July 2026",
+      "10 July 2026",
+      "30 June\n2026",
+      "5 August 2026",
+      "22 June 2026",
+      "26 June 2026",
+      "5 July 2026",
+      "6 July 2026",
+      "11 July 2026",
+      "13 July 2026",
+      "28 July 2026",
+      "6\nDecember 2024"
+    ],
+    "fetch_strategy": "custom:who_h5_hai",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-cbed64fa1594443487a013b03fd8e232",
+    "result_id": "cbed64fa1594443487a013b03fd8e232",
+    "source_url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-livestock",
+    "domain": "aphis.usda.gov",
+    "fetched_at": "2026-08-19T08:40:22.433904+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-livestock",
+    "title": "Secure Our Herds | Animal and Plant Health Inspection Service",
+    "published_date": "2024-11-06T12:27:13-05:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 455,
+    "token_count": 92,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-cbed64fa1594443487a013b03fd8e232-c0",
+        "chunk_index": 0,
+        "text": "The U.S. Department of Agriculture (USDA), Food and Drug Administration (FDA), Centers for Disease Control and Prevention (CDC), and State veterinary and public health officials are working together to protect livestock, farms, and communities from avian influenza.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 50,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-cbed64fa1594443487a013b03fd8e232-c1",
+        "chunk_index": 1,
+        "text": "If you suspect a possible HPAI infection on your farm, report it!\nIsolate sick animals and contact your veterinarian, State animal health official , or the APHIS Area Veterinarian in Charge.",
+        "chunk_type": "prose",
+        "heading": "Our Response to Avian Influenza > Resources > Look for Signs of Illness and Report",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 42,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-1d6047878ab64806857fdc3d4ba06ac6",
+    "result_id": "1d6047878ab64806857fdc3d4ba06ac6",
+    "source_url": "https://www.cdc.gov/bird-flu/situation-summary/mammals.html?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fflu%2Favianflu%2Fmammals.htm",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T08:40:22.779455+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/bird-flu/situation-summary/mammals.html?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fflu%2Favianflu%2Fmammals.htm",
+    "title": "Current Situation: Bird Flu in Dairy Cows",
+    "published_date": "2026-07-16T15:30:25+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4040,
+    "token_count": 896,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c0",
+        "chunk_index": 0,
+        "text": "A multistate outbreak of HPAI A(H5N1) bird flu in dairy cows was first reported on March 25, 2024. This is the first time that these bird flu viruses had been found in cows. In the United States, since 2022, USDA APHIS has reported HPAI A(H5N1) virus detections in more than 200 mammals.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 82,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c1",
+        "chunk_index": 1,
+        "text": "On April 1, CDC confirmed one human HPAI A(H5N1) infection in a person with exposure to dairy cows in Texas that were presumed to be infected with the virus. This is thought to be the first instance of likely mammal to human spread of HPAI A(H5N1) virus. In May 2024, CDC began reporting additional, sporadic human cases in people who had exposure to infected dairy cows. That latest human case counts are available at H5N1 Bird Flu: Current Situation Summary.",
+        "chunk_type": "prose",
+        "heading": "What to know > Domestic Summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 110,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c2",
+        "chunk_index": 2,
+        "text": "CDC systems that monitor national, state, and local level influenza data are being used during the current avian influenza A(H5N1) situation. These systems show no indicators of unusual influenza activity in people, including avian influenza A(H5N1).",
+        "chunk_type": "prose",
+        "heading": "What to know > Domestic Summary > Monitoring for H5 in People",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 52,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c3",
+        "chunk_index": 3,
+        "text": "While rare, mammals can be infected with highly pathogenic avian influenza (HPAI) A(H5N1) (\"H5N1 bird flu\") viruses. Reports of these sporadic infections in mammals have occurred globally amid widespread outbreaks of bird flu infections in wild birds and poultry.\nMammals can be infected with H5N1 bird flu viruses when they eat infected birds, poultry, or other animals and/or if they are exposed to environments contaminated with virus. Spread of H5N1 bird flu viruses from mammal to mammal is thought to be rare, but possible.",
+        "chunk_type": "prose",
+        "heading": "What to know > Background",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 119,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c4",
+        "chunk_index": 4,
+        "text": "In recent years, HPAI H5N1 infections have been detected in mammals including but not limited to wild or feral animals such as foxes, bears, and seals; stray or domestic animals such as cats and dogs; farm animals, such as goats, cows, and mink, and zoo animals such as tigers and leopards.",
+        "chunk_type": "prose",
+        "heading": "What to know > Background > Other documented mammalian infections",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 72,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c5",
+        "chunk_index": 5,
+        "text": "Globally, sporadic HPAI A(H5N1) virus infections in mammals have been reported across the continents of Asia, North America, South America, and Europe. More information about the global impact of avian influenza can be found here: Avian Influenza - WOAH - World Organisation for Animal Health.\nSpecifically, recent HPAI A(H5N1) infections in mammals have been detected in sea lions in Peru and Chile, sea elephants in Argentina, and foxes in Canada, France, and other countries.",
+        "chunk_type": "prose",
+        "heading": "What to know > Global Summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 113,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c6",
+        "chunk_index": 6,
+        "text": "The wide geographic spread of HPAI A(H5N1) viruses in wild birds, poultry, and some other mammals, including in cows, could create additional opportunities for people to be exposed to these viruses. Therefore, there could be an increase in sporadic human infections resulting from bird and animal exposures, even if the risk of these viruses spreading from birds to people has not increased. CDC believes the current risk to the general public from bird flu viruses is low. People who have job-related or recreational exposure to infected birds or animals, including cows, are at greater risk of contracting HPAI A(H5N1) virus. CDC has recommendations related to testing, treatment of HPAI A(H5N1) infection and prevention of exposure to these viruses: Highly Pathogenic Avian Influenza A(H5N1) Virus in Animals: Interim Recommendations for Prevention, Monitoring, and Public Health Investigations.",
+        "chunk_type": "prose",
+        "heading": "What to know > Risk to Humans",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 187,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-1d6047878ab64806857fdc3d4ba06ac6-c7",
+        "chunk_index": 7,
+        "text": "While getting a seasonal flu vaccine only prevents seasonal flu and will not protect against H5N1 bird flu, it is important that people who may have frequent exposure to infected or potentially infected birds or other animals get a seasonal flu vaccine, ideally 2 weeks before their potential exposure. This is because it can reduce the prevalence and severity of seasonal flu and might reduce the very rare risk of coinfection with a human seasonal virus and an avian virus at the same time, and the theoretical risk that reassortment between the two could result in a new virus. Such dual infections, while very rare, could theoretically result in genetic reassortment of the two different influenza A viruses and lead to a new influenza A virus that has a different combination of genes, and which could pose a significant public health concern.",
+        "chunk_type": "prose",
+        "heading": "What to know > Vaccination > Getting a seasonal flu vaccine will not protect against H5N1 bird flu",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 161,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "March 25, 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-57b935863dd8426180810ad7b15c2b70",
+    "result_id": "57b935863dd8426180810ad7b15c2b70",
+    "source_url": "https://www.cdc.gov/flu/whats-new/2025-2026-influenza-activity.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T08:40:23.884959+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/flu/whats-new/2025-2026-influenza-activity.html",
+    "title": "Influenza Activity in the United States during the 2024\u201325 Season and Composition of the 2025\u201326 Influenza Vaccine",
+    "published_date": "2026-05-05T14:12:33+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 60139,
+    "token_count": 14817,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c0",
+        "chunk_index": 0,
+        "text": "\u2022 This report summarizes influenza activity in the United States during the 2024\u201325 season.\n\u2022 It also includes the recommended composition of the Northern Hemisphere 2025\u201326 influenza vaccines and a brief update on influenza activity occurring between April and September of 2025 in the Southern Hemisphere.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 58,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c1",
+        "chunk_index": 1,
+        "text": "The Centers for Disease Control and Prevention (CDC) collects, compiles, and analyzes data on influenza viruses and associated morbidity and mortality in the United States. Influenza activity in the United States during the 2024\u201325 season (September 29, 2024 \u2013 August 30, 2025) was classified as high severity, marking the most severe influenza season since 2017\u201318. High severity was reflected across multiple indicators, including influenza-associated outpatient visits, hospitalizations, and deaths, underscoring the significant public health impact of the 2024\u201325 season. Influenza activity began increasing in mid-November and peaked in early February 2025. Influenza activity then steadily declined to interseasonal levels by May 2025 and has remained low through August 2025.\nDuring the 2024\u201325 season, influenza A viruses were predominant, with A(H1N1)pdm09 and A(H3N2) viruses detected at approximately equal levels. Influenza B activity remained low throughout the season but increased slightly later in the season. No influenza B/Yamagata lineage viruses were detected for the fifth consecutive season.\nThis report summarizes influenza activity in the United States during the 2024\u201325 season as reported to CDC through its collaborative efforts with clinical and public health laboratories, outpatient providers, emergency departments, hospitals, vital statistics offices, and state and local health departments. It also includes the recommended composition of the Northern Hemisphere 2025\u201326 influenza vaccines and a brief update on influenza activity occurring between April and September of 2025 in the Southern Hemisphere.",
+        "chunk_type": "prose",
+        "heading": "What to know > Executive Summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 333,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c2",
+        "chunk_index": 2,
+        "text": "The influenza virologic surveillance system is comprised of the U.S. Influenza Collaborating Laboratories (ICL) and National Respiratory and Enteric Virus Surveillance System (NREVSS) laboratories, which include both clinical and public health laboratories throughout the United States. Clinical laboratories primarily test for diagnostic purposes, and their data are used to understand timing and intensity of influenza activity. Public health laboratories primarily test specimens for influenza for surveillance purposes to understand what influenza virus subtypes and lineages are circulating and the ages of people that are infected 1.\nDuring the 2024\u201325 influenza season, clinical laboratories reporting to CDC tested 3,978,954 respiratory specimens for influenza viruses using clinical diagnostic tests. Among these, 489,579 (12.3%) tested positive, including 434,985 (88.8%) for influenza A and 54,594 (11.2%) for influenza B viruses (Figure 1). The national weekly percentage of respiratory specimens testing positive for influenza ranged from 0.4% to 31.6%, with peak activity observed during the week ending February 1, 2025 (week 5). This represents the highest peak percentage reported in the past nine influenza seasons (since 2015\u201316)*. Influenza A viruses predominated overall and peaked at 30.4% in late January, while influenza B viruses circulated at lower levels, peaking at 4.3% in late March.\nBased on the percentage of specimens testing positive in clinical laboratories, peak influenza activity in each of the 10 Health and Human Services (HHS) regions occurred between late January 2025 and early February 2025. Regions 4, 6, 7, and 9 (Southeast, South Central, Central, and West Coast) peaked late in January. Regions 1, 2, 3, 5, 8, and 10 (New England, New York/New Jersey/Puerto Rico, Mid-Atlantic, Midwest, Mountain, and Pacific Northwest) peaked in early February.\nFigure 1. Percentage of Influenza Positive Test Results Reported by Clinical Laboratories to CDC, National Summary by Week and Influenza Season \u2014 United States, 2024\u201325 and Selected Previous Seasons\n*Beginning in the 2015-16 season, reports from public health and clinical laboratories were presented separately in the weekly influenza update, FluView.\nPublic health laboratories tested 155,297 specimens and reported 100,015 influenza positive specimens, with 94,078 (94.1%) positive for influenza A and 5,937 (5.9%) positive for influenza B viruses. Among 84,260 (89.6%) seasonal influenza A viruses that were subtyped, 44,733 (53.1%) were influenza A(H1N1)pdm09 viruses, and 39,527 (46.9%) were influenza A(H3N2) viruses. Influenza B lineage information was available for 3,297 (55.5%) influenza B viruses, with all of them belonging to the Victoria lineage (Figure 2). No influenza B/Yamagata lineage viruses have been identified worldwide after March 2020.\nFigure 2. Seasonal Influenza Positive Tests Reported to CDC by U.S. Public Health Laboratories, National Summary, 2024\u201325 Season\nNationally, the 2024\u201325 influenza season was characterized by the co-circulation of influenza A(H1N1)pdm09 and A(H3N2) viruses, with A(H1N1)pdm09 being detected slightly more frequently at 53.1%, while A(H3N2) accounted for 46.9% of the subtyped seasonal influenza A viruses. As overall influenza activity declined beginning in late March, influenza A(H1N1)pdm09, A(H3N2), and B viruses continued to co-circulate at lower levels. In most HHS regions, influenza A(H1N1)pdm09 and A(H3N2) circulated at similar proportions and together accounted for the majority of viruses, while Influenza B viruses increased slightly in mid-May. For additional regional level data, please visit FluView Interactive.\nAmong influenza A viruses that were subtyped, similar proportions of A(H1N1)pdm09 and A(H3N2) viruses were reported among persons aged 0\u20134 years (50.2% and 49.8%, respectively). A(H1N1)pdm09 viruses were slightly more frequently reported among individuals aged 25-64 years (55.5%) and 65 years and older (59.9%), while influenza A(H3N2) viruses were slightly more frequently reported in persons aged 5-24 years (53.7%). For additional age group data, please visit FluView Interactive.",
+        "chunk_type": "prose",
+        "heading": "What to know > Virus Surveillance",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1002,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c3",
+        "chunk_index": 3,
+        "text": "Genetic characterization of the viruses circulating during this time period was conducted using next generation sequencing, and the genomic data were analyzed and submitted to publicly accessible databases (GenBank: https://www.ncbi.nlm.nih.gov/genbank/ and EpiFlu: https://www.gisaid.org). Phylogenies of representative subsets of genetic data from CDC and other submitters can be visualized in real time at https://nextstrain.org/.\nTo evaluate whether genetic changes in the hemagglutinin (HA) of circulating viruses affected antigenicity, antigenic characterizations were conducted using hemagglutination inhibition (HI) assays (A(H1N1)pdm09, A(H3N2) and B viruses) or High-content Imaging-based micro-Neutralization Test (HINT) (A(H3N2) viruses) and post-infection ferret antisera raised to reference viruses representing the cell- and recombinant-based 2024\u201325 Northern Hemisphere vaccine viruses. Both assays determine how well antibodies raised to the influenza vaccine reference viruses recognize or bind to circulating viruses. HI assay measures how well antibodies inhibit the binding between the HA of the virus and the sialic acid receptors on the surface of red blood cells, whereas HINT measures how well antibodies neutralize or block virus infection of a cell. Viruses selected for antigenic characterization are a subset of the recent genetically characterized viruses and are chosen based on the genetic changes in their surface proteins and may not be proportional to the number of such viruses circulating in the United States.\nCDC genetically characterized 5,180 viruses (4,278 influenza A and 902 influenza B) collected in the United States during the 2024\u201325 season and antigenically characterized viruses representing the co-circulating genetic clades. Overall, the influenza vaccine antigens for A(H1N1)pdm09 and B/Victoria elicited antibodies that reacted well with most of the viruses tested during this period. Antibodies elicited by the vaccine antigens for A(H3N2) exhibited reduced reactivity but still reacted well with the majority of the circulating viruses tested. Detailed characterization data for each group are below.",
+        "chunk_type": "prose",
+        "heading": "What to know > Virus Characterization & Antiviral Susceptibility",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 439,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c4",
+        "chunk_index": 4,
+        "text": "Phylogenetic analysis of the HA demonstrated that viruses characterized belonged to 2 clades: 5a.2a (32.3% [n=646]) and 5a.2a.1 (67.7% [n=1,353]). The A(H1N1)pdm09 component for the 2024\u201325 Northern Hemisphere influenza vaccines contained HA genes from clade 5a.2a.1. Each clade was further classified to HA subclades using Nextclade (https://clades.nextstrain.org). In clade 5a.2a, subclade C.1.9.3 was the largest proportion subclade identified, representing 24.4% (n=487) of total characterized A(H1N1)pdm09 viruses. Subclade D.3.1 was the largest proportion subclade in clade 5a.2a.1 and among all characterized A(H1N1)pdm09 viruses, representing 56.4% (n=1,128) of all characterized A(H1N1)pdm09 viruses. Multiple subclades co-circulated in the beginning of the season, but subclade D.3.1 increased in proportion and has been the predominant subclade since February 2025. Nearly all (99.3%, n=573) of the A(H1N1)pdm09 viruses antigenically characterized were well recognized (reacting at titers that were within 4-fold of the homologous virus titer by HI) by ferret antisera to cell-grown A/Wisconsin/67/2022-like reference viruses which represent the A(H1N1)pdm09 component for the cell- and recombinant-based influenza vaccines.",
+        "chunk_type": "prose",
+        "heading": "What to know > Virus Characterization & Antiviral Susceptibility > Influenza A(H1N1)pdm09",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 372,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c5",
+        "chunk_index": 5,
+        "text": "The majority (99.7% [n=2,273]) of genetically characterized A(H3N2) viruses belonged to the 2a.3a.1 clade, while the rest (0.3% [n=6]) belonged to the 2a.3a clade. The A(H3N2) component for the 2024\u201325 Northern Hemisphere influenza vaccines contained HA genes from the 2a.3a.1 clade. Clade 2a.3a.1 was classified into multiple HA subclades using Nextclade (https://clades.nextstrain.org), among which subclade J.2 represented the majority (74.3% [n=1,693]) of characterized A(H3N2) viruses while another 25% of viruses belonged to further divided J.2 subclades (J.2.1 to J.2.5). Antigenic analysis showed that 429 (54.7%) of the A(H3N2) viruses antigenically characterized were well-recognized (reacting at titers that were within 4-fold of the homologous virus titer in HI or reacting at titers that were less than 8-fold of the homologous virus in HINT) by ferret antisera to cell-grown A/Massachusetts/18/2022-like reference viruses that represented the A(H3N2) component for the cell- and recombinant-based influenza vaccines. Viruses recognized less well by ferret antisera to cell-grown A/Massachusetts/18/2022-like reference viruses were observed in some J.2 viruses and all viruses in the J.2.3, J.2.4 and J.2.5 subclades. Many of the viruses from subclade J.2 with reduced recognition had HA genes with additional substitutions of S145N or T135K (loss of a putative glycosylation site) or V223I. Additional HA substitutions of note for the other subclades include N158K (J.2.5), N158K and K189R (J.2.3), and N135K (loss of a putative glycosylation site) and K189R (J.2.4).",
+        "chunk_type": "prose",
+        "heading": "What to know > Virus Characterization & Antiviral Susceptibility > Influenza A(H3N2)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 473,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c6",
+        "chunk_index": 6,
+        "text": "All influenza B viruses for which characterization was possible belonged to the B/Victoria-lineage. Infections with B/Yamagata viruses have not been identified globally after March 2020. Phylogenetic analysis of the HA genes showed that all (n=902) belonged to clade V1A.3a.2. The genetic clade of the B/Victoria-lineage component for the 2024\u201325 Northern Hemisphere influenza vaccines was V1A.3a.2 clade. Clade V1A.3a.2 was classified into various HA subclades using Nextclade (https://clades.nextstrain.org). Among them, 9 subclades (C.3, C.3.1, C.3.2, C.5, C.5.1, C.5.5, C.5.6, C.5.6.1 and C.5.7) co-circulated during the 2024\u201325 season. While C.5, C.5.1, C.5.6 and C.5.7 were the major subclades in the beginning of the season, subclade C.3.1 increased in proportion and became one of the major co-circulating subclades after March 2025. Antigenic analysis showed that 264 (84.9%) of the B/Victoria viruses antigenically characterized were well-recognized (reacting at titers that were within 4-fold of the homologous virus titer) by ferret antisera to cell-grown B/Austria/1359417/2021-like reference viruses representing the B/Victoria component for the cell- and recombinant-based influenza vaccines. Most viruses that were recognized less well by ferret antisera to cell-grown B/Austria/1359417/2021-like reference viruses belonged to subclades C.3.1 and C.3.2. Both of these subclades have an additional HA substitution D197N which adds a putative glycosylation site.\nFigure 3. Genetic Characterization of HA genes Based on Phylogenic Analysis of Influenza Viruses Collected during the 2024\u201325 season\nCDC also assesses susceptibility of influenza viruses to antiviral medications. Between September 29, 2024, and August 30, 2025, a total of 5,078 viruses collected in the United States were characterized for susceptibility to neuraminidase (NA) inhibitors using sequence-based analysis, and a subset of 487 viruses (9.6%) selected to represent a variety of locations, collection dates and genetic clades, were tested using a functional neuraminidase inhibition assay. Based on sequence analysis, 12 viruses had known, or suspected mutations associated with reduced inhibition by the NA inhibitors. Of these 12 viruses, 8 A(H1N1)pdm09 viruses contained NA-H275Y amino acid substitution, 1 A(H1N1)pdm09 virus had NA-S247R, and 1 A(H1N1)pdm09 virus had a combination of NA substitutions I223V + S247N. The remaining 2 viruses were A(H3N2) viruses; one had an NA-E119V substitution, and another had a mix of amino acids at two positions of the NA, 119 (E and V) and 292 (R and K). All viruses lacking NA mutations displayed normal inhibition by the NA inhibitors. Six of eight A(H1N1)pdm09 viruses containing NA-H275Y were available for testing by a functional assay and, as expected, they showed highly reduced inhibition by oseltamivir and peramivir. One A(H1N1)pdm09 virus with NA-S247R displayed reduced inhibition by oseltamivir and zanamivir and highly reduced inhibition by peramivir. One A(H1N1)pdm09 virus with substitutions I223V + S247N showed reduced inhibition by oseltamivir. One A(H3N2) virus with NA-E119V showed highly reduced inhibition by oseltamivir. To better understand the effects of NA-E119V or NA-R292K, separation of viruses containing NA-E119V or NA-R292K was done by a limiting dilution using a clinical specimen with a mix of NA-E119V/E + R292K/R. The separated virus with NA-E119V displayed highly reduced inhibition by oseltamivir. The separated virus with NA-R292K also displayed highly reduced inhibition by oseltamivir, as well as reduced inhibition by zanamivir and peramivir.\nA total of 4,862 viruses were characterized for susceptibility to the polymerase acidic (PA) cap-dependent endonuclease inhibitor baloxavir using sequence-based analysis, and a subset of 486 viruses (10.0%) were tested phenotypically. Based on sequence analysis, all viruses, except 3, lacked known or suspected substitutions associated with reduced susceptibility to baloxavir. Of these 3 viruses, 1 A(H1N1)pdm09 and 1 A(H3N2) viruses contained a PA-I38T amino acid substitution, and 1 A(H3N2) virus had PA-A37T. All tested viruses were susceptible to baloxavir, except these 3 viruses with PA-I38T or PA-A37T, which showed reduced susceptibility to baloxavir.\nTable 1. Assessment of Virus Susceptibility to Antiviral Medications, Viruses Collected in the U.S.September 29, 2024 \u2013 August 30, 2025",
+        "chunk_type": "prose",
+        "heading": "What to know > Virus Characterization & Antiviral Susceptibility > Influenza B",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1190,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c7",
+        "chunk_index": 7,
+        "text": "Antiviral Medication\tTotal Viruses\tA(H1N1)\tA(H3N2)\tB/Victoria\nNeuraminidase Inhibitors\tOseltamivir\tViruses Tested\t5078\t1962\t2244\t872\nReduced Inhibition\t2 (<0.1%)\t2 (0.1%)\t0\t0\nHighly Reduced Inhibition\t10 (0.2%)\t8 (0.4%)\t2 (<0.1%)\t0\nPeramivir\tViruses Tested\t5078\t1962\t2244\t872\nReduced Inhibition\t1 (<0.1%)\t0\t1 (<0.1%)\t0\nHighly Reduced Inhibition\t9 (0.2%)\t9 (0.5%)\t0\t0\nZanamivir\tViruses Tested\t5078\t1962\t2244\t872\nReduced Inhibition\t2 (<0.1%)\t1 (<0.1%)\t1 (<0.1%)\t0\nHighly Reduced Inhibition\t0\t0\t0\t0\nPA Cap-Dependent Endonuclease Inhibitor\tBaloxavir\tViruses Tested\t4862\t1813\t2197\t852\nDecreased Susceptibility\t3 (<0.1)\t1 (<0.1)\t2 (0.1)\t0",
+        "chunk_type": "table",
+        "heading": "What to know > Virus Characterization & Antiviral Susceptibility > Influenza B",
+        "page_number": null,
+        "table_data": [
+          [
+            "Antiviral Medication",
+            "Total Viruses",
+            "A(H1N1)",
+            "A(H3N2)",
+            "B/Victoria"
+          ],
+          [
+            "Neuraminidase Inhibitors",
+            "Oseltamivir",
+            "Viruses Tested",
+            "5078",
+            "1962",
+            "2244",
+            "872"
+          ],
+          [
+            "Reduced Inhibition",
+            "2 (<0.1%)",
+            "2 (0.1%)",
+            "0",
+            "0"
+          ],
+          [
+            "Highly Reduced Inhibition",
+            "10 (0.2%)",
+            "8 (0.4%)",
+            "2 (<0.1%)",
+            "0"
+          ],
+          [
+            "Peramivir",
+            "Viruses Tested",
+            "5078",
+            "1962",
+            "2244",
+            "872"
+          ],
+          [
+            "Reduced Inhibition",
+            "1 (<0.1%)",
+            "0",
+            "1 (<0.1%)",
+            "0"
+          ],
+          [
+            "Highly Reduced Inhibition",
+            "9 (0.2%)",
+            "9 (0.5%)",
+            "0",
+            "0"
+          ],
+          [
+            "Zanamivir",
+            "Viruses Tested",
+            "5078",
+            "1962",
+            "2244",
+            "872"
+          ],
+          [
+            "Reduced Inhibition",
+            "2 (<0.1%)",
+            "1 (<0.1%)",
+            "1 (<0.1%)",
+            "0"
+          ],
+          [
+            "Highly Reduced Inhibition",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "PA Cap-Dependent Endonuclease Inhibitor",
+            "Baloxavir",
+            "Viruses Tested",
+            "4862",
+            "1813",
+            "2197",
+            "852"
+          ],
+          [
+            "Decreased Susceptibility",
+            "3 (<0.1)",
+            "1 (<0.1)",
+            "2 (0.1)",
+            "0"
+          ]
+        ],
+        "token_count": 299,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c8",
+        "chunk_index": 8,
+        "text": "Viruses to be included in the 2025\u201326 Northern Hemisphere influenza vaccines were recommended at the World Health Organization's (WHO) Consultation on the Composition of the Influenza Vaccines in February 2025 and selected in the Food and Drug Administration (FDA) Center for Biologics Evaluation and Research (CBER) Interagency Meeting in March 2025. The recommendations were made after reviewing and evaluating data on the 2024\u201325 influenza season and the performance of the 2024\u201325 influenza vaccines23. The A(H1N1)pdm09 and B/Victoria lineage components are unchanged from the 2024\u201325 Northern Hemisphere influenza vaccines. Both the egg-based and cell- or recombinant-based vaccines had a change in the A(H3N2) component. In the egg-based vaccine it was changed to an A/Croatia/10136RV/2023 (H3N2)-like virus and in cell- or recombinant-based vaccines it was changed to an A/District of Columbia/27/2023 (H3N2)-like virus23. The genetic clade and subclade for the recommended vaccine viruses were 5a.2a.1 for A(H1N1)pdm09, 2a.3a.1_J.2 for A(H3N2), V1A.3a.2 for B/Victoria.\nTable 2. Influenza Vaccine Viruses Northern Hemisphere 2025\u201326 and 2024\u201325* Seasons2.",
+        "chunk_type": "prose",
+        "heading": "What to know > Influenza Vaccine Strain Selection 2025\u201326",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 321,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c9",
+        "chunk_index": 9,
+        "text": "2025\u20132026 Vaccine\t2024\u20132025 Vaccine\nEgg-based Trivalent\tA/Victoria/4897/2022 (H1N1)pdm09-like virus\tA/Victoria/4897/2022 (H1N1)pdm09-like virus\nA/Croatia/10136RV/2023 (H3N2)-like virus\tA/Thailand/8/2022 (H3N2)-like virus\nB/Austria/1359417/2021-like virus (B/Victoria lineage)\tB/Austria/1359417/2021-like virus (B/Victoria lineage)\nCell- or recombinant-based Trivalent\tA/Wisconsin/67/2022 (H1N1)pdm09-like virus\tA/Wisconsin/67/2022 (H1N1)pdm09-like virus\nA/District of Columbia/27/2023 (H3N2)-like virus\tA/Massachusetts/18/2022 (H3N2)-like virus\nB/Austria/1359417/2021-like virus (B/Victoria lineage)\tB/Austria/1359417/2021-like virus (B/Victoria lineage)",
+        "chunk_type": "table",
+        "heading": "What to know > Influenza Vaccine Strain Selection 2025\u201326",
+        "page_number": null,
+        "table_data": [
+          [
+            "2025\u20132026 Vaccine",
+            "2024\u20132025 Vaccine"
+          ],
+          [
+            "Egg-based Trivalent",
+            "A/Victoria/4897/2022 (H1N1)pdm09-like virus",
+            "A/Victoria/4897/2022 (H1N1)pdm09-like virus"
+          ],
+          [
+            "A/Croatia/10136RV/2023 (H3N2)-like virus",
+            "A/Thailand/8/2022 (H3N2)-like virus"
+          ],
+          [
+            "B/Austria/1359417/2021-like virus (B/Victoria lineage)",
+            "B/Austria/1359417/2021-like virus (B/Victoria lineage)"
+          ],
+          [
+            "Cell- or recombinant-based Trivalent",
+            "A/Wisconsin/67/2022 (H1N1)pdm09-like virus",
+            "A/Wisconsin/67/2022 (H1N1)pdm09-like virus"
+          ],
+          [
+            "A/District of Columbia/27/2023 (H3N2)-like virus",
+            "A/Massachusetts/18/2022 (H3N2)-like virus"
+          ],
+          [
+            "B/Austria/1359417/2021-like virus (B/Victoria lineage)",
+            "B/Austria/1359417/2021-like virus (B/Victoria lineage)"
+          ]
+        ],
+        "token_count": 257,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c10",
+        "chunk_index": 10,
+        "text": "*Due to the lack of detections of circulating B/Yamagata lineage viruses worldwide after March 2020, FDA further recommended vaccines manufactured for the U.S. population for the 2024\u201325 and 2025\u201326 season be trivalent, including only one B component from the B/Victoria lineage.",
+        "chunk_type": "prose",
+        "heading": "What to know > Influenza Vaccine Strain Selection 2025\u201326",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 65,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c11",
+        "chunk_index": 11,
+        "text": "Novel influenza A viruses are influenza A virus subtypes that are different from currently circulating human seasonal influenza viruses. Early identification and investigation of human infections with novel influenza A viruses are critical so that the risk of infection can be understood, and appropriate public health measures can be taken1. From September 29, 2024, through June 21, 2025, a total of 56 confirmed and seven probable cases of novel influenza A virus infections were reported to CDC (Figure 4).\nOf the 56 confirmed novel influenza A virus infections reported, 55 avian influenza A(H5) virus detections* in people were reported from nine states (37-CA, 1-IA, 1-LA, 1-NV, 1-OR, 1-OH, 11-WA, 1-WI, 1-WY). Thirty-six of the 55 cases were associated with exposure to highly pathogenic avian influenza (HPAI) A(H5N1) infected dairy cattle, 15 were associated with poultry culling operations, 2 with infected backyard flocks, and 2 cases did not have a determined source of exposure. Fifty-three of the 55 cases occurred in adults aged \u226518 years; 52 reported mild illness, 3 patients were hospitalized, and one of the hospitalized patients died. No human-to-human transmission of avian influenza A(H5) viruses was identified associated with these cases.\nOne additional novel influenza A virus infection was reported during the 2024\u201325 season, confirmed to be variant virus (i.e., a swine influenza virus identified in a human and designated with a \"v\"). This A(H1N2v) virus infection was detected and reported to CDC from Iowa. The patient was \u226518 years of age, was hospitalized, and had recovered from their illness. An investigation by state public health officials did not identify direct or indirect swine contact by the patent. No illness was identified among the patient's close contacts. No human-to-human transmission was identified associated with this case.\nFigure 4. Novel Influenza A Virus Cases by Season\u2014 United States, 2010\u201311 to 2024\u201325 Season\n*Among the 70 reported A(H5) human cases during April of 2024 to February 2025, 15 occurred between before the start date of this report.",
+        "chunk_type": "prose",
+        "heading": "What to know > Novel Influenza A Viruses",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 485,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c12",
+        "chunk_index": 12,
+        "text": "Information on outpatient visits to health care providers for respiratory illness, referred to as influenza-like illness ([ILI], fever plus cough or sore throat), is collected through the U.S. Outpatient Influenza-like Illness Surveillance Network (ILINet)1. Nationally, the weekly percentage of outpatient visits for ILI reported through ILINet remained at or above the national baseline of 3.0% for 17 consecutive weeks from November 2024 to March 2025, peaking at 7.9% during the week ending February 8, 2025 (week 6). The 2024\u201325 season had the highest peak of absolute percentage of visits for ILI since the 2009 \u201310 influenza pandemic season, which peaked at 7.7%. However, since the national baseline can vary from season to season based on the providers enrolled, it is important to compare the degree of peak activity using the difference between the peak percent ILI and the baseline for that season. Using that metric, the 2024-2025 season had the third highest level of outpatient respiratory illness activity (4.9 percentage points between peak and baseline), following only the 2017-2018 season (5.3 percentage points) and the 2009-2010 pandemic season (5.4 percentage points). The duration of elevated ILI activity defined as the number of weeks with activity above baseline was similar to that observed in pre-pandemic seasons (Figure 5).\nAt the regional level, the timing of peak ILI activity varied across the 10 HHS regions during the 2024\u201325 influenza season. Regions 8, 9, and 10 (Mountain, West Coast, and Pacific Northwest) peaked earliest, during the week ending December 28, 2024 (week 52). Region 2 (New York/New Jersey/Puerto Rico, and the U.S. Virgin Islands) peaked with the same ILI percentage during the three weeks ending January 25, 2025, February 1, 2025, and February 15, 2025 (weeks 4, 5, and 7). Regions 4 and 6 (Southeast and South Central) reported peak ILI activity during the week ending February 1, 2025 (week 5) and regions 1, 3, 5, and 7 (New England, Mid-Atlantic, Midwest, and Central) peaked during the week ending February 8, 2025 (week 6).\nThe duration of elevated ILI activity also varied by region. Regions 1 and 3 (New England and Mid-Atlantic) experienced the longest span of elevated activity, lasting 22 weeks. Region 10 (Pacific Northwest) followed with 19 weeks. Regions 2, 4, 5, 6, 7, and 9 (New York/New Jersey/Puerto Rico/Virgin Islands, Southeast, Midwest, South Central, Central, and West Coast) experienced elevated activity for 16 to 18 weeks and region 8 (Mountain) had the shortest period of elevated ILI activity, lasting 12 weeks.\nMultiple respiratory viruses co-circulated throughout the season, and the contribution of influenza viruses to ILI activity likely varied by week and geographic area. Overall, ILI activity peaked later in the 2024\u201325 season (early February) compared to the 2022\u201323 (mid-November) and 2023\u201324 seasons (late December) but during the month that was most frequently the peak during pre-COVID seasons.\nFigure 5. Percentage of Outpatient Visits for Respiratory Illness as Reported by ILINet, National Summary by Season \u2014 United States, 2017-18 to 2024-25 Seasons\nMore than 70% of ILINet providers report total number of patient visits, as well as ILI visits, by age group, allowing the calculation of percentage of visits for ILI by age group. Throughout the 2024\u201325 season, children aged 0\u20134 years and those aged 5\u201324 years each had a higher percentage of visits for ILI compared to adult age groups, consistent with trends observed in previous seasons. Peak ILI activity occurred during the week ending February 8, 2025 (week 6) for the age groups less than 65 years [0\u20134 years (18.1%), 5\u201324 years (12.6%), 25\u201349 years (6.6%), and 50\u201364 years (5.1%)]. Among adults age 65 years and older, ILI activity peaked one week later, during the week ending February 15, 2025 (week 7), at 3.7% (Figure 6).\nFigure 6. Percentage of Outpatient Visits by Age Group for Respiratory Illness as Reported by ILINet \u2014 United States, 2024-25 Season\nILINet data are used to produce weekly jurisdiction and core-based statistical area (CBSA)-level measures of ILI activity. From the 2008\u201309 through the 2018\u201319 seasons, ILI activity categories ranged from minimal to high; the very high category was introduced beginning with the 2019\u201320 season1. For the 11-week period from the week ending December 21, 2024, through the week ending March 1, 2025 (weeks 51\u20139), more than 50% of the 55 jurisdictions reported high or very high ILI activity each week. This represents 11 consecutive weeks of widespread elevated ILI activity. In comparison, during the 2023\u201324 season, only four weeks (including three consecutive weeks) had 50% or more of jurisdictions reporting high or very high activity. The highest proportion of jurisdictions reporting high or very high ILI activity during the 2024\u201325 season occurred in the week ending February 8, 2025 (week 6), when 87.3% of jurisdictions met that threshold. This is the highest weekly percentage observed since the 2019\u201320 season, when 87.0% of jurisdictions reported high or very high activity in a single week. For a weekly snapshot of geographic ILI activity levels, please see FluView Interactive | FluView | CDC.",
+        "chunk_type": "prose",
+        "heading": "What to know > Outpatient Respiratory Illness Surveillance > Influenza-like Illness Surveillance Network (ILINet)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1306,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c13",
+        "chunk_index": 13,
+        "text": "CDC's BioSense Platform allows emergency departments (EDs) to upload patient data as early as 24-hours after a patient's visit from a participating facility. The National Syndromic Surveillance System (NSSP) includes data from 83% of U.S. EDs, totaling more than 7,200 healthcare facilities in all 50 states and the District of Columbia4. NSSP's BioSense Platform hosts the Electronic Surveillance System for the Early Notification of Community-based Epidemics (ESSENCE)\u2014a system that allows public health professionals to access and interpret data that flow into the BioSense Platform. On April 17, 2020, CDC created the \"CDC Influenza DD v1\" definition in ESSENCE which identifies visits of patients with a discharge diagnosis of influenza (Table 3). The weekly percentage of all ED visits with a discharge diagnosis of influenza is calculated by age group nationally and for each of the 10 HHS regions.\nTable 3. CDC Influenza DD v1 inclusion codes in the NSSP Electronic Surveillance System for the Early Notification of Community-Based Epidemics (ESSENCE) system5.",
+        "chunk_type": "prose",
+        "heading": "What to know > Outpatient Respiratory Illness Surveillance > National Syndromic Surveillance System (NSSP)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 233,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c14",
+        "chunk_index": 14,
+        "text": "Code Type\tCodes\tCode Description\nInclusions\nICD-10-CM\tJ09\tInfluenza due to certain identified influenza viruses\nJ10\tInfluenza due to other identified influenza viruses\nJ11\tInfluenza due to unidentified influenza virus\nICD-9-CM\t487\tInfluenza with pneumonia\n487.1\tInfluenza with other respiratory manifestations\n487.8\tInfluenza with other manifestations</td\n488.01\tInfluenza due to identified avian influenza virus with pneumonia\n488.09\tInfluenza due to identified avian influenza virus with other manifestations\n488.11\tInfluenza due to identified 2009 H1N1 influenza virus with pneumonia\n488.19\tInfluenza due to identified 2009 H1N1 influenza virus with other manifestations\n488.81\tInfluenza due to identified novel influenza A virus with pneumonia\n488.89\tInfluenza due to identified novel influenza A virus with other manifestations\nSNOMED CT\t442696006\tInfluenza caused by influenza A virus subtype H1N1\n442438000\tInfluenza caused by Influenza A virus\n6142004\tInfluenza\n195878008\tPneumonia and influenza",
+        "chunk_type": "table",
+        "heading": "What to know > Outpatient Respiratory Illness Surveillance > National Syndromic Surveillance System (NSSP)",
+        "page_number": null,
+        "table_data": [
+          [
+            "Code Type",
+            "Codes",
+            "Code Description"
+          ],
+          [
+            "Inclusions"
+          ],
+          [
+            "ICD-10-CM",
+            "J09",
+            "Influenza due to certain identified influenza viruses"
+          ],
+          [
+            "J10",
+            "Influenza due to other identified influenza viruses"
+          ],
+          [
+            "J11",
+            "Influenza due to unidentified influenza virus"
+          ],
+          [
+            "ICD-9-CM",
+            "487",
+            "Influenza with pneumonia"
+          ],
+          [
+            "487.1",
+            "Influenza with other respiratory manifestations"
+          ],
+          [
+            "487.8",
+            "Influenza with other manifestations</td"
+          ],
+          [
+            "488.01",
+            "Influenza due to identified avian influenza virus with pneumonia"
+          ],
+          [
+            "488.09",
+            "Influenza due to identified avian influenza virus with other manifestations"
+          ],
+          [
+            "488.11",
+            "Influenza due to identified 2009 H1N1 influenza virus with pneumonia"
+          ],
+          [
+            "488.19",
+            "Influenza due to identified 2009 H1N1 influenza virus with other manifestations"
+          ],
+          [
+            "488.81",
+            "Influenza due to identified novel influenza A virus with pneumonia"
+          ],
+          [
+            "488.89",
+            "Influenza due to identified novel influenza A virus with other manifestations"
+          ],
+          [
+            "SNOMED CT",
+            "442696006",
+            "Influenza caused by influenza A virus subtype H1N1"
+          ],
+          [
+            "442438000",
+            "Influenza caused by Influenza A virus"
+          ],
+          [
+            "6142004",
+            "Influenza"
+          ],
+          [
+            "195878008",
+            "Pneumonia and influenza"
+          ]
+        ],
+        "token_count": 265,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c15",
+        "chunk_index": 15,
+        "text": "Nationally, the percentage of ED visits with a discharge diagnosis of influenza reported to NSSP peaked at 8.4% during the week ending February 1, 2025 (week 5). From the week ending December 7, 2024 (week 49) through this peak, the weekly percentage of influenza-related ED visits increased by 7.3 percentage points although there were two weeks of stable or declining activity (depending on the age group) during late December and early January. This lessening of activity is frequently seen around this time of year and is in part associated with changes in healthcare seeking behavior around the holidays. Activity began a steady decline in the week ending February 8, 2025 (week 6) and continued into the summer. In comparison, peak ED visit activity for influenza in the previous two seasons occurred earlier and at lower levels, with national peaks of 6.7% during the week ending November 26, 2022 (week 47), and 5.8% during the week ending December 30, 2023 (week 52) (Figure 7).\nFigure 7. Percentage of Emergency Department Visits for Influenza Reported by the National Syndromic Surveillance System (NSSP), National Summary\u2014United States, 2022-23 to 2024-25 Seasons\n*Data for 2024-25 season are through Week 35\nRegionally, percentages of ED visits reported to NSSP with a discharge diagnosis of influenza peaked between 5.5% and 10.9% during the 2024\u201325 season. Region 9 (West Coast) peaked the earliest of all HHS regions at 7.1% during the week ending December 28, 2024 (week 52), while all other regions reached their seasonal peaks during the week ending February 1, 2025 (week 5) or February 8, 2025 (week 6). Regions 7 and 8 (Central, Mountain) recorded the lowest peak percentages, each reaching 5.5% during the week ending February 8, 2025 (week 6). In comparison, Region 6 (South Central) experienced the highest regional peak, with 10.9% of ED visits attributed to influenza during the week ending February 1, 2025 (week 5).\nThe pediatric age groups (0\u20134 years and 5\u201317 years) experienced the highest percentages of ED visits for influenza during the 2024\u201325 season. Both groups reached their seasonal peaks during the week ending February 8, 2025 (week 6), at 17.8% and 17.0%, respectively. In comparison, among the adult age groups, the 18-64 years age group peaked earliest at 6.6% during the week ending February 1, 2025 (week 5), while the 65 years and older age group peaked at 5.7% one week later. By the week ending May 17, 2025 (week 20), influenza-related ED visits for all age groups had declined to 1% or less, comparable to levels observed during the first five weeks of the season (September 29 to November 2, 2024) (Figure 8).\nFigure 8. Percentage of Emergency Department Visits for Influenza by Age Group Reported by the National Syndromic Surveillance System (NSSP), National Summary, 2024-25 Season",
+        "chunk_type": "prose",
+        "heading": "What to know > Outpatient Respiratory Illness Surveillance > National Syndromic Surveillance System (NSSP)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 722,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c16",
+        "chunk_index": 16,
+        "text": "CDC monitors hospitalizations associated with laboratory-confirmed influenza virus infections through two surveillance systems: the Influenza Hospitalization Surveillance Network (FluSurv-NET), which conducts population-based surveillance covering approximately 9% of the U.S. population, and National Healthcare Safety Network (NHSN) Hospital Respiratory Data (HRD) Module, which consists of reports from all hospitals across the country1.",
+        "chunk_type": "prose",
+        "heading": "What to know > Hospitalization Surveillance",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 82,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c17",
+        "chunk_index": 17,
+        "text": "From October 1, 2024, to April 30, 2025 (the last day of surveillance in FluSurv-NET1), a total of 39,319 laboratory-confirmed influenza-related hospitalizations were reported by FluSurv-NET sites. The peak weekly hospitalization rate for the 2024-2025 season were observed during week 6 (13.7 per 100,000 population) and were tied for the highest peak weekly rate observed across all seasons since 2010-11 (Figure 9).\nFigure 9. Weekly Rates of Laboratory-Confirmed Influenza Hospitalizations \u2014 United States, 2014\u201315 to 2024\u201325* influenza seasons\n*The most recent 11 seasons (2014-15 through 2024-25) are depicted in the figure. See https://gis.cdc.gov/GRASP/Fluview/FluHospRates.html for data from seasons going back to the 2010-11 season.\nThe overall cumulative hospitalization rate through April 30, 2025, was 128.3 per 100,000 population, which is the highest cumulative hospitalization rate for all seasons since 2010-11. (Figure 10).\nFigure 10. Cumulative Rates of Laboratory-Confirmed Influenza Hospitalizations \u2014 United States, 2014\u201315 to 2024\u201325* influenza seasons\n*The most recent 11 seasons (2014-15 through 2024-25) are depicted in the figure. See https://gis.cdc.gov/GRASP/Fluview/FluHospRates.html for data from seasons going back to the 2010-11 season.\nAmong 39,319 influenza-associated hospitalizations, most (95.9%) were associated with influenza A virus, with 3.8% associated with influenza B virus. Among those with influenza A subtype information, 58.9% were A(H1N1)pdm09 and 41.1% were A(H3N2).\nWhen examining rates by age, the highest cumulative hospitalization rate per 100,000 population was among adults aged 65 years and older (407.6), followed by adults aged 50\u201364 years (150.1), children aged 0\u20134 years (104.7), adults aged 18\u201349 years (50.7), and was lowest among children and adolescents aged 5\u201317 years (40.4) (Figure 11). When examining age-adjusted rates by race and ethnicity, the highest cumulative hospitalization rate per 100,000 population was among non-Hispanic Black persons (211.9), followed by non-Hispanic American Indian or Alaska Native persons (169.2), Hispanic/Latino persons (113.4), non-Hispanic White persons (112.00.), and non-Hispanic Asian/Pacific Islander persons (79.2).\nFigure 11. Cumulative Rate of Laboratory-Confirmed Influenza Hospitalizations by Age \u2014 United States, 2024\u201325 influenza season\nAmong 8,876 adults with information on underlying medical conditions who were hospitalized with influenza between October 1, 2024, and April 30, 2025, 94.1% had at least one reported underlying medical condition; the most commonly reported were hypertension, cardiovascular disease, metabolic disorder, and obesity. Among 4,135 hospitalized women of childbearing age (15\u201349 years) with information on pregnancy status, 22.6% were pregnant. Among 3,109 hospitalized children and adolescents with information about underlying conditions, 53.5% reported at least one underlying medical condition; the most commonly reported were asthma, neurologic disease, and obesity.",
+        "chunk_type": "prose",
+        "heading": "What to know > Hospitalization Surveillance > Influenza Hospitalization Surveillance Network (FluSurv-NET)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 774,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c18",
+        "chunk_index": 18,
+        "text": "Between September 29, 2024, and August 30, 2025, there were 545,026 influenza-associated hospitalizations nationwide, resulting in a cumulative hospitalization rate of 161.5 per 100,000 population for the season. Hospitalizations began to increase in mid-November, had a slight decline around the winter holidays and peaked during the week ending February 8, 2025 (week 6), with 54,272 hospitalizations (16.1 per 100,000 population). This peak occurred later and was substantially higher compared to the previous three seasons (Figure 12).\nFigure 12. Number of New Influenza Hospital Admissions and Rates, Reported to CDC's NHSN HRD Module, National Summary, 2021-22 to 2024-25 Seasons\nAt a regional level, influenza activity had a slight decline around the winter holidays and peaked between the weeks ending February 1, 2025 (week 5) and February 15, 2025 (week 7). Regions 2 (New York/New Jersey/Puerto Rico), 6 (South Central), and 9 (West Coast) peaked during week 5; regions 1 (New England), 3 (Mid-Atlantic), 4 (Southeast), 8 (Mountain), and 10 (Pacific Northwest) peaked during the week ending February 8, 2025 (week 6); and Regions 5 (Midwest) and 7 (Central) peaked during the week ending February 15, 2025 (week 7). On a regional level, cumulative influenza-associated hospitalization rates ranged from 117.8 to 218.3 per 100,000 population. For additional details, see FluView Interactive.\nWhen examining influenza-associated hospitalization rates nationally by age, peak weekly hospitalization rates ranged from 4.7 to 49.9 per 100,000 population, with all age groups peaking during the week ending February 8, 2025 (week 6). Persons aged 65 years and older experienced the highest peak rate (49.9 per 100,000 population). Adults aged 50\u201364 years had the second highest peak rate (17.5 per 100,000 population), slightly exceeding the overall national rate. Hospitalization rates among children aged 0\u20134 years (12.1 per 100,000 population), children aged 5\u201317 years (4.7 per 100,000 population), and adults aged 18\u201349 years (6.1 per 100,000 population) were below the overall national rate (Figure 13).\nFigure 13. Rate of New Influenza Hospital Admissions, by Age Group, Reported to CDC's NHSN HRD Module, National Summary, 2024-25 Season",
+        "chunk_type": "prose",
+        "heading": "What to know > Hospitalization Surveillance > National Healthcare Safety Network (NHSN) Hospital Respiratory Data (HRD) Module",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 582,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c19",
+        "chunk_index": 19,
+        "text": "According to the National Center for Health Statistics (NCHS) Mortality Surveillance System1, during September 29, 2024 \u2013 August 30, 2025, a total of 2,784,349 deaths from all causes were reported nationally. Among these, 18,399 (0.7%) had influenza listed as an underlying or contributing cause of death. The weekly percentage of deaths due to influenza ranged from 0.02% to 2.8% and peaked during the week ending February 15, 2025 (week 7) (Figure 14). Influenza deaths began to increase in late November 2024, peaking in mid-February 2025 (week 7), and then declined. This is the highest peak since 2015-16 when NCHS influenza mortality data were incorporated into influenza surveillance. This peak was higher and occurred later compared to post-COVID influenza seasons, including the 2023-24 influenza season which peaked at 1.4% during early January, the 2022\u201323 influenza season which peaked at 1.6% during mid-December 2022, and the 2021-22 influenza season which peaked at 0.2% in early January. However, the timing of peak activity was similar to recent pre-COVID influenza seasons, which peaked between late January 2018 (2017\u201318 season) and mid-March 2016 (2015\u201316 season). Additionally, the cumulative percentage of deaths due to influenza this season is 0.7%, which is also the highest since 2015-16 where the seasonal cumulative percentage of deaths due to influenza ranged from 0.1% during 2015-16 and 2021-22 to 0.6% during 2017-18.\nFigure 14. Influenza Mortality from the National Center for Health Statistics Mortality Surveillance System, 2020-21 to 2024\u201325 Seasons*\n*Data presented are current as of September 9,2025.\nCDC monitors influenza-associated deaths in children younger than 18 years of age through the Influenza-Associated Pediatric Mortality Surveillance System1. During September 29, 2024 \u2013 August 30, 2025, a total of 279 laboratory-confirmed influenza-associated pediatric deaths were reported to CDC (Figure 15); this is the highest number of deaths reported during a seasonal influenza epidemic. Since influenza-associated deaths in children became a nationally notifiable condition in 2004, the total number of influenza-associated deaths among children during one typical influenza season, excluding the 2020-21 season which was characterized by very low influenza virus circulation, has ranged from 37 during the 2011\u201312 season to 207 during the 2023-2024 season. This season, 239 of the reported deaths were associated with influenza A viruses, 38 were associated with influenza B viruses, 1 was associated with influenza A and B virus co-infection, and 1 was associated with an influenza virus with type not distinguished. Of 169 influenza A virus infections with a reported subtype, 95 (56.2%) were influenza A(H1N1), 73 (43.2%) were influenza A(H3N2), and 1 (0.6%) was an influenza A(H1N1) and A(H3N2) co-infection. Four deaths associated with influenza B viruses had a lineage reported, and all were B/Victoria lineage viruses. No pediatric deaths associated with influenza B/Yamagata have been reported since the 2017\u201318 season and the last detection of a B/Yamagata virus reported globally occurred in March 2020. The mean age at death for these children was 7 years (range = 2 weeks\u201317 years). Location of death was known for 277 (99.3%) children and adolescents; approximately half (143 [51.6%]) died after hospital admission; 73 (26.4%) died in an emergency room; and 61 (22.0%) died outside of a hospital setting. Among the 260 children and adolescents with a known medical history, 147 (56.5%) had at least one underlying medical condition associated with higher risk for developing serious influenza-related complications. Among the 207 children and adolescents who were eligible for influenza vaccination (aged \u22656 months at date of illness onset) and for whom vaccination status was known, 185 (89.4%) were not fully vaccinated against influenza.\nFigure 15. Number of Influenza-Associated Pediatric Deaths by Virus Type and Week of Death, 2021-22 to 2024\u201325 Seasons*\n*Data shown are current as of September 8, 2025, and include deaths occurring until August 30, 2025. Additional pediatric deaths that occurred during this time period may continue to be reported as they are identified. The total number of deaths will be updated in FluView and on FluView Interactive as they are received.",
+        "chunk_type": "prose",
+        "heading": "What to know > Mortality Surveillance",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1041,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c20",
+        "chunk_index": 20,
+        "text": "CDC does not know the exact number of people who have been sick from influenza viruses because not everyone who gets sick with influenza will seek medical care or be tested for influenza virus and even if they do, it is not a requirement that the healthcare visit or laboratory result be reported in most areas of the United States. Therefore, CDC uses a mathematical model to estimate the number of influenza illnesses, medical visits, hospitalizations, and deaths that occur each season6. Preliminary end of season estimates of influenza disease burden in the United States from September 29, 2024 through April 26, 2025, show that influenza virus infection likely resulted in between 43 million\u201373 million symptomatic illnesses, 19 million-32 million medical visits, 560,000-1,100,000 million hospitalizations, and 38,000-99,000 deaths. Older adults (\u226565 years) accounted for 57% of hospitalizations.\nIn addition to estimating the disease burden, CDC also estimates the benefit of influenza vaccination by calculating the number of illnesses, medical visits, hospitalizations, and deaths that are prevented by vaccination. CDC uses a compartmental model to estimate the burden that would have occurred without vaccination and the burden that occurred with vaccination6. The difference between these two estimates is the vaccine prevented burden. During the 2024\u201325 season (September 29, 2024 \u2013 April 26, 2025), influenza vaccine coverage ranged from 35% among those 18\u201349 years to 71% among older adults \u226565 years7. Influenza vaccine effectiveness in outpatient settings ranged from 37% to 56%, and in inpatient settings, it ranged from 39% to 62%, depending on age group8. For the 2024\u201325 season, CDC preliminarily estimates that influenza vaccination prevented 9.4 million-16 million symptomatic illnesses, 4.4 million-7.1 million medical visits, 170,000-360,000 hospitalizations, and 12,000-39,000 deaths associated with influenza.\nBoth disease and prevented burden will be updated later in the calendar year and updated estimates will be posted to the CDC websites for disease burden and prevented burden910.",
+        "chunk_type": "prose",
+        "heading": "What to know > Influenza Disease Burden and Prevented Burden from Vaccination",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 457,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c21",
+        "chunk_index": 21,
+        "text": "CDC classifies influenza season severity at the end of each season by comparing influenza virus activity data, including influenza-like illness, influenza hospitalization rates, and influenza deaths, from past seasons11. Severity is classified across all age groups and for children, adults, and older adults. The 2024\u201325 U.S. season was classified as a high severity season across all age groups combined and for children, adults, and older adults. This was the first high severity U.S. season since the 2017-18 season.",
+        "chunk_type": "prose",
+        "heading": "What to know > Seasonal Severity Assessment",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 106,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c22",
+        "chunk_index": 22,
+        "text": "Influenza activity in the Southern Hemisphere follows a seasonal pattern which typically occurs between April and September and can sometimes persist through October or November. Based on data collected and submitted by countries to the Global Influenza Programme's FluNet system12 , as of September 2025, influenza activity is low and, in most Southern Hemisphere countries, the influenza season has ended. During the 2025 influenza season, influenza A viruses predominated with the majority of subtyped specimens found to be A(H1N1)pdm09. However, of note, the most frequently detected viral subtype among African countries in the Southern Hemisphere had been A(H3N2). This finding was in contrast with the 2024 Southern Hemisphere season where most virus detections in Southern Hemisphere countries were influenza A(H3N2) and detection of A(H1N1)pdm09 predominated Southern African countries.\nReported data from four Southern Hemisphere countries, including Argentina and Paraguay in South America and South Africa and Mauritius in Africa, showed an early start to their 2025 influenza season as compared to prior season (2022\u20132024) trends. However, reported data from Australia (which provides most of the data for the Oceania region) and Brazil indicated a slightly later start to their 2025 influenza seasons. As of September 2025, moderate (Argentina, Bolivia, Brazil, Chile, Peru, and Uruguay) and high (Paraguay) influenza activity had been observed during the Southern Hemisphere influenza season in South America while most reporting Southern Hemisphere countries in Africa and Oceania experienced low (South Africa and Australia) to moderate levels of activity.\nIn the 2025 Southern Hemisphere influenza season, influenza virus detections among individuals hospitalized with severe acute respiratory infections (SARI) remained low in South Africa13. Among South American countries, the number of SARI cases reached high (Ecuador and Brazil) to very high (Peru, Paraguay and Uruguay) levels14. In Australia, the number of patients admitted with SARI reached a peak in late June 2025 and has steadily declined through September 202515; the number of influenza virus detections among individuals hospitalized with SARI in the 2025 influenza season was higher than in the 2024 season16.",
+        "chunk_type": "prose",
+        "heading": "What to know > Influenza Activity in the Southern Hemisphere",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 460,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c23-p0",
+        "chunk_index": 23,
+        "text": "The 2024\u201325 influenza season in the United States was a high severity season marked by elevated activity across multiple surveillance systems.\n\nNational preliminary burden estimates suggest that influenza virus infections resulted in at least 43 million symptomatic illnesses, 19 million medical visits, 560,000 hospitalizations, and 38,000 deaths.\n\nThese figures surpassed all recent influenza seasons, except for the number of deaths during the high severity 2017\u201318 season17.\n\nInfluenza A viruses predominated throughout the season, with nearly equal co-circulation of A(H1N1)pdm09 and A(H3N2) viruses overall, 53.1% and 46.9% of subtyped influenza A viruses, respectively.\n\nUntil mid-January, A(H3N2) viruses were reported more frequently than A(H1N1)pdm09 viruses each week while the reverse was true from that point on.\n\nInfluenza B viruses increased slightly later in the season but remained at lower overall levels compared to influenza A.\n\nHistorically, A(H1N1) viruses have been the predominant virus in 8 of the past 26 seasons (1997-98 through 2023-24, excluding the 2020-21 season due to low influenza virus circulation, A(H3N2) in 16 seasons, and equal proportions of A(H1N1) and B Victoria in one season.\n\nGenetic and antigenic characterization of circulating viruses showed that most A(H1N1)pdm09 and B/Victoria lineage viruses were similar to the 2024\u201325 Northern Hemisphere vaccine reference viruses.\n\nHowever, some A(H3N2) viruses showed antigenic drift due to hemagglutinin (HA) substitutions, potentially contributing to somewhat lower vaccine effectiveness (VE) against this subtype.\n\nOverall, VE was moderate to low, with higher protection against A(H1N1)pdm09 and B viruses18.\n\nAlmost all (>99%) influenza viruses tested were susceptible to the neuraminidase inhibitors (e.g., oseltamivir, peramivir, zanamivir) and the PA endonuclease inhibitor baloxavir.\n\nThis season was marked by high severity; with levels of activity surpassing those observed in both recent and most pre-COVID-19 pandemic seasons.\n\nClinical laboratories tested over 3.9 million respiratory specimens, with 12.3% testing positive for influenza viruses overall and peak weekly test positivity reaching 31.6%, the highest weekly percentage reported since the 2015\u201316 season.\n\nInfluenza A viruses predominated, with the percent of specimens testing positive for influenza A peaking at 30.4% in late January, while influenza B viruses co-circulated at lower levels and later in the season with peak influenza B percent positivity (4.3%) occurring in late March.\n\nILI activity peaked at 7.9% (4.9 percentage points above the baseline) and remained above baseline for 17 consecutive weeks.\n\nThe number of weeks of elevated activity is similar to previous seasons while the peak percent of visits for ILI and the difference between the peak and baseline is the highest and third highest, respectively, since the 2009-2010 season.\n\nAdditionally, the timing of activity peaks for ILINet across the HHS regions ranged from late December through early February while peak percent of specimens testing positive for influenza occurred during the two weeks in late January and early February.\n\nThis difference may be due to the circulation of other respiratory viruses causing ILI occurring at slightly different times across the country.\n\nThe overall cumulative influenza-associated hospitalization rate reached recorded in FluSurv-Net reached the highest level since the 2010\u201311 season, and the weekly peak rate reported to NHSN HRD was the highest since reporting began in the 2020-21 season.\n\nMortality surveillance further illustrated the season's severity.",
+        "chunk_type": "prose",
+        "heading": "What to know > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 799,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c23-p1",
+        "chunk_index": 24,
+        "text": "The weekly percentage of all deaths attributed to influenza peaked at 2.8%, which is the highest peak since the 2015\u201316 season and substantially higher than the previous two seasons (1.4% in 2023\u201324 and 1.6% in 2022\u201323).\n\nPediatric mortality was particularly notable, with 279 influenza-associated pediatric deaths reported.\n\nThis is the highest number of deaths reported during a seasonal influenza epidemic since the system began in 2004.\n\nWhile over half of pediatric deaths occurred in children and adolescents with underlying conditions, 44% occurred among previously healthy children.\n\nAmong the deaths in children aged \u22656 months with known vaccination status approximately 90% were not fully vaccinated against influenza.\n\nGlobally, influenza activity during the Southern Hemisphere season showed regional variability in virus subtype predominance and timing.\n\nEarly and intense influenza activity in some countries further underscores the unpredictable nature of seasonal influenza; however, activity in the Southern hemisphere cannot be used to definitively predict the timing or intensity of influenza activity in the United States this fall and winter.\n\nThough influenza activity has remained low in the summer, maintaining influenza surveillance year-round is important.\n\nSporadic human infections with novel influenza A virus subtypes distinct from currently circulating seasonal strains were reported during the 2024\u201325 season.\n\nThese included 56 confirmed avian influenza A(H5) virus infections, most linked to exposure to infected dairy cattle or poultry, and one swine origin variant influenza A(H1N2v) virus infection.\n\nWhile the majority of cases were mild and no human-to-human transmission was identified, these detections underscore the continued threat posed by zoonotic influenza viruses.\n\nAs outbreaks of highly pathogenic avian influenza A(H5N1) persist among animals, including poultry and dairy cows, healthcare providers and individuals exposed to potentially infected livestock and other animals should remain alert to symptoms such as shortness of breath, fever, cough, or conjunctivitis19.\n\nPrompt identification of suspected novel influenza A virus infections, patient isolation, specimen collection for public health testing, and immediate initiation of antiviral treatment remain critical to preventing further spread and mitigating pandemic risk2021.\n\nThe 2024\u201325 influenza season was among the most severe in recent years, characterized by widespread co-circulation of multiple influenza A virus subtypes and substantial morbidity and mortality.\n\nThese findings reinforce the critical importance of annual influenza vaccination, timely antiviral treatment, and robust surveillance systems to mitigate the public health impact of influenza, particularly for high-risk populations.\n\nCDC continues to recommend that everyone aged 6 months and older receive a seasonal influenza vaccine each year, as annual vaccination remains the most effective way to protect against influenza and its potentially serious complications2223.\n\nCDC also recommends initiating influenza antiviral drug treatment as soon as possible for patients with confirmed or suspected influenza virus infection who have severe, complicated, or progressive illness; who require hospitalization; or who are at increased risk for influenza-associated complications24.\n\nFour influenza antiviral drugs approved by the Food and Drug Administration are currently recommended for use in the United States25.\n\nContributors: S Moon, PhD, MPH.\n\nA Busbee, MPH.\n\nA Merced-Morales, MPH.\n\nR Smith, MPH.\n\nY.\n\nZhou, MPH.\n\nK Reinhart, PhD, MPH.\n\nA Col\u00f3n, MPH.\n\nD Hawkins, MPH.\n\nN Dempster, MPH.\n\nA Howa, PhD, MPH.\n\nS Huang, MPH.\n\nYC Pun, MPHP.\n\nC Zhang, MPH.\n\nAD Iuliano, PhD, MPH.\n\nR Threlkel, MPH.\n\nC Bozio, PhD, MPH.\n\nS Garg, MD.\n\nJ Habeck, MPH.\n\nA O'Halloran, MSPH.\n\nA Kardorff, MPH.\n\nC Cummings, MPH.\n\nD Ujamaa, MS.\n\nC Castagna-McLeod, MPH.\n\nL Gubareva, MD, PhD.",
+        "chunk_type": "prose",
+        "heading": "What to know > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 800,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c23-p2",
+        "chunk_index": 25,
+        "text": "S Russ, PhD.\n\nL Duca, PhD.\n\nE Azziz-Baumgartner, MD.\n\nR Kondor, PhD.\n\nX Zheng, PhD.\n\nD Sundaresan, MS, MPH.\n\nP Daly, MPH.\n\nK Kniss, MPH.\n\nA Budd, MPH; Influenza Division.\n\nAcknowledgements:\nState, county, city, and territorial health departments and public health laboratories; U.S.\n\nWorld Health Organization collaborating laboratories; National Respiratory and Enteric Virus Surveillance System laboratories; U.S.\n\nOutpatient Influenza-Like Illness Surveillance (ILI) Network sites; Influenza Hospitalization Surveillance Network (FluSurv-NET) sites; Division of Healthcare Quality Promotion, CDC; National Center for Health Statistics, CDC; Matthew Gilmer, Sarabeth Mathis, Young M Yoo, T Davis, PhD, A Abd Elal; National Center for Immunization and Respiratory Diseases, CDC.\n\n\u2022 U.S.\n\nInfluenza Surveillance: Purpose and Methods.\n\n(2025, January 14).\n\nCenters for Disease Control and Prevention.\n\nRetrieved July 15, 2025.\n\nhttps://www.cdc.gov/fluview/overview/\n\u2022 Recommended composition of influenza virus vaccines for use in the 2025-2026 northern hemisphere influenza season.\n\n(2025, February 28).\n\nWorld Health Organization.\n\nhttps://www.who.int/publications/m/item/recommended-composition-of-influenza-virus-vaccines-for-use-in-the-2025-2026-nh-influenza-season\n\u2022 Influenza Vaccine Composition for the 2025-2026 U.S.\n\nInfluenza Season.\n\n(2025, March 13).\n\nU.S.\n\nFood & Drug Administration.\n\nhttps://www.fda.gov/vaccines-blood-biologics/influenza-vaccine-composition-2025-2026-us-influenza-season\n\u2022 National Syndromic Surveillance Program (NSSP) BioSense Platform.\n\n(2025, June 10).\n\nCenters for Disease Control and Prevention.\n\nBioSense Platform | National Syndromic Surveillance Program (NSSP) | CDC\n\u2022 Companion Guide: NSSP ED Data on Respiratory Illness.\n\n(2025, June 21).\n\nCenters for Disease Control and Prevention.\n\nCompanion Guide: NSSP ED Data on Respiratory Illness | National Syndromic Surveillance Program (NSSP) | CDC\n\u2022 How CDC Estimates the Burden of Seasonal Flu in the United States.\n\n(2019, November).\n\nCenters for Disease Control and Prevention.\n\nRetrieved on July 10, 2025: https://www.cdc.gov/flu-burden/php/about/how-cdc-estimates.html?CDC_AAref_Val=https://www.cdc.gov/flu/about/burden/how-cdc-estimates.htm\n\u2022 Weekly Flu Vaccination Dashboard.\n\n(2025, May).\n\nCenters for Disease Control and Prevention.\n\nRetrieved on July 10, 2025: https://www.cdc.gov/fluvaxview/dashboard/index.html\n\u2022 CDC Seasonal Flu Vaccine Effectiveness Studies.\n\n(2025, May).\n\nCenters for Disease Control and Prevention.\n\nRetrieved on July 10, 2025: https://www.cdc.gov/flu-vaccines-work/php/effectiveness-studies/\n\u2022 Estimated US Flu Disease Burden.\n\n(2024, November).\n\nCenters for Disease Control and Prevention.\n\nRetrieved on July 10, 2025: https://www.cdc.gov/flu-burden/php/data-vis/index.html\n\u2022 Flu Burden Prevented by Vaccination.\n\n(2025, January).\n\nCenters for Disease Control and Prevention.",
+        "chunk_type": "prose",
+        "heading": "What to know > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 761,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c23-p3",
+        "chunk_index": 26,
+        "text": "Retrieved on July 10, 2025: https://www.cdc.gov/flu-burden/php/data-vis-vac/index.html\n\u2022 How CDC Classifies Flu Severity each Season in the United States.\n\n(2024, November).\n\nCenters for Disease Control and Prevention.\n\nRetrieved on July 10, 2025: https://www.cdc.gov/flu-burden/php/surveillance/index.html\n\u2022 Influenza surveillance outputs.\n\n(2025).\n\nWorld Health Organization.\n\nRetrieved September 10, 2025: https://www.who.int/teams/global-influenza-programme/surveillance-and-monitoring/influenza-surveillance-outputs\n\u2022 Weekly Respiratory Pathogens Surveillance Report.\n\n(2025, September).\n\nSouth Africa National Institute for Communicable Diseases.\n\nRetrieved September 10, 2025: https://www.nicd.ac.za/diseases-a-z-index/disease-index-covid-19/surveillance-reports/weekly-respiratory-pathogens-surveillance-report-week/\n\u2022 Influenza, SARS-CoV-2, RSV, and other Respiratory Viruses Regional Situation.\n\n(2025, September).\n\nPan American Health Organization.\n\nRetrieved September 10, 2025: https://www.paho.org/en/influenza-situation-report\n\u2022 Australian Respiratory Surveillance Report \u2013 25 August to 7 September 2025.\n\n(2025, September 12 ).\n\nAustralian Government Department of Health, Disability and Ageing.\n\nRetrieved September 10, 2025.\n\nAustralian Respiratory Surveillance Report \u2013 25 August to 7 September 2025 | Australian Government Department of Health, Disability and Ageing\n\u2022 2024 Annual Australian Respiratory Surveillance Report (2025, April 4).\n\nAustralian Government Department of Health, Disability and Ageing.\n\nRetrieved September 12, 2025.\n\nAustralian Respiratory Surveillance Reports \u2013 2024 | Australian Government Department of Health, Disability and Ageing\n\u2022 Flu Disease Burden: Past Seasons.\n\n(2025, January 15).\n\nCenters for Disease Control and Prevention.\n\nRetrieved August 4, 2025.\n\nFlu Disease Burden: Past Seasons | Flu Burden | CDC\n\u2022 Frutos AM, Cleary S, Reeves EL, et al.\n\nInterim Estimates of 2024\u20132025 Seasonal Influenza Vaccine Effectiveness \u2014 Four Vaccine Effectiveness Networks, United States, October 2024\u2013February 2025.\n\nMMWR Morb Mortal Wkly Rep 2025;74:83\u201390.\n\nDOI: http://dx.doi.org/10.15585/mmwr.mm7406a2\n\u2022 Clinician Brief: Evaluating and Managing Patients Exposed to Animals or Persons Infected with Novel Influenza A Viruses of Public Health Concern.\n\n(2024, September 18).\n\nCenters for Disease Control and Prevention.\n\nRetrieved July 24, 2025.\n\nClinician Brief: Evaluating and Managing Patients Exposed to Animals or Persons Infected with Novel Influenza A Viruses of Public Health Concern | Bird Flu | CDC\n\u2022 Treatment of Variant Influenza Virus (2024, June 3).\n\nCenters for Disease Control and Prevention.\n\nRetrieved July 24, 2025.\n\nhttps://www.cdc.gov/swine-flu/treatment/index.html\n\u2022 Highly Pathogenic Avian Influenza A(H5N1) Virus: Interim Recommendations for Prevention, Monitoring, and Public Health Investigations (2024, December 26).\n\nCenters for Disease Control and Prevention.\n\nRetrieved September 4, 2025.",
+        "chunk_type": "prose",
+        "heading": "What to know > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 757,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-57b935863dd8426180810ad7b15c2b70-c23-p4",
+        "chunk_index": 27,
+        "text": "Highly Pathogenic Avian Influenza A(H5N1) Virus: Interim Recommendations for Prevention, Monitoring, and Public Health Investigations | Bird Flu | CDC\n\u2022 Grohskopf LA, Ferdinands JM, Blanton LH, Broder KR, Loehr J.\n\nPrevention and Control of Seasonal Influenza with Vaccines: Recommendations of the Advisory Committee on Immunization Practices \u2014 United States, 2024\u201325 Influenza Season.\n\nMMWR Recomm Rep 2024;73(No.\n\nRR-5):1\u201325.\n\nDOI: http://dx.doi.org/10.15585/mmwr.rr7305a1\n\u2022 Grohskopf LA, Blanton LH, Ferdinands JM, Reed C, Dugan VG, Daskalakis DC.\n\nPrevention and Control of Seasonal Influenza with Vaccines: Recommendations of the Advisory Committee on Immunization Practices \u2014 United States, 2025\u201326 Influenza Season.\n\nMMWR Morb Mortal Wkly Rep 2025;74:500\u2013507.\n\nDOI: http://dx.doi.org/10.15585/mmwr.mm7432a2\n\u2022 Flu: What To Do If You Get Sick (2024, August 30).\n\nCenters for Disease Control and Prevention.\n\nRetrieved on July 24, 2025.\n\nFlu: What To Do If You Get Sick | Influenza (Flu) | CDC\n\u2022 Influenza Antiviral Medications: Summary for Clinicians (2023, December 8).\n\nCenters for Disease Control and Prevention.\n\nRetrieved September 4, 2025.\n\nInfluenza Antiviral Medications: Summary for Clinicians | Influenza (Flu) | CDC",
+        "chunk_type": "prose",
+        "heading": "What to know > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 378,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Antiviral Medication",
+          "Total Viruses",
+          "A(H1N1)",
+          "A(H3N2)",
+          "B/Victoria"
+        ],
+        [
+          "Neuraminidase Inhibitors",
+          "Oseltamivir",
+          "Viruses Tested",
+          "5078",
+          "1962",
+          "2244",
+          "872"
+        ],
+        [
+          "Reduced Inhibition",
+          "2 (<0.1%)",
+          "2 (0.1%)",
+          "0",
+          "0"
+        ],
+        [
+          "Highly Reduced Inhibition",
+          "10 (0.2%)",
+          "8 (0.4%)",
+          "2 (<0.1%)",
+          "0"
+        ],
+        [
+          "Peramivir",
+          "Viruses Tested",
+          "5078",
+          "1962",
+          "2244",
+          "872"
+        ],
+        [
+          "Reduced Inhibition",
+          "1 (<0.1%)",
+          "0",
+          "1 (<0.1%)",
+          "0"
+        ],
+        [
+          "Highly Reduced Inhibition",
+          "9 (0.2%)",
+          "9 (0.5%)",
+          "0",
+          "0"
+        ],
+        [
+          "Zanamivir",
+          "Viruses Tested",
+          "5078",
+          "1962",
+          "2244",
+          "872"
+        ],
+        [
+          "Reduced Inhibition",
+          "2 (<0.1%)",
+          "1 (<0.1%)",
+          "1 (<0.1%)",
+          "0"
+        ],
+        [
+          "Highly Reduced Inhibition",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "PA Cap-Dependent Endonuclease Inhibitor",
+          "Baloxavir",
+          "Viruses Tested",
+          "4862",
+          "1813",
+          "2197",
+          "852"
+        ],
+        [
+          "Decreased Susceptibility",
+          "3 (<0.1)",
+          "1 (<0.1)",
+          "2 (0.1)",
+          "0"
+        ]
+      ],
+      [
+        [
+          "2025\u20132026 Vaccine",
+          "2024\u20132025 Vaccine"
+        ],
+        [
+          "Egg-based Trivalent",
+          "A/Victoria/4897/2022 (H1N1)pdm09-like virus",
+          "A/Victoria/4897/2022 (H1N1)pdm09-like virus"
+        ],
+        [
+          "A/Croatia/10136RV/2023 (H3N2)-like virus",
+          "A/Thailand/8/2022 (H3N2)-like virus"
+        ],
+        [
+          "B/Austria/1359417/2021-like virus (B/Victoria lineage)",
+          "B/Austria/1359417/2021-like virus (B/Victoria lineage)"
+        ],
+        [
+          "Cell- or recombinant-based Trivalent",
+          "A/Wisconsin/67/2022 (H1N1)pdm09-like virus",
+          "A/Wisconsin/67/2022 (H1N1)pdm09-like virus"
+        ],
+        [
+          "A/District of Columbia/27/2023 (H3N2)-like virus",
+          "A/Massachusetts/18/2022 (H3N2)-like virus"
+        ],
+        [
+          "B/Austria/1359417/2021-like virus (B/Victoria lineage)",
+          "B/Austria/1359417/2021-like virus (B/Victoria lineage)"
+        ]
+      ],
+      [
+        [
+          "Code Type",
+          "Codes",
+          "Code Description"
+        ],
+        [
+          "Inclusions"
+        ],
+        [
+          "ICD-10-CM",
+          "J09",
+          "Influenza due to certain identified influenza viruses"
+        ],
+        [
+          "J10",
+          "Influenza due to other identified influenza viruses"
+        ],
+        [
+          "J11",
+          "Influenza due to unidentified influenza virus"
+        ],
+        [
+          "ICD-9-CM",
+          "487",
+          "Influenza with pneumonia"
+        ],
+        [
+          "487.1",
+          "Influenza with other respiratory manifestations"
+        ],
+        [
+          "487.8",
+          "Influenza with other manifestations</td"
+        ],
+        [
+          "488.01",
+          "Influenza due to identified avian influenza virus with pneumonia"
+        ],
+        [
+          "488.09",
+          "Influenza due to identified avian influenza virus with other manifestations"
+        ],
+        [
+          "488.11",
+          "Influenza due to identified 2009 H1N1 influenza virus with pneumonia"
+        ],
+        [
+          "488.19",
+          "Influenza due to identified 2009 H1N1 influenza virus with other manifestations"
+        ],
+        [
+          "488.81",
+          "Influenza due to identified novel influenza A virus with pneumonia"
+        ],
+        [
+          "488.89",
+          "Influenza due to identified novel influenza A virus with other manifestations"
+        ],
+        [
+          "SNOMED CT",
+          "442696006",
+          "Influenza caused by influenza A virus subtype H1N1"
+        ],
+        [
+          "442438000",
+          "Influenza caused by Influenza A virus"
+        ],
+        [
+          "6142004",
+          "Influenza"
+        ],
+        [
+          "195878008",
+          "Pneumonia and influenza"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "7 September 2025",
+      "September 29, 2024",
+      "August 30, 2025",
+      "February 1, 2025",
+      "June 21, 2025",
+      "February 8, 2025",
+      "December 28, 2024",
+      "January 25, 2025",
+      "February 15, 2025",
+      "December 21, 2024",
+      "March 1, 2025",
+      "April 17, 2020",
+      "December 7, 2024",
+      "November 26, 2022",
+      "December 30, 2023",
+      "May 17, 2025",
+      "November 2, 2024",
+      "October 1, 2024",
+      "April 30, 2025",
+      "September 8, 2025",
+      "April 26, 2025",
+      "July 15, 2025",
+      "July 10, 2025",
+      "September 10, 2025",
+      "September 12, 2025",
+      "August 4, 2025",
+      "July 24, 2025",
+      "September 4, 2025"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

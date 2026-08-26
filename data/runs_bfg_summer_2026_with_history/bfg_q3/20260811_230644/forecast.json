@@ -1,0 +1,146 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.60173338701339,
+        "NO": 0.39826661298661
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.60173338701339,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.39826661298661,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.4
+      ],
+      "ok": true,
+      "reference_class": "PHEIC declarations for Ebola outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The Bundibugyo virus outbreak is severe, with high case and death numbers.",
+        "There is a significant funding gap hindering response efforts.",
+        "Ongoing transmission as indicated by Rt greater than 1."
+      ],
+      "drivers_down": [
+        "PHEICs are typically lifted once international spread is contained and response measures are in place.",
+        "Ebola outbreaks, while severe, have historically been brought under control within a few years."
+      ],
+      "why_might_be_wrong": "The outbreak could persist longer than expected due to insufficient containment or new complicating factors.",
+      "rationale": "The Bundibugyo Ebola outbreak in the DRC and Uganda is currently severe, with ongoing transmission and a significant funding gap, which supports the likelihood of the PHEIC remaining in effect. However, PHEICs are usually not indefinite; they are lifted as soon as the outbreak is deemed under control and international measures are in place. Given the typical duration of Ebola-related PHEICs and efforts to control outbreaks, there is still a considerable chance that the PHEIC will be terminated before 2026 ends. Adjusting from the base rate of 0.2 for similar past PHEICs, the evidence suggests a moderate probability increase, but not overwhelming certainty.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.6
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations and their duration",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The Bundibugyo virus outbreak is severe with high case and death numbers.",
+        "There is a substantial funding gap hindering response efforts.",
+        "The PHEIC was declared only recently, suggesting the situation is not yet under control."
+      ],
+      "drivers_down": [
+        "PHEICs are typically lifted within a few years as situations come under control.",
+        "There may be international pressure to resolve the outbreak and lift the PHEIC."
+      ],
+      "why_might_be_wrong": "The severity and scale of this particular outbreak might lead to an unusually long duration for the PHEIC, or new factors might emerge that prolong the emergency status.",
+      "rationale": "The base rate for a PHEIC lasting until the target date is low, given historical durations. However, the severity of the Bundibugyo virus outbreak, the substantial funding gap, and the recent declaration of the PHEIC increase the likelihood that it will remain in effect. Balancing these factors leads to a slightly higher probability for the PHEIC persisting than the base rate alone would suggest, but still not a majority probability.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.35
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for Ebola virus outbreaks",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "The Bundibugyo virus outbreak is significant, being the third-largest Ebola outbreak on record.",
+        "There is a substantial funding gap of more than $400 million, indicating limited resources for containment.",
+        "The outbreak was still ongoing as of the latest reports, with the virus still transmitting."
+      ],
+      "drivers_down": [
+        "PHEICs are typically lifted when outbreaks are controlled or when international coordination improves.",
+        "Historical PHEICs for Ebola have been resolved within a few years, suggesting potential for resolution by 2026."
+      ],
+      "why_might_be_wrong": "The outbreak could escalate further, requiring prolonged international intervention, or new information not currently available might change the situation.",
+      "rationale": "The base rate for PHEICs lasting beyond a few years is relatively low, but the specific circumstances of this Bundibugyo outbreak in the DRC and Uganda present significant challenges. The severity of the outbreak, the large funding gap, and ongoing transmission suggest that controlling the outbreak might be particularly difficult, thus increasing the likelihood that the PHEIC remains in effect by 31 December 2026. Historical PHEICs for Ebola, however, have typically been resolved within a few years, leading to a moderate probability adjustment.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "The Bundibugyo virus, a strain of Ebola, has shown potential for outbreaks in the past, particularly in the DRC and Uganda. However, the effectiveness of biosecurity measures, vaccination efforts, and public health responses could lead to a decrease in the incidence of the disease by 2026. Therefore, while there is a significant chance that the PHEIC could still be in effect due to the unpredictable nature of viral outbreaks, there is also a reasonable probability that it could be resolved by that time.",
+  "evidence_record_ids": [
+    "ins-8d01c6c20f8c",
+    "ins-1d437f6ae69a"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6636,
+    "total_output_tokens": 920,
+    "total_tokens": 7556,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6447,
+        "output_tokens": 801,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 119,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

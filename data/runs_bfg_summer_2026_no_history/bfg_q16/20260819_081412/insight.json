@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-bed7ffb86754",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:52:59.335238+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-71a4df116940423797a84a3ba00d08dd",
+          "chunk_id": "doc-71a4df116940423797a84a3ba00d08dd-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-15e976021010",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "No deaths have been reported from measles since January 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:53:02.226439+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f6ad0c9198bd49af891487149afefe9c",
+          "chunk_id": "doc-f6ad0c9198bd49af891487149afefe9c-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+          "quote": "no deaths have been reported from the disease since January 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-70ab17eafa30",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Three people, including two young girls, died in the U.S. from measles last year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:53:07.998216+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2cd8c5d47aba4202bd06bd0f1ff3b4b0",
+          "chunk_id": "doc-2cd8c5d47aba4202bd06bd0f1ff3b4b0-c0",
+          "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+          "quote": "Three people, including two young girls, died in the U.S. from measles last year."
+        }
+      ]
+    },
+    {
+      "id": "ins-1b444af5fdbd",
+      "question_id": "bfg_q16",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2465.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed measles cases in the US as of August 6, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:53:04.286057+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7",
+          "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c2",
+          "source_url": "https://www.cidrap.umn.edu/childhood-vaccines/executive-order-confirmed-director-and-20-straight-months-measles-state-us",
+          "quote": "The CDC has confirmed 2,465 measles cases in 2026 as of August 6"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 49693,
+    "total_output_tokens": 531,
+    "total_tokens": 50224,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 49693,
+        "output_tokens": 531,
+        "calls": 22
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

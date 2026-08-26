@@ -1,0 +1,794 @@
+RUN_ID=20260819_091255
+--- bfg_q1 09:12:55 ---
+=== Pipeline run: bfg_q1 (20260819_091255) ===
+question:  How many cumulative laboratory-confirmed Bundibugyo virus disease cases (DRC and Uganda combined) will there be since the outbreak declaration on 14 May 2026 to 31 October 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2026-11-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q1/20260819_091255
+
+[search] starting...
+[search] 48 results (13.9s)
+[filter] starting...
+[filter] 9 docs (3.9s)
+[extract] starting...
+[extract] 9/9 success (7.9s)
+[insight] starting...
+2026-08-19 10:13:36,095 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-560e30c65ba042189cee5187d4db70cd-c18, quote='...a median of 990 cumulative confirmed cases (90% PI 709–1293) and 174 deaths by week 12...'
+2026-08-19 10:13:40,409 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-560e30c65ba042189cee5187d4db70cd-c15, quote='cumulative confirmed cases reached a median of 3662 by week 24'
+2026-08-19 10:13:40,411 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-560e30c65ba042189cee5187d4db70cd-c15, quote='confirmed cases reached a median of 1364 by week 12'
+2026-08-19 10:13:40,413 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-560e30c65ba042189cee5187d4db70cd-c15, quote='rising to 66 420 by week 24'
+[insight] 12 records | in=107,609 out=2,095 (27.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=9,688 out=894 (14.0s)
+
+=== Pipeline complete: bfg_q1 ===
+  search     13.95s  $0.0001
+  filter      3.94s  $0.0005
+  extract     7.87s
+  insight    27.31s  $0.0174
+  forecast   13.99s  $0.0317
+  total cost:  $0.0497
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q1/20260819_091255
+bfg_q1 OK
+--- bfg_q2 09:14:05 ---
+=== Pipeline run: bfg_q2 (20260819_091255) ===
+question:  How many cumulative reported deaths (confirmed plus probable) will there be in the Bundibugyo outbreak since the outbreak declaration on 14 May 2026 to 31 December 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q2/20260819_091255
+
+[search] starting...
+[search] 51 results (11.8s)
+[filter] starting...
+[filter] 9 docs (3.6s)
+[extract] starting...
+[extract] 9/9 success (2.7s)
+[insight] starting...
+[insight] 6 records | in=108,724 out=1,109 (22.2s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=8,007 out=983 (16.8s)
+
+=== Pipeline complete: bfg_q2 ===
+  search     11.77s  $0.0001
+  filter      3.60s  $0.0004
+  extract     2.73s
+  insight    22.23s  $0.0170
+  forecast   16.82s  $0.0284
+  total cost:  $0.0459
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q2/20260819_091255
+bfg_q2 OK
+--- bfg_q3 09:15:04 ---
+=== Pipeline run: bfg_q3 (20260819_091255) ===
+question:  Will the Bundibugyo virus disease PHEIC still be in effect on 31 December 2026?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q3/20260819_091255
+
+[search] starting...
+[search] 47 results (12.6s)
+[filter] starting...
+[filter] 9 docs (7.9s)
+[extract] starting...
+[extract] 9/9 success, 3 thin (3.7s)
+  ! thin extraction: science.org (41 chars < 500) https://www.science.org/content/article/vaccine-experts-debate-options-combat-outbreak-unusual-ebola-strain
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/ebola-bundibugyo-virus-disease-outbreak-democratic-republic-congo-uganda-weekly-external-situation-report-12-data-26-july-2026
+  ! thin extraction: nejm.org (41 chars < 500) https://www.nejm.org/doi/full/10.1056/NEJMc2608070
+[insight] starting...
+2026-08-19 10:15:34,891 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-9612c8eb68524b2a8a2e83c79e9e409f-c3, quote='On 17 May 2026, WHO Director-General... determined that the Ebola disease caused by Bundibugyo virus'
+[insight] 4 records | in=84,716 out=826 (15.2s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=7,251 out=1,014 (16.2s)
+
+=== Pipeline complete: bfg_q3 ===
+  search     12.64s  $0.0001
+  filter      7.85s  $0.0008
+  extract     3.68s
+  insight    15.24s  $0.0132
+  forecast   16.25s  $0.0268
+  total cost:  $0.0409
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q3/20260819_091255
+bfg_q3 OK
+--- bfg_q4 09:16:02 ---
+=== Pipeline run: bfg_q4 (20260819_091255) ===
+question:  How many countries other than DRC or Uganda will report at least one laboratory-confirmed Bundibugyo case linked to this outbreak by 31 December 2026? (Baseline is 1 â€“ France)
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q4/20260819_091255
+
+[search] starting...
+[search] 49 results (11.2s)
+[filter] starting...
+[filter] 9 docs (5.2s)
+[extract] starting...
+[extract] 9/9 success, 2 thin (2.8s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/multi-country-bundibugyo-ebola-outbreak-response-3-9-august-2026-situation-report-13
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/iom-multi-country-ebola-bundibugyo-outbreak-response-update-sitrep-12
+[insight] starting...
+2026-08-19 10:16:38,442 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-da820a6923b642b2bf1dddde6e768062-c0, quote='...including one in France.'
+2026-08-19 10:16:38,447 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-da820a6923b642b2bf1dddde6e768062-c0, quote='...20 in Uganda...'
+[insight] 0 records | in=104,039 out=384 (14.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=5,842 out=808 (12.3s)
+
+=== Pipeline complete: bfg_q4 ===
+  search     11.22s  $0.0001
+  filter      5.20s  $0.0008
+  extract     2.80s
+  insight    14.02s  $0.0158
+  forecast   12.30s  $0.0215
+  total cost:  $0.0382
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q4/20260819_091255
+bfg_q4 OK
+--- bfg_q5 09:16:51 ---
+=== Pipeline run: bfg_q5 (20260819_091255) ===
+question:  Which is the furthest Bundibugyo countermeasure milestone reached by 31 December 2026? (Baseline: Oxford Phase I Bundibugyo vaccine trial launched 13 July 2026. WHO therapeutic trial, remdesivir and MBP134, began enrolling patients on 2 July 2026)
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2026-08-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q5/20260819_091255
+
+[search] starting...
+[search] 49 results (13.0s)
+[filter] starting...
+[filter] 9 docs (2.1s)
+[extract] starting...
+[extract] 9/9 success, 2 thin (2.0s)
+  ! thin extraction: science.org (41 chars < 500) https://www.science.org/content/article/first-ever-treatment-trial-ebola-bundibugyo-kicks-congo
+  ! thin extraction: science.org (41 chars < 500) https://www.science.org/content/article/vaccine-experts-debate-options-combat-outbreak-unusual-ebola-strain
+[insight] starting...
+2026-08-19 10:17:14,938 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-18940363564e41968e839a72a9ad0601-c3, quote='On 17 May 2026, WHO Director-General... determined that the Ebola disease caused by Bundibugyo virus'
+[insight] 3 records | in=99,296 out=690 (16.1s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=8,170 out=726 (13.0s)
+
+=== Pipeline complete: bfg_q5 ===
+  search     13.00s  $0.0001
+  filter      2.12s  $0.0003
+  extract     2.03s
+  insight    16.10s  $0.0153
+  forecast   12.99s  $0.0262
+  total cost:  $0.0419
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q5/20260819_091255
+bfg_q5 OK
+--- bfg_q6 09:17:40 ---
+=== Pipeline run: bfg_q6 (20260819_091255) ===
+question:  How many human H5 infections (any neuraminidase subtype) will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q6/20260819_091255
+
+[search] starting...
+[search] 45 results (8.3s)
+[filter] starting...
+[filter] 10 docs (3.3s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:19:19,303 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 10/10 success, 1 thin, docling 0/1 PDFs (93.5s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+[insight] 6 records | in=183,195 out=1,187 (30.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=8,571 out=968 (13.5s)
+
+=== Pipeline complete: bfg_q6 ===
+  search      8.32s  $0.0001
+  filter      3.33s  $0.0004
+  extract    93.54s
+  insight    30.62s  $0.0282
+  forecast   13.53s  $0.0293
+  total cost:  $0.0580
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q6/20260819_091255
+bfg_q6 OK
+--- bfg_q7 09:20:13 ---
+=== Pipeline run: bfg_q7 (20260819_091255) ===
+question:  Will WHO or a national public health authority confirm at least one cluster meeting its stated criteria for sustained human-to-human transmission of an H5 virus on or before 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q7/20260819_091255
+
+[search] starting...
+[search] 48 results (11.7s)
+[filter] starting...
+[filter] 8 docs (0.0s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:23:58,206 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 8/8 success, 1 thin, docling 0/1 PDFs (214.6s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+2026-08-19 10:24:07,758 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-2f0333020e3845ceaa85324573500b9e-c0, quote='In 2026 (year-to-date) 9 confirmed human A(H5N1) cases have been reported to WHO globally'
+[insight] 7 records | in=100,069 out=1,155 (20.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=7,936 out=837 (14.1s)
+
+=== Pipeline complete: bfg_q7 ===
+  search     11.70s  $0.0001
+  filter      0.01s  $0.0000
+  extract   214.62s
+  insight    20.54s  $0.0157
+  forecast   14.10s  $0.0267
+  total cost:  $0.0425
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q7/20260819_091255
+bfg_q7 OK
+--- bfg_q8 09:24:38 ---
+=== Pipeline run: bfg_q8 (20260819_091255) ===
+question:  What will be the predominant H5 subtype among human cases reported globally from 1 July 2026 to 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q8/20260819_091255
+
+[search] starting...
+[search] 45 results (10.0s)
+[filter] starting...
+[filter] 8 docs (2.5s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:28:43,305 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 8/8 success, 1 thin, docling 0/1 PDFs (236.0s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+2026-08-19 10:28:59,381 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-88bb320d979d451abbbbe3031690c94f-c2, quote='Cambodia notified WHO of one laboratory-confirmed human case of avian influenza A(H5N1) infection de'
+[insight] 9 records | in=115,110 out=1,436 (21.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=8,906 out=897 (18.2s)
+
+=== Pipeline complete: bfg_q8 ===
+  search      9.97s  $0.0001
+  filter      2.47s  $0.0002
+  extract   236.01s
+  insight    21.82s  $0.0181
+  forecast   18.23s  $0.0293
+  total cost:  $0.0477
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q8/20260819_091255
+bfg_q8 OK
+--- bfg_q9 09:29:30 ---
+=== Pipeline run: bfg_q9 (20260819_091255) ===
+question:  How many US states will have H5N1 dairy-cattle detections by 31 December 2026? Number is cumulative states reporting H5N1 in livestock since outbreak was declared in 2024.
+pathogen:  'h5n1'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q9/20260819_091255
+
+[search] starting...
+[search] 52 results (10.1s)
+[filter] starting...
+[filter] 8 docs (1.9s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:34:53,154 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 8/8 success, 2 thin, docling 0/1 PDFs (310.3s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+  ! thin extraction: aphis.usda.gov (455 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-livestock
+[insight] starting...
+[insight] 1 records | in=87,912 out=287 (11.2s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=5,921 out=898 (13.5s)
+
+=== Pipeline complete: bfg_q9 ===
+  search     10.12s  $0.0001
+  filter      1.95s  $0.0003
+  extract   310.34s
+  insight    11.22s  $0.0134
+  forecast   13.53s  $0.0224
+  total cost:  $0.0361
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q9/20260819_091255
+bfg_q9 OK
+--- bfg_q10 09:35:22 ---
+=== Pipeline run: bfg_q10 (20260819_091255) ===
+question:  How many new PHEICs will be declared for events not already under a PHEIC as of 1 July 2026, during 1 July 2026 to 31 December 2026?
+pathogen:  'pheic'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q10/20260819_091255
+
+[search] starting...
+[search] 45 results (10.2s)
+[filter] starting...
+[filter] 18 docs (1.9s)
+[extract] starting...
+[extract] 18/18 success, 4 thin (17.7s)
+  ! thin extraction: cdc.gov (421 chars < 500) https://www.cdc.gov/outbreaks/index.html
+  ! thin extraction: ecdc.europa.eu (173 chars < 500) https://www.ecdc.europa.eu/en/publications-data/monitoring/weekly-threats-reports
+  ! thin extraction: wahis.woah.org (0 chars < 500) https://wahis.woah.org/
+  ! thin extraction: empres-i.apps.fao.org (0 chars < 500) https://empres-i.apps.fao.org/
+[insight] starting...
+[insight] 1 records | in=127,284 out=382 (24.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 3 options | in=5,706 out=845 (12.8s)
+
+=== Pipeline complete: bfg_q10 ===
+  search     10.24s  $0.0001
+  filter      1.85s  $0.0001
+  extract    17.68s
+  insight    24.36s  $0.0193
+  forecast   12.84s  $0.0212
+  total cost:  $0.0408
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q10/20260819_091255
+bfg_q10 OK
+--- bfg_q11 09:36:33 ---
+=== Pipeline run: bfg_q11 (20260819_091255) ===
+question:  How many chikungunya cases will be in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'chikungunya'
+region:    'americas'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q11/20260819_091255
+
+[search] starting...
+[search] 38 results (12.4s)
+[filter] starting...
+[filter] 2 docs (0.0s)
+[extract] starting...
+[extract] 2/2 success (2.3s)
+[insight] starting...
+2026-08-19 10:36:54,261 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-3e91464edb144cc5aac7cc25ad32d6d2-c6, quote='219 522 chikungunya virus disease (CHIKVD) cases... detected in 25 countries, excluding EU/EEA count'
+[insight] 6 records | in=32,693 out=896 (5.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=8,448 out=952 (13.4s)
+
+=== Pipeline complete: bfg_q11 ===
+  search     12.43s  $0.0001
+  filter      0.01s  $0.0000
+  extract     2.31s
+  insight     5.39s  $0.0054
+  forecast   13.43s  $0.0289
+  total cost:  $0.0345
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q11/20260819_091255
+bfg_q11 OK
+--- bfg_q12 09:37:09 ---
+=== Pipeline run: bfg_q12 (20260819_091255) ===
+question:  Will WHO declare a new PHEIC for mpox at any point between 15 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q12/20260819_091255
+
+[search] starting...
+[search] 49 results (12.5s)
+[filter] starting...
+[filter] 11 docs (1.8s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:38:54,536 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 10/11 success, docling 0/1 PDFs (93.4s)
+[insight] starting...
+2026-08-19 10:39:15,664 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-56f5b34c5ceb42339c32b8fc7e3df60b-c0, quote='In the past 12 months, 19 countries reported 888 clade II mpox cases.'
+2026-08-19 10:39:30,299 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-8fee1c6750994c7c97fde310a2fac2d7-c0, quote='WHO Director-General Dr Tedros Adhanom Ghebreyesus has determined that the upsurge of mpox... consti'
+[insight] 24 records | in=126,992 out=3,352 (33.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=10,658 out=919 (11.9s)
+
+=== Pipeline complete: bfg_q12 ===
+  search     12.54s  $0.0001
+  filter      1.84s  $0.0003
+  extract    93.36s
+  insight    33.37s  $0.0211
+  forecast   11.95s  $0.0343
+  total cost:  $0.0558
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q12/20260819_091255
+bfg_q12 OK
+--- bfg_q13 09:39:47 ---
+=== Pipeline run: bfg_q13 (20260819_091255) ===
+question:  How many cumulative human mpox cases will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q13/20260819_091255
+
+[search] starting...
+[search] 47 results (15.5s)
+[filter] starting...
+[filter] 12 docs (1.9s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:42:58,361 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 11/12 success, docling 0/1 PDFs (176.9s)
+[insight] starting...
+2026-08-19 10:43:07,913 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-0a9e26f335dd4c3086862749c6e7f820-c1, quote='total_cases 180545.0'
+[insight] 16 records | in=168,352 out=2,191 (24.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=10,209 out=1,018 (15.4s)
+
+=== Pipeline complete: bfg_q13 ===
+  search     15.45s  $0.0001
+  filter      1.92s  $0.0003
+  extract   176.93s
+  insight    24.45s  $0.0266
+  forecast   15.39s  $0.0343
+  total cost:  $0.0612
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q13/20260819_091255
+bfg_q13 OK
+--- bfg_q14 09:43:46 ---
+=== Pipeline run: bfg_q14 (20260819_091255) ===
+question:  How many US confirmed measles cases will be reported from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q14/20260819_091255
+
+[search] starting...
+[search] 42 results (9.2s)
+[filter] starting...
+[filter] 7 docs (7.7s)
+[extract] starting...
+[extract] 7/7 success (6.7s)
+[insight] starting...
+[insight] 9 records | in=33,802 out=1,297 (19.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=8,602 out=1,026 (14.6s)
+
+=== Pipeline complete: bfg_q14 ===
+  search      9.20s  $0.0001
+  filter      7.73s  $0.0010
+  extract     6.66s
+  insight    19.49s  $0.0058
+  forecast   14.56s  $0.0300
+  total cost:  $0.0370
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q14/20260819_091255
+bfg_q14 OK
+--- bfg_q15 09:44:46 ---
+=== Pipeline run: bfg_q15 (20260819_091255) ===
+question:  Will PAHO or WHO determine that the United States has lost measles elimination status on or before 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q15/20260819_091255
+
+[search] starting...
+[search] 47 results (10.2s)
+[filter] starting...
+[filter] 7 docs (6.0s)
+[extract] starting...
+[extract] 7/7 success (7.2s)
+[insight] starting...
+2026-08-19 10:45:49,067 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-b8bf5da070e74ef592ffab8cce98fe6f-c0, quote='Texas reporting 188 in 2026.'
+2026-08-19 10:45:49,069 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-b8bf5da070e74ef592ffab8cce98fe6f-c0, quote='Virginia has now seen 176 in 2026.'
+2026-08-19 10:45:49,069 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-b8bf5da070e74ef592ffab8cce98fe6f-c0, quote='Arizona jumped by nine cases to a 108 total for the year.'
+[insight] 26 records | in=32,799 out=3,530 (37.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=11,976 out=876 (15.7s)
+
+=== Pipeline complete: bfg_q15 ===
+  search     10.15s  $0.0001
+  filter      5.95s  $0.0010
+  extract     7.18s
+  insight    37.64s  $0.0070
+  forecast   15.65s  $0.0372
+  total cost:  $0.0453
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q15/20260819_091255
+bfg_q15 OK
+--- bfg_q16 09:46:05 ---
+=== Pipeline run: bfg_q16 (20260819_091255) ===
+question:  How many measles-associated deaths will be reported in the U.S. from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q16/20260819_091255
+
+[search] starting...
+[search] 47 results (12.3s)
+[filter] starting...
+[filter] 7 docs (5.7s)
+[extract] starting...
+[extract] 7/7 success (3.7s)
+[insight] starting...
+[insight] 5 records | in=48,412 out=725 (16.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=6,917 out=924 (13.1s)
+
+=== Pipeline complete: bfg_q16 ===
+  search     12.31s  $0.0001
+  filter      5.75s  $0.0009
+  extract     3.70s
+  insight    15.99s  $0.0077
+  forecast   13.06s  $0.0249
+  total cost:  $0.0336
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q16/20260819_091255
+bfg_q16 OK
+--- bfg_q17 09:47:01 ---
+=== Pipeline run: bfg_q17 (20260819_091255) ===
+question:  How many global cholera cases will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q17/20260819_091255
+
+[search] starting...
+[search] 46 results (9.9s)
+[filter] starting...
+[filter] 5 docs (2.6s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 10:52:04,239 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 5/5 success, docling 0/1 PDFs (291.1s)
+[insight] starting...
+2026-08-19 10:52:12,606 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-4180ae3f756b4431bca876ac1fe16fa8-c12, quote='a total of 241 cholera or AWD cases were reported across 2 countries in the South-East Asia Region.'
+[insight] 15 records | in=110,707 out=2,193 (18.7s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=9,721 out=960 (15.5s)
+
+=== Pipeline complete: bfg_q17 ===
+  search      9.93s  $0.0001
+  filter      2.61s  $0.0002
+  extract   291.07s
+  insight    18.66s  $0.0179
+  forecast   15.46s  $0.0323
+  total cost:  $0.0505
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q17/20260819_091255
+bfg_q17 OK
+--- bfg_q18 09:52:43 ---
+=== Pipeline run: bfg_q18 (20260819_091255) ===
+question:  How many dengue suspected cases will be reported in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'dengue'
+region:    'americas'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q18/20260819_091255
+
+[search] starting...
+[search] 46 results (10.9s)
+[filter] starting...
+[filter] 6 docs (3.5s)
+[extract] starting...
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 6/6 success, 1 thin, docling 0/1 PDFs (8.4s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/brazil/report-epidemiological-situation-dengue-americas-epidemiological-week-21-2026-update-jun-17-2026-324pm-gtm-5
+[insight] starting...
+[insight] 17 records | in=93,613 out=2,308 (15.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=9,925 out=988 (15.0s)
+
+=== Pipeline complete: bfg_q18 ===
+  search     10.87s  $0.0001
+  filter      3.47s  $0.0005
+  extract     8.39s
+  insight    15.46s  $0.0154
+  forecast   14.96s  $0.0330
+  total cost:  $0.0490
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q18/20260819_091255
+bfg_q18 OK
+--- bfg_q19 09:53:39 ---
+=== Pipeline run: bfg_q19 (20260819_091255) ===
+question:  How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?
+pathogen:  'chikungunya'
+region:    'eu-eea'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q19/20260819_091255
+
+[search] starting...
+[search] 36 results (13.3s)
+[filter] starting...
+[filter] 5 docs (0.0s)
+[extract] starting...
+[extract] 5/5 success (2.8s)
+[insight] starting...
+[insight] 1 records | in=57,507 out=236 (8.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,855 out=886 (15.6s)
+
+=== Pipeline complete: bfg_q19 ===
+  search     13.35s  $0.0001
+  filter      0.01s  $0.0000
+  extract     2.77s
+  insight     8.79s  $0.0088
+  forecast   15.55s  $0.0222
+  total cost:  $0.0311
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q19/20260819_091255
+bfg_q19 OK
+--- bfg_q20 09:54:21 ---
+=== Pipeline run: bfg_q20 (20260819_091255) ===
+question:  How many Americas countries or territories will report confirmed Oropouche in 2026, as of 31 December 2026?
+pathogen:  'oropouche'
+region:    'americas'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q20/20260819_091255
+
+[search] starting...
+[search] 35 results (9.1s)
+[filter] starting...
+[filter] 6 docs (1.9s)
+[extract] starting...
+[extract] 6/6 success (9.2s)
+[insight] starting...
+[insight] 3 records | in=99,817 out=640 (11.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=6,671 out=978 (18.0s)
+
+=== Pipeline complete: bfg_q20 ===
+  search      9.10s  $0.0001
+  filter      1.87s  $0.0003
+  extract     9.20s
+  insight    11.28s  $0.0154
+  forecast   18.01s  $0.0246
+  total cost:  $0.0404
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q20/20260819_091255
+bfg_q20 OK
+--- bfg_q21 09:55:13 ---
+=== Pipeline run: bfg_q21 (20260819_091255) ===
+question:  Will WHO declare a new filovirus outbreak distinct from the ongoing Bundibugyo event between 1 July 2026 and 31 December 2026?
+pathogen:  'filovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q21/20260819_091255
+
+[search] starting...
+[search] 38 results (10.0s)
+[filter] starting...
+[filter] 7 docs (1.1s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (3.9s)
+  ! thin extraction: nejm.org (41 chars < 500) https://www.nejm.org/doi/full/10.1056/NEJMoa2415816
+[insight] starting...
+2026-08-19 10:55:55,577 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-83508432ad9043c1be26da39461d5d47-c0, quote='...234 deaths including two from Uganda, have been reported.'
+2026-08-19 10:55:55,583 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-83508432ad9043c1be26da39461d5d47-c0, quote='...including 232 deaths (case fatality ratio [CFR] 26%) have been reported from the Democratic Repub'
+[insight] 12 records | in=94,516 out=2,112 (25.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=9,755 out=828 (13.5s)
+
+=== Pipeline complete: bfg_q21 ===
+  search      9.96s  $0.0001
+  filter      1.15s  $0.0002
+  extract     3.89s
+  insight    25.32s  $0.0154
+  forecast   13.52s  $0.0316
+  total cost:  $0.0473
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q21/20260819_091255
+bfg_q21 OK
+--- bfg_q22 09:56:09 ---
+=== Pipeline run: bfg_q22 (20260819_091255) ===
+question:  How many wild poliovirus type 1 cases will be reported globally in 2026, as of 31 December 2026?
+pathogen:  'poliovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q22/20260819_091255
+
+[search] starting...
+[search] 44 results (10.2s)
+[filter] starting...
+[filter] 5 docs (0.0s)
+[extract] starting...
+[extract] 5/5 success (3.6s)
+[insight] starting...
+2026-08-19 10:56:29,642 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-b7bc995d375a400a82af3fd6e94f7cb5-c1, quote='In 2024, there were a total of 99 confirmed cases of wild polio in two countries: Afghanistan and Pa'
+[insight] 6 records | in=129,370 out=1,016 (12.7s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=7,490 out=807 (12.2s)
+
+=== Pipeline complete: bfg_q22 ===
+  search     10.20s  $0.0001
+  filter      0.01s  $0.0000
+  extract     3.57s
+  insight    12.71s  $0.0200
+  forecast   12.24s  $0.0253
+  total cost:  $0.0455
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q22/20260819_091255
+bfg_q22 OK
+--- bfg_q23 09:56:50 ---
+=== Pipeline run: bfg_q23 (20260819_091255) ===
+question:  Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?
+pathogen:  'sars-cov-2'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q23/20260819_091255
+
+[search] starting...
+[search] 48 results (12.6s)
+[filter] starting...
+[filter] 6 docs (1.2s)
+[extract] starting...
+[extract] 6/6 success, 1 thin (13.8s)
+  ! thin extraction: cdc.gov (440 chars < 500) https://www.cdc.gov/covid/php/surveillance/index.html
+[insight] starting...
+[insight] 1 records | in=56,026 out=232 (7.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=4,710 out=780 (11.1s)
+
+=== Pipeline complete: bfg_q23 ===
+  search     12.56s  $0.0001
+  filter      1.16s  $0.0002
+  extract    13.79s
+  insight     7.82s  $0.0085
+  forecast   11.10s  $0.0183
+  total cost:  $0.0272
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q23/20260819_091255
+bfg_q23 OK
+--- bfg_q24 09:57:38 ---
+=== Pipeline run: bfg_q24 (20260819_091255) ===
+question:  How many measles cases will be reported to WHO globally in 2026, as of 31 December 2026?
+pathogen:  'measles'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q24/20260819_091255
+
+[search] starting...
+[search] 46 results (10.9s)
+[filter] starting...
+[filter] 6 docs (6.2s)
+[extract] starting...
+[extract] 6/6 success (3.6s)
+[insight] starting...
+[insight] 11 records | in=68,914 out=1,415 (13.1s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=9,097 out=887 (14.3s)
+
+=== Pipeline complete: bfg_q24 ===
+  search     10.88s  $0.0001
+  filter      6.17s  $0.0011
+  extract     3.58s
+  insight    13.10s  $0.0112
+  forecast   14.33s  $0.0300
+  total cost:  $0.0424
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q24/20260819_091255
+bfg_q24 OK
+--- bfg_q25 09:58:29 ---
+=== Pipeline run: bfg_q25 (20260819_091255) ===
+question:  How many cholera-related deaths will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_with_history/bfg_q25/20260819_091255
+
+[search] starting...
+[search] 48 results (10.5s)
+[filter] starting...
+[filter] 5 docs (2.8s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+2026-08-19 11:02:14,906 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: Network error: Request middleware error: error sending request for url (https://huggingface.co/api/models/docling-project/docling-layout-heron/xet-read-token/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8)
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 5/5 success, docling 0/1 PDFs (211.7s)
+[insight] starting...
+2026-08-19 11:02:21,352 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-8b1e5098c58f4e849b199ea9b305331c-c20, quote='...Nigeria reported a total of 6860 cases and 80 deaths...'
+2026-08-19 11:02:21,874 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-8b1e5098c58f4e849b199ea9b305331c-c18, quote='...a total of 28 567 cases and 815 deaths...'
+[insight] 16 records | in=118,932 out=2,340 (20.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=10,138 out=978 (14.7s)
+
+=== Pipeline complete: bfg_q25 ===
+  search     10.54s  $0.0001
+  filter      2.79s  $0.0003
+  extract   211.73s
+  insight    20.03s  $0.0192
+  forecast   14.71s  $0.0334
+  total cost:  $0.0531
+  artifacts: data/runs_bfg_summer_2026_with_history/bfg_q25/20260819_091255
+bfg_q25 OK
+FAILS=0

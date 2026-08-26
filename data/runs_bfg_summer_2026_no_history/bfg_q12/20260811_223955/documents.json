@@ -1,0 +1,2512 @@
+[
+  {
+    "id": "doc-6fd696dae64c4a33940aadb222138655",
+    "result_id": "6fd696dae64c4a33940aadb222138655",
+    "source_url": "https://ourworldindata.org/mpox",
+    "domain": "ourworldindata.org",
+    "fetched_at": "2026-08-11T22:51:32.154402+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://ourworldindata.org/mpox",
+    "title": "Our World in Data \u2014 mpox summary",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 2518,
+    "token_count": 1070,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-6fd696dae64c4a33940aadb222138655-c0",
+        "chunk_index": 0,
+        "text": "CSV source: https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv\nCutoff: 2026-08-11; locations with usable rows: 151; region hint: world\nOur World in Data \u2014 mpox (World). As of 2026-04-27, World: cumulative confirmed cases (World): 180,545; cumulative deaths (World): 506. Source: https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv.\nLatest total_cases (2026-04-27): 180,545; delta_4_rows: 152.0; delta_12_rows: 377.0\nTrend summary (total_cases, World): points=1458, span_days=1457, delta_7_rows=155, delta_30_rows=1,238, recent_increment_stats=n=1457, mean=123.89, std=428.84, min=0, median=2, max=5,997.\nLinear fit on recent cumulative trend (total_cases, last 30 rows): intercept=179436.036559, slope=38.385984 per row, R^2=0.964440.\nIncident trend stats (new_cases, World): n=30, mean=41.27, std=69.48, min=0, median=2.50, max=207.\nExponential fit on recent new_cases (last 30 rows): a=30.318892, b=-0.028371, R^2=0.000000.\nRegion/question-target focus: World trend statistics and model-fit outputs are included in this section.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 357,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-6fd696dae64c4a33940aadb222138655-c1",
+        "chunk_index": 1,
+        "text": "date\tnew_cases\ttotal_cases\n2026-04-12\t151.0\t179941.0\n2026-04-13\t20.0\t179961.0\n2026-04-14\t0.0\t179961.0\n2026-04-15\t207.0\t180168.0\n2026-04-16\t0.0\t180168.0\n2026-04-17\t2.0\t180170.0\n2026-04-18\t0.0\t180170.0\n2026-04-19\t202.0\t180372.0\n2026-04-20\t18.0\t180390.0\n2026-04-21\t0.0\t180390.0\n2026-04-22\t0.0\t180390.0\n2026-04-23\t3.0\t180393.0\n2026-04-24\t2.0\t180395.0\n2026-04-25\t0.0\t180395.0\n2026-04-26\t139.0\t180534.0\n2026-04-27\t11.0\t180545.0",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": null,
+        "table_data": [
+          [
+            "date",
+            "new_cases",
+            "total_cases"
+          ],
+          [
+            "2026-04-12",
+            "151.0",
+            "179941.0"
+          ],
+          [
+            "2026-04-13",
+            "20.0",
+            "179961.0"
+          ],
+          [
+            "2026-04-14",
+            "0.0",
+            "179961.0"
+          ],
+          [
+            "2026-04-15",
+            "207.0",
+            "180168.0"
+          ],
+          [
+            "2026-04-16",
+            "0.0",
+            "180168.0"
+          ],
+          [
+            "2026-04-17",
+            "2.0",
+            "180170.0"
+          ],
+          [
+            "2026-04-18",
+            "0.0",
+            "180170.0"
+          ],
+          [
+            "2026-04-19",
+            "202.0",
+            "180372.0"
+          ],
+          [
+            "2026-04-20",
+            "18.0",
+            "180390.0"
+          ],
+          [
+            "2026-04-21",
+            "0.0",
+            "180390.0"
+          ],
+          [
+            "2026-04-22",
+            "0.0",
+            "180390.0"
+          ],
+          [
+            "2026-04-23",
+            "3.0",
+            "180393.0"
+          ],
+          [
+            "2026-04-24",
+            "2.0",
+            "180395.0"
+          ],
+          [
+            "2026-04-25",
+            "0.0",
+            "180395.0"
+          ],
+          [
+            "2026-04-26",
+            "139.0",
+            "180534.0"
+          ],
+          [
+            "2026-04-27",
+            "11.0",
+            "180545.0"
+          ]
+        ],
+        "token_count": 261,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-6fd696dae64c4a33940aadb222138655-c2",
+        "chunk_index": 2,
+        "text": "Location\tDate\ttotal_cases\nAfrica\t2026-04-26\t63,832\nNorth America\t2026-04-27\t46,383\nUnited States\t2026-04-27\t37,789\nDemocratic Republic of Congo\t2026-04-26\t34,054\nEurope\t2026-04-15\t32,315\nSouth America\t2026-04-27\t28,297\nBrazil\t2026-04-27\t15,027\nSpain\t2026-04-15\t9,517\nUganda\t2026-04-05\t8,512\nAsia\t2026-04-24\t7,762\nSierra Leone\t2025-12-14\t5,442\nMexico\t2026-04-27\t5,039\nColombia\t2026-04-27\t4,832\nGermany\t2026-04-15\t4,789\nUnited Kingdom\t2026-04-15\t4,754\nBurundi\t2026-04-05\t4,693\nFrance\t2026-04-15\t4,626\nPeru\t2026-04-27\t3,966\nChina\t2026-04-30\t3,960\nCanada\t2026-04-27\t2,355\nGuinea\t2026-04-12\t2,289\nOceania\t2026-03-31\t1,956\nChile\t2026-04-27\t1,947\nAustralia\t2026-04-30\t1,907\nLiberia\t2026-04-23\t1,688\nNetherlands\t2026-04-15\t1,634\nNigeria\t2026-04-05\t1,505\nArgentina\t2026-04-27\t1,423\nItaly\t2026-04-15\t1,371\nPortugal\t2026-04-15\t1,361",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": null,
+        "table_data": [
+          [
+            "Location",
+            "Date",
+            "total_cases"
+          ],
+          [
+            "Africa",
+            "2026-04-26",
+            "63,832"
+          ],
+          [
+            "North America",
+            "2026-04-27",
+            "46,383"
+          ],
+          [
+            "United States",
+            "2026-04-27",
+            "37,789"
+          ],
+          [
+            "Democratic Republic of Congo",
+            "2026-04-26",
+            "34,054"
+          ],
+          [
+            "Europe",
+            "2026-04-15",
+            "32,315"
+          ],
+          [
+            "South America",
+            "2026-04-27",
+            "28,297"
+          ],
+          [
+            "Brazil",
+            "2026-04-27",
+            "15,027"
+          ],
+          [
+            "Spain",
+            "2026-04-15",
+            "9,517"
+          ],
+          [
+            "Uganda",
+            "2026-04-05",
+            "8,512"
+          ],
+          [
+            "Asia",
+            "2026-04-24",
+            "7,762"
+          ],
+          [
+            "Sierra Leone",
+            "2025-12-14",
+            "5,442"
+          ],
+          [
+            "Mexico",
+            "2026-04-27",
+            "5,039"
+          ],
+          [
+            "Colombia",
+            "2026-04-27",
+            "4,832"
+          ],
+          [
+            "Germany",
+            "2026-04-15",
+            "4,789"
+          ],
+          [
+            "United Kingdom",
+            "2026-04-15",
+            "4,754"
+          ],
+          [
+            "Burundi",
+            "2026-04-05",
+            "4,693"
+          ],
+          [
+            "France",
+            "2026-04-15",
+            "4,626"
+          ],
+          [
+            "Peru",
+            "2026-04-27",
+            "3,966"
+          ],
+          [
+            "China",
+            "2026-04-30",
+            "3,960"
+          ],
+          [
+            "Canada",
+            "2026-04-27",
+            "2,355"
+          ],
+          [
+            "Guinea",
+            "2026-04-12",
+            "2,289"
+          ],
+          [
+            "Oceania",
+            "2026-03-31",
+            "1,956"
+          ],
+          [
+            "Chile",
+            "2026-04-27",
+            "1,947"
+          ],
+          [
+            "Australia",
+            "2026-04-30",
+            "1,907"
+          ],
+          [
+            "Liberia",
+            "2026-04-23",
+            "1,688"
+          ],
+          [
+            "Netherlands",
+            "2026-04-15",
+            "1,634"
+          ],
+          [
+            "Nigeria",
+            "2026-04-05",
+            "1,505"
+          ],
+          [
+            "Argentina",
+            "2026-04-27",
+            "1,423"
+          ],
+          [
+            "Italy",
+            "2026-04-15",
+            "1,371"
+          ],
+          [
+            "Portugal",
+            "2026-04-15",
+            "1,361"
+          ]
+        ],
+        "token_count": 418,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-6fd696dae64c4a33940aadb222138655-c3",
+        "chunk_index": 3,
+        "text": "Note: this custom scraper summarizes OWID CSV rows into compact HTML so the existing HTML extraction pipeline can process them deterministically. Figures are cumulative totals as of the cutoff.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 34,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "date",
+          "new_cases",
+          "total_cases"
+        ],
+        [
+          "2026-04-12",
+          "151.0",
+          "179941.0"
+        ],
+        [
+          "2026-04-13",
+          "20.0",
+          "179961.0"
+        ],
+        [
+          "2026-04-14",
+          "0.0",
+          "179961.0"
+        ],
+        [
+          "2026-04-15",
+          "207.0",
+          "180168.0"
+        ],
+        [
+          "2026-04-16",
+          "0.0",
+          "180168.0"
+        ],
+        [
+          "2026-04-17",
+          "2.0",
+          "180170.0"
+        ],
+        [
+          "2026-04-18",
+          "0.0",
+          "180170.0"
+        ],
+        [
+          "2026-04-19",
+          "202.0",
+          "180372.0"
+        ],
+        [
+          "2026-04-20",
+          "18.0",
+          "180390.0"
+        ],
+        [
+          "2026-04-21",
+          "0.0",
+          "180390.0"
+        ],
+        [
+          "2026-04-22",
+          "0.0",
+          "180390.0"
+        ],
+        [
+          "2026-04-23",
+          "3.0",
+          "180393.0"
+        ],
+        [
+          "2026-04-24",
+          "2.0",
+          "180395.0"
+        ],
+        [
+          "2026-04-25",
+          "0.0",
+          "180395.0"
+        ],
+        [
+          "2026-04-26",
+          "139.0",
+          "180534.0"
+        ],
+        [
+          "2026-04-27",
+          "11.0",
+          "180545.0"
+        ]
+      ],
+      [
+        [
+          "Location",
+          "Date",
+          "total_cases"
+        ],
+        [
+          "Africa",
+          "2026-04-26",
+          "63,832"
+        ],
+        [
+          "North America",
+          "2026-04-27",
+          "46,383"
+        ],
+        [
+          "United States",
+          "2026-04-27",
+          "37,789"
+        ],
+        [
+          "Democratic Republic of Congo",
+          "2026-04-26",
+          "34,054"
+        ],
+        [
+          "Europe",
+          "2026-04-15",
+          "32,315"
+        ],
+        [
+          "South America",
+          "2026-04-27",
+          "28,297"
+        ],
+        [
+          "Brazil",
+          "2026-04-27",
+          "15,027"
+        ],
+        [
+          "Spain",
+          "2026-04-15",
+          "9,517"
+        ],
+        [
+          "Uganda",
+          "2026-04-05",
+          "8,512"
+        ],
+        [
+          "Asia",
+          "2026-04-24",
+          "7,762"
+        ],
+        [
+          "Sierra Leone",
+          "2025-12-14",
+          "5,442"
+        ],
+        [
+          "Mexico",
+          "2026-04-27",
+          "5,039"
+        ],
+        [
+          "Colombia",
+          "2026-04-27",
+          "4,832"
+        ],
+        [
+          "Germany",
+          "2026-04-15",
+          "4,789"
+        ],
+        [
+          "United Kingdom",
+          "2026-04-15",
+          "4,754"
+        ],
+        [
+          "Burundi",
+          "2026-04-05",
+          "4,693"
+        ],
+        [
+          "France",
+          "2026-04-15",
+          "4,626"
+        ],
+        [
+          "Peru",
+          "2026-04-27",
+          "3,966"
+        ],
+        [
+          "China",
+          "2026-04-30",
+          "3,960"
+        ],
+        [
+          "Canada",
+          "2026-04-27",
+          "2,355"
+        ],
+        [
+          "Guinea",
+          "2026-04-12",
+          "2,289"
+        ],
+        [
+          "Oceania",
+          "2026-03-31",
+          "1,956"
+        ],
+        [
+          "Chile",
+          "2026-04-27",
+          "1,947"
+        ],
+        [
+          "Australia",
+          "2026-04-30",
+          "1,907"
+        ],
+        [
+          "Liberia",
+          "2026-04-23",
+          "1,688"
+        ],
+        [
+          "Netherlands",
+          "2026-04-15",
+          "1,634"
+        ],
+        [
+          "Nigeria",
+          "2026-04-05",
+          "1,505"
+        ],
+        [
+          "Argentina",
+          "2026-04-27",
+          "1,423"
+        ],
+        [
+          "Italy",
+          "2026-04-15",
+          "1,371"
+        ],
+        [
+          "Portugal",
+          "2026-04-15",
+          "1,361"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "2026-08-11",
+      "2026-04-27",
+      "2026-04-12",
+      "2026-04-13",
+      "2026-04-14",
+      "2026-04-15",
+      "2026-04-16",
+      "2026-04-17",
+      "2026-04-18",
+      "2026-04-19",
+      "2026-04-20",
+      "2026-04-21",
+      "2026-04-22",
+      "2026-04-23",
+      "2026-04-24",
+      "2026-04-25",
+      "2026-04-26",
+      "2026-04-05",
+      "2025-12-14",
+      "2026-04-30",
+      "2026-03-31"
+    ],
+    "fetch_strategy": "custom:ourworldindata_mpox",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-3bab2c55170245e381ff905e24ad58ae",
+    "result_id": "3bab2c55170245e381ff905e24ad58ae",
+    "source_url": "https://www.who.int/emergencies/situations/mpox-outbreak",
+    "domain": "who.int",
+    "fetched_at": "2026-08-11T22:51:34.223323+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/emergencies/situations/mpox-outbreak",
+    "title": "Mpox outbreak",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 2442,
+    "token_count": 512,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-3bab2c55170245e381ff905e24ad58ae-c0",
+        "chunk_index": 0,
+        "text": "An upsurge of mpox (formerly known as monkeypox) in the Democratic Republic of the Congo and its spread to neighbouring countries was declared a public health emergency of international concern on 14 August 2024.Mpox is a viral disease caused by an orthopoxvirus. It spreads mainly through close contact with someone who has mpox, causing a painful rash, enlarged lymph nodes, and fever. \u00a0It can make people very sick and leave scars.A global outbreak of mpox began in May 2022 and continues to this day. In recent months, cases have been increasing in the Democratic Republic of the Congo. A new strain of the virus, called Clade Ib, is causing outbreaks in previously unaffected areas of the country and has spread to countries that had not previously reported mpox.WHO is workingwith affected countries and partners to contain these outbreaks.\nAn upsurge of mpox (formerly known as monkeypox) in the Democratic Republic of the Congo and its spread to neighbouring countries was declared a public health emergency of international concern on 14 August 2024.\nMpox is a viral disease caused by an orthopoxvirus. It spreads mainly through close contact with someone who has mpox, causing a painful rash, enlarged lymph nodes, and fever. \u00a0It can make people very sick and leave scars.\nA global outbreak of mpox began in May 2022 and continues to this day. In recent months, cases have been increasing in the Democratic Republic of the Congo. A new strain of the virus, called Clade Ib, is causing outbreaks in previously unaffected areas of the country and has spread to countries that had not previously reported mpox.\nWHO is workingwith affected countries and partners to contain these outbreaks.",
+        "chunk_type": "prose",
+        "heading": "Mpox outbreak",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 357,
+        "extractor": null
+      },
+      {
+        "chunk_id": "doc-3bab2c55170245e381ff905e24ad58ae-c1",
+        "chunk_index": 1,
+        "text": "Fifth meeting of the International Health Regulations (2005) Emergency Committee regarding the upsurge of mpox 2024\nFourth meeting of the International Health Regulations (2005) Emergency Committee regarding the upsurge of mpox 2024\nFourth meeting of the International Health Regulations (2005) Emergency Committee regarding the upsurge of mpox 2024 \u2013 Temporary recommendations\nAfrica CDC and WHO update mpox strategy as outbreaks persist",
+        "chunk_type": "prose",
+        "heading": "Mpox outbreak > News",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 90,
+        "extractor": null
+      },
+      {
+        "chunk_id": "doc-3bab2c55170245e381ff905e24ad58ae-c2",
+        "chunk_index": 2,
+        "text": "Situation reports",
+        "chunk_type": "prose",
+        "heading": "Mpox outbreak > Highlights > Mpox outbreak toolbox",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 3,
+        "extractor": null
+      },
+      {
+        "chunk_id": "doc-3bab2c55170245e381ff905e24ad58ae-c3",
+        "chunk_index": 3,
+        "text": "Guidance",
+        "chunk_type": "prose",
+        "heading": "Mpox outbreak > Publications > Smallpox and mpox \r\n(orthopoxviruses): WHO position paper, August 2024",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 2,
+        "extractor": null
+      },
+      {
+        "chunk_id": "doc-3bab2c55170245e381ff905e24ad58ae-c4",
+        "chunk_index": 4,
+        "text": "Events\nWHO Health Emergencies EPI-WIN webinar: safe & dignified Mpox care for displaced communities and overcrowded settings\nWHO Health Emergencies EPI-WIN Webinar: new guidelines for mpox clinical management and infection prevention and control\nMpox Diagnostic Updates\nRelated links",
+        "chunk_type": "prose",
+        "heading": "Mpox outbreak > Publications > Extension of the standing recommendations for mpox issued by the Director-General...",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 60,
+        "extractor": null
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "14 August 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-f93d01c3a38a4cf5aa8b0585f4546625",
+    "result_id": "f93d01c3a38a4cf5aa8b0585f4546625",
+    "source_url": "https://worldhealthorg.shinyapps.io/mpx_global/",
+    "domain": "worldhealthorg.shinyapps.io",
+    "fetched_at": "2026-08-11T22:51:35.245685+00:00",
+    "document_type": "html",
+    "status": "failed",
+    "canonical_url": null,
+    "title": null,
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": null,
+    "token_count": null,
+    "error_message": "Response exceeded max 25000000 bytes during streaming",
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a",
+    "result_id": "d8dc298b70914fb1bfdf5cd46abedc5a",
+    "source_url": "https://www.cdc.gov/monkeypox/situation-summary/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-11T22:51:38.628134+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/monkeypox/situation-summary/index.html",
+    "title": "Monkeypox in the United States and Around the World: Current Situation",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 7503,
+    "token_count": 1582,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c0",
+        "chunk_index": 0,
+        "text": "\u2022 There are two types of the virus that causes monkeypox, clade I and clade II. Both types can be spread, treated, and prevented in the same ways.\n\u2022 Each clade has two subclades (clade Ia and clade Ib; clade IIa and IIb).\n\u2022 Recent outbreaks of monkeypox have spread initially through intimate or sexual contact. In some cases, monkeypox was then spread within households.\n\u2022 There have been ongoing outbreaks of clade I monkeypox in Central and Eastern Africa since late 2023.\n\u2022 Several Western European countries are reporting outbreaks that are likely related to the Central and Eastern African outbreaks but are affecting different people.\n\u2022 Travel-associated clade I monkeypox cases have almost exclusively been attributed to subclade Ib; there have been no deaths associated with these cases and most people had relatively mild illness.\n\u2022 The ongoing global outbreak of clade IIb monkeypox that began in 2022 has caused more than 100,000 cases in 122 total countries, including 115 countries where monkeypox was not previously reported.\n\u2022 CDC has vaccination recommendations for people at risk in the United States or who are traveling to countries with clade I outbreaks or new clade II outbreaks.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 258,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c1",
+        "chunk_index": 1,
+        "text": "\u2022 The risk posed by the clade I monkeypox outbreak to most people within the United States remains low.\n\u2022 Since November 2024, there have been more than 40 laboratory-confirmed cases of clade I monkeypox in the United States. Nearly all were diagnosed in people who:Had recently traveled from areas associated with the outbreak in Central and Eastern Africa;Had recently traveled from parts of Western Europe where newer outbreaks are being reported; ORWere linked to people who had traveled from these areas.\n\u2022 We expect additional cases in Europe and the United States.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > In the United States > Clade I monkeypox",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 115,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c2",
+        "chunk_index": 2,
+        "text": "\u2022 Clade II monkeypox is still circulating at low levels.\n\u2022 Fall 2025 marked the highest monthly case counts since the peak of the outbreak in 2022.\nCases of clade I monkeypox have been diagnosed worldwide.\nClade II monkeypox is spreading in the United States and around the world.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > In the United States > Clade II monkeypox",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 66,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c3",
+        "chunk_index": 3,
+        "text": "\u2022 Outbreaks of clade I monkeypox in Central and Eastern Africa continue.\n\u2022 Beginning in Fall 2025, several countries in Western Europe began reporting clade Ib monkeypox cases among individuals who had no documented history of international travel. These cases were likely related to male-to-male sexual contact.\n\u2022 Other travel-associated cases of clade I monkeypox have been reported from other parts of Africa, as well as Asia, Europe, the Middle East, North America, South America, and Australia.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Across the globe > Clade I monkeypox",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 105,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c4",
+        "chunk_index": 4,
+        "text": "During recent outbreaks, death rates ranged from than less than 0.5% (clade Ib) to about 3% (clade Ia). Clade II is the type that caused the ongoing global outbreak that began in 2022. Fewer than 0.1% of people infected with clade II die from the disease.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Recent monkeypox outbreaks have low death rates",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 71,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c5",
+        "chunk_index": 5,
+        "text": "\u2022 Several countries in West Africa have been experiencing an outbreak of clade II monkeypox since summer 2025.Travelers to Liberia and Ghana and should review the Travel Health Notice, which includes information about the monkeypox vaccine for eligible people.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Recent monkeypox outbreaks have low death rates > Clade II monkeypox",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 51,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c6",
+        "chunk_index": 6,
+        "text": "For global case data for clade I and clade II monkeypox since January 1, 2024, see Global Mpox Trends. Confirmed cases include those that are laboratory confirmed as monkeypox virus and may include cases only confirmed as orthopoxvirus. These data are provided for situational awareness and are subject to change.",
+        "chunk_type": "prose",
+        "heading": "What to know > Current situation > Global monkeypox case data",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 71,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c7",
+        "chunk_index": 7,
+        "text": "\u2022 CDC raises awareness for U.S. healthcare providers, including the latest guidance for diagnosing monkeypox and clinical decision-making.\n\u2022 CDC continues critical work to protect the United States from emerging and infectious diseases. CDC has collaborated closely with key partners in affected countries to help support efforts to stop monkeypox at the source.\n\u2022 CDC works closely with U.S. state, tribal, local, and territorial public health departments to provide recommendations for clinical management, diagnosis, and prevention of domestic monkeypox cases. in the U.S.\n\u2022 CDC continually increases capacity in communities across the United States for early detection of monkeypox through existing surveillance systems, including wastewater testing.\n\u2022 CDC raises awareness for healthcare providers, including the latest guidance for diagnosing monkeypox and clinical decision-making.\n\u2022 CDC collaborated with governmental and civil society partners in affected countries to collect and analyze case data, and to identify how monkeypox is spreading.\n\u2022 CDC coordinated technical assistance in response to urgent in-country needs, including: increasing the number of monkeypox testing sites; improving specimen transport networks to quickly identify new cases; assisting with Ministry of Health-led vaccine implementation; strengthening emergency management systems; improving case surveillance; and training healthcare workers.\n\u2022 CDC's staff throughout Africa provide critical, real-time information to inform U.S. preparedness efforts.",
+        "chunk_type": "prose",
+        "heading": "What to know > What CDC is doing",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 265,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c8",
+        "chunk_index": 8,
+        "text": "\u2022 CDC works closely with state, tribal, local, and territorial public health departments to provide recommendations for clinical management, diagnosis, and prevention of monkeypox cases in the U.S.\n\u2022 CDC continually increases capacity in communities across the United States for early detection of monkeypox through existing surveillance systems, including wastewater testing.\n\u2022 CDC raises awareness for healthcare providers, including the latest guidance for diagnosing monkeypox and clinical decision-making.\n\u2022 CDC has information and recommendations for members of the public, including those traveling to Central or Eastern Africa: Travel Health Notice and Health Alert Network advisory.\n\u2022 CDC continues to work with international partners to help reduce monkeypox transmission.",
+        "chunk_type": "prose",
+        "heading": "What to know > What CDC is doing > In the United States",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 133,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d8dc298b70914fb1bfdf5cd46abedc5a-c9",
+        "chunk_index": 9,
+        "text": "\u2022 Get monkeypox and other vaccine recommendations when traveling to areas with monkeypox outbreaks: Destinations | Travelers' Health | CDC\n\u2022 Clade II Monkeypox in Ghana and Liberia - Level 2 - Practice Enhanced Precautions - Travel Health Notices | Travelers' Health | CDC\n\u2022 U.S. Monkeypox Wastewater Data | National Wastewater Surveillance System | CDC\n\u2022 Health Alert Network (HAN) - 00519 | First Case of Clade I Monkeypox Diagnosed in the United States\n\u2022 Health Alert Network (HAN) - 00516 | Prevention Strategies for Monkeypox, including Vaccinating People at Risk via Sexual Exposure, for U.S. Travelers Visiting Countries with Clade I Monkeypox Outbreaks\n\u2022 Health Alert Network (HAN) \u2013 00513 | Monkeypox Caused by Human-to-Human Transmission of Monkeypox Virus in the Democratic Republic of the Congo with Spread to Neighboring Countries (cdc.gov)\n\u2022 Health Alert Network (HAN) \u2013 00501 | Monkeypox Caused by Human-to-Human Transmission of Monkeypox Virus with Geographic Spread in the Democratic Republic of the Congo\n\u2022 The CDC Domestic Monkeypox Response \u2014 United States, 2022\u20132023\n\u2022 U.S. Preparedness and Response to Increasing Clade I Monkeypox Cases in the Democratic Republic of the Congo \u2014 United States, 2024\n\u2022 Notes from the Field: Clade II Monkeypox Surveillance Update \u2014 United States, October 2023\u2013April 2024\n\u2022 Early Release - The Rise of Monkeypox in a Post-Smallpox World - Volume 31, Number 1\u2014January 2025 - Emerging Infectious Diseases journal - CDC\nContent Source\nAbout This Page\nPublished: September 16, 2024\nUpdated: August 11, 2026\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nReviewed: August 11, 2026\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.",
+        "chunk_type": "prose",
+        "heading": "What to know > Resources",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 447,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "January 1, 2024",
+      "September 16, 2024",
+      "August 11, 2026"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-70a4b825121c43bf9207e42db2d78a69",
+    "result_id": "70a4b825121c43bf9207e42db2d78a69",
+    "source_url": "https://www.ecdc.europa.eu/en/mpox-worldwide-overview",
+    "domain": "ecdc.europa.eu",
+    "fetched_at": "2026-08-11T22:51:39.381377+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://ecdc.europa.eu/en/mpox-worldwide-overview",
+    "title": "Mpox worldwide overview",
+    "published_date": "2026-05-13T12:26:15+02:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 7074,
+    "token_count": 1487,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-70a4b825121c43bf9207e42db2d78a69-c0",
+        "chunk_index": 0,
+        "text": "Monkeypox virus (MPXV) clades I and II are circulating in multiple countries globally. The epidemiological profile of mpox cases due to MPXV clade II cases reported outside Africa since 2022 remains similar to previous weeks. With regards to mpox clade I, cases have been reported by several countries outside Africa with and without travel history to countries with ongoing clade I transmission. For both clade I and II, sexual contacts have been described as drivers of transmission.\nA summary of the recently observed global trends of clades I and II is provided below.",
+        "chunk_type": "prose",
+        "heading": "Mpox worldwide overview > Situation update, 26 June 2026",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 119,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-70a4b825121c43bf9207e42db2d78a69-c1",
+        "chunk_index": 1,
+        "text": "Mpox clade II has been circulating globally since 2022. In African countries with mpox clade II outbreaks in 2025-2026 (e.g. Ghana, Guinea, Liberia), cases have been reported among young adults, affecting both males and females. Sexual contact has been described as a main driver of transmission (Multi-country outbreak of mpox, External situation report #60 - 8 December\n2025, Multi-country outbreak of mpox, External situation report #62-23 January 2026, Multi-country external situation report #63 \u2013 24 February 2026, Multi-country outbreak of mpox, External situation report #66 - 31 May 2026). According to WHO data published on 22 June including cases as of 14 June 2026, Guinea has reported 15 cases the past six weeks, as of 14 June. Outside Africa, cases were mostly reported in adults (99%) and males (97%), the majority of whom\nreported having had sex with men (89%) (Global Mpox Trends published 22 June 2026).",
+        "chunk_type": "prose",
+        "heading": "Mpox worldwide overview > Mpox clade II summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 222,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-70a4b825121c43bf9207e42db2d78a69-c2",
+        "chunk_index": 2,
+        "text": "In Africa, since 2025, the five countries that reported most confirmed mpox clade I cases are DRC, Uganda, Madagascar Burundi, and Kenya. According to WHO, in the past six weeks, and as of 14 June 2026, most confirmed cases of clade I were reported by Madagascar (689 cases). All other countries in Africa with clade I detections, including DRC, have reported fewer than 100 cases during the last six weeks. Overall, a decreasing trend in mpox clade I cases that has been reported in Africa since May 2025 continues in June 2026 (Global Mpox Trends published 22 June 2026).\nSince August 2024 and as of May 2026 in EU/EEA travel-associated mpox clade I cases, or locally-acquired mpox clade I cases have been reported by several EU/EEA countries (Surveillance of Mpox in the EU/EEA, monthly report). In addition to Africa and the EU/EEA, since August 2024, mpox clade I cases have been reported by Thailand, India, T\u00fcrkiye, the United Kingdom, the United States, Canada, Pakistan, Oman, China, the United Arab Emirates, Qatar, Brazil, Switzerland, Australia, Japan, Nepal, Mexico, Israel, Argentina, Singapore, Ecuador, Colombia, Argentina, and Ecuador (Global Mpox Trends published 22 June 2026). Most travel-associated cases reported outside African countries had links to affected countries in Africa. Imported cases with a travel history to Asia, the European Region (including EU/EEA countries) and the Eastern Mediterranean Region have also been reported (Global Mpox Trends published 22 June 2026).",
+        "chunk_type": "prose",
+        "heading": "Mpox worldwide overview > Mpox clade I summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 355,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-70a4b825121c43bf9207e42db2d78a69-c3",
+        "chunk_index": 3,
+        "text": "ECDC will continue monitoring the transmission of mpox clade I and clade II trends through event-and indicator-based surveillance.\nA monthly surveillance report on mpox in the EU/EEA, Western Balkans and T\u00fcrkiye is published on the ECDC website and the Communicable Disease Threats Report. Events outside the EU/EEA such as those indicating changes in mpox epidemiology, including unusual/unexpected incidence or severity, will be reported on an ad hoc basis in the Communicable Disease Threats Report.",
+        "chunk_type": "prose",
+        "heading": "Mpox worldwide overview > ECDC mpox reporting",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 104,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-70a4b825121c43bf9207e42db2d78a69-c4",
+        "chunk_index": 4,
+        "text": "The epidemiological situation regarding mpox due to MPXV clade I remains similar to previous weeks. The cases of clade I that have been reported outside of Africa, including secondary transmission, are not unexpected. A new pattern of transmission is emerging in countries outside Africa, including in the EU/EEA, among men who have sex with men.\nECDC published a Threat Assessment Brief on 24 October 2025 to assess the new situation. The risk of clade Ib infection is assessed as moderate for men who have sex with men and low for the general population in the EU/EEA, reflecting current evidence and considerable uncertainties around transmissibility and severity of clade Ib infection relative to clade IIb. The risk for clade IIb infection remains low for men who have sex with men and very low for the general population in the EU/EEA.\nThe Threat Assessment Brief on the detection of autochthonous transmission of monkeypox virus (MPXV) clade Ib in the EU/EEA summarises the information on new cases and outlines actions EU/EEA countries can take, including testing, sequencing and contact tracing; promoting vaccination; risk communication; and community engagement activities. The brief also outlines the remaining knowledge gaps, including on transmissibility and severity of MPXV clade Ib compared with clade IIb.\nRecommendations for EU/EEA countries include raising awareness among healthcare professionals; supporting sexual health services in case detection, contact tracing, and case management; making testing easily accessible; implementing vaccination strategies with a focus on pre-exposure vaccination; and maintaining active risk communication and community engagement.\nPrimary preventive vaccination (PPV) and post-exposure preventive vaccination (PEPV) strategies may be combined to focus on individuals at substantially higher risk of exposure and close contacts of cases, respectively, particularly in the event of limited vaccine supply. PPV strategies should prioritise gay, bisexual, and transgender people, and men who have sex with men, who are at higher risk of exposure, as well as individuals at risk of occupational exposure, based on epidemiological or behavioural criteria. Health promotion interventions and community engagement are also critical to ensure effective outreach and high vaccine acceptance and uptake among those most at risk of exposure.\nIn addition to increased risk of local transmission of MPXV clade Ib among men who have sex with men, it is likely that mpox cases caused by MPXV clade I will continue to be introduced into the EU/EEA through returning travellers. This is especially the case after holiday travel. It is important to raise awareness concerning the possible importation of cases, both among returning travellers from affected African countries and among healthcare professionals who may see such patients.\nEU/EEA countries should consider raising awareness in travellers to/from areas with ongoing MPXV transmission and among primary and other healthcare providers who may be consulted by such patients. If mpox is detected, the main public health response measures are contact tracing, partner notification, and post-exposure preventive vaccination of eligible contacts. Clade identification and virus sequencing should also be prioritised.\nPlease see the latest ECDC 'Risk assessment for the EU/EEA of the mpox epidemic caused by monkeypox virus clade I in affected African countries' and the Threat Assessment Brief 'Detection of autochthonous transmission of monkeypox virus clade Ib in the EU/EEA'.",
+        "chunk_type": "prose",
+        "heading": "Mpox worldwide overview > ECDC assessment:",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 687,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "26 June 2026",
+      "8 December\n2025",
+      "23 January 2026",
+      "24 February 2026",
+      "31 May 2026",
+      "14 June 2026",
+      "22 June 2026",
+      "24 October 2025"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-cc46db8887f941739f20b1eea23c5afd",
+    "result_id": "cc46db8887f941739f20b1eea23c5afd",
+    "source_url": "https://mpox-monthly.ecdc.europa.eu/",
+    "domain": "mpox-monthly.ecdc.europa.eu",
+    "fetched_at": "2026-08-11T22:51:39.580165+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://mpox-monthly.ecdc.europa.eu",
+    "title": "Surveillance of mpox in the European Union/European Economic Area (EU/EEA) \u2212 Monthly report",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 4861,
+    "token_count": 1052,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-cc46db8887f941739f20b1eea23c5afd-c0",
+        "chunk_index": 0,
+        "text": "This report presents data on mpox cases reported to the European Surveillance System (EpiPulse Cases). EU/EEA countries report case-based data to ECDC on diagnosed mpox cases. For case numbers by country, the Western Balkans and T\u00fcrkiye are included.\nThe epicurve shown includes all mpox cases reported since 2022. The rest of the report includes data on the total number of cases in the past full 12 calendar months (July 2025 to June 2026).\nCases are analysed by date of diagnosis. This report includes cases reported to ECDC as of 17 July 2026.\nIn June 2026, 129 mpox cases caused by clade I MPXV were reported by nine countries, with the largest number of cases being reported by Portugal (57). In May, 125 cases were reported by 13 countries, and in April, 167 cases were reported by 13 countries.\nIn June 2026, 22 mpox cases caused by clade II MPXV were reported by six countries, with the largest number of cases being reported by Germany (10). In May, 36 cases were reported by six countries, and in April, 47 cases were reported by seven countries.\nIn the past 12 months, 18 countries reported 829 clade I mpox cases and 18 countries reported 921 clade II mpox cases.\nIt total, 90% of the clade I mpox cases and 91% of the clade II mpox cases with complete information were reported among men who have sex with men.\nOverall, 14% of the clade I mpox cases and 8% of the clade II mpox cases with complete information were hospitalised.\nA total of 22% of the clade I mpox cases and 21% of the clade II mpox cases with complete information were vaccinated with two doses.\nClade I\nClade II\nThe distributions by age and gender of clade I and clade II are similar.\nThe vast majority of mpox cases in clade I and clade II are among men who have sex with men.\nThe percentage of cases hospitalised is higher in clade I mpox cases than in clade II mpox cases.\nIn the past 12 months there have been two deaths reported in people infected with clade II. No deaths have been reported in people infected with clade I.\nAmong cases with known vaccination status, the majority of both clade I and clade II mpox cases are not vaccinated.\nThe proportion of travel-related cases has been low and similar between clade I and clade II over the past 12 months.\nThe number of clade I mpox cases reported in the EU/EEA remains relatively stable, while reported clade II mpox cases continue to decline. However, interpretation of short-term trends remains limited because clade information is missing for a substantial proportion of reported cases, and case and epidemiological information may be updated retrospectively. Clade I mpox case notifications from the EU/EEA suggest ongoing transmission across the region, primarily among men who have sex with men. In terms of severity, hospitalisation rates remain low overall but are higher in clade I than in clade II mpox cases. Information from Member States suggests that clinical presentation is generally mild, including among hospitalised cases.\nIncreasing vaccination uptake is the single most important measure for mitigating the spread of both clades. Primary preventive vaccination (PPV) and post-exposure preventive vaccination (PEPV) strategies may be combined to focus on individuals at substantially higher risk of exposure and close contacts of cases, respectively, particularly in the event of limited vaccine supply. PPV strategies should prioritise gay, bisexual, and transgender people, and men who have sex with men, who are at higher risk of exposure. Strategies should also prioritise individuals at risk of occupational exposure, based on epidemiological or behavioural criteria. Health promotion interventions and community engagement are also critical to ensure effective outreach and high vaccine acceptance and uptake among those most at risk of exposure.\nFurther response options for EU/EEA countries include raising awareness among healthcare professionals, supporting sexual health services in case detection, contact tracing, case management, and making testing easily accessible.\nECDC\u2019s \u2018Threat Assessment Brief on the detection of autochthonous transmission of monkeypox virus (MPXV) clade Ib in the EU/EEA\u2019 was published on 24 October 2025. It summarises information on the new cases, actions that EU/EEA countries can take, and the knowledge gaps that remain.\nECDC is continuously monitoring mpox in the EU/EEA and globally through event- and indicator-based surveillance, and remains in contact with partners. ECDC is in contact with affected countries to gather further information and consider response options.\nCountries should continue efforts to sequence all positive cases and ensure that sequences are deposited in public repositories (European Nucleotide Archive (ENA), Sequence Read Archive (SRA), and/or GISAID EpiPox) or shared with ECDC through the EpiPulse platform or other means.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1052,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "17 July 2026",
+      "24 October 2025"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-1097be2b94ad4da7b225de2fcfc54040",
+    "result_id": "1097be2b94ad4da7b225de2fcfc54040",
+    "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-11T22:51:39.901292+00:00",
+    "document_type": "pdf",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/situation-reports?d%5Bmax%5D=&d%5Bmin%5D=&topic=87192",
+    "title": "PAHO MPOX",
+    "published_date": "2026-06-04T00:00:00",
+    "language": null,
+    "page_count": 8,
+    "char_count": 12158,
+    "token_count": 2751,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "chunks": [
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c0",
+        "chunk_index": 0,
+        "text": "\tCURRENT REPORTING PERIOD\t\t\t\t\tCUMULATIVE TOTAL\t\t\t\t\n\t1 January \u2013 30 April 2026\t\t\t\t\t13 May 2022 \u2013 30 April 2026\t\t\t\t\n\tCASES\tDEATHS\tCOUNTRIES\t\t\tCASES\tDEATHS\tCOUNTRIES\t\t\n\t964\t1\t10\t\t\t74,678\t164\t31\t\t\n\tConfirmed\tReported\tReporting cases\t\t\tConfirmed\tReported\tAffected\t\t",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": 1,
+        "table_data": [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CURRENT REPORTING PERIOD",
+            "",
+            "",
+            "",
+            "",
+            "CUMULATIVE TOTAL",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "1 January \u2013 30 April 2026",
+            "",
+            "",
+            "",
+            "",
+            "13 May 2022 \u2013 30 April 2026",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "CASES",
+            "DEATHS",
+            "COUNTRIES",
+            "",
+            "",
+            "CASES",
+            "DEATHS",
+            "COUNTRIES",
+            "",
+            ""
+          ],
+          [
+            "",
+            "964",
+            "1",
+            "10",
+            "",
+            "",
+            "74,678",
+            "164",
+            "31",
+            "",
+            ""
+          ],
+          [
+            "",
+            "Confirmed",
+            "Reported",
+            "Reporting cases",
+            "",
+            "",
+            "Confirmed",
+            "Reported",
+            "Affected",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "token_count": 94,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c1",
+        "chunk_index": 1,
+        "text": "\tMPOX CLADE Ib\t\t\t\n\t1 November 2022 \u2013 30 April 2026\tBy Country:\t\t\n\t39\tUnited States 23 \u00b7 Brazil 5 \u00b7 Canada 4 \u00b7 Mexico 3 \u00b7\t\t\n\t\tArgentina 2 \u00b7 Colombia 1 \u00b7 Ecuador 1\t\t\n\tCumulative cases across 7 countries\t\t\t",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": 1,
+        "table_data": [
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "MPOX CLADE Ib",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "1 November 2022 \u2013 30 April 2026",
+            "By Country:",
+            "",
+            ""
+          ],
+          [
+            "",
+            "39",
+            "United States 23 \u00b7 Brazil 5 \u00b7 Canada 4 \u00b7 Mexico 3 \u00b7",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "Argentina 2 \u00b7 Colombia 1 \u00b7 Ecuador 1",
+            "",
+            ""
+          ],
+          [
+            "",
+            "Cumulative cases across 7 countries",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "token_count": 69,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c2",
+        "chunk_index": 2,
+        "text": "\tHEADLINE FINDING\t\n\tIn 2026, ten countries in the Region of the Americas have reported a total of 964 mpox cases and one death\t\n\tthrough 30 April. Seven countries have now reported a cumulative 39 cases of mpox clade Ib; most cases remain\t\n\tepidemiologically linked to international travel, with the others under investigation.\t",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": 1,
+        "table_data": [
+          [
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "HEADLINE FINDING",
+            ""
+          ],
+          [
+            "",
+            "In 2026, ten countries in the Region of the Americas have reported a total of 964 mpox cases and one death",
+            ""
+          ],
+          [
+            "",
+            "through 30 April. Seven countries have now reported a cumulative 39 cases of mpox clade Ib; most cases remain",
+            ""
+          ],
+          [
+            "",
+            "epidemiologically linked to international travel, with the others under investigation.",
+            ""
+          ],
+          [
+            "",
+            "",
+            ""
+          ]
+        ],
+        "token_count": 76,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c3",
+        "chunk_index": 3,
+        "text": "ISSUE 2 / 2026\nPublished 4 June 2026\nPAHO Health Emergencies Department",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 24,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c4",
+        "chunk_index": 4,
+        "text": "Data as of 30 April 2026 (16:00 EST)",
+        "chunk_type": "prose",
+        "heading": "Regional Situation Report  \u00b7  Region of the Americas",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 15,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c5",
+        "chunk_index": 5,
+        "text": "Confirmed",
+        "chunk_type": "prose",
+        "heading": "CASES\n964",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 1,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c6",
+        "chunk_index": 6,
+        "text": "Reported",
+        "chunk_type": "prose",
+        "heading": "DEATHS\n1",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 2,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c7",
+        "chunk_index": 7,
+        "text": "Reporting cases",
+        "chunk_type": "prose",
+        "heading": "COUNTRIES\n10",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 2,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c8",
+        "chunk_index": 8,
+        "text": "Confirmed",
+        "chunk_type": "prose",
+        "heading": "CASES\n74,678",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 1,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c9",
+        "chunk_index": 9,
+        "text": "Reported",
+        "chunk_type": "prose",
+        "heading": "DEATHS\n164",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 2,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c10",
+        "chunk_index": 10,
+        "text": "Affected",
+        "chunk_type": "prose",
+        "heading": "COUNTRIES\n31",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 1,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c11",
+        "chunk_index": 11,
+        "text": "Cumulative cases across 7 countries\nBy Country:\nUnited States 23 \u00b7 Brazil 5 \u00b7 Canada 4 \u00b7 Mexico 3 \u00b7\nArgentina 2 \u00b7 Colombia 1 \u00b7 Ecuador 1\nHEADLINE FINDING\nIn 2026, ten countries in the Region of the Americas have reported a total of 964 mpox cases and one death\nthrough 30 April. Seven countries have now reported a cumulative 39 cases of mpox clade Ib; most cases remain\nepidemiologically linked to international travel, with the others under investigation.",
+        "chunk_type": "prose",
+        "heading": "MPOX CLADE Ib\n1 November 2022 \u2013 30 April 2026\n39",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 114,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c12",
+        "chunk_index": 12,
+        "text": "Dashboard updates: Mondays, 17:30\u201318:00 GMT-5  \u00b7 shiny.paho-phe.org/mpox",
+        "chunk_type": "prose",
+        "heading": "IN THIS ISSUE\n01\nSummary & Key Figures\n02\nEpidemiological Overview\n03\nPAHO/WHO Response",
+        "page_number": 1,
+        "table_data": null,
+        "token_count": 26,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c13",
+        "chunk_index": 13,
+        "text": "Global and regional snapshot of the mpox outbreak\nBetween 2022 and 30 April 2026, a total of 184,531 confirmed cases of mpox have been reported globally from 145\ncountries and territories. The Region of the Americas accounts for the largest proportion of cases (40.1%), followed by\nthe African (36.7%) and European (17.8%) Regions [1].\nIn the Region of the Americas, a cumulative total of 74,678 confirmed cases of mpox, including 164 deaths, have been\nreported across 31 countries and territories between 2022 and 2026.\nIn 2026, ten countries have reported a combined 964 mpox cases and one death: Argentina, Bolivia (Plurinational\nState of), Brazil, Canada, Chile, Colombia, Ecuador, Mexico, Peru, and the United States (Figure 1).\nOver the past three months, Argentina, Colombia, and Ecuador each confirmed their first case of mpox clade Ib, while\nthe United States, Canada, Brazil, and Mexico reported additional clade Ib cases during the same period. To date,\nseven countries in the Region have reported a cumulative total of 39 clade Ib cases: the United States (23), Brazil (5),\nCanada (4), Mexico (3), Argentina (2), Colombia (1), and Ecuador (1).\nMost clade Ib cases reported in the Region to date have occurred in individuals with recent travel to areas with\ndocumented clade Ib transmission, or in individuals with an identified epidemiological link to a traveller or confirmed\ncase.",
+        "chunk_type": "prose",
+        "heading": "01  Summary",
+        "page_number": 2,
+        "table_data": null,
+        "token_count": 329,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c14",
+        "chunk_index": 14,
+        "text": "Region of the Americas  \u00b7  Data as of 30 April 2026",
+        "chunk_type": "prose",
+        "heading": "02  Epidemiological Overview",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 16,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c15",
+        "chunk_index": 15,
+        "text": "Between 2022 and EW 17 of 2026, the North American subregion reported the highest number of mpox cases, with\n45,183 cases and 104 deaths primarily from the United States (37,789 cases; 63 deaths), Mexico (5,039 cases; 41\ndeaths), and Canada (2,355 cases). The South American subregion followed with 28,295 cases and 54 deaths, while\nCentral America reported 1,060 cases and 4 deaths, and the Caribbean and Atlantic Ocean Islands, 140 cases and 2\ndeaths.",
+        "chunk_type": "prose",
+        "heading": "Subregional distribution (cumulative, 2022 \u2013 EW 17 of 2026)",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 123,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c16",
+        "chunk_index": 16,
+        "text": "In 2026, a total of 964 mpox cases were reported across ten countries: the United States (508), Brazil (215), Chile (88),\nMexico (47, including 1 death), Colombia (36), Canada (35), Bolivia (Plurinational State of) (16), Argentina (10),\nEcuador (7), and Peru (2) (Figure 1). No additional deaths have been reported in the Region as of EW 17 of 2026.\nMost cases in the Region continue to be detected through HIV care services, sexual health clinics, and\nprimary/secondary healthcare facilities, primarily \u2014 though not exclusively \u2014 among men who have sex with men\n(MSM).",
+        "chunk_type": "prose",
+        "heading": "Country distribution, 2026",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 143,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c17",
+        "chunk_index": 17,
+        "text": "Source: Adapted from Pan American Health Organization. Mpox cases \u2014 Americas Region. Washington, D.C.: PAHO; 2026 [cited 26 May 2026].\nAvailable at: shiny.paho-phe.org/mpox, and from data reported by the IHR National Focal Points to PAHO/WHO. Figures are subject to change\nbased on the latest data reported by countries and territories.",
+        "chunk_type": "prose",
+        "heading": "Figure 1.  Confirmed mpox cases by epidemiological week, 2026",
+        "page_number": 3,
+        "table_data": null,
+        "token_count": 85,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c18",
+        "chunk_index": 18,
+        "text": "As of 30 April 2026, 39 cases of mpox clade Ib have been reported across seven countries in the Region of the\nAmericas. To date, most reported cases have occurred either in individuals with recent travel to areas with\ndocumented clade Ib transmission, or in individuals with an identified epidemiological link to a traveller or confirmed\ncase. Three cases in Brazil, two cases each in Argentina and Mexico, and one case in Colombia are still under\ninvestigation regarding their source of infection.",
+        "chunk_type": "prose",
+        "heading": "Clade Ib Detection and Transmission",
+        "page_number": 4,
+        "table_data": null,
+        "token_count": 105,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c19",
+        "chunk_index": 19,
+        "text": "Source: Adapted from Pan American Health Organization. Mpox cases \u2014 Americas Region. Washington, D.C.: PAHO; 2026 [cited 26 May 2026].\nAvailable at: shiny.paho-phe.org/mpox, and from data reported by the IHR National Focal Points to PAHO/WHO. Figures are subject to change\nbased on the latest data reported by countries and territories.",
+        "chunk_type": "prose",
+        "heading": "Figure 2.  Clade 1b mpox cases reported in the Region of the Americas, EW 17 2026",
+        "page_number": 4,
+        "table_data": null,
+        "token_count": 85,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c20",
+        "chunk_index": 20,
+        "text": "Cases fall into two epidemiological patterns:",
+        "chunk_type": "prose",
+        "heading": "Figure 2.  Clade 1b mpox cases reported in the Region of the Americas, EW 17 2026",
+        "page_number": 5,
+        "table_data": null,
+        "token_count": 8,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c21",
+        "chunk_index": 21,
+        "text": "The majority of clade Ib cases in the Region have been reported in individuals with recent travel to endemic countries\nin Central and Eastern Africa or to Western Europe. This pattern accounts for almost all 23 cases reported by the\nUnited States between November 2024 and April 2026, the third Canadian case reported in March 2026 (recent travel\nto Germany, identified as the probable site of exposure), and Ecuador\u2019s first case reported in April 2026 (Quito\nresident with recent travel to Colombia and subsequent high-risk exposure considered the most probable source of\ninfection; patient hospitalized and stable under clinical management. The source of the high-risk exposure in\nColombia is still under investigation).",
+        "chunk_type": "prose",
+        "heading": "Pattern 1  \u00b7  Travel-associated cases (predominant pattern)",
+        "page_number": 5,
+        "table_data": null,
+        "token_count": 144,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c22",
+        "chunk_index": 22,
+        "text": "The majority of the remaining cases have been reported in individuals with no international travel but with a\ndocumented link to a confirmed case or returning traveller. Cases reported in the United States without direct travel\nhistory have been identified to be epidemiologically linked to travellers. Canada\u2019s fourth case (March 2026) was\nidentified as a contact of the third case; one secondary contact received post-exposure prophylaxis, and both cases\nrecovered without hospitalization.\nThe remaining cases reported in the region have no initial travel or related history but are still under investigation:\nArgentina reported 2 cases in March 2026 (both outpatient, favourable clinical outcomes, no secondary cases). Brazil\nreported 3 additional cases in April 2026 \u2014 2 in Rio de Janeiro and 1 in S\u00e3o Paulo \u2014 none with prior mpox\nvaccination, all recovered as outpatients. Mexico reported its 2nd and 3rd cases in January and April 2026 in Mexico\nCity and Puebla respectively, both in immunocompromised men who have sex with men (MSM); the Mexico City case\nrequired hospitalization, and no secondary contacts were identified. Colombia reported its first case in April 2026 in a\nresident of Antioquia department, who recovered under home isolation with no secondary cases identified.",
+        "chunk_type": "prose",
+        "heading": "Pattern 2  \u00b7  Cases without personal travel history but with an identified epidemiological link to a\ntraveller or confirmed case",
+        "page_number": 5,
+        "table_data": null,
+        "token_count": 269,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c23",
+        "chunk_index": 23,
+        "text": "Across the Region, most clade Ib cases have been managed on an outpatient basis with favourable clinical outcomes.\nHospitalization has been required in a small number of cases, predominantly among immunocompromised individuals\n(Mexico) or those with severe presentation (Ecuador). The continued identification of cases linked to international\ntravel or to known cases, in the absence of confirmed autochthonous transmission, underscores the importance of\nsustained traveller surveillance, contact tracing, and timely genomic characterization to detect any future shifts in\ntransmission patterns.",
+        "chunk_type": "prose",
+        "heading": "Clinical and demographic observations",
+        "page_number": 5,
+        "table_data": null,
+        "token_count": 109,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c24",
+        "chunk_index": 24,
+        "text": "Coordination, surveillance, laboratory, clinical management, vaccination, and risk communication",
+        "chunk_type": "prose",
+        "heading": "03  PAHO/WHO Response by Pillar",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 15,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c25",
+        "chunk_index": 25,
+        "text": "PAHO continues to strengthen coordination efforts with Ministries of Health of Member States by supporting\nepidemiological surveillance, case management, laboratory diagnosis, community engagement, and risk\ncommunication.",
+        "chunk_type": "prose",
+        "heading": "Coordination",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 38,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c26",
+        "chunk_index": 26,
+        "text": "PAHO has been working in close collaboration with local health authorities to strengthen epidemiological surveillance\nfor mpox in countries. In collaboration with Ministries of Health, PAHO reviews the situation of mpox in countries and\nsupports workshops aimed at strengthening the national response in management and surveillance of mpox and\nreviewing infection prevention and control measures. PAHO continues to update the mpox cases dashboard\n(shiny.paho-phe.org/mpox) and disseminate its use among Member States. The tool is available in English, French,\nPortuguese, and Spanish. Information is collected through IHR National Focal Point (NFP) channels and publicly\navailable data from Ministries of Health.",
+        "chunk_type": "prose",
+        "heading": "Surveillance",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 141,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c27",
+        "chunk_index": 27,
+        "text": "PAHO continues efforts to strengthen laboratory capacity in Member States for the rapid detection and diagnosis of\nmpox, including procurement of equipment, laboratory materials, and reagents. PAHO has provided technical support\nfor the implementation of mpox virus detection by PCR through provision of supplies and sharing of protocols.\nRoutine meetings are held with laboratory staff in the Region to review data, test results, troubleshoot, and follow up\non country events. PAHO has published and updated the Laboratory Guidelines for the Detection and Diagnosis of\nMonkeypox Virus Infection.",
+        "chunk_type": "prose",
+        "heading": "Laboratory",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 111,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c28",
+        "chunk_index": 28,
+        "text": "Clade Ib is expected to produce more morbidity and mortality than Clade II. Most deaths associated with mpox have\noccurred among individuals with advanced HIV infection, unaware of their status or disengaged from care. All\nindividuals with lesions suspected to be mpox should therefore be offered HIV testing so that antiretroviral treatment\ncan be initiated as early as possible. PAHO is working with clinicians in Member States to learn and disseminate\ninformation on clinical features, diagnostic challenges, and clinical management of suspected and confirmed mpox\ninfections, and is continuously evaluating IPC interventions to prevent transmission to health care workers in\noccupational settings.",
+        "chunk_type": "prose",
+        "heading": "Clinical Management and Infection Prevention and Control (IPC)",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 134,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c29",
+        "chunk_index": 29,
+        "text": "During the 2022\u20132023 period, 14 countries in the Region acquired 106,400 vaccine doses through the Revolving Fund\n(RF) as part of their mpox prevention and control plans. An additional 47,600 doses were purchased in September\n2024 following the WHO declaration of mpox as a Public Health Emergency of International Concern (PHEIC). Between\nMay 2022 and March 2025, 9 countries administered 49,642 complete vaccination series: Chile (17,701), Peru\n(14,026), Brazil (12,302), Ecuador (3,761), Panama (1,669), El Salvador (112), Dominican Republic (29), Honduras (28),\nand Bahamas (14). Countries are recommended to consider phased vaccine deployment according to the\nepidemiological scenario and prioritization of groups at higher risk of severe disease.",
+        "chunk_type": "prose",
+        "heading": "Vaccination",
+        "page_number": 6,
+        "table_data": null,
+        "token_count": 180,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c30",
+        "chunk_index": 30,
+        "text": "PAHO has held webinars with Ministries of Health and organized Civil Societies on mpox epidemiology, clinical\npresentations, infection prevention and control, and treatment. PAHO has worked with non-governmental\norganizations, academic institutions, and community-led services serving gay, bisexual, and other men who have sex\nwith men as partners for engagement and risk-communication activities. The Organization continues to monitor travel\nmeasures for mpox across 35 countries in the Region of the Americas; to date, no travel measures are in place, which\naligns with WHO recommendations.",
+        "chunk_type": "prose",
+        "heading": "Risk Communication and Community Engagement",
+        "page_number": 7,
+        "table_data": null,
+        "token_count": 118,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c31",
+        "chunk_index": 31,
+        "text": "This situation report is produced by the Pan American Health Organization (PAHO), the Regional Office of the World\nHealth Organization (WHO) for the Americas. It is published quarterly to inform Member States, partners, and the\npublic on the regional mpox situation and response.\nFor the most recent data, visit the PAHO mpox dashboard at shiny.paho-phe.org/mpox. Information is collected\nthrough IHR National Focal Point channels and publicly available data from Ministries of Health.",
+        "chunk_type": "prose",
+        "heading": "About this report",
+        "page_number": 8,
+        "table_data": null,
+        "token_count": 100,
+        "extractor": "pymupdf"
+      },
+      {
+        "chunk_id": "doc-1097be2b94ad4da7b225de2fcfc54040-c32",
+        "chunk_index": 32,
+        "text": "[1] World Health Organization. Global Mpox Trends. Geneva: WHO; 2026 [cited 26 May 2026]. Available at:\nworldhealthorg.shinyapps.io/mpx_global\nPan American Health Organization  \u00b7  525 23rd St NW, Washington, DC 20037  \u00b7  www.paho.org",
+        "chunk_type": "prose",
+        "heading": "References",
+        "page_number": 8,
+        "table_data": null,
+        "token_count": 71,
+        "extractor": "pymupdf"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "CURRENT REPORTING PERIOD",
+          "",
+          "",
+          "",
+          "",
+          "CUMULATIVE TOTAL",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "1 January \u2013 30 April 2026",
+          "",
+          "",
+          "",
+          "",
+          "13 May 2022 \u2013 30 April 2026",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "CASES",
+          "DEATHS",
+          "COUNTRIES",
+          "",
+          "",
+          "CASES",
+          "DEATHS",
+          "COUNTRIES",
+          "",
+          ""
+        ],
+        [
+          "",
+          "964",
+          "1",
+          "10",
+          "",
+          "",
+          "74,678",
+          "164",
+          "31",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Confirmed",
+          "Reported",
+          "Reporting cases",
+          "",
+          "",
+          "Confirmed",
+          "Reported",
+          "Affected",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "MPOX CLADE Ib",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "1 November 2022 \u2013 30 April 2026",
+          "By Country:",
+          "",
+          ""
+        ],
+        [
+          "",
+          "39",
+          "United States 23 \u00b7 Brazil 5 \u00b7 Canada 4 \u00b7 Mexico 3 \u00b7",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Argentina 2 \u00b7 Colombia 1 \u00b7 Ecuador 1",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Cumulative cases across 7 countries",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "HEADLINE FINDING",
+          ""
+        ],
+        [
+          "",
+          "In 2026, ten countries in the Region of the Americas have reported a total of 964 mpox cases and one death",
+          ""
+        ],
+        [
+          "",
+          "through 30 April. Seven countries have now reported a cumulative 39 cases of mpox clade Ib; most cases remain",
+          ""
+        ],
+        [
+          "",
+          "epidemiologically linked to international travel, with the others under investigation.",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "4 June 2026",
+      "30 April 2026",
+      "13 May 2022",
+      "1 November 2022",
+      "26 May 2026"
+    ],
+    "fetch_strategy": "custom:paho_mpox",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-e6557e22234c4d21b643d5046a491fbd",
+    "result_id": "e6557e22234c4d21b643d5046a491fbd",
+    "source_url": "https://www.nature.com/articles/s41591-026-04385-8",
+    "domain": "nature.com",
+    "fetched_at": "2026-08-11T22:52:26.482876+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://nature.com/articles/s41591-026-04385-8",
+    "title": "Genomic epidemiology of the 2025 mpox epidemic in Sierra Leone - Nature Medicine",
+    "published_date": "2026-05-12T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 61224,
+    "token_count": 14337,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c0",
+        "chunk_index": 0,
+        "text": "Mpox is a re-emerging zoonotic disease caused by MPXV, which has led to outbreaks across multiple countries in recent years. Sierra Leone reported its first mpox case in 8 years in January 2025, rapidly becoming the epicenter of a continental outbreak with more than 5,000 confirmed cases by August, a surge with unknown origins, timings and drivers. Phylodynamic analyses using 338 genomes generated from 14 districts suggests that the outbreak was caused by lineage G.1 (A.2.2.1) which descended from lineages circulating in Nigeria. Here we observed a strong APOBEC3 mutational enrichment, consistent with sustained human transmission that circulated undetected for ~3 months before the first confirmed case in January 2025. The Western Area Urban district served as the primary hub for nationwide spread and persistence, as well as multiple international export events. We further estimated that the true epidemic size was nearly double official case counts, highlighting substantial surveillance gaps. These findings underscore the urgent need for strengthened genomic and diagnostic surveillance systems across West Africa to pre-empt epidemics.",
+        "chunk_type": "prose",
+        "heading": "Abstract",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 226,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c1",
+        "chunk_index": 1,
+        "text": "Mpox is a re-emerging zoonotic disease caused by MPXV, which has driven outbreaks across multiple countries in recent years1,2. MPXV is classified into two main clades: I and II3,4. Historically, clade I (subdivided into Ia and Ib) was confined to zoonotic infections arising from Central African animal reservoirs, whereas clade II (also subdivided into IIa and IIb) was restricted to West Africa and associated with lower case fatality rates5.\nIn the past decade, MPXV has shifted in both epidemiology and evolution, with large outbreaks in both endemic and nonendemic regions, marked by sustained human-to-human transmission, often within sexual networks6. Clade IIb/sh2017 lineage A emerged with sustained human transmission in Nigeria in 20147,8, giving rise to the global 2022 multi-country outbreak9,10. More recently, clade Ib/sh2023 emerged in 2023, causing an outbreak in the eastern Democratic Republic of the Congo (DRC), which was strongly linked to dense sexual transmission networks11,12. The viral lineages underlying these epidemics show strong APOBEC3-like mutational biases, a molecular signature characteristic of sustained human-to-human transmission7,8,11,13.\nSierra Leone (SLE) confirmed its first mpox case in 8 years on 10 January 2025, in a symptomatic man in the capital city, Freetown. The Ministry of Health declared a public health emergency shortly thereafter14. From January to July 2025, SLE rapidly became the epicenter of the continental mpox epidemic, accounting for nearly half of Africa\u2019s confirmed cases during this period15. By 26 September 2025, the country had recorded 5,328 confirmed cases and 56 moxa-associated deaths, with all 16 districts affected16.\nTransmission was concentrated in the Western Area Urban (WAU) and Western Area Rural (WAR) districts. The rapid and explosive outbreak growth in SLE, compared with neighboring countries such as Ghana, Liberia, Guinea and C\u00f4te d\u2019Ivoire, likely stems from specific sociodemographic drivers. Freetown\u2019s dense and highly mobile population (~1.4 million of the nation\u2019s 8.6 million residents) facilitated rapid interdistrict spread, outpacing deployment of interventions such as testing, case isolation and contact tracing, whereas early undetected spread within high-mobility networks likely seeded multiple regions before surveillance was fully activated.\nPreliminary genomic analyses indicated that the SLE outbreak derives from clade IIb/sh2017 lineage A.2.2 viruses circulating in Nigeria and neighboring West African countries17. Epidemiological data show that the epidemic predominantly affected young adults aged 16\u201335 years14,18. Unlike the early 2022 clade IIb/sh2017 global wave with >90% of cases reported among the men who have sex with men (MSM) community9,10,19, and the 2017\u20132022 Nigerian epidemic in which ~63% of cases were male20,21,22, the SLE outbreak exhibits a near-equal sex distribution, few pediatric cases and a skew toward younger adult women and older adult men, patterns consistent with transmission within non-MSM sexual networks14,18.\nThis demographic profile more closely resembles clade Ib/sh2023 outbreaks in the DRC, Burundi and Uganda, suggesting that demographic differences across clades may reflect transmission network dynamics rather than viral genetic differences12,23,24. However, clades differ in clinical severity: clade Ia has historically been associated with higher case fatality ratios than clade IIb, although recent data suggest that this partly reflects contextual factors, such as malnutrition, co-infections and limited healthcare access, rather than intrinsic viral virulence alone, and the reported mortality rate for clade Ib has remained <1% in most affected countries, comparable to clade IIb12,25,26. Recent DRC trial data further highlight that tecovirimat outcomes vary substantially unless patients receive high-quality supportive care27,28. The clinical severity of clade IIa in humans remains less well characterized than that of the other subclades.\nThe limited availability of full-length MPXV genomic data from SLE and neighboring countries has left key questions about transmission dynamics unresolved29. The absence of early phase samples, uneven district-level sampling and limited temporal range make it challenging to precisely resolve the origins of the G.1 outbreak, and we cannot exclude the possibility that G.1 emerged elsewhere before introduction to SLE. Here we address these questions using phylogenetic and phylogeographical analysis of 338 MPXV genomes sampled across SLE between 10 January and 3 August 2025, to characterize the origin and spatiotemporal dynamics of the epidemic.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Main",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1004,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c2",
+        "chunk_index": 2,
+        "text": "To investigate the evolutionary relationship between SLE\u2019s epidemic lineage and global MPXV diversity, we generated 338 high-quality MPXV genomes from cases across 14 districts between 10 January and 3 August 2025 (Fig. 1a,b), produced through collaboration among the Central Public Health Reference Laboratory (CPHRL, n = 128), the Kenema Government Hospital (KGH) Viral Hemorrhagic Fever (VHF) Laboratory (n = 105) and the Institut Pasteur de Dakar (IPD) mobile laboratory in Port Loko (n = 105). With two additional genomes from the Beijing Institute of Technology30, the total was 340 high-quality genomes (>60% coverage at 25\u20138,100\u00d7 depth), representing 6.9% of all PCR-confirmed cases up to August 2025 (Fig. 1a,b).\nWe reconstructed the clade IIb phylogeny to determine the relationship between the SLE sequences and the clade IIb/sh2017 lineage. In our phylogeny, 339 of 340 genomes clustered within clade IIb/sh2017, which emerged in humans in southern Nigeria in 2014 and drives the ongoing human epidemic in West Africa7,8. According to the nomenclature proposed in refs. 3,4, clade IIb/sh2017 is designated as lineage A (or clade IIb/sh2017/lineage A), with direct descendants designated as, for example, A.1 and subsequent subdivisions as, for example, A.1.1\u2014analogous to the Pango nomenclature used for SARS-CoV-231. Within lineage A, our sequences form a well-supported monophyletic group (100% bootstrap support) descended from lineage A.2.2 (Fig. 1c). In accordance with the nomenclature, we designated the new SLE lineage as G.1, the alias of A.2.2.1, or clade IIb/sh2017/lineage G.1 (Fig. 1c).\nThe enrichment\u2014rather than the mere presence\u2014of APOBEC3-context mutations distinguishes sustained human transmission from zoonotic spillover8. To test whether G.1 fits this profile, we quantified mutational biases by reconstructing ancestral SNPs across the G.1 phylogeny. Approximately 85% (90 of 106) of reconstructed SNPs were consistent with APOBEC3 editing (TC \u2192 TT or GA \u2192 AA transitions driven by APOBEC3F32), providing strong genomic evidence that G.1 arose through sustained human transmission rather than repeated zoonotic introductions (Fig. 1c and Extended Data Fig. 1).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Results > New G.1 lineage drives the outbreak in SLE",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 571,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c3",
+        "chunk_index": 3,
+        "text": "We identified one nonclade IIb genome: a clade IIa sequence sampled in mid-January 2025 in WAU. Phylogenetically, it clusters with two clade IIa genomes from Guinea (August and December 2024), forming a sister clade to the 1965 Rotterdam zoo epizootic and near-contemporary museum orangutan sequences33,34 (Fig. 2). The broader clade encompassing these groups shares a deep common ancestor with the lineage containing the 1958 Copenhagen captive-monkey sequence35, reinforcing that clade IIa has historically circulated in West Africa. APOBEC3 substitutions were scarce across all three sequences (\u22642 per genome), in sharp contrast to the heavily enriched G.1 lineage (Fig. 2 and Extended Data Fig. 1), supporting zoonotic spillover rather than sustained human transmission. Whether this case represents importation from Guinea or an independent zoonotic event in SLE requires additional sampling to resolve.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Results > Historical circulation of clade IIa in West Africa",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 205,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c4",
+        "chunk_index": 4,
+        "text": "The geographical origin of the G.1 lineage remains unresolved. It is unclear whether it arose directly from endemic clade IIb/sh2017 sublineages in Nigeria or was introduced into SLE via an intermediate source. In our phylogenetic analyses, G.1 is nested within lineage A.2.2, which is primarily sampled from the USA (Fig. 1c). G.1 is separated from its closest relative, a sequence from Togo, by nine APOBEC-like mutations and two non-APOBEC3-like mutations along its stem branch. Previous studies have estimated that APOBEC3-like mutations accumulate at approximately 6 per year (95% confidence interval 5\u20137), a rate that is consistent across MPXV clades and lineages with sustained human transmission7,8,12. The number of APOBEC3-like mutations along the G.1 stem branch suggests that it diverged from its ancestor, the A.2.2 sublineage, approximately 18 months ago. This provides a lower bound on the timing of the lineage\u2019s introduction into SLE.\nThe 11 A.2.2 genomes from the USA were sampled between June 2024 and June 2025 from Illinois (2), California, Massachusetts (2), Georgia, Pennsylvania, Tennessee, Minnesota, Michigan and Virginia, with confirmed travel history to Nigeria for at least 4 of the sequences (Fig. 1c). Based on the long internal branches separating the US A.2.2 genomes, they most likely represent independent viral imports from the Nigerian A.2.2 lineage rather than an established lineage that has been cryptically diversifying in the USA. The closest publicly available Nigerian A.2.2 sequence to the A.2.2 lineage from which the US and G.1 sequences descend is PP853012, sampled in Rivers State in September 2022. Taken together, these findings suggest that lineage A.2.2 in the USA and the G.1 lineage in SLE both descend from the clade IIb/sh2017 lineage A.2.2, which originated in Nigeria and continues to seed localized epidemics outside the country. However, due to limited sampling in the region and the divergence time inferred from APOBEC3 mutations along the G.1 stem branch, we cannot rule out the possibility of viral importation from an intermediate location.\nOur phylogeny also indicates G.1 export from SLE (Fig. 1c). This evidence includes four sequences sampled in the USA between March and June 2025, three of which have confirmed travel histories to SLE. We also identified two sequences from Germany sampled from a single patient in March 2025 and two sequences from Guinea sampled in June 2025, with travel histories to SLE confirmed for all but the Guinea sequences. The detection of multiple viral export events indicates active local transmission in SLE at a prevalence sufficient to generate repeated international spread.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Results > G.1 descended from lineages circulating in West Africa",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 606,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c5",
+        "chunk_index": 5,
+        "text": "The timescale inferred from accumulated APOBEC3-like mutations along the G.1 stem branch suggests that the lineage circulated undetected in SLE or in an unsampled external location for an extended period of time before detection. To estimate the timing of G.1\u2019s emergence, we used Bayesian phylogenetic reconstructions in BEAST36,37 with a nested exponential model. Under this model, we applied an exponential growth model to the G.1 lineage while allowing the rest of the tree to evolve under an independent exponential growth model, capturing the distinct epidemiological dynamics observed in SLE.\nWe estimated that the time to the most recent common ancestor (tMRCA) of the G.1 lineage was 27 September 2024 (95% highest posterior density (HPD) 12 August 2024 to 11 November 2024) (Fig. 2a). This tMRCA represents the lower bound when the sampled G.1 lineage became established in SLE. This suggests that the G.1 lineage may have circulated for approximately 3 months (95% HPD 2\u20135 months) before its detection in early January 2025.\nThe inferred growth rate corresponds to a doubling time of approximately 3 weeks (95% HPD 2.4\u20133.9 weeks) (Fig. 3b,c), consistent with the sharp increase in incidence observed between late April and May 202518. To confirm these observations, we estimated the time-varying reproductive number (Rt) from available case counts and obtained an Rt of 4.4 (95% confidence interval (CI): 3.1\u20135.9) in early March, consistent with both epidemiological data and the inferred doubling time (Fig. 1a)38. We also applied JUNIPER39 to infer the transmission dynamics of the outbreak. JUNIPER estimated an outbreak start date of 11 September 2024 (95% HPD 2 June 2025 to 11 November 2024), consistent with BEAST results, and an overall reproductive number of the outbreak, including the later decline, of 1.1 (95% HPD 1.1\u20131.2). In contrast, the estimated growth rate for the Nigerian epidemic, represented by the remainder of lineage A from which G.1 descended (Fig. 3a), corresponded to a doubling time of approximately 2.6 years (95% HPD 1.9\u20133.4 years)7,40, indicative of a low-level endemic transmission (Extended Data Fig. 2). Our phylogenetic reconstruction under a nonparametric, Skygrid, coalescent model also supports a rapid and sustained increase in the effective population size of the G.1 lineage between April and July 2025 (Fig. 3b). We additionally used the size of clusters of identical sequences to infer a similar reproductive number (1.2, 95% CI 1.1\u20131.3) and an overdispersion parameter of 0.4 (95% CI 0.2\u20131.0) (Extended Data Fig. 3), consistent with previous reports of mpox transmission9.\nNotably, JUNIPER estimated that the sampling proportion (the fraction of cases sequenced) was 3.3% (95% HPD 2.3\u20134.8%). This corresponds to an inferred total epidemic size of approximately 10,400 cases (95% HPD 7,000\u201315,200), compared with 5,096 confirmed cases (Fig. 3d). In addition, we estimated that the tMRCA between the G.1 lineage and the closest A.2.2.1 relative from Togo (that is, the stem branch age) was 9 August 2023 (95% HPD 3 April 2023 to 19 December 2023) (Fig. 3a). This represents an upper bound on the time of the viral introduction into SLE. However, the rapid exponential growth observed and the absence of closely related A.2.2 samples from endemic Nigeria suggest that the introduction most likely occurred shortly before the tMRCA of G.1 in late September 2024.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Results > G.1 emerged in late September 2024",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 879,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c6",
+        "chunk_index": 6,
+        "text": "The WAU and WAR districts are the epicenter of the outbreak, accounting for approximately 80% of the mpox cases in SLE. These districts include the capital, Freetown (~1.4 million of the country\u2019s 8.6 million residents; Fig. 1b)18. However, it remains unclear whether the epidemic originated in this region or whether there was substantial underascertained transmission elsewhere during the early phase of the outbreak. To address these uncertainties, we performed discrete and continuous phylogeographical analyses at the district level to characterize the spatiotemporal spread of lineage G.1 within SLE.\nOur discrete phylogeographical reconstructions indicate that lineage G.1 became firmly established in the WAU region, with strong posterior support (posterior probability = 0.995; Fig. 4a), consistent with the index case being reported from this district. The long stem branch implies potentially ~3 months of undetected local circulation before identification, possibly reflecting cryptic circulation in a neighboring country or unsampled transmission within SLE. We cannot confirm the site of G.1\u2019s initial emergence due to undersampling within the country and across West Africa. Nevertheless, G.1 most likely became established in WAU by late September 2024, with the district\u2019s dense, mobile population driving nationwide spread (Fig. 4a).\nTo account for uncertainty from sparse sampling, we applied a Markov jump-counting approach41,42 to reconstruct the history of location changes along phylogenetic branches, allowing us to estimate the timing and origin of geographical transmission chains41,42, defined as continuous periods of viral lineage circulation within a specific district after an introduction. The WAU was the primary source of interdistrict dissemination throughout the outbreak, with an estimated 71 introductions (95% HPD 56\u201388) originating from the district, equivalent to ~117 exports per million residents (HPD 92\u2013144), far exceeding any other district (Fig. 4b).\nMost early viral exports originated in the WAU region and spread into Kenema, then to Bo, Port Loko, WAR and Bonthe (Fig. 4b,c). Although WAU remained the principal source throughout the epidemic, Kenema became an important secondary hub later in the outbreak, accounting for an estimated 10 exports (95% HPD 3\u201321), equivalent to ~13 per million (HPD 4\u201327 per million; population 772,472), with exports predominantly disseminating to Bo, Pujehun, Bonthe and Falaba (Fig. 4c). The remaining districts contributed only marginally to viral dissemination. Continuous phylogeographical analysis was consistent with the discrete analyses, indicating that G.1 was first established in the WAU region before spreading early into WAR, Kenema and Bonthe (Fig. 4d).\nIn our dataset, Port Loko was disproportionately well sequenced relative to other regions, including the WAU, with 21% of confirmed cases sequenced compared to 5% in the WAU. To account for this heterogeneity in sampling across districts, we repeated the discrete phylogeographical analysis at the regional level. The regional reconstructions were consistent with the district-level results, again indicating that G.1 most likely emerged or was first established in the western region (posterior probability = 0.99) (Extended Data Fig. 4).\nOur regional analyses also supported the patterns of within-country, spatiotemporal spread observed at the district level. We found that the western region was the principal source of inter-regional viral introductions, with an estimated 52 introductions (95% HPD 39\u201367), equivalent to ~41 introductions per million residents (95% HPD 31\u201353 per million). The earliest introductions originated in the western region and disseminated to the eastern, southern and north-west regions (Extended Data Figs. 5 and 6). As the epidemic progressed, the introduction profile shifted, with subsequent spread into other regions increasingly driven by viral exports from the western, eastern and southern regions (Extended Data Fig. 6). The northern regions contributed only marginally to interdistrict spread, with transmission there primarily seeded by introductions from the western region (Extended Data Fig. 6).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Results > G.1 was established in the WAU district",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 882,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c7",
+        "chunk_index": 7,
+        "text": "As shown above, repeated introductions from a limited number of districts drove the spread of lineage G.1 across SLE. However, the extent to which locally persistent transmission chains sustained ongoing transmission within districts remained unclear. To disentangle the relative contributions of local viral persistence versus new introductions, we quantified the duration of within-district viral persistence for each reconstructed transmission chain (Figs. 4a and 5a).\nWe found evidence of persistent within-district circulation in the WAU district from the time of emergence onward (Fig. 5a). A large transmission chain originating in this district persisted continuously throughout the sampling period (Fig. 4a). We also observed an early introduction from the WAU into Port Loko in November 2024, with the resulting transmission chain sustaining local circulation throughout the epidemic, detectable despite sparse sampling (Fig. 5a). This pattern is consistent with the index case\u2019s recent travel history to Lungi, located in the Port Loko district and home to the country\u2019s international airport30,43. By the time that the first cases were detected in early January 2025, active transmission chains had already been established in four districts: WAU, Port Loko, Bo and Kenema (Fig. 4a). Several districts, including Bo, Bombali and Kenema, harbored transmission chains seeded from WAU in early 2025 that persisted locally for months (Fig. 5a,b).\nFrom March 2025 onward, co-circulating transmission chains increased sharply, consistent with the rise in incidence between late April and May 2025 (Fig. 5a). These chains were predominantly seeded from WAU, with repeated introductions establishing multiple co-circulating but shorter-lived chains in Kenema, WAR and Bonthe. The strong negative correlation between chain duration and epidemic phase (Pearson\u2019s r = \u22120.93; Fig. 5b) reflects the impact of progressive public health interventions, including vaccination campaigns that began 26 March in WAU and WAR districts, expanded nationwide by 30 April and were complemented by ring vaccination of contacts in early June (Fig. 1a). The transition to mandatory isolation, initiated after home-based management was observed to be ineffective within this particular setting, is credited as a key driver of the subsequent decline (Fig. 5b). Although our sampling period limits inference beyond August 2025, WAU maintained persistent transmission throughout, whereas other districts were primarily fueled by repeated introductions from this dominant hub.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Results > Persistence in the WAU drove the outbreak",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 514,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c8-p0",
+        "chunk_index": 8,
+        "text": "Mpox remains an important and evolving public health threat, with both clade I and clade II now demonstrating sustained human transmission and driving large-scale outbreaks across Africa and beyond7,8,9,10,11,12.\n\nSince its emergence in 2014, clade IIb has persisted in human populations, fueling both the global multi-country B.1 outbreak in 20227,8,10,44 and now the G.1 outbreak in SLE.\n\nThis shift toward sustained human-to-human transmission, observed independently across clade Ia, clade Ib and clade IIb, appears primarily driven by epidemiological factors, such as transmission in dense sexual networks, although a contribution from viral fitness cannot be ruled out.\n\nThis study and others found no evidence of APOBEC3-mediated evolution that would increase transmissibility, supporting the view that recent expansions have been driven primarily by human behavioral and network factors7,8,12,44.\n\nOur phylogeographical analyses indicate that G.1 was most likely established in the WAU district, which served as the primary and persistent source for viral dissemination across SLE.\n\nAlthough neighboring countries\u2019 capitals share similar densities, none has exhibited an mpox epidemic on the scale seen in SLE.\n\nHence, we reasoned that this specific escalation in Freetown reflects the stochastic nature of disease emergence.\n\nPopulation density provided the necessary conditions for amplification, but the specific introduction into high-risk networks was required to trigger an outbreak of this scale, which may explain the limited scale in nearby countries.\n\nThis is corroborated by epidemiological data that showed that the early cases were concentrated within sexual transmission networks, and subsequent spread became more generalized, maintained through both household and community contact transmission alongside sexual networks\u2014a pattern reminiscent of the recent clade Ib expansion in the DRC, Burundi and Uganda14,18.\n\nAt the time of writing, only Guinea has reported imported cases of G.1 from the ongoing outbreak in SLE.\n\nMeanwhile, neighboring countries reported limited mpox activity during the early phase of G.1 expansion, with distinctly different lineages: Liberia reported clade IIa cases45 and Ghana primarily reported clade IIb lineage A.2.546, indicative of imports from ongoing low-level transmission in Nigeria7.\n\nTaken together, these findings suggest that G.1\u2019s rapid expansion was driven primarily by population dynamics and network connectivity, with the extent of regional spread remaining to be clarified by future sequencing.\n\nThese findings underscore the urgent need to strengthen early warning surveillance and diagnostic access.\n\nWe estimated that lineage G.1 circulated locally cryptically for approximately 3 months before detection, spreading to at least three districts beyond the WAU district during this period.\n\nHowever, the long stem branch connecting G.1 to its closest relative (lineage A.2.2.1 from Togo) reveals a notably deeper history: the estimated tMRCA dates to more than a year before the lineage\u2019s establishment in SLE around September 2024.\n\nThis temporal gap is consistent with prolonged circulation in an unsampled location within West Africa before its introduction.\n\nConsequently, although the data suggest a regional origin, current genomic undersampling prevents us from inferring the specific country of direct introduction.\n\nThe true epidemic size was estimated at 10,400 cases (5,096 laboratory confirmed), indicating that surveillance systems detected approximately half of the total cases during the outbreak.\n\nStrengthening national surveillance capacity, particularly for early detection, will require proactive, community-based case finding, decentralized diagnostics with stable supply chains and real-time genomic sequencing.\n\nAt the same time, strengthening frontline capacity is essential to translate surveillance data into effective outbreak control.\n\nTraining of healthcare workers and community health volunteers should emphasize the recognition of mpox\u2019s early and distinguishing signs and its differentiation from varicella, both of which are endemic47,48,49.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 778,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c8-p1",
+        "chunk_index": 9,
+        "text": "It should reinforce adherence to standardized case definitions, safe specimen collection and rigorous infection prevention and control measures, including isolation, hand hygiene, the use of personal protective equipment and safe caregiving.\n\nIn addition, risk-reduction counseling and practical guidance are needed to help communities limit the spread in households, schools, markets and healthcare facilities.\n\nThese investments will improve detection and case management not only for mpox but also for other epidemic-prone diseases43.\n\nMpox incidence in SLE peaked during weeks 18\u201319 (late April to mid-May), then declined as coordinated response measures took effect.\n\nBy 17 August 2025, 147,779 individuals had been vaccinated (~1.96% national coverage), including healthcare workers (23%), identified contacts (43%), high-risk groups (12%), which include sex workers, MSM individuals, household contacts of confirmed cases and people living with HIV and others (22%); 51% were male and 83% aged 20\u201349 years.\n\nCase decline aligns closely with successive intervention milestones: vaccination in WAU and WAR districts (week 13), the nationwide campaign (week 18), immediate vaccination of high-risk contacts (week 20), ring vaccination (week 23) and the enhanced integrated mpox response (week 26).\n\nThis enhanced phase was initiated after the Ministry of Health observed that home-based management was inadvertently sustaining transmission networks.\n\nThe subsequent shift to mandatory isolation is credited as a primary driver of the rapid decline and return to zero cases, contrasting with the lingering low-level circulation seen in Nigeria7,22 and the DRC, where zoonotic transmission continues to reseed human infections7,12,22.\n\nTogether, these interventions underscore the importance of layered, timely vaccination and effective case isolation, supported by robust surveillance, for controlling mpox transmission.\n\nThis study has several limitations, primarily related to the sample\u2019s coverage and spatial heterogeneity.\n\nAlthough our dataset includes ~6.9% of confirmed cases, coverage varied widely across districts, ranging from fewer than 5% of cases in the high-burden WAU (131 of 2,867) and WAR (15 of 1,020) districts to more than 30% in Kenema, Bo and Bonthe, potentially overestimating exports or introduction from well-sampled districts.\n\nTo assess robustness, we aggregated districts into broader regions and tested for sampling artifacts using a generalized linear model.\n\nThese analyses consistently supported the western region as the emergence location and rejected sampling intensity as a driver of diffusion.\n\nNevertheless, lower coverage outside the capital means that our estimates of local persistence are conservative lower bounds and shorter transmission chains in these districts may reflect undersampling rather than true extinction.\n\nReproductive number estimates are further constrained by underascertainment, with the true epidemic size nearly doubling official case counts.\n\nAlthough the WAU district served as the primary source for amplification and dissemination, we cannot definitively exclude cryptic establishment in an unsampled district or neighboring country before the outbreak\u2019s explosive detection in the capital.\n\nNevertheless, the primary phylogeographical inferences, WAU as the source of spread, with early seeding of Kenema, Bo, Port Loko, WAR and Bonthe, are well supported by independent epidemiological patterns in the case data.\n\nThe lack of detailed clinical and behavioral metadata limits direct linkage of genomic patterns to disease severity or transmission context.\n\nThis study demonstrates how local genomic capacity, when paired with timely data, can transform outbreak response from reactive to informed.\n\nYet, without equitable access to diagnostics, vaccines and therapeutics, mpox and other zoonotic pathogens will continue to emerge and sustain transmission across Africa50.\n\nExpanding real-time sequencing, representative surveillance and integrated clinical\u2013genomic data systems will be critical to ensuring that early detection translates into effective control, not only for mpox but for future emerging pathogens.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 773,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c9",
+        "chunk_index": 10,
+        "text": "This work was conducted as part of the public health response to the mpox outbreak under the mandate of the National Public Health Agency, Ministry of Health, Sierra Leone and all activities were performed in accordance with national outbreak investigation guidelines. As this investigation formed part of an emergency public health response, it was exempt from institutional ethics review and the requirement for individual informed consent under national public health regulations. All data were anonymized before analysis to protect patient confidentiality. All authors met established authorship criteria and contributed substantially to study design, data generation, analysis, interpretation and paper preparation. Local public health scientists and laboratory personnel were actively involved throughout the investigation and analysis, ensuring equitable collaboration, local ownership and appropriate recognition of contributions. Care was taken to minimize stigma and harm in data handling, analysis and reporting.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Ethics and inclusion statement",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 157,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c10",
+        "chunk_index": 11,
+        "text": "All samples were collected between 10 January and 3 August 2025 from outbreak response surveillance. The dataset was produced through collaborative efforts among the CPHRL, KGH VHF Lab and the IPD mobile laboratory in Port Loko. Samples were processed for DNA extraction at CPHRL and KGH VHF Lab, using the RADI FAST DNA Extraction Kit (KH Medical), following the manufacturer\u2019s standardized protocols. The extracted DNA was then tested for the presence of MPXV using the RADI FAST mpox detection kit via real-time quantitative PCR, following the manufacturer\u2019s instructions. At the IPD or Port Loko lab, DNA extraction was performed using the QIAamp DNA mini-kit (50), following the manufacturer\u2019s instructions (QIAGEN) and quantitative PCR was done using the lyophilized 1-step RT-PCR Polymerase Mix kit with the Lightmix modular Dx monkeypox virus assay, according to the manufacturer\u2019s instructions (Roche, Tibmol Biol). Every experiment included appropriate internal and external quality controls.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Sample collection and molecular testing",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 211,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c11",
+        "chunk_index": 12,
+        "text": "We prioritized mpox-positive samples with a cycle threshold (Ct) value \u226430 for sequencing. Libraries were prepared using the Illumina RNA Prep with Enrichment (L) Kit and enriched with the Viral Surveillance Panel 2.0 targeting epidemic-prone pathogens, including MPXV. After capture with streptavidin-coated magnetic beads, libraries were amplified, purified, quantified and quality checked using Qubit (Thermo Fisher Scientific) and Agilent TapeStation (Agilent Technologies). Samples from CPHRL were sequenced on the Illumina MiniSeq with 2\u00d7 150-bp paired-end reads. Sequences from KGH were generated using the Illumina Viral Surveillance Panel, followed by Illumina sequencing on Illumina Miseq. Sequences at the IPD mobile lab were generated using an amplicon-based method with specific mpox primer pools, followed by Oxford Nanopore Technologies MK1B or Illumina iSeq100 sequencing51.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Next-generation sequencing",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 200,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c12",
+        "chunk_index": 13,
+        "text": "The CPHRL sequences were generated with an in-house reference-based assembly pipeline. Briefly, we mapped reads against a clade IIb reference genome (NC_063383, an early clade IIb/sh2017 genome from Nigeria) with BWA-MEM52 and called consensus using samtools53 and iVar54. Sequences from KGH were assembled using the Broad Institute viral-ngs assemble_ref_based pipeline implemented in Terra using a clade IIb reference genome (NC_063383). Sequences from IPD were assembled from Oxford Nanopore Technologies data, using an in-house, reference-based assembly pipeline with a clade IIb reference genome (NC_063383) and a minimum read depth of 100. For Ilumina data, the trimmed BAM files were mapped to a clade IIb reference genome (NC_063383) using BWA-MEM (v0.7.17-r1188)52. The generated BAM mapping files were sorted using SAMtools (v1.6)53 and then used as input to iVar (v1.3.1)54 with a minimum read depth of 10 and depth threshold of 0.5, to generate consensus sequences. The mean coverage across all sequences ranged from 25\u00d7 to 8,100\u00d7, with 324 of the 338 genomes exceeding 70% completeness.\nIn total, we generated 338 high-quality sequences. The total sequences produced were from: CPHRL (n = 128), KGH (n = 105) and the IPD mobile laboratory in Port Loko (n = 105). Our dataset included sequences sampled between 10 January and 3 August 2025 from 14 districts: WAU (n = 129), Kenema (46), Port Loko (39), Bo (32), Bonthe (18), Bombali (16), Tonkolili (16), Kailahun (5), WAR (15), Kambia (4), Koinadugu (12), Falaba (3), Kono (1) and Pujehun (2).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Genome assembly",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 430,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c13",
+        "chunk_index": 14,
+        "text": "We combined our 338 genomes with all high-quality (genome coverage >70%), publicly available clade IIb MPXV genomes from Pathoplexus55. Only one representative of the multi-country outbreak lineage B.1 was included, because it was not the primary focus of our study. We also included the closest zoonotic outgroup to clade IIb (PP852949.1) sampled in 2022 from Nigeria, which was used to root the tree7. In total, the dataset comprises 530 sequences.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Genomic dataset curation",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 108,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c14",
+        "chunk_index": 15,
+        "text": "We obtained the time series of confirmed mpox cases from the National Public Health Agency. We used EpiFilter or Smooth to infer a time-varying Rt (ref. 38).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Epidemiological data",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 38,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c15",
+        "chunk_index": 16,
+        "text": "We aligned our dataset to the clade IIb reference genome (NC_063383) using the squirrel package developed in refs. 8,56. The alignment was trimmed and the 3\u2032-terminal repeat regions, as well as repetitive regions, regions with low complexity, clustered mutations or mutations near gaps or ambiguities were masked using the package\u2019s quality control mode.\nThe full MPXV phylogeny was reconstructed with IQ-TREE v2.0 implemented within the squirrel package57. We reconstructed a separate clade IIb phylogeny under the default parameters in Squirrel and rooted it to the zoonotic outgroup PP852949 from Nigeria in 20227, which was subsequently pruned. All zero-length branches were collapsed and an ancestral state reconstruction was performed across the clade IIb phylogeny using IQ-TREE257. Lineages were assigned from the nomenclature established in refs. 3,4 using the Nextclade tool58.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Phylogenetic analysis",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 197,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c16",
+        "chunk_index": 17,
+        "text": "To estimate the timing of G.1\u2019s emergence, we adopted the partitioned model developed in ref. 8 to model APOBEC3-mediated evolution implemented in the BEAST X v10.5.0 software package36,37 with the BEAGLE high-performance computing library59. We used a nested exponential coalescent model to adequately model G.1\u2019s distinct epidemiological dynamics. We applied an exponential growth model to the tree from the most recent common ancestor of the G.1 lineage onward. The rest of the tree, representing the remainder of lineage A that is the source population, was modeled under an independent exponential growth model. This allows us to estimate distinct growth rates and associated doubling times for the epidemic in SLE and the wider West Africa (predominantly Nigeria), respectively. We ran two independent chains of 100 million states to ensure convergence, discarding the initial 10% of each chain as burn-in. The chains were then combined using LogCombiner. For all subsequent analyses, we assessed convergence using Tracer and constructed an MCC tree in TreeAnnotator 1.1060.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Bayesian phylodynamics",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 228,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c17",
+        "chunk_index": 18,
+        "text": "To investigate the spatial spread of the G.1 lineage within SLE, we reconstructed the timing and pattern of geographical transitions between SLE\u2019s districts and at the regional level under an asymmetrical discrete trait analysis41. We applied Bayesian stochastic search variable selection to identify statistically supported migration routes. We used a Skygrid coalescent model with 34 change points distributed over 7 months to capture the doubling time of 2-week intervals, excluding lineage A sequences from other countries61. We combined two independent MCMC chains of 100 million states sampled every 10,000 states, discarding the initial 10% of trees as burn-in. We confirmed that all effective sample size (ESS) values were >200.\nWe employed a Markov jump-counting procedure across the full posterior distribution to further investigate the timing and origin of geographical transitions while accounting for uncertainty in our phylogeographical reconstructions. We used the TreeMarkovJumpHistoryAnalyzer implemented in BEAST X36,37 to extract all Markov jumps from our posterior tree distributions62. We accounted for the uneven distribution of sequences across SLE districts by performing all phylogeographical analyses on an aggregated, regional level.\nWe also performed a continuous phylogeographical analysis to quantify the dispersal of the G.1 lineage across regions and districts in SLE. We assigned each sequence the latitude and longitude of the centroid of its sampling district. We used the Skygrid coalescent model described above, with a Cauchy distribution to model the among-branch heterogeneity in dispersal velocity42. We ran two independent MCMC chains of 50 million states, sampling every 2,000 states. We combined the chains after discarding 10% of the states as burn-in.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Phylogeographic analysis",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 355,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c18",
+        "chunk_index": 19,
+        "text": "We used the R package JUNIPER39 to conduct outbreak reconstruction from all clade IIb G.1 samples based on pathogen genomes. JUNIPER infers transmission networks using both sequenced and unsequenced cases. We masked our clade IIb alignment only to include the APOBEC3 target site partition. Specifically, as APOBEC3 proteins mutate TC dimers to TT dimers and GA dimers to AA dimers, we retained only pairs of positions on the aligned genomes that exhibited TC or TT in all sequences or GA or AA in all sequences. We removed the conserved nucleotide in each dimer across all sequences, to retain only the second nucleotide of the TC or TT dimers, and retained only the first nucleotide of the GA or AA dimers. A substitution rate of 6.9 \u00d7 10\u22127 was calculated by assuming 6 APOBEC3-like mutations per site per year across the partitioned genome length of 23,602 (refs. 7,8). JUNIPER was run for a total of 30,000 iterations (across two 15,000 iteration runs) with a fixed mutation rate, a generation interval of 11.4 d and a sojourn interval of 15 d. After completion of the runs, 20% burn-in was removed and the resulting chains were downsampled to an effective sample size of 69 and 73, respectively, to ensure minimal autocorrelation between samples63 and combined for a total ESS of 142.\nThe estimated outbreak size and estimated outbreak start date were directly inferred from the results. To calculate the per-individual reproductive number, we computed the expected number of total transmissions under the stochastic\u2013epidemic model. The conditional probability \\({\\mathbb{P}}_{t}(X=k\\mid d)\\) that an individual infected at time t transmits k total people, given that d offspring are explicitly represented in the transmission network inferred by JUNIPER, is\nwhere \u03c9t is the probability that a case infected at time t has no sequenced descendants up through the time of last sample collection, f(k) is the probability of one person transmitting to k other people, and\nThe equation is adapted from TransPhylo64. The expected number of transmissions for said individual, conditional on the d offspring in the transmission network inferred by JUNIPER, is then given by\nReproductive numbers within any metadata category were computed by averaging the expected number of transmissions for each observed individual in said category.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Transmission reconstruction",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 528,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c19",
+        "chunk_index": 20,
+        "text": "Sample selection and quality control sample size were determined by cases meeting sequencing thresholds (Ct \u2264 30, genome coverage >60% at \u226525\u00d7 depth) during the outbreak (10 January to 3 August 2025). We included 338 high-quality MPXV genomes, representing 6.9% of total PCR-confirmed cases (n = 5,328). No samples were excluded post-hoc. Phylogenetic and mutational analysis phylogenetic confidence was assessed via ultrafast bootstrap (UFBoot) in IQ-TREE v2.0 (1,000 replicates); support \u226570% was considered significant. Bayesian phylodynamic parameters were estimated using BEAST X v10.5.0. MCMC chains (two independent runs) were executed for 100 million states (sampling every 10,000) for general analyses and 50 million states (sampling every 2,000) for phylogeographical analyses. We applied a 10% burn-in and confirmed convergence via Tracer v1.7 (ESS > 200). All parameters are reported as posterior means with 95% HPD intervals. For transmission and reproduction modeling, time-varying effective reproduction numbers were derived from daily case counts using EpiFilter v1.0 (Smooth mode) with a serial interval of 11.4 d. For outbreak reconstruction, we used JUNIPER (v1.0) to jointly infer transmission networks from sequenced and unsequenced cases (30,000 MCMC iterations; fixed rate 6.9 \u00d7 10\u22127 substitutions per site per year). Total epidemic size and sampling proportions were inferred within this framework. For overdispersion, individual-level and overdispersion were estimated via a negative binomial model of identical sequence clusters and used to identify superspreading dynamics. Phylogeography and persistence discrete phylogeography employed an asymmetrical continuous time Markov chain model with Bayesian stochastic search variable selection; migration routes were supported at a Bayes factor >3. Interdistrict introductions were quantified using Markov jump counting across 10,000 posterior trees. Chain persistence was defined as the duration between inferred origin and the most recent sampling date. The association between origin time and persistence was assessed using a two-tailed Pearson\u2019s correlation. Software and reproducibility analyses and visualization were performed in R (v4.3.1), Python and Baltic. All code is available at GitHub (https://github.com/Ifeanyi-omah/Sierra_Leone_Mpox_project).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Statistical analysis",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 522,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c20",
+        "chunk_index": 21,
+        "text": "Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Methods > Reporting summary",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 18,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c21",
+        "chunk_index": 22,
+        "text": "All 338 MPXV genome sequences generated in this study are deposited on Pathoplexus (https://doi.org/10.62599/PP_SS_232.1). Epidemiological case count data used in this study are publicly available from the National Public Health Agency of Sierra Leone at https://clt.npha.gov.sl/outbreak.aspx. The data underlying each main figure, including the case count time series, BEAST log files and phylogeny files, are available on GitHub (https://github.com/Ifeanyi-omah/Sierra_Leone_Mpox_project). No other primary data were generated in this study.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Data availability",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 132,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c22",
+        "chunk_index": 23,
+        "text": "All code used to run the phylogenetic, phylodynamic, phylogeographical and transmission reconstruction analyses described in this study is publicly available on GitHub (https://github.com/Ifeanyi-omah/Sierra_Leone_Mpox_project). The repository includes all source data underlying each main figure, including the case count time series, BEAST log files, maximum clade credibility trees and phylogeographical output files. No customized code was developed that is not available in this repository.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Code availability",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 103,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c23-p0",
+        "chunk_index": 24,
+        "text": "\u2022 Ejaz, H.\n\net al.\n\nEmergence and dissemination of monkeypox, an intimidating global public health problem.\n\nJ.\n\nInfect.\n\nPublic Health 15, 1156\u20131165 (2022).\n\n\u2022 Laurenson-Schafer, H.\n\net al.\n\nDescription of the first global outbreak of mpox: an analysis of global surveillance data.\n\nLancet Glob.\n\nHealth 11, e1012\u2013e1023 (2023).\n\n\u2022 Ruis, C.\n\net al.\n\nA systematic nomenclature for mpox viruses causing outbreaks with sustained human-to-human transmission.\n\nNat.\n\nMed.\n\n31, 2854\u20132858 (2025).\n\n\u2022 Happi, C.\n\net al.\n\nUrgent need for a non-discriminatory and non-stigmatizing nomenclature for monkeypox virus.\n\nPLoS Biol.\n\n20, e3001769 (2022).\n\n\u2022 Okwor, T., Mbala, P.\n\nK., Evans, D.\n\nH.\n\n& Kindrachuk, J.\n\nA contemporary review of clade-specific virological differences in monkeypox viruses.\n\nClin.\n\nMicrobiol.\n\nInfect.\n\n29, 1502\u20131507 (2023).\n\n\u2022 Low, N.\n\net al.\n\nMpox virus and transmission through sexual contact: defining the research agenda.\n\nPLoS Med.\n\n20, e1004163 (2023).\n\n\u2022 Parker, E.\n\net al.\n\nGenomics reveals zoonotic and sustained human mpox spread in West Africa.\n\nNature 643, 1343\u20131351 (2025).\n\n\u2022 O\u2019Toole, \u00c1 et al.\n\nAPOBEC3 deaminase editing in mpox virus as evidence for sustained human transmission since at least 2016.\n\nScience 382, 595\u2013600 (2023).\n\n\u2022 Paredes, M.\n\nI.\n\net al.\n\nUnderdetected dispersal and extensive local transmission drove the 2022 mpox epidemic.\n\nCell 187, 1374\u20131386 (2024).\n\n\u2022 Gigante, C.\n\nM.\n\net al.\n\nMultiple lineages of monkeypox virus detected in the United States, 2021\u20132022.\n\nScience 378, 560\u2013565 (2022).\n\n\u2022 & Vakaniaki, E.\n\nH.\n\net al.\n\nSustained human outbreak of a new MPXV clade I lineage in eastern Democratic Republic of the Congo.\n\nNat.\n\nMed.\n\n30, 2791\u20132795 (2024).\n\n\u2022 Wawina-Bokalanga, T.\n\net al.\n\nEpidemiology and phylogenomic characterisation of two distinct mpox outbreaks in Kinshasa, DR Congo, involving a new subclade Ia lineage: a retrospective, observational study.\n\nLancet 406, 63\u201375 (2025).\n\n\u2022 Isidro, J.\n\net al.\n\nPhylogenomic characterization and signs of microevolution in the 2022 multi-country outbreak of monkeypox virus.\n\nNat.\n\nMed.\n\n28, 1569\u20131572 (2022).\n\n\u2022 Kangbai, J.\n\nB.\n\net al.\n\nClinical and epidemiological characteristics among probable and confirmed patients with mpox in Sierra Leone reported from January to May 2025.\n\nPreprint at medRxiv https://doi.org/10.1101/2025.05.30.25328691 (2025).\n\n\u2022 Adepoju, P.\n\nSierra Leone struggles as mpox surges across Africa.\n\nLancet 405, 2117\u20132118 (2025).\n\n\u2022 Mpox outbreak dashboard, Sierra Leone.\n\nNational Public Health Agency https://clt.npha.gov.sl/outbreak.aspx (2025).\n\n\u2022 Sahr, F., Grant, D.\n\nS., Harding, D., Sandi, J.\n\nD.\n\n& Campbell, A.\n\nK.\n\nO.",
+        "chunk_type": "prose",
+        "heading": "Abstract > References",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 792,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c23-p1",
+        "chunk_index": 25,
+        "text": "Genomic epidemiology of Mpox virus in Sierra Leone.\n\nVirological https://virological.org/t/genomic-epidemiology-of-mpox-virus-in-sierra-leone/995 (2025).\n\n\u2022 Mitj\u00e0, O., Watson-Jones, D., Choi, E.\n\nM., Jalloh, M.\n\nB.\n\n& Sahr, F.\n\nClade IIb mpox outbreak in Sierra Leone.\n\nLancet 405, 2274\u20132275 (2025).\n\n\u2022 I\u00f1igo Mart\u00ednez, J.\n\net al.\n\nMonkeypox outbreak predominantly affecting men who have sex with men, Madrid, Spain, 26 April to 16 June 2022.\n\nEuro.\n\nSurveill.\n\n27, 2200471 (2022).\n\n\u2022 Yinka-Ogunleye, A.\n\net al.\n\nOutbreak of human monkeypox in Nigeria in 2017\u201318: a clinical and epidemiological report.\n\nLancet Infect.\n\nDis.\n\n19, 872\u2013879 (2019).\n\n\u2022 Yinka-Ogunleye, A.\n\net al.\n\nReemergence of human monkeypox in Nigeria, 2017.\n\nEmerg.\n\nInfect.\n\nDis.\n\n24, 1149\u20131151 (2018).\n\n\u2022 Abdullahi, A.\n\net al.\n\nLegacy immunity from prior smallpox vaccination and serological evidence of asymptomatic mpox transmission in a West African population.\n\nPrerprint at medRxiv https://doi.org/10.1101/2025.07.08.25330960 (2025).\n\n\u2022 Nizigiyimana, A.\n\net al.\n\nEpidemiological analysis of confirmed mpox cases, Burundi, 3 July to 9 September 2024.\n\nEuro Surveill.\n\n29, 2400647 (2024).\n\n\u2022 Wasswa, H.\n\nMpox in Uganda is now responsible for 40% of Africa\u2019s new cases.\n\nBr.\n\nMed.\n\nJ.\n\n388, r548 (2025).\n\n\u2022 Beer, E.\n\nM.\n\n& Rao, V.\n\nB.\n\nA systematic review of the epidemiology of human monkeypox outbreaks and implications for outbreak strategy.\n\nPLoS Negl.\n\nTrop.\n\nDis.\n\n13, e0007791 (2019).\n\n\u2022 Cho, W.\n\net al.\n\nClinical characteristics and outcomes of patients with mpox during the 2022 mpox outbreak compared with those before the outbreak: a systematic review and meta-analysis.\n\nRev.\n\nMed.\n\nVirol.\n\n34, e2508 (2024).\n\n\u2022 Postal, J.\n\net al.\n\nAntiviral activity of tecovirimat against monkeypox virus clades 1a, 1b, 2a, and 2b.\n\nLancet Infect.\n\nDis.\n\n25, e126\u2013e127 (2025).\n\n\u2022 PALM007 Writing Group et al.\n\nTecovirimat for clade I MPXV infection in the Democratic Republic of Congo.\n\nN.\n\nEngl.\n\nJ.\n\nMed.\n\n392, 1484\u20131496 (2025).\n\n\u2022 Elemuwa, C.\n\nO.\n\net al.\n\nConquering mpox: a comprehensive public health strategy for addressing mpox and poxvirus infections in Nigeria\u2014understanding global trends, transmission dynamics, and effective prevention and control measures in Nigeria.\n\nJMIR Preprints https://preprints.jmir.org/preprint/67534 (2024).\n\n\u2022 Yu, S.\n\net al.\n\nWhole-genome sequencing and phylogenetic analysis of the first and second confirmed cases of human infection with monkeypox virus from Sierra Leone.\n\nJ.\n\nInfect.\n\n91, 106587 (2025).\n\n\u2022 Rambaut, A.\n\net al.\n\nA dynamic nomenclature proposal for SARS-CoV-2 lineages to assist genomic epidemiology.\n\nNat.\n\nMicrobiol.",
+        "chunk_type": "prose",
+        "heading": "Abstract > References",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 796,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c23-p2",
+        "chunk_index": 26,
+        "text": "5, 1403\u20131407 (2020).\n\n\u2022 Susp\u00e8ne, R.\n\net al.\n\nAPOBEC3F is a mutational driver of the human monkeypox virus identified in the 2022 outbreak.\n\nJ.\n\nInfect.\n\nDis.\n\n228, 1421\u20131429 (2023).\n\n\u2022 H\u00e4mmerle, M.\n\net al.\n\nLink between monkeypox virus genomes from museum specimens and 1965 zoo outbreak.\n\nEmerg.\n\nInfect.\n\nDis.\n\n30, 816\u2013818 (2024).\n\n\u2022 Peters, J.\n\nC.\n\nAn epizootic of monkey pox at Rotterdam Zoo.\n\nInt.\n\nZoo Yearb.\n\n6, 274\u2013275 (1966).\n\n\u2022 Parker, S.\n\n& Buller, R.\n\nM.\n\nA review of experimental and natural infections of animals with monkeypox virus between 1958 and 2012.\n\nFuture Virol.\n\n8, 129\u2013157 (2013).\n\n\u2022 Suchard, M.\n\nA.\n\net al.\n\nBayesian phylogenetic and phylodynamic data integration using BEAST 1.10.\n\nVirus Evol.\n\n4, vey016 (2018).\n\n\u2022 Baele, G.\n\net al.\n\nBEAST X for Bayesian phylogenetic, phylogeographic and phylodynamic inference.\n\nNat.\n\nMethods 22, 1653\u20131656 (2025).\n\n\u2022 Parag, K.\n\nV.\n\nImproved estimation of time-varying reproduction numbers at low case incidence and between epidemic waves.\n\nPLoS Comput.\n\nBiol.\n\n17, e1009347 (2021).\n\n\u2022 Specht, I.\n\net al.\n\nJUNIPER: reconstructing transmission events from next-generation sequencing data at scale.\n\nPreprint at medRxiv https://doi.org/10.1101/2025.03.02.25323192 (2025).\n\n\u2022 Abdullahi, A.\n\net al.\n\nSero-genomic evidence for occult mpox exposure in healthy Nigerian adults.\n\nNat.\n\nCommun.\n\n17, 482 (2026).\n\n\u2022 Lemey, P., Rambaut, A., Drummond, A.\n\nJ.\n\n& Suchard, M.\n\nA.\n\nBayesian phylogeography finds its roots.\n\nPLoS Comput.\n\nBiol.\n\n5, e1000520 (2009).\n\n\u2022 Lemey, P.\n\net al.\n\nUnifying viral genetics and human transportation data to predict the global transmission dynamics of human influenza H3N2.\n\nPLoS Pathog.\n\n10, e1003932 (2014).\n\n\u2022 Mathiang, J.\n\nR.\n\net al.\n\nRapid surge of mpox in Sierra Leone: public health challenges.\n\nInt.\n\nJ.\n\nInfect.\n\nDis.\n\n159, 107987 (2025).\n\n\u2022 Ndodo, N.\n\net al.\n\nDistinct monkeypox virus lineages co-circulating in humans before 2022.\n\nNat.\n\nMed.\n\n29, 2317\u20132324 (2023).\n\n\u2022 Nyan, D.\n\nC.\n\net al.\n\nMonkeypox virus clade IIa infections, Liberia, 2023\u20132024.\n\nEmerg.\n\nInfect.\n\nDis.\n\n31, 1848\u20131851 (2025).\n\n\u2022 Agbodzi, B.\n\net al.\n\nCo-circulation of multiple clades and lineages during the 2022 monkeypox outbreak in Ghana.\n\nSSRN https://doi.org/10.2139/ssrn.5941279 (2026).\n\n\u2022 Breman, J.\n\nG.\n\net al.\n\nHuman monkeypox, 1970\u201379.\n\nBull.\n\nWorld Health Organ.\n\n58, 165\u2013182 (1980).\n\n\u2022 Bunge, E.\n\nM.\n\net al.\n\nThe changing epidemiology of human monkeypox\u2014a potential threat?\n\nA systematic review.\n\nPLoS Negl.\n\nTrop.\n\nDis.\n\n16, e0010141 (2022).",
+        "chunk_type": "prose",
+        "heading": "Abstract > References",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 800,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c23-p3",
+        "chunk_index": 27,
+        "text": "\u2022 Hughes, C.\n\nM., Liu, L.\n\n& Davidson, W.\n\nB.\n\nA Tale of two viruses: coinfections of monkeypox and varicella zoster virus in the Democratic Republic of Congo.\n\nAm.\n\nJ.\n\nTrop.\n\nMed.\n\nHyg.\n\n104, 604\u2013611 (2021).\n\n\u2022 Nakkazi, E.\n\nMpox continental response plan 2.0.\n\nLancet Infect.\n\nDis.\n\n25, e385 (2025).\n\n\u2022 Chen, N.\n\nF.\n\nG.\n\net al.\n\nDevelopment of an amplicon-based sequencing approach in response to the global emergence of mpox.\n\nPLoS Biol.\n\n21, e3002151 (2023).\n\n\u2022 Li, H.\n\nAligning sequence reads, clone sequences and assembly contigs with BWA-MEM.\n\nPreprint at https://arxiv.org/abs/1303.3997 (2013).\n\n\u2022 Li, H.\n\net al.\n\nThe Sequence Alignment/Map format and SAMtools.\n\nBioinformatics 25, 2078\u20132079 (2009).\n\n\u2022 Grubaugh, N.\n\nD.\n\net al.\n\nAn amplicon-based sequencing framework for accurately measuring intrahost virus diversity using PrimalSeq and iVar.\n\nGenome Biol.\n\n20, 8 (2019).\n\n\u2022 Vecchia, D.\n\nPathoplexus: towards fair and transparent sequence sharing.\n\nLancet Microbe 5, 100995 (2024).\n\n\u2022 O\u2019Toole, \u00c1.\n\net al.\n\nHuman outbreak detection and best practice MPXV analysis and interpretation with squirrel.\n\nVirus Evol.\n\n12, veaf095 (2025).\n\n\u2022 Minh, B.\n\nQ.\n\net al.\n\nIQ-TREE 2: new models and efficient methods for phylogenetic inference in the genomic era.\n\nMol.\n\nBiol.\n\nEvol.\n\n37, 1530\u20131534 (2020).\n\n\u2022 Hadfield, J.\n\net al.\n\nNextstrain: real-time tracking of pathogen evolution.\n\nBioinformatics 34, 4121\u20134123 (2018).\n\n\u2022 Ayres, D.\n\nL.\n\net al.\n\nBEAGLE 3: improved performance, scaling, and usability for a high-performance computing library for statistical phylogenetics.\n\nSyst.\n\nBiol.\n\n68, 1052\u20131061 (2019).\n\n\u2022 Rambaut, A., Drummond, A.\n\nJ., Xie, D., Baele, G.\n\n& Suchard, M.\n\nA.\n\nPosterior summarization in Bayesian phylogenetics using tracer 1.7.\n\nSyst.\n\nBiol.\n\n67, 901\u2013904 (2018).\n\n\u2022 Gill, M.\n\nS.\n\net al.\n\nImproving Bayesian population dynamics inference: a coalescent-based model for multiple loci.\n\nMol.\n\nBiol.\n\nEvol.\n\n30, 713\u2013724 (2013).\n\n\u2022 Lemey, P.\n\net al.\n\nUntangling introductions and persistence in COVID-19 resurgence in Europe.\n\nNature 595, 713\u2013717 (2021).\n\n\u2022 Plummer, M., Best, N., Cowles, K.\n\n& Vines, K.\n\nCODA: convergence diagnosis and output analysis for MCMC.\n\nR News 6, 7\u201311 (2006).\n\n\u2022 Didelot, X., Fraser, C., Gardy, J.\n\n& Colijn, C.\n\nGenomic infectious disease epidemiology in partially sampled and ongoing outbreaks.\n\nMol.\n\nBiol.\n\nEvol.\n\n34, 997\u20131007 (2017).",
+        "chunk_type": "prose",
+        "heading": "Abstract > References",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 727,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c24",
+        "chunk_index": 28,
+        "text": "The IPD acknowledges M. Ciss\u00e9 (data scientist) and M. Diarra (laboratory technician), who were deployed with the IPD team in SLE, as well as N. Dia, O. Faye, C. Loucoubar, D. Yero Sow and O. Faye for logistics and coordination support. IPD also thanks L. Boussiengui and F. Di\u00e8ne Thiaw for generating the first sequences from SLE at IPD. The US CDC acknowledges members of the poxvirus laboratory who contributed to sequencing of US samples included in this study, as well as staff from the Tennessee Department of Health, Maryland State Department of Health, Minnesota Department of Health, Texas Department of State Health Services, Pennsylvania Department of Health and Virginia Department of Health for submitting samples for MPXV genomic surveillance. The funders had no role in study design, data collection and analysis, decision to publish or preparation of the manuscript. Africa CDC, through the Africa Pathogen Genomics Initiative, supported the establishment of in-country sequencing capacity at CPHRL through the provision of sequencing equipment, training, testing and sequencing reagents and the World Health Organization also provided critical support through the provision of sample storage equipment and diagnostic and sequencing reagent supplies, complemented by essential training at the national level. This work was also made possible by support from Flu Lab and a cohort of generous donors through TED\u2019s Audacious Project, including the ELMA Foundation, M. Scott, the Skoll Foundation and Open Philanthropy. The Institute of Genomics and Global Health team also received support from the Rockefeller Foundation (award no. 2021 HTH 017). This work of the IPD team in terms of sample testing, sequencing, capacity building, data analysis and dashboarding and coordination was funded by West African Health Organization (WAHO/OOAS), in support of the SLE national mpox response efforts. I.F.O. was supported by the Wellcome Trust Hosts, Pathogens & Global Health program (Wellcome Trust, grant no. 218471/Z/19/Z) in partnership with Tackling Infectious Disease to Benefit Africa. A.R. acknowledges the support of the Wellcome Trust through the ARTIC Network (award nos. 206298/Z/17/Z and 313694/Z/24/Z). The contents of this manuscript are solely the responsibility of the authors and do not necessarily represent the official views of the US CDC or the US Department of Health and Human Services.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Acknowledgements",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 510,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c25",
+        "chunk_index": 29,
+        "text": "A.K.O.C. and J.D.S. conceived the study. A.K.O.C., J.D.S., I.F.O., E.P., M.F., A.R., K.G.A. and P.S. developed the methodology. Investigation was performed by A.K.O.C., J.D.S., M.S.K., K.S.S., F.B., I.U.F., A.K., K.K., J.N., F.T., A.F., M.B.J., F.S., J.S., D.H., Z.K., M.A.V. and I.S.F. and additional contributors from collaborating institutions. Data curation was carried out by A.K.O.C., J.D.S., V.F., A.J.W., J.C., S.M., C.M., N.D.S., R.L., Z.S., A.K., K.K., A.T. and C.M.G. Formal analysis was conducted by I.F.O., E.P., M.F., A.R., K.G.A., P.S., C.T.-T., D.P., B.B., P.V., I.S., C.W., T.B.-F., I.B., C.S. and M.F.P., with software support provided by I.F.O., E.P., A.R., K.G.A., C.T.-T., D.P., B.B., P.V., I.S., C.W., T.B.-F., I.B. and C.S. Validation was performed by A.K.O.C., J.D.S., I.F.O., E.P., M.F., A.R. and K.G.A. and visualization by I.F.O., E.P., M.F., A.R., K.G.A. and P.S. Resources were provided by A.K.O.C., J.D.S., M.S.K., A.K., J.K., W.O.O., J.G., G.A., M.A.F., A.T. and institutional partners. Project administration was undertaken by A.K.O.C., J.D.S., M.F. and D.S.G. Supervision was provided by D.S.G., C.H., P.S., K.G.A., A.A.S. and A.R. Funding acquisition was done by D.S.G., C.H., P.S., K.G.A. and A.A.S. A.K.O.C., J.D.S., I.F.O., E.P., M.F. and A.R. contributed to the original draft of the paper and all authors contributed to review and editing and approved the final version.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Author information > Contributions",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 508,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c26",
+        "chunk_index": 30,
+        "text": "The authors declare no competing interest.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Ethics declarations > Competing interests",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 7,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c27",
+        "chunk_index": 31,
+        "text": "Nature Medicine thanks Lorenzo Subissi and the other, anonymous, reviewer(s) for their contribution to the peer review of this work. Peer reviewer reports are available. Primary Handling Editor: Lia Parkin, in collaboration with the Nature Medicine team.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Peer review > Peer review information",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 49,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c28",
+        "chunk_index": 32,
+        "text": "Publisher\u2019s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Additional information",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 21,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c29",
+        "chunk_index": 33,
+        "text": "Yellow bars indicate APOBEC3-signature mutations (C \u2192 T and G \u2192 A in TC/GA context), while grey bars represent all other substitutions. The massive enrichment in Lineage A.x and G.1 contrasts with the background mutation patterns seen in zoonotic lineages.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Extended data > Extended Data Fig. 1 Comparative mutational spectra across MPXV lineages.",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 59,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c30",
+        "chunk_index": 34,
+        "text": "The distribution of the doubling time for the Nigerian epidemic from 2017 to 2022.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Extended data > Extended Data Fig. 2 The doubling time of the Nigeria Epidemic.",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 19,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c31",
+        "chunk_index": 35,
+        "text": "Estimates for the reproduction number R and the dispersion parameter k assuming that 10, 50 and 100% were detected as cases.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Extended data > Extended Data Fig. 3 Distribution of the size of clusters of identical sequences during the mpox outbreak.",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 28,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c32",
+        "chunk_index": 36,
+        "text": "The branches of the Maximum Clade Credibility tree (MCC) are coloured by region, as per legend.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Extended data > Extended Data Fig. 4 Phylogeographic analyses of the G.1 lineage in Sierra Leone on a regional level.",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 24,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c33",
+        "chunk_index": 37,
+        "text": "Distribution represents the 95% highest posterior density. The end location state is coloured by region, as per legend. The start location is highlighted by an outline of the area.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Extended data > Extended Data Fig. 5 The distribution of the number of introductions across time by region. Data are summarised across the posterior of 10,000 trees.",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 35,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c34",
+        "chunk_index": 38,
+        "text": "Data are summarised across the posterior, annotated as per the legend, and colour-coded by end location on the y-axis.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Extended data > Extended Data Fig. 6 Total number of introductions by region from each start location.",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 25,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c35",
+        "chunk_index": 39,
+        "text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article\u2019s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article\u2019s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Rights and permissions",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 159,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-e6557e22234c4d21b643d5046a491fbd-c36",
+        "chunk_index": 40,
+        "text": "Campbell, A.K.O., Sandi, J.D., Omah, I.F. et al. Genomic epidemiology of the 2025 mpox epidemic in Sierra Leone. Nat Med 32, 1917\u20131926 (2026). https://doi.org/10.1038/s41591-026-04385-8\n\u2022 Received:\n\u2022 Accepted:\n\u2022 Published:\n\u2022 Version of record:\n\u2022 Issue date:\n\u2022 DOI: https://doi.org/10.1038/s41591-026-04385-8",
+        "chunk_type": "prose",
+        "heading": "Abstract > About this article > Cite this article",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 113,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "10 January 2025",
+      "26 September 2025",
+      "3 August 2025",
+      "27 September 2024",
+      "12 August 2024",
+      "11 November 2024",
+      "11 September 2024",
+      "2 June 2025",
+      "9 August 2023",
+      "3 April 2023",
+      "19 December 2023",
+      "17 August 2025",
+      "16 June 2022",
+      "9 September 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-ac30180f61fd480481191c20db458084",
+    "result_id": "ac30180f61fd480481191c20db458084",
+    "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-11T22:52:28.396453+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/monkeypox/outbreaks/2023/index.html",
+    "title": "Clade I Monkeypox Outbreaks",
+    "published_date": "2023-01-01T00:00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 5428,
+    "token_count": 1083,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-ac30180f61fd480481191c20db458084-c0",
+        "chunk_index": 0,
+        "text": "\u2022 There have been outbreaks of clade I monkeypox in Central and Eastern Africa since late 2023.\n\u2022 Since January 2024, more than 55,000 confirmed cases of clade I monkeypox have been reported globally, including more than 150 deaths.\n\u2022 Newer outbreaks in several Western European countries are likely related to this ongoing outbreak.\n\u2022 Transmission dynamics are changing. Only a small proportion of exported clade I monkeypox cases worldwide this year have originated in Central or Eastern African countries.\n\u2022 Recent travel-associated clade I monkeypox cases have almost exclusively been attributed to subclade Ib; there have been no deaths associated with these cases and available data have detailed relatively mild disease courses.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 146,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ac30180f61fd480481191c20db458084-c1",
+        "chunk_index": 1,
+        "text": "\u2022 The risk posed by the clade I monkeypox outbreak to most people within the United States remains low. The risk to men who have sex with men is low to moderate.\n\u2022 Clade I cases in the United States have increased in frequency since March 2026.\n\u2022 As of July 2026, there have been more than 40 clade I monkeypox cases reported in the United States.\n\u2022 Nearly all U.S. cases were diagnosed in people who:Had recently traveled to areas associated with the outbreak in Central and Eastern Africa;Had recently traveled to parts of Western Europe where newer outbreaks are being reported; ORWere linked to people who had traveled from these areas.\n\u2022 CDC expects additional cases in Europe and the United States.",
+        "chunk_type": "prose",
+        "heading": "What to know > Outbreak overview > In the United States",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 151,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ac30180f61fd480481191c20db458084-c2",
+        "chunk_index": 2,
+        "text": "\u2022 Clade Ia monkeypox outbreaks began impacting western areas of the Democratic Republic of the Congo (DRC) in 2024.Available data indicate that clade Ia monkeypox has spread through sexual contact, regular household contact, and encounters with infected dead or live wild animals.\n\u2022 Clade Ib monkeypox cases initially impacted eastern areas of DRC in late 2023.This subclade has driven much of the spread throughout Central and Eastern Africa and most travel-associated cases to other parts of the world.Available data indicate that these cases at first spread through heterosexual intimate or sexual contact between adults, then spread likely occurred within households, including to children.\n\u2022 The disease spread in 2024 and 2025 to neighboring countries of DRC, only some of which are endemic for the virus that causes monkeypox, and sustained local spread occurred.\n\u2022 As of April 2026, the Democratic Republic of the Congo is still the country with the majority of clade Ib cases.",
+        "chunk_type": "prose",
+        "heading": "What to know > Outbreak overview > In Central and Eastern Africa",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 203,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ac30180f61fd480481191c20db458084-c3",
+        "chunk_index": 3,
+        "text": "\u2022 Several countries in other parts of Africa, Asia, Europe, North America, and South America, as well as Australia, have confirmed clade I monkeypox cases mostly in travelers who'd recently been in areas with clade I outbreaks.To date, there have been more than 300 clade Ib cases in high-income countries, and no deaths have been reported.\n\u2022 Beginning in Fall 2025, several countries in Western Europe began reporting clade Ib monkeypox cases among individuals who had no documented history of international travel.These cases were likely related to intimate or sexual exposure among men who have sex with men.We expect additional cases in Europe and the United States.\n\u2022 For data since January 1, 2024, see 2022-24 Monkeypox (Monkeypox) Outbreak: Global Trends (shinyapps.io).Confirmed cases include those that are laboratory confirmed as monkeypox virus and may include cases only confirmed as orthopoxvirus. These data are provided for situational awareness and are subject to change.",
+        "chunk_type": "prose",
+        "heading": "What to know > Outbreak overview > Outside Central and Eastern Africa",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 212,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ac30180f61fd480481191c20db458084-c4",
+        "chunk_index": 4,
+        "text": "Early in the Central and Eastern African outbreak, a high proportion of suspected cases in some areas were reported in children younger than 15 years of age. Historically, cases of monkeypox in children where monkeypox occurs regularly often happen after contact with wild animals that carry the disease. People then can spread the disease to close contacts, including in their households. The number of children with suspected monkeypox in this outbreak is probably due to spread within and between close households, the large number of younger people in affected countries, misdiagnosis of other diseases (such as measles), poor sanitary conditions, limited access to health services, and a high level of food insecurity and malnutrition.\nBased on what we know today, we don't expect to see the same sort of pattern in the United States for several reasons, including smaller household sizes, access to cleaning and disinfecting products, and improved access to medical care, equipment, and information about preventing spread while caring for patients.\nNotably, there are no consistent reports of schools as drivers of monkeypox transmission during any recent outbreaks.\nIf cases of clade I monkeypox do happen in children the United States, CDC has clinical and public health guidance for reporting, testing, and effective case management.",
+        "chunk_type": "prose",
+        "heading": "What to know > Clade I monkeypox and children",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 253,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ac30180f61fd480481191c20db458084-c5",
+        "chunk_index": 5,
+        "text": "\u2022 CDC has been supporting DRC monkeypox research and response for more than 20 years.\n\u2022 CDC and other U.S. government agencies have continued working in-country with partners in affected areas on disease surveillance, building local laboratory capacity, strengthening public health and laboratory workforce capacity, case investigation, case management, infection prevention and control, border health, and risk communication and community engagement.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.",
+        "chunk_type": "prose",
+        "heading": "What to know > What CDC is doing",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 118,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "January 1, 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-fd6e0720feac494ca16f99c66bc1d537",
+    "result_id": "fd6e0720feac494ca16f99c66bc1d537",
+    "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2022/index-1.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-11T22:52:29.188782+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/monkeypox/outbreaks/2022/index-1.html",
+    "title": "Clade II Monkeypox Outbreaks",
+    "published_date": "2022-01-01T00:00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 5498,
+    "token_count": 1173,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c0",
+        "chunk_index": 0,
+        "text": "\u2022 There are two types of monkeypox, clade I and clade II.\n\u2022 The ongoing global outbreak that started in 2022 is caused by clade II.\n\u2022 Clade II cases continue to be reported at low levels in many countries.\n\u2022 Clade II monkeypox is endemic to West Africa.\n\u2022 Regardless of clade, monkeypox is spread, prevented, and treated the same way.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 85,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c1",
+        "chunk_index": 1,
+        "text": "Prior to the 2022 global outbreak, clade II monkeypox was found in West Africa. There have been occasional travel-related cases in other parts of the world, including a 2003 U.S. outbreak linked to imported prairie dogs.",
+        "chunk_type": "prose",
+        "heading": "What to know > Clade II monkeypox around the world > Historical outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 51,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c2",
+        "chunk_index": 2,
+        "text": "Since January 1, 2022, there have been a total of more than 114,000 clade II monkeypox cases worldwide, with more than 220 reported deaths. Overall, the number of cases worldwide have gone down steadily since the peak in 2022. In 2025, there were nearly 19,000 cases of clade II monkeypox around the world, including 9,000 outside of Africa.\nSince the outbreak began, clade II monkeypox has been seen in many countries where monkeypox had not previously been reported. Clusters of cases continue in many of these same countries. CDC continues to work with international partners, global health organizations, and ministries of health on monkeypox preparedness, surveillance, and testing.\nOngoing capacity-building during and after the peak of the outbreak to improve case tracking means cases can be found quickly. In late summer 2024, there were outbreaks in South Africa and Cote d'Ivoire that were quickly contained.\nSince January 1, 2022, there have been a total of more than 114,000 clade II monkeypox cases worldwide, with more than 220 reported deaths. Overall, the number of cases worldwide have gone down steadily since the peak in 2022. In 2024, there were nearly 9,000 cases of clade II monkeypox around the world.",
+        "chunk_type": "prose",
+        "heading": "What to know > Clade II monkeypox around the world > Ongoing outbreak that began in 2022",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 286,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c3",
+        "chunk_index": 3,
+        "text": "In summer 2025, Sierra Leone, Liberia, and other countries in West Africa experienced outbreaks of clade II monkeypox. CDC tracked a small uptick of U.S. cases of clade II across several different states linked to these outbreaks. Unlike the ongoing global outbreak, this outbreak has affected males and females about equally.\nPerson-to-person transmission mostly through sexual or other intimate contact has occurred during this outbreak. CDC collaborates with several U.S. laboratories and in-country contacts to better understand the situation.\nCDC has vaccination recommendations for people traveling to countries with new clade II outbreaks. As of January 22, 2026, this includes Liberia.\nGet more information about CDC travel recommendations to countries with confirmed or suspected community transmission.",
+        "chunk_type": "prose",
+        "heading": "What to know > Clade II monkeypox around the world > West African 2025 outbreak",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 149,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c4",
+        "chunk_index": 4,
+        "text": "Here's what we know about clade II monkeypox in the United States:\n\u2022 In July and August 2022, the United States experienced a peak in cases. The national 7-day average was more than 450 cases a day (or more than 11,000 per month). U.S. case counts have remained consistent at about 200 or fewer a month since October 2024.\n\u2022 From 2023-2025, about 1,700-2,800 cases were reported annually.\n\u2022 Clade II monkeypox is still mostly being spread through sexual and intimate contact, and gay, bisexual, and other men who have sex with men are at the highest risk of getting monkeypox.",
+        "chunk_type": "prose",
+        "heading": "What to know > Monkeypox in the United States",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 147,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c5",
+        "chunk_index": 5,
+        "text": "During the height of the clade II outbreak that began in 2022, sexual behavior and other everyday changes by people at higher risk for monkeypox helped reduce the spread of the disease.\nIf you're at risk and haven't gotten both doses of the vaccine yet, get vaccinated (or complete the 2-dose series if you have not) to protect yourself and others.\nWhether or not you've been fully vaccinated, other ways to protect yourself include avoiding close contact with people who are sick with signs and symptoms of monkeypox, including those with skin or genital lesions. In some cases, symptoms may be mild. If you or a sexual partner has or recently had monkeypox symptoms, or you have a new or unexplained rash anywhere on their body, see a healthcare provider. People who have monkeypox symptoms should not have sex or other close contact with people while they are ill, and until their rash is completely healed, which means scabs have fallen off and a fresh layer of skin has formed.\nAlso, avoid contact with contaminated materials used by people who are sick (such as clothing, bedding, toothbrushes, sex toys, or materials used in healthcare settings).",
+        "chunk_type": "prose",
+        "heading": "What to know > What you should do > Help prevent monkeypox spread",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 240,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-fd6e0720feac494ca16f99c66bc1d537-c6",
+        "chunk_index": 6,
+        "text": "\u2022 Since 2022, CDC has increased our capacity to detect cases of monkeypox in the United States through existing surveillance systems, including wastewater testing.\n\u2022 CDC, public health, and commercial laboratories have increased testing capacity to find U.S. cases of monkeypox quickly.\n\u2022 CDC is working with state, tribal, local, territorial, and commercial partners to closely monitor for monkeypox cases so health officials can quickly respond.\n\u2022 CDC works with key partners in the United States to get the word out about vaccination and reducing monkeypox risk.\n\u2022 CDC prioritizes health equity and continues to work with partners in the community to support vaccine uptake among the communities disproportionately affected by monkeypox. You can see some of this work in social media videos with Dashaun Wesley in collaboration with CDC Foundation.\n\u2022 CDC funds studies to better understand why people decide to get vaccinated against monkeypox or not. Partner organizations, including the National Coalition of STD Directors and National Coalition for Sexual Health, used this research to develop equity-centered and free communications materials and a communication toolkit.",
+        "chunk_type": "prose",
+        "heading": "What to know > What CDC is doing",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 215,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "January 1, 2022",
+      "January 22, 2026"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-e49bb0dd65b941afbc4987b2c6d296bd",
+    "result_id": "e49bb0dd65b941afbc4987b2c6d296bd",
+    "source_url": "https://www.who.int/news/item/14-08-2024-who-director-general-declares-mpox-outbreak-a-public-health-emergency-of-international-concern",
+    "domain": "who.int",
+    "fetched_at": "2026-08-11T22:52:30.165202+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/news/item/14-08-2024-who-director-general-declares-mpox-outbreak-a-public-health-emergency-of-international-concern",
+    "title": "WHO Director-General declares mpox outbreak a public health emergency of international concern",
+    "published_date": "2024-08-14T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4965,
+    "token_count": 1005,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-e49bb0dd65b941afbc4987b2c6d296bd-c0",
+        "chunk_index": 0,
+        "text": "WHO Director-General Dr Tedros Adhanom Ghebreyesus has determined that the upsurge of mpox in the Democratic Republic of the Congo (DRC) and a growing number of countries in Africa constitutes a public health emergency of international concern (PHEIC) under the International Health Regulations (2005) (IHR).\nDr Tedros\u2019s declaration came on the advice of an IHR Emergency Committee of independent experts who met earlier in the day to review data presented by experts from WHO and affected countries. The Committee informed the Director-General that it considers the upsurge of mpox to be a PHEIC, with potential to spread further across countries in Africa and possibly outside the continent.\nThe Director-General will share the report of the Committee\u2019s meeting and, based on the advice of the Committee, issue temporary recommendations to countries.\nIn declaring the PHEIC, Dr Tedros said, \"The emergence of a new clade of mpox, its rapid spread in eastern DRC, and the reporting of cases in several neighbouring countries are very worrying. On top of outbreaks of other mpox clades in DRC and other countries in Africa, it\u2019s clear that a coordinated international response is needed to stop these outbreaks and save lives.\u201d\nWHO Regional Director for Africa Dr Matshidiso Moeti said, \u201cSignificant efforts are already underway in close collaboration with communities and governments, with our country teams working on the frontlines to help reinforce measures to curb mpox. With the growing spread of the virus, we\u2019re scaling up further through coordinated international action to support countries bring the outbreaks to an end.\u201d\nCommittee Chair Professor Dimie Ogoina said, \u201cThe current upsurge of mpox in parts of Africa, along with the spread of a new sexually transmissible strain of the monkeypox virus, is an emergency, not only for Africa, but for the entire globe. Mpox, originating in Africa, was neglected there, and later caused a global outbreak in 2022. It is time to act decisively to prevent history from repeating itself.\"\nThis PHEIC determination is the second in two years relating to mpox. Caused by an Orthopoxvirus, mpox was first detected in humans in 1970, in the DRC. The disease is considered endemic to countries in central and west Africa.\nIn July 2022, the multi-country outbreak of mpox was declared a PHEIC as it spread rapidly via sexual contact across a range of countries where the virus had not been seen before. That PHEIC was declared over in May 2023 after there had been a sustained decline in global cases.\nMpox has been reported in the DRC for more than a decade, and the number of cases reported each year has increased steadily over that period. Last year, reported cases increased significantly, and already the number of cases reported so far this year has exceeded last year\u2019s total, with more than 15 600 cases and 537 deaths.\nThe emergence last year and rapid spread of a new virus strain in DRC, clade 1b, which appears to be spreading mainly through sexual networks, and its detection in countries neighbouring the DRC is especially concerning, and one of the main reasons for the declaration of the PHEIC.\nIn the past month, over 100 laboratory-confirmed cases of clade 1b have been reported in four countries neighbouring the DRC that have not reported mpox before: Burundi, Kenya, Rwanda and Uganda. Experts believe the true number of cases to be higher as a large proportion of clinically compatible cases have not been tested.\nSeveral outbreaks of different clades of mpox have occurred in different countries, with different modes of transmission and different levels of risk.\nThe two vaccines currently in use for mpox are recommended by WHO\u2019s Strategic Advisory Group of Experts on Immunization, and are also approved by WHO-listed national regulatory authorities, as well as by individual countries including Nigeria and the DRC.\nLast week, the Director-General triggered the process for Emergency Use Listing for mpox vaccines, which will accelerate vaccine access for lower-income countries which have not yet issued their own national regulatory approval. Emergency Use Listing also enables partners including Gavi and UNICEF to procure vaccines for distribution.\nWHO is working with countries and vaccine manufacturers on potential vaccine donations, and coordinating with partners through the interim Medical Countermeasures Network to facilitate equitable access to vaccines, therapeutics, diagnostics and other tools.\nWHO anticipates an immediate funding requirement of an initial US$ 15 million to support surveillance, preparedness and response activities. A needs assessment is being undertaken across the three levels of the Organization.\nTo allow for an immediate scale up, WHO has released US$ 1.45 million from the WHO Contingency Fund for Emergencies and may need to release more in the coming days. The Organization appeals to donors to fund the full extent of needs of the mpox response.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1005,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-dbc2da60f9d54250a851824d1e47f37a",
+    "result_id": "dbc2da60f9d54250a851824d1e47f37a",
+    "source_url": "https://www.afro.who.int/countries/nigeria/news/nigeria-reviews-mpox-guidelines-and-boosts-community-awareness-reduce-transmission",
+    "domain": "afro.who.int",
+    "fetched_at": "2026-08-11T22:52:30.301137+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://afro.who.int/countries/nigeria/news/nigeria-reviews-mpox-guidelines-and-boosts-community-awareness-reduce-transmission",
+    "title": "Nigeria reviews mpox guidelines and boosts community awareness to reduce transmission.",
+    "published_date": "2025-10-27T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 5253,
+    "token_count": 962,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-dbc2da60f9d54250a851824d1e47f37a-c0",
+        "chunk_index": 0,
+        "text": "Abuja, Nigeria is taking significant steps to strengthen its national response to mpox by updating its clinical management guidelines, improving referral and data systems, and expanding public awareness to prevent community transmission.\nMpox remains a public health threat in Nigeria, with ongoing transmission since 2017. In 2024, 189 confirmed cases were reported nationwide. By 19 October 2025, there were 389 confirmed cases and six deaths across 35 states and the Federal Capital Territory (FCT). The continued transmission of mpox emphasises the need for updated guidance, early detection, and community awareness.Reviewing outdated Mpox guidelines, developing national home-based care protocol\nThe Nigeria Centre for Disease Control and Prevention (NCDC), in collaboration with World Health Organisation (WHO) and funded by the World Bank, led a national workshop to review the 2019 mpox case management and infection prevention and control (IPC) guidelines.\nThe review became necessary as the previous version (2019) did not reflect the new WHO recommendations, evolving clinical evidence or available antiviral therapies.\nParticipants included clinicians, infectious disease experts, IPC focal persons, epidemiologists, health educators, state health officials, and implementing partners from the most affected states.\nA key outcome of the workshop was the development of Nigeria\u2019s first national home-based care and isolation protocol for mpox, designed to strengthen linkages between home-based and facility care, and reduce unnecessary hospitalisations, and lower the financial burden on families.\n\"Our priority is to ensure that mpox patients receive safe and timely care using evidence-based protocols,\" said Dr Odianosen Ehiakhamen, a participant from NCDC. \"By strengthening referral systems, improving data reporting, and standardising home-based care, we will reduce the risk of community transmission and maintain resilience in our health system.\"\nWHO is supporting the process by sharing global best practices and technical expertise to guide national adaptation and strengthen implementation.\n\"Updating Nigeria's mpox guidelines reflects Nigeria\u2019s commitment to strengthening clinical preparedness and home-based care,\" said Dr Joshua Ofoli, WHO Case Management & IPC Technical Officer. \"The revised framework aims to safeguard healthcare workers, enhance patient care, improve patient outcomes, and boost outbreak response capabilities at every level of the health system.\"\n\u201cBy clarifying case management procedures, the updated guidelines will support health workers to deliver safer care and improve coordination between community and facility levels,\u201d said Professor Dimie Ogoina, Infectious Disease Expert. \"Standardised home-based care, if properly implemented, will benefit patients and strengthen health system efficiency.\"\nStrengthening referral pathways and data systemsA Disease Surveillance Officer from Bayelsa, Diemebonso Oyaba, welcomed the document review. He said the updated guidelines will include referral mechanisms to improve home-based care and ensure safe referrals to health facilities if symptoms worsen. \"The process also integrates digital reporting tools to improve surveillance, ensure timely data flow, and strengthen accountability across facility and community levels\".\nImproved data linkages enable faster public health decisions, early alerts, and targeted responses in high-risk LGAs. The guidelines define roles for community health workers and surveillance officers in early referral and follow-up.\nCommunity awareness and sensitisation campaignsIn addition to updating national guidelines, Nigeria is enhancing mpox awareness and risk communication in communities across 15 most at-risk states. Collaborating with NCDC, WHO has trained 570 frontline health workers, distributed mpox IPC and triage tools, and launched community-based surveillance initiatives.\nThe campaign targets high-risk LGAs via house visits, radio, market activities, town halls, and leader collaborations. It emphasises symptoms, prevention, and reporting suspected cases.\nThe Kaduna State Ministry of Health, in collaboration with the Kaduna State Primary Health Care Development Agency (KSPHCDA) and the WHO, led community sensitisation activities across Chikun Local Government Area (LGA) to promote early health-seeking behaviour and prevent the spread of mpox.\n\u201cI used to think mpox was only a rumour,\u201d said Aisha Suleiman, a vegetable seller at Sabon Market in Chikun LGA. \u201cNow I understand the symptoms, that the disease is preventable and treatable, and I can educate others in my community. I will tell people not to hide when they notice any signs of infection.\u201d\nNext stepsNigeria\u2019s multi-tiered approach\u2014combining updates in clinical guidance, bolstering health systems, and community engagement\u2014is expected to improve mpox prevention and control. WHO and its health partners continue to support the Government of Nigeria in strengthening surveillance, improving case management, and driving risk communication at national and subnational levels.\nIn the long term, extensive collaboration among government bodies, health professionals, health partners, and communities will be crucial to achieving this goal.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 962,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "19 October 2025"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "question_id": "bfg_q23",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.9095862910312248,
+        "NO": 0.09041370896877515
+      }
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.9095862910312248,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.09041370896877515,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q23",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.78,
+        0.22
+      ],
+      "ok": true,
+      "reference_class": "Designation of new variants of interest or concern by WHO for SARS-CoV-2.",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "SARS-CoV-2 continues to mutate, increasing the likelihood of new variants.",
+        "Historical data suggests a regular pattern of new variant designations.",
+        "Ongoing global transmission despite vaccination efforts.",
+        "Modeling indicates potential for new variants with immune-escape properties."
+      ],
+      "drivers_down": [
+        "Prevalence of suspected cases in the U.S. is relatively low, suggesting limited spread of new variants.",
+        "Global hospitalization rates are not currently at peak levels, indicating manageable disease spread."
+      ],
+      "why_might_be_wrong": "The emergence of new variants is inherently unpredictable and may not follow past patterns.",
+      "rationale": "The base rate for WHO to designate new variants remains high due to the persistent mutation and spread of SARS-CoV-2. Historical trends and ongoing modeling suggest a reasonable likelihood of new variant emergence. However, current evidence points to relatively low prevalence and hospitalization rates, suggesting the situation is under control. Balancing these factors, there is a strong probability of WHO designating a new variant in the second half of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "WHO designations of SARS-CoV-2 variants as variants of interest or concern in the post-pandemic period",
+      "base_rate": 0.75,
+      "drivers_up": [
+        "Historical frequency of variant designations is moderately high.",
+        "Ongoing global presence of SARS-CoV-2 with potential for mutation.",
+        "Modeling suggests possible emergence of variants with immune-escape properties."
+      ],
+      "drivers_down": [
+        "Current prevalence of the known variant in the U.S. is relatively low at 4%.",
+        "No recent evidence of significant new variant emergence."
+      ],
+      "why_might_be_wrong": "There could be an overestimation of the likelihood of new variant emergence based on historical patterns, without considering potential declines in mutation rates or improved control measures.",
+      "rationale": "The base rate for WHO designating new variants of interest or concern remains moderately high due to the ongoing mutation and spread of SARS-CoV-2. Historical patterns show a tendency for new variants to be identified regularly. Despite the low current prevalence of known variants, modeling suggests the potential for new variants with immune-escape properties, which supports a substantial probability of a new designation. Therefore, the probability of WHO designating a new variant of interest or concern in the second half of 2026 is high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "WHO designations of SARS-CoV-2 variants of interest or concern over the past several years.",
+      "base_rate": 0.75,
+      "drivers_up": [
+        "Historical patterns show a regular emergence and designation of new variants.",
+        "Continued mutation and spread of SARS-CoV-2 globally.",
+        "Modeling suggests potential for new variants with immune-escape properties."
+      ],
+      "drivers_down": [
+        "Current prevalence of suspected cases in key regions like the U.S. is relatively low.",
+        "No current evidence of a major new variant surge."
+      ],
+      "why_might_be_wrong": "The base rate and modeling scenarios may not account for a significant reduction in viral evolution or an unexpected containment of the virus.",
+      "rationale": "The WHO has historically designated new variants of interest or concern regularly, and the ongoing mutation and spread of SARS-CoV-2 suggest this pattern may continue. Modeling indicates potential for new variants, supporting a higher likelihood of designation. However, current low prevalence rates in the U.S. suggest that if a new variant does emerge, it may not be widespread or impactful enough to warrant a new designation immediately. Balancing these factors, the probability of a new designation remains moderately high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing evolution of SARS-CoV-2 and the potential for new variants to emerge, it is plausible that the WHO may designate a new variant of interest or concern by the end of 2026. However, there is also a chance that no new significant variants will be identified, leading to a lower probability for that outcome.",
+  "evidence_record_ids": [
+    "ins-4a8a1caf4fad",
+    "ins-b723f3fd1dd1",
+    "ins-e01d4b64f1fa",
+    "ins-6d50567b2c33"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6117,
+    "total_output_tokens": 829,
+    "total_tokens": 6946,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5928,
+        "output_tokens": 746,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 83,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

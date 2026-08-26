@@ -1,0 +1,163 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.2782190493369153,
+        "NO": 0.7217809506630847
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.2782190493369153,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.7217809506630847,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "PHEIC declarations for Ebola outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The outbreak is ongoing with new cases and deaths reported as of August 2026.",
+        "The Democratic Republic of the Congo is experiencing a high risk of transmission with expansion into new health zones.",
+        "The cross-border spread of the virus to Uganda indicates ongoing international concern."
+      ],
+      "drivers_down": [
+        "PHEICs for Ebola outbreaks have historically been lifted within a few years once outbreaks are controlled.",
+        "The risk for the rest of Africa and the global level is assessed as low, which might expedite lifting the PHEIC."
+      ],
+      "why_might_be_wrong": "The situation could rapidly change with either a significant increase in cases or an effective containment strategy, altering the necessity for a PHEIC.",
+      "rationale": "The Bundibugyo ebola outbreak has been declared a PHEIC as of May 2026 due to its spread in the DRC and Uganda. While new cases are still being reported as of August 2026, the global risk is low. Historical PHEICs for Ebola have been lifted once control measures are effective, often within 1-3 years. Given the ongoing transmission but low global risk, the PHEIC might be lifted by 2026 end, but uncertainty remains. Thus, the probability of the PHEIC still being in effect by January 2027 is estimated to be lower than not.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.6
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for Ebola outbreaks",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "The outbreak is ongoing with a significant number of confirmed cases and deaths.",
+        "The risk in the Democratic Republic of the Congo remains very high due to ongoing transmission and expansion of the outbreak.",
+        "The PHEIC was declared recently in May 2026, suggesting the situation is currently severe."
+      ],
+      "drivers_down": [
+        "The global risk is assessed as low, which might diminish the perceived need for a prolonged PHEIC.",
+        "There is ongoing review and harmonisation of data, which might lead to a downscaling of the perceived threat.",
+        "Historical PHEICs for Ebola often last for less than a year, suggesting that the situation might be resolved or controlled before 2027."
+      ],
+      "why_might_be_wrong": "The assessment heavily relies on the current data, which is under review and could change significantly, altering the risk perception and PHEIC status.",
+      "rationale": "The Bundibugyo Ebola PHEIC was declared in May 2026, with the situation in the DRC assessed as very high risk due to ongoing transmission. However, the global risk is low, and historical PHEICs for Ebola tend to be resolved within a year. Given these factors, while there is a substantial chance the PHEIC could still be in effect by December 2026, there is also a significant possibility it may not be, especially if control measures prove effective.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.6
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola virus disease outbreaks declared as PHEICs",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "High number of cumulative confirmed cases (4945) and deaths (2325) in DRC as of August 2026 indicating a severe outbreak.",
+        "Recent increase in incident cases and deaths in August 2026 shows ongoing transmission.",
+        "The risk in DRC is assessed as very high and in Uganda as high, indicating challenges in outbreak control.",
+        "Cross-border spread between DRC and Uganda complicates containment efforts.",
+        "The PHEIC was only declared in May 2026, suggesting it is still in early stages of international response."
+      ],
+      "drivers_down": [
+        "The risk for the rest of the Africa region and globally is assessed as low, indicating limited spread beyond the initial countries.",
+        "Previous Ebola PHEICs have been lifted within a year or two with effective international response and containment efforts."
+      ],
+      "why_might_be_wrong": "Future developments in containment, vaccination, or global response efforts could dramatically change the trajectory of the outbreak, making the PHEIC unnecessary by 2026.",
+      "rationale": "The Bundibugyo virus PHEIC was declared recently in May 2026, and as of August 2026, there is significant ongoing transmission in DRC and some spread to Uganda. Historically, Ebola PHEICs have been resolved within 1-2 years, but given the high number of cases and deaths, and the assessment that risk remains very high in the region, there is a substantial likelihood it will continue past the end of 2026. However, the global risk is low, and efficient international collaboration could lead to resolution before then. Overall, given the currently high transmission rates and recent PHEIC declaration, there is a moderate probability that the PHEIC will still be in effect at the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "The Bundibugyo virus, a strain of Ebola, has shown potential for outbreaks in the past, particularly in the DRC and Uganda. However, the effectiveness of biosecurity measures, vaccination efforts, and public health responses could lead to a decrease in the incidence of the disease by 2026. Therefore, while there is a significant chance that the disease could still be classified as a Public Health Emergency of International Concern (PHEIC) due to potential outbreaks, there is also a reasonable expectation that improved measures could lead to its resolution, resulting in a higher probability for 'NO'.",
+  "evidence_record_ids": [
+    "ins-d64eed4f269c",
+    "ins-962baef05579",
+    "ins-7938aa085013",
+    "ins-107ee6a6dbc2",
+    "ins-267662a39409",
+    "ins-c43c23daf67c",
+    "ins-fc51c68c2594",
+    "ins-beb8ba1106cc",
+    "ins-ea8ad4ca51f8",
+    "ins-4b5226327e6a",
+    "ins-8e35a55ff5d3",
+    "ins-0565edc9b5ac",
+    "ins-f69d17d803ed",
+    "ins-57d97f3c7103",
+    "ins-57b2f45ba56d",
+    "ins-4454742565d9"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 7128,
+    "total_output_tokens": 1124,
+    "total_tokens": 8252,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6939,
+        "output_tokens": 989,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 135,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

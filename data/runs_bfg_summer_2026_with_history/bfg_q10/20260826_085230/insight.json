@@ -1,0 +1,142 @@
+{
+  "records": [
+    {
+      "id": "ins-abfb8a803314",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DR Congo",
+      "iso_country_code": "CD",
+      "pathogen": "pheic",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1048.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in DR Congo as of June 22, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:17:42.461911+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b221dd1744654b4e92790c194367f2cb",
+          "chunk_id": "doc-b221dd1744654b4e92790c194367f2cb-c18",
+          "source_url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(26)00320-8/fulltext",
+          "quote": "as of June 22, 2026, DR Congo has 1048 confirmed cases and 267 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-2c2da6a89aa4",
+      "question_id": "bfg_q10",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DR Congo",
+      "iso_country_code": "CD",
+      "pathogen": "pheic",
+      "metric_name": "deaths",
+      "metric_value": 267.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed deaths in DR Congo as of June 22, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:17:42.462432+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b221dd1744654b4e92790c194367f2cb",
+          "chunk_id": "doc-b221dd1744654b4e92790c194367f2cb-c18",
+          "source_url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(26)00320-8/fulltext",
+          "quote": "as of June 22, 2026, DR Congo has 1048 confirmed cases and 267 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-69b5311c9ae4",
+      "question_id": "bfg_q10",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Uganda",
+      "iso_country_code": "UG",
+      "pathogen": "pheic",
+      "metric_name": "confirmed_cases",
+      "metric_value": 20.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in Uganda as of June 22, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:17:42.467144+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-b221dd1744654b4e92790c194367f2cb",
+          "chunk_id": "doc-b221dd1744654b4e92790c194367f2cb-c18",
+          "source_url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(26)00320-8/fulltext",
+          "quote": "Uganda has reported 20 confirmed cases, two confirmed deaths, and one probable death"
+        }
+      ]
+    },
+    {
+      "id": "ins-4fd9d4f89060",
+      "question_id": "bfg_q10",
+      "event_type": "outbreak_declared",
+      "confidence": 0.9,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "Bundibugyo virus",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ebola disease caused by Bundibugyo virus declared a PHEIC in the Democratic Republic of the Congo and Uganda.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:17:45.291356+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2b3f7cff936c4a8cada5e35ec1f464a4",
+          "chunk_id": "doc-2b3f7cff936c4a8cada5e35ec1f464a4-c0",
+          "source_url": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern",
+          "quote": "the Ebola disease caused by Bundibugyo virus in the Democratic Republic of the Congo and Uganda constitutes a public health emergency of international concern (PHEIC)"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 160620,
+    "total_output_tokens": 782,
+    "total_tokens": 161402,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 160620,
+        "output_tokens": 782,
+        "calls": 73
+      }
+    }
+  },
+  "documents_processed": 17,
+  "documents_skipped": 2,
+  "notes": [
+    "Skipped document doc-fb55e0b98dcf4c0aaa9665bfce891392: no chunks",
+    "Skipped document doc-7410458623834fe6af7a3fae5cde39af: no chunks"
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "records": [
+    {
+      "id": "ins-1c90ec41b6c3",
+      "question_id": "bfg_q18",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 240198.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "240,198 suspected dengue cases were reported between EW 1 and EW 53 of 2025, representing a 66% decrease compared to 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:10.373747+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c3",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "240,198 suspected dengue cases were reported, representing a 66% decrease compared to 2024 (n= 712,790)"
+        },
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c1",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "The number of suspected dengue cases corresponds to the total number of dengue cases according to the definitions described in PLISA"
+        },
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c12",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "251,057 suspected dengue cases were reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-9d2b7e15f556",
+      "question_id": "bfg_q18",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 3851402.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "3,851,402 suspected dengue cases were reported between EW 1 and EW 53 of 2025, representing a 65% decrease compared to 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:11.733875+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c10",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "3,851,402 suspected dengue cases were reported,"
+        }
+      ]
+    },
+    {
+      "id": "ins-503ae2965d74",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Cuba",
+      "iso_country_code": "CU",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 30692.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected dengue cases reported in Cuba between EW 1 and EW 52 of 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:11.138987+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c9",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "30,692 suspected dengue cases were reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-74780e3b8436",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Cuba",
+      "iso_country_code": "CU",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 202.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected dengue cases reported in Cuba between EW 1 and EW 2 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:11.139359+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c9",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "202 suspected dengue cases have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-867514aaf5f3",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Bolivia",
+      "iso_country_code": "BO",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 38028.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected dengue cases reported in Bolivia between EW 1 and EW 53 of 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.267756+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c4",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "38,028 suspected dengue cases were reported, including three deaths."
+        }
+      ]
+    },
+    {
+      "id": "ins-f6958ba6799f",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Bolivia",
+      "iso_country_code": "BO",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 9383.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total dengue cases reported in Bolivia between EW 1 and EW 4 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.268656+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c4",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "9,383 dengue cases were reported (between EW 1 and EW 4)"
+        }
+      ]
+    },
+    {
+      "id": "ins-e7504c891ce4",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Colombia",
+      "iso_country_code": "CO",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 125119.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected dengue cases reported in Colombia between EW 1 and EW 53 of 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.268220+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c4",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "125,119 suspected dengue cases were reported, including 124 deaths."
+        }
+      ]
+    },
+    {
+      "id": "ins-2490dea4ed34",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Colombia",
+      "iso_country_code": "CO",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 9383.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total dengue cases reported in Colombia between EW 1 and EW 4 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.269024+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c4",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "9,383 dengue cases were reported (between EW 1 and EW 4)"
+        }
+      ]
+    },
+    {
+      "id": "ins-bda25fca74e6",
+      "question_id": "bfg_q18",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Peru",
+      "iso_country_code": "PE",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 37041.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Suspected dengue cases reported in Peru between EW 1 and EW 53 of 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.090745+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c7",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "37,041 suspected dengue cases were reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-6ac767ececbf",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Peru",
+      "iso_country_code": "PE",
+      "pathogen": "dengue",
+      "metric_name": "confirmed_cases",
+      "metric_value": 34834.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Confirmed dengue cases reported in Peru in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.090867+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c7",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "34,834 were confirmed"
+        }
+      ]
+    },
+    {
+      "id": "ins-e4b093338815",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Peru",
+      "iso_country_code": "PE",
+      "pathogen": "dengue",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4344.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Dengue cases reported in Peru between EW 1 and EW 5 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.091083+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c7",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "4,344 dengue cases (between EW 1 and EW 5) were reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-e98ae5874816",
+      "question_id": "bfg_q18",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Peru",
+      "iso_country_code": "PE",
+      "pathogen": "dengue",
+      "metric_name": "deaths",
+      "metric_value": 56.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Dengue deaths reported in Peru in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.090976+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c7",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "56 deaths, corresponding to an incidence rate of 108.9 per 100,000 pop."
+        }
+      ]
+    },
+    {
+      "id": "ins-41074bdf83c8",
+      "question_id": "bfg_q18",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Peru",
+      "iso_country_code": "PE",
+      "pathogen": "dengue",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Dengue deaths reported in Peru between EW 1 and EW 5 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:13.091185+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c7",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "three deaths from dengue were reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-f99db0cb6b06",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 62707.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Total suspected dengue cases reported during 2026 (between EW 1 and EW 5).",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:11.847405+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c11",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "During 2026, 62,707 suspected dengue cases were reported (between EW 1 and EW 5)."
+        }
+      ]
+    },
+    {
+      "id": "ins-4139dc241d2d",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 1373756.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-23T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of dengue cases reported in the Americas as of week 26 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:17.108298+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0506b40059d441608961170999df3035",
+          "chunk_id": "doc-0506b40059d441608961170999df3035-c2",
+          "source_url": "https://www.ecdc.europa.eu/en/dengue-monthly",
+          "quote": "1 373 756 dengue cases have been reported, of which 28.9% were laboratory-confirmed"
+        }
+      ]
+    },
+    {
+      "id": "ins-f13cd4f8d07f",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Panama",
+      "iso_country_code": "PA",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 19809.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected dengue cases reported in Panama during 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:12.932920+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c13",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "19,809 suspected dengue cases were reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-b0a87e0a1a6a",
+      "question_id": "bfg_q18",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Panama",
+      "iso_country_code": "PA",
+      "pathogen": "dengue",
+      "metric_name": "suspected_cases",
+      "metric_value": 732.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-02-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected dengue cases reported in Panama between EW 1 and EW 3 of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:12.933317+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fbd8e04f62a7488daf0eecc4639b0164",
+          "chunk_id": "doc-fbd8e04f62a7488daf0eecc4639b0164-c13",
+          "source_url": "https://www.paho.org/en/epidemiological-alerts-and-updates",
+          "quote": "732 suspected dengue cases were reported (between EW 1 and EW 3)."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 93613,
+    "total_output_tokens": 2308,
+    "total_tokens": 95921,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 93613,
+        "output_tokens": 2308,
+        "calls": 42
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

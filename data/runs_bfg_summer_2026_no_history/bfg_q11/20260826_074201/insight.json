@@ -1,0 +1,201 @@
+{
+  "records": [
+    {
+      "id": "ins-ad4e51ab8200",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 173655.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Total confirmed chikungunya cases reported in the Americas for 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:05:31.886284+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e04435bff7af483f87e2122faee9e05c",
+          "chunk_id": "doc-e04435bff7af483f87e2122faee9e05c-c3",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "In 2026, there have been 173 655 CHIKVD cases and nine associated deaths reported in the region."
+        }
+      ]
+    },
+    {
+      "id": "ins-e510b527bf4e",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 219522.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of chikungunya cases detected in the Americas since the start of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:05:32.025058+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e04435bff7af483f87e2122faee9e05c",
+          "chunk_id": "doc-e04435bff7af483f87e2122faee9e05c-c6",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "219 522 chikungunya virus disease (CHIKVD) cases and 81 associated deaths have been detected in 25 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-1f1c235eae9b",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 219522.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-05T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of chikungunya cases detected since the start of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:05:32.893649+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e04435bff7af483f87e2122faee9e05c",
+          "chunk_id": "doc-e04435bff7af483f87e2122faee9e05c-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "219 522 chikungunya virus disease (CHIKVD) cases and 81 associated deaths have been detected in 25 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-0e6ffab428fe",
+      "question_id": "bfg_q11",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "deaths",
+      "metric_value": 81.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-05T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of chikungunya-related deaths detected since the start of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:05:32.893721+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e04435bff7af483f87e2122faee9e05c",
+          "chunk_id": "doc-e04435bff7af483f87e2122faee9e05c-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "81 associated deaths have been detected in 25 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-17b6c447c053",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "East Africa",
+      "iso_country_code": null,
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 432.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of chikungunya cases reported in East Africa for 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:05:31.946529+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e04435bff7af483f87e2122faee9e05c",
+          "chunk_id": "doc-e04435bff7af483f87e2122faee9e05c-c5",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "approximately 432 CHIKVD cases and no associated deaths have been reported in the region."
+        }
+      ]
+    },
+    {
+      "id": "ins-4cf2c90d4141",
+      "question_id": "bfg_q11",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 101.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Includes confirmed and probable cases, both locally acquired and travel-associated.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:05:34.777679+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-16d8082f32ab47459050d296247b2958",
+          "chunk_id": "doc-16d8082f32ab47459050d296247b2958-c3",
+          "source_url": "https://www.cdc.gov/chikungunya/data-maps/chikungunya-us.html",
+          "quote": "0 100 0 1"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 61830,
+    "total_output_tokens": 806,
+    "total_tokens": 62636,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 61830,
+        "output_tokens": 806,
+        "calls": 30
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

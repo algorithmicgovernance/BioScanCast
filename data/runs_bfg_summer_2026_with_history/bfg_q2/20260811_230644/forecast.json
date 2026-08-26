@@ -1,0 +1,206 @@
+{
+  "question_id": "bfg_q2",
+  "options": [
+    "under 750",
+    "750 to 1,499",
+    "1,500 to 2,999",
+    "3,000 to 4,999",
+    "5,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 750": 6.58126458544953e-10,
+        "750 to 1,499": 1.6011432238007115e-08,
+        "1,500 to 2,999": 0.9790190670209812,
+        "3,000 to 4,999": 0.02098091162335801,
+        "5,000 or more": 4.686102153453271e-09
+      }
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 750": 0.2,
+        "750 to 1,499": 0.3,
+        "1,500 to 2,999": 0.25,
+        "3,000 to 4,999": 0.15,
+        "5,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "under 750",
+      "probability": 6.58126458544953e-10,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "750 to 1,499",
+      "probability": 1.6011432238007115e-08,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "1,500 to 2,999",
+      "probability": 0.9790190670209812,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 4,999",
+      "probability": 0.02098091162335801,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "5,000 or more",
+      "probability": 4.686102153453271e-09,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 750",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750 to 1,499",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1,500 to 2,999",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 4,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.001,
+        0.04,
+        0.85,
+        0.09,
+        0.019
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks in the DRC and Uganda",
+      "base_rate": 0.03,
+      "drivers_up": [
+        "The outbreak is described as rapidly growing in past forecasts.",
+        "Past updates show a significant rise in death tolls over short periods.",
+        "The Bundibugyo strain, while less fatal than others, can still result in significant fatalities if not controlled."
+      ],
+      "drivers_down": [
+        "The Bundibugyo strain historically has a lower fatality rate compared to other Ebola strains.",
+        "Previous forecasts showed confidence intervals leaning towards lower death totals.",
+        "Containment measures may improve as the outbreak progresses."
+      ],
+      "why_might_be_wrong": "Outbreaks can be highly unpredictable, and new interventions or changes in transmission dynamics can significantly alter outcomes.",
+      "rationale": "The cumulative death toll as of early August 2026 was reported to be 1,707, indicating rapid growth. The base rate for large Ebola outbreaks exceeding 5,000 deaths is low, but given the current trajectory and historical data, the most likely scenario is within the 1,500 to 2,999 range. However, there is a non-negligible chance of reaching higher totals if the outbreak continues to grow without effective containment.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.9,
+        0.1,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks in DRC-Uganda region",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Current cumulative deaths as of August 3, 2026, are at 1,707, indicating a high death toll already.",
+        "Historical difficulty in containing large Ebola outbreaks, especially in regions with less robust healthcare systems.",
+        "Daily death rate has been high, suggesting rapid spread and impact."
+      ],
+      "drivers_down": [
+        "The Bundibugyo strain is known for a lower fatality rate compared to other Ebola strains.",
+        "Interventions and international support may have scaled up since the initial outbreak, potentially slowing the death rate."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there are significant changes in intervention strategies or if the outbreak is contained more effectively than past outbreaks.",
+      "rationale": "The evidence suggests that the Bundibugyo outbreak has been severe, with a high cumulative death toll as of early August 2026. Given the historical patterns of Ebola outbreaks, particularly in regions like DRC-Uganda, and the rapid increase in deaths, it seems likely that the total deaths will fall within 1,500 to 2,999 by the end of 2026. While the Bundibugyo strain typically has a lower fatality rate, the current situation indicates a substantial impact. Therefore, the most probable outcome is between 1,500 and 2,999 deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.01,
+        0.03,
+        0.75,
+        0.2,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks in DRC and Uganda",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Current death toll of 1,707 indicates a high rate of fatalities",
+        "Historical difficulty in containing large Ebola outbreaks",
+        "High daily death rate observed in recent reports"
+      ],
+      "drivers_down": [
+        "Bundibugyo strain is known for a lower fatality rate compared to other Ebola strains",
+        "Initial death count was relatively low"
+      ],
+      "why_might_be_wrong": "The progression of the outbreak could be impacted by unforeseen interventions or changes in transmission dynamics.",
+      "rationale": "The evidence indicates a rapidly growing outbreak with a current cumulative death toll of 1,707 as of early August 2026. The rapid increase in deaths and the historical difficulty of controlling large Ebola outbreaks suggest a higher probability of cumulative deaths reaching between 1,500 to 2,999. However, the lower fatality rate of the Bundibugyo strain and initial low death count provide some counterbalance. Based on the current trajectory, the outcomes above 3,000 are still possible but less likely than 1,500 to 2,999.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative deaths will likely be under 750 or within the range of 750 to 1,499. The higher ranges (1,500 to 4,999 and 5,000 or more) are less likely due to improved biosecurity measures and outbreak management strategies that have been implemented in recent years.",
+  "evidence_record_ids": [
+    "ins-295dec950c8b"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6351,
+    "total_output_tokens": 934,
+    "total_tokens": 7285,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6108,
+        "output_tokens": 815,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 243,
+        "output_tokens": 119,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

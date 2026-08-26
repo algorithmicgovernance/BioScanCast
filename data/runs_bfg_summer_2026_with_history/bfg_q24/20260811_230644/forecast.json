@@ -1,0 +1,205 @@
+{
+  "question_id": "bfg_q24",
+  "options": [
+    "under 250,000",
+    "250,000 to 374,999",
+    "375,000 to 524,999",
+    "525,000 to 749,999",
+    "750,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 250,000": 0.18660369487584463,
+        "250,000 to 374,999": 0.30027314421802653,
+        "375,000 to 524,999": 0.25022762018168876,
+        "525,000 to 749,999": 0.15653293079154273,
+        "750,000 or more": 0.10636260993289733
+      }
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 250,000": 0.4,
+        "250,000 to 374,999": 0.3,
+        "375,000 to 524,999": 0.15,
+        "525,000 to 749,999": 0.1,
+        "750,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "under 250,000",
+      "probability": 0.18660369487584463,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "250,000 to 374,999",
+      "probability": 0.30027314421802653,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "375,000 to 524,999",
+      "probability": 0.25022762018168876,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "525,000 to 749,999",
+      "probability": 0.15653293079154273,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "750,000 or more",
+      "probability": 0.10636260993289733,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 250,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "250,000 to 374,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "375,000 to 524,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "525,000 to 749,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.18,
+        0.3,
+        0.25,
+        0.15,
+        0.12
+      ],
+      "ok": true,
+      "reference_class": "Global measles cases reported annually to WHO",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Surge in measles cases in the United States, indicating potential for outbreaks elsewhere",
+        "Global travel and migration can facilitate the spread of measles",
+        "Potential for vaccine hesitancy to increase"
+      ],
+      "drivers_down": [
+        "Strong global vaccination efforts against measles",
+        "Increased awareness and rapid response capabilities globally",
+        "No confirmed measles deaths in the U.S., suggesting effective management"
+      ],
+      "why_might_be_wrong": "Unexpected changes in global vaccination coverage or new outbreaks in unanticipated regions could shift the case numbers significantly.",
+      "rationale": "The base rate for global measles cases falling in the 250,000 to 374,999 range has been the most likely scenario, supported by recent U.S. data showing a surge in cases. However, the lack of measles deaths and strong vaccination programs globally may prevent reaching higher case numbers. Given the balance of these factors, the most probable outcome remains in the 250,000 to 374,999 range, with the possibility for lower case numbers slightly higher than for higher ranges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.3,
+        0.25,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Historical global measles cases reported annually to WHO.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Recent increase in measles cases in the United States, which may indicate a wider trend.",
+        "Potential for outbreaks in regions with lower vaccination coverage."
+      ],
+      "drivers_down": [
+        "Strong global vaccination efforts and improved health responses can contain outbreaks.",
+        "No increase in measles-related deaths suggests cases might be less severe or contained."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if there is a significant underreporting of measles cases globally or if a major outbreak occurs in a densely populated area with low vaccination rates.",
+      "rationale": "The historical base rate for global measles cases is around 250,000 to 374,999, supported by recent trends and efforts in vaccination. While there is an uptick in U.S. cases, global containment efforts and lack of measles deaths suggest that the spread may be limited. Therefore, the most likely outcome remains within the 250,000 to 374,999 range, with some probability assigned to higher ranges due to potential underreporting or outbreaks in vulnerable regions.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.18,
+        0.3,
+        0.25,
+        0.17,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Global measles cases reported annually to WHO",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Recent increase in measles cases in the United States indicates potential for outbreaks in other regions.",
+        "Gaps in vaccination coverage in certain regions may lead to higher transmission rates."
+      ],
+      "drivers_down": [
+        "Strong global vaccination efforts aimed at controlling measles outbreaks.",
+        "Improved health responses and surveillance systems globally to quickly address outbreaks."
+      ],
+      "why_might_be_wrong": "There could be significant under-reporting or discrepancies in data collection, leading to inaccuracies in the reported case numbers.",
+      "rationale": "Given the historical base rate of global measles cases and the current evidence of a surge in the United States, the probability of falling within the 250,000 to 374,999 range is moderately high. While there are efforts to increase vaccination coverage, the potential for outbreaks remains due to existing gaps in vaccination. Therefore, the most likely outcome is that global cases will be in the 250,000 to 374,999 range, but with some probability of higher cases due to potential reporting issues or unforeseen outbreaks.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical trends in measles outbreaks and vaccination coverage, it is likely that the number of cases will remain relatively low due to ongoing vaccination efforts. However, localized outbreaks can still occur, especially in areas with lower vaccination rates. Therefore, the highest probability is assigned to 'under 250,000', followed by '250,000 to 374,999', reflecting the potential for some outbreaks but not an overwhelming surge in cases.",
+  "evidence_record_ids": [
+    "ins-dded48ab6b4e",
+    "ins-942d3eb43cf7"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6970,
+    "total_output_tokens": 856,
+    "total_tokens": 7826,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6747,
+        "output_tokens": 741,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 115,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

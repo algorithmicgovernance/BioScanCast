@@ -1,0 +1,176 @@
+name: BFG Forecast Runs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bfg-forecast-runs
+  cancel-in-progress: false
+
+env:
+  RESULTS_BRANCH: bfg-forecast-results-summer-2026
+  QCSV: bioscancast/stages/evaluation/bfg_summer_2026_questions.csv
+  OCSV: bioscancast/stages/evaluation/bfg_summer_2026_options.csv
+  OUT_NO_HISTORY: data/runs_bfg_summer_2026_no_history
+  OUT_WITH_HISTORY: data/runs_bfg_summer_2026_with_history
+  FORECAST_OUTPUT_DIR: data/forecast_outputs
+  PPLX_OUTPUT: data/forecast_outputs/perplexity_bfg_summer_2026.csv
+  PPLX_MODEL: sonar-reasoning-pro
+
+jobs:
+  run-all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Select results branch
+        run: |
+          set -euo pipefail
+          BRANCH="${RESULTS_BRANCH}"
+          git fetch origin --prune
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            git checkout "$BRANCH"
+            git pull --ff-only origin "$BRANCH"
+          else
+            git checkout -b "$BRANCH"
+          fi
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Prepare run metadata
+        run: |
+          set -euo pipefail
+          STAMP="$(date -u +%Y%m%d_%H%M%S)"
+          echo "STAMP=$STAMP" >> "$GITHUB_ENV"
+          echo "RUN_ID_NO_HISTORY=${STAMP}_nohist" >> "$GITHUB_ENV"
+          echo "RUN_ID_WITH_HISTORY=${STAMP}_hist" >> "$GITHUB_ENV"
+          mkdir -p "$OUT_NO_HISTORY" "$OUT_WITH_HISTORY" "$FORECAST_OUTPUT_DIR" data/ci_logs
+
+      - name: Run full pipeline (no history)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: |
+          set -euo pipefail
+          LOG="data/ci_logs/no_history_${STAMP}.log"
+          FAILS=0
+          echo "=== no-history run started $(date -u +%Y-%m-%dT%H:%M:%SZ) run_id=${RUN_ID_NO_HISTORY} ===" | tee "$LOG"
+
+          for i in $(seq 1 25); do
+            qid="bfg_q${i}"
+            echo "--- ${qid} $(date -u +%H:%M:%S) ---" | tee -a "$LOG"
+            if python -m bioscancast.main "$qid" \
+                --csv "$QCSV" \
+                --forecasts-csv "$OCSV" \
+                --out-root "$OUT_NO_HISTORY" \
+                --run-id "$RUN_ID_NO_HISTORY" >> "$LOG" 2>&1; then
+              echo "    ${qid} OK" | tee -a "$LOG"
+            else
+              echo "    ${qid} FAILED" | tee -a "$LOG"
+              FAILS=$((FAILS + 1))
+            fi
+          done
+
+          echo "=== no-history run complete $(date -u +%Y-%m-%dT%H:%M:%SZ) fails=${FAILS} ===" | tee -a "$LOG"
+          if [ "$FAILS" -gt 0 ]; then
+            exit 1
+          fi
+
+      - name: Run full pipeline (with history context)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: |
+          set -euo pipefail
+          LOG="data/ci_logs/with_history_${STAMP}.log"
+          FAILS=0
+          echo "=== with-history run started $(date -u +%Y-%m-%dT%H:%M:%SZ) run_id=${RUN_ID_WITH_HISTORY} ===" | tee "$LOG"
+
+          for i in $(seq 1 25); do
+            qid="bfg_q${i}"
+            echo "--- ${qid} $(date -u +%H:%M:%S) ---" | tee -a "$LOG"
+            if python -m bioscancast.main "$qid" \
+                --csv "$QCSV" \
+                --forecasts-csv "$OCSV" \
+                --out-root "$OUT_WITH_HISTORY" \
+                --run-id "$RUN_ID_WITH_HISTORY" \
+                --history-context >> "$LOG" 2>&1; then
+              echo "    ${qid} OK" | tee -a "$LOG"
+            else
+              echo "    ${qid} FAILED" | tee -a "$LOG"
+              FAILS=$((FAILS + 1))
+            fi
+          done
+
+          echo "=== with-history run complete $(date -u +%Y-%m-%dT%H:%M:%SZ) fails=${FAILS} ===" | tee -a "$LOG"
+          if [ "$FAILS" -gt 0 ]; then
+            exit 1
+          fi
+
+      - name: Run Perplexity baseline
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: |
+          set -euo pipefail
+          LOG="data/ci_logs/perplexity_${STAMP}.log"
+          echo "=== perplexity baseline started $(date -u +%Y-%m-%dT%H:%M:%SZ) ===" | tee "$LOG"
+          python -m bioscancast.stages.evaluation.generate_perplexity_forecasts \
+            --questions "$QCSV" \
+            --template-forecasts "$OCSV" \
+            --output "$PPLX_OUTPUT" \
+            --model "$PPLX_MODEL" >> "$LOG" 2>&1
+          echo "=== perplexity baseline complete $(date -u +%Y-%m-%dT%H:%M:%SZ) ===" | tee -a "$LOG"
+
+      - name: Upload outputs as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bfg-forecast-results-${{ env.STAMP }}
+          retention-days: 90
+          path: |
+            data/ci_logs/
+            data/runs_bfg_summer_2026_no_history/
+            data/runs_bfg_summer_2026_with_history/
+            data/forecast_outputs/
+
+      - name: Persist results in repository
+        if: always()
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/ci_logs/
+          git add data/runs_bfg_summer_2026_no_history/
+          git add data/runs_bfg_summer_2026_with_history/
+          git add data/forecast_outputs/
+
+          if git diff --cached --quiet; then
+            echo "No result changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: scheduled BFG forecast runs ${STAMP}"
+          git push -u origin "${RESULTS_BRANCH}"

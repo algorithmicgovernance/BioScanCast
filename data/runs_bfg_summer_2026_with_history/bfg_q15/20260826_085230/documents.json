@@ -1,0 +1,501 @@
+[
+  {
+    "id": "doc-38d25e1953594ff0b8e0bc46234cc098",
+    "result_id": "38d25e1953594ff0b8e0bc46234cc098",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:26:10.294273+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-38d25e1953594ff0b8e0bc46234cc098-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-08-26.\nAs of the latest CDC update, a total of 2,777 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-08-26"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-830a94d0e89a4a99af31c078d8d51f90",
+    "result_id": "830a94d0e89a4a99af31c078d8d51f90",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-26T09:26:10.706597+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-830a94d0e89a4a99af31c078d8d51f90-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-606aa1df5a9c457480c2e25cfa6b61bd",
+    "result_id": "606aa1df5a9c457480c2e25cfa6b61bd",
+    "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/meeting-determine-us-measles-elimination-status-delayed-november-nyt-reports-2026-03-02",
+    "domain": "reuters.com",
+    "fetched_at": "2026-08-26T09:26:11.234362+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://reuters.com/business/healthcare-pharmaceuticals/meeting-determine-us-measles-elimination-status-delayed-november-nyt-reports-2026-03-02",
+    "title": "Expert meeting on US measles elimination status delayed to November",
+    "published_date": "2026-03-02T21:55:38+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2003,
+    "token_count": 409,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-606aa1df5a9c457480c2e25cfa6b61bd-c0",
+        "chunk_index": 0,
+        "text": "March 2 (Reuters) - A meeting of an international panel of experts that was set to review the United States' measles elimination status next month has been postponed until November, the Pan American Health Organization said on Monday.\nU.S. health officials asked for the delay to allow more time for measles data analysis, said Andrew Nixon, a spokesman for the U.S. Health and Human Services Department.\nSign up here.\nPAHO is convening the panel to assess whether the ongoing spread of measles in the U.S., which began January last year with an outbreak in Texas, means the U.S. should lose the elimination status.\nThe U.S. has had the status, indicating it has not had continuous measles transmission for more than a year, since 2000.\nUnder Health Secretary Robert F. Kennedy Jr., who has repeated a debunked theory that the measles vaccine may cause autism despite a lack of scientific evidence, the U.S. has had more than 1,000 measles cases already in 2026. Most of them are in South Carolina, where an outbreak continues.\n\"The additional time will allow for a thorough and transparent assessment of the 2025 measles outbreaks, including comprehensive genomic sequencing and advanced analysis,\" Nixon said.\nThe meeting will take place during PAHO's regular annual meeting, the organization told Reuters.\nMeasles is a highly contagious virus that causes fever and rashes. It can be prevented with the MMR vaccine, which offers strong protection with two doses.\nEarlier in the day, the U.S. Centers for Disease Control and Prevention's acting director, Jay Bhattacharya, urged Americans to get the measles vaccine, calling it the best protection against the fast\u2011spreading virus.\nHe said the agency was increasing support to states and was ready to provide staffing, laboratory support and vaccines when requested.\nReporting by Ryan Patrick Jones in Toronto, Kamal Choudhury in Bengaluru and Julie Steenhuysen in Chicago; Editing by Sahal Muhammed\nOur Standards: The Thomson Reuters Trust Principles.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 409,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-cd57d60031324845879dbcc5d6a5bd62",
+    "result_id": "cd57d60031324845879dbcc5d6a5bd62",
+    "source_url": "https://www.statnews.com/2026/08/25/two-measles-deaths-reported-pennsylvania-residents-not-vaccinated",
+    "domain": "statnews.com",
+    "fetched_at": "2026-08-26T09:26:13.658882+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://statnews.com/2026/08/25/two-measles-deaths-reported-pennsylvania-residents-not-vaccinated",
+    "title": "Pennsylvania reports first 2 measles deaths in the U.S. this year, both people unvaccinated",
+    "published_date": "2026-08-25T16:02:24+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4452,
+    "token_count": 867,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-cd57d60031324845879dbcc5d6a5bd62-c0",
+        "chunk_index": 0,
+        "text": "PHILADELPHIA \u2014 Two unvaccinated Pennsylvania residents have died from measles, the first U.S. deaths this year related to the contagious virus.\nState health officials announced the deaths Tuesday. They did not reveal any details about the people who died, other than that they lived in Lancaster County, west of Philadelphia.\n\u201cMy deepest sympathies are with the loved ones who are facing this unimaginable loss,\u201d said state Health Secretary Dr. Debra Bogen. \u201cBecause measles was largely eliminated in the Commonwealth for more than three decades, people are not familiar with this disease and don\u2019t fully understand the potential severity of the illness.\u201d\nThe U.S. has now seen five measles deaths in the last two years \u2014 more than the combined total of reported deaths over the previous three decades \u2014 and is enduring its worst year for measles since 1991.\nWith 2,777 cases as of Thursday, according to the Centers for Disease Control and Prevention, this year already has surpassed 2025\u2019s measles count.\nIn November, international health officials will meet to determine if the U.S. and Mexico have lost their measles-free status. The U.S. eliminated local measles spread in 2000 by maintaining high vaccination rates, which have fallen in recent years to below the 95% coverage needed to prevent outbreaks.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 263,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-cd57d60031324845879dbcc5d6a5bd62-c1",
+        "chunk_index": 1,
+        "text": "The measles surge has coincided with moves by President Donald Trump\u2019s administration to scale back childhood vaccinations, based on concerns \u2014 unfounded, according to scientific studies \u2014 about vaccine safety.\nTrump earlier this month signed an executive order calling for revamped childhood vaccine recommendations. He also advocated separating the measles, mumps and rubella (MMR) vaccine into three different shots, and administering all childhood immunizations at separate appointments whenever possible.\nDoctors have raised concerns that Trump and U.S. Health Secretary Robert F. Kennedy Jr. are stoking confusion and hesitancy.\nIn a media briefing Tuesday, Gov. Josh Shapiro said he had spoken with Kennedy, who offered the assistance of federal health staffers. Shapiro declined the offer, saying Pennsylvania\u2019s health department was able to handle the current situation.\n\u201cI was very, very blunt with him,\u201d Shapiro said. \u201cI made very clear that his actions and the rhetoric that\u2019s coming from this administration are having a negative impact on communities across America, particularly right here in Pennsylvania.\u201d\nHe added: \u201cThere\u2019s real-life consequences to scaring people and not relying on actual doctors and actual medical professionals to provide unbiased information to parents so that we can make reasonable decisions for our kids.\u201d\nFederal health officials did not immediately comment on the Pennsylvania deaths or on Shapiro\u2019s account of the exchange with Kennedy.",
+        "chunk_type": "prose",
+        "heading": "Governor suggests Trump administration could do more to promote vaccines",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 263,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-cd57d60031324845879dbcc5d6a5bd62-c2",
+        "chunk_index": 2,
+        "text": "Decades of widespread vaccinations turned measles cases and deaths into a rarity, causing people to forget that the very contagious virus can be deadly, said Dr. David Margolius, director of Cleveland\u2019s health department and a leader in a coalition of big city health departments.\nHe said that some Cleveland residents have expressed irritation with vaccine-promotion campaigns.\n\u201cThey say, \u2018Oh, that\u2019s not a big deal. I mean, do people even die from measles? And, you know, why do you care so much? Why do you keep calling me about this?\u2019\u201d he recounted.\nMargolius said the Trump administration has reacted to outbreaks with offers of assistance.\n\u201cBut the time to prevent measles is before the outbreaks happen,\u201d he said. \u201cAnd the way to do that is clear and consistent and very visible messaging\u201d about the importance of vaccinations.\nThe overall U.S. kindergarten vaccination rate inched down last year and the share of children with exemptions rose to an all-time high, according to federal data posted last week.\nLancaster County is known as the heart of Pennsylvania\u2019s Amish community, a religious group that is sometimes reluctant to embrace modern medical interventions such as vaccines. About 88% of kindergartners in the county were up to date on their measles vaccines during the last school year, according to state data.\nPennsylvania has counted nearly 400 measles cases this year, state officials said.\nThe state has been promoting measles vaccinations as cases have risen, and about 35,000 people have been vaccinated, up from the usual pace of about 25,000 per month, officials said.\n\u2014 Jonathan Poet and Mike Stobbe\nStobbe reported from New York.",
+        "chunk_type": "prose",
+        "heading": "Governor suggests Trump administration could do more to promote vaccines > Vaccination rates are declining nationwide",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 341,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-5bf6dc9d656d4cd080131501c5be68de",
+    "result_id": "5bf6dc9d656d4cd080131501c5be68de",
+    "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:26:14.469541+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "title": "Global Measles Outbreaks",
+    "published_date": "2026-08-10T08:49:39+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 1799,
+    "token_count": 409,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-5bf6dc9d656d4cd080131501c5be68de-c0",
+        "chunk_index": 0,
+        "text": "Measles is one of the most contagious human diseases known.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > An outbreak means more disease is occurring than expected",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 13,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-5bf6dc9d656d4cd080131501c5be68de-c1",
+        "chunk_index": 1,
+        "text": "Because measles is so contagious, it can easily cross borders. In 2023, an estimated 10.3 million people were infected with measles. Right now, measles outbreaks are happening in every region of the world. Anyone who is not protected against measles can get measles while abroad and easily spread it to others when they return home.\nAlthough measles was declared eliminated in the United States in 2000, measles cases and outbreaks continue to occur in the United States due to unvaccinated international travelers. Large measles outbreaks are possible when travel-related measles cases reach at-risk U.S. populations with low immunization against measles. In 2019, the U.S. nearly lost its elimination status with almost 1,300 measles cases from a large outbreak in New York and cases in 30 additional states. After a decrease in global measles incidence during the COVID-19 pandemic, measles activity globally and in the United States continues to rise.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > Measles anywhere is a threat everywhere",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 188,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-5bf6dc9d656d4cd080131501c5be68de-c2",
+        "chunk_index": 2,
+        "text": "Country\tNumber of Cases\nBangladesh\t57,561\nIndia\t26,332\nYemen\t14,961\nMexico\t12,252\nPakistan\t11,212\nCameroon\t9,394\nGuatemala\t7,067\nKazakhstan\t6,968\nAngola\t6,737\nMadagascar\t5,664",
+        "chunk_type": "table",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": [
+          [
+            "Country",
+            "Number of Cases"
+          ],
+          [
+            "Bangladesh",
+            "57,561"
+          ],
+          [
+            "India",
+            "26,332"
+          ],
+          [
+            "Yemen",
+            "14,961"
+          ],
+          [
+            "Mexico",
+            "12,252"
+          ],
+          [
+            "Pakistan",
+            "11,212"
+          ],
+          [
+            "Cameroon",
+            "9,394"
+          ],
+          [
+            "Guatemala",
+            "7,067"
+          ],
+          [
+            "Kazakhstan",
+            "6,968"
+          ],
+          [
+            "Angola",
+            "6,737"
+          ],
+          [
+            "Madagascar",
+            "5,664"
+          ]
+        ],
+        "token_count": 73,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-5bf6dc9d656d4cd080131501c5be68de-c3",
+        "chunk_index": 3,
+        "text": "This table is based on provisional monthly surveillance data reported to the World Health Organization (Geneva) as of August 2026. The data reflected covers January 2026 - June 2026.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.\n\u2022 About the image: A little boy stands near his home in Makoko, a hard-to-reach settlement along a river in Nigeria. He was infected with measles but has since recovered. \u00a9UNICEF/U.S. CDC/UN0669658/Owoicho",
+        "chunk_type": "prose",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 135,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Country",
+          "Number of Cases"
+        ],
+        [
+          "Bangladesh",
+          "57,561"
+        ],
+        [
+          "India",
+          "26,332"
+        ],
+        [
+          "Yemen",
+          "14,961"
+        ],
+        [
+          "Mexico",
+          "12,252"
+        ],
+        [
+          "Pakistan",
+          "11,212"
+        ],
+        [
+          "Cameroon",
+          "9,394"
+        ],
+        [
+          "Guatemala",
+          "7,067"
+        ],
+        [
+          "Kazakhstan",
+          "6,968"
+        ],
+        [
+          "Angola",
+          "6,737"
+        ],
+        [
+          "Madagascar",
+          "5,664"
+        ]
+      ]
+    ],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-8b460e30575346a6a5d7cddef1467f20",
+    "result_id": "8b460e30575346a6a5d7cddef1467f20",
+    "source_url": "https://www.cdc.gov/cfa-modeling-and-forecasting/rt-estimates",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:26:14.629908+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/cfa-modeling-and-forecasting/rt-estimates",
+    "title": "Current Epidemic Trends (Based on Rt)",
+    "published_date": "2026-08-21T10:22:57+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 6226,
+    "token_count": 1278,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-8b460e30575346a6a5d7cddef1467f20-c0",
+        "chunk_index": 0,
+        "text": "\u2022 CFA and NCIRD estimate epidemic trends based on the time-varying reproductive number, Rt, a measure of community disease transmission that helps quickly assess whether infections are increasing or decreasing. This measure helps public health practitioners prepare and respond.\n\u2022 This page shows epidemic trends at the Health Service Area level where available, offering more localized trends than statewide reports. Use the \"View State Map\" toggle to view current state-level trends.",
+        "chunk_type": "prose",
+        "heading": "At a glance",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 86,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8b460e30575346a6a5d7cddef1467f20-c1",
+        "chunk_index": 1,
+        "text": "As of August 19, 2026, we estimate that COVID-19 infections are growing or likely growing in 47 states, declining or likely declining in 0 states, and not changing in 2 states. Previous estimates can be found on data.cdc.gov.\nEpidemic trend is estimated at the national, state, and health service area (HSA) levels for the United States. HSA is a geographic area that combines one or more contiguous counties to form a region that is relatively self-contained with respect to hospital care. The National Center for Health Statistics (NCHS), which is part of Centers for Disease Control and Prevention (CDC), was originally responsible for defining HSAs. The HSA's shown here align with state boundaries. More information on HSAs is available here.",
+        "chunk_type": "prose",
+        "heading": "At a glance > COVID-19",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 161,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8b460e30575346a6a5d7cddef1467f20-c2",
+        "chunk_index": 2,
+        "text": "As of June 5, 2026, estimates of influenza Rt have ended for the 2025-2026 season and will begin again in the 2026-2027 season. Previous estimates can be found on data.cdc.gov.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Influenza",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 50,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8b460e30575346a6a5d7cddef1467f20-c3",
+        "chunk_index": 3,
+        "text": "As of June 5, 2026, estimates of RSV Rt have ended for the 2025-2026 season and will begin again in the 2026-2027 season. Previous estimates can be found on data.cdc.gov.",
+        "chunk_type": "prose",
+        "heading": "At a glance > RSV",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 51,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8b460e30575346a6a5d7cddef1467f20-c4",
+        "chunk_index": 4,
+        "text": "Epidemic trend categories indicate the probability that the number of infections is currently growing. Epidemic trends indicate direction only and do not reflect the burden of disease, therefore they should be used alongside other surveillance metrics (such as the percentage of ED visits, which are displayed in the callout boxes in the map) for a more complete picture. View a summary of key data for COVID-19, influenza, and RSV.\nThe epidemic trend category is based on the probability that the estimated time-varying reproductive number (Rt, a measure of community disease transmission) is greater than 1, indicating epidemic growth. See below for details on categorization.\nFor this webpage, Rt is estimated from daily incident emergency department visits reported through the National Syndromic Surveillance Program. Read more about how to interpret Rt in our Modeling Handbook and how Rt and the epidemic trends presented here are estimated in our Behind the Model.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Epidemic trend overview",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 183,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8b460e30575346a6a5d7cddef1467f20-c5",
+        "chunk_index": 5,
+        "text": "\u2022 Rt is a data-driven measure of disease transmission. The value of Rt is the estimated average number of new infections caused by each infectious person at time t. Rt accounts for current population characteristics, population susceptibility, public health interventions, and behavior.\n\u2022 Rt > 1 indicates that infections are growing because, on average, each infected person is causing more than one new infection, while Rt < 1 indicates that infections are declining.\n\u2022 Rt can be an early indicator of future increases or decreases in cases, hospitalizations, or deaths, because transmission occurs before case confirmation, hospitalization, or death.\n\u2022 The distribution and uncertainty range for each Rt estimate determines the probability that infections are growing. For example, if 75% of the distribution falls above 1, then there is a 75% chance that the infections are growing in that location. A wider distribution reflects greater uncertainty in the true epidemic trend at that time.\n\u2022 Read about interpreting Rt in our Modeling Handbook.\nRt is defined as the average number of new infections caused by each infectious person at a particular time, t. When Rt>1, infections are growing, and when Rt<1, infections are declining. We estimate a distribution of possible Rt values based on observed emergency department visit data and model assumptions, then we assign categories shown in the maps above based on the proportion of the distribution where Rt>1.\n\u2022 Growing: >90% of the distribution of Rt >1\n\u2022 Likely Growing: 75%-90% of the distribution of Rt > 1\n\u2022 Not Changing: 25%-75% of the distribution of Rt > 1 (in this case, the distribution spans across 1, and contains a mix of values above and below 1.)\n\u2022 Likely Declining: 10%-25% of the distribution of Rt > 1; this is equivalent to 75%-90% of the distribution of Rt \u2264 1\n\u2022 Declining: <10% of the distribution of Rt > 1; this is equivalent to >90% of the distribution of Rt \u2264 1\n\u2022 Not Estimated: Rt is not estimated in the following cases: 1) there is insufficient data to calculate a trend (specifically, there were no reported ED visits for the condition of interest on >20% of the dates in the past 8 weeks), 2) there have been recent sustained anomalies detected in reported ED visit values, and/or 3) the model did not pass checks for reliability.\n\u2022 Data Unavailable: Jurisdiction does not participate in data-sharing at this geographic scale for trend estimation\nThe data used to estimate Rt are updated frequently, and initial reported counts might later be revised. We manually review the data weekly and occasionally exclude implausible outlier values, but may still estimate Rt.\n\u2022 Rt estimates are sensitive to assumptions about the length of time between a person becoming infected and spreading the infection to someone else, referred to as the \"generation interval.\" This length of time varies for each infector-infectee pair and is described as a distribution. The generation interval distribution is different for each pathogen and is also influenced by human behavior, social connectedness, and public health interventions.\n\u2022 Rt estimates may be over- or under-estimated if the proportion of infections that result in emergency department visits changes abruptly. These estimates can be impacted by shifts in clinical severity, increased or decreased use of clinical testing, or changes in reporting.\n\u2022 Learn more about our method for calculating Rt in our Behind the Model.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.",
+        "chunk_type": "prose",
+        "heading": "At a glance > Detailed methods",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 747,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "August 19, 2026",
+      "June 5, 2026"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-9296ca7ee6a0420680201a9622bef323",
+    "result_id": "9296ca7ee6a0420680201a9622bef323",
+    "source_url": "https://www.who.int/news/item/28-11-2025-measles-deaths-down-88--since-2000--but-cases-surge",
+    "domain": "who.int",
+    "fetched_at": "2026-08-26T09:26:15.127603+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/news/item/28-11-2025-measles-deaths-down-88--since-2000--but-cases-surge",
+    "title": "Measles deaths down 88% since 2000, but cases surge",
+    "published_date": "2025-11-28T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 6683,
+    "token_count": 1348,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-9296ca7ee6a0420680201a9622bef323-c0",
+        "chunk_index": 0,
+        "text": "Global immunization efforts have led to an 88% drop in measles deaths between 2000 and 2024, according to a new report from the World Health Organization (WHO). Nearly 59 million lives have been saved by the measles vaccine since 2000.\nHowever, an estimated 95 000 people, mostly children younger than 5 years of age, died due to measles in 2024. While this is among the lowest annual tolls recorded since 2000, every death from a disease that could be prevented with a highly effective and low-cost vaccine is unacceptable.\nDespite fewer deaths, measles cases are surging worldwide, with an estimated 11 million infections in 2024 \u2013 nearly 800 000 more than pre-pandemic levels in 2019.\n\u201cMeasles is the world's most contagious virus, and these data show once again how it will exploit any gap in our collective defences against it,\u201d said Dr Tedros Adhanom Ghebreyesus, WHO Director-General. \u201cMeasles does not respect borders, but when every child in every community is vaccinated against it, costly outbreaks can be avoided, lives can be saved, and this disease can be eliminated from entire nations.\u201d\nMeasles cases in 2024 increased by 86% in the WHO Eastern Mediterranean Region, 47% in the European Region, and 42% in South-East Asian Region compared with 2019. Notably, the African Region experienced a 40% decline in cases and 50% decline in deaths over this period, partly due to increasing immunization coverage.\nWhile recent measles surges are occurring in countries and regions where children are less likely to die due to better nutrition and access to health care, those infected remain at risk of serious, lifelong complications such as blindness, pneumonia, and encephalitis (an infection causing brain swelling and potentially brain damage).",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 385,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9296ca7ee6a0420680201a9622bef323-c1",
+        "chunk_index": 1,
+        "text": "In 2024, an estimated 84% of children received their first dose of the measles vaccine, and only 76% received the second, according to WHO/UNICEF estimates. This is a slight improvement from the previous year, with 2 million more children immunized. According to WHO guidance, at least 95% coverage with two measles vaccine doses is required to stop transmission and protect communities from outbreaks.\nMore than 30 million children remained under-protected against measles in 2024. Three-quarters of them live in the African and Eastern Mediterranean regions, often in fragile, conflict-affected or vulnerable settings.\nThe Immunization Agenda 2030 (IA2030) Mid-Term Review, also released today, stresses that measles is often the first disease to resurge when vaccination coverage drops. Growing measles outbreaks are exposing weaknesses in immunization programmes and health systems globally, and threatening progress towards IA2030 targets, including measles elimination.",
+        "chunk_type": "prose",
+        "heading": "Immunization coverage insufficient to protect all communities",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 191,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9296ca7ee6a0420680201a9622bef323-c2",
+        "chunk_index": 2,
+        "text": "In 2024, 59 countries reported large or disruptive measles outbreaks \u2013 nearly triple the number reported in 2021 and the highest since the onset of the COVID-19 pandemic. All regions except the Americas had at least one country experiencing a large outbreak in 2024. The situation changed in 2025 with numerous countries in the Americas battling outbreaks.\nEfforts to scale up measles surveillance have improved WHO and countries' abilities to identify and respond to outbreaks, and for some countries to achieve elimination. In 2024, more than 760 laboratories participating in the Global Measles and Rubella Laboratory Network (GMRLN) tested over 500 000 samples, an increase of 27% from the previous year.\nHowever, deep funding cuts affecting GMRLN and country immunization programmes are feared to widen immunity gaps and drive further outbreaks in the coming year. Securing sustainable domestic financing and new partners is now a critical challenge to advancing efforts toward a world free of measles.",
+        "chunk_type": "prose",
+        "heading": "Immunization coverage insufficient to protect all communities > Rising number of outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 199,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9296ca7ee6a0420680201a9622bef323-c3",
+        "chunk_index": 3,
+        "text": "The world\u2019s elimination goal, as laid out in IA2030, remains a distant one. By the end of 2024, 81 countries (42%) had eliminated measles, only three additional countries since before the pandemic.\nAdditional progress has been made in 2025 with Pacific island countries and areas verified in September 2025, and Cabo Verde, Mauritius and Seychelles verified this month, becoming the first countries in the WHO African Region to be verified for measles elimination. This brings the total number of countries that have eliminated measles to 96.\nThe Region of the Americas regained measles elimination status in 2024 for the second time \u2013 the only region to ever be verified \u2013 but it lost the status again in November 2025 due to ongoing transmission in Canada.\nMeasles has resurged in recent years, even in high-income countries that once eliminated it, because immunization rates have dropped below the 95% threshold. Even when overall coverage is high nationally, pockets of unvaccinated communities with lower coverage rates can leave people at risk and result in outbreaks and ongoing transmission.\nTo achieve measles elimination, strong political commitment and sustained investment is needed to ensure all children receive two doses of the measles vaccine and surveillance systems can rapidly detect outbreaks. The IA2030 Mid-Term Review calls on countries and partners to strengthen routine immunization, surveillance and rapid outbreak response capabilities, and to deliver high-quality, high-coverage campaigns when routine immunization is not yet sufficient to protect every child.\nNote to editors\nWHO uses statistical modelling to estimate measles cases and deaths each year, based on cases reported by countries, and revises the previous year's estimates to assess disease trends over time.\nWHO is a founding member of the Measles & Rubella Partnership (M&RP), a global initiative to stop measles and rubella. Under the umbrella of Immunization Agenda 2030 and guided by the Measles and Rubella Strategic Framework 2030, M&RP\u2019s mission includes addressing the decline in national vaccination coverage, hastening the recovery of the measles backsliding resulting from COVID-19 pandemic, and accelerating progress towards creating a world free of measles and rubella. The partnership also includes American Red Cross, the Gates Foundation, Gavi, the Vaccine Alliance, the U.S. Centers for Disease Control and Prevention (CDC), United Nations Foundation, and UNICEF.\nMeasles elimination is defined as the absence of endemic measles virus transmission in a region or other defined geographical area for more than 12 months. Conversely, a country is no longer considered to be measles free if the virus returns, and transmission is sustained continuously for more than a year.\nThe Immunization Agenda 2030 global monitoring framework defines large or disruptive outbreaks as having \u226520 cases per one million population in a 12-month period.",
+        "chunk_type": "prose",
+        "heading": "Immunization coverage insufficient to protect all communities > Striving for a measles-free world",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 573,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

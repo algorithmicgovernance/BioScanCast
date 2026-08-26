@@ -1,0 +1,155 @@
+{
+  "question_id": "bfg_q21",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.2247706422018348,
+        "NO": 0.7752293577981653
+      }
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.2247706422018348,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.7752293577981653,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Past global filovirus outbreaks declared by WHO",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "Ongoing filovirus activity in the Democratic Republic of the Congo and Uganda indicates active transmission which could increase the likelihood of a new outbreak declaration.",
+        "The current outbreaks show significant cumulative cases, indicating potential for spillover or mutation events.",
+        "Underreporting and potential underestimation of CFR suggest the situation might be worse than reported, leading to more vigilance and possible detection of new outbreaks."
+      ],
+      "drivers_down": [
+        "The current focus is on managing ongoing outbreaks, which might limit the detection of new, unrelated outbreaks.",
+        "Surveillance and containment efforts may be strengthened due to the ongoing situation, reducing the likelihood of missing a new outbreak.",
+        "The timeframe for a new, unrelated outbreak declaration is relatively short (6 months), which may limit the occurrence of a new, distinct outbreak."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there are sudden developments or changes in the transmission dynamics, surveillance capabilities, or environmental factors that are not currently accounted for.",
+      "rationale": "The base rate for WHO declaring a new filovirus outbreak distinct from ongoing events is relatively low given the historical frequency of such declarations. However, the active situation in the Democratic Republic of the Congo and Uganda suggests heightened risk due to ongoing transmission, which could lead to a new outbreak if the virus spreads to new regions or species. The potential underreporting and high cumulative case count further increase the likelihood of a new declaration. Despite this, the short timeframe and existing containment efforts work against the emergence of a distinct new outbreak, leading to a moderate probability of a new declaration by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Past WHO-declared filovirus outbreaks distinct from ongoing events",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Filoviruses such as Marburg and Ebola have sporadically caused outbreaks in the past, often without clear links to prior events.",
+        "There is ongoing activity with a significant number of confirmed cases in the Democratic Republic of the Congo, indicating heightened risk of spread and emergence of new outbreaks.",
+        "Underreporting and high case fatality rates suggest potential for undetected cases and spread."
+      ],
+      "drivers_down": [
+        "Current outbreak information is heavily focused on the Democratic Republic of the Congo and Uganda, which may indicate containment efforts are focused and effective, reducing the likelihood of a new, distinct outbreak.",
+        "The Bundibugyo event is ongoing and could be dominating monitoring and response resources, potentially delaying the identification of new outbreaks."
+      ],
+      "why_might_be_wrong": "The forecast could be off if there is a sudden emergence of a new filovirus variant or outbreak in a less monitored area, which quickly gains attention and spreads, leading to a WHO declaration.",
+      "rationale": "The base rate for WHO declaring new, distinct filovirus outbreaks is moderately high due to the unpredictable nature of these viruses. Current evidence shows a significant ongoing outbreak, which could either indicate increased risk of new outbreaks or effective containment of the current strain. The balance of ongoing activity and historical unpredictability leads to a moderate probability of a new outbreak being declared.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.35,
+        0.65
+      ],
+      "ok": true,
+      "reference_class": "Historical filovirus outbreaks declared by WHO",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Current ongoing outbreak in the Democratic Republic of the Congo suggests heightened filovirus activity in the region.",
+        "Previous outbreaks have shown a pattern of recurring new outbreaks in the region.",
+        "The ongoing Bundibugyo outbreak may indicate viral spread and could lead to new unrelated outbreaks due to environmental and socio-economic factors."
+      ],
+      "drivers_down": [
+        "The ongoing outbreak in the Democratic Republic of the Congo may absorb resources and focus, potentially delaying the detection or declaration of new outbreaks.",
+        "Strong international surveillance and response mechanisms might prevent the spread or emergence of a new outbreak."
+      ],
+      "why_might_be_wrong": "Unexpected geopolitical or environmental changes could either increase or decrease the likelihood of a new outbreak declaration.",
+      "rationale": "The base rate for new filovirus outbreaks is relatively low, but the current situation with an ongoing outbreak in the Democratic Republic of the Congo makes a new outbreak slightly more likely. The presence of the ongoing Bundibugyo event suggests a heightened state of vigilance that could lead to the detection of a new outbreak. However, strong surveillance and response mechanisms may counter this likelihood. Thus, the probability of WHO declaring a new filovirus outbreak distinct from the current Bundibugyo event is moderate.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing Bundibugyo event, it is plausible that new outbreaks could occur, but the likelihood of a distinct new filovirus outbreak being declared by WHO within the specified timeframe is relatively low. Therefore, the probability of 'NO' is higher.",
+  "evidence_record_ids": [
+    "ins-bc37eda70e6a",
+    "ins-6ed96bf1758a",
+    "ins-7e96f0f07eb8",
+    "ins-610bef28ee0f",
+    "ins-dc1b174cd847",
+    "ins-57d2f93bfbf3",
+    "ins-52000fb814b2",
+    "ins-870594d281dd",
+    "ins-90d5e07943d0",
+    "ins-05c44101d5d5"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5486,
+    "total_output_tokens": 972,
+    "total_tokens": 6458,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5295,
+        "output_tokens": 905,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 191,
+        "output_tokens": 67,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-811fd70cd707",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of the outbreak declaration on 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:53:51.442875+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fb295ed4c23641ef8d97d888e1ccf6ba",
+          "chunk_id": "doc-fb295ed4c23641ef8d97d888e1ccf6ba-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-d823f1f21ad4",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Congo",
+      "iso_country_code": "CG",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 2642.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of deaths recorded in the outbreak as of August 20, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:53:55.891584+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f96567f4b71f4bcaba6f7aefb888063e",
+          "chunk_id": "doc-f96567f4b71f4bcaba6f7aefb888063e-c0",
+          "source_url": "https://abcnews.com/International/wireStory/congos-ebola-outbreak-records-highest-weekly-death-tolls-135901778",
+          "quote": "the outbreak had recorded 5,514 cases and 2,642 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-480b1aa8ffaf",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 830.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported including confirmed and probable cases as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:53:57.957120+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-4e4e659e35294bb2860a430090bac5fc",
+          "chunk_id": "doc-4e4e659e35294bb2860a430090bac5fc-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "A total of 830 deaths has been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-9ebd63a0c7b7",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 2642.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "Data reported by DRC on confirmed cases and deaths are under continuous review and harmonisation.",
+      "event_date": "2026-08-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported in DRC as of 22 August 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:54:01.103700+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dbe87fab10db4980817929a9cfae8389",
+          "chunk_id": "doc-dbe87fab10db4980817929a9cfae8389-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda",
+          "quote": "including 2 642 related deaths (from data up until 22 August)"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 92027,
+    "total_output_tokens": 660,
+    "total_tokens": 92687,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 92027,
+        "output_tokens": 660,
+        "calls": 42
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

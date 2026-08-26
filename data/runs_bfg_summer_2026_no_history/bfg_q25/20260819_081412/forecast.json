@@ -1,0 +1,220 @@
+{
+  "question_id": "bfg_q25",
+  "options": [
+    "under 2,000",
+    "2,000 to 2,999",
+    "3,000 to 3,999",
+    "4,000 to 5,499",
+    "5,500 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,000": 0.06574359196663306,
+        "2,000 to 2,999": 0.22852647740655926,
+        "3,000 to 3,999": 0.32651173255400595,
+        "4,000 to 5,499": 0.21708055775483562,
+        "5,500 or more": 0.16213764031796618
+      }
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,000": 0.25,
+        "2,000 to 2,999": 0.35,
+        "3,000 to 3,999": 0.2,
+        "4,000 to 5,499": 0.1,
+        "5,500 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "under 2,000",
+      "probability": 0.06574359196663306,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "2,000 to 2,999",
+      "probability": 0.22852647740655926,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 3,999",
+      "probability": 0.32651173255400595,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "4,000 to 5,499",
+      "probability": 0.21708055775483562,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "5,500 or more",
+      "probability": 0.16213764031796618,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,000",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,000 to 2,999",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 3,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4,000 to 5,499",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,500 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.15,
+        0.35,
+        0.3,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Global cholera-related deaths reported annually to WHO.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "As of mid-2026, 1318 deaths have already been reported, indicating a high rate of deaths compared to the mid-year point.",
+        "Historical data shows that cholera deaths can be significantly underreported, suggesting actual numbers might be higher.",
+        "There have been multiple cholera hotspots reported, including in the African and Eastern Mediterranean regions, which could continue to contribute to higher death tolls."
+      ],
+      "drivers_down": [
+        "There is potential underreporting, but if addressed, it might lead to more accurate but possibly lower figures reported by year-end.",
+        "Global efforts in cholera vaccination and prevention might reduce the death toll in the latter half of the year.",
+        "The rate of increase in deaths may slow down in the second half of the year due to improved intervention measures."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is significant underreporting that is not corrected by the end of the year, or if there are major outbreaks later in the year that significantly increase the death toll.",
+      "rationale": "As of mid-2026, 1318 cholera-related deaths have been reported. Historically, cholera deaths have been underreported, suggesting the actual numbers might be higher. However, the current rate of deaths aligns with the lower mid-year figures from previous years, which have resulted in annual totals around 3,000 to 4,000. Given the pattern, it's reasonable to expect a year-end total in the 3,000 to 4,000 range, considering ongoing outbreaks and potential underreporting corrections.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.25,
+        0.2,
+        0.25
+      ],
+      "ok": true,
+      "reference_class": "Annual cholera-related death counts reported by WHO in recent years",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "As of June 2026, there have been 1,318 deaths, suggesting a potential for the total to reach higher categories if current trends continue.",
+        "Cholera is known to have seasonal outbreaks, often peaking during certain times of the year which could increase the death toll.",
+        "Potential underreporting and delays in reporting might mean the actual numbers are higher, especially in areas with weak health infrastructure."
+      ],
+      "drivers_down": [
+        "As of June 2026, the cumulative deaths (1,318) are still below the halfway point of the previous year's total (7,600), suggesting a potentially lower annual total if trends do not accelerate.",
+        "Efforts to control cholera, including vaccination and public health initiatives, might reduce the death toll.",
+        "Reporting issues, while they could mean underreporting, also highlight potential overestimation if cases are double-counted or misattributed."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is a significant cholera outbreak in the latter half of 2026, drastically increasing deaths beyond current expectations.",
+      "rationale": "The trend as of mid-2026 shows 1,318 deaths, with a historical precedent of 7,600 deaths in 2025. While this suggests the possibility of higher totals, the first half of 2026 has shown relatively lower numbers. Given the potential for seasonal outbreaks and reporting delays, the probabilities are adjusted to reflect a moderate increase in the latter half of the year, but not reaching the highest historical levels.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.35,
+        0.35,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Annual global cholera-related death counts reported by WHO in recent years.",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "1,318 deaths reported in the first half of 2026, indicating a potentially high yearly total if trends continue.",
+        "Historical precedent of high cholera deaths, such as 7,600 in 2025, shows potential for high variability and spikes.",
+        "Underreporting and reporting delays may mean actual deaths are higher than reported, potentially increasing the total."
+      ],
+      "drivers_down": [
+        "The number of deaths from January to June 2026 is lower compared to the same period in 2025, suggesting a potential decrease in annual deaths.",
+        "Efforts in cholera vaccination and treatment might be more effective in 2026, reducing deaths.",
+        "The rate of deaths in the early months does not guarantee a linear continuation throughout the year."
+      ],
+      "why_might_be_wrong": "The forecast might be off due to unpredictable changes in cholera outbreaks or improvements in reporting accuracy and healthcare interventions later in the year.",
+      "rationale": "The base rate for annual cholera deaths exceeding 5,500, as seen in 2025, is at 0.2. However, given the 1,318 deaths in the first half of 2026, there is a reasonable likelihood of surpassing 2,000 but less certainty it will reach the higher brackets. Factors such as reporting delays and underreporting indicate the potential for higher actual deaths, yet the reduction from previous year highs and potential interventions suggest moderation. Balancing these factors, a moderate outcome between 2,000 to 3,999 is most likely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Cholera is a significant public health issue, particularly in regions with inadequate water and sanitation. Historical data suggests that cholera deaths can vary widely based on outbreaks, interventions, and environmental factors. Given the global efforts in vaccination and improved sanitation, it's reasonable to predict that the number of deaths will remain relatively low, but still significant enough to warrant concern. The probabilities reflect a moderate expectation of deaths, with a higher likelihood of being under 3,000 due to ongoing health initiatives.",
+  "evidence_record_ids": [
+    "ins-4a12fea950d9",
+    "ins-f07e9c524d83",
+    "ins-e0b40582abdd",
+    "ins-8c7ea05d3793",
+    "ins-0f82f0769bf9",
+    "ins-b82bfb6baddb",
+    "ins-26c4599e748a",
+    "ins-f06c8477d435",
+    "ins-47adb214dc70",
+    "ins-7589a08f3120",
+    "ins-3d3249775732",
+    "ins-5584412df0c5",
+    "ins-ff5e93019b0c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5356,
+    "total_output_tokens": 1180,
+    "total_tokens": 6536,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5133,
+        "output_tokens": 1056,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 124,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

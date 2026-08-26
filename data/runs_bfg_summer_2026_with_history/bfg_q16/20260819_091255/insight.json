@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "id": "ins-6a9a714718e6",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:46:35.237091+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6d055bac435b44b2827078ce31559edc",
+          "chunk_id": "doc-6d055bac435b44b2827078ce31559edc-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-b5f8258e63a6",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-04-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Two school-aged children died of measles in Texas, marking the first child death from measles in the US in over 20 years.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:46:38.182603+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-59c17494dc554a37aa8c2c4086dbc3a2",
+          "chunk_id": "doc-59c17494dc554a37aa8c2c4086dbc3a2-c0-p1",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "A healthy six- and eight-year-old girl died of measles in this country, the first child death of measles in this country in more than 20 years"
+        }
+      ]
+    },
+    {
+      "id": "ins-539bf19026dd",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Last year\u2019s outbreak resulted in three deaths, marking the first recorded death from measles in the U.S. in a decade.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:46:42.623442+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8f349e3bae46450b92e40b33ae0b90a0",
+          "chunk_id": "doc-8f349e3bae46450b92e40b33ae0b90a0-c5",
+          "source_url": "https://www.forbes.com/sites/antoniopequenoiv/2026/07/11/us-measles-cases-reach-over-2200-nearly-totaling-all-measles-cases-recorded-in-2025/",
+          "quote": "Last year's outbreak resulted in three deaths, the first of which marked the first recorded death from measles in the U.S. in a decade."
+        }
+      ]
+    },
+    {
+      "id": "ins-696a05805655",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "individuals",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Two unvaccinated children died of measles during an outbreak last year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:46:46.824486+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a642faa656fa4bba934c0faa1cf88c37",
+          "chunk_id": "doc-a642faa656fa4bba934c0faa1cf88c37-c0",
+          "source_url": "https://www.bbc.com/news/articles/c36dw75dkw5o",
+          "quote": "two unvaccinated children died of the disease."
+        }
+      ]
+    },
+    {
+      "id": "ins-d2a75798d9f8",
+      "question_id": "bfg_q16",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "deaths",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "The U.S. saw its first measles deaths in more than a decade last year, including two among unvaccinated school-aged children in Texas and one among an unvaccinated adult in New Mexico.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:46:45.165514+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-6c157461ccf144c58f5940641cd3fdb3",
+          "chunk_id": "doc-6c157461ccf144c58f5940641cd3fdb3-c0",
+          "source_url": "https://abcnews.com/Health/us-measles-cases-surpass-2000-2nd-year-row/story?id=133618006",
+          "quote": "The U.S. also saw its first measles deaths in more than a decade last year, including two among unvaccinated school-aged children in Texas and one among an unvaccinated adult in New Mexico."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 48412,
+    "total_output_tokens": 725,
+    "total_tokens": 49137,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 48412,
+        "output_tokens": 725,
+        "calls": 22
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

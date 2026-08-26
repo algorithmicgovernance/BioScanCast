@@ -1,0 +1,157 @@
+{
+  "question_id": "bfg_q15",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.15517241379310345,
+        "NO": 0.8448275862068965
+      }
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.15517241379310345,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.8448275862068965,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q15",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.4,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Countries with previously eliminated measles experiencing resurgence",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The United States has experienced a significant increase in measles cases, with 2,318 cases reported in 2026 so far, which is a 35-year high.",
+        "There are specific states with very high case counts, such as South Carolina and Utah, indicating potential localized outbreaks.",
+        "Measles elimination status requires maintaining a certain level of vaccination coverage and low transmission rates, which current case numbers suggest may not be met."
+      ],
+      "drivers_down": [
+        "The United States has a robust public health infrastructure which can potentially address and contain outbreaks.",
+        "There have been no reported deaths from measles in 2026, which may indicate effective treatment and containment practices.",
+        "The measles outbreaks may be due to isolated incidents or clusters that can be controlled before affecting overall elimination status."
+      ],
+      "why_might_be_wrong": "The current surge in measles cases might be an anomaly or temporary spike that will be controlled before the WHO or PAHO would consider revoking elimination status.",
+      "rationale": "The United States has seen a significant rise in measles cases, reaching a 35-year high, which raises concerns about maintaining elimination status. However, the US has a strong public health system capable of addressing such outbreaks. Given the current trends, there is a moderate risk of losing elimination status, but it is not certain. The base rate for countries losing elimination status after resurgence is relatively low, but the current situation in the US warrants an upward adjustment from the base rate due to the high case numbers and potential for further spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Countries losing measles elimination status after achieving it",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Record high number of measles cases in recent years, indicating potential failures in maintaining elimination.",
+        "Increasing trends in confirmed cases over the past years, suggesting sustained transmission.",
+        "High number of cases in specific states like South Carolina and Utah, indicating potential chains of transmission."
+      ],
+      "drivers_down": [
+        "No confirmed deaths in 2026, suggesting the outbreaks are being managed to some extent.",
+        "Measles elimination status is not solely determined by case count but by the ability to control and prevent outbreaks.",
+        "Previous experience and infrastructure in place to manage measles outbreaks in the US."
+      ],
+      "why_might_be_wrong": "Current case numbers might not fully account for recent efforts to control the outbreaks, leading to an overestimation of the risk of losing elimination status.",
+      "rationale": "The United States has seen a significant increase in measles cases, reaching record highs, which suggests challenges in maintaining measles elimination. However, the lack of deaths and historical ability to manage outbreaks might mean the US can retain its elimination status. The base rate for losing elimination status is relatively low, so while the current situation is concerning, it is not definitive enough to predict loss of status with high confidence.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Countries at risk of losing measles elimination status due to outbreaks",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The United States has seen a significant increase in measles cases, with over 2,300 cases reported by July 2026, suggesting a sustained outbreak.",
+        "South Carolina and Utah have reported especially high numbers of cases, indicating regional outbreaks that could contribute to losing elimination status."
+      ],
+      "drivers_down": [
+        "As of 2026, there have been no reported deaths due to measles, which might indicate relatively effective outbreak management despite high case numbers.",
+        "The US has previously managed to maintain elimination status despite occasional outbreaks, showing capability in controlling measles spread."
+      ],
+      "why_might_be_wrong": "The forecast may be off if the CDC or other health agencies implement effective measures that significantly reduce measles transmission in the latter half of 2026.",
+      "rationale": "The significant rise in measles cases in the US, with over 2,300 cases reported by mid-2026, significantly increases the risk of losing measles elimination status. However, given the lack of deaths and historical ability to control outbreaks, there remains a substantial chance that the US will retain its status. The base rate for countries at risk of losing this status is low, but the current evidence supports a higher risk for the US. Thus, I estimate a 0.3 probability for losing the status by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "The United States has seen a resurgence of measles cases in recent years, primarily due to vaccine hesitancy and outbreaks in certain communities. Given the current trends and public health challenges, there is a significant probability that PAHO or WHO may determine that the U.S. has lost its measles elimination status by the end of 2026. However, there are also ongoing vaccination efforts and public health campaigns that could mitigate this risk, leading to a lower probability of a 'NO' outcome.",
+  "evidence_record_ids": [
+    "ins-a7896fd9f88e",
+    "ins-b08543397b4e",
+    "ins-926f02557f0c",
+    "ins-3c4fe4af4bea",
+    "ins-a9b1cb5de789",
+    "ins-8a2b41a006c7",
+    "ins-304953ace21b",
+    "ins-de800797d007",
+    "ins-4e158fad445f",
+    "ins-5f27423c0873",
+    "ins-6844a11e872c",
+    "ins-6014eb59dda3"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4854,
+    "total_output_tokens": 1010,
+    "total_tokens": 5864,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4668,
+        "output_tokens": 895,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 186,
+        "output_tokens": 115,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,827 @@
+RUN_ID=20260811_223955
+--- bfg_q2 22:39:55 ---
+=== Pipeline run: bfg_q2 (20260811_223955) ===
+question:  How many cumulative reported deaths (confirmed plus probable) will there be in the Bundibugyo outbreak since the outbreak declaration on 14 May 2026 to 31 December 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q2/20260811_223955
+
+[search] starting...
+[search] 37 results (9.8s)
+[filter] starting...
+[filter] 9 docs (6.4s)
+[extract] starting...
+[extract] 9/9 success, 2 thin (5.3s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/ebola-bundibugyo-virus-disease-outbreak-democratic-republic-congo-uganda-weekly-external-situation-report-12-data-02-august-2026
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/ebola-bundibugyo-virus-disease-outbreak-democratic-republic-congo-uganda-weekly-external-situation-report-10-data-19-july-2026
+[insight] starting...
+[insight] 4 records | in=83,550 out=803 (13.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,987 out=1,048 (14.9s)
+
+=== Pipeline complete: bfg_q2 ===
+  search      9.83s  $0.0001
+  filter      6.42s  $0.0010
+  extract     5.32s
+  insight    13.87s  $0.0130
+  forecast   14.85s  $0.0190
+  total cost:  $0.0331
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q2/20260811_223955
+bfg_q2 OK
+--- bfg_q3 22:40:49 ---
+=== Pipeline run: bfg_q3 (20260811_223955) ===
+question:  Will the Bundibugyo virus disease PHEIC still be in effect on 31 December 2026?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q3/20260811_223955
+
+[search] starting...
+[search] 45 results (12.7s)
+[filter] starting...
+[filter] 9 docs (5.3s)
+[extract] starting...
+[extract] 9/9 success, 1 thin (8.0s)
+  ! thin extraction: nejm.org (41 chars < 500) https://www.nejm.org/doi/full/10.1056/NEJMra2607216
+[insight] starting...
+2026-08-11 23:41:21,602 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-a444f34e11864d5ebda518e2213b3f60-c3, quote='On 17 May 2026, WHO Director-General... determined that the Ebola disease caused by Bundibugyo virus'
+2026-08-11 23:41:46,466 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-8972c0394af540e8900d091c3f77bd11-c0, quote='a total of 1587 deaths have been reported, including two in Uganda.'
+[insight] 30 records | in=124,328 out=4,255 (28.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=9,993 out=971 (13.0s)
+
+=== Pipeline complete: bfg_q3 ===
+  search     12.73s  $0.0001
+  filter      5.31s  $0.0008
+  extract     8.02s
+  insight    28.92s  $0.0212
+  forecast   12.97s  $0.0332
+  total cost:  $0.0553
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q3/20260811_223955
+bfg_q3 OK
+--- bfg_q4 22:42:00 ---
+=== Pipeline run: bfg_q4 (20260811_223955) ===
+question:  How many countries other than DRC or Uganda will report at least one laboratory-confirmed Bundibugyo case linked to this outbreak by 31 December 2026? (Baseline is 1 â€“ France)
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q4/20260811_223955
+
+[search] starting...
+[search] 47 results (10.4s)
+[filter] starting...
+[filter] 9 docs (8.3s)
+[extract] starting...
+[extract] 9/9 success, 1 thin (3.4s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/multi-country-bundibugyo-ebola-virus-disease-outbreak-situation-report-no-10
+[insight] starting...
+2026-08-11 23:42:36,866 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-dac89555fb344b43800bf104a9f5f3d5-c0, quote='1 in France.'
+2026-08-11 23:42:41,065 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-f48984805a70489a81f12db0909285c5-c0, quote='...including one in France.'
+2026-08-11 23:42:41,067 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-f48984805a70489a81f12db0909285c5-c0, quote='...20 in Uganda...'
+[insight] 0 records | in=117,078 out=499 (15.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=2,938 out=952 (13.3s)
+
+=== Pipeline complete: bfg_q4 ===
+  search     10.43s  $0.0001
+  filter      8.29s  $0.0011
+  extract     3.38s
+  insight    15.89s  $0.0179
+  forecast   13.34s  $0.0152
+  total cost:  $0.0343
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q4/20260811_223955
+bfg_q4 OK
+--- bfg_q5 22:42:54 ---
+=== Pipeline run: bfg_q5 (20260811_223955) ===
+question:  Which is the furthest Bundibugyo countermeasure milestone reached by 31 December 2026? (Baseline: Oxford Phase I Bundibugyo vaccine trial launched 13 July 2026. WHO therapeutic trial, remdesivir and MBP134, began enrolling patients on 2 July 2026)
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2026-08-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q5/20260811_223955
+
+[search] starting...
+[search] 48 results (12.1s)
+[filter] starting...
+[filter] 9 docs (1.8s)
+[extract] starting...
+[extract] 9/9 success, 2 thin (2.2s)
+  ! thin extraction: nejm.org (41 chars < 500) https://www.nejm.org/doi/full/10.1056/NEJMra2607216
+  ! thin extraction: reuters.com (43 chars < 500) https://www.reuters.com/business/healthcare-pharmaceuticals/bundibugyo-ebola-vaccines-treatments-development-2026-07-22
+[insight] starting...
+2026-08-11 23:43:17,360 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-c35e20e6ddb141c7bfd671130fc57ab5-c3, quote='On 17 May 2026, WHO Director-General... determined that the Ebola disease caused by Bundibugyo virus'
+[insight] 5 records | in=133,696 out=1,053 (19.2s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=4,576 out=960 (13.8s)
+
+=== Pipeline complete: bfg_q5 ===
+  search     12.11s  $0.0001
+  filter      1.84s  $0.0003
+  extract     2.15s
+  insight    19.20s  $0.0207
+  forecast   13.84s  $0.0195
+  total cost:  $0.0406
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q5/20260811_223955
+bfg_q5 OK
+--- bfg_q6 22:43:47 ---
+=== Pipeline run: bfg_q6 (20260811_223955) ===
+question:  How many human H5 infections (any neuraminidase subtype) will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q6/20260811_223955
+
+[search] starting...
+[search] 47 results (8.2s)
+[filter] starting...
+[filter] 8 docs (3.9s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:44:18,132 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:44:18,134 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:44:18,279 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:44:18,298 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 8/8 success, 1 thin, docling 0/1 PDFs (22.9s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+[insight] 5 records | in=108,992 out=953 (14.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,005 out=900 (13.4s)
+
+=== Pipeline complete: bfg_q6 ===
+  search      8.19s  $0.0001
+  filter      3.88s  $0.0004
+  extract    22.95s
+  insight    14.39s  $0.0169
+  forecast   13.36s  $0.0176
+  total cost:  $0.0350
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q6/20260811_223955
+bfg_q6 OK
+--- bfg_q7 22:44:55 ---
+=== Pipeline run: bfg_q7 (20260811_223955) ===
+question:  Will WHO or a national public health authority confirm at least one cluster meeting its stated criteria for sustained human-to-human transmission of an H5 virus on or before 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q7/20260811_223955
+
+[search] starting...
+[search] 41 results (11.2s)
+[filter] starting...
+[filter] 9 docs (1.5s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:45:20,037 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:45:20,038 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:45:20,248 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:45:20,267 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 9/9 success, 2 thin, docling 0/1 PDFs (13.0s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+  ! thin extraction: nejm.org (41 chars < 500) https://www.nejm.org/doi/full/10.1056/NEJMoa2414610
+[insight] starting...
+[insight] 4 records | in=101,444 out=848 (17.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=3,709 out=1,013 (13.7s)
+
+=== Pipeline complete: bfg_q7 ===
+  search     11.18s  $0.0001
+  filter      1.46s  $0.0002
+  extract    12.96s
+  insight    16.99s  $0.0157
+  forecast   13.71s  $0.0177
+  total cost:  $0.0337
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q7/20260811_223955
+bfg_q7 OK
+--- bfg_q8 22:45:58 ---
+=== Pipeline run: bfg_q8 (20260811_223955) ===
+question:  What will be the predominant H5 subtype among human cases reported globally from 1 July 2026 to 31 December 2026?
+pathogen:  'avian influenza h5'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q8/20260811_223955
+
+[search] starting...
+[search] 52 results (15.3s)
+[filter] starting...
+[filter] 10 docs (6.0s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:46:31,819 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:46:31,820 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:46:31,974 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:46:31,989 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 10/10 success, 1 thin, docling 0/1 PDFs (16.7s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+[insight] starting...
+[insight] 11 records | in=176,273 out=1,656 (24.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=5,123 out=913 (11.4s)
+
+=== Pipeline complete: bfg_q8 ===
+  search     15.29s  $0.0001
+  filter      6.00s  $0.0008
+  extract    16.66s
+  insight    24.75s  $0.0274
+  forecast   11.36s  $0.0203
+  total cost:  $0.0487
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q8/20260811_223955
+bfg_q8 OK
+--- bfg_q9 22:47:24 ---
+=== Pipeline run: bfg_q9 (20260811_223955) ===
+question:  How many US states will have H5N1 dairy-cattle detections by 31 December 2026? Number is cumulative states reporting H5N1 in livestock since outbreak was declared in 2024.
+pathogen:  'h5n1'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q9/20260811_223955
+
+[search] starting...
+[search] 49 results (11.2s)
+[filter] starting...
+[filter] 8 docs (4.0s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:47:53,970 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:47:53,971 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:47:54,077 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:47:54,119 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 8/8 success, 2 thin, docling 0/1 PDFs (14.0s)
+  ! thin extraction: aphis.usda.gov (492 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/hpai-confirmed-cases-livestock
+  ! thin extraction: aphis.usda.gov (455 chars < 500) https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-livestock
+[insight] starting...
+2026-08-11 23:48:06,544 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-da87753a736b42199095e2c425756292-c11, quote='...55 avian influenza A(H5) virus detections* in people were reported from nine states...'
+[insight] 0 records | in=98,696 out=289 (11.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 4 options | in=2,885 out=1,026 (13.6s)
+
+=== Pipeline complete: bfg_q9 ===
+  search     11.15s  $0.0001
+  filter      4.01s  $0.0006
+  extract    13.96s
+  insight    11.31s  $0.0150
+  forecast   13.56s  $0.0157
+  total cost:  $0.0314
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q9/20260811_223955
+bfg_q9 OK
+--- bfg_q10 22:48:23 ---
+=== Pipeline run: bfg_q10 (20260811_223955) ===
+question:  How many new PHEICs will be declared for events not already under a PHEIC as of 1 July 2026, during 1 July 2026 to 31 December 2026?
+pathogen:  'pheic'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q10/20260811_223955
+
+[search] starting...
+[search] 45 results (10.7s)
+[filter] starting...
+[filter] 17 docs (1.6s)
+[extract] starting...
+2026-08-11 23:50:02,483 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://africacdc.org/download/africa-cdc-epidemic-intelligence-weekly-report-april-2026/: Failed to perform, curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 30 seconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 16/17 success, 4 thin (90.8s)
+  ! thin extraction: cdc.gov (421 chars < 500) https://www.cdc.gov/outbreaks/index.html
+  ! thin extraction: ecdc.europa.eu (173 chars < 500) https://www.ecdc.europa.eu/en/publications-data/monitoring/weekly-threats-reports
+  ! thin extraction: wahis.woah.org (0 chars < 500) https://wahis.woah.org/
+  ! thin extraction: empres-i.apps.fao.org (0 chars < 500) https://empres-i.apps.fao.org/
+[insight] starting...
+[insight] 1 records | in=114,595 out=356 (17.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 3 options | in=3,087 out=978 (15.3s)
+
+=== Pipeline complete: bfg_q10 ===
+  search     10.67s  $0.0001
+  filter      1.55s  $0.0002
+  extract    90.76s
+  insight    17.26s  $0.0174
+  forecast   15.28s  $0.0159
+  total cost:  $0.0336
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q10/20260811_223955
+bfg_q10 OK
+--- bfg_q11 22:50:41 ---
+=== Pipeline run: bfg_q11 (20260811_223955) ===
+question:  How many chikungunya cases will be in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'chikungunya'
+region:    'americas'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q11/20260811_223955
+
+[search] starting...
+[search] 40 results (9.0s)
+[filter] starting...
+[filter] 2 docs (0.0s)
+[extract] starting...
+[extract] 2/2 success (2.0s)
+[insight] starting...
+2026-08-11 23:50:57,667 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-ca3d51f07b2d436cb50a982a78a6ff6c-c6, quote='219 522 chikungunya virus disease (CHIKVD) cases... detected in 25 countries, excluding EU/EEA count'
+[insight] 5 records | in=28,658 out=787 (4.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,831 out=966 (17.6s)
+
+=== Pipeline complete: bfg_q11 ===
+  search      8.99s  $0.0001
+  filter      0.00s  $0.0000
+  extract     1.99s
+  insight     4.54s  $0.0048
+  forecast   17.56s  $0.0175
+  total cost:  $0.0224
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q11/20260811_223955
+bfg_q11 OK
+--- bfg_q12 22:51:16 ---
+=== Pipeline run: bfg_q12 (20260811_223955) ===
+question:  Will WHO declare a new PHEIC for mpox at any point between 15 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q12/20260811_223955
+
+[search] starting...
+[search] 49 results (10.4s)
+[filter] starting...
+[filter] 12 docs (2.5s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:52:26,253 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:52:26,254 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:52:26,454 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:52:26,468 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 11/12 success, docling 0/1 PDFs (58.3s)
+[insight] starting...
+2026-08-11 23:52:32,451 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-6fd696dae64c4a33940aadb222138655-c1, quote='total_cases\n2026-04-27\t180545.0'
+2026-08-11 23:52:47,717 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-cc46db8887f941739f20b1eea23c5afd-c0, quote='In the past 12 months, 18 countries reported 921 clade II mpox cases.'
+2026-08-11 23:53:09,846 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-e49bb0dd65b941afbc4987b2c6d296bd-c0, quote='WHO Director-General Dr Tedros Adhanom Ghebreyesus has determined that the upsurge of mpox... consti'
+[insight] 41 records | in=140,834 out=5,242 (41.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=10,523 out=1,002 (16.6s)
+
+=== Pipeline complete: bfg_q12 ===
+  search     10.39s  $0.0001
+  filter      2.49s  $0.0003
+  extract    58.33s
+  insight    41.45s  $0.0243
+  forecast   16.59s  $0.0350
+  total cost:  $0.0597
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q12/20260811_223955
+bfg_q12 OK
+--- bfg_q13 22:53:29 ---
+=== Pipeline run: bfg_q13 (20260811_223955) ===
+question:  How many cumulative human mpox cases will be reported to WHO globally between 1 July 2026 and 31 December 2026?
+pathogen:  'mpox'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q13/20260811_223955
+
+[search] starting...
+[search] 49 results (9.5s)
+[filter] starting...
+[filter] 11 docs (1.3s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:54:25,149 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:54:25,153 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:54:25,257 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:54:25,303 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 10/11 success, docling 0/1 PDFs (45.3s)
+[insight] starting...
+2026-08-11 23:54:37,253 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-239fd4bca75c42fea5db9b0bdb0b7f50-c0, quote='In the past 12 months, 18 countries reported 921 clade II mpox cases.'
+[insight] 12 records | in=119,643 out=1,667 (19.4s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,319 out=1,056 (16.0s)
+
+=== Pipeline complete: bfg_q13 ===
+  search      9.50s  $0.0001
+  filter      1.29s  $0.0002
+  extract    45.30s
+  insight    19.39s  $0.0189
+  forecast   15.98s  $0.0221
+  total cost:  $0.0413
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q13/20260811_223955
+bfg_q13 OK
+--- bfg_q14 22:55:04 ---
+=== Pipeline run: bfg_q14 (20260811_223955) ===
+question:  How many US confirmed measles cases will be reported from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q14/20260811_223955
+
+[search] starting...
+[search] 44 results (10.7s)
+[filter] starting...
+[filter] 7 docs (6.9s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (5.7s)
+  ! thin extraction: nytimes.com (43 chars < 500) https://www.nytimes.com/2026/07/24/well/measles-record-united-states-numbers.html
+[insight] starting...
+[insight] 6 records | in=20,456 out=965 (14.7s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,841 out=967 (11.7s)
+
+=== Pipeline complete: bfg_q14 ===
+  search     10.72s  $0.0001
+  filter      6.87s  $0.0011
+  extract     5.74s
+  insight    14.70s  $0.0036
+  forecast   11.70s  $0.0176
+  total cost:  $0.0225
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q14/20260811_223955
+bfg_q14 OK
+--- bfg_q15 22:55:56 ---
+=== Pipeline run: bfg_q15 (20260811_223955) ===
+question:  Will PAHO or WHO determine that the United States has lost measles elimination status on or before 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q15/20260811_223955
+
+[search] starting...
+[search] 51 results (9.4s)
+[filter] starting...
+[filter] 5 docs (3.2s)
+[extract] starting...
+[extract] 5/5 success, 1 thin (1.5s)
+  ! thin extraction: nytimes.com (43 chars < 500) https://www.nytimes.com/2026/07/24/well/measles-record-united-states-numbers.html
+[insight] starting...
+[insight] 12 records | in=13,312 out=1,438 (14.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=4,854 out=1,010 (20.6s)
+
+=== Pipeline complete: bfg_q15 ===
+  search      9.35s  $0.0001
+  filter      3.17s  $0.0005
+  extract     1.46s
+  insight    14.84s  $0.0029
+  forecast   20.60s  $0.0207
+  total cost:  $0.0242
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q15/20260811_223955
+bfg_q15 OK
+--- bfg_q16 22:56:48 ---
+=== Pipeline run: bfg_q16 (20260811_223955) ===
+question:  How many measles-associated deaths will be reported in the U.S. from 1 January 2026 to 31 December 2026?
+pathogen:  'measles'
+region:    'us'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q16/20260811_223955
+
+[search] starting...
+[search] 44 results (11.0s)
+[filter] starting...
+[filter] 7 docs (5.5s)
+[extract] starting...
+[extract] 7/7 success (5.0s)
+[insight] starting...
+[insight] 5 records | in=44,707 out=756 (10.8s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,773 out=1,004 (12.8s)
+
+=== Pipeline complete: bfg_q16 ===
+  search     10.95s  $0.0001
+  filter      5.47s  $0.0007
+  extract     4.99s
+  insight    10.82s  $0.0072
+  forecast   12.83s  $0.0179
+  total cost:  $0.0259
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q16/20260811_223955
+bfg_q16 OK
+--- bfg_q17 22:57:36 ---
+=== Pipeline run: bfg_q17 (20260811_223955) ===
+question:  How many global cholera cases will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q17/20260811_223955
+
+[search] starting...
+[search] 45 results (13.5s)
+[filter] starting...
+[filter] 5 docs (3.0s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-11 23:58:04,113 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-11 23:58:04,114 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:58:04,245 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-11 23:58:04,257 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 5/5 success, docling 0/1 PDFs (12.4s)
+[insight] starting...
+2026-08-11 23:58:09,462 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-bff28a43a1604c13b4dcdb7b0e6e3d5d-c7, quote='Total cases reported: 114.'
+2026-08-11 23:58:10,956 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-bff28a43a1604c13b4dcdb7b0e6e3d5d-c12, quote='a total of 241 cholera or AWD cases were reported across 2 countries in the South-East Asia Region.'
+[insight] 15 records | in=94,796 out=2,161 (16.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,743 out=950 (15.2s)
+
+=== Pipeline complete: bfg_q17 ===
+  search     13.50s  $0.0001
+  filter      3.01s  $0.0004
+  extract    12.42s
+  insight    16.59s  $0.0155
+  forecast   15.18s  $0.0223
+  total cost:  $0.0383
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q17/20260811_223955
+bfg_q17 OK
+--- bfg_q18 22:58:41 ---
+=== Pipeline run: bfg_q18 (20260811_223955) ===
+question:  How many dengue suspected cases will be reported in the Americas from 1 January to 31 December 2026, according to PAHO?
+pathogen:  'dengue'
+region:    'americas'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q18/20260811_223955
+
+[search] starting...
+[search] 43 results (10.6s)
+[filter] starting...
+[filter] 6 docs (4.3s)
+[extract] starting...
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 6/6 success, 2 thin, docling 0/1 PDFs (7.2s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/brazil/dengue-epidemiological-situation-region-americas-epidemiological-week-28-2026
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/world/dengue-epidemiological-situation-region-americas-epidemiological-week-26-2026
+[insight] starting...
+[insight] 16 records | in=94,864 out=2,199 (13.2s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,473 out=1,060 (12.3s)
+
+=== Pipeline complete: bfg_q18 ===
+  search     10.57s  $0.0001
+  filter      4.28s  $0.0006
+  extract     7.19s
+  insight    13.16s  $0.0155
+  forecast   12.32s  $0.0226
+  total cost:  $0.0389
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q18/20260811_223955
+bfg_q18 OK
+--- bfg_q19 22:59:31 ---
+=== Pipeline run: bfg_q19 (20260811_223955) ===
+question:  How many EU/EEA countries will report locally acquired autochthonous chikungunya in 2026, as of 31 December 2026?
+pathogen:  'chikungunya'
+region:    'eu-eea'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q19/20260811_223955
+
+[search] starting...
+[search] 38 results (11.0s)
+[filter] starting...
+[filter] 4 docs (1.6s)
+[extract] starting...
+[extract] 4/4 success (1.9s)
+[insight] starting...
+[insight] 1 records | in=53,176 out=224 (5.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,002 out=947 (13.4s)
+
+=== Pipeline complete: bfg_q19 ===
+  search     10.96s  $0.0001
+  filter      1.57s  $0.0001
+  extract     1.90s
+  insight     5.62s  $0.0081
+  forecast   13.41s  $0.0154
+  total cost:  $0.0238
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q19/20260811_223955
+bfg_q19 OK
+--- bfg_q20 23:00:07 ---
+=== Pipeline run: bfg_q20 (20260811_223955) ===
+question:  How many Americas countries or territories will report confirmed Oropouche in 2026, as of 31 December 2026?
+pathogen:  'oropouche'
+region:    'americas'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q20/20260811_223955
+
+[search] starting...
+[search] 41 results (12.3s)
+[filter] starting...
+[filter] 7 docs (1.1s)
+[extract] starting...
+[extract] 7/7 success (11.3s)
+[insight] starting...
+[insight] 3 records | in=119,766 out=672 (15.6s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=3,596 out=1,009 (17.0s)
+
+=== Pipeline complete: bfg_q20 ===
+  search     12.33s  $0.0001
+  filter      1.13s  $0.0001
+  extract    11.29s
+  insight    15.60s  $0.0184
+  forecast   16.95s  $0.0171
+  total cost:  $0.0357
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q20/20260811_223955
+bfg_q20 OK
+--- bfg_q21 23:01:07 ---
+=== Pipeline run: bfg_q21 (20260811_223955) ===
+question:  Will WHO declare a new filovirus outbreak distinct from the ongoing Bundibugyo event between 1 July 2026 and 31 December 2026?
+pathogen:  'filovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q21/20260811_223955
+
+[search] starting...
+[search] 36 results (10.5s)
+[filter] starting...
+[filter] 4 docs (0.0s)
+[extract] starting...
+[extract] 4/4 success (1.6s)
+[insight] starting...
+[insight] 3 records | in=66,126 out=526 (8.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=3,428 out=848 (12.8s)
+
+=== Pipeline complete: bfg_q21 ===
+  search     10.47s  $0.0001
+  filter      0.00s  $0.0000
+  extract     1.64s
+  insight     8.29s  $0.0102
+  forecast   12.81s  $0.0160
+  total cost:  $0.0263
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q21/20260811_223955
+bfg_q21 OK
+--- bfg_q22 23:01:42 ---
+=== Pipeline run: bfg_q22 (20260811_223955) ===
+question:  How many wild poliovirus type 1 cases will be reported globally in 2026, as of 31 December 2026?
+pathogen:  'poliovirus'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q22/20260811_223955
+
+[search] starting...
+[search] 44 results (14.8s)
+[filter] starting...
+[filter] 5 docs (1.8s)
+[extract] starting...
+[extract] 5/5 success (5.1s)
+[insight] starting...
+2026-08-12 00:02:11,694 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-381d4ac5319d415d97f449a5f4624f53-c1, quote='In 2024, there were a total of 99 confirmed cases of wild polio in two countries: Afghanistan and Pa'
+[insight] 5 records | in=125,389 out=926 (15.3s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,022 out=891 (17.3s)
+
+=== Pipeline complete: bfg_q22 ===
+  search     14.77s  $0.0001
+  filter      1.80s  $0.0002
+  extract     5.09s
+  insight    15.31s  $0.0194
+  forecast   17.28s  $0.0175
+  total cost:  $0.0371
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q22/20260811_223955
+bfg_q22 OK
+--- bfg_q23 23:02:40 ---
+=== Pipeline run: bfg_q23 (20260811_223955) ===
+question:  Will WHO designate a new SARS-CoV-2 variant of interest or variant of concern in the second half of 2026?
+pathogen:  'sars-cov-2'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q23/20260811_223955
+
+[search] starting...
+[search] 50 results (13.1s)
+[filter] starting...
+[filter] 7 docs (1.6s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (11.3s)
+  ! thin extraction: cdc.gov (440 chars < 500) https://www.cdc.gov/covid/php/surveillance/index.html
+[insight] starting...
+[insight] 1 records | in=84,164 out=280 (10.0s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 2 options | in=2,925 out=913 (14.6s)
+
+=== Pipeline complete: bfg_q23 ===
+  search     13.10s  $0.0001
+  filter      1.57s  $0.0002
+  extract    11.27s
+  insight     9.98s  $0.0128
+  forecast   14.56s  $0.0150
+  total cost:  $0.0281
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q23/20260811_223955
+bfg_q23 OK
+--- bfg_q24 23:03:34 ---
+=== Pipeline run: bfg_q24 (20260811_223955) ===
+question:  How many measles cases will be reported to WHO globally in 2026, as of 31 December 2026?
+pathogen:  'measles'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q24/20260811_223955
+
+[search] starting...
+[search] 45 results (13.9s)
+[filter] starting...
+[filter] 7 docs (6.6s)
+[extract] starting...
+[extract] 7/7 success, 1 thin (6.1s)
+  ! thin extraction: washingtonpost.com (421 chars < 500) https://www.washingtonpost.com/health/2026/07/21/us-measles-cases-hit-35-year-record-with-months-left-2026
+[insight] starting...
+2026-08-12 00:04:20,729 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-f86d0082b9904d6ea21da1fa6dc926b8-c0, quote='Virginia has now seen 176 in 2026.'
+2026-08-12 00:04:20,736 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-f86d0082b9904d6ea21da1fa6dc926b8-c0, quote='Arizona saw a 108 total for the year.'
+2026-08-12 00:04:20,736 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-f86d0082b9904d6ea21da1fa6dc926b8-c0, quote='Texas reporting 188 in 2026.'
+[insight] 12 records | in=45,348 out=1,756 (26.9s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=5,185 out=889 (14.4s)
+
+=== Pipeline complete: bfg_q24 ===
+  search     13.94s  $0.0001
+  filter      6.59s  $0.0009
+  extract     6.11s
+  insight    26.95s  $0.0079
+  forecast   14.39s  $0.0203
+  total cost:  $0.0291
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q24/20260811_223955
+bfg_q24 OK
+--- bfg_q25 23:04:45 ---
+=== Pipeline run: bfg_q25 (20260811_223955) ===
+question:  How many cholera-related deaths will be reported globally from 1 January to 31 December 2026, according to WHO?
+pathogen:  'cholera'
+region:    'world'
+target:    2027-01-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q25/20260811_223955
+
+[search] starting...
+2026-08-12 00:04:56,349 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: cholera outbreak predictions 2026
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 233, in _search
+    self._handle_error_response(response)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 137, in _handle_error_response
+    raise ForbiddenError(detail)
+tavily.errors.ForbiddenError: This request exceeds your plan's set usage limit. Please upgrade your plan or contact support@tavily.com
+[search] 38 results (8.9s)
+[filter] starting...
+[filter] 6 docs (4.4s)
+[extract] starting...
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+2026-08-12 00:05:09,440 WARNING huggingface_hub._tree_cache: Ignored error while writing tree cache file /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees/8f39ad3c0b4c58e9c2d2c84a38465abf757272d8.json: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/trees'
+Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+2026-08-12 00:05:09,442 WARNING huggingface_hub._snapshot_download: Ignored error while writing commit hash to /Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/models--docling-project--docling-layout-heron/refs/main'.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-12 00:05:09,572 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-12 00:05:09,589 WARNING bioscancast.stages.extraction.docling_refiner: docling conversion failed: [Errno 1] Operation not permitted: '/Users/jessicarapson/.cache/huggingface/hub/CACHEDIR.TAG'
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+[extract] 6/6 success, docling 0/1 PDFs (11.3s)
+[insight] starting...
+2026-08-12 00:05:16,316 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-0e35b386a5114a79b4a723d652a57379-c20, quote='...Nigeria reported a total of 6860 cases and 80 deaths...'
+2026-08-12 00:05:16,837 WARNING bioscancast.stages.insight.text_extraction.chunk_extractor: Hallucination guard: dropping fact with non-matching quote. chunk_id=doc-0e35b386a5114a79b4a723d652a57379-c18, quote='...a total of 28 567 cases and 815 deaths...'
+[insight] 15 records | in=84,581 out=2,225 (18.5s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=6,016 out=1,020 (13.1s)
+
+=== Pipeline complete: bfg_q25 ===
+  search      8.91s  $0.0001
+  filter      4.38s  $0.0003
+  extract    11.35s
+  insight    18.51s  $0.0140
+  forecast   13.11s  $0.0236
+  total cost:  $0.0380
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q25/20260811_223955
+bfg_q25 OK
+FAILS=0
