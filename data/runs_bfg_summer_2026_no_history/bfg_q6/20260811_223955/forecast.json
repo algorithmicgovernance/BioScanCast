@@ -1,0 +1,208 @@
+{
+  "question_id": "bfg_q6",
+  "options": [
+    "0 to 4",
+    "5 to 14",
+    "15 to 29",
+    "30 to 59",
+    "60 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0 to 4": 0.8815826770273605,
+        "5 to 14": 0.10595518642776378,
+        "15 to 29": 0.010480915861136935,
+        "30 to 59": 0.0014494465617369715,
+        "60 or more": 0.0005317741220017698
+      }
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0 to 4": 0.5,
+        "5 to 14": 0.3,
+        "15 to 29": 0.1,
+        "30 to 59": 0.05,
+        "60 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "0 to 4",
+      "probability": 0.8815826770273605,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "5 to 14",
+      "probability": 0.10595518642776378,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "15 to 29",
+      "probability": 0.010480915861136935,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "30 to 59",
+      "probability": 0.0014494465617369715,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "60 or more",
+      "probability": 0.0005317741220017698,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0 to 4",
+      "probability": 0.5,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5 to 14",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 29",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "30 to 59",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "60 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.07,
+        0.02,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Global human H5 avian influenza cases reported to WHO in half-year periods",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Recent increase in global cases reported in Bangladesh indicating active transmission",
+        "Past instances of sudden outbreaks leading to higher case numbers, such as the 71 cases in the United States in 2024"
+      ],
+      "drivers_down": [
+        "Historical data shows low incidence of human H5 cases globally",
+        "No evidence of a widespread outbreak as of mid-2026"
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if there is an unreported outbreak or if surveillance and reporting improve significantly, detecting more cases.",
+      "rationale": "Based on the historical pattern of low incidence of human H5 cases and the current evidence showing only a few cases in Bangladesh, it seems probable that the number of cases will remain low globally. However, the history of sudden outbreaks and the ongoing cases in Bangladesh suggest a non-zero risk of higher numbers. Given these factors, the most likely outcome is 0 to 4 cases, but there is a moderate probability for 5 to 14 cases if the situation worsens.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.15,
+        0.05,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Human H5 avian influenza cases reported globally in a 6-month period",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Recent increase in cases reported in Bangladesh suggests potential for more cases in 2026.",
+        "Historical outbreaks have seen spikes due to specific localized outbreaks."
+      ],
+      "drivers_down": [
+        "Only 7 confirmed cases globally in the first half of 2026, suggesting a low current incidence.",
+        "Historical data shows that large outbreaks are not common and usually localized."
+      ],
+      "why_might_be_wrong": "There could be an undetected outbreak or increased transmission in the latter half of 2026 that isn't anticipated.",
+      "rationale": "The base rate for low incidence (0-4 cases) in a 6-month period is high given historical data and the current trend of 7 cases globally in the first half of 2026. While there has been a recent case in Bangladesh, the overall trend does not suggest a large outbreak. Therefore, the most probable option is 0 to 4 cases, with a slight possibility for a few more cases if the trend in Bangladesh continues.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.25,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global human H5 avian influenza infections in recent years",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "There have been 7 confirmed cases globally year-to-date in 2026, indicating ongoing transmission.",
+        "Bangladesh has reported 3 cases in 2026, suggesting some regional clusters may exist.",
+        "Prior outbreaks, such as in the United States, have reached higher numbers (71 cases since 2024)."
+      ],
+      "drivers_down": [
+        "The cumulative global count for 2026 so far is only 7, suggesting limited spread.",
+        "H5 infections in humans are relatively rare compared to other influenza strains.",
+        "No large outbreaks have been reported recently, which might suggest effective control measures."
+      ],
+      "why_might_be_wrong": "There may be unreported cases or changes in surveillance that are not captured in the current evidence.",
+      "rationale": "Based on the evidence, there have been 7 confirmed human H5 cases globally in 2026 up until July, with the potential for further cases given prior outbreaks in other regions. However, the current rate of reporting and control measures likely suggest that the number of new cases will remain low. The base rate from recent years suggests that most periods have few cases, and the evidence does not strongly indicate a major outbreak. Thus, the probability is highest for the lowest range, 0 to 4 cases, considering the low number of incidents reported so far this year and the limited spread reported in recent months.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data, human infections with H5 avian influenza are relatively rare, and significant outbreaks are uncommon. The majority of reported cases tend to fall within the lower range of infections, particularly between 0 to 4 cases. The probabilities reflect a decreasing likelihood of higher case counts, with a small chance of more significant outbreaks.",
+  "evidence_record_ids": [
+    "ins-e1b73b7fd329",
+    "ins-dfd88ff38c7e",
+    "ins-54630bb48e94",
+    "ins-923a5896bf84",
+    "ins-36e8c5c81f9a"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4005,
+    "total_output_tokens": 900,
+    "total_tokens": 4905,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3786,
+        "output_tokens": 805,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 219,
+        "output_tokens": 95,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

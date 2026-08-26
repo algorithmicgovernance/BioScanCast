@@ -1,0 +1,654 @@
+[
+  {
+    "id": "doc-988fb2dca6a24200857a760dc019ed12",
+    "result_id": "988fb2dca6a24200857a760dc019ed12",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T09:57:58.160601+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-988fb2dca6a24200857a760dc019ed12-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-08-19.\nAs of the latest CDC update, a total of 2,566 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-08-19"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-4d7d3f3664c74ff888f848b83227e81c",
+    "result_id": "4d7d3f3664c74ff888f848b83227e81c",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-19T09:57:58.318809+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-4d7d3f3664c74ff888f848b83227e81c-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+    "result_id": "581d2c14f74e413f9bc1f7d6094171ac",
+    "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+    "domain": "medrxiv.org",
+    "fetched_at": "2026-08-19T09:57:58.961414+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+    "title": "Real-time forecasting of measles transmission in Mexican states hosting FIFA World Cup venues, 2026",
+    "published_date": "2026-06-16T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 10160,
+    "token_count": 2247,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c0",
+        "chunk_index": 0,
+        "text": "Mexico has reported 18,092 confirmed cases of measles from January 2025-June 2026, shortly before the 2026 FIFA World Cup matches in Guadalajara, Mexico City and Monterrey. Using national surveillance data and the Generalized Richards Model, we generated 6-week forecasts for the two highest-burden venue states. Jalisco was projected to report 118 cases (95% PI: 5-427) and Ciudad de M\u00e9xico 22 (95% PI: 0-89). Pre-departure check of MMR vaccination status and enhanced event-associated surveillance are warranted.",
+        "chunk_type": "prose",
+        "heading": "Abstract",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 124,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c1",
+        "chunk_index": 1,
+        "text": "Measles remains an important vaccine-preventable disease, and mass gatherings such as the FIFA World Cup can amplify transmission through crowding and mixing of populations with heterogeneous immunity profiles [1, 2]. Mexico co-hosts the 2026 FIFA World Cup, with matches in Guadalajara (Jalisco), Mexico City (Ciudad de M\u00e9xico) and Monterrey (Nuevo Le\u00f3n) from June 11 through July 19, 2026 [3], involving international travellers relevant to cross-border preparedness and travel-health messaging [4].\nSince January 2025, Mexico has reported 18,092 confirmed measles cases across all 32 states in two temporally distinct waves, disproportionately affecting unvaccinated individuals [5]. We applied the Generalized Richards Model [6] to generate 6-week ahead forecasts for the two highest-burden World Cup venue states.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Background and aim",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 179,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c2",
+        "chunk_index": 2,
+        "text": "We used confirmed case data from Mexico\u2019s Direcci\u00f3n General de Epidemiolog\u00eda (DGE) through the Sistema Especial de Vigilancia Epidemiol\u00f3gica de Enfermedades Febriles Exantem\u00e1ticas (EFE), with a data extract dated June 1, 2026. Cases were confirmed by laboratory testing (IgM serology or PCR; 96.5%) or clinico-epidemiologic criteria. Weekly incidence series were constructed by aggregating confirmed cases by epidemiological week of rash onset. To account for right-censoring due to reporting delays (median onset-to-classification: 5 days, IQR: 3-7), the final two weeks of each series were excluded from model calibration.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Background and aim > The outbreak and transmission dynamics",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 150,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c3",
+        "chunk_index": 3,
+        "text": "We constructed the national weekly epidemic curve from onset dates of rash spanning epidemiological weeks 1-52 of 2025 and weeks 1-22 of 2026 (January 2025 - May 2026). The time-varying reproduction number Rt was estimated from symptom onset counts using a 7-day sliding window using the EpiEstim framework [7] with a parametric gamma-distributed serial interval (mean: 11.7 days, SD: 2.0 days) [8].",
+        "chunk_type": "prose",
+        "heading": "Abstract > Background and aim > Epidemic curve and reproduction number",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 105,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c4",
+        "chunk_index": 4,
+        "text": "State-level 6-week ahead forecasts for Jalisco and Ciudad de M\u00e9xico were generated using the Generalized Richards Model (GRM) [6]: where C(t) is the cumulative case count, r is the intrinsic growth rate, p \u2208 (0,1] controls early epidemic growth dynamics, K is the carrying capacity, and a > 0 controls epidemic curve asymmetry. Incidence at time t is I(t) = dC/dt.\nModels were fitted by maximum likelihood estimation under a negative binomial error structure: where \u03bc is the model-predicted mean incidence and \u03b1 > 0 is the overdispersion parameter. Parameter uncertainty was characterised using 300 parametric bootstrap replicates. Forecast prediction intervals (PI) represent the 2.5th and 97.5th percentiles of the bootstrap distribution. The initial condition IO was fixed to the first observed value in each series. Calibration lengths were 37 weeks for Jalisco (epidemiological weeks 8-43, 2025) and 26 weeks for Ciudad de M\u00e9xico (epidemiological week 45, 2025 - week 18, 2026). The forecast horizon was 6 weeks from the last calibration week (\u223cMay 25, 2026), covering the full World Cup period. Week indices in the GrowthPredict toolbox plots are sequential from the first week of calibration and do not correspond directly to calendar epidemiological week numbers.\nAll analyses were conducted in MATLAB using the GrowthPredict toolbox [6] and R version 4.4.2 [9].",
+        "chunk_type": "prose",
+        "heading": "Abstract > Background and aim > State-level growth model forecasts",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 319,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c5",
+        "chunk_index": 5,
+        "text": "From weeks 1-69, 2025-2026, Mexico reported 17,869 confirmed cases of measles from the June 1, 2026 data extract; the official DGE count of 18,092 as of June 5, 2026 reflects an additional 223 cases reported in the intervening four days [5]. The outbreak exhibited a bimodal pattern (Figure 1A). The first wave, concentrated in Chihuahua, peaked at 322 cases/week (epidemiological week 13, 2025) and declined to near-zero by epidemiological week 42, 2025; the second wave, driven predominantly by Jalisco, commenced in epidemiological week 47, 2025, peaked at 1,167 cases/week (epidemiological week 7, 2026), and was declining at the data extract (99 cases/week, epidemiological week 21). Jalisco contributed 39.1% of confirmed cases, followed by Chihuahua (25.9%) and Chiapas (6.3%). Rt peaked at 15.0 (95% CrI: 4.9-30.7) in February 2025 (Figure 1B), remaining above 1 nationally through February 2026 before declining below 1 at the time of the data extract. Among confirmed cases, 84.9% were unvaccinated, 10.3% had received one dose, and 4.9% two or more doses. The hospitalization rate was 14.7%, highest in children aged 1-4 years (29.7%).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Background and aim > National outbreak dynamics",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 341,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c6",
+        "chunk_index": 6,
+        "text": "Jalisco, with 6,980 total confirmed cases and 203 cases in the four weeks prior to the data extract, showed a declining trajectory at forecast origin (Figure 2, Panel A). The GRM projected a mean of 118 cases (95% PI: 5-427) in Jalisco during the World Cup period (Table 1). Ciudad de M\u00e9xico reported 44 cases in the four weeks prior to the data extract and is projected to report a mean of 22 cases (95% PI: 0-89) (Figure 2, panel B). Monterrey (Nuevo Le\u00f3n) reported 9 cases in the four weeks prior to the data extract, indicating low current transmission (Table 1; Figure 3).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Background and aim > State-level forecasts and World Cup host venues",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 153,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c7",
+        "chunk_index": 7,
+        "text": "We present short-term measles transmission forecasts for the 2026 FIFA World Cup venue states in Mexico [3], in the context of an ongoing national outbreak. Our findings suggest that transmission is most active in Jalisco, where 203 cases were reported in the four weeks prior to the data extract and the 6-week state-level forecast projects a mean of 118 cases (95% PI: 5-427) during the tournament. The wide prediction interval reflects genuine uncertainty about the pace of ongoing decline, with the lower bound suggesting transmission could approach near-zero and the upper bound indicating that some level of continued activity of transmission remains plausible. Ciudad de M\u00e9xico (Mexico City) shows moderate recent transmission with a projected mean of 22 cases (95% PI: 0-89), and Monterrey shows minimal activity. Age-stratified forecasting was beyond the scope of this analysis; future work incorporating age-specific vaccination coverage data could provide more refined transmission estimates across population groups.\nThe findings support targeted preparedness rather than alarm. However, mass gathering-related mobility, crowding and mixing of susceptible travelers could temporarily increase transmission even though incidence has been declining. Before travel departure, spectators, teams and staff should verify that they have completed age-appropriate measles-mumps-rubella (MMR) vaccination, particularly those travelling to or from Jalisco and Ciudad de M\u00e9xico. ECDC notes that all EU/EEA countries include two MMR doses in their national immunisation schedules and that two doses are needed for full protection against measles [4].\nDuring and after the tournament, host and origin-country public health authorities should maintain awareness for fever-rash illness among travellers, ensure rapid isolation and notification of suspected measles cases, and support contact tracing and event-associated surveillance. Given that many cases in North America occurred among unvaccinated people, awareness communication should emphasise timely MMR vaccination. Because tournament-related exposures may result in rash onset after the 6-week forecast horizon, post-travel surveillance should continue after the event.\nWe acknowledge some limitations. Forecasts are based on data with a 7-day reporting lag; incidence in the final calibration weeks may be slightly underestimated due to ongoing case classification. The GRM does not incorporate population mixing dynamics specific to the World Cup or potential vaccination campaigns during the forecast period, either of which could shift the trajectory. The wide prediction intervals, particularly for Jalisco, underscore the inherent uncertainty in short-term epidemic forecasting and should be interpreted accordingly.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Discussion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 493,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c8",
+        "chunk_index": 8,
+        "text": "Measles transmission remains active in Mexico, with Jalisco representing the highest-burden World Cup venue state. Short-term forecasts suggest continued but declining transmission during the tournament period. Nevertheless, mass-gathering-related mobility and mixing of susceptible people could temporarily increase transmission, even during a declining phase. Pre-travel confirmation of age-appropriate MMR vaccination, prompt detection and isolation of suspected cases, and routine event-associated surveillance are recommended as part of World Cup health preparedness planning.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Conclusion",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 96,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c9",
+        "chunk_index": 9,
+        "text": "All data produced are available online at https://www.gob.mx/salud/documentos/informe-diario-del-brote-de-sarampion-en-mexico-2026",
+        "chunk_type": "prose",
+        "heading": "Abstract > Data Availability",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 37,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c10",
+        "chunk_index": 10,
+        "text": "This work was partly supported by UNAM through the PREI-DGAPA. The authors acknowledge the collaboration with the host institution, Centro de Ciencias Matem\u00e1ticas, Universidad Nacional Aut\u00f3noma de M\u00e9xico, during G.C\u2019s research stay. The authors thank the General Directorate of Epidemiology for facilitating the data of the National Epidemiological Surveillance System.",
+        "chunk_type": "prose",
+        "heading": "Abstract > Acknowledgement",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 70,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c11",
+        "chunk_index": 11,
+        "text": "\u2022 Data availability: All data are available publicly at https://www.gob.mx/salud/documentos/informe-diario-del-brote-de-sarampion-en-mexico-2026\n\u2022 Conflict of Interest: ICHF consulted for Merck & Co., Inc. Other coauthors have nothing to declare.\n\u2022 Funding statement: None declared\n\u2022 Ethical statement: We used publicly available, deidentified, aggregate number of measles cases for modeling, and hence ethical approval was not required (non-human subjects research)\n\u2022 Use of artificial intelligence tools: None declared\n\u2022 We have revised the analysis using recent data. Similarly, we have done the analysis for additional place at this time. Co-authors are added after substantial contribution in the paper. Analysis approach has been updated in line with the most recent data. This has been submitted to Eurosurveillance journal (Rapid communication).",
+        "chunk_type": "prose",
+        "heading": "Abstract > Footnotes",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 180,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "July 19, 2026",
+      "June 1, 2026",
+      "May 25, 2026",
+      "June 5, 2026"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-ce969afcdda947239ed2c5918671d5bd",
+    "result_id": "ce969afcdda947239ed2c5918671d5bd",
+    "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T09:57:59.793247+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "title": "Global Measles Outbreaks",
+    "published_date": "2026-08-10T08:49:39+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 1799,
+    "token_count": 409,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-ce969afcdda947239ed2c5918671d5bd-c0",
+        "chunk_index": 0,
+        "text": "Measles is one of the most contagious human diseases known.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > An outbreak means more disease is occurring than expected",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 13,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce969afcdda947239ed2c5918671d5bd-c1",
+        "chunk_index": 1,
+        "text": "Because measles is so contagious, it can easily cross borders. In 2023, an estimated 10.3 million people were infected with measles. Right now, measles outbreaks are happening in every region of the world. Anyone who is not protected against measles can get measles while abroad and easily spread it to others when they return home.\nAlthough measles was declared eliminated in the United States in 2000, measles cases and outbreaks continue to occur in the United States due to unvaccinated international travelers. Large measles outbreaks are possible when travel-related measles cases reach at-risk U.S. populations with low immunization against measles. In 2019, the U.S. nearly lost its elimination status with almost 1,300 measles cases from a large outbreak in New York and cases in 30 additional states. After a decrease in global measles incidence during the COVID-19 pandemic, measles activity globally and in the United States continues to rise.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > Measles anywhere is a threat everywhere",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 188,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce969afcdda947239ed2c5918671d5bd-c2",
+        "chunk_index": 2,
+        "text": "Country\tNumber of Cases\nBangladesh\t57,561\nIndia\t26,332\nYemen\t14,961\nMexico\t12,252\nPakistan\t11,212\nCameroon\t9,394\nGuatemala\t7,067\nKazakhstan\t6,968\nAngola\t6,737\nMadagascar\t5,664",
+        "chunk_type": "table",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": [
+          [
+            "Country",
+            "Number of Cases"
+          ],
+          [
+            "Bangladesh",
+            "57,561"
+          ],
+          [
+            "India",
+            "26,332"
+          ],
+          [
+            "Yemen",
+            "14,961"
+          ],
+          [
+            "Mexico",
+            "12,252"
+          ],
+          [
+            "Pakistan",
+            "11,212"
+          ],
+          [
+            "Cameroon",
+            "9,394"
+          ],
+          [
+            "Guatemala",
+            "7,067"
+          ],
+          [
+            "Kazakhstan",
+            "6,968"
+          ],
+          [
+            "Angola",
+            "6,737"
+          ],
+          [
+            "Madagascar",
+            "5,664"
+          ]
+        ],
+        "token_count": 73,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce969afcdda947239ed2c5918671d5bd-c3",
+        "chunk_index": 3,
+        "text": "This table is based on provisional monthly surveillance data reported to the World Health Organization (Geneva) as of August 2026. The data reflected covers January 2026 - June 2026.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.\n\u2022 About the image: A little boy stands near his home in Makoko, a hard-to-reach settlement along a river in Nigeria. He was infected with measles but has since recovered. \u00a9UNICEF/U.S. CDC/UN0669658/Owoicho",
+        "chunk_type": "prose",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 135,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Country",
+          "Number of Cases"
+        ],
+        [
+          "Bangladesh",
+          "57,561"
+        ],
+        [
+          "India",
+          "26,332"
+        ],
+        [
+          "Yemen",
+          "14,961"
+        ],
+        [
+          "Mexico",
+          "12,252"
+        ],
+        [
+          "Pakistan",
+          "11,212"
+        ],
+        [
+          "Cameroon",
+          "9,394"
+        ],
+        [
+          "Guatemala",
+          "7,067"
+        ],
+        [
+          "Kazakhstan",
+          "6,968"
+        ],
+        [
+          "Angola",
+          "6,737"
+        ],
+        [
+          "Madagascar",
+          "5,664"
+        ]
+      ]
+    ],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-f35aed9c847246028f4e24a30b00a55f",
+    "result_id": "f35aed9c847246028f4e24a30b00a55f",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/measles",
+    "domain": "who.int",
+    "fetched_at": "2026-08-19T09:58:00.881867+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/news-room/fact-sheets/detail/measles",
+    "title": "Measles",
+    "published_date": "2026-07-20T09:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 9064,
+    "token_count": 1815,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c0",
+        "chunk_index": 0,
+        "text": "\u2022 Measles is a highly contagious, serious airborne disease caused by a virus that can lead to severe complications and death.\n\u2022 Measles vaccination averted nearly 59 million deaths between 2000 and 2024.\n\u2022 Even though a safe and cost-effective vaccine is available, in 2024, there were an estimated 95 000 measles deaths globally, mostly among unvaccinated or under vaccinated children under the age of 5 years.\n\u2022 The proportion of children receiving a first dose of measles vaccine was 84% in 2025, slightly below the 2019 level of 86%.",
+        "chunk_type": "prose",
+        "heading": "Key facts",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 125,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c1",
+        "chunk_index": 1,
+        "text": "Measles is a highly contagious disease caused by a virus. It spreads easily when an infected person breathes, coughs or sneezes. It can cause severe disease, complications, and even death.\nMeasles can affect anyone but is most common in children.\nMeasles infects the respiratory tract and then spreads throughout the body. Symptoms include a high fever, cough, runny nose and a rash all over the body.\nBeing vaccinated is the best way to prevent getting sick with measles or spreading it to other people. The vaccine is safe and helps your body fight off the virus.\nBefore the introduction of measles vaccine in 1963 and widespread vaccination, major epidemics occurred approximately every two to three years and caused an estimated 2.6 million deaths each year.\nAn estimated 95 000 people died from measles in 2024 \u2013 mostly children under the age of five years, despite the availability of a safe and cost-effective vaccine.\nAccelerated immunization activities by countries, WHO, the Measles & Rubella Partnership, and other international partners successfully prevented an estimated 59 million deaths between 2000 and 2024. Vaccination decreased an estimated measles deaths from 780 000 in 2000 to 95 000 in 2024 (1).",
+        "chunk_type": "prose",
+        "heading": "Key facts > Overview",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 261,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c2",
+        "chunk_index": 2,
+        "text": "Symptoms of measles usually begin 7\u201314 days after exposure to the virus. A prominent rash is the most visible symptom.\nEarly symptoms usually last 4\u20137 days. They include:\n\u2022 fever\n\u2022 running nose\n\u2022 cough\n\u2022 red and watery eyes\n\u2022 small white spots inside the cheeks.\nThe rash appears 3 to 5 days after the first symptoms, usually on the face and upper neck. It spreads over about 3 days, eventually downward to the trunk, arms, legs and feet. It usually lasts 4\u20138 days before fading.\nMost deaths from measles are from complications related to the disease.\nComplications can include:\n\u2022 blindness\n\u2022 encephalitis (an infection causing brain swelling and potentially brain damage)\n\u2022 severe diarrhoea and related dehydration\n\u2022 ear infections\n\u2022 severe breathing problems including pneumonia.\nIf a woman catches measles during pregnancy, this can be dangerous for the mother and can result in miscarriage or her baby being born prematurely with a low birth weight.\nComplications are most common in children under 5 years and adults over age 30. They are more likely in children who are malnourished, especially those without enough vitamin A or with a weak immune system from HIV or other diseases. Measles itself also weakens the immune system and can make the body \u201cforget\u201d how to protect itself against infections, leaving children extremely vulnerable.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Signs and symptoms",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 285,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c3",
+        "chunk_index": 3,
+        "text": "Any non-immune person (not vaccinated or vaccinated but did not develop immunity) can become infected. Unvaccinated young children and pregnant persons are at highest risk of severe measles complications.\nMeasles is still common, particularly in parts of Africa, the Middle East and Asia. The overwhelming majority of measles deaths occur in countries with low per capita incomes or weak health infrastructures that struggle to reach all children with immunization.\nDamaged health infrastructure and health services in countries experiencing or recovering from a natural disaster or conflict interrupt routine immunization and overcrowding in residential camps increases the risk of infection. Children with malnutrition or other causes of a weak immune system are at highest risk of death from measles.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Who is at risk?",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 141,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c4",
+        "chunk_index": 4,
+        "text": "Measles is one of the world\u2019s most contagious diseases, spread by contact with infected nasal or throat secretions (coughing or sneezing) or breathing the air that was breathed by someone with measles. The virus remains active and contagious in the air or on infected surfaces for up to two hours. For this reason, it is very infectious. One person infected by measles can generate up to 18 secondary infections.\nIt can be transmitted by an infected person from four days prior to the onset of the rash to four days after the rash erupts.\nMeasles outbreaks can result in severe complications and deaths, especially among young, malnourished children. In countries close to measles elimination, cases imported from other countries remain an important source of infection.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Transmission",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 154,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c5",
+        "chunk_index": 5,
+        "text": "There is no specific treatment for measles. Caregiving should focus on relieving symptoms, making the person comfortable and preventing complications.\nDrinking enough water and treatments for dehydration can replace fluids lost to diarrhoea or vomiting. Eating a healthy diet is also important.\nDoctors may use antibiotics to treat pneumonia and ear and eye infections.\nTwo doses of vitamin A are recommended for all suspected measles cases in children under 5 years of age, immediately on diagnosis and repeated the next day, according to the dosing indicated by the health practitioner. A third dose is recommended for any clinical signs of vitamin A deficiency with eye complications and should be given 4\u20136 weeks later. This restores low levels of vitamin A that occur even in well-nourished children. It can help prevent other complications from measles, including eye damage and blindness. Vitamin A supplements may also reduce the number of measles deaths.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Treatment",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 178,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c6",
+        "chunk_index": 6,
+        "text": "Community-wide vaccination is the most effective way to prevent measles. All children should be vaccinated against measles. The vaccine is safe, effective and inexpensive.\nChildren should receive two doses of the vaccine to ensure they are immune. The first dose is usually given at 9 months of age in countries where measles is common and 12\u201315 months in other countries. A second dose should be given later in childhood, usually at 15\u201318 months.\nThe measles vaccine is given alone or often combined with vaccines for mumps, rubella and/or varicella.\nRoutine measles vaccination, combined with mass immunization campaigns in countries with high case rates are crucial for reducing global measles deaths. The measles vaccine has been in use for about 60 years and costs less than US$ 1 per child. The measles vaccine is also used in emergencies to stop outbreaks from spreading. The risk of measles outbreaks is particularly high amongst refugees, who should be vaccinated as soon as possible.\nCombining vaccines slightly increases the cost but allows for shared delivery and administration costs and importantly, adds the benefit of protection against rubella, the most common vaccine preventable infection that can infect babies in the womb.\nIn 2025, 77% of children received both doses of the measles vaccine, and about 84% of the world's children received one dose of measles vaccine by their first birthday. Two doses of the vaccine are recommended to ensure immunity and prevent outbreaks, as not all children develop immunity from the first dose.\nApproximately 29 million infants remained under-protected against measles in 2025, according to WHO and UNICEF estimates.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Prevention",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 325,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c7",
+        "chunk_index": 7,
+        "text": "In 2020, WHO and global stakeholders endorsed the Immunization Agenda 2021\u20132030. The Agenda aims to achieve the regional targets as a core indicator of impact, positioning measles as a tracer of a health system\u2019s ability to deliver essential childhood vaccines.\nWHO published the Measles and rubella strategic framework in 2020, establishing seven necessary strategic priorities to achieve and sustain the regional measles and rubella elimination goals.\nWithout sustained attention, hard-fought gains can easily be lost. Where children are unvaccinated, outbreaks occur. Based on current trends of measles vaccination coverage and incidence, the WHO Strategic Advisory Group of Experts on Immunization (SAGE) concluded that measles elimination is under threat, as the disease resurged in numerous countries that achieved, or were close to achieving, elimination.\nWHO continues to strengthen the Global Measles and Rubella Laboratory Network (GMRLN) to ensure timely diagnosis of measles and track the virus\u2019 spread to assist countries in coordinating targeted vaccination activities and reduce deaths from this vaccine-preventable disease.",
+        "chunk_type": "prose",
+        "heading": "Key facts > WHO response",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 214,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f35aed9c847246028f4e24a30b00a55f-c8",
+        "chunk_index": 8,
+        "text": "The Immunization Agenda 2030 Measles & Rubella Partnership (M&RP) is a partnership led by the American Red Cross, United Nations Foundation, Centers for Disease Control and Prevention (CDC), Gavi, the Vaccines Alliance, the Gates Foundation, UNICEF and WHO, to achieve the IA2030 measles and rubella specific targets. Launched in 2001, as the Measles and Rubella Initiative, the revitalized Partnership is committed to ensuring no child dies from measles or is born with congenital rubella syndrome. The Partnership helps countries plan, fund and measure efforts to permanently stop measles and rubella\nReferences",
+        "chunk_type": "prose",
+        "heading": "Key facts > WHO response > The IA2030 Measles & Rubella Partnership",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 132,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-ce755ec6a4f64e59af531bbdb8c8100c",
+    "result_id": "ce755ec6a4f64e59af531bbdb8c8100c",
+    "source_url": "https://www.cdc.gov/cfa-modeling-and-forecasting/covid19-data-vis/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T09:58:01.052476+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/cfa-modeling-and-forecasting/covid19-data-vis/index.html",
+    "title": "COVID-19 Ensemble Forecasts",
+    "published_date": "2026-08-14T11:36:22+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4940,
+    "token_count": 975,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-ce755ec6a4f64e59af531bbdb8c8100c-c0",
+        "chunk_index": 0,
+        "text": "\u2022 The CovidHub ensemble predicts that for the week ending August 22, 2026, the weekly percentage of new emergency department (ED) visits due to COVID-19 in the United States will be 0.43% (95% prediction interval 0.25-0.59%). The median forecast suggests an increase from 0.31%, which was reported for the week ending August 8, 2026 (the most recent week of reporting).\n\u2022 Ensemble forecasting also predicts that the number of new laboratory-confirmed COVID-19 hospital admissions in the United States during the week ending August 22, 2026 will be approximately 2,400 (1,700-4,000). The median forecast suggests an increase compared to the 1,800 admissions so far reported for the week ending August 8, 2026.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 172,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce755ec6a4f64e59af531bbdb8c8100c-c1",
+        "chunk_index": 1,
+        "text": "Select a location and week ending date to see the ( prediction interval) based on forecasts submitted by .\nSelect forecast location, date, and models below. Modeling based on forecasts submitted by . Click and drag to change the forecast date to see how previous forecasts performed against reported data.\nForecasted\n(% prediction interval: - )",
+        "chunk_type": "prose",
+        "heading": "What to know > National and state forecasts > Forecasted weekly",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 64,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce755ec6a4f64e59af531bbdb8c8100c-c2",
+        "chunk_index": 2,
+        "text": "Median\tPrediction Interval\tModel",
+        "chunk_type": "table",
+        "heading": "What to know > National and state forecasts > Forecasted weekly",
+        "page_number": null,
+        "table_data": [
+          [
+            "Median",
+            "Prediction Interval",
+            "Model"
+          ]
+        ],
+        "token_count": 6,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce755ec6a4f64e59af531bbdb8c8100c-c3",
+        "chunk_index": 3,
+        "text": "Forecast median\tprediction interval\tName",
+        "chunk_type": "table",
+        "heading": "What to know > National and state forecasts > Forecasted weekly",
+        "page_number": null,
+        "table_data": [
+          [
+            "Forecast median",
+            "prediction interval",
+            "Name"
+          ]
+        ],
+        "token_count": 7,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce755ec6a4f64e59af531bbdb8c8100c-c4",
+        "chunk_index": 4,
+        "text": "Click on models to see and compare forecasts",
+        "chunk_type": "prose",
+        "heading": "What to know > National and state forecasts > Select Models",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 8,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ce755ec6a4f64e59af531bbdb8c8100c-c5",
+        "chunk_index": 5,
+        "text": "\u2022 Overview: Overview: Forecasted percent of ED visits and new hospital admissions due to COVID-19. This week, 3 modeling groups contributed 3 forecasts of ED visits and 7 modeling groups contributed 7 forecasts of hospital admissions that were eligible for inclusion in the ensemble forecasts for at least one jurisdiction. Contributing teams are listed below.\n\u2022 What are ensemble models?: Ensemble forecasts combine forecasts from all submitted models into one forecast. These forecasts have been among the most accurate for previous COVID-19 forecasting efforts but may not reliably predict rapid changes in disease trends.\n\u2022 What does the figure show?: The figure shows the percentage of COVID-19 emergency department visits each week reported from October 1, 2022 through August 8, 2026, number of new laboratory-confirmed COVID-19 hospital admissions reported in the United States each week from August 8, 2020 through August 8, 2026, and forecasted new COVID-19 emergency department visits and hospital admissions per week for this week and the next 2 weeks through August 29, 2026. The colored areas on the graph show prediction intervals, which indicate the bounds of uncertainty around the forecast estimates.\n\u2022 How do we calculate the rates/percentages? The forecasted percentages of ED visits due to COVID-19 are calculated by dividing the number of visits with a discharge diagnosis of COVID-19 in a one-week period (the numerator) by the total number of ED visits in the same period (denominator) at the relevant jurisdictional level. The forecasted hospital admission rates (for both median and prediction intervals) use Census Vintage 2023 population estimates as a population denominator for the state. We note that the denominator for rates may not capture the exact catchment populations of the hospitals in each state, but rates provide a rough adjustment for population size, allowing comparison across states with different population sizes.\n\u2022 Data Reporting: Reporting of COVID-19 specific emergency department visits is voluntary through the National Syndromic Surveillance Program (NSSP); however, many facilities participate in automated reporting, resulting in reasonably stable visit levels over time. Hospitals are required to report weekly laboratory-confirmed COVID-19 hospitalizations to the National Healthcare Safety Network (NHSN). Review Hospital Respiratory Data for additional details on this guidance. Historical data from NHSN are not shown from April 28-November 1, 2024, due to the pause in mandatory reporting.\n\u2022 The following jurisdictions had <80% of hospitals reporting for the most recent week: Alaska, Arkansas, California, Colorado, District of Columbia, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maryland, Mississippi, Missouri, Montana, Nebraska, Nevada, New Mexico, New York, North Dakota, Ohio, Oklahoma, Oregon, Puerto Rico, South Dakota, Texas, United States, Virginia, Vermont, Washington, and Wyoming. Lower reporting rates could impact forecast validity.Percent of hospitals reporting is calculated based on the number of active hospitals reporting complete data to NHSN for a given reporting week.More Information: Forecast submissions are collected and stored in the COVID-19 Forecast Hub GitHub repository, which also contains more detailed information about the forecast data and submission process.Percent of hospitals reporting is calculated based on the number of active facilities reporting complete data to NHSN for a given reporting week.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.",
+        "chunk_type": "prose",
+        "heading": "What to know > Interpretation of forecasts",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 718,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Median",
+          "Prediction Interval",
+          "Model"
+        ]
+      ],
+      [
+        [
+          "Forecast median",
+          "prediction interval",
+          "Name"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "August 22, 2026",
+      "August 8, 2026",
+      "October 1, 2022",
+      "August 8, 2020",
+      "August 29, 2026",
+      "November 1, 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

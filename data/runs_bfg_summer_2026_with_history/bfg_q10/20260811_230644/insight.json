@@ -1,0 +1,22 @@
+{
+  "records": [],
+  "budget_summary": {
+    "total_input_tokens": 80644,
+    "total_output_tokens": 152,
+    "total_tokens": 80796,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 80644,
+        "output_tokens": 152,
+        "calls": 38
+      }
+    }
+  },
+  "documents_processed": 12,
+  "documents_skipped": 3,
+  "notes": [
+    "Skipped document doc-2cc01386de3d461c81e6a3d5f9fe341f: failed",
+    "Skipped document doc-ab466c4dc0084b9493ef24a15564daed: no chunks",
+    "Skipped document doc-1108f55e148f4a6d8db3ac6e6a8dbca9: no chunks"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "question_id": "bfg_q2",
+  "options": [
+    "under 750",
+    "750 to 1,499",
+    "1,500 to 2,999",
+    "3,000 to 4,999",
+    "5,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 750": 0.0815456927340073,
+        "750 to 1,499": 0.1696218762955698,
+        "1,500 to 2,999": 0.3192405937610641,
+        "3,000 to 4,999": 0.3119825969033168,
+        "5,000 or more": 0.11760924030604201
+      }
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 750": 0.2,
+        "750 to 1,499": 0.3,
+        "1,500 to 2,999": 0.25,
+        "3,000 to 4,999": 0.15,
+        "5,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "under 750",
+      "probability": 0.0815456927340073,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "750 to 1,499",
+      "probability": 0.1696218762955698,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "1,500 to 2,999",
+      "probability": 0.3192405937610641,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 4,999",
+      "probability": 0.3119825969033168,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "5,000 or more",
+      "probability": 0.11760924030604201,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 750",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750 to 1,499",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1,500 to 2,999",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 4,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.15,
+        0.25,
+        0.35,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in the Democratic Republic of the Congo and Uganda",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Rapid increase in confirmed and probable cases and deaths from May to August suggests a severe outbreak.",
+        "Historical precedent of large-scale Ebola outbreaks in the region, such as the 2014 West Africa outbreak, which had thousands of deaths.",
+        "Evidence of continuous reporting and review indicates the possibility of higher death counts being confirmed later."
+      ],
+      "drivers_down": [
+        "Data is under continuous review, which might lead to downward adjustments in reported deaths.",
+        "The current cumulative death count of 2,325 by mid-August, although high, shows a potential plateau as interventions might take effect.",
+        "Interventions in place could slow the outbreak's progression."
+      ],
+      "why_might_be_wrong": "The data under review might be adjusted upwards significantly, or the outbreak could accelerate unexpectedly, leading to a much higher death toll.",
+      "rationale": "The current cumulative death count of 2,325 as of mid-August suggests that the outbreak is severe. Given the historical context of Ebola outbreaks in this region and the rapid increase in deaths over a short period, it is likely that the death toll could reach the 3,000 to 4,999 range by the end of December. However, the possibility of effective interventions and data adjustments could keep the number below 5,000.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.15,
+        0.3,
+        0.4,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past Bundibugyo Ebola outbreaks in DRC and Uganda.",
+      "base_rate": 0.75,
+      "drivers_up": [
+        "The outbreak is described as the fastest growing in the history of the virus, suggesting high transmission and mortality rates.",
+        "By August 15, there are already 2,325 cumulative deaths, indicating a rapid increase from earlier counts.",
+        "Historical data shows high fatality rates for Ebola outbreaks in the region."
+      ],
+      "drivers_down": [
+        "There may be under-reporting or overestimation in the early figures which could stabilize with more accurate reporting and response efforts.",
+        "Public health interventions may become more effective over time, slowing the death rate."
+      ],
+      "why_might_be_wrong": "The under-reporting and harmonisation issues mentioned could lead to significant revisions in death counts.",
+      "rationale": "The August 15 report already shows 2,325 cumulative deaths, indicating a rapid increase in fatalities. Given the history of high mortality rates in Ebola outbreaks and the rapid growth described, it is likely the cumulative deaths could rise significantly by year-end. Thus, while there's potential for stabilization, the current trajectory supports a higher range estimate. Adjusting for potential reporting issues, a moderate estimate of 3,000 to 4,999 cumulative deaths by December 31, 2026, seems reasonable.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.4,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in the Democratic Republic of the Congo and Uganda",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Significant increase in cumulative deaths reported over just two months from July to August 2026 (from 830 to 2,325).",
+        "High fatality rate observed in the region for Ebola outbreaks.",
+        "Historical precedent of rapid spread in densely populated regions."
+      ],
+      "drivers_down": [
+        "Data harmonisation issues which might inflate current death figures.",
+        "Potential underreporting and delayed reporting could skew current figures."
+      ],
+      "why_might_be_wrong": "The evidence includes discrepancies in reporting which could mean the deaths are either being overreported or underreported, affecting the accuracy of the forecast.",
+      "rationale": "The rapid increase in reported deaths from 830 in mid-July to 2,325 by mid-August suggests an aggressive outbreak progression. Given the historical context of Ebola outbreaks in the region, such rapid increases are not unprecedented, indicating that the situation might worsen significantly by the end of the year. However, with noted data harmonisation issues, there exists uncertainty about the exact figures. Balancing these considerations, the likelihood of the cumulative deaths exceeding 3,000 seems high, but the base rate for 'under 3,000' still holds significant weight due to potential data inaccuracies.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the typical scale of such events, it is reasonable to estimate that the cumulative reported deaths will likely be under 1,500. The probabilities reflect a higher likelihood of lower death counts due to improved response measures and containment strategies, while still acknowledging the potential for higher fatalities in severe scenarios.",
+  "evidence_record_ids": [
+    "ins-fb99afd689d9",
+    "ins-d2af0672df79",
+    "ins-88ad0e0022f3",
+    "ins-102c551d50a3",
+    "ins-d341b5b1838c"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4014,
+    "total_output_tokens": 957,
+    "total_tokens": 4971,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3771,
+        "output_tokens": 860,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 243,
+        "output_tokens": 97,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

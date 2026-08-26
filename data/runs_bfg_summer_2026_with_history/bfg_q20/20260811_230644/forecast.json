@@ -1,0 +1,204 @@
+{
+  "question_id": "bfg_q20",
+  "options": [
+    "8 or fewer",
+    "9 to 11",
+    "12 to 14",
+    "15 to 17",
+    "18 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "8 or fewer": 0.28,
+        "9 to 11": 0.32,
+        "12 to 14": 0.22,
+        "15 to 17": 0.12000000000000001,
+        "18 or more": 0.05999999999999997
+      }
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "8 or fewer": 0.25,
+        "9 to 11": 0.35,
+        "12 to 14": 0.2,
+        "15 to 17": 0.1,
+        "18 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "8 or fewer",
+      "probability": 0.28,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "9 to 11",
+      "probability": 0.32,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "12 to 14",
+      "probability": 0.22,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "15 to 17",
+      "probability": 0.12000000000000001,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "18 or more",
+      "probability": 0.05999999999999997,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8 or fewer",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "9 to 11",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12 to 14",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 17",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "18 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.28,
+        0.32,
+        0.22,
+        0.12,
+        0.06
+      ],
+      "ok": true,
+      "reference_class": "Arbovirus outbreaks in the Americas",
+      "base_rate": 0.28,
+      "drivers_up": [
+        "Oropouche virus identified in many countries in South America and the Caribbean since 2023, indicating spread potential.",
+        "Past outbreaks in multiple countries suggest a pattern of gradual spread rather than explosive.",
+        "First case in Cuba indicates the potential for wider geographical spread."
+      ],
+      "drivers_down": [
+        "Spread has been gradual, suggesting containment efforts may be effective.",
+        "No reports of explosive spread, indicating that the virus may not easily jump to new territories."
+      ],
+      "why_might_be_wrong": "The virus could either spread more rapidly due to changes in vector dynamics or containment measures might fail, leading to a higher number of affected countries.",
+      "rationale": "The base rate for arboviruses spreading in the Americas is moderate, with historical patterns showing gradual spread to new countries over time. Oropouche virus has been present in multiple countries since 2023, indicating ongoing spread, but not at an explosive rate. Given the current evidence, the most likely scenario is that 9 to 11 countries or territories will report confirmed cases by the end of 2026, with a probability of 0.32. However, effective containment measures and the absence of explosive spread events suggest a non-negligible probability for fewer than 9 countries, reflected in a probability of 0.28 for 8 or fewer.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.28,
+        0.32,
+        0.22,
+        0.12,
+        0.06
+      ],
+      "ok": true,
+      "reference_class": "Arboviral disease spread in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Oropouche outbreaks reported in several South American and Caribbean countries since 2023",
+        "The virus has been identified in countries like Brazil, Argentina, Bolivia, Colombia, Ecuador, and Panama, indicating potential for spread"
+      ],
+      "drivers_down": [
+        "Spread to new countries has been gradual rather than rapid",
+        "Limited information on the virus's spread beyond South America and the Caribbean"
+      ],
+      "why_might_be_wrong": "The virus may spread more rapidly than expected due to increased mobility or changes in environmental conditions, leading to a higher number of affected countries.",
+      "rationale": "The historical spread of arboviruses in the Americas suggests a moderate base rate for Oropouche virus expanding to new territories. While it has shown some spread within South America and the Caribbean, the gradual nature of its spread limits the likelihood of it reaching a very high number of countries by the end of 2026. Given this, the probability is highest for 9 to 11 countries or territories being affected, with a reasonable chance for slightly fewer or slightly more.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.28,
+        0.32,
+        0.22,
+        0.12,
+        0.06
+      ],
+      "ok": true,
+      "reference_class": "Spread of arboviruses in the Americas",
+      "base_rate": 0.28,
+      "drivers_up": [
+        "Oropouche virus already identified in multiple countries in South America and the Caribbean",
+        "Historical spread patterns of arboviruses suggest potential for further spread",
+        "New outbreaks have been reported consistently since 2023"
+      ],
+      "drivers_down": [
+        "The spread to new countries has been gradual rather than explosive",
+        "Without significant vectors or environmental changes, spread may slow"
+      ],
+      "why_might_be_wrong": "The specific environmental or vector conditions that could accelerate or decelerate the spread are uncertain, and new factors could emerge.",
+      "rationale": "The spread of the Oropouche virus has been gradual but steady, with confirmed cases in multiple South American and Caribbean countries. Given the historical spread patterns of arboviruses in the region, the base rate for a moderate spread is around 28%. Factors such as continuous outbreaks and the existing presence in multiple countries support a further spread, suggesting a probability distribution favoring the mid-range (9 to 11 countries). However, the gradual nature of the spread and potential lack of significant environmental changes temper expectations of rapid expansion to many more countries.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Oropouche virus outbreaks in the Americas, it is reasonable to predict that the number of countries or territories reporting confirmed cases will likely remain moderate. The majority of countries may experience sporadic cases, leading to a higher probability for the lower ranges (8 or fewer and 9 to 11). The likelihood of a significant increase to 12 or more is lower due to existing biosecurity measures and public health responses.",
+  "evidence_record_ids": [
+    "ins-41b7bfdcac99"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5891,
+    "total_output_tokens": 921,
+    "total_tokens": 6812,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5682,
+        "output_tokens": 805,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 116,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

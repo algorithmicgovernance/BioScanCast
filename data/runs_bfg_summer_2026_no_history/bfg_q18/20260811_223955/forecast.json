@@ -1,0 +1,220 @@
+{
+  "question_id": "bfg_q18",
+  "options": [
+    "under 1.5M",
+    "1.5M to 1.99M",
+    "2.0M to 2.99M",
+    "3.0M to 4.49M",
+    "4.5M or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 1.5M": 0.08074555848801898,
+        "1.5M to 1.99M": 0.13330797989940235,
+        "2.0M to 2.99M": 0.23610144530087196,
+        "3.0M to 4.49M": 0.33823178878363974,
+        "4.5M or more": 0.21161322752806688
+      }
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 1.5M": 0.25,
+        "1.5M to 1.99M": 0.3,
+        "2.0M to 2.99M": 0.2,
+        "3.0M to 4.49M": 0.15,
+        "4.5M or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "under 1.5M",
+      "probability": 0.08074555848801898,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "1.5M to 1.99M",
+      "probability": 0.13330797989940235,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "2.0M to 2.99M",
+      "probability": 0.23610144530087196,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "3.0M to 4.49M",
+      "probability": 0.33823178878363974,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast",
+      "option": "4.5M or more",
+      "probability": 0.21161322752806688,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 1.5M",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1.5M to 1.99M",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2.0M to 2.99M",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3.0M to 4.49M",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q18",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4.5M or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.2,
+        0.35,
+        0.3
+      ],
+      "ok": true,
+      "reference_class": "Annual dengue case reports in the Americas from previous years",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "Early 2026 data shows 240,198 suspected cases already reported, indicating a potentially high annual total.",
+        "Dengue cases in 2025 were very high at approximately 3.85 million, indicating a possibility of continuing high incidence.",
+        "The cumulative cases in the first few weeks of 2026 alone are significant, suggesting a continued high transmission rate."
+      ],
+      "drivers_down": [
+        "The initial weeks of 2026 show a drop in reported cases relative to the same period in 2025, suggesting a potential decrease in annual totals.",
+        "Weather patterns, vector control efforts, or public health interventions might reduce transmission rates in 2026."
+      ],
+      "why_might_be_wrong": "Unexpected changes in public health measures, climate conditions, or viral mutation could significantly alter dengue transmission dynamics in 2026.",
+      "rationale": "In 2025, the Americas experienced about 3.85 million suspected dengue cases. The data from early 2026 already shows a significant number of cases, suggesting a potential for high annual totals if trends continue. However, a reduction in early 2026 cases compared to 2025 could indicate a downward trend. Balancing these factors, there is a moderate chance of reaching the 3.0M to 4.49M range again, given the high base rate from 2025 and the early 2026 figures.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.15,
+        0.25,
+        0.35,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Annual dengue suspected cases in the Americas",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "High incidence in recent years, such as 3.85M in 2025, suggesting a potential upward trend.",
+        "Early 2026 data shows 240,198 suspected cases already reported, indicating a high baseline.",
+        "Dengue is endemic in many parts of the Americas, with favorable conditions for the vector."
+      ],
+      "drivers_down": [
+        "2026 started with a relatively lower number of cases compared to the previous year.",
+        "Efforts to control vector populations and improve public health responses may reduce cases.",
+        "Some countries have reported lower numbers, which could indicate better control measures."
+      ],
+      "why_might_be_wrong": "Dengue case reporting can vary significantly due to under-reporting, changes in surveillance, or unexpected outbreaks.",
+      "rationale": "The base rate for 3.0M to 4.49M cases is informed by the 2025 data where 3.85M cases were reported. Given early 2026 reports showing 240,198 cases, there is potential for high numbers this year. However, the initial weekly reports are relatively lower than those from the previous year, which may signal a reduction in cases. Balancing these, the most likely range is 3.0M to 4.49M, with a significant but smaller chance for the lower ranges if control measures are more effective.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.15,
+        0.25,
+        0.3,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "Annual dengue suspected cases in the Americas as reported by PAHO",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "The cumulative number of suspected cases in early 2026 is already 240,198, which indicates a potential for high numbers by year-end.",
+        "A high number of suspected cases were reported in 2025 (3.85M), which could suggest similar or increasing trends if conditions remain unchanged."
+      ],
+      "drivers_down": [
+        "Early 2026 data shows a relatively lower rate of new suspected cases compared to 2025, indicating a potential decrease in overall cases.",
+        "The number of suspected cases in smaller regions like Bolivia and Cuba has decreased compared to 2025, suggesting possible regional containment or reduced spread."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if there are significant changes in reporting practices, a new outbreak, or changes in environmental factors influencing mosquito populations.",
+      "rationale": "The initial data for 2026 shows 240,198 suspected cases reported early in the year. Given the 2025 total of 3.85M cases, a forecast at the higher end seems plausible. However, the early 2026 rate doesn't match the rapid increase seen in 2025, suggesting a potential decrease in total cases. Balancing this, I assign higher probabilities to the middle ranges with a moderate chance of exceeding 3.0M but less likely exceeding 4.5M due to the slower start in 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Dengue fever is a significant public health concern in the Americas, with seasonal outbreaks influenced by climate, urbanization, and vector control efforts. Given historical data and trends, it is reasonable to expect that the number of suspected cases will remain high but not exceed previous peaks significantly. The probabilities reflect a moderate expectation of cases under 1.5 million and a gradual increase in likelihood for higher ranges, with the highest category being the least likely.",
+  "evidence_record_ids": [
+    "ins-2ab77e87fee2",
+    "ins-2a208f62c20b",
+    "ins-291f0c43490d",
+    "ins-70baacdd1a00",
+    "ins-c27828a5053c",
+    "ins-32c37e0ffecc",
+    "ins-0a690ff842bb",
+    "ins-9dc757d2b11c",
+    "ins-8b0f1309e003",
+    "ins-7efdd7757331",
+    "ins-64590f3cac6e",
+    "ins-c569890f0c26",
+    "ins-4dc2ccf578b1",
+    "ins-ed5c8808aaf9",
+    "ins-55b2812689d5",
+    "ins-452623015ebb"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5473,
+    "total_output_tokens": 1060,
+    "total_tokens": 6533,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5238,
+        "output_tokens": 943,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 235,
+        "output_tokens": 117,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

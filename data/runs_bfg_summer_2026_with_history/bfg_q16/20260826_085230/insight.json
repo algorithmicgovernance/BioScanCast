@@ -1,0 +1,121 @@
+{
+  "records": [
+    {
+      "id": "ins-99e72e268609",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:27:12.242240+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-96ea024bf7a44838afb52fadf4973a00",
+          "chunk_id": "doc-96ea024bf7a44838afb52fadf4973a00-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        },
+        {
+          "document_id": "doc-4c96451011534ca39614c9660890f8ae",
+          "chunk_id": "doc-4c96451011534ca39614c9660890f8ae-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+          "quote": "no deaths have been reported from the disease since January 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-565192cc8cf2",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "U.S.",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Pennsylvania confirmed two measles-associated deaths, the first for the U.S. in a record-breaking 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:27:17.557425+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d99b93775f3b48828e3cfb9ddef3972e",
+          "chunk_id": "doc-d99b93775f3b48828e3cfb9ddef3972e-c0",
+          "source_url": "https://www.medpagetoday.com/infectiousdisease/publichealth/122744",
+          "quote": "Pennsylvania confirmed two measles-associated deaths, the state's first in 35 years and the first for the U.S. in a record-breaking 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-613ae87bbfcc",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Pennsylvania",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "people",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-25T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Pennsylvania recorded its first two deaths connected to measles in 35 years.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:27:20.865855+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-e9ac211a977342ac8d73b24470ed4a99",
+          "chunk_id": "doc-e9ac211a977342ac8d73b24470ed4a99-c0",
+          "source_url": "https://www.cbsnews.com/news/measles-outbreak-us-map-2026",
+          "quote": "the state recorded its first two deaths connected to measles in 35 years."
+        },
+        {
+          "document_id": "doc-b37fd42a92a94a128c11edeffbebaf84",
+          "chunk_id": "doc-b37fd42a92a94a128c11edeffbebaf84-c0",
+          "source_url": "https://www.bbc.co.uk/news/articles/c5yednen30go",
+          "quote": "Two people who were not vaccinated against measles have died of the virus in Pennsylvania"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 35698,
+    "total_output_tokens": 626,
+    "total_tokens": 36324,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 35698,
+        "output_tokens": 626,
+        "calls": 16
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

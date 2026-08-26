@@ -1,0 +1,478 @@
+[
+  {
+    "id": "doc-0b5d64c4b43e4d6fb690a9501a31b9b1",
+    "result_id": "0b5d64c4b43e4d6fb690a9501a31b9b1",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:36:29.494880+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-0b5d64c4b43e4d6fb690a9501a31b9b1-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-08-26.\nAs of the latest CDC update, a total of 2,777 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-08-26"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-19649a895843408d9a53d6f129cc7605",
+    "result_id": "19649a895843408d9a53d6f129cc7605",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-26T09:36:29.963183+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-19649a895843408d9a53d6f129cc7605-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+    "result_id": "d75a33f9f2ba43f1bc2894a89d6f066d",
+    "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:36:33.095260+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "title": "Global Measles Outbreaks",
+    "published_date": "2026-08-10T08:49:39+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 1799,
+    "token_count": 409,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c0",
+        "chunk_index": 0,
+        "text": "Measles is one of the most contagious human diseases known.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > An outbreak means more disease is occurring than expected",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 13,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c1",
+        "chunk_index": 1,
+        "text": "Because measles is so contagious, it can easily cross borders. In 2023, an estimated 10.3 million people were infected with measles. Right now, measles outbreaks are happening in every region of the world. Anyone who is not protected against measles can get measles while abroad and easily spread it to others when they return home.\nAlthough measles was declared eliminated in the United States in 2000, measles cases and outbreaks continue to occur in the United States due to unvaccinated international travelers. Large measles outbreaks are possible when travel-related measles cases reach at-risk U.S. populations with low immunization against measles. In 2019, the U.S. nearly lost its elimination status with almost 1,300 measles cases from a large outbreak in New York and cases in 30 additional states. After a decrease in global measles incidence during the COVID-19 pandemic, measles activity globally and in the United States continues to rise.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > Measles anywhere is a threat everywhere",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 188,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+        "chunk_index": 2,
+        "text": "Country\tNumber of Cases\nBangladesh\t57,561\nIndia\t26,332\nYemen\t14,961\nMexico\t12,252\nPakistan\t11,212\nCameroon\t9,394\nGuatemala\t7,067\nKazakhstan\t6,968\nAngola\t6,737\nMadagascar\t5,664",
+        "chunk_type": "table",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": [
+          [
+            "Country",
+            "Number of Cases"
+          ],
+          [
+            "Bangladesh",
+            "57,561"
+          ],
+          [
+            "India",
+            "26,332"
+          ],
+          [
+            "Yemen",
+            "14,961"
+          ],
+          [
+            "Mexico",
+            "12,252"
+          ],
+          [
+            "Pakistan",
+            "11,212"
+          ],
+          [
+            "Cameroon",
+            "9,394"
+          ],
+          [
+            "Guatemala",
+            "7,067"
+          ],
+          [
+            "Kazakhstan",
+            "6,968"
+          ],
+          [
+            "Angola",
+            "6,737"
+          ],
+          [
+            "Madagascar",
+            "5,664"
+          ]
+        ],
+        "token_count": 73,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c3",
+        "chunk_index": 3,
+        "text": "This table is based on provisional monthly surveillance data reported to the World Health Organization (Geneva) as of August 2026. The data reflected covers January 2026 - June 2026.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.\n\u2022 About the image: A little boy stands near his home in Makoko, a hard-to-reach settlement along a river in Nigeria. He was infected with measles but has since recovered. \u00a9UNICEF/U.S. CDC/UN0669658/Owoicho",
+        "chunk_type": "prose",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 135,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Country",
+          "Number of Cases"
+        ],
+        [
+          "Bangladesh",
+          "57,561"
+        ],
+        [
+          "India",
+          "26,332"
+        ],
+        [
+          "Yemen",
+          "14,961"
+        ],
+        [
+          "Mexico",
+          "12,252"
+        ],
+        [
+          "Pakistan",
+          "11,212"
+        ],
+        [
+          "Cameroon",
+          "9,394"
+        ],
+        [
+          "Guatemala",
+          "7,067"
+        ],
+        [
+          "Kazakhstan",
+          "6,968"
+        ],
+        [
+          "Angola",
+          "6,737"
+        ],
+        [
+          "Madagascar",
+          "5,664"
+        ]
+      ]
+    ],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-0549d6a1dec544a0af52aef173a2e914",
+    "result_id": "0549d6a1dec544a0af52aef173a2e914",
+    "source_url": "https://gulfnews.com/amp/story/world%2Feurope%2F11-million-measles-cases-expected-worldwide-in-2026-1.500649483",
+    "domain": "gulfnews.com",
+    "fetched_at": "2026-08-26T09:36:34.972182+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://gulfnews.com/amp/story/world%2Feurope%2F11-million-measles-cases-expected-worldwide-in-2026-1.500649483",
+    "title": "11 million measles cases expected worldwide in 2026",
+    "published_date": "2026-08-23T13:41:13+04:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 1671,
+    "token_count": 315,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-0549d6a1dec544a0af52aef173a2e914-c0",
+        "chunk_index": 0,
+        "text": "Geneva: Health experts have warned of a global resurgence of measles this year, with millions of people at risk as declining vaccination rates contribute to outbreaks and potentially serious complications.\nAround 11 million people worldwide are expected to contract measles in 2026, as dozens of countries experience outbreaks across Africa, Asia, Europe and the Americas. Most cases are concentrated in low- and middle-income countries, although the virus has also re-emerged in countries with advanced healthcare systems.\nThe World Health Organisation estimates that most infections will be recorded in Africa and Asia, while outbreaks have also affected countries in Europe and the Americas.\nMeasles remains one of the world's most contagious diseases. There is no specific treatment for it, although vaccines have proven safe and effective in preventing infection.\nCommunities need vaccination coverage above 95 percent because of the highly contagious nature and rapid spread of measles. While one dose of the vaccine protects most people, health authorities recommend two doses.\nIn most high-income countries, vaccination rates are close to the target. In Europe, around 94 percent of children receive one dose of the measles vaccine on average, while about 88 percent receive two doses.\nIn low- and middle-income countries, only around 80 percent of young children receive at least one dose of the measles vaccine, with the rate falling to around 70 percent among children who receive two doses.\nSign up for the Daily Briefing\nGet the latest news and updates straight to your inbox\nNetwork Links\nDownload our app\n\u00a9 Al Nisr Publishing LLC 2026. All rights reserved.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 315,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-834f9dd51adf4f21ab72b70007c7f4d6",
+    "result_id": "834f9dd51adf4f21ab72b70007c7f4d6",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/measles",
+    "domain": "who.int",
+    "fetched_at": "2026-08-26T09:36:35.452569+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/news-room/fact-sheets/detail/measles",
+    "title": "Measles",
+    "published_date": "2026-04-02T15:50:51+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 9064,
+    "token_count": 1815,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c0",
+        "chunk_index": 0,
+        "text": "\u2022 Measles is a highly contagious, serious airborne disease caused by a virus that can lead to severe complications and death.\n\u2022 Measles vaccination averted nearly 59 million deaths between 2000 and 2024.\n\u2022 Even though a safe and cost-effective vaccine is available, in 2024, there were an estimated 95 000 measles deaths globally, mostly among unvaccinated or under vaccinated children under the age of 5 years.\n\u2022 The proportion of children receiving a first dose of measles vaccine was 84% in 2025, slightly below the 2019 level of 86%.",
+        "chunk_type": "prose",
+        "heading": "Key facts",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 125,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c1",
+        "chunk_index": 1,
+        "text": "Measles is a highly contagious disease caused by a virus. It spreads easily when an infected person breathes, coughs or sneezes. It can cause severe disease, complications, and even death.\nMeasles can affect anyone but is most common in children.\nMeasles infects the respiratory tract and then spreads throughout the body. Symptoms include a high fever, cough, runny nose and a rash all over the body.\nBeing vaccinated is the best way to prevent getting sick with measles or spreading it to other people. The vaccine is safe and helps your body fight off the virus.\nBefore the introduction of measles vaccine in 1963 and widespread vaccination, major epidemics occurred approximately every two to three years and caused an estimated 2.6 million deaths each year.\nAn estimated 95 000 people died from measles in 2024 \u2013 mostly children under the age of five years, despite the availability of a safe and cost-effective vaccine.\nAccelerated immunization activities by countries, WHO, the Measles & Rubella Partnership, and other international partners successfully prevented an estimated 59 million deaths between 2000 and 2024. Vaccination decreased an estimated measles deaths from 780 000 in 2000 to 95 000 in 2024 (1).",
+        "chunk_type": "prose",
+        "heading": "Key facts > Overview",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 261,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c2",
+        "chunk_index": 2,
+        "text": "Symptoms of measles usually begin 7\u201314 days after exposure to the virus. A prominent rash is the most visible symptom.\nEarly symptoms usually last 4\u20137 days. They include:\n\u2022 fever\n\u2022 running nose\n\u2022 cough\n\u2022 red and watery eyes\n\u2022 small white spots inside the cheeks.\nThe rash appears 3 to 5 days after the first symptoms, usually on the face and upper neck. It spreads over about 3 days, eventually downward to the trunk, arms, legs and feet. It usually lasts 4\u20138 days before fading.\nMost deaths from measles are from complications related to the disease.\nComplications can include:\n\u2022 blindness\n\u2022 encephalitis (an infection causing brain swelling and potentially brain damage)\n\u2022 severe diarrhoea and related dehydration\n\u2022 ear infections\n\u2022 severe breathing problems including pneumonia.\nIf a woman catches measles during pregnancy, this can be dangerous for the mother and can result in miscarriage or her baby being born prematurely with a low birth weight.\nComplications are most common in children under 5 years and adults over age 30. They are more likely in children who are malnourished, especially those without enough vitamin A or with a weak immune system from HIV or other diseases. Measles itself also weakens the immune system and can make the body \u201cforget\u201d how to protect itself against infections, leaving children extremely vulnerable.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Signs and symptoms",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 285,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c3",
+        "chunk_index": 3,
+        "text": "Any non-immune person (not vaccinated or vaccinated but did not develop immunity) can become infected. Unvaccinated young children and pregnant persons are at highest risk of severe measles complications.\nMeasles is still common, particularly in parts of Africa, the Middle East and Asia. The overwhelming majority of measles deaths occur in countries with low per capita incomes or weak health infrastructures that struggle to reach all children with immunization.\nDamaged health infrastructure and health services in countries experiencing or recovering from a natural disaster or conflict interrupt routine immunization and overcrowding in residential camps increases the risk of infection. Children with malnutrition or other causes of a weak immune system are at highest risk of death from measles.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Who is at risk?",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 141,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c4",
+        "chunk_index": 4,
+        "text": "Measles is one of the world\u2019s most contagious diseases, spread by contact with infected nasal or throat secretions (coughing or sneezing) or breathing the air that was breathed by someone with measles. The virus remains active and contagious in the air or on infected surfaces for up to two hours. For this reason, it is very infectious. One person infected by measles can generate up to 18 secondary infections.\nIt can be transmitted by an infected person from four days prior to the onset of the rash to four days after the rash erupts.\nMeasles outbreaks can result in severe complications and deaths, especially among young, malnourished children. In countries close to measles elimination, cases imported from other countries remain an important source of infection.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Transmission",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 154,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c5",
+        "chunk_index": 5,
+        "text": "There is no specific treatment for measles. Caregiving should focus on relieving symptoms, making the person comfortable and preventing complications.\nDrinking enough water and treatments for dehydration can replace fluids lost to diarrhoea or vomiting. Eating a healthy diet is also important.\nDoctors may use antibiotics to treat pneumonia and ear and eye infections.\nTwo doses of vitamin A are recommended for all suspected measles cases in children under 5 years of age, immediately on diagnosis and repeated the next day, according to the dosing indicated by the health practitioner. A third dose is recommended for any clinical signs of vitamin A deficiency with eye complications and should be given 4\u20136 weeks later. This restores low levels of vitamin A that occur even in well-nourished children. It can help prevent other complications from measles, including eye damage and blindness. Vitamin A supplements may also reduce the number of measles deaths.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Treatment",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 178,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c6",
+        "chunk_index": 6,
+        "text": "Community-wide vaccination is the most effective way to prevent measles. All children should be vaccinated against measles. The vaccine is safe, effective and inexpensive.\nChildren should receive two doses of the vaccine to ensure they are immune. The first dose is usually given at 9 months of age in countries where measles is common and 12\u201315 months in other countries. A second dose should be given later in childhood, usually at 15\u201318 months.\nThe measles vaccine is given alone or often combined with vaccines for mumps, rubella and/or varicella.\nRoutine measles vaccination, combined with mass immunization campaigns in countries with high case rates are crucial for reducing global measles deaths. The measles vaccine has been in use for about 60 years and costs less than US$ 1 per child. The measles vaccine is also used in emergencies to stop outbreaks from spreading. The risk of measles outbreaks is particularly high amongst refugees, who should be vaccinated as soon as possible.\nCombining vaccines slightly increases the cost but allows for shared delivery and administration costs and importantly, adds the benefit of protection against rubella, the most common vaccine preventable infection that can infect babies in the womb.\nIn 2025, 77% of children received both doses of the measles vaccine, and about 84% of the world's children received one dose of measles vaccine by their first birthday. Two doses of the vaccine are recommended to ensure immunity and prevent outbreaks, as not all children develop immunity from the first dose.\nApproximately 29 million infants remained under-protected against measles in 2025, according to WHO and UNICEF estimates.",
+        "chunk_type": "prose",
+        "heading": "Key facts > Prevention",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 325,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c7",
+        "chunk_index": 7,
+        "text": "In 2020, WHO and global stakeholders endorsed the Immunization Agenda 2021\u20132030. The Agenda aims to achieve the regional targets as a core indicator of impact, positioning measles as a tracer of a health system\u2019s ability to deliver essential childhood vaccines.\nWHO published the Measles and rubella strategic framework in 2020, establishing seven necessary strategic priorities to achieve and sustain the regional measles and rubella elimination goals.\nWithout sustained attention, hard-fought gains can easily be lost. Where children are unvaccinated, outbreaks occur. Based on current trends of measles vaccination coverage and incidence, the WHO Strategic Advisory Group of Experts on Immunization (SAGE) concluded that measles elimination is under threat, as the disease resurged in numerous countries that achieved, or were close to achieving, elimination.\nWHO continues to strengthen the Global Measles and Rubella Laboratory Network (GMRLN) to ensure timely diagnosis of measles and track the virus\u2019 spread to assist countries in coordinating targeted vaccination activities and reduce deaths from this vaccine-preventable disease.",
+        "chunk_type": "prose",
+        "heading": "Key facts > WHO response",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 214,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-834f9dd51adf4f21ab72b70007c7f4d6-c8",
+        "chunk_index": 8,
+        "text": "The Immunization Agenda 2030 Measles & Rubella Partnership (M&RP) is a partnership led by the American Red Cross, United Nations Foundation, Centers for Disease Control and Prevention (CDC), Gavi, the Vaccines Alliance, the Gates Foundation, UNICEF and WHO, to achieve the IA2030 measles and rubella specific targets. Launched in 2001, as the Measles and Rubella Initiative, the revitalized Partnership is committed to ensuring no child dies from measles or is born with congenital rubella syndrome. The Partnership helps countries plan, fund and measure efforts to permanently stop measles and rubella\nReferences",
+        "chunk_type": "prose",
+        "heading": "Key facts > WHO response > The IA2030 Measles & Rubella Partnership",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 132,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-d6f2349a10754e98837386f6f1783c5f",
+    "result_id": "d6f2349a10754e98837386f6f1783c5f",
+    "source_url": "https://www.who.int/europe/news/item/11-02-2026-measles-cases-dropped-in-europe-and-central-asia-in-2025-compared-to-the-previous-year--but-the-risk-of-outbreaks-remains---unicef-and-who",
+    "domain": "who.int",
+    "fetched_at": "2026-08-26T09:36:35.745681+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/europe/news/item/11-02-2026-measles-cases-dropped-in-europe-and-central-asia-in-2025-compared-to-the-previous-year--but-the-risk-of-outbreaks-remains---unicef-and-who",
+    "title": "Measles cases dropped in Europe and Central Asia in 2025 compared to the previous year, but the risk of outbreaks remains \u2013 UNICEF and WHO",
+    "published_date": "2026-02-11T00:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 3978,
+    "token_count": 778,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-d6f2349a10754e98837386f6f1783c5f-c0",
+        "chunk_index": 0,
+        "text": "Copenhagen/Geneva, 11 February 2026\nMeasles cases across Europe and Central Asia declined significantly in 2025 compared to 2024, according to preliminary data reported by 53 countries in the WHO European Region, but the risk of outbreaks remains warn the United Nations Children\u2019s Fund (UNICEF) and WHO.\nCountries in Europe and Central Asia reported 33 998 measles cases in 2025 \u2013 a nearly 75% drop compared to 127 412 in 2024. The overall decreasing trend in cases reflects both outbreak response measures and the gradual decline in the number of people susceptible to measles infection, as the virus made its way through under-vaccinated communities.\nMany cases could have been prevented with higher routine vaccination coverage at community level and more timely response to outbreaks.\n\u201cWhile cases have reduced, the conditions that led to the resurgence of this deadly disease in recent years remain and must be addressed. Until all children are reached with vaccination, and hesitancy fuelled by the spread of misinformation is addressed, children will remain at risk of death or serious illness from measles and other vaccine-preventable diseases,\u201d said UNICEF Regional Director for Europe and Central Asia, Regina De Dominicis.\nThe number of cases in 2025 still exceeded what has been reported for most years since 2000, and some countries reported more cases in 2025 than in 2024. Measles cases continue to be detected in 2026 in the Region.\n\u201cMeasles cases fell by nearly 75% last year, but the risk of outbreaks remains. Over 200 000 people in our region fell ill with measles in the past 3 years. Unless every community reaches 95% vaccination coverage, closes immunity gaps across all ages, strengthens disease surveillance and ensures timely outbreak response, this highly contagious virus will keep spreading. In today\u2019s environment of rampant fake news, it\u2019s also crucial that people rely on verified health information from reliable sources such as WHO, UNICEF and national health agencies. Eliminating measles is essential for national and regional health security,\u201d said WHO Regional Director for Europe, Dr Hans Henri P. Kluge.\nBased on country reporting for 2024, the European Regional Verification Commission for Measles and Rubella Elimination concluded at its September 2025 meeting that the number of countries with continuing or re-established endemic measles transmission increased to 19, from 12 the previous year. This represents the most significant setback in measles elimination in the Region in recent years.\nOutbreak preparedness and response, and achievement of measles elimination, remain public health priorities across Europe and Central Asia. UNICEF and WHO work together with governments and with the support of partners, including Gavi, the Vaccine Alliance, and the European Union, to prevent and respond to measles outbreaks \u2013 by engaging with communities, training health-care workers, strengthening immunization programmes and disease surveillance systems, and initiating measles vaccination catch-up campaigns.\nMeasles is one of the most contagious viruses affecting people. For every person who has measles, up to 18 other unvaccinated people will be infected. This makes measles around 12 times more contagious than influenza. As well as hospitalization and death, measles can cause long-term, debilitating health complications. It can also damage the immune system by \u201cerasing\u201d its memory of how to fight infections for months to even years, leaving measles survivors vulnerable to other diseases and death.\nTwo doses of measles-containing vaccine provide up to 97% life-long protection against measles. A vaccination rate of 95% with 2 doses of the measles vaccine in every community each year is needed to prevent measles outbreaks and achieve herd immunity, which protects infants too young for measles vaccination and other people for whom it is not recommended due to medical conditions, like those who are immunocompromised.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 778,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "11 February 2026"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-7925521d46e447aaab0ac7a07447807f",
+    "result_id": "7925521d46e447aaab0ac7a07447807f",
+    "source_url": "https://theapopkavoice.com/stories/why-millions-of-people-around-the-world-will-contract-measles-in2026,183630",
+    "domain": "theapopkavoice.com",
+    "fetched_at": "2026-08-26T09:36:35.961759+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://theapopkavoice.com/stories/why-millions-of-people-around-the-world-will-contract-measles-in2026,183630",
+    "title": "Why millions of people around the world will contract measles in\u00a02026 | The Apopka Voice - The Apopka Voice",
+    "published_date": "2026-08-24T19:02:00-04:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 46,
+    "token_count": 10,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-7925521d46e447aaab0ac7a07447807f-c0",
+        "chunk_index": 0,
+        "text": "By Kathryn H. Jacobsen, University of Richmond",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 10,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

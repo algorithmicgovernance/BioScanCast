@@ -1,0 +1,662 @@
+[
+  {
+    "id": "doc-0f67db9cd9974e6f9497ef39e646c7e7",
+    "result_id": "0f67db9cd9974e6f9497ef39e646c7e7",
+    "source_url": "https://www.who.int/activities/tracking-SARS-CoV-2-variants",
+    "domain": "who.int",
+    "fetched_at": "2026-08-11T23:20:46.298366+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://who.int/activities/tracking-SARS-CoV-2-variants",
+    "title": "Tracking SARS-CoV-2 variants",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 2140,
+    "token_count": 428,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-0f67db9cd9974e6f9497ef39e646c7e7-c0",
+        "chunk_index": 0,
+        "text": "All viruses, including SARS-CoV-2, the virus that causes COVID-19, change over time. Most changes have little to no impact on the virus\u2019s properties. However, some changes may affect the virus\u2019s properties, such as how easily it spreads, the associated disease severity, or the performance of vaccines, therapeutic medicines, diagnostic tools, or other public health and social measures.\nIn June 2020, the WHO Virus Evolution Working Group was established with a specific focus on SARS-CoV-2 variants, their phenotype and their impact on countermeasures. This later became the Technical Advisory Group on SARS-CoV-2 Virus Evolution. In late 2020, the emergence of variants that posed an increased risk to global public health prompted WHO to characterize some as variants of interest (VOIs) and variants of concern (VOCs) in order to prioritize global monitoring and research, and to inform and adjust the COVID-19 response. From May 2021 onwards, WHO began assigning simple, easy-to-say labels for key variants.\nConsiderable progress has been made in establishing and strengthening a global system to detect signals of potential VOIs or VOCs and rapidly assess the risk posed by SARS-CoV-2 variants to public health. More specifically, in 2024 WHO launched a WHO Coronavirus Network (CoViNet) to facilitate early and accurate detection of coronaviruses and variant tracking including coordinating risk evaluations. It remains critical that these systems are maintained, and data are shared, according to good principles and in a timely fashion, as SARS-CoV-2 continues to circulate at high levels around the world. While monitoring the circulation of SARS-CoV-2 globally, it also remains essential to monitor their spread in animal populations and chronically infected individuals, which are crucial aspects of the global strategy to reduce the occurrence of mutations that have negative public health implications. In March 2023, WHO updated its tracking system and working definitions for variants of concern, variants of interest and variants under monitoring. They can be found here. The previous working definitions can be found here.",
+        "chunk_type": "prose",
+        "heading": "Tracking SARS-CoV-2 variants",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 428,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-9766f17b24c54bbbab9a9be77ba790f5",
+    "result_id": "9766f17b24c54bbbab9a9be77ba790f5",
+    "source_url": "https://ourworldindata.org/coronavirus",
+    "domain": "ourworldindata.org",
+    "fetched_at": "2026-08-11T23:20:46.576478+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://ourworldindata.org/coronavirus",
+    "title": "Our World in Data \u2014 COVID-19 summary",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 2781,
+    "token_count": 1113,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-9766f17b24c54bbbab9a9be77ba790f5-c0",
+        "chunk_index": 0,
+        "text": "CSV source: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv\nCutoff: 2026-08-11; locations with usable rows: 246; region hint: world\nOur World in Data \u2014 COVID-19 (World). As of 2024-08-04, World: cumulative confirmed cases (World): 775,866,783; cumulative deaths (World): 7,057,132. Source: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv.\nLatest total_cases (2024-08-04): 775,866,783; delta_4_rows: 47169.0; delta_12_rows: 103185.0\nTrend summary (total_cases, World): points=1674, span_days=1673, delta_7_rows=47,169, delta_30_rows=248,883, recent_increment_stats=n=1673, mean=463,757.79, std=2,189,988.44, min=0, median=0, max=44,236,227.\nLinear fit on recent cumulative trend (total_cases, last 30 rows): intercept=775635242.116129, slope=7230.667853 per row, R^2=0.945095.\nIncident trend stats (new_cases, World): n=30, mean=8,296.10, std=18,930.51, min=0, median=0, max=56,016.\nExponential fit on recent new_cases (last 30 rows): a=47669.550427, b=0.002704, R^2=0.129916.\nRegion/question-target focus: World trend statistics and model-fit outputs are included in this section.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 387,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9766f17b24c54bbbab9a9be77ba790f5-c1",
+        "chunk_index": 1,
+        "text": "date\tnew_cases\ttotal_cases\n2024-07-20\t0\t775711519\n2024-07-21\t52079\t775763598\n2024-07-22\t0\t775763598\n2024-07-23\t0\t775763598\n2024-07-24\t0\t775763598\n2024-07-25\t0\t775763598\n2024-07-26\t0\t775763598\n2024-07-27\t0\t775763598\n2024-07-28\t56016\t775819614\n2024-07-29\t0\t775819614\n2024-07-30\t0\t775819614\n2024-07-31\t0\t775819614\n2024-08-01\t0\t775819614\n2024-08-02\t0\t775819614\n2024-08-03\t0\t775819614\n2024-08-04\t47169\t775866783",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": null,
+        "table_data": [
+          [
+            "date",
+            "new_cases",
+            "total_cases"
+          ],
+          [
+            "2024-07-20",
+            "0",
+            "775711519"
+          ],
+          [
+            "2024-07-21",
+            "52079",
+            "775763598"
+          ],
+          [
+            "2024-07-22",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-23",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-24",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-25",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-26",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-27",
+            "0",
+            "775763598"
+          ],
+          [
+            "2024-07-28",
+            "56016",
+            "775819614"
+          ],
+          [
+            "2024-07-29",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-07-30",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-07-31",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-01",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-02",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-03",
+            "0",
+            "775819614"
+          ],
+          [
+            "2024-08-04",
+            "47169",
+            "775866783"
+          ]
+        ],
+        "token_count": 216,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9766f17b24c54bbbab9a9be77ba790f5-c2",
+        "chunk_index": 2,
+        "text": "Location\tDate\ttotal_cases\nHigh-income countries\t2024-08-04\t429,044,049\nAsia\t2024-08-04\t301,499,099\nEurope\t2024-08-04\t252,916,868\nUpper-middle-income countries\t2024-08-04\t251,753,518\nEuropean Union (27)\t2024-08-04\t185,822,587\nNorth America\t2024-08-04\t124,492,666\nUnited States\t2024-08-04\t103,436,829\nChina\t2024-08-04\t99,373,219\nLower-middle-income countries\t2024-08-04\t91,954,400\nSouth America\t2024-08-04\t68,809,418\nIndia\t2024-08-04\t45,041,748\nFrance\t2024-08-04\t38,997,490\nGermany\t2024-08-04\t38,437,756\nBrazil\t2024-08-04\t37,511,921\nSouth Korea\t2024-08-04\t34,571,873\nJapan\t2024-08-04\t33,803,572\nItaly\t2024-08-04\t26,781,078\nUnited Kingdom\t2024-08-04\t24,974,629\nRussia\t2024-08-04\t24,268,728\nTurkey\t2024-08-04\t17,004,718\nOceania\t2024-08-04\t15,003,352\nSpain\t2024-08-04\t13,980,340\nAfrica\t2024-08-04\t13,145,380\nAustralia\t2024-08-04\t11,861,161\nVietnam\t2024-08-04\t11,624,000\nArgentina\t2024-08-04\t10,101,218\nNetherlands\t2024-08-04\t8,640,008\nIran\t2024-08-04\t7,627,863\nMexico\t2024-08-04\t7,619,458\nIndonesia\t2024-08-04\t6,829,399",
+        "chunk_type": "table",
+        "heading": null,
+        "page_number": null,
+        "table_data": [
+          [
+            "Location",
+            "Date",
+            "total_cases"
+          ],
+          [
+            "High-income countries",
+            "2024-08-04",
+            "429,044,049"
+          ],
+          [
+            "Asia",
+            "2024-08-04",
+            "301,499,099"
+          ],
+          [
+            "Europe",
+            "2024-08-04",
+            "252,916,868"
+          ],
+          [
+            "Upper-middle-income countries",
+            "2024-08-04",
+            "251,753,518"
+          ],
+          [
+            "European Union (27)",
+            "2024-08-04",
+            "185,822,587"
+          ],
+          [
+            "North America",
+            "2024-08-04",
+            "124,492,666"
+          ],
+          [
+            "United States",
+            "2024-08-04",
+            "103,436,829"
+          ],
+          [
+            "China",
+            "2024-08-04",
+            "99,373,219"
+          ],
+          [
+            "Lower-middle-income countries",
+            "2024-08-04",
+            "91,954,400"
+          ],
+          [
+            "South America",
+            "2024-08-04",
+            "68,809,418"
+          ],
+          [
+            "India",
+            "2024-08-04",
+            "45,041,748"
+          ],
+          [
+            "France",
+            "2024-08-04",
+            "38,997,490"
+          ],
+          [
+            "Germany",
+            "2024-08-04",
+            "38,437,756"
+          ],
+          [
+            "Brazil",
+            "2024-08-04",
+            "37,511,921"
+          ],
+          [
+            "South Korea",
+            "2024-08-04",
+            "34,571,873"
+          ],
+          [
+            "Japan",
+            "2024-08-04",
+            "33,803,572"
+          ],
+          [
+            "Italy",
+            "2024-08-04",
+            "26,781,078"
+          ],
+          [
+            "United Kingdom",
+            "2024-08-04",
+            "24,974,629"
+          ],
+          [
+            "Russia",
+            "2024-08-04",
+            "24,268,728"
+          ],
+          [
+            "Turkey",
+            "2024-08-04",
+            "17,004,718"
+          ],
+          [
+            "Oceania",
+            "2024-08-04",
+            "15,003,352"
+          ],
+          [
+            "Spain",
+            "2024-08-04",
+            "13,980,340"
+          ],
+          [
+            "Africa",
+            "2024-08-04",
+            "13,145,380"
+          ],
+          [
+            "Australia",
+            "2024-08-04",
+            "11,861,161"
+          ],
+          [
+            "Vietnam",
+            "2024-08-04",
+            "11,624,000"
+          ],
+          [
+            "Argentina",
+            "2024-08-04",
+            "10,101,218"
+          ],
+          [
+            "Netherlands",
+            "2024-08-04",
+            "8,640,008"
+          ],
+          [
+            "Iran",
+            "2024-08-04",
+            "7,627,863"
+          ],
+          [
+            "Mexico",
+            "2024-08-04",
+            "7,619,458"
+          ],
+          [
+            "Indonesia",
+            "2024-08-04",
+            "6,829,399"
+          ]
+        ],
+        "token_count": 476,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9766f17b24c54bbbab9a9be77ba790f5-c3",
+        "chunk_index": 3,
+        "text": "Note: this custom scraper summarizes OWID CSV rows into compact HTML so the existing HTML extraction pipeline can process them deterministically. Figures are cumulative totals as of the cutoff.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 34,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "date",
+          "new_cases",
+          "total_cases"
+        ],
+        [
+          "2024-07-20",
+          "0",
+          "775711519"
+        ],
+        [
+          "2024-07-21",
+          "52079",
+          "775763598"
+        ],
+        [
+          "2024-07-22",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-23",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-24",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-25",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-26",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-27",
+          "0",
+          "775763598"
+        ],
+        [
+          "2024-07-28",
+          "56016",
+          "775819614"
+        ],
+        [
+          "2024-07-29",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-07-30",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-07-31",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-01",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-02",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-03",
+          "0",
+          "775819614"
+        ],
+        [
+          "2024-08-04",
+          "47169",
+          "775866783"
+        ]
+      ],
+      [
+        [
+          "Location",
+          "Date",
+          "total_cases"
+        ],
+        [
+          "High-income countries",
+          "2024-08-04",
+          "429,044,049"
+        ],
+        [
+          "Asia",
+          "2024-08-04",
+          "301,499,099"
+        ],
+        [
+          "Europe",
+          "2024-08-04",
+          "252,916,868"
+        ],
+        [
+          "Upper-middle-income countries",
+          "2024-08-04",
+          "251,753,518"
+        ],
+        [
+          "European Union (27)",
+          "2024-08-04",
+          "185,822,587"
+        ],
+        [
+          "North America",
+          "2024-08-04",
+          "124,492,666"
+        ],
+        [
+          "United States",
+          "2024-08-04",
+          "103,436,829"
+        ],
+        [
+          "China",
+          "2024-08-04",
+          "99,373,219"
+        ],
+        [
+          "Lower-middle-income countries",
+          "2024-08-04",
+          "91,954,400"
+        ],
+        [
+          "South America",
+          "2024-08-04",
+          "68,809,418"
+        ],
+        [
+          "India",
+          "2024-08-04",
+          "45,041,748"
+        ],
+        [
+          "France",
+          "2024-08-04",
+          "38,997,490"
+        ],
+        [
+          "Germany",
+          "2024-08-04",
+          "38,437,756"
+        ],
+        [
+          "Brazil",
+          "2024-08-04",
+          "37,511,921"
+        ],
+        [
+          "South Korea",
+          "2024-08-04",
+          "34,571,873"
+        ],
+        [
+          "Japan",
+          "2024-08-04",
+          "33,803,572"
+        ],
+        [
+          "Italy",
+          "2024-08-04",
+          "26,781,078"
+        ],
+        [
+          "United Kingdom",
+          "2024-08-04",
+          "24,974,629"
+        ],
+        [
+          "Russia",
+          "2024-08-04",
+          "24,268,728"
+        ],
+        [
+          "Turkey",
+          "2024-08-04",
+          "17,004,718"
+        ],
+        [
+          "Oceania",
+          "2024-08-04",
+          "15,003,352"
+        ],
+        [
+          "Spain",
+          "2024-08-04",
+          "13,980,340"
+        ],
+        [
+          "Africa",
+          "2024-08-04",
+          "13,145,380"
+        ],
+        [
+          "Australia",
+          "2024-08-04",
+          "11,861,161"
+        ],
+        [
+          "Vietnam",
+          "2024-08-04",
+          "11,624,000"
+        ],
+        [
+          "Argentina",
+          "2024-08-04",
+          "10,101,218"
+        ],
+        [
+          "Netherlands",
+          "2024-08-04",
+          "8,640,008"
+        ],
+        [
+          "Iran",
+          "2024-08-04",
+          "7,627,863"
+        ],
+        [
+          "Mexico",
+          "2024-08-04",
+          "7,619,458"
+        ],
+        [
+          "Indonesia",
+          "2024-08-04",
+          "6,829,399"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "2026-08-11",
+      "2024-08-04",
+      "2024-07-20",
+      "2024-07-21",
+      "2024-07-22",
+      "2024-07-23",
+      "2024-07-24",
+      "2024-07-25",
+      "2024-07-26",
+      "2024-07-27",
+      "2024-07-28",
+      "2024-07-29",
+      "2024-07-30",
+      "2024-07-31",
+      "2024-08-01",
+      "2024-08-02",
+      "2024-08-03"
+    ],
+    "fetch_strategy": "custom:ourworldindata_covid",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-cbbad8126f7d4c6184e3e1d3d76328e8",
+    "result_id": "cbbad8126f7d4c6184e3e1d3d76328e8",
+    "source_url": "https://www.cdc.gov/covid/php/surveillance/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-11T23:20:52.419588+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/covid/php/surveillance/index.html",
+    "title": "Surveillance and Data Analytics",
+    "published_date": null,
+    "language": "en",
+    "page_count": null,
+    "char_count": 440,
+    "token_count": 87,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-cbbad8126f7d4c6184e3e1d3d76328e8-c0",
+        "chunk_index": 0,
+        "text": "This page provides an overview of COVID-19 data and trends over time. Other COVID-19 related data visualizations (previously on CDC\u2019s COVID Data Tracker) are provided in the resources section at the bottom of this page.",
+        "chunk_type": "prose",
+        "heading": "Purpose",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 46,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-cbbad8126f7d4c6184e3e1d3d76328e8-c1",
+        "chunk_index": 1,
+        "text": "This page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.",
+        "chunk_type": "prose",
+        "heading": "Purpose > COVID-19 Data and Visualizations",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 41,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

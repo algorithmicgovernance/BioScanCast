@@ -1,0 +1,191 @@
+{
+  "question_id": "bfg_q8",
+  "options": [
+    "H5N1",
+    "H5N5",
+    "Another H5Nx",
+    "No human H5 cases reported in the period"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "H5N1": 0.9904343571596286,
+        "H5N5": 0.001172054621110839,
+        "Another H5Nx": 0.0029533925775282114,
+        "No human H5 cases reported in the period": 0.005440195641732323
+      }
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "H5N1": 0.6,
+        "H5N5": 0.2,
+        "Another H5Nx": 0.15,
+        "No human H5 cases reported in the period": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "H5N1",
+      "probability": 0.9904343571596286,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "H5N5",
+      "probability": 0.001172054621110839,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "Another H5Nx",
+      "probability": 0.0029533925775282114,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast",
+      "option": "No human H5 cases reported in the period",
+      "probability": 0.005440195641732323,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "H5N1",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "H5N5",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "Another H5Nx",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q8",
+      "forecast_source": "bioscancast_baseline",
+      "option": "No human H5 cases reported in the period",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.85,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Human cases of avian influenza H5 subtypes reported globally",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "H5N1 has been the predominant subtype historically with a large majority of cases.",
+        "In 2026, H5N1 cases have already been reported consistently, indicating continued circulation."
+      ],
+      "drivers_down": [
+        "Emergence of new H5 subtypes could shift the predominance, though no significant evidence of this is noted.",
+        "No major outbreaks of other H5 subtypes reported recently."
+      ],
+      "why_might_be_wrong": "New strains could emerge or existing surveillance may miss cases of less common H5 subtypes.",
+      "rationale": "The historical prevalence and recent data both strongly suggest that H5N1 will remain the predominant subtype. Other H5 subtypes have not shown significant case numbers recently. Thus, the likelihood of H5N1 being the predominant subtype remains high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Human cases of avian influenza H5 subtype infections reported to WHO in prior years.",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "H5N1 has historically been the most reported H5 subtype in humans.",
+        "Recent reports indicate ongoing cases of H5N1, with 9 cases reported in 2026 so far."
+      ],
+      "drivers_down": [
+        "Emergence of other H5Nx subtypes could shift prevalence, though current evidence does not indicate this.",
+        "The number of human H5 cases is generally low, increasing the chance of no cases being reported in a specific period."
+      ],
+      "why_might_be_wrong": "The emergence of a new H5Nx subtype or a significant underreporting of cases could skew the expected subtype distribution.",
+      "rationale": "The historical predominance of H5N1 in human cases, coupled with recent reports of H5N1 incidents, makes it the most likely predominant subtype. Although there is a chance of no cases or other subtypes emerging, the evidence strongly suggests H5N1 will continue to be the most reported subtype.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.85,
+        0.01,
+        0.04,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Historical human cases of avian influenza H5 subtypes globally",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "H5N1 continues to have reported cases in 2026, including recent incidents in Cambodia and Bangladesh.",
+        "H5N1 has the highest cumulative number of confirmed human cases historically, indicating a higher likelihood of being reported again."
+      ],
+      "drivers_down": [
+        "No reports or evidence of H5N5 cases in humans in 2026, suggesting it is less predominant.",
+        "The possibility of no cases being reported cannot be dismissed given the low incidence rate so far in 2026."
+      ],
+      "why_might_be_wrong": "The emergence of a new H5Nx subtype or an under-reporting of cases could skew the forecast.",
+      "rationale": "Given the historical dominance of H5N1 in human cases and its continued presence in 2026, it is likely to remain the predominant subtype. No evidence suggests a rise in H5N5 cases, and while the possibility of no reported cases exists, recent incidents make this less likely. Therefore, H5N1 is most probable to be the predominant subtype.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "H5N1 has historically been the most prevalent and concerning subtype of avian influenza in humans, leading to severe cases and outbreaks. Given its established presence and the likelihood of continued transmission from birds to humans, it is reasonable to predict that H5N1 will remain the predominant subtype. H5N5 is less common and has not shown the same level of human infection, hence a lower probability. 'Another H5Nx' could occur but is less likely than H5N1 and H5N5, thus assigned a smaller probability. The option of 'No human H5 cases reported in the period' is the least likely, as avian influenza viruses continue to circulate in bird populations, making human cases possible.",
+  "evidence_record_ids": [
+    "ins-37c662d8118a",
+    "ins-de4a648997db",
+    "ins-6b0ca1285b2f",
+    "ins-c78898c9b521",
+    "ins-f075a36d50a4",
+    "ins-4ffd70bccec6",
+    "ins-6f144a13d4f4",
+    "ins-99233042027f",
+    "ins-ce7f1d0ee23f",
+    "ins-159464d55a58"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5084,
+    "total_output_tokens": 850,
+    "total_tokens": 5934,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4872,
+        "output_tokens": 680,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 212,
+        "output_tokens": 170,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

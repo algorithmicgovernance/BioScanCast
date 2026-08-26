@@ -1,0 +1,319 @@
+{
+  "records": [
+    {
+      "id": "ins-37c662d8118a",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1002.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:22.072274+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c2b068297abc4444a078d1b271312b4a",
+          "chunk_id": "doc-c2b068297abc4444a078d1b271312b4a-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "the cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003 is 1002 cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-de4a648997db",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 9.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "confirmed human A(H5N1) cases reported to WHO globally in 2026 (year-to-date)",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:22.116128+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c2b068297abc4444a078d1b271312b4a",
+          "chunk_id": "doc-c2b068297abc4444a078d1b271312b4a-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "In 2026 (year-to-date) 9 confirmed human A(H5N1) cases and 2 deaths have been reported to WHO globally"
+        }
+      ]
+    },
+    {
+      "id": "ins-6b0ca1285b2f",
+      "question_id": "bfg_q8",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "deaths",
+      "metric_value": 479.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative number of confirmed deaths from avian influenza A(H5N1) reported to WHO since 2003",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:22.115981+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c2b068297abc4444a078d1b271312b4a",
+          "chunk_id": "doc-c2b068297abc4444a078d1b271312b4a-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "including 479 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-c78898c9b521",
+      "question_id": "bfg_q8",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "confirmed deaths from avian influenza A(H5N1) reported to WHO globally in 2026 (year-to-date)",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:22.116182+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c2b068297abc4444a078d1b271312b4a",
+          "chunk_id": "doc-c2b068297abc4444a078d1b271312b4a-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "In 2026 (year-to-date) 9 confirmed human A(H5N1) cases and 2 deaths have been reported to WHO globally"
+        }
+      ]
+    },
+    {
+      "id": "ins-ce7f1d0ee23f",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed human case of A(H5N1) virus infection in a child from Sylhet Division.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:25.781568+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dfdbff2a033647c486a0fb7ac90b0be6",
+          "chunk_id": "doc-dfdbff2a033647c486a0fb7ac90b0be6-c1",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "The case included in the risk assessment of 7 July 2026 in a child from Sylhet Division was confirmed as an A(H5N1) virus infection."
+        }
+      ]
+    },
+    {
+      "id": "ins-f075a36d50a4",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "unknown",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 8.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Eight human cases of A(H9N2) reported during the assessment period.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:25.781688+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dfdbff2a033647c486a0fb7ac90b0be6",
+          "chunk_id": "doc-dfdbff2a033647c486a0fb7ac90b0be6-c1",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "influenza A(H9N2) in eight humans were officially reported."
+        }
+      ]
+    },
+    {
+      "id": "ins-99233042027f",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Cambodia",
+      "iso_country_code": "KH",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "One laboratory-confirmed human case of avian influenza A(H5N1) infection in a child reported on 10 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:24.269371+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dfdbff2a033647c486a0fb7ac90b0be6",
+          "chunk_id": "doc-dfdbff2a033647c486a0fb7ac90b0be6-c2",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "one laboratory-confirmed human case of avian influenza A(H5N1) infection detected in a child in Phnom Penh"
+        }
+      ]
+    },
+    {
+      "id": "ins-6f144a13d4f4",
+      "question_id": "bfg_q8",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "South Australia",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "suspected_cases",
+      "metric_value": 7.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-27T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Seven suspected new cases of H5 bird flu reported in South Australia; verification pending from CSIRO.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:32.971924+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-85a4cdf875834d089a4753400456f671",
+          "chunk_id": "doc-85a4cdf875834d089a4753400456f671-c0",
+          "source_url": "https://www.theguardian.com/australia-news/2026/jul/27/h5-bird-flu-suspected-new-cases-south-australia",
+          "quote": "South Australia has reported seven new suspected cases of deadly H5 bird flu"
+        }
+      ]
+    },
+    {
+      "id": "ins-4ffd70bccec6",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "South Australia",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 14.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-27T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases in South Australia reaches 14, including 10 in local greater crested terns.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:32.972287+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-85a4cdf875834d089a4753400456f671",
+          "chunk_id": "doc-85a4cdf875834d089a4753400456f671-c0",
+          "source_url": "https://www.theguardian.com/australia-news/2026/jul/27/h5-bird-flu-suspected-new-cases-south-australia",
+          "quote": "If the CSIRO verifies the seven suspected cases, it will take the total number of cases in SA to 14"
+        }
+      ]
+    },
+    {
+      "id": "ins-159464d55a58",
+      "question_id": "bfg_q8",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "hospitalizations",
+      "metric_value": 804.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "week",
+      "surveillance_method": "NHSN",
+      "data_quality": null,
+      "event_date": "2026-06-13T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Weekly number of laboratory-confirmed influenza-associated hospitalizations reported.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:00:36.076180+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-eafb051ea2f6489b9a1a12328819d05f",
+          "chunk_id": "doc-eafb051ea2f6489b9a1a12328819d05f-c12",
+          "source_url": "https://www.cdc.gov/fluview/surveillance/2026-week-23.html",
+          "quote": "804 (0.2 per 100,000 population) laboratory-confirmed influenza-associated hospitalizations were reported."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 100758,
+    "total_output_tokens": 1410,
+    "total_tokens": 102168,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 100758,
+        "output_tokens": 1410,
+        "calls": 47
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

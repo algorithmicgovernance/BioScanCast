@@ -1,0 +1,109 @@
+{
+  "records": [
+    {
+      "id": "ins-f4460fa9f113",
+      "question_id": "bfg_q20",
+      "event_type": "outbreak_declared",
+      "confidence": 0.85,
+      "location": "Brasil",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": "outbreaks",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:00:37.026750+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-70e15d2e2261470d9af481d923d8d7d0",
+          "chunk_id": "doc-70e15d2e2261470d9af481d923d8d7d0-c0-p0",
+          "source_url": "https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    },
+    {
+      "id": "ins-4df6b54e7d2e",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Latin America and the Caribbean",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7.0,
+      "metric_unit": "countries",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "In 2024, locally transmitted Oropouche virus disease was reported in seven countries in Latin America and the Caribbean.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:00:46.768924+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8347b67f0a9b4caabb9165c0ae911166",
+          "chunk_id": "doc-8347b67f0a9b4caabb9165c0ae911166-c2",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/oropouche-virus-disease",
+          "quote": "In 2024, locally transmitted Oropouche virus disease was reported in seven countries in Latin America and the Caribbean: Brazil, Bolivia, Colombia, Cuba, Guyana, Peru and the Dominican Republic"
+        }
+      ]
+    },
+    {
+      "id": "ins-58674f2d1b9a",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Oropouche virus has been identified in many countries, including Argentina, Bolivia, Brazil, Colombia, Ecuador, French Guiana, Panama, and Peru, with Cuba reporting its first case in June 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T23:00:50.042872+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3a717112a3104709b19a5afe731547be",
+          "chunk_id": "doc-3a717112a3104709b19a5afe731547be-c1",
+          "source_url": "https://www.cdc.gov/oropouche/hcp/clinical-overview/index.html",
+          "quote": "In the last 25 years, cases of Oropouche have been identified in many countries, including Argentina, Bolivia, Brazil, Colombia, Ecuador, French Guiana, Panama, and Peru."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 119766,
+    "total_output_tokens": 672,
+    "total_tokens": 120438,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 119766,
+        "output_tokens": 672,
+        "calls": 56
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

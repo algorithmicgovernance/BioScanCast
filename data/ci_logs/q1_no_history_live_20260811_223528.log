@@ -1,0 +1,31 @@
+RUN_ID=20260811_223528
+=== Pipeline run: bfg_q1 (20260811_223528) ===
+question:  How many cumulative laboratory-confirmed Bundibugyo virus disease cases (DRC and Uganda combined) will there be since the outbreak declaration on 14 May 2026 to 31 October 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2026-11-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q1/20260811_223528
+
+[search] starting...
+[search] 50 results (12.5s)
+[filter] starting...
+[filter] 9 docs (6.9s)
+[extract] starting...
+[extract] 9/9 success, 2 thin (3.2s)
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/ebola-outbreak-drc-and-region-situation-report-11-august-6-2026
+  ! thin extraction: reliefweb.int (157 chars < 500) https://reliefweb.int/report/democratic-republic-congo/ebola-bundibugyo-virus-disease-outbreak-democratic-republic-congo-uganda-weekly-external-situation-report-12-data-02-august-2026
+[insight] starting...
+[insight] 5 records | in=92,151 out=781 (19.1s)
+[forecast] starting...
+[forecast] 2 distribution(s) over 5 options | in=4,171 out=940 (12.5s)
+
+=== Pipeline complete: bfg_q1 ===
+  search     12.54s  $0.0001
+  filter      6.95s  $0.0012
+  extract     3.25s
+  insight    19.05s  $0.0143
+  forecast   12.54s  $0.0184
+  total cost:  $0.0339
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q1/20260811_223528
+RC=0

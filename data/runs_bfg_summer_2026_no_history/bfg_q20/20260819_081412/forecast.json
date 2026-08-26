@@ -1,0 +1,210 @@
+{
+  "question_id": "bfg_q20",
+  "options": [
+    "8 or fewer",
+    "9 to 11",
+    "12 to 14",
+    "15 to 17",
+    "18 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "8 or fewer": 0.1838890261149031,
+        "9 to 11": 0.2830227956475844,
+        "12 to 14": 0.2856929797162124,
+        "15 to 17": 0.16707426807461873,
+        "18 or more": 0.0803209304466812
+      }
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "8 or fewer": 0.25,
+        "9 to 11": 0.35,
+        "12 to 14": 0.2,
+        "15 to 17": 0.1,
+        "18 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "8 or fewer",
+      "probability": 0.1838890261149031,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "9 to 11",
+      "probability": 0.2830227956475844,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "12 to 14",
+      "probability": 0.2856929797162124,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "15 to 17",
+      "probability": 0.16707426807461873,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast",
+      "option": "18 or more",
+      "probability": 0.0803209304466812,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8 or fewer",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "9 to 11",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "12 to 14",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 17",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q20",
+      "forecast_source": "bioscancast_baseline",
+      "option": "18 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.2,
+        0.35,
+        0.25,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious diseases in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Oropouche virus has been identified as causing large outbreaks in new areas.",
+        "Cuba reported its first confirmed case in 2024, indicating geographic expansion.",
+        "There were already 7 countries reporting cases by early 2024."
+      ],
+      "drivers_down": [
+        "Oropouche virus is not as widely recognized or surveilled as some other viruses, which might slow down the detection of cases.",
+        "Limited public health infrastructure in some regions may impact reporting."
+      ],
+      "why_might_be_wrong": "The spread of Oropouche virus could be underestimated if there is significant underreporting or lack of surveillance in some areas.",
+      "rationale": "The base rate for new infectious diseases spreading to multiple countries in a region like the Americas is moderate, given historical patterns. The current evidence shows that by early 2024, Oropouche had already been reported in 7 countries, and there are indications of outbreaks in new areas. This suggests a potential for further spread, particularly as the virus has moved into the Caribbean with Cuba's case. However, surveillance and reporting limitations might slow down the detection of new cases. Balancing these factors, the most likely scenario is for the virus to be reported in 9 to 11 countries by the end of 2026, given the current rate of spread and geographic expansion.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.25,
+        0.3,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious diseases in the Americas",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Oropouche virus has been identified in new areas, indicating potential spread.",
+        "There were already 7 countries with confirmed cases in 2024, showing a potential for increased distribution.",
+        "Cuba reported its first confirmed case, suggesting spread beyond South America.",
+        "Large outbreaks have been identified, which might lead to further spread."
+      ],
+      "drivers_down": [
+        "The spread might be limited to tropical areas where the vector is present.",
+        "The virus may not establish in new countries if effective control measures are implemented.",
+        "Lack of awareness and testing in some regions could lead to underreporting, affecting the perceived spread."
+      ],
+      "why_might_be_wrong": "The prediction might overestimate the spread due to unknown factors like vector control measures or underreporting in less monitored areas.",
+      "rationale": "Given the current evidence, the Oropouche virus is spreading to new areas and has caused outbreaks, suggesting a potential increase in the number of affected countries. With 7 countries already reporting cases in 2024 and new areas like Cuba being affected, it is reasonable to expect that the spread will continue. However, the spread may be limited by factors such as vector control, underreporting, or the virus not establishing in non-tropical areas. Thus, the most likely range is 12 to 14 countries, but there is a significant chance of either fewer or more countries being affected.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Emerging infectious diseases in the Americas",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Oropouche virus identified as causing large outbreaks in endemic and new areas",
+        "Increased geographic spread since 2024 with Cuba reporting its first case",
+        "Pre-existing presence in 7 countries by 2024 indicates potential for further spread"
+      ],
+      "drivers_down": [
+        "Limited mention of cases outside South America and the Caribbean",
+        "No evidence provided of control measures or interventions limiting spread",
+        "Potential underreporting or lack of diagnostic capacity in some regions"
+      ],
+      "why_might_be_wrong": "The spread of Oropouche virus could be significantly constrained by public health interventions, which have not been detailed in the evidence.",
+      "rationale": "The base rate for emerging infectious diseases spreading across the Americas suggests a moderate likelihood of increased spread. Given the specific evidence of Oropouche virus causing large outbreaks and its presence in new areas, there is a reasonable expectation for further spread. The number of countries reporting cases in 2024 was already seven, which supports the probability of more countries being affected by 2026. However, the lack of evidence on effective containment measures could either under- or overestimate the spread, leading to uncertainty. Balancing these factors, the probability of 12 to 14 countries being affected seems most consistent with the provided evidence.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Oropouche virus outbreaks in the Americas, it is reasonable to predict that the number of countries or territories reporting confirmed cases will likely remain moderate. The majority of countries may not experience outbreaks simultaneously, and the virus is primarily concentrated in certain areas. Therefore, the probabilities reflect a higher likelihood of reporting 9 to 11 cases, with a significant chance of 8 or fewer, and lower probabilities for higher ranges.",
+  "evidence_record_ids": [
+    "ins-4ded1967ed6e",
+    "ins-6097da00c7fc",
+    "ins-439ea97ca4cc"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3626,
+    "total_output_tokens": 1021,
+    "total_tokens": 4647,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3417,
+        "output_tokens": 905,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 116,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

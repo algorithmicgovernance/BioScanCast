@@ -1,0 +1,181 @@
+{
+  "question_id": "bfg_q12",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.053268687428058646,
+        "NO": 0.9467313125719414
+      }
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.053268687428058646,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9467313125719414,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q12",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for mpox and similar infectious disease outbreaks",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Recent history of PHEIC declaration for mpox in August 2024 due to an upsurge.",
+        "Continued presence of mpox cases globally, with new cases reported monthly.",
+        "Presence of mpox in multiple regions including Africa, Europe, and the Americas.",
+        "Recent deaths reported from mpox infections, indicating severity."
+      ],
+      "drivers_down": [
+        "The number of cases reported monthly is relatively low, with only 153 cases in the EU/EEA in July 2026.",
+        "Previous PHEIC for mpox was lifted in September 2025, indicating a perceived reduction in threat.",
+        "No recent reports of significant upsurge or international spread requiring a PHEIC.",
+        "Emergence of other public health concerns, like the Bundibugyo virus, which may divert attention."
+      ],
+      "why_might_be_wrong": "The situation could escalate quickly if there is a sudden increase in cases or severity, prompting a PHEIC declaration.",
+      "rationale": "The base rate for a PHEIC declaration for mpox is low, especially since the previous PHEIC was lifted recently. Although mpox cases continue to be reported globally, the numbers are not currently high enough to suggest an international emergency. However, the presence of mpox in multiple regions and recent deaths highlight the potential for a change in situation. Given this, the probability of a new PHEIC declaration is moderate but leans towards not being declared.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for mpox",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Current global cumulative cases of mpox are high, with 184,531 cases reported globally.",
+        "There are active cases across multiple continents, including significant numbers in Africa and the Americas.",
+        "Previous PHEIC was declared when there was an upsurge in DRC and potential for spread, indicating WHO's concern about spread potential."
+      ],
+      "drivers_down": [
+        "The number of cases reported monthly is relatively low compared to global cumulative cases, suggesting the situation might be under control.",
+        "The death rate remains low, indicating less severity in terms of mortality compared to other infectious diseases that have triggered PHEICs.",
+        "There is no recent evidence of a significant spike in cases or new concerning information about the virus's spread."
+      ],
+      "why_might_be_wrong": "There could be an under-reporting or sudden spike in cases after the last data point, which could trigger a PHEIC.",
+      "rationale": "The base rate for a PHEIC declaration for mpox is relatively low, given that it has been declared in response to specific upsurges and potential for spread, rather than ongoing cases. While there are substantial cumulative cases globally, the current monthly case numbers are relatively low, and the mortality rate is not alarmingly high. Without evidence of a new, rapidly spreading outbreak or significant mutation, it seems less likely that a PHEIC would be declared in the latter half of 2026. However, given the history of PHEIC declarations for mpox, there's a non-zero probability that a significant change in the situation could occur.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Previous WHO PHEIC declarations for mpox",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "There are ongoing cases of mpox globally, with notable numbers in regions such as Madagascar and EU/EEA.",
+        "The presence of different clades (Clade I and II) could indicate potential for further spread and concern.",
+        "WHO may be more sensitive to declaring PHEICs due to lessons learned from past outbreaks."
+      ],
+      "drivers_down": [
+        "The current number of cases and deaths globally does not seem to match the scale typically associated with a PHEIC.",
+        "The previous PHEIC for mpox was lifted recently, suggesting the situation may be under control.",
+        "Mpox has a relatively low fatality rate, especially for clade II, which might lower urgency."
+      ],
+      "why_might_be_wrong": "The situation could change rapidly, escalating to a level that justifies a PHEIC declaration.",
+      "rationale": "The base rate for a new PHEIC for mpox is low, considering the WHO recently lifted the prior PHEIC. While there are ongoing cases, they are not at a scale that usually prompts such declarations. However, the potential for spread and the presence of multiple clades maintain some probability for a declaration. Given the evidence, the probability for a new PHEIC declaration remains low but not negligible.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Considering the current global health landscape and the historical context of mpox outbreaks, it is plausible that the WHO may monitor the situation closely. However, given the relatively low incidence rates and the effectiveness of public health measures, the likelihood of a new Public Health Emergency of International Concern (PHEIC) being declared appears to be lower than the likelihood of it not being declared.",
+  "evidence_record_ids": [
+    "ins-fbeb8e19b849",
+    "ins-bc89bcdbe73f",
+    "ins-e9409af4fba1",
+    "ins-75afcd8a2052",
+    "ins-9068509e910b",
+    "ins-da378e3f0c4b",
+    "ins-bacc1c1d5cf1",
+    "ins-b2d19cb30631",
+    "ins-c8363c768682",
+    "ins-c19b53f53589",
+    "ins-f4bdbfc6294c",
+    "ins-10a666d27e2c",
+    "ins-dcb7c5c4e48f",
+    "ins-6216c26f873d",
+    "ins-8727ee43ea30",
+    "ins-83cc4eec455a",
+    "ins-124ea339826a",
+    "ins-f56025ebb089",
+    "ins-2f15e012afba",
+    "ins-003fd00d9ebd",
+    "ins-23a6e28189df",
+    "ins-78862e1ebe5a",
+    "ins-6e16ff9ee63e",
+    "ins-fc8d615a7c72",
+    "ins-0eef977af9f7",
+    "ins-4cde8f721982",
+    "ins-e112909af503",
+    "ins-8bcd067c3cb5",
+    "ins-dbad60a06e05",
+    "ins-3bfa063abe1d",
+    "ins-8079f4fcb77c",
+    "ins-fe6ee9595250"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 9686,
+    "total_output_tokens": 1027,
+    "total_tokens": 10713,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 9498,
+        "output_tokens": 937,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 188,
+        "output_tokens": 90,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

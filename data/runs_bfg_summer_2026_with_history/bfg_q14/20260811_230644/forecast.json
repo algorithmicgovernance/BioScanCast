@@ -1,0 +1,205 @@
+{
+  "question_id": "bfg_q14",
+  "options": [
+    "under 3,000",
+    "3,000 to 3,999",
+    "4,000 to 5,499",
+    "5,500 to 7,999",
+    "8,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 3,000": 0.9898841476141301,
+        "3,000 to 3,999": 0.00981181799024547,
+        "4,000 to 5,499": 0.0003040337948378567,
+        "5,500 to 7,999": 6.007865384430453e-10,
+        "8,000 or more": 1.2943553597258662e-18
+      }
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 3,000": 0.4,
+        "3,000 to 3,999": 0.3,
+        "4,000 to 5,499": 0.15,
+        "5,500 to 7,999": 0.1,
+        "8,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "under 3,000",
+      "probability": 0.9898841476141301,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 3,999",
+      "probability": 0.00981181799024547,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "4,000 to 5,499",
+      "probability": 0.0003040337948378567,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "5,500 to 7,999",
+      "probability": 6.007865384430453e-10,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast",
+      "option": "8,000 or more",
+      "probability": 1.2943553597258662e-18,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 3,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 3,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4,000 to 5,499",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,500 to 7,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q14",
+      "forecast_source": "bioscancast_baseline",
+      "option": "8,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.8,
+        0.15,
+        0.04,
+        0.01,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "US measles outbreaks from past years",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Current case count as of mid-2026 is already 2,465, suggesting the trend might continue upward.",
+        "Historically significant outbreaks can occur if vaccination rates drop or if there are public health system lapses."
+      ],
+      "drivers_down": [
+        "Historically, US measles cases rarely exceed 3,000 due to effective public health responses.",
+        "No reported deaths indicate that the current cases might be well-managed, possibly curbing further spread."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is a sudden change in vaccination rates, public health policy, or an unexpected outbreak that significantly increases cases.",
+      "rationale": "The current cumulative measles case count for 2026 is 2,465, which is already close to breaching the 3,000 mark. Historically, US measles outbreaks rarely exceed 3,000 due to strong public health infrastructure. However, given the current trend, there is a moderate probability that cases could exceed this threshold. The lack of reported deaths suggests cases are being managed effectively, which might limit further spread. Therefore, the probability remains highest for under 3,000 cases, but with an increased likelihood of exceeding this due to the already high case count.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.88,
+        0.11,
+        0.01,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "US measles outbreaks in recent years",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "Higher-than-usual cumulative cases by mid-year 2026 suggesting increased transmission",
+        "Effective public health interventions may not have been fully deployed yet"
+      ],
+      "drivers_down": [
+        "Historically low incidence of measles cases in the US due to effective vaccination programs",
+        "No reported deaths indicating potential control over severe spread",
+        "Public health response likely to intensify given mid-year high counts"
+      ],
+      "why_might_be_wrong": "The forecast could be too conservative if there is a significant vaccination campaign failure or if an unexpected outbreak occurs in a highly populated area.",
+      "rationale": "As of mid-2026, there are 2,465 confirmed cases, which is higher than usual for this time of year. Historically, US measles outbreaks rarely exceed 3,000 cases annually due to robust vaccination programs and public health measures. However, the elevated mid-year figures suggest a potential for a higher year-end total than usual, albeit still likely under 3,000 given the typical effectiveness of the CDC's response. Therefore, the probability is heavily weighted towards the under 3,000 category, with slight allowance for an outcome in the 3,000 to 3,999 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.95,
+        0.04,
+        0.009,
+        0.001,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Annual US measles cases",
+      "base_rate": 0.95,
+      "drivers_up": [
+        "The cumulative number of cases by mid-July 2026 is already significantly higher than in previous years.",
+        "Public health responses may not be sufficient to curb the spread if current trends continue.",
+        "Historical rare instances where cases exceeded 3,000 in the US."
+      ],
+      "drivers_down": [
+        "Typically, US measles outbreaks are controlled well under 3,000 cases due to effective vaccination and public health measures.",
+        "Current reports indicate active monitoring and zero deaths, suggesting effective containment measures."
+      ],
+      "why_might_be_wrong": "There could be an unexpected surge in cases due to a new outbreak or failure in public health measures.",
+      "rationale": "As of the latest data, the cumulative number of confirmed measles cases in the US for 2026 is 2,465. Historically, the US has managed to keep measles cases under 3,000 annually due to effective public health measures. Despite the higher-than-usual incidence in 2026, it is likely that the total will remain under 3,000, considering that the annual total rarely exceeds this threshold. The absence of deaths and effective containment efforts support this outlook. Therefore, the probability of cases remaining under 3,000 is high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical trends of measles outbreaks in the US, the probability of confirmed cases remaining under 3,000 is relatively high, especially with ongoing vaccination efforts. The range of 3,000 to 3,999 is also plausible but less likely than the first option. The higher ranges (4,000 and above) are less probable due to the effectiveness of current biosecurity measures and vaccination campaigns, which aim to keep outbreaks contained.",
+  "evidence_record_ids": [
+    "ins-e8b269c22170",
+    "ins-8879aa140a07"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6937,
+    "total_output_tokens": 957,
+    "total_tokens": 7894,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6714,
+        "output_tokens": 840,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 117,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

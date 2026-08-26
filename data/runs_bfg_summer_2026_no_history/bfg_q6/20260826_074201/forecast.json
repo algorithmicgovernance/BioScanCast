@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q6",
+  "options": [
+    "0 to 4",
+    "5 to 14",
+    "15 to 29",
+    "30 to 59",
+    "60 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0 to 4": 0.29737203189703754,
+        "5 to 14": 0.4589012437967842,
+        "15 to 29": 0.1580024689653158,
+        "30 to 59": 0.051683655315906275,
+        "60 or more": 0.03404060002495624
+      }
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0 to 4": 0.5,
+        "5 to 14": 0.3,
+        "15 to 29": 0.1,
+        "30 to 59": 0.05,
+        "60 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "0 to 4",
+      "probability": 0.29737203189703754,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "5 to 14",
+      "probability": 0.4589012437967842,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "15 to 29",
+      "probability": 0.1580024689653158,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "30 to 59",
+      "probability": 0.051683655315906275,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast",
+      "option": "60 or more",
+      "probability": 0.03404060002495624,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0 to 4",
+      "probability": 0.5,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5 to 14",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 to 29",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "30 to 59",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q6",
+      "forecast_source": "bioscancast_baseline",
+      "option": "60 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.6,
+        0.2,
+        0.05,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Human H5 avian influenza infections reported to WHO in recent years",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "Recent cases in 2026 indicate ongoing transmission with 9 cases reported so far",
+        "The global spread across countries like Cambodia and Bangladesh suggests potential for more cases"
+      ],
+      "drivers_down": [
+        "2026 cases so far are relatively low, indicating containment measures may be effective",
+        "Historical data shows highly variable numbers, with some years having very few cases"
+      ],
+      "why_might_be_wrong": "There could be an unforeseen outbreak or mutation increasing transmissibility or detection rates.",
+      "rationale": "The base rate of 0 to 4 cases is informed by historical variability and recent containment success. However, the ongoing transmission in 2026 and the global spread suggest a higher potential for continued cases, supporting a moderate number of cases being reported. Considering these factors, there is a higher probability of 5 to 14 cases due to ongoing detection, but the probability is spread across the lower ranges to accommodate potential containment or under-reporting.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.35,
+        0.15,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Past human H5 avian influenza infection years globally",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "In 2026, there have already been 9 confirmed cases by August, suggesting continued activity.",
+        "The geographical spread of recent cases (Cambodia, Bangladesh) indicates active transmission in multiple regions.",
+        "High baseline activity in recent years such as 71 cases cumulatively in the United States since 2024 suggests ongoing risk."
+      ],
+      "drivers_down": [
+        "The cumulative global count by August 2026 is relatively low, with only 9 cases reported.",
+        "Year-to-date reporting shows limited spread, with cases appearing sporadically rather than in clusters.",
+        "Past years may have had higher peaks but did not sustain high monthly case rates for extended periods."
+      ],
+      "why_might_be_wrong": "There might be an unexpected surge in cases in the latter half of 2026 due to factors not evident in the current data.",
+      "rationale": "Based on the evidence, there have been 9 cases reported in 2026 up to early August. This indicates some level of ongoing transmission but not at a highly explosive rate. Comparing this to past years, such as the cumulative 71 cases since 2024 in the US, suggests that while there is a potential for more cases, the rate may not exponentially increase. The presence of cases in multiple countries suggests some risk of further spread, but the relatively low cumulative figure by August suggests a moderate base rate of increase. Thus, the probability is highest for the 0 to 4 and 5 to 14 options, with a lower probability for higher ranges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.5,
+        0.35,
+        0.1,
+        0.03,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Global human H5N1 cases in recent years",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "There have already been 9 cases reported just in the first half of 2026, suggesting ongoing transmission.",
+        "H5N1 cases have been reported in multiple countries (e.g., Cambodia and Bangladesh) in 2026, indicating wider geographic spread."
+      ],
+      "drivers_down": [
+        "The total number of cases in the first half of 2026 is not excessively high, suggesting control measures might be effective.",
+        "Past years have seen variable but generally low numbers, and there is no evidence of a significant increase in 2026."
+      ],
+      "why_might_be_wrong": "A sudden outbreak or change in virus transmissibility could lead to a higher number of cases than anticipated.",
+      "rationale": "The base rate of observing 0 to 4 cases is high given historical data, but the presence of 9 cases in the first half of 2026 suggests increased activity. This implies a higher likelihood of more cases in the second half of the year. The reported cases in multiple countries also hint at potential for more spread. However, without evidence of a dramatic increase, the most reasonable forecast is that the number of cases will remain in the lower range. Thus, the probabilities are adjusted to reflect a slightly higher likelihood of reaching the 5 to 14 case range, but still favoring the 0 to 4 range given historical controls' effectiveness.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data, human infections with H5 avian influenza are relatively rare, often occurring in small clusters or isolated cases. The majority of reported cases tend to fall within the lower range of the options provided. While there is a possibility of a few more cases, especially in regions with close contact between humans and infected birds, the likelihood of exceeding 30 cases in a six-month period is low.",
+  "evidence_record_ids": [
+    "ins-5e0dae61565e",
+    "ins-266e03086981",
+    "ins-298ea08b7812",
+    "ins-7e67134948a6"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3816,
+    "total_output_tokens": 999,
+    "total_tokens": 4815,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3597,
+        "output_tokens": 890,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 219,
+        "output_tokens": 109,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

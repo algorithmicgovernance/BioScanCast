@@ -1,0 +1,164 @@
+{
+  "question_id": "bfg_q10",
+  "options": [
+    "0",
+    "1",
+    "2 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.755833996658774,
+        "1": 0.22191670624054702,
+        "2 or more": 0.022249297100678907
+      }
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.3,
+        "2 or more": 0.3
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.755833996658774,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.22191670624054702,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast",
+      "option": "2 or more",
+      "probability": 0.022249297100678907,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q10",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 or more",
+      "probability": 0.3,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Annual new PHEIC declarations",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Recent Ebola outbreak declared a PHEIC, suggesting heightened scrutiny and potential for more declarations.",
+        "Increasing global travel and interaction may lead to more frequent international public health concerns."
+      ],
+      "drivers_down": [
+        "PHEIC declarations are rare and significant events, typically only a few per year at most.",
+        "Current major disease concerns may already be under existing PHEICs, leading to fewer new declarations."
+      ],
+      "why_might_be_wrong": "The frequency of PHEIC declarations could change unexpectedly due to unforeseen global health events.",
+      "rationale": "The base rate for PHEIC declarations is approximately half per year, given the rarity of such declarations. With one recent PHEIC declared in May 2026, there is increased attention on global health threats, which might slightly raise the likelihood of another event being declared. However, PHEICs remain infrequent due to their significant impact, and many major health threats are already under active monitoring or existing PHEICs. Thus, the probability of 0 new PHEICs is moderately high, but the chance of 1 or more declarations remains plausible due to ongoing global health risks.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.55,
+        0.35,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "PHEIC declarations from 2009 to 2023",
+      "base_rate": 0.25,
+      "drivers_up": [
+        "Increased global travel and interconnectedness heightens the risk of outbreaks spreading internationally.",
+        "Climate change and ecological disruption increase the likelihood of new infectious diseases emerging.",
+        "Recent PHEIC declaration in May 2026 indicates active monitoring and responsiveness by WHO."
+      ],
+      "drivers_down": [
+        "The period of 1 July 2026 to 31 December 2026 is only six months, limiting the window for new outbreaks to occur and be declared as PHEICs.",
+        "WHO may be more cautious in declaring PHEICs due to political and economic considerations."
+      ],
+      "why_might_be_wrong": "Significant under-reporting or late detection of an outbreak could skew the prediction of PHEIC declarations.",
+      "rationale": "Historically, PHEIC declarations have been relatively rare, with an average of about one every two to three years. The recent declaration in May 2026 might suggest heightened vigilance, but given the short window of six months, the base rate remains a strong consideration. The probability of zero new PHEICs is moderate given the historical rarity and short time frame, whereas the probability of one new PHEIC is slightly higher due to recent activity and global risk factors. Two or more PHEICs in six months would be unprecedented, so this option remains the least likely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Historical frequency of PHEIC declarations by WHO",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Recent declaration for Ebola in May 2026 suggests heightened vigilance and willingness to declare PHEICs if necessary.",
+        "Global interconnectedness and travel can increase the spread and detection of novel pathogens."
+      ],
+      "drivers_down": [
+        "PHEIC declarations are relatively rare events, indicating high thresholds for declaration.",
+        "No evidence of new or emerging threats between May and July 2026.",
+        "Systems in place to manage known threats could reduce the need for new PHEIC declarations."
+      ],
+      "why_might_be_wrong": "Unexpected emergence of a new, highly transmissible or deadly pathogen could lead to more PHEIC declarations than anticipated.",
+      "rationale": "PHEIC declarations are rare, with only a few occurring over multiple years. The recent declaration in May 2026 suggests some potential for further vigilance, but the absence of any new threats between May and July 2026 suggests that the probability of zero new declarations remains relatively high. The base rate for PHEIC declarations is low, and despite the interconnectedness of the world which could facilitate spread, the systems in place to manage outbreaks and the high threshold for PHEIC declaration suggest a lower likelihood of multiple new declarations. Therefore, the probability of zero new PHEICs is set above the base rate, with a smaller probability for one, and even less for two or more.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Based on historical data, the emergence of new Public Health Emergencies of International Concern (PHEICs) can be unpredictable but tends to occur sporadically. Given the global health landscape, it is reasonable to estimate a moderate probability for no new PHEICs (0), a slightly higher chance for one new PHEIC (1), and a lower probability for two or more new PHEICs, as significant outbreaks typically require specific conditions to escalate to a PHEIC.",
+  "evidence_record_ids": [
+    "ins-4b0c1a4bd630"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3087,
+    "total_output_tokens": 978,
+    "total_tokens": 4065,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2880,
+        "output_tokens": 859,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 207,
+        "output_tokens": 119,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

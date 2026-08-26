@@ -1,0 +1,439 @@
+{
+  "records": [
+    {
+      "id": "ins-2e8d136df0ef",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2777.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-26T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of confirmed measles cases reported in the United States in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:40.058624+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0b5d64c4b43e4d6fb690a9501a31b9b1",
+          "chunk_id": "doc-0b5d64c4b43e4d6fb690a9501a31b9b1-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,777 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-09814e1d9564",
+      "question_id": "bfg_q24",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-26T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of confirmed deaths from measles in the United States in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:40.058754+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0b5d64c4b43e4d6fb690a9501a31b9b1",
+          "chunk_id": "doc-0b5d64c4b43e4d6fb690a9501a31b9b1-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-8c98446d5824",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 57561.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Bangladesh.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.571949+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Bangladesh 57,561"
+        }
+      ]
+    },
+    {
+      "id": "ins-7ef151d6f287",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "India",
+      "iso_country_code": "IN",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 26332.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in India.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572285+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "India 26,332"
+        }
+      ]
+    },
+    {
+      "id": "ins-b343e672e91d",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Yemen",
+      "iso_country_code": "YE",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 14961.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Yemen.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572351+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Yemen 14,961"
+        }
+      ]
+    },
+    {
+      "id": "ins-f43464460f04",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 12252.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Mexico.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572474+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Mexico 12,252"
+        }
+      ]
+    },
+    {
+      "id": "ins-edd6e7e72efe",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Pakistan",
+      "iso_country_code": "PK",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 11212.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Pakistan.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572570+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Pakistan 11,212"
+        }
+      ]
+    },
+    {
+      "id": "ins-0b88b93c7c3d",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Cameroon",
+      "iso_country_code": "CM",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 9394.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Cameroon.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572621+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Cameroon 9,394"
+        }
+      ]
+    },
+    {
+      "id": "ins-8d3e7a8268a4",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Guatemala",
+      "iso_country_code": "GT",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7067.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Guatemala.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572658+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Guatemala 7,067"
+        }
+      ]
+    },
+    {
+      "id": "ins-dcc41d2d5de1",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Kazakhstan",
+      "iso_country_code": "KZ",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 6968.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Kazakhstan.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572693+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Kazakhstan 6,968"
+        }
+      ]
+    },
+    {
+      "id": "ins-eaedec6fbec1",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Angola",
+      "iso_country_code": "AO",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 6737.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Angola.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572727+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Angola 6,737"
+        }
+      ]
+    },
+    {
+      "id": "ins-7e337cbc7320",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Madagascar",
+      "iso_country_code": "MG",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 5664.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cases reported in Madagascar.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:49.572760+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d",
+          "chunk_id": "doc-d75a33f9f2ba43f1bc2894a89d6f066d-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Madagascar 5,664"
+        }
+      ]
+    },
+    {
+      "id": "ins-9f4acf995512",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "11 million measles cases expected worldwide in 2026",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:51.603830+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0549d6a1dec544a0af52aef173a2e914",
+          "chunk_id": "doc-0549d6a1dec544a0af52aef173a2e914-c0",
+          "source_url": "https://gulfnews.com/amp/story/world%2Feurope%2F11-million-measles-cases-expected-worldwide-in-2026-1.500649483",
+          "quote": "Around 11 million people worldwide are expected to contract measles in 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-88d741aad86a",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Europe and Central Asia",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 33998.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cases reported in 2025, a nearly 75% drop compared to 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:36:56.438665+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d6f2349a10754e98837386f6f1783c5f",
+          "chunk_id": "doc-d6f2349a10754e98837386f6f1783c5f-c0",
+          "source_url": "https://www.who.int/europe/news/item/11-02-2026-measles-cases-dropped-in-europe-and-central-asia-in-2025-compared-to-the-previous-year--but-the-risk-of-outbreaks-remains---unicef-and-who",
+          "quote": "Countries in Europe and Central Asia reported 33 998 measles cases in 2025 - a nearly 75% drop compared to 127 412 in 2024."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 38193,
+    "total_output_tokens": 1439,
+    "total_tokens": 39632,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 38193,
+        "output_tokens": 1439,
+        "calls": 18
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

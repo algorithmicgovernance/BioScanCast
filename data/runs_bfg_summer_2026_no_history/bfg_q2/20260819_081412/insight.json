@@ -1,0 +1,169 @@
+{
+  "records": [
+    {
+      "id": "ins-102c551d50a3",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of the outbreak declaration on 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:15:39.580629+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-14585a388f3744c5961017d0971e8d9b",
+          "chunk_id": "doc-14585a388f3744c5961017d0971e8d9b-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-d341b5b1838c",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1487.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths recorded since the outbreak declaration on 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:15:44.902684+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-bbba17ca411f4a5f9a09187489e33d42",
+          "chunk_id": "doc-bbba17ca411f4a5f9a09187489e33d42-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "with 1,487 deaths recorded"
+        }
+      ]
+    },
+    {
+      "id": "ins-fb99afd689d9",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 2325.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "Data reported by DRC on confirmed cases and deaths are under continuous review and harmonisation.",
+      "event_date": "2026-08-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative total of confirmed deaths reported by DRC as of 15 August 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:15:47.322770+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-38575a6404854e7b8c757665eceb324b",
+          "chunk_id": "doc-38575a6404854e7b8c757665eceb324b-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda",
+          "quote": "including 2 325 related deaths (from data up until 15 August)"
+        }
+      ]
+    },
+    {
+      "id": "ins-d2af0672df79",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_or_probable_cases",
+      "metric_value": 830.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported including confirmed and probable cases as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:15:49.739252+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7dd93726dcd440019e98283709690d1c",
+          "chunk_id": "doc-7dd93726dcd440019e98283709690d1c-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "A total of 830 deaths has been reported, including two in Uganda."
+        }
+      ]
+    },
+    {
+      "id": "ins-88ad0e0022f3",
+      "question_id": "bfg_q2",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "DRC-Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 100.0,
+      "metric_unit": "fatalities",
+      "count_basis": "incident",
+      "time_window": "week",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "more than 100 fatalities reported in the first week of July",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:15:51.879889+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-5336f5ccba984db9b87ddded337997da",
+          "chunk_id": "doc-5336f5ccba984db9b87ddded337997da-c1",
+          "source_url": "https://www.cdc.gov/ebola/situation-summary/index.html",
+          "quote": "more than 100 fatalities reported in the first week of July."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 117844,
+    "total_output_tokens": 806,
+    "total_tokens": 118650,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 117844,
+        "output_tokens": 806,
+        "calls": 53
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

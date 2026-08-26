@@ -1,0 +1,464 @@
+[
+  {
+    "id": "doc-71a4df116940423797a84a3ba00d08dd",
+    "result_id": "71a4df116940423797a84a3ba00d08dd",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T08:52:53.352209+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-71a4df116940423797a84a3ba00d08dd-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-08-19.\nAs of the latest CDC update, a total of 2,566 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-08-19"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-edfe27125b03465a9dcabd8fcd5aaffc",
+    "result_id": "edfe27125b03465a9dcabd8fcd5aaffc",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-19T08:52:53.728575+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-edfe27125b03465a9dcabd8fcd5aaffc-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-f6ad0c9198bd49af891487149afefe9c",
+    "result_id": "f6ad0c9198bd49af891487149afefe9c",
+    "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+    "domain": "reuters.com",
+    "fetched_at": "2026-08-19T08:52:54.364300+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+    "title": "US measles cases hit 35-year high as vaccinations decline",
+    "published_date": "2026-07-24T15:51:29+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4613,
+    "token_count": 959,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-f6ad0c9198bd49af891487149afefe9c-c0",
+        "chunk_index": 0,
+        "text": "July 24 (Reuters) - The United States has confirmed 2,318 measles infections this year, the Centers for Disease Control and Prevention said on Friday, surpassing the 2025 tally to reach the highest annual total in 35 years amid declining vaccination rates.\nThe overall 2026 figures represent the highest number of U.S. cases in a single year since a major resurgence of the highly contagious disease in the period from 1989 to 1991, with more than 55,000 infections and 123 deaths.\nSign up here.\n\"Reaching this milestone is particularly striking because we are only in July, and measles cases are still being reported throughout the country,\" said William Moss, epidemiology professor at Johns Hopkins Bloomberg School of Public Health.\nThe rise in measles, declared essentially eradicated in the United States a quarter-century ago, has been linked by medical experts to slumping immunization rates, a trend many attribute in part to vaccine skepticism espoused by President Donald Trump's health secretary, Robert F. Kennedy Jr.\nYoung people, ranging from infants to age 19, made up 69% of cases tracked through July 23, with children younger than five comprising a fifth of those infected this year, the CDC said.\nA tenth of those younger than five who were infected ended up hospitalized, along with 3% of those aged five to 19, the CDC added. Measles-related hospitalizations this year stand at 151 so far.\nMeasles can be fatal in severe cases but no deaths have been reported from the disease since January 2026.\nBy comparison, the U.S. tally for all of 2025 was 2,289 infections, or 29 fewer than in the first seven months this year. Last year's total included 243 hospitalizations and three deaths.\nThe virus infection, which typically causes symptoms such as fever, rash and respiratory issues, can be averted with a vaccine commonly given in the United States for three childhood diseases - measles, mumps and rubella. It is considered 97% effective after two doses.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 422,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f6ad0c9198bd49af891487149afefe9c-c1",
+        "chunk_index": 1,
+        "text": "A surge in measles cases during the past two years has coincided with a steady slump in MMR immunization rates for children since the start of the COVID-19 pandemic.\nAverage U.S. vaccination coverage among kindergarten children dropped last year to 92.5%, well below the level of 95% considered necessary to achieve effective \"herd\" immunity needed to prevent the spread of the virus, the CDC says.\nIn at least 16 states, some of them with the highest measles incidence this year, vaccine coverage rates have declined to less than 90%, the CDC said.\nMany health officials have cited a public backlash to the government's pandemic response and blame U.S. Health Secretary Robert F. Kennedy Jr.'s anti-vaccine policies for further undermining trust in disease-preventing immunizations by embracing unproven theories about vaccine dangers.\nKennedy has repeatedly promoted the claim that measles vaccines are linked to autism despite overwhelming scientific evidence to the contrary. Last June, he fired all members of the CDC's expert vaccine advisory panel, which recommends how vaccines are used and by whom.\n\"Since early last year, federal leaders have dismissed measles as benign and unavoidable and have spread misleading information about the MMR vaccine,\" said Andrew Racine, president of the American Academy of Pediatrics.\n\"Halfway into 2026, the U.S. is experiencing the worst year for measles since 1991. We are witnessing an avoidable crisis that disproportionately hurts children.\"\nAs many as 93% of this year's cases were in unvaccinated individuals, with a fraction of the rest having received one or two doses of vaccine before being infected, the CDC said.\nInfections were documented by the CDC this year in 45 states and the District of Columbia, with 93% associated with one of 35 new outbreaks reported in 2026, versus 48 last year.\nStates with the most cases included South Carolina, Utah, Arizona, Texas, Florida, Virginia and Pennsylvania, the CDC says. Just 16 of this year's cases were reported among visitors from other countries.\nA South Carolina outbreak sickened nearly 1,000 people over six months after it began in October 2025 to become the largest single-location U.S. outbreak since measles was declared eliminated in the United States in 2000.\nThat elimination status is now under review, with the Pan American Health Organization delaying a decision until November.\nReporting and writing by Steve Gorman in Los Angeles; Additional reporting by Mariam Sunny, Sneha S K and Siddhi Mahatole in Bengaluru; Editing by Shilpi Majumdar and Clarence Fernandez\nOur Standards: The Thomson Reuters Trust Principles.",
+        "chunk_type": "prose",
+        "heading": "MEASLES SURGE COINCIDES WITH VACCINATION SLUMP",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 537,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-9cb6606f1efa434ca094dbb1f140a3d7",
+    "result_id": "9cb6606f1efa434ca094dbb1f140a3d7",
+    "source_url": "https://www.cidrap.umn.edu/childhood-vaccines/executive-order-confirmed-director-and-20-straight-months-measles-state-us",
+    "domain": "cidrap.umn.edu",
+    "fetched_at": "2026-08-19T08:52:54.995983+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cidrap.umn.edu/childhood-vaccines/executive-order-confirmed-director-and-20-straight-months-measles-state-us",
+    "title": "An executive order, a confirmed director, and 20 straight months of measles: The State of US Vaccine Policy",
+    "published_date": "2026-08-13T15:11:07-05:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 14612,
+    "token_count": 2999,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c0",
+        "chunk_index": 0,
+        "text": "Welcome to our biweekly series in partnership with CIDRAP at the University of Minnesota.\nI (Izzy) have been watching a lot of John Oliver lately, and I admit that writing this week\u2019s issue feels a bit like rattling off a talk show host\u2019s brain-dump at the beginning of an episode.\nIn the two weeks since our last issue, a new executive order on childhood vaccines was issued, the Centers for Disease Control and Prevention (CDC) got a new permanent director (a position that had been previously vacant for a year), the U.S. Food and Drug Administration (FDA) approved the first mRNA flu vaccine, the American Academy of Pediatrics (AAP) released its recommendations for the coming flu season, and the committee responsible for certifying U.S. measles elimination status started its annual review.\nSuffice it to say, if you thought August would bring lazy days at the beach, guess again. Let's discuss\u2026\nThe PDF version of today\u2019s update is here. Read past installments here and today's update on the Unbiased Science Substack here.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 217,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c1",
+        "chunk_index": 1,
+        "text": "On August 10, President Donald Trump signed an executive order titled \"Delivering Gold Standard Childhood Vaccine Recommendations for Americans.\" In addition to recommending fewer vaccines for kids, the order advocates for splitting the measles, mumps, and rubella (MMR) vaccine into three separate standalone vaccines, among other steps.\nNaturally, the terminology of an executive order carries a certain weight, and the formality may make people question vaccine decisions they have made, or think new scientific evidence has emerged that triggered the order. An executive order is a mechanism for the president to communicate and collaborate with different federal agencies, but it is not a law.\nIf you\u2019re feeling overwhelmed and don\u2019t take anything else from this brief, here are the most important things you need to know: (1) If you are a clinician or are wondering how this executive order changes anything for your family, it doesn\u2019t. (2) As of August 11, 30 states have announced they are no longer relying solely on the CDC\u2019s vaccine recommendations, and will rely on external expert groups such as the AAP instead. (3) Single MMR shots are not manufactured or approved in the U.S., so it would not be possible to receive them separately even if desired.\nReliance on Sources Other Than CDC/ACIP for State Childhood Vaccine Recommendations. Source: KFF\u2019s State Health Facts, last updated August 11, 2026. Interactive map can be viewed here.\nNow, onto a bit more of the nitty gritty. We covered the executive order at length in a piece we published on August 11, but the order mainly does four things:\n\u2022 Calls for splitting the MMR vaccine into three separate shots, once such products are available domestically. None are licensed here, and Merck said in 2009 it wouldn't resume production. Bringing them back would require a manufacturer to restart, generate evidence, and secure FDA approval. This would be a multi-year process.\n\u2022 Advises that childhood vaccines be given at separate visits. At the signing, the president suggested five separate visits at the one-year mark.\n\u2022 Sorts vaccines into three tiers: recommended for all children, recommended only for children at high risk, and left to shared decision-making with your child's doctor. The White House fact sheet puts the universal tier at 11 diseases, down from the 18 the CDC recommended in 2024. Feeling a bit of deja flu? This mirrors the change that the Department of Health and Human Services (HHS) attempted in a January memo, which a federal judge blocked in March.\n\u2022 Directs pressure at states, advising them to reconsider school requirements and directing the Justice Department toward litigation over religious and medical exemptions. Since states set school requirements, this has the most practical reach.\nDorit Reiss is a professor of law at UC Law San Francisco, specializing in vaccine law, and has walked through the legal mechanics of the order with CIDRAP, CNN, Time, and on her own Substack. Vaccine recommendations are set by the Advisory Committee on Immunization Practices (ACIP) and the CDC director through a rigorous legal process that an executive order does not usurp. But the order places pressure on individual states, and it adds additional confusion and uncertainty to what has already been a year of vaccine policy whiplash. Within hours of the executive order being issued, Republican Senator Bill Cassidy, the chair of the Senate Health, Education, Labor, and Pensions (HELP) Committee and also a physician, stated plainly that \u201cthis executive order is wrong.\u201d He was joined by statements of concern from several professional organizations such as the AAP, American Medical Association (AMA), and American College of Physicians, emphasizing that splitting the MMR vaccine would mean more shots for equivalent protection.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 758,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c2",
+        "chunk_index": 2,
+        "text": "This month, the U.S. National Verification Committee for the Elimination of Measles, Rubella, and Congenital Rubella Syndrome will review the CDC's annual report on measles and forward its assessment to the Pan American Health Organization. A formal decision regarding the U.S.\u2019s measles elimination status will be formally announced in November. Noel Brewer, who chairs the committee, wrote in STAT about what the panel will weigh, and one number gives a sense of the problem: the country has recorded measles cases every single week since January 2025.\nThe CDC has confirmed 2,465 measles cases in 2026 as of August 6, past the 2,289 reported for all of 2025, which was itself the highest total since 1991. Among patients, 93% were unvaccinated or had unknown vaccination status, and 68% are age 19 and younger.\nThis is particularly head-scratching against the backdrop of the new executive order calling for MMR to be split apart and childhood vaccines spread across more visits.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 215,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c3",
+        "chunk_index": 3,
+        "text": "Moderna\u2019s mFlusiva vaccine was approved for adults aged 50 and older on August 5, and the company has confirmed that doses will start becoming available at retailers in the next couple of weeks. In a phase 3 trial of 40,805 adults in 11 countries, the mRNA option outperformed the standard vaccine at preventing illness.\nThe measurable end point in flu vaccine trials is usually non-inferiority\u2014that is, that the vaccine under study does not perform worse than what already exists. This type of end point is useful for comparing vaccines with different side effect profiles. Moderna\u2019s mRNA vaccine went a step further, clearing the criteria for superiority, meaning that it was statistically more efficacious at preventing the flu compared to standard-dose recipients.\nTreatment effect and 95% confidence interval. Source: Cuzick, J, Sasieni, P. Interpreting the results of noninferiority trials\u2013a review. Br J Cancer 127, 1755-1759 (2022).",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > Flu Vaccine Updates > Approval of the First mRNA Flu Vaccine",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 209,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c4",
+        "chunk_index": 4,
+        "text": "On August 10, the AAP published its technical report and recommendations for influenza prevention and control in children for the upcoming 2026-27 flu season. Children 6 months and older are recommended to receive an age-appropriate flu vaccine before the end of October, unless there is a medical reason not to do so. The flu vaccine will be covered through commercial insurance and available at no-cost through the Vaccines for Children program.\nLast season underscores the importance of the flu vaccine for kids, as they carry a heavy burden of adverse flu-related outcomes. The 2025\u201326 season was severe for kids, with 190 pediatric deaths, and roughly 85% of the children who died were unvaccinated. Flu vaccine coverage through mid-May was only 49.4%, about the same as the year before.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > Flu Vaccine Updates > AAP Has Posted its Flu Recommendations for 2026-27",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 165,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c5",
+        "chunk_index": 5,
+        "text": "This week, Unbiased Science and CIDRAP co-launched a new Q&A series, where we try to respond to your vaccine questions in near real-time. Our first series covered some common questions we\u2019ve received about the flu vaccine. We hope it\u2019s a useful resource for clinicians and families, alike. You can send your questions along to us at vaccines@unbiasedscience.com.\nOriginal post can be found on the Unbiased Science and CIDRAP social media pages.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > Flu Vaccine Updates > CIDRAP/Unbiased Q&A Series Launched",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 94,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c6",
+        "chunk_index": 6,
+        "text": "Reiss also has an August 4 CIDRAP commentary arguing that the Vaccine Injury Compensation Program (VICP) is overdue for repair. While serious vaccine injuries are incredibly rare, they are real, and the program built to compensate affected individuals has fallen badly behind.\nCongress established the VICP through the National Childhood Vaccine Injury Act of 1986, after litigation over the whole-cell pertussis vaccine threatened to push manufacturers out of the market and leave children without access. Claimants don't have to prove that anyone was at fault, certain injuries occurring within specified time windows are presumed to have been caused by the vaccine, and legal and expert fees are covered even when a claim doesn't succeed.\nMost of her piece backs a bipartisan bill from Reps. Lloyd Doggett (D-TX) and Lloyd Smucker (R-PA) that would add special masters (the judges who hear these claims) to clear a backlog, raise a compensation cap that has sat at $250,000 since 1986, extend the filing window from three years to five, and move COVID-19 claims out of the less generous Countermeasures Injury Compensation Program. Previous efforts to reform the program have stalled in Congress, but there seems to be an opening in which real work could be done to improve the program that is essential to keeping vaccines available at all, and exists precisely because the alternative nearly emptied the market.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > Time to Fix Vaccine Injury Compensation",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 280,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c7",
+        "chunk_index": 7,
+        "text": "\u2022 Dr. Erica Schwartz was confirmed as CDC director on August 5, 51 to 44, with Sen. Tim Kaine (D-VA) the only Democrat voting yes. She spent 24 years in the U.S. Public Health Service Commissioned Corps and served as deputy surgeon general during the first Trump administration. The agency had gone nearly a year without a confirmed director, since Susan Monarez was ousted in August 2025 for refusing to fire CDC scientists and pre-approve vaccine policy changes. Five days after Schwartz's confirmation vote, and before she'd even been sworn in, the executive order made vaccine policy her first major test.\n\u2022 Nominations are open for the National Vaccine Advisory Committee. The Federal Register notice published August 12, with nominations due within 30 days. This is the committee whose charter HHS rewrote in July without announcing it, adding a directive to consider non-immunization strategies including healthy lifestyle initiatives, dietary supplements, and off-label use of approved drugs.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > Personnel",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 203,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c8",
+        "chunk_index": 8,
+        "text": "\u2022 Maine expanded access. LD 2071 took effect July 29, letting pharmacists administer any FDA-licensed vaccine consistent with recommendations of professional medical organizations and eliminating copays under state-regulated plans, with a companion bill adding liability protections for pharmacists. In practice, a Mainer needing a tetanus booster or shingles vaccine can get it at a pharmacy rather than waiting for an appointment, which matters in a state projected to be short 120 primary care physicians by 2030. On August 11, the Maine CDC confirmed that its childhood recommendations and school requirements aren't changing.\n\u2022 South Carolina's vaccine policy changes are less dramatic than the headlines suggest. The state\u2019s Department of Public Health reminded families that 12th graders now need two doses of varicella and sixth graders two doses of hepatitis A vaccine, effective July 1. They're new to those grades, but this is a rolling phase-in rather than a policy change: the 2025\u201326 letter applied the same requirements to 11th and fifth grade, and the 2026\u201327 letter moves them up one grade, following a cohort through the school system.\n\u2022 Texas has been in the hot seat for both measles outbreaks and vaccine policy issues. However, the state health department confirmed that vaccine requirements for 2026\u201327 are unchanged and that any change would have to come from the state legislature, which reconvenes in January. The underlying numbers merit some attention. Compared to last year, 18 fewer counties hit the 95% kindergarten measles benchmark, and counties where at least 5% of kindergarteners have a conscientious exemption on file rose from 98 to 132, about half the state.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > State Policy Round-Up",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 346,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-9cb6606f1efa434ca094dbb1f140a3d7-c9",
+        "chunk_index": 9,
+        "text": "\u2022 Autism was frequently mentioned at the executive order signing, but to date no legitimate study has found an association between the timing of the MMR vaccine and subsequent autism diagnoses. Twelve days earlier, researchers published a study of 2,560,035 children in the Pediatric Infectious Disease Journal. Among those who got a first MMR dose between 11.5 and 24 months of age, the adjusted estimate for autism was 0.97, where 1.0 would mean no difference between groups, with a range of uncertainty from 0.91 to 1.03. The researchers specifically examined whether the timing of the first MMR dose matters, since the vaccine is traditionally administered during the same time that a child\u2019s developmental differences may become more noticeable at home.\n\u2022 The Senate voted to hold Dr. Anthony Fauci in contempt. The Homeland Security Committee voted along party lines after Dr. Fauci, the former head of the National Institute of Allergy and Infectious Diseases, invoked the Fifth Amendment at the July 29 hearing, and the Justice Department decides what happens next. In a commentary piece, CIDRAP Director Dr. Michael Osterholm asks an important question that the legal proceedings seemed to skirt around: How will we ensure the U.S. is better prepared for the next pandemic?\n\u2022 HHS published its regulatory agenda. The semiannual inventory of rulemakings HHS expects to undertake lists \"ensuring the safety and efficacy of our vaccines\" among its priorities, but the vaccine-adjacent entries are mostly placeholders. We\u2019re watching two: (1) a pharmacovigilance rule whose legal authority includes the vaccine adverse-event reporting provision of the 1986 Act, and (2) a pediatric study plan rule touching exemptions from pediatric study requirements. Neither has text yet.\nThough there has been an absolute flurry of headlines, the practicality is that not much has changed for families and childhood vaccination. Your pediatrician\u2019s recommendations are the same, the vaccines are the same, and at least 30 states are poised to keep it that way. What\u2019s changed is how much noise and confusion exists for parents trying to make the best decision for their children, and that worries us a lot as we head into a new school year with measles at a 35-year high.\nWhat are you hearing from your own clinicians and school nurses this month? Tell us in the comments or email us at vaccines@unbiasedscience.com.\nStay Curious,\nUnbiased Science\nNote: this piece is cross-posted with CIDRAP.",
+        "chunk_type": "prose",
+        "heading": "The Executive Order > Measles Review Happening This Month > What Else We're Watching",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 512,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "August 11, 2026"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-17bbebb152134aa19f311f0524039292",
+    "result_id": "17bbebb152134aa19f311f0524039292",
+    "source_url": "https://www.cnn.com/2026/08/16/health/school-vaccine-requirements-exemptions-executive-order",
+    "domain": "cnn.com",
+    "fetched_at": "2026-08-19T08:52:55.277729+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cnn.com/2026/08/16/health/school-vaccine-requirements-exemptions-executive-order",
+    "title": "Record share of kindergartners missed required vaccines last year as Trump executive order takes aim at state mandates | CNN",
+    "published_date": "2026-08-16T00:00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 7144,
+    "token_count": 1307,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-17bbebb152134aa19f311f0524039292-c0",
+        "chunk_index": 0,
+        "text": "A record share of kindergartners in the United States had an exemption for a required vaccination last school year, as the Trump administration continues to make moves to reduce the number of vaccinations recommended for children.\nAn executive order signed by President Donald Trump last week aims to reshape the federal government\u2019s approach to vaccines. The order offers recommendations to \u201cgive parents more information and options\u201d \u2014 but the authority to set and enforce vaccine requirements still lies with states, and a growing share are utilizing existing policies that allow exemptions.\nThe administration signaled that it will push states to rework their vaccine requirements to incorporate the new federal guidelines, effectively upending longstanding practices aimed at improving childhood immunization rates. It\u2019s unclear exactly how officials plan to reinforce this, but the Department of Justice, the Department of Education and the Department of Health and Human Services have been directed to tie compliance with federal funding.\nThe new executive order emphasizes the administration\u2019s aim to \u201cmaximize parental choices over vaccinations for their children,\u201d specifically noting that states should \u201cprovide religious and medical exemptions\u201d to vaccine requirements.\nAll 50 states have their own laws requiring certain vaccines for students to attend school, and all allow students to be exempted from school vaccine requirements for medical reasons. The vast majority of states also allow vaccine exemptions for non-medical reasons, which may be categorized as religious or personal.\nUtilization of these exemptions is more common than it\u2019s ever been. Data published Monday by the US Centers for Disease Control and Prevention shows that 4.2% of kindergartners had an exemption for at least one required vaccine during the 2025-26 school year.\nThis left about 157,000 new schoolchildren without full coverage for at least one state-mandated vaccine last school year, CDC data shows \u2013 nearly 20,000 more than the year before.\nThe share of students with a vaccine exemption is the highest on record and twice as high as it was a decade ago. Last school year, only 0.2% of exemptions were for medical reasons, a share that has held steady for years.\nExemptions increased in all but nine states, and nearly half of states report exemptions exceeding 5%, according to the CDC.\nAccording to the National Conference of State Legislatures, only four states do not allow exemptions that are not for medical reasons: California, Connecticut, Maine and New York.\nNew York removed the option for religious exemptions for school vaccines in 2019 after measles outbreaks in the state grew to some of the largest the US had seen in decades.\nThe new CDC data shows that the measles-mumps-rubella (MMR) vaccination rate among kindergartners fell only slightly last school year, from 92.5% to 92.4%, but that\u2019s still well below the 95% coverage needed to provide herd immunity and prevent outbreaks.\nState authority to set vaccine policy has been challenged before but broadly upheld by the US Supreme Court.\nStates are still reviewing the new executive order, but many \u2013 including those that follow federal guidance for vaccine policy and those that have broken from federal recommendations \u2013 say that it does not require any changes at the state level.\n\u201cFederal recommendations do not change the requirements in Texas,\u201d the state health department said in an email to CNN.\nOthers responded to the president\u2019s action with a commitment to science-based vaccine policy.\n\u201cVaccines are our most effective defense against vaccine-preventable illnesses,\u201d Dr. Puthiery Va, director of the Maine Center for Disease Control and Prevention, said in a statement. \u201cIn Maine, vaccines remain available at no cost to eligible children through the Maine CDC\u2019s Immunization Program. Maine\u2019s school and child care immunization requirements remain unchanged by federal actions to date.\u201d\nChanges to any state vaccine exemption laws would need to be passed by state legislatures, many of which will not meet again until January.\nBut courts can get involved, too. Mississippi started allowing religious exemptions in 2023 after a federal court order, and a move to allow religious exemptions in West Virginia is facing legal challenges. Before these changes, both states were known to have exceptionally high childhood vaccination coverage under some of the strictest laws.\nPublic health experts say that building trust in the safety and effectiveness of vaccines is key to reversing the decline in childhood immunization rates.\n\u201cIf more and more parents choose not to vaccinate their children for non-medical reasons, we will no doubt see a rise in disease outbreaks,\u201d Dr. William Moss, an associate professor with Johns Hopkins Bloomberg School of Public Health, has said.\nMeasles cases in the US have reached a 35-year-high this year, the vast majority of which are in people who have not been vaccinated with the MMR.\nBut the new executive order advises that the MMR be separated into three individual shots \u2014 a dramatic change that goes against broad scientific consensus and a suggestion that could raise doubts.\nStates have typically aligned their policies for vaccine requirements with recommendations from the CDC and its Advisory Committee on Immunization Practices (ACIP). But ACIP has undergone sweeping changes under US Department of Health and Human Services Secretary Robert F. Kennedy Jr., and actions by the federal agency and the advisory board to overhaul the childhood vaccine schedule \u2014 including a reduction in the number of diseases covered by routine vaccinations \u2014 have led many states to break from this longstanding practice.\nAccording to KFF, 28 states have announced that they will no longer follow federal vaccine recommendations. Most have indicated that they will instead follow recommendations from the American Academy of Pediatrics, an independent medical association.\n\u201cFor decades, the U.S. childhood immunization schedule was developed through a rigorous scientific process required by law that evaluates the safety and effectiveness of vaccines and how they should be given to patients. This transparent, expert-led process has helped prevent serious diseases, reduce hospitalizations, and save millions of lives,\u201d the Governors Public Health Alliance said in a statement. The coalition includes more than a dozen governors who represent about a third of the US population.\n\u201cPresident Trump\u2019s Executive Order directing changes to longstanding federal vaccine recommendations circumvents that process and defies scientific consensus. It also risks causing confusion and endangering our children,\u201d the alliance said.\n\u201cParents should know that vaccines currently available in the United States remain available and that the Executive Order does not change that. Governors and state public health leaders hold the power to continue working with healthcare providers, schools, and local health agencies to ensure that parents have access to trusted information and can make informed decisions regarding the health of their children.\u201d",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 1307,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-2cd8c5d47aba4202bd06bd0f1ff3b4b0",
+    "result_id": "2cd8c5d47aba4202bd06bd0f1ff3b4b0",
+    "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+    "domain": "nbcnews.com",
+    "fetched_at": "2026-08-19T08:52:55.652439+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+    "title": "Map: Track the spread of measles in the U.S.",
+    "published_date": "2026-07-24T15:08:42+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2262,
+    "token_count": 518,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-2cd8c5d47aba4202bd06bd0f1ff3b4b0-c0",
+        "chunk_index": 0,
+        "text": "Measles, one of the most contagious viruses in the world, is regularly infecting people in the U.S. again.\nAlready in 2026 more than 2,300 cases have been counted, making 2026 the two year for measles infections in the U.S. since 2000.\nNBC News is continuing to track confirmed measles cases across the United States, using Centers for Disease Control and Prevention data.\nMeasles case counts reached a 34-year high last year, and seven months into 2026, this year\u2019s total is even higher.\nThe disease epicenter at the start of the year was in South Carolina, where the CDC has confirmed 600-plus measles cases. As of late January, more than 500 people were in quarantine and hundreds infected in the state. State officials declared the South Carolina outbreak over in April.\nThe map below will be updated regularly to show year-to-date new measles case counts reported in each state and Washington, D.C.\nMeasles infection counts skyrocketed last year with 2,289 confirmed cases, which had been the most reported since 1991. This comes despite the virus being marked as being \u201celiminated\u201d in the U.S. \u2014a designation meaning it is no longer constantly circulating \u2014 in 2000. The U.S. is in danger of losing that status following a year of continuous spread of the disease.\nThree people, including two young girls, died in the U.S. from measles last year.\nThe major outbreaks last year began with West Texas in February. In October, a measles outbreak occurred along the Utah and Arizona border. In all, the CDC recorded 48 measles outbreaks in 2025, up from 16 in 2024. So far in 2026, 35 measles outbreaks have been reported.\nChildhood vaccination rates have been backsliding, leaving communities vulnerable to this deadly disease.\nThe measles vaccine was introduced in 1963, marking a turning point for the contagious disease, which used to infect hundreds of thousands and kill thousands in the country every year.\nCORRECTION (Feb. 20, 2026, 3:57 p.m. ET): A previous version of a graphic in this article miscalculated the relative size of this year's measles case count. As of Feb. 20, this year's case count is four times the size of 2025's at the same point in the year, and 25 times the size of 2024's at the same point, not seven times and 30 times higher.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 518,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-b1e61a6ec19c426889c150960ac41cca",
+    "result_id": "b1e61a6ec19c426889c150960ac41cca",
+    "source_url": "https://www.cdc.gov/cfa-modeling-and-forecasting/covid19-data-vis/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T08:52:56.961502+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/cfa-modeling-and-forecasting/covid19-data-vis/index.html",
+    "title": "COVID-19 Ensemble Forecasts",
+    "published_date": "2026-08-14T11:36:22+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4940,
+    "token_count": 975,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-b1e61a6ec19c426889c150960ac41cca-c0",
+        "chunk_index": 0,
+        "text": "\u2022 The CovidHub ensemble predicts that for the week ending August 22, 2026, the weekly percentage of new emergency department (ED) visits due to COVID-19 in the United States will be 0.43% (95% prediction interval 0.25-0.59%). The median forecast suggests an increase from 0.31%, which was reported for the week ending August 8, 2026 (the most recent week of reporting).\n\u2022 Ensemble forecasting also predicts that the number of new laboratory-confirmed COVID-19 hospital admissions in the United States during the week ending August 22, 2026 will be approximately 2,400 (1,700-4,000). The median forecast suggests an increase compared to the 1,800 admissions so far reported for the week ending August 8, 2026.",
+        "chunk_type": "prose",
+        "heading": "What to know",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 172,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-b1e61a6ec19c426889c150960ac41cca-c1",
+        "chunk_index": 1,
+        "text": "Select a location and week ending date to see the ( prediction interval) based on forecasts submitted by .\nSelect forecast location, date, and models below. Modeling based on forecasts submitted by . Click and drag to change the forecast date to see how previous forecasts performed against reported data.\nForecasted\n(% prediction interval: - )",
+        "chunk_type": "prose",
+        "heading": "What to know > National and state forecasts > Forecasted weekly",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 64,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-b1e61a6ec19c426889c150960ac41cca-c2",
+        "chunk_index": 2,
+        "text": "Median\tPrediction Interval\tModel",
+        "chunk_type": "table",
+        "heading": "What to know > National and state forecasts > Forecasted weekly",
+        "page_number": null,
+        "table_data": [
+          [
+            "Median",
+            "Prediction Interval",
+            "Model"
+          ]
+        ],
+        "token_count": 6,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-b1e61a6ec19c426889c150960ac41cca-c3",
+        "chunk_index": 3,
+        "text": "Forecast median\tprediction interval\tName",
+        "chunk_type": "table",
+        "heading": "What to know > National and state forecasts > Forecasted weekly",
+        "page_number": null,
+        "table_data": [
+          [
+            "Forecast median",
+            "prediction interval",
+            "Name"
+          ]
+        ],
+        "token_count": 7,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-b1e61a6ec19c426889c150960ac41cca-c4",
+        "chunk_index": 4,
+        "text": "Click on models to see and compare forecasts",
+        "chunk_type": "prose",
+        "heading": "What to know > National and state forecasts > Select Models",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 8,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-b1e61a6ec19c426889c150960ac41cca-c5",
+        "chunk_index": 5,
+        "text": "\u2022 Overview: Overview: Forecasted percent of ED visits and new hospital admissions due to COVID-19. This week, 3 modeling groups contributed 3 forecasts of ED visits and 7 modeling groups contributed 7 forecasts of hospital admissions that were eligible for inclusion in the ensemble forecasts for at least one jurisdiction. Contributing teams are listed below.\n\u2022 What are ensemble models?: Ensemble forecasts combine forecasts from all submitted models into one forecast. These forecasts have been among the most accurate for previous COVID-19 forecasting efforts but may not reliably predict rapid changes in disease trends.\n\u2022 What does the figure show?: The figure shows the percentage of COVID-19 emergency department visits each week reported from October 1, 2022 through August 8, 2026, number of new laboratory-confirmed COVID-19 hospital admissions reported in the United States each week from August 8, 2020 through August 8, 2026, and forecasted new COVID-19 emergency department visits and hospital admissions per week for this week and the next 2 weeks through August 29, 2026. The colored areas on the graph show prediction intervals, which indicate the bounds of uncertainty around the forecast estimates.\n\u2022 How do we calculate the rates/percentages? The forecasted percentages of ED visits due to COVID-19 are calculated by dividing the number of visits with a discharge diagnosis of COVID-19 in a one-week period (the numerator) by the total number of ED visits in the same period (denominator) at the relevant jurisdictional level. The forecasted hospital admission rates (for both median and prediction intervals) use Census Vintage 2023 population estimates as a population denominator for the state. We note that the denominator for rates may not capture the exact catchment populations of the hospitals in each state, but rates provide a rough adjustment for population size, allowing comparison across states with different population sizes.\n\u2022 Data Reporting: Reporting of COVID-19 specific emergency department visits is voluntary through the National Syndromic Surveillance Program (NSSP); however, many facilities participate in automated reporting, resulting in reasonably stable visit levels over time. Hospitals are required to report weekly laboratory-confirmed COVID-19 hospitalizations to the National Healthcare Safety Network (NHSN). Review Hospital Respiratory Data for additional details on this guidance. Historical data from NHSN are not shown from April 28-November 1, 2024, due to the pause in mandatory reporting.\n\u2022 The following jurisdictions had <80% of hospitals reporting for the most recent week: Alaska, Arkansas, California, Colorado, District of Columbia, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maryland, Mississippi, Missouri, Montana, Nebraska, Nevada, New Mexico, New York, North Dakota, Ohio, Oklahoma, Oregon, Puerto Rico, South Dakota, Texas, United States, Virginia, Vermont, Washington, and Wyoming. Lower reporting rates could impact forecast validity.Percent of hospitals reporting is calculated based on the number of active hospitals reporting complete data to NHSN for a given reporting week.More Information: Forecast submissions are collected and stored in the COVID-19 Forecast Hub GitHub repository, which also contains more detailed information about the forecast data and submission process.Percent of hospitals reporting is calculated based on the number of active facilities reporting complete data to NHSN for a given reporting week.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.",
+        "chunk_type": "prose",
+        "heading": "What to know > Interpretation of forecasts",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 718,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Median",
+          "Prediction Interval",
+          "Model"
+        ]
+      ],
+      [
+        [
+          "Forecast median",
+          "prediction interval",
+          "Name"
+        ]
+      ]
+    ],
+    "extracted_dates": [
+      "August 22, 2026",
+      "August 8, 2026",
+      "October 1, 2022",
+      "August 8, 2020",
+      "August 29, 2026",
+      "November 1, 2024"
+    ],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "records": [
+    {
+      "id": "ins-999f05bacdab",
+      "question_id": "bfg_q20",
+      "event_type": "outbreak_declared",
+      "confidence": 0.5,
+      "location": "Brasil",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "new_outbreaks_declared",
+      "metric_value": 1.0,
+      "metric_unit": "outbreak",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-08-03T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:33:21.390063+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ed8e939fe58e4973a627892197e965db",
+          "chunk_id": "doc-ed8e939fe58e4973a627892197e965db-c0-p0",
+          "source_url": "https://www.paho.org/en/topics/oropouche-virus-disease",
+          "quote": "Desde finales de 2023, se han reportado brotes de la enfermedad por el virus Oropouche en varios pa\u00edses de Am\u00e9rica del Sur y el Caribe"
+        }
+      ]
+    },
+    {
+      "id": "ins-3e60654a9f02",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Americas",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Oropouche virus was identified as causing large outbreaks in endemic areas and new areas in South America. Cuba reported its first confirmed case in June 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:33:26.492033+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-3ef7c0d21ca344a6b027a9a481581a04",
+          "chunk_id": "doc-3ef7c0d21ca344a6b027a9a481581a04-c1",
+          "source_url": "https://www.cdc.gov/oropouche/hcp/clinical-overview/index.html",
+          "quote": "In late 2023, Oropouche virus was identified as causing large outbreaks in endemic areas and new areas in South America."
+        }
+      ]
+    },
+    {
+      "id": "ins-dd40b13f256d",
+      "question_id": "bfg_q20",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Latin America and the Caribbean",
+      "iso_country_code": null,
+      "pathogen": "oropouche",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7.0,
+      "metric_unit": "countries",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "In 2024, locally transmitted Oropouche virus disease was reported in seven countries in Latin America and the Caribbean.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T09:33:30.488661+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0ab4d73599954985a1097d11bec5aafe",
+          "chunk_id": "doc-0ab4d73599954985a1097d11bec5aafe-c2",
+          "source_url": "https://www.who.int/news-room/fact-sheets/detail/oropouche-virus-disease",
+          "quote": "In 2024, locally transmitted Oropouche virus disease was reported in seven countries in Latin America and the Caribbean: Brazil, Bolivia, Colombia, Cuba, Guyana, Peru and the Dominican Republic"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 94701,
+    "total_output_tokens": 607,
+    "total_tokens": 95308,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 94701,
+        "output_tokens": 607,
+        "calls": 45
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,702 @@
+RUN_ID=20260811_223451
+=== Pipeline run: bfg_q1 (20260811_223451) ===
+question:  How many cumulative laboratory-confirmed Bundibugyo virus disease cases (DRC and Uganda combined) will there be since the outbreak declaration on 14 May 2026 to 31 October 2026, according to WHO?
+pathogen:  'bundibugyo ebola'
+region:    'drc-uganda'
+target:    2026-11-01
+as_of:     None
+artifacts: data/runs_bfg_summer_2026_no_history/bfg_q1/20260811_223451
+
+[search] starting...
+2026-08-11 23:34:56,253 ERROR bioscancast.stages.searching.query_decomposition: Question classification failed, defaulting to 'unknown'
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/query_decomposition.py", line 233, in classify_question_type
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/main.py", line 99, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-11 23:34:57,495 ERROR bioscancast.stages.searching.query_decomposition: LLM decomposition failed, using fallback sub-queries
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/query_decomposition.py", line 328, in decompose_question
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/main.py", line 99, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-11 23:34:57,523 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda latest cases 2024 2025
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-08-11 23:34:57,531 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda outbreak trend
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-08-11 23:34:57,533 ERROR bioscancast.stages.searching.backends.tavily_backend: Tavily search failed for query: bundibugyo ebola drc-uganda government response policy
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/searching/backends/tavily_backend.py", line 70, in search
+    response = client.search(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 262, in search
+    response_dict = self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/tavily/tavily.py", line 226, in _search
+    response = self.session.post(url, data=payload, timeout=timeout, **({"headers": override_headers} if override_headers else {}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tavily.com', port=443): Max retries exceeded with url: /search (Caused by NameResolutionError("HTTPSConnection(host='api.tavily.com', port=443): Failed to resolve 'api.tavily.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[search] 4 results (3.1s)
+[filter] starting...
+[filter] 4 docs (0.0s)
+[extract] starting...
+2026-08-11 23:34:57,577 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602: Failed to perform, curl: (6) Could not resolve host: www.who.int. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-11 23:34:57,579 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026: Failed to perform, curl: (6) Could not resolve host: www.who.int. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-11 23:34:57,579 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://www.afro.who.int/health-topics/ebola-disease: Failed to perform, curl: (6) Could not resolve host: www.afro.who.int. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-08-11 23:34:57,580 WARNING bioscancast.stages.extraction.fetcher: Fetch failed for https://www.cdc.gov/ebola/about/index.html: Failed to perform, curl: (6) Could not resolve host: www.cdc.gov. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[extract] 0/4 success (0.0s)
+[insight] starting...
+[insight] 0 records | in=0 out=0 (0.0s)
+[forecast] starting...
+2026-08-11 23:34:58,784 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 0 failed for question bfg_q1
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-11 23:35:00,248 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 1 failed for question bfg_q1
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-11 23:35:01,701 ERROR bioscancast.stages.forecasting.pipeline: Forecast sample 2 failed for question bfg_q1
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 191, in run
+    response = self._llm.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2026-08-11 23:35:03,082 ERROR bioscancast.stages.evaluation.contamination: Retrieval-free baseline LLM call failed for bfg_q1
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 982, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/evaluation/contamination.py", line 169, in retrieval_free_baseline_forecast
+    response = llm_client.generate_json(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/stages/forecasting/pipeline.py", line 64, in generate_json
+    response = self._inner.generate_json(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/bioscancast/llm/openai_client.py", line 52, in generate_json
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jessicarapson/Desktop/AGF/projects/orgs/active/bfg/BioScanCast/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1014, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+[forecast] 2 distribution(s) over 5 options | in=0 out=0 (5.6s)
+
+=== Pipeline complete: bfg_q1 ===
+  search      3.07s  $0.0000
+  filter      0.00s  $0.0000
+  extract     0.04s
+  insight     0.00s  $0.0000
+  forecast    5.60s  $0.0000
+  total cost:  $0.0000
+  artifacts: data/runs_bfg_summer_2026_no_history/bfg_q1/20260811_223451
+RC=0

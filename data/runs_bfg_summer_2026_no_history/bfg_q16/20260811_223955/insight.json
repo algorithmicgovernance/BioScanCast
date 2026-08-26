@@ -1,0 +1,175 @@
+{
+  "records": [
+    {
+      "id": "ins-67c2f1bf4797",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed deaths from measles in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:57:13.926502+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ba5dfcb5660942d2afdd7bfc675e8d3a",
+          "chunk_id": "doc-ba5dfcb5660942d2afdd7bfc675e8d3a-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-fb2fd40f0633",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": "people",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Three people, including two young girls, died in the U.S. from measles last year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:57:16.547871+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c9c5857501664c7ea6950e9b5a305649",
+          "chunk_id": "doc-c9c5857501664c7ea6950e9b5a305649-c0",
+          "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+          "quote": "Three people, including two young girls, died in the U.S. from measles last year."
+        },
+        {
+          "document_id": "doc-cecd05c315c543fdb1f2107b7d8acc77",
+          "chunk_id": "doc-cecd05c315c543fdb1f2107b7d8acc77-c2",
+          "source_url": "https://www.cidrap.umn.edu/measles/cdc-adds-almost-100-new-cases-expanding-us-measles-outbreak",
+          "quote": "Last year, three people, including two children, succumbed to the highly transmissible disease."
+        }
+      ]
+    },
+    {
+      "id": "ins-537278c8dfe8",
+      "question_id": "bfg_q16",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-04-06T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Two school-aged children died of measles in Texas, marking the first child death from measles in the US in over 20 years.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:57:18.693635+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-579f87e351424311a979362064dcf327",
+          "chunk_id": "doc-579f87e351424311a979362064dcf327-c0-p1",
+          "source_url": "https://abcnews.com/Health/measles-cases-2026-set-surpass-years-total/story?id=134740486",
+          "quote": "A healthy six- and eight-year-old girl died of measles in this country, the first child death of measles in this country in more than 20 years"
+        }
+      ]
+    },
+    {
+      "id": "ins-72cd49700726",
+      "question_id": "bfg_q16",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2465.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed measles cases in the US for the year 2026 as of August 7.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:57:21.481696+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-cecd05c315c543fdb1f2107b7d8acc77",
+          "chunk_id": "doc-cecd05c315c543fdb1f2107b7d8acc77-c0",
+          "source_url": "https://www.cidrap.umn.edu/measles/cdc-adds-almost-100-new-cases-expanding-us-measles-outbreak",
+          "quote": "bringing the US total for the year to 2,465"
+        }
+      ]
+    },
+    {
+      "id": "ins-16fb340a6de8",
+      "question_id": "bfg_q16",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Pennsylvania",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 57.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "week",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "57 new cases reported this week in Pennsylvania.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:57:21.448715+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-cecd05c315c543fdb1f2107b7d8acc77",
+          "chunk_id": "doc-cecd05c315c543fdb1f2107b7d8acc77-c3",
+          "source_url": "https://www.cidrap.umn.edu/measles/cdc-adds-almost-100-new-cases-expanding-us-measles-outbreak",
+          "quote": "state officials reported 57 new cases"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 44707,
+    "total_output_tokens": 756,
+    "total_tokens": 45463,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 44707,
+        "output_tokens": 756,
+        "calls": 20
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

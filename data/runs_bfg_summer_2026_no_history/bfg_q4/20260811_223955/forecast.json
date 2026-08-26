@@ -1,0 +1,188 @@
+{
+  "question_id": "bfg_q4",
+  "options": [
+    "exactly 1",
+    "2",
+    "3",
+    "4 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 1": 0.3250819981224898,
+        "2": 0.3380989027299903,
+        "3": 0.23442468605341735,
+        "4 or more": 0.10239441309410266
+      }
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 1": 0.4,
+        "2": 0.3,
+        "3": 0.2,
+        "4 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "exactly 1",
+      "probability": 0.3250819981224898,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "2",
+      "probability": 0.3380989027299903,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "3",
+      "probability": 0.23442468605341735,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "4 or more",
+      "probability": 0.10239441309410266,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 1",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past Bundibugyo Ebola outbreaks and international spread patterns of Ebola viruses.",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Global travel and trade can facilitate the spread of infectious diseases beyond their regions of origin.",
+        "Ebola outbreaks, including Bundibugyo, have historically had some degree of international spread.",
+        "There is at least one known case outside the region already (France), suggesting some level of international transmission."
+      ],
+      "drivers_down": [
+        "Bundibugyo Ebola virus has had fewer international cases compared to other Ebola strains.",
+        "Containment measures and international support often improve over time, reducing spread risk.",
+        "Ebola outbreaks are typically contained within the region of origin with limited international transmission."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if there are unforeseen changes in global travel patterns, containment measures, or mutation of the virus that increases its transmissibility.",
+      "rationale": "Given the historical spread patterns of Ebola viruses and the specific characteristics of the Bundibugyo strain, the probability of additional countries reporting cases is moderate but not high. The existing base rate suggests that exactly one or two countries are the most likely outcomes, given the current scenario. There is a known case outside the region, which nudges the probability slightly toward more cases, but containment efforts and the lower transmissibility of Bundibugyo compared to other strains suggest that widespread international spread is less likely.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Historical Bundibugyo Ebola outbreaks and their international spread",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "International travel increases the risk of spread to another country.",
+        "Similar past outbreaks have occasionally resulted in cases in countries outside the initial region.",
+        "France already reporting a case suggests potential for spread to other international locations."
+      ],
+      "drivers_down": [
+        "Bundibugyo Ebola outbreaks are generally less widespread than other Ebola species outbreaks.",
+        "Effective containment measures can limit international spread.",
+        "The baseline already accounts for one international case, suggesting additional spread may not be significant."
+      ],
+      "why_might_be_wrong": "The lack of specific data on the current outbreak's characteristics and response measures makes it difficult to accurately predict international spread.",
+      "rationale": "Given the historical base rate of Bundibugyo Ebola's limited spread and the fact that France is already counted as an international case, the probability of additional countries reporting cases is modest. However, the presence of international cases in similar outbreaks suggests some potential for further spread. Balancing these factors, the likelihood of exactly one country (already France) having a case is moderate, but there is a reasonable possibility for up to three countries in total, with a lower probability for four or more.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.4,
+        0.3,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Past international spread of Ebola virus outbreaks.",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "Bundibugyo virus is a type of Ebola virus, which has a history of spreading beyond its initial outbreak region.",
+        "International travel and trade can facilitate the spread of infectious diseases across borders.",
+        "The current baseline already includes France, indicating some level of international spread."
+      ],
+      "drivers_down": [
+        "Historically, Ebola outbreaks have been largely contained within Africa due to effective containment measures and limited human-to-human transmission modes.",
+        "Bundibugyo virus outbreaks have been less frequent and less widespread compared to other Ebola virus species.",
+        "There might be increased vigilance and stronger containment measures post-COVID-19 pandemic."
+      ],
+      "why_might_be_wrong": "The unpredictability of international travel patterns and containment effectiveness over several years could lead to more or fewer cases than expected.",
+      "rationale": "Ebola and its variants have shown capability to spread internationally, but containment measures often limit the spread to a few additional countries. Given the baseline includes France, suggesting some spread has already occurred, it is reasonable to expect a few additional countries might report cases. The absence of specific outbreak data makes it difficult to forecast precisely, but the base rate suggests the likelihood of 2 or 3 additional countries experiencing cases is moderate.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the geographical proximity of DRC and Uganda to other countries, it is plausible that only a limited number of countries will report cases. The baseline of 1 case in France suggests that while there may be some spread, it is likely to be contained. Therefore, the highest probability is assigned to exactly 1 additional country reporting a case, followed by decreasing probabilities for 2, 3, and 4 or more countries.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 2938,
+    "total_output_tokens": 952,
+    "total_tokens": 3890,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2709,
+        "output_tokens": 831,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 229,
+        "output_tokens": 121,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

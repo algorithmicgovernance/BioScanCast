@@ -1,0 +1,867 @@
+{
+  "records": [
+    {
+      "id": "ins-6cc1289c8685",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "World",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 180545.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-27T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative confirmed cases",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:26.187669+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-078041433c0e4fc8969b02441a65ba43",
+          "chunk_id": "doc-078041433c0e4fc8969b02441a65ba43-c0",
+          "source_url": "https://ourworldindata.org/mpox",
+          "quote": "cumulative confirmed cases (World): 180,545"
+        }
+      ]
+    },
+    {
+      "id": "ins-5238f9d4148f",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Africa",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 63832.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-26T00:00:00",
+      "event_date_precision": "day",
+      "summary": null,
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:26.350560+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-078041433c0e4fc8969b02441a65ba43",
+          "chunk_id": "doc-078041433c0e4fc8969b02441a65ba43-c2",
+          "source_url": "https://ourworldindata.org/mpox",
+          "quote": "total_cases Africa 2026-04-26 63,832"
+        }
+      ]
+    },
+    {
+      "id": "ins-5a23a2688abb",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 100000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2023-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "The ongoing global outbreak of clade IIb monkeypox that began in 2022 has caused more than 100,000 cases in 122 total countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:29.970360+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-025c1b16b1f44d4b8e881ef37ded6493",
+          "chunk_id": "doc-025c1b16b1f44d4b8e881ef37ded6493-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "has caused more than 100,000 cases in 122 total countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-8b2c4cea5b55",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 184531.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases of mpox reported globally from 2022 to April 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:45.330603+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c13",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "a total of 184,531 confirmed cases of mpox have been reported globally from 145 countries and territories."
+        }
+      ]
+    },
+    {
+      "id": "ins-4e23df0ec161",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 964.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed mpox cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:45.331131+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c13",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "ten countries have reported a combined 964 mpox cases and one death"
+        },
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c16",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "a total of 964 mpox cases were reported across ten countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-b83f13e54ca7",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 300.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "data are provided for situational awareness and are subject to change.",
+      "event_date": null,
+      "event_date_precision": null,
+      "summary": "More than 300 clade Ib cases in high-income countries.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:52.317088+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-45ddb6817771485ab13ed9c078fc937b",
+          "chunk_id": "doc-45ddb6817771485ab13ed9c078fc937b-c3",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "more than 300 clade Ib cases in high-income countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-0a68b8da16a0",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 55000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of confirmed cases reported globally since January 2024",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:53.195044+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-45ddb6817771485ab13ed9c078fc937b",
+          "chunk_id": "doc-45ddb6817771485ab13ed9c078fc937b-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "more than 55,000 confirmed cases of clade I monkeypox have been reported globally"
+        }
+      ]
+    },
+    {
+      "id": "ins-6de63b02ad04",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 40.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-11-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "more than 40 laboratory-confirmed cases of clade I monkeypox since November 2024",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:29.604452+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-025c1b16b1f44d4b8e881ef37ded6493",
+          "chunk_id": "doc-025c1b16b1f44d4b8e881ef37ded6493-c1",
+          "source_url": "https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "more than 40 laboratory-confirmed cases of clade I monkeypox in the United States."
+        }
+      ]
+    },
+    {
+      "id": "ins-af14bb2f5fbd",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 40.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "More than 40 clade I monkeypox cases reported in the United States as of July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:52.975446+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-45ddb6817771485ab13ed9c078fc937b",
+          "chunk_id": "doc-45ddb6817771485ab13ed9c078fc937b-c1",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "there have been more than 40 clade I monkeypox cases reported in the United States."
+        }
+      ]
+    },
+    {
+      "id": "ins-315d73ccb5d6",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 0.1,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": null,
+      "event_date_precision": null,
+      "summary": "Fewer than 0.1% of people infected with clade II die from the disease.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:30.390858+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-025c1b16b1f44d4b8e881ef37ded6493",
+          "chunk_id": "doc-025c1b16b1f44d4b8e881ef37ded6493-c4",
+          "source_url": "https://www.cdc.gov/monkeypox/situation-summary/index.html",
+          "quote": "Fewer than 0.1% of people infected with clade II die from the disease."
+        }
+      ]
+    },
+    {
+      "id": "ins-19e1b60b6852",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 164.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported globally from 2022 to April 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:45.330863+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c13",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "including 164 deaths, have been reported across 31 countries and territories between 2022 and 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-ba11b569939d",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 1.0,
+      "metric_unit": "death",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported in 2026 from mpox.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:45.331252+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c13",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "ten countries have reported a combined 964 mpox cases and one death"
+        }
+      ]
+    },
+    {
+      "id": "ins-77e7c526177e",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 150.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of deaths reported globally since January 2024",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:53.195171+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-45ddb6817771485ab13ed9c078fc937b",
+          "chunk_id": "doc-45ddb6817771485ab13ed9c078fc937b-c0",
+          "source_url": "https://www.cdc.gov/monkeypox/outbreaks/2023/index.html",
+          "quote": "including more than 150 deaths"
+        }
+      ]
+    },
+    {
+      "id": "ins-4da80bd6b8b6",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Guinea",
+      "iso_country_code": "GN",
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 15.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Guinea has reported 15 cases the past six weeks, as of 14 June.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:32.792711+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a65fc9f19fa84d8da9ec4aef64208e9d",
+          "chunk_id": "doc-a65fc9f19fa84d8da9ec4aef64208e9d-c1",
+          "source_url": "https://www.ecdc.europa.eu/en/mpox-worldwide-overview",
+          "quote": "Guinea has reported 15 cases the past six weeks, as of 14 June."
+        }
+      ]
+    },
+    {
+      "id": "ins-0ebec0abebcb",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Madagascar",
+      "iso_country_code": "MG",
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 689.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Most confirmed cases of clade I were reported by Madagascar in the past six weeks.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:32.893661+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-a65fc9f19fa84d8da9ec4aef64208e9d",
+          "chunk_id": "doc-a65fc9f19fa84d8da9ec4aef64208e9d-c2",
+          "source_url": "https://www.ecdc.europa.eu/en/mpox-worldwide-overview",
+          "quote": "most confirmed cases of clade I were reported by Madagascar (689 cases)"
+        }
+      ]
+    },
+    {
+      "id": "ins-81a764abe933",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "EU/EEA",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 153.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "month",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "153 mpox cases caused by clade I MPXV were reported in July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:38.944833+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d19d0cac9dfc451388c7b803a964029f",
+          "chunk_id": "doc-d19d0cac9dfc451388c7b803a964029f-c0",
+          "source_url": "https://mpox-monthly.ecdc.europa.eu/",
+          "quote": "In July 2026, 153 mpox cases caused by clade I MPXV were reported by 12 countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-1ba5b8a16528",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "EU/EEA",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 12.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "month",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "12 mpox cases caused by clade II MPXV were reported in July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:38.945923+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d19d0cac9dfc451388c7b803a964029f",
+          "chunk_id": "doc-d19d0cac9dfc451388c7b803a964029f-c0",
+          "source_url": "https://mpox-monthly.ecdc.europa.eu/",
+          "quote": "In July 2026, 12 mpox cases caused by clade II MPXV were reported by five countries"
+        }
+      ]
+    },
+    {
+      "id": "ins-f875f40634f5",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "EU/EEA",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1083.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "1,083 clade I mpox cases reported in the past 12 months.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:38.946402+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d19d0cac9dfc451388c7b803a964029f",
+          "chunk_id": "doc-d19d0cac9dfc451388c7b803a964029f-c0",
+          "source_url": "https://mpox-monthly.ecdc.europa.eu/",
+          "quote": "In the past 12 months, 20 countries reported 1 083 clade I mpox cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-6431697459de",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "EU/EEA",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 2.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Two deaths reported in people infected with clade II in the past 12 months.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:38.950657+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-d19d0cac9dfc451388c7b803a964029f",
+          "chunk_id": "doc-d19d0cac9dfc451388c7b803a964029f-c0",
+          "source_url": "https://mpox-monthly.ecdc.europa.eu/",
+          "quote": "In the past 12 months there have been two deaths reported in people infected with clade II."
+        }
+      ]
+    },
+    {
+      "id": "ins-af25f8734173",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Region of the Americas",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 74678.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases of mpox reported in the Region of the Americas from 2022 to April 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:45.331005+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c13",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "In the Region of the Americas, a cumulative total of 74,678 confirmed cases of mpox"
+        }
+      ]
+    },
+    {
+      "id": "ins-75801a3fa1cc",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Region of the Americas",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 964.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-04-30T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total mpox cases reported in 2026 through 30 April.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:41.765341+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c11",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "ten countries in the Region of the Americas have reported a total of 964 mpox cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-0f96a315f694",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "North America",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 45183.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative cases reported between 2022 and EW 17 of 2026 in North America.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:43.770935+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c15",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "the North American subregion reported the highest number of mpox cases, with 45,183 cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-15e945e8f799",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "North America",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 104.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths reported between 2022 and EW 17 of 2026 in North America.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:43.771059+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-20d6f19d2dde4df7bdd41098199591be",
+          "chunk_id": "doc-20d6f19d2dde4df7bdd41098199591be-c15",
+          "source_url": "https://www.paho.org/en/situation-reports?topic=87192&d%5Bmin%5D=&d%5Bmax%5D=",
+          "quote": "with 45,183 cases and 104 deaths primarily from the United States"
+        }
+      ]
+    },
+    {
+      "id": "ins-fc0199e9d0b4",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Guinea-Bissau",
+      "iso_country_code": "GW",
+      "pathogen": "mpox",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-04T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases reported since the outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:50.392773+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-71e54869af33434f874388604305bdc4",
+          "chunk_id": "doc-71e54869af33434f874388604305bdc4-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/aug/24/children-half-mpox-disease-cases-guinea-bissau-epidemic-spreads-west-africa",
+          "quote": "there have been seven confirmed cases and 46 suspected cases."
+        }
+      ]
+    },
+    {
+      "id": "ins-23f246dd8995",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Guinea-Bissau",
+      "iso_country_code": "GW",
+      "pathogen": "mpox",
+      "metric_name": "suspected_cases",
+      "metric_value": 46.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-04T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Suspected cases reported since the outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:50.393251+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-71e54869af33434f874388604305bdc4",
+          "chunk_id": "doc-71e54869af33434f874388604305bdc4-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/aug/24/children-half-mpox-disease-cases-guinea-bissau-epidemic-spreads-west-africa",
+          "quote": "there have been seven confirmed cases and 46 suspected cases."
+        }
+      ]
+    },
+    {
+      "id": "ins-621544fd8c54",
+      "question_id": "bfg_q12",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Guinea-Bissau",
+      "iso_country_code": "GW",
+      "pathogen": "mpox",
+      "metric_name": "suspected_cases",
+      "metric_value": 23.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-04T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Half of the suspected cases are children, with 16 under the age of four.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:50.393677+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-71e54869af33434f874388604305bdc4",
+          "chunk_id": "doc-71e54869af33434f874388604305bdc4-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/aug/24/children-half-mpox-disease-cases-guinea-bissau-epidemic-spreads-west-africa",
+          "quote": "Half of those patients have been children, with 16 under the age of four."
+        }
+      ]
+    },
+    {
+      "id": "ins-4dba15f553fc",
+      "question_id": "bfg_q12",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "Africa",
+      "iso_country_code": null,
+      "pathogen": "mpox",
+      "metric_name": "deaths",
+      "metric_value": 2000.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths related to mpox across Africa since January 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:50.394477+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-71e54869af33434f874388604305bdc4",
+          "chunk_id": "doc-71e54869af33434f874388604305bdc4-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/aug/24/children-half-mpox-disease-cases-guinea-bissau-epidemic-spreads-west-africa",
+          "quote": "There have been more than 2,000 mpox-related deaths among tens of thousands of cases recorded across east, central and west Africa since January 2024."
+        }
+      ]
+    },
+    {
+      "id": "ins-dd4ff901c829",
+      "question_id": "bfg_q12",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "mpox",
+      "metric_name": "vaccine_doses_distributed",
+      "metric_value": 3600000.0,
+      "metric_unit": "doses",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-08-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Over 3.6 million doses of vaccines have been pledged for the mpox response, including specific contributions from various countries and organizations.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:12:59.417103+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-536943e77dc042688d0e37f6ffc1a4d5",
+          "chunk_id": "doc-536943e77dc042688d0e37f6ffc1a4d5-c0",
+          "source_url": "https://www.who.int/news/item/13-09-2024-who-and-partners-establish-an-access-and-allocation-mechanism-for-mpox-vaccines--treatments--tests",
+          "quote": "Over 3.6 million doses of vaccines have been pledged for the mpox response."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 98180,
+    "total_output_tokens": 3665,
+    "total_tokens": 101845,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 98180,
+        "output_tokens": 3665,
+        "calls": 46
+      }
+    }
+  },
+  "documents_processed": 10,
+  "documents_skipped": 1,
+  "notes": [
+    "Skipped document doc-de29ea3a070e44b2944f936588f9588c: failed"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "id": "ins-6adeffa80210",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "hospitalizations",
+      "metric_value": 6.7,
+      "metric_unit": "hospitalizations/100,000",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Modeling suggests a higher peak weekly COVID-19 hospitalization rate if a variant with moderate immune-escape properties emerges.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:02:16.652098+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-734b6f3b6d79469fb1925d7da98010ab",
+          "chunk_id": "doc-734b6f3b6d79469fb1925d7da98010ab-c2",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/season-outlook25-26.html",
+          "quote": "modeling suggests a higher peak weekly COVID-19 hospitalization rate (6.7-9.5 hospitalizations/100,000; Scenario B)"
+        }
+      ]
+    },
+    {
+      "id": "ins-71bcf5cdb419",
+      "question_id": "bfg_q23",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "sars-cov-2",
+      "metric_name": "new_variant_risk",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-08-19T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Scenario modeling indicates that a new variant with moderate immune-escape properties may emerge this fall.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:02:16.253168+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-734b6f3b6d79469fb1925d7da98010ab",
+          "chunk_id": "doc-734b6f3b6d79469fb1925d7da98010ab-c1",
+          "source_url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/season-outlook25-26.html",
+          "quote": "if a variant with moderate immune-escape properties emerges this fall."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 56026,
+    "total_output_tokens": 343,
+    "total_tokens": 56369,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 56026,
+        "output_tokens": 343,
+        "calls": 24
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

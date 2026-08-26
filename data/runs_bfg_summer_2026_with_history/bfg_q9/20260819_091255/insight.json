@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "ins-aa18c5224ce3",
+      "question_id": "bfg_q9",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "h5n1",
+      "metric_name": "affected_herds",
+      "metric_value": 320.0,
+      "metric_unit": "herds",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-03-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "USDA has confirmed infected cattle in 320 dairy herds in 14 U.S. states since March 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:35:06.709926+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-99f7a89654d949038586b1fe30711998",
+          "chunk_id": "doc-99f7a89654d949038586b1fe30711998-c2",
+          "source_url": "https://www.cdc.gov/bird-flu/spotlights/cdc-bird-flu-response.html",
+          "quote": "USDA has confirmed infected cattle in 320 dairy herds in 14 U.S. states."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 87912,
+    "total_output_tokens": 287,
+    "total_tokens": 88199,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 87912,
+        "output_tokens": 287,
+        "calls": 41
+      }
+    }
+  },
+  "documents_processed": 8,
+  "documents_skipped": 0,
+  "notes": []
+}

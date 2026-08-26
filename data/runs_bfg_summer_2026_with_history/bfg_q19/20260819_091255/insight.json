@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "id": "ins-fcb83799413d",
+      "question_id": "bfg_q19",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "France",
+      "iso_country_code": "FR",
+      "pathogen": "chikungunya",
+      "metric_name": "confirmed_cases",
+      "metric_value": 7.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-05T00:00:00",
+      "event_date_precision": "day",
+      "summary": "France reported seven locally acquired chikungunya virus disease cases since the beginning of 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:53:59.606793+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-aa220742b4fb4266b33f46c97539b0c7",
+          "chunk_id": "doc-aa220742b4fb4266b33f46c97539b0c7-c6",
+          "source_url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+          "quote": "France was the only European country to report locally acquired chikungunya virus disease transmission, with seven locally acquired CHIKVD cases identified."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 57507,
+    "total_output_tokens": 236,
+    "total_tokens": 57743,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 57507,
+        "output_tokens": 236,
+        "calls": 28
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

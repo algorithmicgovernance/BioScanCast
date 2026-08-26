@@ -1,0 +1,139 @@
+{
+  "records": [
+    {
+      "id": "ins-c0ce5feb27ec",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "unknown",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The Director-General of WHO determined that the Ebola disease caused by Bundibugyo virus in DRC and Uganda constitutes a PHEIC.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:15:34.816751+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9612c8eb68524b2a8a2e83c79e9e409f",
+          "chunk_id": "doc-9612c8eb68524b2a8a2e83c79e9e409f-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "the Ebola disease caused by Bundibugyo virus in DRC and Uganda constitutes a PHEIC."
+        }
+      ]
+    },
+    {
+      "id": "ins-4db8624cb64f",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo and Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "public_health_emergency",
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Epidemic of Ebola Disease caused by Bundibugyo virus determined a public health emergency of international concern.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:15:34.593428+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9612c8eb68524b2a8a2e83c79e9e409f",
+          "chunk_id": "doc-9612c8eb68524b2a8a2e83c79e9e409f-c5",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "determined a public health emergency of international concern."
+        }
+      ]
+    },
+    {
+      "id": "ins-4213a0f6c166",
+      "question_id": "bfg_q3",
+      "event_type": "other",
+      "confidence": 0.85,
+      "location": "DRC-Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-17T00:00:00",
+      "event_date_precision": "day",
+      "summary": "On 17 May 2026, WHO declared a public health emergency of international concern for an Ebola disease outbreak, caused by Bundibugyo virus, affecting DRC and Uganda.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:15:40.616539+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-49582e63b21b4657a1b1b7568f0ff97d",
+          "chunk_id": "doc-49582e63b21b4657a1b1b7568f0ff97d-c0",
+          "source_url": "https://ukhsa.blog.gov.uk/2026/05/18/what-is-ebola-and-how-does-it-spread",
+          "quote": "On 17 May 2026, the World Health Organization (WHO) declared a public health emergency of international concern for an Ebola disease outbreak, caused by Bundibugyo virus"
+        }
+      ]
+    },
+    {
+      "id": "ins-388ec87686d7",
+      "question_id": "bfg_q3",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 100.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Since the World Health Organization declared a public health emergency in mid-May, there have been hundreds of confirmed cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:15:44.776322+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-2980fd89e960410d81dbe7641c5fee81",
+          "chunk_id": "doc-2980fd89e960410d81dbe7641c5fee81-c0",
+          "source_url": "https://www.nbcnews.com/data-graphics/ebola-outbreak-2026-cases-virus-tracking-maps-spread-congo-ugangda-us-rcna347102",
+          "quote": "there have been hundreds of confirmed cases"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 84716,
+    "total_output_tokens": 826,
+    "total_tokens": 85542,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 84716,
+        "output_tokens": 826,
+        "calls": 40
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,209 @@
+{
+  "question_id": "bfg_q1",
+  "options": [
+    "under 2,500",
+    "2,500 to 4,999",
+    "5,000 to 9,999",
+    "10,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,500": 0.026132305009803136,
+        "2,500 to 4,999": 0.09562609293843455,
+        "5,000 to 9,999": 0.8123922614107605,
+        "10,000 to 19,999": 0.06584928232824841,
+        "20,000 or more": 5.831275345053197e-08
+      }
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,500": 0.25,
+        "2,500 to 4,999": 0.35,
+        "5,000 to 9,999": 0.2,
+        "10,000 to 19,999": 0.1,
+        "20,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "under 2,500",
+      "probability": 0.026132305009803136,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "2,500 to 4,999",
+      "probability": 0.09562609293843455,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "5,000 to 9,999",
+      "probability": 0.8123922614107605,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "10,000 to 19,999",
+      "probability": 0.06584928232824841,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 5.831275345053197e-08,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,500",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,500 to 4,999",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 to 9,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "10,000 to 19,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.15,
+        0.5,
+        0.2,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Ebola virus outbreaks in DRC and Uganda",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Rapid increase in confirmed cases from 1,003 on June 22 to 4,945 on August 14 indicates a fast spread.",
+        "The outbreak is described as the fastest-growing in the history of the virus.",
+        "The disease is affecting multiple provinces, which suggests a wide spread."
+      ],
+      "drivers_down": [
+        "Data is under continuous review and harmonisation which might lead to adjustments in confirmed case numbers.",
+        "The outbreak could slow down due to interventions, although specific interventions are not mentioned."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if the outbreak slows down significantly due to effective control measures that are not reflected in the current data.",
+      "rationale": "The outbreak has shown a rapid increase in cases from 1,003 on June 22 to 4,945 by August 14, indicating a fast spread. This suggests a strong likelihood of surpassing 5,000 cases by October 31 if the trend continues. The outbreak is described as the fastest-growing in history, further suggesting a rapid spread. However, continuous data review might lead to adjustments in numbers. Given these factors, the probability is highest for the 5,000 to 9,999 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.65,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in DRC and Uganda",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Rapid increase in cases from June to August 2026 indicates a high transmission rate",
+        "Multiple provinces affected, suggesting widespread transmission"
+      ],
+      "drivers_down": [
+        "Continuous review and harmonisation of data may lead to adjustments and possibly reduction in confirmed cases"
+      ],
+      "why_might_be_wrong": "Data adjustments post-harmonisation might significantly lower reported case numbers.",
+      "rationale": "The outbreak has shown a rapid increase in confirmed cases from 1,003 in June to 4,945 in August, suggesting a high transmission rate. The base rate for past Ebola outbreaks in the region suggests reaching a scale of thousands of cases is common, but rarely exceeds 10,000. Given the current trajectory, it is likely that the final number will fall between 5,000 and 9,999, aligning with past outbreak sizes. However, data adjustments could lower these numbers.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.35,
+        0.4,
+        0.1,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in DRC and Uganda",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "Rapid increase in cases from June to August indicates a fast-spreading outbreak.",
+        "Past outbreaks in the region have sometimes reached high case numbers quickly.",
+        "Continuous review and harmonization of data could lead to upward revision of case numbers."
+      ],
+      "drivers_down": [
+        "Data harmonization may also correct overestimates, leading to a slowdown in reported case numbers.",
+        "Interventions and public health measures could slow the spread in the coming months.",
+        "The outbreak might be contained before reaching higher thresholds."
+      ],
+      "why_might_be_wrong": "The base rate assumes a similar pattern to past outbreaks, but this outbreak might be more effectively contained or less severe than anticipated.",
+      "rationale": "The outbreak has shown a rapid increase in cases, reaching 4945 confirmed cases by mid-August. If this trend continues, it is plausible for the total to fall within the 5,000 to 9,999 range by the end of October. However, given the pace and history of Ebola outbreaks, there is still a significant chance it could exceed 10,000 cases. Therefore, probabilities are adjusted to reflect a higher likelihood of the lower range but a non-negligible chance of exceeding it.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo virus outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative cases will likely be under 5,000 due to effective containment measures. However, the possibility of a larger outbreak cannot be ruled out, hence the probabilities reflect a higher likelihood for the lower ranges.",
+  "evidence_record_ids": [
+    "ins-fba3b3afa310",
+    "ins-d5c12d58aa79",
+    "ins-4c3bd4b5c143",
+    "ins-0caf26e0509b",
+    "ins-d6acd8deeed8",
+    "ins-3a108f850ab2"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4510,
+    "total_output_tokens": 871,
+    "total_tokens": 5381,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4260,
+        "output_tokens": 773,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 250,
+        "output_tokens": 98,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

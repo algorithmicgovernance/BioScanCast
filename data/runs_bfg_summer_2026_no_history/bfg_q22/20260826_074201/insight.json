@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "id": "ins-a24d570879b5",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 19.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total number of wild poliovirus type 1 cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:26:33.276704+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-00728b7a8e4a46a892fdd48a358098c9",
+          "chunk_id": "doc-00728b7a8e4a46a892fdd48a358098c9-c0-p0",
+          "source_url": "https://polioeradication.org/about-polio/polio-this-week/",
+          "quote": "The total number of cases in 2026 is 19."
+        }
+      ]
+    },
+    {
+      "id": "ins-ec12d3f813dc",
+      "question_id": "bfg_q22",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Four cases reported in 2026 (most recent case: 7 June 2026).",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T08:26:32.945363+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-00728b7a8e4a46a892fdd48a358098c9",
+          "chunk_id": "doc-00728b7a8e4a46a892fdd48a358098c9-c0-p1",
+          "source_url": "https://polioeradication.org/about-polio/polio-this-week/",
+          "quote": "There are four cases reported in 2026 (most recent case: 7 June 2026)."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 47571,
+    "total_output_tokens": 427,
+    "total_tokens": 47998,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 47571,
+        "output_tokens": 427,
+        "calls": 22
+      }
+    }
+  },
+  "documents_processed": 4,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 4 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

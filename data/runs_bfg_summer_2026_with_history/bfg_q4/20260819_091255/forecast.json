@@ -1,0 +1,186 @@
+{
+  "question_id": "bfg_q4",
+  "options": [
+    "exactly 1",
+    "2",
+    "3",
+    "4 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "exactly 1": 0.9970834215558197,
+        "2": 0.002785197982406241,
+        "3": 0.0001067161742500698,
+        "4 or more": 2.4664287523950967e-05
+      }
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "exactly 1": 0.25,
+        "2": 0.25,
+        "3": 0.25,
+        "4 or more": 0.25
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "exactly 1",
+      "probability": 0.9970834215558197,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "2",
+      "probability": 0.002785197982406241,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "3",
+      "probability": 0.0001067161742500698,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast",
+      "option": "4 or more",
+      "probability": 2.4664287523950967e-05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "exactly 1",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q4",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 or more",
+      "probability": 0.25,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.95,
+        0.04,
+        0.009,
+        0.001
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks with international spread beyond the immediate region",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The outbreak in the DRC is severe with thousands of confirmed cases, suggesting higher potential for international spread.",
+        "The Bundibugyo strain is noted for spreading rapidly, potentially increasing international transmission risk."
+      ],
+      "drivers_down": [
+        "Historically, Ebola outbreaks have limited spread beyond the immediate region, with few cases reaching other countries.",
+        "Current evidence only confirms international spread to France.",
+        "There are likely significant containment efforts in place given the severity of the outbreak in the DRC."
+      ],
+      "why_might_be_wrong": "The rapid spread of the Bundibugyo strain might lead to more international cases than historical data suggests, especially if containment efforts are less effective than anticipated.",
+      "rationale": "The base rate for Ebola outbreaks resulting in international cases beyond one additional country is low, as historically they have rarely spread to more than one or two additional countries. The current outbreak in the DRC is severe, increasing the potential for spread, but only France has reported a linked case outside the immediate region so far. Given these factors, the most probable outcome is that no more than one additional country will report a case, aligning with past forecasts.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.92,
+        0.06,
+        0.01,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks with international spread",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "The current Bundibugyo Ebola outbreak is severe, with over 3,000 confirmed cases, increasing potential for spread.",
+        "The disease has spread to multiple provinces and already reached France, indicating the virus's ability to cross borders."
+      ],
+      "drivers_down": [
+        "Historically, Ebola outbreaks rarely spread beyond one or two countries outside the origin.",
+        "Containment efforts tend to become more effective as the outbreak progresses, reducing further international spread.",
+        "Limited international travel from affected regions can reduce the likelihood of spread."
+      ],
+      "why_might_be_wrong": "The unpredictable nature of international travel and the effectiveness of containment efforts can significantly affect the outcome.",
+      "rationale": "The forecast is based on the historical base rate of Ebola outbreaks spreading internationally, which is low. The Bundibugyo strain's severity and its spread to France suggest some potential for further international cases, but the historical rarity of such spread and containment efforts likely limit the extent. Therefore, the probability is highest for exactly one additional country, with significantly lower probabilities for two or more.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.93,
+        0.05,
+        0.01,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks with international spread",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "High case count in DRC suggests potential for spread",
+        "Existing case in France indicates international travel and potential further spread",
+        "Bundibugyo strain spreading faster than previous strains"
+      ],
+      "drivers_down": [
+        "Historically, Ebola outbreaks rarely spread to multiple countries beyond the region",
+        "Intense international efforts to contain Ebola outbreaks typically limit spread",
+        "Only one country outside DRC/Uganda (France) reported a case thus far"
+      ],
+      "why_might_be_wrong": "There may be under-reporting or undetected cases in other countries, influencing the spread.",
+      "rationale": "The base rate for Ebola outbreaks spreading to multiple countries is low. Despite the severity of the current outbreak and the existing case in France, historically, such outbreaks rarely spread to more than one other country outside the initial region due to containment efforts and the nature of the disease. Therefore, it is most likely that only one country (France) will report a case, but there is a small chance of additional spread.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the nature of outbreaks and the historical context of Bundibugyo Ebola, it is plausible that multiple countries could report cases, but the exact number is uncertain. The probabilities are evenly distributed among the options to reflect this uncertainty.",
+  "evidence_record_ids": [],
+  "budget_summary": {
+    "total_input_tokens": 5842,
+    "total_output_tokens": 808,
+    "total_tokens": 6650,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5613,
+        "output_tokens": 738,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 229,
+        "output_tokens": 70,
+        "calls": 1
+      }
+    }
+  },
+  "notes": [
+    "No usable evidence records; forecast relies on model priors."
+  ]
+}

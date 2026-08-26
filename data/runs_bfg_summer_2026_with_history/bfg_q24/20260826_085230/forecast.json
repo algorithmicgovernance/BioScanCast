@@ -1,0 +1,217 @@
+{
+  "question_id": "bfg_q24",
+  "options": [
+    "under 250,000",
+    "250,000 to 374,999",
+    "375,000 to 524,999",
+    "525,000 to 749,999",
+    "750,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 250,000": 0.06429981871230685,
+        "250,000 to 374,999": 0.11684052469750617,
+        "375,000 to 524,999": 0.1685131965394704,
+        "525,000 to 749,999": 0.21990228674743387,
+        "750,000 or more": 0.43044417330328266
+      }
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 250,000": 0.4,
+        "250,000 to 374,999": 0.3,
+        "375,000 to 524,999": 0.15,
+        "525,000 to 749,999": 0.1,
+        "750,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "under 250,000",
+      "probability": 0.06429981871230685,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "250,000 to 374,999",
+      "probability": 0.11684052469750617,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "375,000 to 524,999",
+      "probability": 0.1685131965394704,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "525,000 to 749,999",
+      "probability": 0.21990228674743387,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast",
+      "option": "750,000 or more",
+      "probability": 0.43044417330328266,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 250,000",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "250,000 to 374,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "375,000 to 524,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "525,000 to 749,999",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q24",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.5
+      ],
+      "ok": true,
+      "reference_class": "Global measles case counts over several years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Reported expectation of 11 million global measles cases for 2026.",
+        "Significant outbreaks in countries like Bangladesh, India, and Yemen."
+      ],
+      "drivers_down": [
+        "Ongoing global vaccination efforts.",
+        "Historical reduction in measles cases in Europe and Central Asia."
+      ],
+      "why_might_be_wrong": "The estimation of 11 million cases might be an overestimate or might include unreported cases not matching the WHO's reporting criteria.",
+      "rationale": "The base rate of measles cases in recent years has been lower, but the reported expectation of 11 million cases in 2026 suggests a significant increase, likely influenced by outbreaks in several countries. Despite global vaccination efforts, the high estimate and large outbreaks imply a high probability for the highest category. However, historical reductions and vaccination efforts still leave some room for lower outcomes.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.5
+      ],
+      "ok": true,
+      "reference_class": "Global measles cases reported to WHO in past years",
+      "base_rate": 0.173,
+      "drivers_up": [
+        "Expected global cases for 2026 are around 11 million, indicating a severe under-reporting issue if WHO-reported cases are much lower.",
+        "Recent increases in measles cases in several countries, including Bangladesh and the United States, suggest higher transmission rates.",
+        "Global population growth and vaccination challenges in certain regions may contribute to higher case numbers."
+      ],
+      "drivers_down": [
+        "Stringent global vaccination efforts could reduce the actual number of cases reported.",
+        "WHO reporting might reflect only a fraction of the estimated cases due to under-reporting and data collection issues.",
+        "Improved global health infrastructure and rapid response to outbreaks may contain the spread."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if WHO's reported figures differ significantly from estimates due to under-reporting or if vaccination campaigns are more successful than expected.",
+      "rationale": "Given the evidence that approximately 11 million measles cases are expected worldwide, it seems likely that the actual number of cases reported to WHO will be substantial, even accounting for under-reporting. The historical base rate indicating the likelihood of cases falling under 250,000 is low. Despite efforts to vaccinate and control outbreaks, the sheer scale of expected cases suggests that the number will be in the higher range. Therefore, the probability is higher for the 750,000 or more category, considering both the expected high number of cases and potential under-reporting.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3
+      ],
+      "ok": true,
+      "reference_class": "Global measles cases reported annually",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The expectation of 11 million measles cases worldwide in 2026 suggests a potential for high case count reporting.",
+        "Ongoing measles outbreaks in countries like Bangladesh, India, and Yemen, with tens of thousands of cases reported, indicate significant global transmission."
+      ],
+      "drivers_down": [
+        "Vaccination efforts globally could reduce the actual number of cases reported.",
+        "Past trends showed a significant drop in cases in Europe and Central Asia, suggesting potential regional containment."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if the global surveillance and reporting systems significantly underreport the actual number of measles cases.",
+      "rationale": "Based on the expectation of 11 million measles cases worldwide in 2026 and significant outbreaks in several countries, it is likely that the number of reported cases will be substantial. However, the potential underreporting and the impact of vaccination efforts could influence the final numbers. Given these considerations, the probability distribution leans towards higher case counts, with the highest probability assigned to the '750,000 or more' option.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical trends in measles outbreaks and vaccination coverage, it is likely that the number of cases will remain relatively high but not exceed 250,000 significantly. The global vaccination efforts have improved, but outbreaks can still occur, especially in regions with lower vaccination rates. Therefore, the highest probability is assigned to 'under 250,000', followed by '250,000 to 374,999' as a reasonable estimate for potential outbreaks.",
+  "evidence_record_ids": [
+    "ins-9f4acf995512",
+    "ins-2e8d136df0ef",
+    "ins-09814e1d9564",
+    "ins-8c98446d5824",
+    "ins-7ef151d6f287",
+    "ins-b343e672e91d",
+    "ins-f43464460f04",
+    "ins-edd6e7e72efe",
+    "ins-0b88b93c7c3d",
+    "ins-8d3e7a8268a4",
+    "ins-dcc41d2d5de1",
+    "ins-eaedec6fbec1",
+    "ins-7e337cbc7320",
+    "ins-88d741aad86a"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 9769,
+    "total_output_tokens": 893,
+    "total_tokens": 10662,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 9546,
+        "output_tokens": 776,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 117,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

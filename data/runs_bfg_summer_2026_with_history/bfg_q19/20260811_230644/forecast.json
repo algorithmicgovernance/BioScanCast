@@ -1,0 +1,204 @@
+{
+  "question_id": "bfg_q19",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 5",
+    "6 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.2809624609575347,
+        "1": 0.313475881835248,
+        "2 to 3": 0.273846406537257,
+        "4 to 5": 0.09042209117572444,
+        "6 or more": 0.04129315949423579
+      }
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.3,
+        "2 to 3": 0.2,
+        "4 to 5": 0.1,
+        "6 or more": 0.0
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.2809624609575347,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.313475881835248,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.273846406537257,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "4 to 5",
+      "probability": 0.09042209117572444,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast",
+      "option": "6 or more",
+      "probability": 0.04129315949423579,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 5",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q19",
+      "forecast_source": "bioscancast_baseline",
+      "option": "6 or more",
+      "probability": 0.0,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.15,
+        0.25,
+        0.35,
+        0.15,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya cases annually",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "France already reported 7 locally acquired cases in 2026, indicating active transmission.",
+        "Climate change may be expanding the viable habitat for Aedes mosquitoes in Europe."
+      ],
+      "drivers_down": [
+        "Historically, locally acquired chikungunya cases in EU/EEA are rare.",
+        "Only France has reported cases by August 2026, suggesting limited spread."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if there is a sudden increase in transmission due to unforeseen environmental changes or public health failures.",
+      "rationale": "The base rate for EU/EEA countries reporting locally acquired chikungunya is low, with historical data suggesting rare occurrences. However, France has already reported 7 cases in 2026, indicating some risk of spread. Considering both historical rarity and current evidence of transmission in France, the most likely scenario is that 2 to 3 countries might report cases by the end of 2026, as the situation could develop further but is unlikely to escalate rapidly.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.35,
+        0.25,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Outbreaks of chikungunya in EU/EEA countries",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "First locally acquired chikungunya cases reported in France in 2026",
+        "Cumulative total of 7 cases in France indicates potential for spread"
+      ],
+      "drivers_down": [
+        "Historical rarity of chikungunya outbreaks in EU/EEA countries",
+        "Only one country (France) reported cases in 2026 so far",
+        "No other countries have reported cases, reducing likelihood of wider spread"
+      ],
+      "why_might_be_wrong": "New outbreaks could occur in the latter half of 2026 due to changing environmental conditions or increased travel.",
+      "rationale": "The base rate for locally acquired chikungunya cases in EU/EEA countries is very low, typically zero or one country. In 2026, France reported 7 cases, suggesting a slight increase in risk of spread. However, no other countries reported cases, indicating limited regional spread. Thus, while there is some risk, the most likely outcome remains 0 or 1 country reporting cases, with a moderate probability of 2 to 3 countries being affected if conditions change.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.42,
+        0.3,
+        0.2,
+        0.06,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "EU/EEA countries reporting locally acquired chikungunya cases in recent years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "France reported seven locally acquired cases in 2026, indicating potential viral presence and vector suitability.",
+        "Global warming could increase the range and activity of mosquito vectors, raising the probability of transmission."
+      ],
+      "drivers_down": [
+        "Historically, EU/EEA countries rarely report locally acquired chikungunya cases.",
+        "Only one EU/EEA country (France) has reported such cases in 2026, suggesting limited spread so far.",
+        "No other EU/EEA countries have reported cases, indicating possible effective control measures."
+      ],
+      "why_might_be_wrong": "The analysis might underestimate the capacity for rapid spread of chikungunya if environmental conditions become more favorable or if surveillance and reporting improve.",
+      "rationale": "Historically, chikungunya has rarely been locally acquired in EU/EEA countries, with only isolated reports like those from France in 2026. While climate change and vector suitability could increase risks, no other countries have reported cases, suggesting limited spread. Thus, the likelihood remains higher for 0 or 1 country reporting by the end of 2026, with a modest probability for 2 to 3 if the situation changes.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Chikungunya is primarily transmitted by Aedes mosquitoes, which are present in some EU/EEA countries. However, the overall incidence of locally acquired cases has been low in recent years, and public health measures are in place to control outbreaks. Given the historical data and current trends, it is reasonable to predict that the majority of countries will not report any cases, with a small chance of 1 country reporting a case, and even less likelihood of multiple countries reporting cases.",
+  "evidence_record_ids": [
+    "ins-7ab87bc44c66"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 5570,
+    "total_output_tokens": 902,
+    "total_tokens": 6472,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 5358,
+        "output_tokens": 778,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 212,
+        "output_tokens": 124,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

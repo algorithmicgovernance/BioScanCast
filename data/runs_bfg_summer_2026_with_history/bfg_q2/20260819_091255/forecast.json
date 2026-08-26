@@ -1,0 +1,213 @@
+{
+  "question_id": "bfg_q2",
+  "options": [
+    "under 750",
+    "750 to 1,499",
+    "1,500 to 2,999",
+    "3,000 to 4,999",
+    "5,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 750": 1.3499015536847354e-12,
+        "750 to 1,499": 2.142835146372651e-12,
+        "1,500 to 2,999": 1.1633098941545317e-06,
+        "3,000 to 4,999": 0.9874154627242727,
+        "5,000 or more": 0.012583373962340464
+      }
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 750": 0.2,
+        "750 to 1,499": 0.3,
+        "1,500 to 2,999": 0.25,
+        "3,000 to 4,999": 0.15,
+        "5,000 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "under 750",
+      "probability": 1.3499015536847354e-12,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "750 to 1,499",
+      "probability": 2.142835146372651e-12,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "1,500 to 2,999",
+      "probability": 1.1633098941545317e-06,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 4,999",
+      "probability": 0.9874154627242727,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast",
+      "option": "5,000 or more",
+      "probability": 0.012583373962340464,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 750",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "750 to 1,499",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1,500 to 2,999",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 4,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q2",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.05,
+        0.92,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks with high death tolls",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Current cumulative reported deaths are already at 2,011 by mid-August 2026, indicating rapid growth.",
+        "Bundibugyo Ebola outbreaks have historically had significant challenges in containment.",
+        "High daily death rates have been observed, contributing to rapid cumulative increases."
+      ],
+      "drivers_down": [
+        "Efforts to harmonize and review data might adjust current figures.",
+        "Ebola outbreaks historically do not often exceed 5,000 deaths, suggesting a natural ceiling.",
+        "Potential improvements in outbreak response and containment as time progresses."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if containment measures are more effective than currently anticipated, significantly slowing the increase in deaths.",
+      "rationale": "The cumulative reported deaths have already exceeded 2,000 by mid-August 2026, with indications of rapid growth. Given that the outbreak is still ongoing and considering the historical difficulty in containing large Ebola outbreaks, it is reasonable to predict that the death count will continue to rise. The base rate for outbreaks exceeding 5,000 deaths is low, but the current trajectory suggests numbers well within the 3,000 to 4,999 range by year-end. Adjusting for potential data revisions and improvements in response, the most likely outcome remains 3,000 to 4,999 deaths.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.8,
+        0.04,
+        0.01
+      ],
+      "ok": true,
+      "reference_class": "Large Ebola outbreaks in Africa (e.g., West Africa Ebola epidemic, 2014-2016)",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The current cumulative death toll is 2,011 as of August 11, 2026, indicating rapid progression.",
+        "Historical data shows that large Ebola outbreaks can have high death tolls if not contained effectively.",
+        "The outbreak has been described as the fastest spreading, which could lead to higher mortality."
+      ],
+      "drivers_down": [
+        "The Bundibugyo strain is associated with a lower fatality rate compared to other Ebola strains.",
+        "Efforts for control and containment may improve over time, potentially reducing the death rate.",
+        "International attention and resources might be mobilized to curb the outbreak's spread."
+      ],
+      "why_might_be_wrong": "The forecast could be off if significant under-reporting of deaths is occurring or if the outbreak's trajectory changes drastically due to new interventions.",
+      "rationale": "As of August 11, 2026, the cumulative death toll is 2,011, suggesting a rapid increase since the outbreak began. Given this trajectory and the historical difficulty in containing large Ebola outbreaks, the probability of reaching the 1,500 to 2,999 range is high. The Bundibugyo strain's lower fatality rate and potential containment efforts are factors that could mitigate further increases, but the current pace suggests a high likelihood of deaths continuing to accumulate within this range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.85,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Large Ebola outbreaks in Central Africa",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Rapid increase in cumulative deaths observed since the outbreak declaration.",
+        "High daily death rate reaching up to 28.3 per day by mid-July 2026.",
+        "Current cumulative deaths as of mid-August 2026 are already over 2,000.",
+        "The outbreak is described as rapidly spreading."
+      ],
+      "drivers_down": [
+        "Historical base rate for Ebola outbreaks reaching over 5,000 deaths is low.",
+        "Efforts for containment and international support might slow the death rate."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if there is a sudden and effective intervention that dramatically reduces the spread and fatality rate of the outbreak.",
+      "rationale": "The Bundibugyo Ebola outbreak has shown a rapid increase in cumulative deaths, surpassing 2,000 by mid-August 2026. With the outbreak being described as the fastest spreading and the high daily death rates reported, it's reasonable to expect that the number of deaths could continue to rise significantly. However, historical data on Ebola outbreaks suggests that exceeding 5,000 cumulative deaths is rare. Given the trajectory and current data, the most probable range is 3,000 to 4,999 deaths by the end of December 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo Ebola outbreaks and the typical scale of such events, it is reasonable to estimate that the cumulative reported deaths will likely be under 1,500. The probabilities reflect a higher likelihood of lower death counts, with diminishing probabilities for higher ranges due to the nature of previous outbreaks.",
+  "evidence_record_ids": [
+    "ins-c3186839ce90",
+    "ins-8f682b6da9f1",
+    "ins-6701e1968ee8",
+    "ins-fc5db208205b",
+    "ins-57cddd14a9f9",
+    "ins-e887c6608d52"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 8007,
+    "total_output_tokens": 983,
+    "total_tokens": 8990,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 7764,
+        "output_tokens": 892,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 243,
+        "output_tokens": 91,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

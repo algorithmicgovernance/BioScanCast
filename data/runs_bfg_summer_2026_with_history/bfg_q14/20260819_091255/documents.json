@@ -1,0 +1,443 @@
+[
+  {
+    "id": "doc-2ab9562a34134d8d9a4446c0940f566a",
+    "result_id": "2ab9562a34134d8d9a4446c0940f566a",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T09:44:05.304932+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-2ab9562a34134d8d9a4446c0940f566a-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-08-19.\nAs of the latest CDC update, a total of 2,566 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-08-19"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-e5073a7fc3904a8fba8fa135a8a1a5c3",
+    "result_id": "e5073a7fc3904a8fba8fa135a8a1a5c3",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-19T09:44:05.703647+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-e5073a7fc3904a8fba8fa135a8a1a5c3-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-93ce9c52adac476cbd3c9b2aebfdef54",
+    "result_id": "93ce9c52adac476cbd3c9b2aebfdef54",
+    "source_url": "https://www.cbsnews.com/news/measles-outbreak-us-map-2026",
+    "domain": "cbsnews.com",
+    "fetched_at": "2026-08-19T09:44:08.245503+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cbsnews.com/news/measles-outbreak-us-map-2026",
+    "title": "As measles outbreaks grow in the U.S., maps and charts show a record number of cases",
+    "published_date": "2026-08-12T14:57:00-04:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2380,
+    "token_count": 511,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-93ce9c52adac476cbd3c9b2aebfdef54-c0",
+        "chunk_index": 0,
+        "text": "So far in 2026, the U.S. has recorded the most measles cases in more than three decades as outbreaks spread in multiple states, Centers for Disease Control and Prevention data shows.\nBy mid-July, the number had already surpassed all of 2025, which had been the worst year in recent history with more than 2,200 confirmed cases. Ongoing outbreaks have put the U.S. at risk of losing its official measles elimination status, which it has held since 2000.\nMeasles is one of the most contagious infectious diseases. In some cases, it can cause severe infections in the lungs and brain that can lead to cognitive issues, deafness or death. But it can be prevented by vaccination, which medical research has proven to be safe and highly effective.\nThe CBS News data team has tracked confirmed measles cases nationwide as new data is released by state health departments and the CDC.\nOut of the 2,289 confirmed cases last year, more than 750 were connected to an outbreak in West Texas that led to the deaths of two children.\nPrior to 2025, the highest number of confirmed cases in the U.S. in recent years was 1,274 in 2019, driven by outbreaks in New York, California and Washington state. Most years the total was much lower.\nHealth experts point to lower vaccination rates as the main reason for increases in preventable infectious diseases like measles. The vast majority of cases have been in people who were unvaccinated, and outbreaks have spread in communities with lower vaccination rates.\nCDC data shows about 92.5% of kindergartners in the U.S. were vaccinated against measles during the 2024\u20132025 school year. That's down from 95.2% during the 2019-2020 school year \u2014 a critical threshold to keep people safe. Only 10 states hit the 95% threshold last year.\n\"When more than 95% of people in a community are vaccinated, most people are protected through community immunity (herd immunity),\" the CDC states.\n\"I think that parents, for most kids, especially for the measles vaccines, the DTP, all the standard childhood vaccines, it's very important that parents vaccinate their kids,\" Dr. Jay Bhattacharya, the director of the National Institutes of Health, said on \"Face the Nation with Margaret Brennan.\"\nResearch has found no evidence of increased rates of autism among those who are vaccinated compared to those who are not. Vaccines also undergo intensive safety testing.",
+        "chunk_type": "prose",
+        "heading": "As measles outbreaks grow in the U.S., maps and charts show a record number of cases",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 511,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-67244279148b41f39efd5564c9f20c1b",
+    "result_id": "67244279148b41f39efd5564c9f20c1b",
+    "source_url": "https://www.reuters.com/video/watch/idRCV00GTDX",
+    "domain": "reuters.com",
+    "fetched_at": "2026-08-19T09:44:08.522845+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://reuters.com/video/watch/idRCV00GTDX",
+    "title": "'Not trending in the right direction': US hits record high measles cases",
+    "published_date": "2026-07-31T13:23:06+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4059,
+    "token_count": 942,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-67244279148b41f39efd5564c9f20c1b-c0",
+        "chunk_index": 0,
+        "text": "\u2022 'Not trending in the right direction': US hits record high measles cases\n\u2022 Palestinian-American raises US flag at West Bank home02:12\n\u2022 Microdramas boom in a shrinking Hollywood01:59\n\u2022 Palestinian-American confronts Israeli settler at West Bank home01:06\n\u2022 Tupac murder trial begins: Can prosecutors prove their case?01:07\n\u2022 Trump's approval tanks to lowest of his presidency01:44\n\u2022 How a Ukrainian soldier\u2019s video diary became a Reuters documentary01:56\n\u2022 Trump orders Pentagon to cut back military exercises with South Korea01:19\n\u2022 Five years on, Afghan women still face Taliban restrictions01:27\n\u2022 Brazil's Lula and Flavio Bolsonaro kick off presidential campaigns01:00\n\u2022 Trump says USS Abraham Lincoln deployment 'not nearly long enough'00:37\n\u2022 How the courtroom reacted to Luigi Mangione pleading guilty01:28\n\u2022 Before-and-after shots show drought's impact on Belgium00:15\n\u2022 Israeli military stop activists from giving aid to Palestinians in West Bank seized house00:27\n\u2022 The last summer of South Korea's dog meat trade01:42\n\u2022 Selena Gomez sued for alleged fraud00:53\n\u2022 'Shocking' temperatures seen in a London heatwave with thermal camera01:47\n\u2022 As Palestinian crops dry up, settlers bathe in diverted spring03:13\n\u2022 Nigel Farage wins election, avoids sharing stage with Count Binface01:04\n\u2022 Japan's Chiba under water as record rainfall disrupts transport, power00:48\n\u2022 The largest US reservoir hits an all-time low amid heat, drought01:42\n\u2022 Colombia survivor shelters in ruins after quake damages home01:01\n\u2022 Is working from home bad for business?01:04\n\u2022 A look back at Karoline Leavitt's exchanges with the media01:33\n\u2022 Why Ford is moving some production from China to the U.S.01:36\n\u2022 Millions in Iceland and Spain experience a total solar eclipse00:44\nVertical Homepage",
+        "chunk_type": "prose",
+        "heading": "Reuters Video > Up next in Vertical Homepage (26 videos)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 422,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-67244279148b41f39efd5564c9f20c1b-c1",
+        "chunk_index": 1,
+        "text": "The US has confirmed 2,318 measles infections already this year, surpassing the entire tally of 2025 only seven months in and reaching the highest annual total in 35 years as vaccination rates decline. Reuters Erica Stapleton takes a look at Arizona, which is among states like Texas and Virginia reporting a high rate this year.",
+        "chunk_type": "prose",
+        "heading": "Reuters Video > 'Not trending in the right direction': US hits record high measles cases",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 67,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-67244279148b41f39efd5564c9f20c1b-c2",
+        "chunk_index": 2,
+        "text": "\u2022 'Not trending in the right direction': US hits record high measles cases\n\u2022 Palestinian-American raises US flag at West Bank home02:12\n\u2022 Microdramas boom in a shrinking Hollywood01:59\n\u2022 Palestinian-American confronts Israeli settler at West Bank home01:06\n\u2022 Tupac murder trial begins: Can prosecutors prove their case?01:07\n\u2022 Trump's approval tanks to lowest of his presidency01:44\n\u2022 How a Ukrainian soldier\u2019s video diary became a Reuters documentary01:56\n\u2022 Trump orders Pentagon to cut back military exercises with South Korea01:19\n\u2022 Five years on, Afghan women still face Taliban restrictions01:27\n\u2022 Brazil's Lula and Flavio Bolsonaro kick off presidential campaigns01:00\n\u2022 Trump says USS Abraham Lincoln deployment 'not nearly long enough'00:37\n\u2022 How the courtroom reacted to Luigi Mangione pleading guilty01:28\n\u2022 Before-and-after shots show drought's impact on Belgium00:15\n\u2022 Israeli military stop activists from giving aid to Palestinians in West Bank seized house00:27\n\u2022 The last summer of South Korea's dog meat trade01:42\n\u2022 Selena Gomez sued for alleged fraud00:53\n\u2022 'Shocking' temperatures seen in a London heatwave with thermal camera01:47\n\u2022 As Palestinian crops dry up, settlers bathe in diverted spring03:13\n\u2022 Nigel Farage wins election, avoids sharing stage with Count Binface01:04\n\u2022 Japan's Chiba under water as record rainfall disrupts transport, power00:48\n\u2022 The largest US reservoir hits an all-time low amid heat, drought01:42\n\u2022 Colombia survivor shelters in ruins after quake damages home01:01\n\u2022 Is working from home bad for business?01:04\n\u2022 A look back at Karoline Leavitt's exchanges with the media01:33\n\u2022 Why Ford is moving some production from China to the U.S.01:36\n\u2022 Millions in Iceland and Spain experience a total solar eclipse00:44\n\u2022 Angie Nixon scored an upset victory in Florida's Democratic primary race for the Senate, as voters in several states picked candidates for elections that will determine control of Congress.",
+        "chunk_type": "prose",
+        "heading": "Reuters Video > Up next in Vertical Homepage (26 videos)",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 453,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-f476c3c81abc43dd954efcb863f6f655",
+    "result_id": "f476c3c81abc43dd954efcb863f6f655",
+    "source_url": "https://www.cnn.com/2026/07/24/health/us-measles-cases-record",
+    "domain": "cnn.com",
+    "fetched_at": "2026-08-19T09:44:10.048554+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cnn.com/2026/07/24/health/us-measles-cases-record",
+    "title": "US measles cases reach 35-year high, for second record-breaking year in a row | CNN",
+    "published_date": "2026-07-24T00:00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 11049,
+    "token_count": 2166,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-f476c3c81abc43dd954efcb863f6f655-c0",
+        "chunk_index": 0,
+        "text": "Measles has continued its historic resurgence in the United States this year, with a second record-breaking year in a row. Just over halfway through 2026, the country has recorded more cases than in any other year since 1991 \u2013 surpassing a grim milestone that was just topped last year.\nThe disease was declared eliminated in the US in 2000, but more cases have been recorded in the past 18 months than there have been in the previous 25 years combined.\nDozens of new cases are reported by the US Centers for Disease Control and Prevention each week, with new large outbreaks adding to others that have simmered since last year.\n\u201cThis essentially is a public health failure, and it\u2019s avoidable,\u201d said Dr. Andrew Racine, president of the American Academy of Pediatrics. Most measles cases are among children, and nearly all of them are unvaccinated.\nResponding to measles outbreaks has become a widespread and persistent challenge in the US. Multiple outbreaks that started in 2025 continued into 2026, and new exposures have led to other large outbreaks affecting most regions of the country.\nSouth Carolina has reported more measles cases in 2026 than any other state. An outbreak started raging across Spartanburg County in October; it would become the largest the largest the US has seen in decades, with nearly 1,000 cases, before ending in April this year.\nGeographically speaking, the Rev. Scott Neely\u2019s Unitarian Universalist Church of Spartanburg was right in the center of the outbreak.\nHe said he felt insulated from it at first, but on the first Friday of 2026 \u2013 the day after New Year\u2019s Day \u2013 the state health department reached out because there had been a connection: Contact tracing work showed that someone with measles had attended the church\u2019s annual Christmas brunch, potentially exposing dozens of people who were there.\n\u201cThis was a strange experience of how segmented our society is,\u201d he said. \u201cAn outbreak was garnering national attention right where I live but having almost no immediate impact on me. That\u2019s not about lack of care or lack of awareness. It is about a kind of separation, isolation, and the way that we\u2019re all living.\u201d",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 443,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f476c3c81abc43dd954efcb863f6f655-c1",
+        "chunk_index": 1,
+        "text": "The South Carolina Department of Public Health asked for a list of all the people who were at the brunch so its workers could continue their investigation, following the chain of exposures to hopefully get ahead of it and prevent more.\nThere was no such list, though. The annual Christmas brunch was a potluck led by volunteers from the congregation and open to anyone in the community who might be looking for a place to be on Christmas, Neely said. They didn\u2019t know everyone who attended.\nRapid messages were sent between leadership and staff, and within a few hours, someone shared a photo they had taken of the room. It took a full team effort to help identify people in the photo and collect contact information to share back to the health department \u2014 a frantic race against one of the most contagious diseases known to humans began.\nNeely said he didn\u2019t hear any more from the state health department; transmission didn\u2019t seem to have spread beyond that one instance, which he attributes to the very high vaccination rate within the congregation.\n\u201cThere were nerves, and there was anxiety, and there was some disagreement, but the concluding story was vaccinations work and cooperative spirit gets us very far,\u201d he said. \u201cBut also it really brought to our immediate attention that this is in our community, it\u2019s all around us, and we don\u2019t know what\u2019s going to happen.\u201d",
+        "chunk_type": "prose",
+        "heading": "Racing to trace spread",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 270,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f476c3c81abc43dd954efcb863f6f655-c2",
+        "chunk_index": 2,
+        "text": "The call Neely got from the South Carolina health department was one of thousands like it that public health workers have made this year. In other pockets of South Carolina and the US, lagging vaccination rates have let measles race ahead of the work being done to contain it.\nThe measles outbreak in South Carolina started in October, contributing to what was a record-breaking \u2014 and deadly \u2014 year for measles in the US. Nearly 2,300 measles cases were reported last year, according to the US Centers for Disease Control and Prevention \u2014 about 12 times more than the annual average since measles was declared eliminated in the US and the worst year in more than three decades.\nThe total number of measles cases in 2026 has already surpassed last year\u2019s total, according to data posted by the CDC on Friday. At least 2,318 cases have been reported with more than five months left in the year.\nMost of the cases in 2026 have been associated with outbreaks that started last year \u2014 like in South Carolina, where the outbreak extended through late April. An outbreak along the Utah-Arizona state line has been simmering for more than a year, a key milestone that international health officials will assess when they meet in November to discuss whether the US can still claim to have measles elimination status.\nBut there have also been 35 new outbreaks this year, and all but sevent states have reported cases. The vast majority of cases \u2014 more than 90% \u2014 are among people who are unvaccinated or whose vaccination status is unknown, CDC data shows.\nFor Neely, the experience was a \u201cremarkable microcosm story that vaccines work.\u201d\nIt also highlighted for him just how time- and resource-intensive it can be to conduct contact tracing and other work to manage a measles outbreak \u2014 work that health departments across the country has been heavily immersed in.\nThe work needed to respond to even one measles case can last for weeks or months, public health experts say.\nIn San Francisco, for example, the vast majority of case investigators were activated to do contact tracing interviews after exposures from just two cases in April, said Dr. Farrell Tobolowsky, medical director the San Francisco Department of Public Health\u2019s communicable disease program.\n\u201cI don\u2019t think our department can currently handle more than one (case) without calling in additional staff,\u201d Tobolowsky said at a briefing hosted by the Big Cities Health Coalition, noting that the burden has become even greater amid changes made because of recent cuts to public health funding.\n\u201cIt is something that we\u2019re concerned about all the time and is on our minds all day, every day,\u201d she said. \u201cNot only if there\u2019s another measles case, but if anything else comes that is of high consequence at the same time, it will be difficult to manage two things at once.\u201d",
+        "chunk_type": "prose",
+        "heading": "Racing to trace spread > Converging outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 565,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-f476c3c81abc43dd954efcb863f6f655-c3",
+        "chunk_index": 3,
+        "text": "\u201cMeasles outbreaks are very labor-intensive, just given how quickly it can spread,\u201d said Meredith Robinson, vaccine-preventable diseases coordinator for the Virginia Department of Health.\nVirginia had a few sporadic measles cases at the start of 2026, related to international travel or travel to areas of the US with an outbreak. But vaccination rates in the state are high, Robinson said, so those cases didn\u2019t appear to spread.\nIn May, though, the health department was alerted to a measles case in a person who hadn\u2019t left the state.\n\u201cThat\u2019s when this outbreak investigation began,\u201d she said. \u201cIt\u2019s been a very busy last few months.\u201d\nMore than 150 cases have now been linked to the outbreak, which is centered in Buckingham County, about an hour west of Richmond. That single outbreak has led to nearly as many cases as there would be nationwide in an average year since measles was declared eliminated a quarter century ago, and it\u2019s not the only one happening.\nLocal public health workers have been out in the field meeting with community members to share information about measles, interviewing families who have reported cases to understand the spread and working with healthcare providers to make sure they are prepared to respond to cases, Robinson said.\nClose communication with other state health departments that have experienced measles outbreaks has helped Virginia prepare for this moment, she said, and the state is sharing some innovative solutions of their own.\n\u201cWe\u2019ve been able to benefit from the resources [other states] have put together. We\u2019re kind of in a better-equipped spot because of all the hard work that they\u2019ve put in,\u201d Robinson said.\nThe local public health district has also coordinated with local health systems to coordinate a mobile care team that community members can call for a home visit to test for measles, provide some care and help identify cases that might need additional support. This lowers barriers and lets interventions happen earlier than they may have otherwise by not requiring people to go to a health care setting if they don\u2019t want to, she said.\nExperts say the potential for measles outbreaks remains anywhere vaccination rates remain below 95%, a key immunity threshold for the highly contagious disease. Like in Virginia, high overall coverage can mask pockets where vaccination rates are low.\nA measles outbreak in Pennsylvania\u2019s Lancaster County also continues to grow. More than 100 cases have been reported this year, the state health department said, and none of them have received both recommended doses of the measles-mumps-rubella (MMR) vaccine.\n\u201cInfectious diseases are not predictable, so the health department does not speculate about whether more confirmed cases of measles will emerge or when the outbreak will end in the Commonwealth. We do know that vaccination is the best protection against measles, providing 97% lifetime protection after two doses,\u201d a health department spokesperson said in an email to CNN. \u201cIncreasing our vaccination rates improves our community immunity which we know works to limit cases and will help us bring the outbreak under control faster.\u201d\nHundreds of MMR doses have been administered over the past two months in Pennsylvania across dozens of pop-up clinics that state health center teams have hosted.\nThe Virginia health department has also worked with the local community to identify key ways they could work together to help slow the spread and protect vulnerable residents. In June, the department issued an advisory asking unvaccinated people to \u201cskip large gatherings, crowded settings, and community events in the outbreak area until the outbreak subsides,\u201d specifically naming an Amish Parochial School Consignment Auction that was known to attract large crowds from all over the state and beyond.\n\u201cKnowing the level of activity there was already, there was just a heightened concern that this event could lead to spread,\u201d Robinson said. \u201cThe agreement eventually landed with [the Virginia health department] being able to have a presence at the auction and be visible to attendees to promote measles education, testing and vaccination.\u201d\nIn South Carolina, Neely knew that the \u201cvast majority\u201d of his congregation was vaccinated. But after the scramble in January, they wanted to become actively involved in the response and started hosting mobile vaccination clinics.\n\u201cI\u2019m not sure we were able to quantify what the actual impact of what we did was. I don\u2019t know that it would be a significant numerical impact,\u201d Neely said. \u201cIt\u2019s a story of a community that was trying to figure out what to do in real time and people who are very willing to work together to try to do it.\u201d",
+        "chunk_type": "prose",
+        "heading": "Racing to trace spread > Community coordination to raise vaccination",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 888,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-c19cf44347654318bf687b9ff9326b91",
+    "result_id": "c19cf44347654318bf687b9ff9326b91",
+    "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-19T09:44:11.063968+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "title": "Global Measles Outbreaks",
+    "published_date": "2026-08-10T08:49:39+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 1799,
+    "token_count": 409,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-c19cf44347654318bf687b9ff9326b91-c0",
+        "chunk_index": 0,
+        "text": "Measles is one of the most contagious human diseases known.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > An outbreak means more disease is occurring than expected",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 13,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c19cf44347654318bf687b9ff9326b91-c1",
+        "chunk_index": 1,
+        "text": "Because measles is so contagious, it can easily cross borders. In 2023, an estimated 10.3 million people were infected with measles. Right now, measles outbreaks are happening in every region of the world. Anyone who is not protected against measles can get measles while abroad and easily spread it to others when they return home.\nAlthough measles was declared eliminated in the United States in 2000, measles cases and outbreaks continue to occur in the United States due to unvaccinated international travelers. Large measles outbreaks are possible when travel-related measles cases reach at-risk U.S. populations with low immunization against measles. In 2019, the U.S. nearly lost its elimination status with almost 1,300 measles cases from a large outbreak in New York and cases in 30 additional states. After a decrease in global measles incidence during the COVID-19 pandemic, measles activity globally and in the United States continues to rise.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > Measles anywhere is a threat everywhere",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 188,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c19cf44347654318bf687b9ff9326b91-c2",
+        "chunk_index": 2,
+        "text": "Country\tNumber of Cases\nBangladesh\t57,561\nIndia\t26,332\nYemen\t14,961\nMexico\t12,252\nPakistan\t11,212\nCameroon\t9,394\nGuatemala\t7,067\nKazakhstan\t6,968\nAngola\t6,737\nMadagascar\t5,664",
+        "chunk_type": "table",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": [
+          [
+            "Country",
+            "Number of Cases"
+          ],
+          [
+            "Bangladesh",
+            "57,561"
+          ],
+          [
+            "India",
+            "26,332"
+          ],
+          [
+            "Yemen",
+            "14,961"
+          ],
+          [
+            "Mexico",
+            "12,252"
+          ],
+          [
+            "Pakistan",
+            "11,212"
+          ],
+          [
+            "Cameroon",
+            "9,394"
+          ],
+          [
+            "Guatemala",
+            "7,067"
+          ],
+          [
+            "Kazakhstan",
+            "6,968"
+          ],
+          [
+            "Angola",
+            "6,737"
+          ],
+          [
+            "Madagascar",
+            "5,664"
+          ]
+        ],
+        "token_count": 73,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-c19cf44347654318bf687b9ff9326b91-c3",
+        "chunk_index": 3,
+        "text": "This table is based on provisional monthly surveillance data reported to the World Health Organization (Geneva) as of August 2026. The data reflected covers January 2026 - June 2026.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.\n\u2022 About the image: A little boy stands near his home in Makoko, a hard-to-reach settlement along a river in Nigeria. He was infected with measles but has since recovered. \u00a9UNICEF/U.S. CDC/UN0669658/Owoicho",
+        "chunk_type": "prose",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 135,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Country",
+          "Number of Cases"
+        ],
+        [
+          "Bangladesh",
+          "57,561"
+        ],
+        [
+          "India",
+          "26,332"
+        ],
+        [
+          "Yemen",
+          "14,961"
+        ],
+        [
+          "Mexico",
+          "12,252"
+        ],
+        [
+          "Pakistan",
+          "11,212"
+        ],
+        [
+          "Cameroon",
+          "9,394"
+        ],
+        [
+          "Guatemala",
+          "7,067"
+        ],
+        [
+          "Kazakhstan",
+          "6,968"
+        ],
+        [
+          "Angola",
+          "6,737"
+        ],
+        [
+          "Madagascar",
+          "5,664"
+        ]
+      ]
+    ],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-3e3f30cbd4db425d93b4461b6785ae92",
+    "result_id": "3e3f30cbd4db425d93b4461b6785ae92",
+    "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+    "domain": "nbcnews.com",
+    "fetched_at": "2026-08-19T09:44:11.373768+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+    "title": "Map: Track the spread of measles in the U.S.",
+    "published_date": "2026-07-24T15:08:42+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2262,
+    "token_count": 518,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-3e3f30cbd4db425d93b4461b6785ae92-c0",
+        "chunk_index": 0,
+        "text": "Measles, one of the most contagious viruses in the world, is regularly infecting people in the U.S. again.\nAlready in 2026 more than 2,300 cases have been counted, making 2026 the two year for measles infections in the U.S. since 2000.\nNBC News is continuing to track confirmed measles cases across the United States, using Centers for Disease Control and Prevention data.\nMeasles case counts reached a 34-year high last year, and seven months into 2026, this year\u2019s total is even higher.\nThe disease epicenter at the start of the year was in South Carolina, where the CDC has confirmed 600-plus measles cases. As of late January, more than 500 people were in quarantine and hundreds infected in the state. State officials declared the South Carolina outbreak over in April.\nThe map below will be updated regularly to show year-to-date new measles case counts reported in each state and Washington, D.C.\nMeasles infection counts skyrocketed last year with 2,289 confirmed cases, which had been the most reported since 1991. This comes despite the virus being marked as being \u201celiminated\u201d in the U.S. \u2014a designation meaning it is no longer constantly circulating \u2014 in 2000. The U.S. is in danger of losing that status following a year of continuous spread of the disease.\nThree people, including two young girls, died in the U.S. from measles last year.\nThe major outbreaks last year began with West Texas in February. In October, a measles outbreak occurred along the Utah and Arizona border. In all, the CDC recorded 48 measles outbreaks in 2025, up from 16 in 2024. So far in 2026, 35 measles outbreaks have been reported.\nChildhood vaccination rates have been backsliding, leaving communities vulnerable to this deadly disease.\nThe measles vaccine was introduced in 1963, marking a turning point for the contagious disease, which used to infect hundreds of thousands and kill thousands in the country every year.\nCORRECTION (Feb. 20, 2026, 3:57 p.m. ET): A previous version of a graphic in this article miscalculated the relative size of this year's measles case count. As of Feb. 20, this year's case count is four times the size of 2025's at the same point in the year, and 25 times the size of 2024's at the same point, not seven times and 30 times higher.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 518,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

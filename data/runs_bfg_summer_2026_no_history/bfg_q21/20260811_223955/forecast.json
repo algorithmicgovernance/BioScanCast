@@ -1,0 +1,147 @@
+{
+  "question_id": "bfg_q21",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.15517241379310345,
+        "NO": 0.8448275862068965
+      }
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.15517241379310345,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.8448275862068965,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q21",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past filovirus outbreaks globally",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filoviruses like Ebola and Marburg have a history of sporadic outbreaks.",
+        "The ongoing Bundibugyo event indicates active transmission of filoviruses in the region, suggesting potential for spillover events."
+      ],
+      "drivers_down": [
+        "The current Bundibugyo outbreak may lead to increased vigilance and control measures that could prevent new outbreaks.",
+        "There is no evidence of a concurrent outbreak in another region that could be classified as distinct from the Bundibugyo event."
+      ],
+      "why_might_be_wrong": "Filovirus outbreaks may occur without warning, and the base rate may underestimate the likelihood of new outbreaks given current regional activity.",
+      "rationale": "The base rate for new filovirus outbreaks, given historical data, is relatively low. However, the presence of an ongoing outbreak in the DRC suggests an environment conducive to further spillovers. Despite this, increased surveillance and control measures in response to the current outbreak may mitigate the risk of a new, distinct outbreak. Balancing these factors, the probability of WHO declaring a new outbreak distinct from the Bundibugyo event remains moderate, but not high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past filovirus outbreaks globally",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filoviruses have a history of sporadic outbreaks due to zoonotic spillover events.",
+        "The ongoing Bundibugyo outbreak indicates active transmission of filoviruses in the region, which could increase the likelihood of further outbreaks.",
+        "The presence of filoviruses in multiple regions (Democratic Republic of the Congo and Uganda) increases the risk of separate events."
+      ],
+      "drivers_down": [
+        "The current Bundibugyo outbreak might lead to increased surveillance and control measures, reducing the probability of additional outbreaks.",
+        "Filovirus outbreaks are relatively rare events, with significant new outbreaks occurring only a few times per decade."
+      ],
+      "why_might_be_wrong": "Increased surveillance measures due to the ongoing Bundibugyo outbreak might prevent the detection or declaration of a new distinct outbreak.",
+      "rationale": "The base rate for a new filovirus outbreak declaration by WHO in a given six-month period is low, given the historical frequency of such events. However, the presence of an ongoing outbreak and known transmission in multiple regions slightly increases the likelihood of a new event. Balancing these factors, the probability of WHO declaring a new, distinct filovirus outbreak by the target date is moderate but not high.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.3,
+        0.7
+      ],
+      "ok": true,
+      "reference_class": "Past filovirus outbreaks globally",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "Filoviruses, including Ebola and Marburg, are known to cause sporadic outbreaks in Africa.",
+        "The Democratic Republic of the Congo and Uganda have historically been hotspots for filovirus outbreaks.",
+        "The ongoing Bundibugyo outbreak indicates active transmission and potential for spread to new areas."
+      ],
+      "drivers_down": [
+        "The existing Bundibugyo outbreak may draw resources and attention, potentially limiting detection of new outbreaks.",
+        "Increased surveillance and response measures due to the current outbreak could reduce the likelihood of a new outbreak.",
+        "There is no current evidence of a new, unrelated filovirus outbreak as of mid-2026."
+      ],
+      "why_might_be_wrong": "The forecast could be wrong if a new filovirus outbreak emerges rapidly after June 2026, or if surveillance misses a new outbreak until after the target period.",
+      "rationale": "The base rate for new filovirus outbreaks is relatively low. However, the presence of ongoing transmission in the region increases the risk. Despite this, the focus on the current Bundibugyo outbreak could limit the likelihood of detecting and responding to a new, unrelated outbreak promptly. The probabilities reflect a slightly increased risk over the base rate due to these factors, but still lean towards 'NO'.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the ongoing Bundibugyo event, it is plausible that new outbreaks could occur, but the likelihood of a distinct new filovirus outbreak being declared by WHO within the specified timeframe is relatively low. Therefore, the probability of 'NO' is higher.",
+  "evidence_record_ids": [
+    "ins-431c74d9f2be",
+    "ins-f21034dcc47a",
+    "ins-b379e5b87b5d"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3428,
+    "total_output_tokens": 848,
+    "total_tokens": 4276,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3237,
+        "output_tokens": 781,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 191,
+        "output_tokens": 67,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,206 @@
+{
+  "question_id": "bfg_q22",
+  "options": [
+    "15 or fewer",
+    "16 to 30",
+    "31 to 50",
+    "51 to 79",
+    "80 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "15 or fewer": 4.209407677007696e-06,
+        "16 to 30": 0.9467605163627291,
+        "31 to 50": 0.05323524971455184,
+        "51 to 79": 2.4515042098299466e-08,
+        "80 or more": 7.168241794846283e-18
+      }
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "15 or fewer": 0.6,
+        "16 to 30": 0.2,
+        "31 to 50": 0.1,
+        "51 to 79": 0.05,
+        "80 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "15 or fewer",
+      "probability": 4.209407677007696e-06,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "16 to 30",
+      "probability": 0.9467605163627291,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "31 to 50",
+      "probability": 0.05323524971455184,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "51 to 79",
+      "probability": 2.4515042098299466e-08,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast",
+      "option": "80 or more",
+      "probability": 7.168241794846283e-18,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "15 or fewer",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "16 to 30",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "31 to 50",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "51 to 79",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q22",
+      "forecast_source": "bioscancast_baseline",
+      "option": "80 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.0,
+        0.8,
+        0.2,
+        0.0,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Global wild poliovirus type 1 cases in recent years (2024-2026)",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Global polio eradication efforts have been historically effective, reducing cases significantly.",
+        "The number of reported wild poliovirus cases has been decreasing over the past few years, indicating effective control measures."
+      ],
+      "drivers_down": [
+        "As of the end of 2026, 19 cases have been reported, which already exceeds the 15 or fewer bin.",
+        "Regions with endemic transmission, such as Afghanistan and Pakistan, still pose challenges to eradication efforts."
+      ],
+      "why_might_be_wrong": "There could be under-reporting or delayed reporting of cases, which might affect the actual number of cases counted by year-end.",
+      "rationale": "The base rate for 15 or fewer cases is historically supported by the downward trend in global WPV1 cases due to eradication efforts. However, the reported 19 cases by the end of 2026 already indicate that achieving 15 or fewer is unlikely. Given the current data, the most probable scenario is the 16 to 30 cases range. This conclusion balances the evidence of effective eradication against the current count and potential regional challenges.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.75,
+        0.2,
+        0.04,
+        0.01,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Yearly global wild poliovirus type 1 case counts",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Historical trend of decreasing WPV1 cases",
+        "Strong global eradication efforts",
+        "Only 19 cases reported as of the end of 2026"
+      ],
+      "drivers_down": [
+        "Endemic regions like Afghanistan and Pakistan still present challenges",
+        "Possibility of under-reporting or delayed reporting in some regions"
+      ],
+      "why_might_be_wrong": "Unexpected outbreaks or changes in eradication efforts could alter the number significantly.",
+      "rationale": "Given the historical trend of reducing WPV1 cases due to effective global eradication efforts, and the cumulative count of 19 cases by the end of 2026, it is reasonable to expect the total number to be relatively low. However, the presence of endemic regions and potential under-reporting necessitate a non-zero probability for higher case counts. Adjusting slightly from the base rate based on current evidence, the highest probability remains in the lowest bin, but with some weight given to the next bin as well.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.6,
+        0.3,
+        0.08,
+        0.02,
+        0.0
+      ],
+      "ok": true,
+      "reference_class": "Recent years of global wild poliovirus type 1 cases",
+      "base_rate": 0.8,
+      "drivers_up": [
+        "Significant reduction from 99 cases in 2024 to 19 cases by the end of 2026",
+        "Global eradication efforts are ongoing and showing effectiveness",
+        "Polio vaccination campaigns have historically been successful"
+      ],
+      "drivers_down": [
+        "Endemic regions like Afghanistan and Pakistan pose a risk of higher case numbers",
+        "Potential under-reporting or delays in case detection",
+        "Political instability or conflict might hinder eradication efforts"
+      ],
+      "why_might_be_wrong": "The forecast could be off if eradication efforts face significant setbacks due to political instability or if there is a surge in cases in endemic regions.",
+      "rationale": "The base rate for 15 or fewer cases remains high due to the significant reduction in reported cases from previous years, indicating effective eradication efforts. Despite these successes, the presence of endemic regions and potential under-reporting or detection delays suggest some probability for higher case counts. The probability for the 15 or fewer bin remains the highest, but there is a non-negligible chance for the next bin given the cumulative count of 19 cases by year-end 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the global efforts in vaccination and eradication programs for poliovirus, particularly wild poliovirus type 1, it is likely that the number of cases will remain low. The majority of cases are expected to be 15 or fewer due to ongoing immunization efforts and surveillance. However, there is a possibility of small outbreaks in areas with low vaccination coverage, which could lead to 16 to 30 cases. The probabilities for higher case counts (31 or more) are significantly lower, reflecting the success of global health initiatives.",
+  "evidence_record_ids": [
+    "ins-340f90928b0c",
+    "ins-925cfe5974f5"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 6767,
+    "total_output_tokens": 890,
+    "total_tokens": 7657,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 6558,
+        "output_tokens": 757,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 209,
+        "output_tokens": 133,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

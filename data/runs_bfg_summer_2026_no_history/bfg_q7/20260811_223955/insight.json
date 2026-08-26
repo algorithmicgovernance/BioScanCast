@@ -1,0 +1,145 @@
+{
+  "records": [
+    {
+      "id": "ins-377623de1a2d",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1000.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-07T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:45:26.099147+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-26a923c9642d4119b50d9dbde4744858",
+          "chunk_id": "doc-26a923c9642d4119b50d9dbde4744858-c0",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/avian-a-h5n1-virus",
+          "quote": "the cumulative number of confirmed human cases of avian influenza A(H5N1) reported to WHO since 2003 is 1000 cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-afa507702e4b",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": "National Influenza Surveillance, Bangladesh (NISB)",
+      "data_quality": null,
+      "event_date": "2026-06-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "One laboratory-confirmed human case of avian influenza A(H5) infection in a child from Sylhet Division.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:45:28.701663+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-c30d9d195ad64b42a25db4dfc2f72848",
+          "chunk_id": "doc-c30d9d195ad64b42a25db4dfc2f72848-c1",
+          "source_url": "https://www.who.int/teams/global-influenza-programme/avian-influenza/monthly-risk-assessment-summary",
+          "quote": "Bangladesh notified WHO of one laboratory-confirmed human case of avian influenza A(H5) infection in Bangladesh in a child from Sylhet Division."
+        }
+      ]
+    },
+    {
+      "id": "ins-07333015d52b",
+      "question_id": "bfg_q7",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "confirmed_cases",
+      "metric_value": 71.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-02-01T00:00:00",
+      "event_date_precision": "month",
+      "summary": "Total reported human cases of A(H5) bird flu since February 2024.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:45:32.734521+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-f37472805f654c87be9b2fc6a08f2aab",
+          "chunk_id": "doc-f37472805f654c87be9b2fc6a08f2aab-c1",
+          "source_url": "https://www.cdc.gov/bird-flu/situation-summary/",
+          "quote": "Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024"
+        },
+        {
+          "document_id": "doc-e024575f8a4541bdbac085d5a3ef6625",
+          "chunk_id": "doc-e024575f8a4541bdbac085d5a3ef6625-c1",
+          "source_url": "https://www.cdc.gov/bird-flu/situation-summary/index.html",
+          "quote": "Of the 71 total reported human cases of A(H5) bird flu reported in the United States since February 2024"
+        }
+      ]
+    },
+    {
+      "id": "ins-170826a61640",
+      "question_id": "bfg_q7",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "avian influenza h5",
+      "metric_name": "deaths",
+      "metric_value": 0.5,
+      "metric_unit": "percent",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "The data presented are preliminary and may change as more data are received and processed.",
+      "event_date": "2025-12-20T00:00:00",
+      "event_date_precision": "day",
+      "summary": "0.5% of the deaths during Week 51 were due to influenza, an increase from Week 50.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:45:39.141702+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-dea34f49ece647f6948c092c4dfc91a0",
+          "chunk_id": "doc-dea34f49ece647f6948c092c4dfc91a0-c26",
+          "source_url": "https://www.cdc.gov/fluview/surveillance/2025-week-51.html",
+          "quote": "0.5% of the deaths that occurred during the week ending December 20, 2025 (Week 51), were due to influenza."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 101444,
+    "total_output_tokens": 848,
+    "total_tokens": 102292,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 101444,
+        "output_tokens": 848,
+        "calls": 47
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

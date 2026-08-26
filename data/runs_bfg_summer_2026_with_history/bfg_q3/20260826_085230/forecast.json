@@ -1,0 +1,170 @@
+{
+  "question_id": "bfg_q3",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.8006322871392494,
+        "NO": 0.19936771286075058
+      }
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.8006322871392494,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.19936771286075058,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q3",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.6,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.7,
+        0.3
+      ],
+      "ok": true,
+      "reference_class": "Past PHEICs declared by WHO, particularly those for Ebola outbreaks.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Current severity of the Bundibugyo virus outbreak with high case and death counts.",
+        "Ongoing transmission in DRC and Uganda, with cases still rising.",
+        "History of Ebola outbreaks being challenging to control swiftly.",
+        "Funding gaps hindering response efforts."
+      ],
+      "drivers_down": [
+        "PHEICs are typically not indefinite and tend to be lifted as situations stabilize.",
+        "Potential for international aid and intervention to improve containment efforts.",
+        "Possibility of vaccine or treatment developments over time."
+      ],
+      "why_might_be_wrong": "The situation could stabilize more rapidly than expected due to international intervention, reducing the need for a PHEIC.",
+      "rationale": "The Bundibugyo virus outbreak in DRC and Uganda remains severe, with ongoing transmission and a significant number of cases and deaths. Historical data on PHEICs, particularly for Ebola, suggest they can remain in place for extended periods if the situation is not controlled. However, PHEICs are not indefinite and can be lifted if the outbreak is contained, which could be aided by international response efforts. Given these factors, while the likelihood of the PHEIC still being in effect is reasonably high, there is also a significant chance that the situation could stabilize by the end of 2026.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.35
+      ],
+      "ok": true,
+      "reference_class": "Past Public Health Emergencies of International Concern (PHEICs)",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "The outbreak was declared a PHEIC in May 2026, indicating severity.",
+        "There is ongoing transmission in both DRC and Uganda as of mid-2026.",
+        "The cumulative confirmed cases in DRC are significant, suggesting substantial spread.",
+        "Past PHEICs have lasted several years in cases of severe outbreaks, such as the 2014-2016 Ebola outbreak."
+      ],
+      "drivers_down": [
+        "PHEICs are typically lifted as situations stabilize and control measures take effect.",
+        "Historically, most PHEICs have not lasted beyond a few years.",
+        "There is international attention and likely efforts to control the outbreak, which may lead to stabilization."
+      ],
+      "why_might_be_wrong": "The situation could stabilize faster than expected due to international intervention and effective control measures, leading to the lifting of the PHEIC before the target date.",
+      "rationale": "The current situation of the Bundibugyo virus outbreak in the DRC and Uganda is severe, with significant case numbers and an ongoing PHEIC declaration. Given the historical base rate of PHEICs, which often last for several years in severe cases, and the current dynamics of the outbreak, it is more likely than not that the PHEIC will still be in effect by the end of 2026. However, the potential for effective international response and control measures could lead to an earlier resolution, though this is less probable given current data.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.65,
+        0.35
+      ],
+      "ok": true,
+      "reference_class": "Past PHEIC declarations for viral outbreaks, particularly Ebola outbreaks in Africa.",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "The outbreak was declared a PHEIC in May 2026, indicating severity and international concern.",
+        "High number of confirmed cases (1048 in DR Congo and 20 in Uganda), suggesting ongoing transmission.",
+        "Historical precedence of prolonged PHEICs for Ebola outbreaks due to complex containment and eradication challenges.",
+        "Funding gaps and healthcare worker infections indicate challenges in controlling the outbreak."
+      ],
+      "drivers_down": [
+        "PHEICs are typically lifted as situations stabilize, with historical PHEICs for Ebola not lasting indefinitely.",
+        "The outbreak is currently limited to specific regions, potentially reducing international spread concerns over time.",
+        "Advancements in Ebola treatment and containment strategies may shorten the duration of the PHEIC."
+      ],
+      "why_might_be_wrong": "The forecast could be off if the outbreak worsens significantly or if the response efforts face unexpected setbacks, extending the PHEIC duration.",
+      "rationale": "The Bundibugyo virus outbreak in the DRC and Uganda has prompted a PHEIC declaration due to its severity. Historical data shows that Ebola-related PHEICs can last for extended periods but are eventually lifted as the situation improves. The ongoing transmission and challenges in containment, including healthcare worker infections and funding gaps, suggest a continued PHEIC into 2026. However, PHEICs are not indefinite, and with improved control measures, the situation might stabilize before the end of 2026. Balancing these factors, the likelihood of the PHEIC still being in place by the end of 2026 is higher than not, but not overwhelmingly so.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "The Bundibugyo virus, a strain of Ebola, has shown potential for outbreaks in the past, particularly in the DRC and Uganda. However, the effectiveness of biosecurity measures, vaccination efforts, and public health responses could lead to a decrease in the incidence of the disease by 2026. Therefore, while there is a significant chance that the PHEIC could still be in effect due to the unpredictable nature of viral outbreaks, there is also a reasonable probability that it could be resolved by that time.",
+  "evidence_record_ids": [
+    "ins-b98f188cc7ac",
+    "ins-5326a4a4c508",
+    "ins-7158bc92a1a2",
+    "ins-aff3ff844238",
+    "ins-c44a025d2686",
+    "ins-400d981f075b",
+    "ins-923dabc17368",
+    "ins-2c8fe979ff12",
+    "ins-ba33b54d1d8f",
+    "ins-ec10cf8f0f47",
+    "ins-c2c2c3813c9a",
+    "ins-107ff786a71a",
+    "ins-5cf290b97db8",
+    "ins-303783c86375",
+    "ins-24259e4aad5d",
+    "ins-61836a175e6a",
+    "ins-d510c9f1f95f",
+    "ins-25a07cd4e928",
+    "ins-49fe2274a805",
+    "ins-b409c501e0c5"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 11328,
+    "total_output_tokens": 1074,
+    "total_tokens": 12402,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 11139,
+        "output_tokens": 955,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 189,
+        "output_tokens": 119,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

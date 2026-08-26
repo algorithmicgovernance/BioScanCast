@@ -1,0 +1,399 @@
+[
+  {
+    "id": "doc-e0cc42cbe8fc4aa1b22ba37c624783cd",
+    "result_id": "e0cc42cbe8fc4aa1b22ba37c624783cd",
+    "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:25:22.420303+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/measles/data-research/index.html",
+    "title": "CDC \u2014 Measles Cases and Outbreaks (United States)",
+    "published_date": null,
+    "language": null,
+    "page_count": null,
+    "char_count": 735,
+    "token_count": 177,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-e0cc42cbe8fc4aa1b22ba37c624783cd-c0",
+        "chunk_index": 0,
+        "text": "Source: https://www.cdc.gov/measles/data-research/index.html (data feed https://www.cdc.gov/wcms/vizdata/measles/measles_hosp.json), retrieved 2026-08-26.\nAs of the latest CDC update, a total of 2,777 confirmed measles cases were reported in the United States in 2026. There have been 0 confirmed deaths from measles in 2026.\nAs of the latest CDC update, a total of 2,289 confirmed measles cases were reported in the United States in 2025. There were 3 confirmed deaths from measles in 2025.\nNote: this custom scraper renders the CDC measles JSON data feed into compact HTML because the page's case/death figures are injected client-side and are absent from the statically served table cells. Counts are cumulative year-to-date totals.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 177,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [
+      "2026-08-26"
+    ],
+    "fetch_strategy": "custom:cdc_measles",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-194dae17e72242d091ac6e665df21974",
+    "result_id": "194dae17e72242d091ac6e665df21974",
+    "source_url": "https://www.paho.org/en/topics/measles",
+    "domain": "paho.org",
+    "fetched_at": "2026-08-26T09:25:23.018868+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://paho.org/en/topics/measles",
+    "title": "Measles",
+    "published_date": "2022-12-14T12:00:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2103,
+    "token_count": 442,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-194dae17e72242d091ac6e665df21974-c0",
+        "chunk_index": 0,
+        "text": "Measles is a highly contagious viral disease, which affects mostly children. It is transmitted via droplets from the nose, mouth, or throat of infected persons. Initial symptoms, which usually appear 10-12 days after infection, include high fever, runny nose, bloodshot eyes, and tiny white spots on the inside of the mouth. Several days later, a rash develops, starting on the face and upper neck and gradually spreading downwards.\nThere is no specific treatment for measles and most people recover within 2-3 weeks. However, particularly in malnourished children and people with reduced immunity, measles can cause serious complications, including blindness, encephalitis, severe diarrhea, ear infection, and pneumonia. Measles can be prevented by immunization.\n\u2022 Measles is a very contagious viral disease that especially affects children and can cause severe health problems, including severe diarrhea, ear infections, blindness, pneumonia, and encephalitis (swelling of the brain). Some of these complications can lead to death.\n\u2022 At the global level, measles continues to be one of the leading causes of death among young children, despite the fact that there is a safe and effective vaccine to prevent it. There is no specific antiviral treatment against the measles virus.\n\u2022 Serious cases are especially frequent in malnourished young children, especially those whose immune systems are weakened. In populations with high levels of malnutrition and inadequate health care, measles can kill in up to 10% of cases.\n\u2022 Measles is transmitted by airborne droplets from the nose, mouth, or throat of an infected person. The virus can stay active and contagious in the air or on surfaces for two hours.\n\u2022 Symptoms tend to be high fever, runny nose, cough, red and watery eyes, small white spots on the inside of the cheeks, and widespread rash all over the body.\n\u2022 Before widespread vaccination began in 1980, measles caused 2.6 million deaths a year throughout the world, 12,000 of them in the Americas.\n\u2022 Between 1970 and 1979, Latin American countries reported about 220,000 cases of measles a year.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 442,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-8dd558843d854e2a90ec393257b746b2",
+    "result_id": "8dd558843d854e2a90ec393257b746b2",
+    "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "domain": "cdc.gov",
+    "fetched_at": "2026-08-26T09:25:23.545996+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+    "title": "Global Measles Outbreaks",
+    "published_date": "2026-08-10T08:49:39+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 1799,
+    "token_count": 409,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-8dd558843d854e2a90ec393257b746b2-c0",
+        "chunk_index": 0,
+        "text": "Measles is one of the most contagious human diseases known.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > An outbreak means more disease is occurring than expected",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 13,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8dd558843d854e2a90ec393257b746b2-c1",
+        "chunk_index": 1,
+        "text": "Because measles is so contagious, it can easily cross borders. In 2023, an estimated 10.3 million people were infected with measles. Right now, measles outbreaks are happening in every region of the world. Anyone who is not protected against measles can get measles while abroad and easily spread it to others when they return home.\nAlthough measles was declared eliminated in the United States in 2000, measles cases and outbreaks continue to occur in the United States due to unvaccinated international travelers. Large measles outbreaks are possible when travel-related measles cases reach at-risk U.S. populations with low immunization against measles. In 2019, the U.S. nearly lost its elimination status with almost 1,300 measles cases from a large outbreak in New York and cases in 30 additional states. After a decrease in global measles incidence during the COVID-19 pandemic, measles activity globally and in the United States continues to rise.",
+        "chunk_type": "prose",
+        "heading": "At a glance > About measles outbreaks > Measles anywhere is a threat everywhere",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 188,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8dd558843d854e2a90ec393257b746b2-c2",
+        "chunk_index": 2,
+        "text": "Country\tNumber of Cases\nBangladesh\t57,561\nIndia\t26,332\nYemen\t14,961\nMexico\t12,252\nPakistan\t11,212\nCameroon\t9,394\nGuatemala\t7,067\nKazakhstan\t6,968\nAngola\t6,737\nMadagascar\t5,664",
+        "chunk_type": "table",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": [
+          [
+            "Country",
+            "Number of Cases"
+          ],
+          [
+            "Bangladesh",
+            "57,561"
+          ],
+          [
+            "India",
+            "26,332"
+          ],
+          [
+            "Yemen",
+            "14,961"
+          ],
+          [
+            "Mexico",
+            "12,252"
+          ],
+          [
+            "Pakistan",
+            "11,212"
+          ],
+          [
+            "Cameroon",
+            "9,394"
+          ],
+          [
+            "Guatemala",
+            "7,067"
+          ],
+          [
+            "Kazakhstan",
+            "6,968"
+          ],
+          [
+            "Angola",
+            "6,737"
+          ],
+          [
+            "Madagascar",
+            "5,664"
+          ]
+        ],
+        "token_count": 73,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-8dd558843d854e2a90ec393257b746b2-c3",
+        "chunk_index": 3,
+        "text": "This table is based on provisional monthly surveillance data reported to the World Health Organization (Geneva) as of August 2026. The data reflected covers January 2026 - June 2026.\nThis page was last updated on this date. Updates may include minor edits, image changes, or other modifications to page content.\nThe information on this page was last reviewed by subject matter experts to ensure accuracy.\n\u2022 About the image: A little boy stands near his home in Makoko, a hard-to-reach settlement along a river in Nigeria. He was infected with measles but has since recovered. \u00a9UNICEF/U.S. CDC/UN0669658/Owoicho",
+        "chunk_type": "prose",
+        "heading": "At a glance > Top 10 countries with measles outbreaks",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 135,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [
+      [
+        [
+          "Country",
+          "Number of Cases"
+        ],
+        [
+          "Bangladesh",
+          "57,561"
+        ],
+        [
+          "India",
+          "26,332"
+        ],
+        [
+          "Yemen",
+          "14,961"
+        ],
+        [
+          "Mexico",
+          "12,252"
+        ],
+        [
+          "Pakistan",
+          "11,212"
+        ],
+        [
+          "Cameroon",
+          "9,394"
+        ],
+        [
+          "Guatemala",
+          "7,067"
+        ],
+        [
+          "Kazakhstan",
+          "6,968"
+        ],
+        [
+          "Angola",
+          "6,737"
+        ],
+        [
+          "Madagascar",
+          "5,664"
+        ]
+      ]
+    ],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-726079d36ce44c0b89f9628a1ec3c4f5",
+    "result_id": "726079d36ce44c0b89f9628a1ec3c4f5",
+    "source_url": "https://www.bbc.com/news/articles/c5yednen30go",
+    "domain": "bbc.com",
+    "fetched_at": "2026-08-26T09:25:23.767934+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://bbc.com/news/articles/c5yednen30go",
+    "title": "Two unvaccinated people die of measles in Pennsylvania",
+    "published_date": "2026-08-25T14:42:58+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2896,
+    "token_count": 560,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-726079d36ce44c0b89f9628a1ec3c4f5-c0",
+        "chunk_index": 0,
+        "text": "Two people who were not vaccinated against measles have died of the virus in Pennsylvania, health officials said.\nThe state has seen 393 cases of the highly contagious virus this year, as infections across the US have hit the highest point in 35 years.\nEighty-five percent of kindergarten-age students in Lancaster County, where the recent deaths occurred, are vaccinated against measles - well below the 95% rate needed for herd immunity to limit the spread and protect immunocompromised people.\nLast year, two unvaccinated children in Texas died from a measles outbreak that infected over 1,000 people, primarily children.\n\"This is a serious and a growing problem across our country and in our commonwealth,\" Pennsylvania Governor Josh Shapiro said in a news conference on Tuesday. \"This illness and death from measles is completely preventable.\"\nHe added that the mumps, measles and rubella (MMR) vaccine was the best tool to protect against illness and death.\nOfficials said they would not share any additional information on the identities of those who died, including if they were children, who have face a higher risk of death and complications from measles.\nThe US has seen 2,777 confirmed cases of measles in 2026, just seven months into the year, up from last year's high of 2,289.\nThe rising number of cases comes as vaccine hesitancy in the US has increased in recent years, leading to lower immunisation rates. The US recommends two shots to children between ages one and six, which is 97% effective in protecting against the illness.\nEarlier this month, President Donald Trump signed an executive order that calls for fewer childhood vaccinations and recommends splitting the MMR vaccine into three separate shots. Public health experts worry the order will cause confusion about an already safe and effective vaccine and prove costly.\nThe executive order came after Health Secretary Robert F Kennedy Jr took a number of steps to remake US vaccine policies over the past year, including the childhood vaccination schedule. Many of the changes were blocked by a federal judge earlier this year.\nA vaccine skeptic, Kennedy has shared mixed messaging on the MMR vaccine, at times endorsing it and other times sharing unproven claims about its safety.\nSpeaking on Tuesday, Shapiro said he spoke with Kennedy over the phone that morning and that he had offered to send staff from the US Centers for Disease Control and Prevention (CDC). Shapiro said he was \"very blunt\" with Kennedy about vaccinations.\n\"I made very clear that his actions and the rhetoric that's coming from this administration are having a negative impact on communities across America... that there's real life consequences to spreading misinformation,\" Shapiro said.\nThe US is on track to lose its status of having eliminated measles, which will be determined by a panel in November. Canada lost its status last year.",
+        "chunk_type": "prose",
+        "heading": "Two unvaccinated people die of measles in Pennsylvania",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 560,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-ea36f8e499b14bedac5f2a6cdda5c9ca",
+    "result_id": "ea36f8e499b14bedac5f2a6cdda5c9ca",
+    "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+    "domain": "reuters.com",
+    "fetched_at": "2026-08-26T09:25:24.269433+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://reuters.com/business/healthcare-pharmaceuticals/us-cdc-records-over-2300-measles-cases-so-far-2026-2026-07-24",
+    "title": "US measles cases hit 35-year high as vaccinations decline",
+    "published_date": "2026-07-24T15:51:29+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 4613,
+    "token_count": 959,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-ea36f8e499b14bedac5f2a6cdda5c9ca-c0",
+        "chunk_index": 0,
+        "text": "July 24 (Reuters) - The United States has confirmed 2,318 measles infections this year, the Centers for Disease Control and Prevention said on Friday, surpassing the 2025 tally to reach the highest annual total in 35 years amid declining vaccination rates.\nThe overall 2026 figures represent the highest number of U.S. cases in a single year since a major resurgence of the highly contagious disease in the period from 1989 to 1991, with more than 55,000 infections and 123 deaths.\nSign up here.\n\"Reaching this milestone is particularly striking because we are only in July, and measles cases are still being reported throughout the country,\" said William Moss, epidemiology professor at Johns Hopkins Bloomberg School of Public Health.\nThe rise in measles, declared essentially eradicated in the United States a quarter-century ago, has been linked by medical experts to slumping immunization rates, a trend many attribute in part to vaccine skepticism espoused by President Donald Trump's health secretary, Robert F. Kennedy Jr.\nYoung people, ranging from infants to age 19, made up 69% of cases tracked through July 23, with children younger than five comprising a fifth of those infected this year, the CDC said.\nA tenth of those younger than five who were infected ended up hospitalized, along with 3% of those aged five to 19, the CDC added. Measles-related hospitalizations this year stand at 151 so far.\nMeasles can be fatal in severe cases but no deaths have been reported from the disease since January 2026.\nBy comparison, the U.S. tally for all of 2025 was 2,289 infections, or 29 fewer than in the first seven months this year. Last year's total included 243 hospitalizations and three deaths.\nThe virus infection, which typically causes symptoms such as fever, rash and respiratory issues, can be averted with a vaccine commonly given in the United States for three childhood diseases - measles, mumps and rubella. It is considered 97% effective after two doses.",
+        "chunk_type": "prose",
+        "heading": null,
+        "page_number": null,
+        "table_data": null,
+        "token_count": 422,
+        "extractor": "trafilatura"
+      },
+      {
+        "chunk_id": "doc-ea36f8e499b14bedac5f2a6cdda5c9ca-c1",
+        "chunk_index": 1,
+        "text": "A surge in measles cases during the past two years has coincided with a steady slump in MMR immunization rates for children since the start of the COVID-19 pandemic.\nAverage U.S. vaccination coverage among kindergarten children dropped last year to 92.5%, well below the level of 95% considered necessary to achieve effective \"herd\" immunity needed to prevent the spread of the virus, the CDC says.\nIn at least 16 states, some of them with the highest measles incidence this year, vaccine coverage rates have declined to less than 90%, the CDC said.\nMany health officials have cited a public backlash to the government's pandemic response and blame U.S. Health Secretary Robert F. Kennedy Jr.'s anti-vaccine policies for further undermining trust in disease-preventing immunizations by embracing unproven theories about vaccine dangers.\nKennedy has repeatedly promoted the claim that measles vaccines are linked to autism despite overwhelming scientific evidence to the contrary. Last June, he fired all members of the CDC's expert vaccine advisory panel, which recommends how vaccines are used and by whom.\n\"Since early last year, federal leaders have dismissed measles as benign and unavoidable and have spread misleading information about the MMR vaccine,\" said Andrew Racine, president of the American Academy of Pediatrics.\n\"Halfway into 2026, the U.S. is experiencing the worst year for measles since 1991. We are witnessing an avoidable crisis that disproportionately hurts children.\"\nAs many as 93% of this year's cases were in unvaccinated individuals, with a fraction of the rest having received one or two doses of vaccine before being infected, the CDC said.\nInfections were documented by the CDC this year in 45 states and the District of Columbia, with 93% associated with one of 35 new outbreaks reported in 2026, versus 48 last year.\nStates with the most cases included South Carolina, Utah, Arizona, Texas, Florida, Virginia and Pennsylvania, the CDC says. Just 16 of this year's cases were reported among visitors from other countries.\nA South Carolina outbreak sickened nearly 1,000 people over six months after it began in October 2025 to become the largest single-location U.S. outbreak since measles was declared eliminated in the United States in 2000.\nThat elimination status is now under review, with the Pan American Health Organization delaying a decision until November.\nReporting and writing by Steve Gorman in Los Angeles; Additional reporting by Mariam Sunny, Sneha S K and Siddhi Mahatole in Bengaluru; Editing by Shilpi Majumdar and Clarence Fernandez\nOur Standards: The Thomson Reuters Trust Principles.",
+        "chunk_type": "prose",
+        "heading": "MEASLES SURGE COINCIDES WITH VACCINATION SLUMP",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 537,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-2663968f671c479b98248f3ef9c0e025",
+    "result_id": "2663968f671c479b98248f3ef9c0e025",
+    "source_url": "https://abcnews.com/Health/us-measles-cases-hit-2318-2026-surpassing-years/story?id=134813573",
+    "domain": "abcnews.com",
+    "fetched_at": "2026-08-26T09:25:26.891012+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://abcnews.com/Health/us-measles-cases-hit-2318-2026-surpassing-years/story?id=134813573",
+    "title": "US measles cases hit 2,318 in 2026, surpassing last year's total: CDC",
+    "published_date": "2026-07-27T15:59:00+00:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2702,
+    "token_count": 592,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-2663968f671c479b98248f3ef9c0e025-c0",
+        "chunk_index": 0,
+        "text": "This marks the highest number of cases recorded since 1991.\nThe number of confirmed measles cases in the U.S. so far this year has hit 2,318, surpassing the total reported for all last year, according to data updated Friday from the Centers for Disease Control and Prevention.\nPreviously, last year's total of 2,289 was the highest number of recorded measles cases in more than 30 years, CDC data shows. The new figure marks the highest number of cases recorded since 1991.\nCases have been confirmed in 43 states and the District of Columbia. Sixteen of this year's total have been among international visitors to the U.S., according to the CDC.\nThe majority of measles cases in 2026 have been confirmed among children and teenagers aged 19 and younger, according to the CDC. About one in 10 children under age 5 have been hospitalized.\nAbout 93% of cases are among people who are unvaccinated or whose vaccination status is unknown, CDC data shows.\nMeanwhile, 3% of cases are among those who have received just one dose of the measles, mumps, rubella (MMR) vaccine and 4% of cases are among those who received the recommended two doses, according to the CDC.\n\"Crossing this threshold is a tragic reminder that measles has made an alarming comeback in the United States,\" Dr. Richard Besser, former acting CDC director during the Obama administration, said in a statement to ABC News. \"As a pediatrician and a parent, it breaks my heart that so many children are suffering needlessly from a dangerous and potentially fatal disease that vaccines can prevent. It represents a profound moral failure on the part of our national health leaders.\"\nThe CDC currently recommends that people receive two doses of the MMR vaccine, the first at ages 12 to 15 months and the second between 4 and 6 years old. One dose is 93% effective, and two doses are 97% effective against measles, the CDC says.\nHowever, CDC data shows vaccination rates have been lagging in recent years. During the 2024 to 2025 school year, 92.5% of kindergartners received the MMR vaccine, according to data. This is lower than the 92.7% seen in the previous school year and the 95.2% seen in the 2019 to 2020 school year, prior to the COVID-19 pandemic.\nSome public health specialists previously told ABC News they believe the U.S. is on track to lose the elimination status it earned in 2000.\nThe specialists said there are several reasons for the U.S. breaking measles case records for the second year in a row, including declining vaccination rates, people not fearing the measles virus, a loss of trust in public health institutions and a perceived lack of clear guidance and communication from the nation's top public health officials.",
+        "chunk_type": "prose",
+        "heading": "US measles cases hit 2,318 in 2026, surpassing last year's total: CDC",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 592,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  },
+  {
+    "id": "doc-7d8386d67aca4bfe9c1aacc548f0694f",
+    "result_id": "7d8386d67aca4bfe9c1aacc548f0694f",
+    "source_url": "https://www.cbsnews.com/news/measles-outbreak-us-map-2026",
+    "domain": "cbsnews.com",
+    "fetched_at": "2026-08-26T09:25:27.357578+00:00",
+    "document_type": "html",
+    "status": "success",
+    "canonical_url": "https://cbsnews.com/news/measles-outbreak-us-map-2026",
+    "title": "As measles outbreaks grow in the U.S., maps and charts show a record number of cases",
+    "published_date": "2026-08-12T14:57:00-04:00",
+    "language": "en",
+    "page_count": null,
+    "char_count": 2679,
+    "token_count": 576,
+    "error_message": null,
+    "http_status": 200,
+    "content_type": "text/html",
+    "chunks": [
+      {
+        "chunk_id": "doc-7d8386d67aca4bfe9c1aacc548f0694f-c0",
+        "chunk_index": 0,
+        "text": "So far in 2026, the U.S. has recorded the most measles cases in more than three decades as outbreaks spread in multiple states, Centers for Disease Control and Prevention data shows.\nBy mid-July, the number had already surpassed all of 2025, which had been the worst year in recent history with more than 2,200 confirmed cases. Ongoing outbreaks have put the U.S. at risk of losing its official measles elimination status, which it has held since 2000.\nPennsylvania's health department announced on Aug. 25 that the state recorded its first two deaths connected to measles in 35 years. The two people who died were not vaccinated against the virus, and the deaths occurred in Lancaster County.\nMeasles is one of the most contagious infectious diseases. In some cases, it can cause severe infections in the lungs and brain that can lead to cognitive issues, deafness or death. But it can be prevented by vaccination, which medical research has proven to be safe and highly effective.\nThe CBS News data team has tracked confirmed measles cases nationwide as new data is released by state health departments and the CDC.\nOut of the 2,289 confirmed cases last year, more than 750 were connected to an outbreak in West Texas that led to the deaths of two children.\nPrior to 2025, the highest number of confirmed cases in the U.S. in recent years was 1,274 in 2019, driven by outbreaks in New York, California and Washington state. Most years the total was much lower.\nHealth experts point to lower vaccination rates as the main reason for increases in preventable infectious diseases like measles. The vast majority of cases have been in people who were unvaccinated, and outbreaks have spread in communities with lower vaccination rates.\nCDC data shows about 92.4% of kindergartners in the U.S. got their measles-mumps-rubella shots in the 2025-2026 school year, down slightly from 92.5% the previous year. The figure has declined from 95.2% during the 2019-2020 school year \u2014 a critical threshold to keep people safe. Only 10 states hit the 95% threshold last year.\n\"When more than 95% of people in a community are vaccinated, most people are protected through community immunity (herd immunity),\" the CDC states.\n\"I think that parents, for most kids, especially for the measles vaccines, the DTP, all the standard childhood vaccines, it's very important that parents vaccinate their kids,\" Dr. Jay Bhattacharya, the director of the National Institutes of Health, said on \"Face the Nation with Margaret Brennan.\"\nResearch has found no evidence of increased rates of autism among those who are vaccinated compared to those who are not. Vaccines also undergo intensive safety testing.",
+        "chunk_type": "prose",
+        "heading": "As measles outbreaks grow in the U.S., maps and charts show a record number of cases",
+        "page_number": null,
+        "table_data": null,
+        "token_count": 576,
+        "extractor": "trafilatura"
+      }
+    ],
+    "extracted_tables": [],
+    "extracted_dates": [],
+    "fetch_strategy": "live",
+    "snapshot_timestamp": null,
+    "cutoff_applied": null
+  }
+]

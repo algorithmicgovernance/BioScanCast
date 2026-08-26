@@ -1,0 +1,229 @@
+{
+  "records": [
+    {
+      "id": "ins-ff5dffbf06a2",
+      "question_id": "bfg_q5",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of 15 May 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:46:58.675407+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7d86466435d4472a81881d276f985b0e",
+          "chunk_id": "doc-7d86466435d4472a81881d276f985b0e-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-6b84fa54f380",
+      "question_id": "bfg_q5",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 80.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total deaths reported as of 15 May 2026, including confirmed cases.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:46:58.675758+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-7d86466435d4472a81881d276f985b0e",
+          "chunk_id": "doc-7d86466435d4472a81881d276f985b0e-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-96893f5d6025",
+      "question_id": "bfg_q5",
+      "event_type": "intervention",
+      "confidence": 0.85,
+      "location": "Oxford",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "vaccine_trials",
+      "metric_value": 1.0,
+      "metric_unit": "trial",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-13T00:00:00",
+      "event_date_precision": "day",
+      "summary": "First human trial of Bundibugyo Ebola vaccine launched by Oxford.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:47:03.459282+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0388dfbf5e814bd784d84cef6297c048",
+          "chunk_id": "doc-0388dfbf5e814bd784d84cef6297c048-c0",
+          "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/oxford-begins-first-human-trial-bundibugyo-ebola-vaccine-2026-07-13",
+          "quote": "The University of Oxford has launched the first human trial of a vaccine against Bundibugyo ebolavirus"
+        }
+      ]
+    },
+    {
+      "id": "ins-cd092ad2d9bc",
+      "question_id": "bfg_q5",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "vaccine_doses_distributed",
+      "metric_value": 70000.0,
+      "metric_unit": "doses",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Initial release of 70,000 doses of Ervebo vaccine for Bundibugyo outbreak response.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:47:07.249939+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-477151c1fed1478c859a30381642a3ee",
+          "chunk_id": "doc-477151c1fed1478c859a30381642a3ee-c0",
+          "source_url": "https://www.who.int/news/item/20-08-2026-who-and-africa-cdc-welcome-the-allocation-of-ebola-vaccines-to-the-democratic-republic-of-the-congo",
+          "quote": "the ICG informed the DRC government of an immediate initial release of 70 000 doses."
+        }
+      ]
+    },
+    {
+      "id": "ins-42f94e062cce",
+      "question_id": "bfg_q5",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "vaccine_doses_distributed",
+      "metric_value": 20000.0,
+      "metric_unit": "doses",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "20,000 doses allocated for a Phase 3 clinical trial on the Bundibugyo virus.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:47:07.250300+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-477151c1fed1478c859a30381642a3ee",
+          "chunk_id": "doc-477151c1fed1478c859a30381642a3ee-c0",
+          "source_url": "https://www.who.int/news/item/20-08-2026-who-and-africa-cdc-welcome-the-allocation-of-ebola-vaccines-to-the-democratic-republic-of-the-congo",
+          "quote": "The allocation includes 20 000 doses for a Phase 3 clinical trial to understand the impact of the vaccine on the Bundibugyo virus"
+        }
+      ]
+    },
+    {
+      "id": "ins-2d6ec3b7bade",
+      "question_id": "bfg_q5",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "vaccine_doses_distributed",
+      "metric_value": 50000.0,
+      "metric_unit": "doses",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-21T00:00:00",
+      "event_date_precision": "day",
+      "summary": "50,000 doses allocated for frontline and health workers in response to the outbreak.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:47:07.250424+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-477151c1fed1478c859a30381642a3ee",
+          "chunk_id": "doc-477151c1fed1478c859a30381642a3ee-c0",
+          "source_url": "https://www.who.int/news/item/20-08-2026-who-and-africa-cdc-welcome-the-allocation-of-ebola-vaccines-to-the-democratic-republic-of-the-congo",
+          "quote": "and 50 000 doses for frontline and health workers in line with the current recommendations of the WHO Strategic Advisory Group of Experts on Immunization (SAGE)."
+        }
+      ]
+    },
+    {
+      "id": "ins-59fbc6823536",
+      "question_id": "bfg_q5",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "DRC-Uganda",
+      "iso_country_code": null,
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "vaccine_development",
+      "metric_value": 7.0,
+      "metric_unit": "months",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-28T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The single-dose rVSV Bundibugyo vaccine will likely require 7\u20139 months before it is ready for clinical trial assessment.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-26T07:47:12.549124+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-670401fa916e48b1861674256475d75f",
+          "chunk_id": "doc-670401fa916e48b1861674256475d75f-c1",
+          "source_url": "https://www.who.int/news/item/28-05-2026-experts-convened-by-who-advise-on-candidate-treatments-and-vaccines-for-ebola-disease-caused-by-bundibugyo-virus",
+          "quote": "The development of this single-dose vaccine candidate will likely require 7-9 months before it is ready to be assessed through a clinical trial"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 134731,
+    "total_output_tokens": 1277,
+    "total_tokens": 136008,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 134731,
+        "output_tokens": 1277,
+        "calls": 62
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}

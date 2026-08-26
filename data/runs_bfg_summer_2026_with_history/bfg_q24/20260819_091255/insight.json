@@ -1,0 +1,349 @@
+{
+  "records": [
+    {
+      "id": "ins-a171149c4234",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2566.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed measles cases reported in the United States in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:05.073925+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-988fb2dca6a24200857a760dc019ed12",
+          "chunk_id": "doc-988fb2dca6a24200857a760dc019ed12-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,566 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-8181fefca865",
+      "question_id": "bfg_q24",
+      "event_type": "death_count",
+      "confidence": 0.5,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": "deaths",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed deaths from measles reported in the United States in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:05.074191+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-988fb2dca6a24200857a760dc019ed12",
+          "chunk_id": "doc-988fb2dca6a24200857a760dc019ed12-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-0a807076f08c",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 18092.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases reported from January 2025 to June 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:10.068619+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c0",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "Mexico has reported 18,092 confirmed cases of measles from January 2025-June 2026"
+        }
+      ]
+    },
+    {
+      "id": "ins-4c43ece62a99",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 17869.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed measles cases reported in Mexico from weeks 1-69, 2025-2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:10.204660+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c5",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "Mexico reported 17,869 confirmed cases of measles from the June 1, 2026 data extract"
+        }
+      ]
+    },
+    {
+      "id": "ins-23c99a69af41",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 18092.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-05T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Official DGE count of confirmed measles cases in Mexico as of June 5, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:10.204754+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c5",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "the official DGE count of 18,092 as of June 5, 2026 reflects an additional 223 cases reported in the intervening four days"
+        }
+      ]
+    },
+    {
+      "id": "ins-1e7c5ebb5800",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1167.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "week",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-02-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Peak number of confirmed measles cases per week in Jalisco during the second wave.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:10.204831+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c5",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "peaked at 1,167 cases/week (epidemiological week 7, 2026)"
+        }
+      ]
+    },
+    {
+      "id": "ins-c82eebe77fa3",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 18092.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed measles cases reported in Mexico since January 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:08.108406+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c1",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "Mexico has reported 18,092 confirmed measles cases across all 32 states in two temporally distinct waves"
+        }
+      ]
+    },
+    {
+      "id": "ins-e201956374e8",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Mexico",
+      "iso_country_code": "MX",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 118.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Projected cases for Jalisco during the FIFA World Cup, with a 95% prediction interval.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:10.068755+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c0",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "Jalisco was projected to report 118 cases (95% PI: 5-427)"
+        }
+      ]
+    },
+    {
+      "id": "ins-9939dd6d42d0",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Jalisco",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 118.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "The GRM projected a mean of 118 cases (95% PI: 5-427) in Jalisco during the World Cup period.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:09.803761+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c6",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "The GRM projected a mean of 118 cases (95% PI: 5-427) in Jalisco during the World Cup period"
+        }
+      ]
+    },
+    {
+      "id": "ins-a73d689a546b",
+      "question_id": "bfg_q24",
+      "event_type": "other",
+      "confidence": 0.5,
+      "location": "Ciudad de M\u00e9xico",
+      "iso_country_code": null,
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 22.0,
+      "metric_unit": "cases",
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-06-16T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Ciudad de M\u00e9xico is projected to report a mean of 22 cases (95% PI: 0-89).",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:09.803907+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-581d2c14f74e413f9bc1f7d6094171ac",
+          "chunk_id": "doc-581d2c14f74e413f9bc1f7d6094171ac-c6",
+          "source_url": "https://www.medrxiv.org/content/10.64898/2026.02.17.26346510v2.full-text",
+          "quote": "is projected to report a mean of 22 cases (95% PI: 0-89)"
+        }
+      ]
+    },
+    {
+      "id": "ins-3f22e20ed680",
+      "question_id": "bfg_q24",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Bangladesh",
+      "iso_country_code": "BD",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 57561.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-08-10T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total measles cases reported in Bangladesh.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:58:12.125010+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ce969afcdda947239ed2c5918671d5bd",
+          "chunk_id": "doc-ce969afcdda947239ed2c5918671d5bd-c2",
+          "source_url": "https://www.cdc.gov/global-measles-vaccination/data-research/global-measles-outbreaks/index.html",
+          "quote": "Bangladesh 57,561"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 68914,
+    "total_output_tokens": 1415,
+    "total_tokens": 70329,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 68914,
+        "output_tokens": 1415,
+        "calls": 33
+      }
+    }
+  },
+  "documents_processed": 6,
+  "documents_skipped": 0,
+  "notes": []
+}

@@ -1,0 +1,204 @@
+{
+  "question_id": "bfg_q16",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 6",
+    "7 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.16280366152781986,
+        "1": 0.25293441459377575,
+        "2 to 3": 0.34098082105191785,
+        "4 to 6": 0.16932263133881784,
+        "7 or more": 0.07395847148766876
+      }
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.6,
+        "1": 0.2,
+        "2 to 3": 0.1,
+        "4 to 6": 0.05,
+        "7 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.16280366152781986,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.25293441459377575,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.34098082105191785,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "4 to 6",
+      "probability": 0.16932263133881784,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "7 or more",
+      "probability": 0.07395847148766876,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 6",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.2,
+        0.25,
+        0.35,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the US in the 21st century",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "Record-breaking measles cases in 2026 indicating a potential surge in spread and complications.",
+        "Two deaths already reported early in 2026, suggesting an upward trend."
+      ],
+      "drivers_down": [
+        "Historically low base rate of measles deaths in the US due to high vaccination coverage.",
+        "Public health interventions likely to be increased following early deaths and cases."
+      ],
+      "why_might_be_wrong": "Unexpected changes in measles transmission dynamics or public health responses could alter the trend significantly.",
+      "rationale": "Historically, measles-associated deaths in the US have been very low due to high vaccination rates and strong public health systems. However, the presence of 2 deaths early in 2026, coupled with it being a 'record-breaking' year for measles, suggests an increased risk. While public health measures are likely to step up in response, the unusual surge cannot be ignored. Therefore, while the probability of more than 6 deaths remains low, there is a non-negligible chance of a few additional deaths beyond the 2 already recorded.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.3,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the U.S. in recent years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Two measles-associated deaths already occurred in Pennsylvania at the start of 2026, indicating potential for more.",
+        "There is an indication that 2026 has been a record-breaking year for measles cases, which may correlate with higher death rates."
+      ],
+      "drivers_down": [
+        "Historically, measles-associated deaths in the U.S. have been very low due to high vaccination rates.",
+        "Measles outbreaks are usually contained quickly in the U.S. due to effective public health measures."
+      ],
+      "why_might_be_wrong": "There may be unreported measles-associated deaths or significant changes in outbreak dynamics later in the year.",
+      "rationale": "Despite the two deaths already reported in Pennsylvania, the historical base rate for measles-associated deaths in the U.S. is very low, typically zero per year. The two deaths suggest an unusual year, potentially leading to more cases, but the strong public health infrastructure and vaccination coverage should limit the total number. However, given the early start, probabilities for 1 or more deaths are higher than usual years.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.35,
+        0.2,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the U.S. in recent years",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "Record-breaking year for measles cases in 2026 as per MedPage Today report, suggesting higher exposure risk.",
+        "Two measles-associated deaths have already been reported in Pennsylvania early in 2026."
+      ],
+      "drivers_down": [
+        "Historically, measles-associated deaths in the U.S. are rare due to high vaccination coverage.",
+        "Public health responses might mitigate further outbreaks and deaths.",
+        "The CDC's cumulative count for deaths remains at 0, indicating potential reporting discrepancies or under-reporting in the MedPage Today source."
+      ],
+      "why_might_be_wrong": "The data sources are conflicting, and there might be under-reporting or misreporting of deaths, affecting the accuracy of the forecast.",
+      "rationale": "The historical base rate for measles-associated deaths in the U.S. is very low, given the effective vaccination programs. However, the MedPage Today report of two deaths in Pennsylvania suggests a potential increase in risk for 2026. While the CDC reports 0 deaths, this discrepancy indicates uncertainty in reporting accuracy. Given recent events and the mention of a 'record-breaking' year, it is prudent to assign a higher probability to some deaths occurring but still weigh heavily the long-term trend of low mortality due to measles. Therefore, the most likely outcome is 2 to 3 deaths, with a non-negligible chance of more but still unlikely to exceed 6.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Measles is a highly contagious disease, but vaccination rates in the U.S. are generally high, leading to low incidence and mortality rates. Given the effectiveness of the measles vaccine and public health initiatives, it is likely that there will be no reported deaths or very few. However, there is always a small risk of deaths in unvaccinated populations or outbreaks, hence the probabilities reflect a low likelihood of 1 or more deaths.",
+  "evidence_record_ids": [
+    "ins-9ed46eb4ccef",
+    "ins-3ea6b5e32874"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3143,
+    "total_output_tokens": 956,
+    "total_tokens": 4099,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 2937,
+        "output_tokens": 840,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 206,
+        "output_tokens": 116,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

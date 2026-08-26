@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q1",
+  "options": [
+    "under 2,500",
+    "2,500 to 4,999",
+    "5,000 to 9,999",
+    "10,000 to 19,999",
+    "20,000 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,500": 0.08767238044867309,
+        "2,500 to 4,999": 0.182365900299737,
+        "5,000 to 9,999": 0.3488534173577274,
+        "10,000 to 19,999": 0.2662249836085282,
+        "20,000 or more": 0.1148833182853342
+      }
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,500": 0.1,
+        "2,500 to 4,999": 0.3,
+        "5,000 to 9,999": 0.4,
+        "10,000 to 19,999": 0.15,
+        "20,000 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "under 2,500",
+      "probability": 0.08767238044867309,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "2,500 to 4,999",
+      "probability": 0.182365900299737,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "5,000 to 9,999",
+      "probability": 0.3488534173577274,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "10,000 to 19,999",
+      "probability": 0.2662249836085282,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast",
+      "option": "20,000 or more",
+      "probability": 0.1148833182853342,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,500",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,500 to 4,999",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,000 to 9,999",
+      "probability": 0.4,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "10,000 to 19,999",
+      "probability": 0.15,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q1",
+      "forecast_source": "bioscancast_baseline",
+      "option": "20,000 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.05,
+        0.15,
+        0.3,
+        0.35,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Ebola outbreaks in Africa",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Rapid increase in confirmed cases from 2,145 on July 15 to 5,514 on August 23 indicates a high transmission rate.",
+        "The report acknowledges that data is under continuous review and harmonization, which might mean more cases are being confirmed over time."
+      ],
+      "drivers_down": [
+        "The increase might be partially due to reporting adjustments rather than new infections.",
+        "Efforts to control the outbreak might be intensified given the high numbers, potentially reducing future case growth."
+      ],
+      "why_might_be_wrong": "There might be a significant undercounting of cases or a sudden change in the transmission dynamics that isn't accounted for.",
+      "rationale": "The cumulative confirmed cases jumped from 2,145 on July 15 to 5,514 on August 23, suggesting a rapid spread. If the rate continues, the number could exceed 10,000 by the end of October. However, the data harmonization process might have inflated the August numbers due to previous underreporting rather than new infections. Given these considerations, the likelihood of cases reaching the highest brackets is tempered by potential reporting adjustments and outbreak control measures.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.1,
+        0.3,
+        0.4,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Past Bundibugyo virus outbreaks",
+      "base_rate": 0.9,
+      "drivers_up": [
+        "Rapid increase in cases from July to August, indicating high transmission rate.",
+        "Historical challenges with outbreak control in the DRC and Uganda.",
+        "Incomplete data could mean actual cases are higher than reported."
+      ],
+      "drivers_down": [
+        "Efforts in place for data review and harmonisation, which may improve reporting accuracy.",
+        "Possibility of underreporting bias leading to overestimation of future case numbers."
+      ],
+      "why_might_be_wrong": "The data is still under review and harmonisation, so the actual case numbers could be significantly different from current reports.",
+      "rationale": "The rapid increase in cumulative confirmed cases from July to August suggests a high transmission rate, with confirmed cases jumping from 2,145 to 5,514 in just over a month. This suggests a base rate of higher case counts from past outbreaks could be applicable. Historical difficulties in controlling outbreaks in the DRC and Uganda, along with underreporting challenges, further support the likelihood of higher case numbers. However, the efforts in data harmonisation might reveal fewer cases than currently reported, introducing some uncertainty. Combining these factors, the most probable option is the 10,000 to 19,999 range, but with significant probability also assigned to the 5,000 to 9,999 range due to potential data adjustments.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.2,
+        0.3,
+        0.35,
+        0.1,
+        0.05
+      ],
+      "ok": true,
+      "reference_class": "Past Ebola outbreaks in the DRC and Uganda",
+      "base_rate": 0.7,
+      "drivers_up": [
+        "The outbreak had already reached 5,514 confirmed cases by August 23, 2026, indicating a rapid spread.",
+        "Historical Ebola outbreak patterns in the region often involve sustained transmission over several months.",
+        "Continuous review and harmonization of data could lead to upward adjustments in confirmed case counts."
+      ],
+      "drivers_down": [
+        "Case reporting and response efforts might stabilize and control the spread more effectively than in past outbreaks.",
+        "No specific mention of exponential growth or overwhelming healthcare systems beyond the current numbers."
+      ],
+      "why_might_be_wrong": "The rapid initial increase in cases might not continue at the same pace due to improved containment measures.",
+      "rationale": "The Bundibugyo virus outbreak already reached 5,514 confirmed cases by August 23, 2026. Given the historical tendency of Ebola outbreaks to have sustained transmission, it is reasonable to expect further increases. However, the pace of increase might slow due to control measures. Therefore, the most likely range is 5,000 to 9,999 cases. There is some chance of surpassing this if control measures are ineffective, but significant containment could keep numbers below 10,000.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Given the historical context of Bundibugyo virus outbreaks and the response capabilities in the DRC and Uganda, it is reasonable to expect that the cumulative cases will likely be under 5,000 due to effective containment measures. However, the potential for a larger outbreak exists, hence the probabilities reflect a higher likelihood for lower case counts.",
+  "evidence_record_ids": [
+    "ins-e1dda2aa00d9",
+    "ins-a982a7291922",
+    "ins-301f969751fc",
+    "ins-89b453096082"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3904,
+    "total_output_tokens": 927,
+    "total_tokens": 4831,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3654,
+        "output_tokens": 832,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 250,
+        "output_tokens": 95,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

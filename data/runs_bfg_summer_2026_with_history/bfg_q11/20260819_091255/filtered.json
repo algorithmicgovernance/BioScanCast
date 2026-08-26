@@ -1,0 +1,54 @@
+[
+  {
+    "result_id": "3e91464edb144cc5aac7cc25ad32d6d2",
+    "question_id": "bfg_q11",
+    "url": "https://www.ecdc.europa.eu/en/chikungunya-monthly",
+    "canonical_url": "https://ecdc.europa.eu/en/chikungunya-monthly",
+    "domain": "ecdc.europa.eu",
+    "title": "ECDC Chikungunya worldwide overview (monthly)",
+    "snippet": "Europe",
+    "published_date": null,
+    "file_type": null,
+    "relevance_score": 0.03333333333333333,
+    "credibility_score": 1.0,
+    "final_score": 1.0,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "dashboard_lookup_bypass"
+    ],
+    "extraction_priority": 1,
+    "extraction_mode": "html",
+    "expected_value": "high",
+    "source_id": "ecdc_chikungunya",
+    "region": "americas",
+    "question_text": "How many chikungunya cases will be in the Americas from 1 January to 31 December 2026, according to PAHO?"
+  },
+  {
+    "result_id": "0d817ddcf26a4a3aa614d4f4cc562028",
+    "question_id": "bfg_q11",
+    "url": "https://www.cdc.gov/chikungunya/data-maps/chikungunya-us.html",
+    "canonical_url": "https://cdc.gov/chikungunya/data-maps/chikungunya-us.html",
+    "domain": "cdc.gov",
+    "title": "Chikungunya in the United States",
+    "snippet": "| 2016 | 0 | 248 | 180 | 1 |\n| 2017 | 0 | 156 | 39 | 0 |\n| 2018 | 0 | 116 | 8 | 0 |\n| 2019 | 0 | 192 | 2 | 0 |\n| 2020 | 0 | 33 | 0 | 0 |\n| 2021 | 0 | 36 | 0 | 0 |\n| 2022 | 0 | 81 | 0 | 0 |\n| 2023 | 0 | 152 | 0 | 0 |\n| 2024 | 0 | 241 | 0 | 0 |\n| 2025 | 2\u2021 | 628 | 0 | 1 | [...] |  |  |  |  |  |\n ---  --- \n| \\Includes confirmed and probable disease cases  \u2020Includes cases acquired through other routes (e.g., laboratory transmission)  \u2021Locally acquired cases reported from Florida in 2014, Texas in 2015, and from Florida and New York in 2025 | | | | |\n| Year | US States  Locally acquired | US States  Travel-associated\u2020 | US Territories  Locally acquired | US Territories  Travel-associated |\n ---  --- \n| 2014 | 12\u2021 | 2,799 | 4,659 | 51 |\n| 2015 | 1\u2021 | 895 | 237 | 0 | [...] ## Key points\n\nMap of the United States with graph in front of it\n\n## Chikungunya virus in the United States\n\n## Chikungunya cases by year\n\n### 2026 U.S. chikungunya cases\\ reported to ArboNET\n\nData are preliminary and subject to change. Data are current as of August 11, 2026.",
+    "published_date": "2026-08-11T11:23:51+00:00",
+    "file_type": null,
+    "relevance_score": 0.36666666666666664,
+    "credibility_score": 1.0,
+    "final_score": 0.7275730593607306,
+    "source_tier": "official",
+    "is_official_domain": true,
+    "selection_reasons": [
+      "official_domain",
+      "has_publication_date",
+      "passed_heuristic_threshold"
+    ],
+    "extraction_priority": 2,
+    "extraction_mode": "html",
+    "expected_value": "medium",
+    "source_id": null,
+    "region": "americas",
+    "question_text": "How many chikungunya cases will be in the Americas from 1 January to 31 December 2026, according to PAHO?"
+  }
+]

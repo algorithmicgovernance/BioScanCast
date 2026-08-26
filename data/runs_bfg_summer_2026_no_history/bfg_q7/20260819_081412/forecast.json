@@ -1,0 +1,156 @@
+{
+  "question_id": "bfg_q7",
+  "options": [
+    "YES",
+    "NO"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "YES": 0.022365467054107375,
+        "NO": 0.9776345329458926
+      }
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "YES",
+      "probability": 0.022365467054107375,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast",
+      "option": "NO",
+      "probability": 0.9776345329458926,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "YES",
+      "probability": 0.3,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q7",
+      "forecast_source": "bioscancast_baseline",
+      "option": "NO",
+      "probability": 0.7,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Avian influenza viruses with potential for human transmission",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "H5 viruses have infected humans in various regions, indicating potential for further transmission.",
+        "The cumulative number of confirmed human cases is relatively high, suggesting ongoing sporadic transmission.",
+        "Historical precedent of other influenza viruses adapting to human-to-human transmission over time."
+      ],
+      "drivers_down": [
+        "Currently, no sustained human-to-human transmission has been identified, even in recent outbreaks.",
+        "Ongoing surveillance and containment measures may prevent sustained transmission.",
+        "Limited human cases relative to the global population, indicating low transmission efficiency."
+      ],
+      "why_might_be_wrong": "The evolution of viruses can be unpredictable, and an adaptive mutation could lead to sustained transmission unexpectedly.",
+      "rationale": "The base rate for avian influenza H5 viruses achieving sustained human-to-human transmission is low due to historical patterns and current evidence. While there are sporadic human cases, sustained transmission has not been confirmed. Concrete factors such as lack of identified sustained transmission and effective containment measures weigh against a substantial increase from the base rate. However, the possibility of viral mutation and historical precedents for other viruses adapting to human transmission suggest a non-negligible chance. Balancing these factors leads to a modest increase in probability from the base rate.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.15,
+        0.85
+      ],
+      "ok": true,
+      "reference_class": "Historical instances of zoonotic influenza viruses with potential for human-to-human transmission.",
+      "base_rate": 0.1,
+      "drivers_up": [
+        "The cumulative number of confirmed human H5 cases has been increasing, suggesting ongoing zoonotic transmission.",
+        "There have been multiple instances of human infections in different countries, indicating widespread presence of the virus.",
+        "The high mortality rate of H5 infections may lead to increased surveillance and detection efforts, potentially identifying sustained transmission if it occurs."
+      ],
+      "drivers_down": [
+        "No confirmed sustained human-to-human transmission of H5 has been reported as of the latest updates.",
+        "Historically, H5 viruses have not demonstrated sustained human-to-human transmission despite sporadic human cases.",
+        "The recent risk assessments from WHO and national authorities explicitly state no sustained human-to-human transmission has been identified."
+      ],
+      "why_might_be_wrong": "Surveillance or reporting improvements could lead to the detection of sustained transmission that has been previously undetected.",
+      "rationale": "Given the historical behavior of H5 viruses, which have shown the capacity to infect humans but not sustain human-to-human transmission, the base rate for such transmission remains low. Despite the increase in cumulative cases, there is no current evidence of sustained transmission. WHO and national authorities have consistently reported no sustained human-to-human transmission in the recent cases. However, the ongoing presence of H5 and potential changes in the virus or surveillance could alter this assessment.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.9
+      ],
+      "ok": true,
+      "reference_class": "Past instances of zoonotic avian influenza A(H5) virus outbreaks with potential for human-to-human transmission.",
+      "base_rate": 0.05,
+      "drivers_up": [
+        "The cumulative number of confirmed human cases of avian influenza A(H5N1) is relatively low (1002 cases globally), suggesting limited human-to-human transmission so far, but the virus is present in multiple countries, increasing exposure risk.",
+        "The virus has shown the ability to infect humans, with 9 new cases in 2026 alone, indicating ongoing transmission in animal populations that could spill over into humans.",
+        "The virus is widespread in birds, providing opportunities for mutations that could enable more efficient human-to-human transmission."
+      ],
+      "drivers_down": [
+        "No sustained human-to-human transmission has been reported recently, as confirmed by WHO statements.",
+        "Current surveillance and reporting mechanisms have not identified any clusters indicating sustained transmission.",
+        "The relatively low number of cases and deaths in recent years suggests limited transmission efficiency of the virus among humans."
+      ],
+      "why_might_be_wrong": "Potential underreporting or unrecognized transmission chains could mean that sustained human-to-human transmission is already occurring but not yet identified.",
+      "rationale": "Given the historical base rate of zoonotic avian influenza A(H5) viruses achieving sustained human-to-human transmission is low, and the current evidence does not show any confirmed clusters, the probability of a confirmed cluster by the end of 2026 remains low. The virus has shown the capacity to infect humans, but there are no indications of increased transmission efficiency. Surveillance and control measures appear effective at identifying and managing cases swiftly. However, the widespread nature of the virus in birds and continued human cases suggest a non-zero risk that a transmissible strain could emerge.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "The probability of confirmation of sustained human-to-human transmission of an H5 virus by WHO or a national public health authority is influenced by several factors, including the current state of avian influenza outbreaks, public health measures in place, and the historical patterns of transmission. Given the challenges in controlling avian influenza and the potential for sporadic human cases, the likelihood of a confirmed cluster by the target date is moderate but not high. Therefore, a 30% probability for 'YES' and 70% for 'NO' reflects a cautious outlook.",
+  "evidence_record_ids": [
+    "ins-71a4fdf2e31e",
+    "ins-2f42b55bf86d",
+    "ins-662101161697",
+    "ins-5a74160d69f5",
+    "ins-25c64da93f03",
+    "ins-fe8856cc1412",
+    "ins-b53cfb2fb21b",
+    "ins-58f60a3b36e8",
+    "ins-da1384e6c200"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 4756,
+    "total_output_tokens": 1028,
+    "total_tokens": 5784,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 4557,
+        "output_tokens": 903,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 199,
+        "output_tokens": 125,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

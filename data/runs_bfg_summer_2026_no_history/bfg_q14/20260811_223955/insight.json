@@ -1,0 +1,211 @@
+{
+  "records": [
+    {
+      "id": "ins-8be35a0ffa23",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2465.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed measles cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:55:35.263365+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5",
+          "chunk_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,465 confirmed measles cases were reported in the United States in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-d27ef6e734de",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2289.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed measles cases reported in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:55:35.263582+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5",
+          "chunk_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "a total of 2,289 confirmed measles cases were reported in the United States in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-69de0ca63465",
+      "question_id": "bfg_q14",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 0.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed deaths from measles reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:55:35.263516+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5",
+          "chunk_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There have been 0 confirmed deaths from measles in 2026."
+        }
+      ]
+    },
+    {
+      "id": "ins-fbda74b8e39b",
+      "question_id": "bfg_q14",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "United States",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "deaths",
+      "metric_value": 3.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Cumulative total of confirmed deaths from measles reported in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:55:35.263638+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5",
+          "chunk_id": "doc-81fe06c1b5f04c589a9fcae9fef943c5-c0",
+          "source_url": "https://www.cdc.gov/measles/data-research/index.html",
+          "quote": "There were 3 confirmed deaths from measles in 2025."
+        }
+      ]
+    },
+    {
+      "id": "ins-0a8540c9d55b",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "incident",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed cases of measles in the US for 2026, just seven months into the year.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:55:39.043754+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-ce992904c1d04132833715e3da7ac95b",
+          "chunk_id": "doc-ce992904c1d04132833715e3da7ac95b-c0",
+          "source_url": "https://www.bbc.com/news/articles/c36dw75dkw5o",
+          "quote": "The US has seen 2,318 confirmed cases of measles in 2026, just seven months into the year"
+        },
+        {
+          "document_id": "doc-39e805006c1c43da9ddc629167e0b0d2",
+          "chunk_id": "doc-39e805006c1c43da9ddc629167e0b0d2-c0",
+          "source_url": "https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932",
+          "quote": "Already in 2026 more than 2,300 cases have been counted, making 2026 the two year for measles infections in the U.S. since 2000."
+        },
+        {
+          "document_id": "doc-09cd5d776cba48d89d2d78f74dcf6ae3",
+          "chunk_id": "doc-09cd5d776cba48d89d2d78f74dcf6ae3-c0",
+          "source_url": "https://abcnews.com/Health/us-measles-cases-hit-2318-2026-surpassing-years/story?id=134813573",
+          "quote": "The number of confirmed measles cases in the U.S. so far this year has hit 2,318"
+        }
+      ]
+    },
+    {
+      "id": "ins-358872c3af7f",
+      "question_id": "bfg_q14",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "US",
+      "iso_country_code": "US",
+      "pathogen": "measles",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2318.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Confirmed measles infections in the US for the year 2026 so far, surpassing the total for 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-11T22:55:40.975716+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-96fd44fc2afb4deeba8014d38664f5c7",
+          "chunk_id": "doc-96fd44fc2afb4deeba8014d38664f5c7-c1",
+          "source_url": "https://www.reuters.com/video/watch/idRCV00GTDX",
+          "quote": "The US has confirmed 2,318 measles infections already this year"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 20456,
+    "total_output_tokens": 965,
+    "total_tokens": 21421,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 20456,
+        "output_tokens": 965,
+        "calls": 9
+      }
+    }
+  },
+  "documents_processed": 7,
+  "documents_skipped": 0,
+  "notes": []
+}

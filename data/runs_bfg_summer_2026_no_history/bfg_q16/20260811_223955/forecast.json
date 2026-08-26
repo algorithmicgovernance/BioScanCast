@@ -1,0 +1,207 @@
+{
+  "question_id": "bfg_q16",
+  "options": [
+    "0",
+    "1",
+    "2 to 3",
+    "4 to 6",
+    "7 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "0": 0.21741531773457126,
+        "1": 0.3135671485809341,
+        "2 to 3": 0.3135671485809341,
+        "4 to 6": 0.11289277549888455,
+        "7 or more": 0.042557609604676014
+      }
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "0": 0.6,
+        "1": 0.2,
+        "2 to 3": 0.1,
+        "4 to 6": 0.05,
+        "7 or more": 0.05
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "0",
+      "probability": 0.21741531773457126,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "1",
+      "probability": 0.3135671485809341,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "2 to 3",
+      "probability": 0.3135671485809341,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "4 to 6",
+      "probability": 0.11289277549888455,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast",
+      "option": "7 or more",
+      "probability": 0.042557609604676014,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "0",
+      "probability": 0.6,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "1",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2 to 3",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4 to 6",
+      "probability": 0.05,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q16",
+      "forecast_source": "bioscancast_baseline",
+      "option": "7 or more",
+      "probability": 0.05,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.2,
+        0.4,
+        0.3,
+        0.08,
+        0.02
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the US in recent years",
+      "base_rate": 0.2,
+      "drivers_up": [
+        "The number of confirmed measles cases in 2026 is relatively high at 2,465 cases by August, indicating a large outbreak.",
+        "There have been recent measles deaths in 2025, showing the potential for mortality in ongoing outbreaks."
+      ],
+      "drivers_down": [
+        "No measles-associated deaths have been reported in 2026 up to January 1, indicating good early-year control or treatment.",
+        "Measles deaths remain rare in the US due to high vaccination coverage and advanced healthcare.",
+        "Only 3 measles-associated deaths were reported in 2025, suggesting that even during outbreaks, deaths are infrequent."
+      ],
+      "why_might_be_wrong": "There may be under-reporting of deaths or sudden changes in the outbreak's severity that are not captured by the current data.",
+      "rationale": "Given the base rate derived from recent years, where measles deaths are rare but possible, and the relatively high number of cases in 2026, it is reasonable to expect some deaths but not a large number. The evidence of 3 deaths in 2025 suggests a low but non-zero likelihood of multiple deaths in 2026. While the absence of deaths early in 2026 suggests effective control, the outbreak's scale indicates that 1 to 3 deaths is the most probable outcome.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.4,
+        0.2,
+        0.1
+      ],
+      "ok": true,
+      "reference_class": "Measles-associated deaths in the US in recent years",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "High number of confirmed measles cases in 2026 by mid-year, indicating a significant outbreak.",
+        "Previous year (2025) already saw 3 deaths, showing vulnerability and potential for similar or higher mortality with current outbreak."
+      ],
+      "drivers_down": [
+        "Measles remains a highly preventable disease through vaccination, and public health measures may reduce mortality even if cases are high.",
+        "As of January 2026, there were no reported deaths despite the outbreak, suggesting a possible effective initial response."
+      ],
+      "why_might_be_wrong": "The forecast might be wrong if the outbreak's mortality rate is significantly lower than in previous years due to improved medical interventions or public health measures.",
+      "rationale": "The base rate of measles-associated deaths in recent years in the US suggests a low probability of zero deaths. Given the significant outbreak in 2026 with 2,465 cases by August, the likelihood of some deaths occurring is increased. However, the effectiveness of public health responses and vaccination campaigns could mitigate this. Considering the pattern from 2025, where there were 3 deaths, and the current year's higher case count, it's reasonable to expect a similar or slightly higher number of deaths in 2026. Therefore, the option of 2 to 3 deaths is given the highest probability, with some chance for fewer or more.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.4,
+        0.3,
+        0.2,
+        0.07,
+        0.03
+      ],
+      "ok": true,
+      "reference_class": "US measles-associated deaths in recent years",
+      "base_rate": 0.3,
+      "drivers_up": [
+        "Increased measles cases in 2026 compared to previous years",
+        "Recent measles deaths in 2025 suggest a possible trend"
+      ],
+      "drivers_down": [
+        "No measles deaths reported in 2026 as of January 1st",
+        "Vaccination rates and public health measures may prevent fatalities"
+      ],
+      "why_might_be_wrong": "Measles outbreaks can be unpredictable, and a sudden change in public health policy or a new outbreak could alter the expected number of deaths.",
+      "rationale": "While no deaths were reported as of January 1, 2026, the increase in measles cases to 2,465 by August 2026 suggests a heightened risk of fatalities compared to typical years. Considering the recent report of three deaths in 2025, it is plausible to expect a small number of deaths, though it remains likely that the deaths will be limited to a few cases, if any, given the ability of public health interventions to prevent fatalities. The probability distribution reflects these considerations, with a higher likelihood for 0 or 1 death, but accounting for the possibility of more deaths given the recent upward trend in cases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Measles is a highly contagious disease, but vaccination rates in the U.S. are generally high, which significantly reduces the likelihood of outbreaks and associated deaths. Given the effectiveness of the measles vaccine and the public health measures in place, it is reasonable to predict that the majority of the time, there will be no reported deaths. A small number of deaths could occur in unvaccinated populations, but these would likely be limited.",
+  "evidence_record_ids": [
+    "ins-72cd49700726",
+    "ins-16fb340a6de8",
+    "ins-67c2f1bf4797",
+    "ins-fb2fd40f0633",
+    "ins-537278c8dfe8"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 3773,
+    "total_output_tokens": 1004,
+    "total_tokens": 4777,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 3567,
+        "output_tokens": 889,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 206,
+        "output_tokens": 115,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

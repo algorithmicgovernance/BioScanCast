@@ -1,0 +1,201 @@
+{
+  "records": [
+    {
+      "id": "ins-860ef79af495",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 15.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-01-01T00:00:00",
+      "event_date_precision": "year",
+      "summary": "Total number of wild poliovirus type 1 cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:56:27.043855+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9bdc32151ceb4d9488e84511de2bd09f",
+          "chunk_id": "doc-9bdc32151ceb4d9488e84511de2bd09f-c0-p0",
+          "source_url": "https://polioeradication.org/about-polio/polio-this-week/",
+          "quote": "The total number of cases in 2026 is 15."
+        }
+      ]
+    },
+    {
+      "id": "ins-778b4fdd8dea",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total number of wild poliovirus type 1 cases reported in 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:56:27.048795+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-9bdc32151ceb4d9488e84511de2bd09f",
+          "chunk_id": "doc-9bdc32151ceb4d9488e84511de2bd09f-c0-p1",
+          "source_url": "https://polioeradication.org/about-polio/polio-this-week/",
+          "quote": "The total number of cases in 2026 is three."
+        }
+      ]
+    },
+    {
+      "id": "ins-88c0db827799",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.5,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total cVDPV1 cases reported globally in 2025.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:56:35.405636+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47",
+          "chunk_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47-c2",
+          "source_url": "https://www.who.int/news/item/04-03-2026-statement-of-the-forty-fourth-meeting-of-the-polio-ihr-emergency-committee",
+          "quote": "In 2025 (as of 31 December), three cVDPV1 cases have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-072c1afd0e9e",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Global",
+      "iso_country_code": null,
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 99.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2024-12-31T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of WPV1 cases reported globally in 2024",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:56:37.756342+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47",
+          "chunk_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47-c1-p0",
+          "source_url": "https://www.who.int/news/item/04-03-2026-statement-of-the-forty-fourth-meeting-of-the-polio-ihr-emergency-committee",
+          "quote": "This compares to 99 WPV1 cases reported in all of 2024."
+        }
+      ]
+    },
+    {
+      "id": "ins-7e085ef85b33",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Afghanistan",
+      "iso_country_code": "AF",
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 9.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-10-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of WPV1 cases reported in Afghanistan in 2025",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:56:37.755304+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47",
+          "chunk_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47-c1-p0",
+          "source_url": "https://www.who.int/news/item/04-03-2026-statement-of-the-forty-fourth-meeting-of-the-polio-ihr-emergency-committee",
+          "quote": "nine new WPV1 cases have been reported from the two endemic countries, Afghanistan (5) and Pakistan (4)."
+        }
+      ]
+    },
+    {
+      "id": "ins-b1e32a014d3f",
+      "question_id": "bfg_q22",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Pakistan",
+      "iso_country_code": "PK",
+      "pathogen": "poliovirus",
+      "metric_name": "confirmed_cases",
+      "metric_value": 31.0,
+      "metric_unit": "cases",
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2025-10-01T00:00:00",
+      "event_date_precision": "day",
+      "summary": "cumulative total of WPV1 cases reported in Pakistan in 2025",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T09:56:37.755895+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47",
+          "chunk_id": "doc-fc9f60845d6a4711bf7c7edc8f8a2e47-c1-p0",
+          "source_url": "https://www.who.int/news/item/04-03-2026-statement-of-the-forty-fourth-meeting-of-the-polio-ihr-emergency-committee",
+          "quote": "In 2025 to date, 40 WPV1 cases have been reported: nine in Afghanistan and 31 in Pakistan."
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 129370,
+    "total_output_tokens": 1016,
+    "total_tokens": 130386,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 129370,
+        "output_tokens": 1016,
+        "calls": 58
+      }
+    }
+  },
+  "documents_processed": 5,
+  "documents_skipped": 0,
+  "notes": [
+    "Low-survival adaptive top_k engaged: 5 usable docs (\u2264 threshold 5); retrieval_top_k=20 (default 12)."
+  ]
+}

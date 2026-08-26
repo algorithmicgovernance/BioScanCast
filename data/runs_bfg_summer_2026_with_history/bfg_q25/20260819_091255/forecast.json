@@ -1,0 +1,222 @@
+{
+  "question_id": "bfg_q25",
+  "options": [
+    "under 2,000",
+    "2,000 to 2,999",
+    "3,000 to 3,999",
+    "4,000 to 5,499",
+    "5,500 or more"
+  ],
+  "distributions": [
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "probabilities": {
+        "under 2,000": 0.08014199458885023,
+        "2,000 to 2,999": 0.1834793652649778,
+        "3,000 to 3,999": 0.33654185007680576,
+        "4,000 to 5,499": 0.24508429999605283,
+        "5,500 or more": 0.15475249007331346
+      }
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "probabilities": {
+        "under 2,000": 0.25,
+        "2,000 to 2,999": 0.35,
+        "3,000 to 3,999": 0.2,
+        "4,000 to 5,499": 0.1,
+        "5,500 or more": 0.1
+      }
+    }
+  ],
+  "records": [
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "under 2,000",
+      "probability": 0.08014199458885023,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "2,000 to 2,999",
+      "probability": 0.1834793652649778,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "3,000 to 3,999",
+      "probability": 0.33654185007680576,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "4,000 to 5,499",
+      "probability": 0.24508429999605283,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast",
+      "option": "5,500 or more",
+      "probability": 0.15475249007331346,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "under 2,000",
+      "probability": 0.25,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "2,000 to 2,999",
+      "probability": 0.35,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "3,000 to 3,999",
+      "probability": 0.2,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "4,000 to 5,499",
+      "probability": 0.1,
+      "forecast_version": null
+    },
+    {
+      "question_id": "bfg_q25",
+      "forecast_source": "bioscancast_baseline",
+      "option": "5,500 or more",
+      "probability": 0.1,
+      "forecast_version": null
+    }
+  ],
+  "samples": [
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.33,
+        0.25,
+        0.12
+      ],
+      "ok": true,
+      "reference_class": "Annual global cholera-related deaths reported by WHO",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "As of mid-2026, cumulative deaths are already at 1,318, which could increase significantly by the end of the year.",
+        "Historically, cholera-related deaths have often exceeded 4,000 annually.",
+        "Potential underreporting and delays in reporting may mean actual numbers are higher than currently reported."
+      ],
+      "drivers_down": [
+        "Current cumulative death count is lower than in some previous years at similar points.",
+        "Efforts to improve sanitation and access to clean water in affected regions may reduce mortality rates."
+      ],
+      "why_might_be_wrong": "Reporting delays and underreporting could lead to a significant underestimation of the final death toll.",
+      "rationale": "As of mid-2026, cholera-related deaths are reported at 1,318. Historically, the annual deaths often exceed 4,000, indicating a high base rate for a total above this number. However, given the cumulative deaths reported so far, and considering potential improvements in health responses, the most likely range is between 3,000 to 3,999. Underreporting and delayed reporting are significant factors that could push the numbers higher, but given the current data, a cautious estimate favors the 3,000 to 3,999 range.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 42
+    },
+    {
+      "probabilities": [
+        0.05,
+        0.15,
+        0.34,
+        0.26,
+        0.2
+      ],
+      "ok": true,
+      "reference_class": "Global cholera-related deaths annually",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Historical annual cholera-related deaths often exceed 4,000.",
+        "Underreporting and delayed reporting are likely, suggesting actual numbers are higher.",
+        "Cholera continues to affect regions with weak healthcare infrastructure, leading to higher mortality."
+      ],
+      "drivers_down": [
+        "As of mid-2026, only 1,318 deaths have been reported, which is relatively low.",
+        "Improvements in global health interventions and responses could reduce mortality rates.",
+        "Increased awareness and preventive measures may lower incidence and fatalities."
+      ],
+      "why_might_be_wrong": "There could be significant underreporting, or a sudden outbreak could lead to a sharp increase in deaths beyond current projections.",
+      "rationale": "The mid-2026 cumulative death count is 1,318, which is lower than historically typical figures by mid-year. However, given the historical base rate of cholera deaths often exceeding 4,000 annually, the likelihood of underreporting, and ongoing challenges in endemic regions, the most probable range remains 3,000 to 3,999. The possibility of reaching higher figures cannot be discounted due to potential reporting delays and underestimations.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 43
+    },
+    {
+      "probabilities": [
+        0.1,
+        0.2,
+        0.33,
+        0.22,
+        0.15
+      ],
+      "ok": true,
+      "reference_class": "Annual global cholera-related deaths reported by WHO in recent years.",
+      "base_rate": 0.5,
+      "drivers_up": [
+        "Historical base rates suggest annual deaths can exceed 4,000.",
+        "There is potential for underreporting, especially in regions with weak healthcare infrastructure.",
+        "Cholera outbreaks have been reported in multiple countries, indicating widespread transmission potential."
+      ],
+      "drivers_down": [
+        "Current cumulative deaths by mid-2026 are only 1,318, suggesting a lower trajectory than historical averages.",
+        "Improved response efforts and interventions may have reduced the death toll.",
+        "The monthly death rate has not shown a significant increase over recent months."
+      ],
+      "why_might_be_wrong": "The potential underreporting of deaths can significantly skew the expected outcomes, making the true figures higher than anticipated.",
+      "rationale": "The current cumulative cholera-related deaths reported by mid-2026 are 1,318. Historically, annual cholera deaths reported by WHO have frequently been over 4,000, suggesting a higher base rate. However, the current trajectory indicates a potentially lower total due to improved response measures and a lack of significant increases in monthly death rates. Given the potential for underreporting and the presence of outbreaks in multiple countries with vulnerable healthcare systems, the most likely range is between 3,000 to 3,999. This balances historical data with current trends and potential reporting biases.",
+      "model": "gpt-4o-2024-08-06",
+      "seed": 44
+    }
+  ],
+  "baseline_rationale": "Cholera is a significant public health issue, particularly in regions with inadequate water and sanitation. Historical data suggests that cholera deaths can vary widely based on outbreaks, interventions, and environmental factors. Given the global efforts in vaccination and improved sanitation, it's reasonable to estimate that the number of deaths will remain relatively low, but still significant enough to warrant concern. The probabilities reflect a moderate expectation of deaths, with a higher likelihood of being under 3,000 due to ongoing public health measures.",
+  "evidence_record_ids": [
+    "ins-ab74a677633d",
+    "ins-4437dadffc48",
+    "ins-2c318434c22b",
+    "ins-7f923633f8a8",
+    "ins-5af562edc775",
+    "ins-80040285cd58",
+    "ins-8f0ae05566ae",
+    "ins-7b63158fd194",
+    "ins-ac73114aac71",
+    "ins-854914297e10",
+    "ins-1cbf34b85e12",
+    "ins-81c46aacb403",
+    "ins-184d4c78c54c",
+    "ins-5396b9a001f9",
+    "ins-39ef7b39a528",
+    "ins-229390c89f75"
+  ],
+  "budget_summary": {
+    "total_input_tokens": 10138,
+    "total_output_tokens": 978,
+    "total_tokens": 11116,
+    "per_model": {
+      "gpt-4o-2024-08-06": {
+        "input_tokens": 9915,
+        "output_tokens": 853,
+        "calls": 3
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 223,
+        "output_tokens": 125,
+        "calls": 1
+      }
+    }
+  },
+  "notes": []
+}

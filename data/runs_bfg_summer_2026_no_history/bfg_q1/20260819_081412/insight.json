@@ -1,0 +1,199 @@
+{
+  "records": [
+    {
+      "id": "ins-3a108f850ab2",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "suspected_cases",
+      "metric_value": 246.0,
+      "metric_unit": null,
+      "count_basis": "unknown",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-05-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total suspected cases reported as of outbreak declaration.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:14:41.418617+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-317104801e6a4d2394f7223dab886570",
+          "chunk_id": "doc-317104801e6a4d2394f7223dab886570-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON602",
+          "quote": "a total of 246 suspected cases and 80 deaths (four deaths among confirmed cases) have been reported"
+        }
+      ]
+    },
+    {
+      "id": "ins-d6acd8deeed8",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 1003.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "likely an underestimation, as many deaths that occurred before the outbreak declaration remain under investigation",
+      "event_date": "2026-06-22T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases in DRC as of June 22, 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:14:49.903810+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0ca62c9eeab441d6b93a7de810722489",
+          "chunk_id": "doc-0ca62c9eeab441d6b93a7de810722489-c0",
+          "source_url": "https://www.cidrap.umn.edu/ebola/ebola-outbreak-dr-congo-tops-1000-cases-least-254-dead",
+          "quote": "there were now 1,003 cumulative confirmed cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-d5c12d58aa79",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 3360.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases of Ebola in DRC as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:14:53.207168+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-df39c5ec58244d4ab2480e95abbba4ad",
+          "chunk_id": "doc-df39c5ec58244d4ab2480e95abbba4ad-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "At 3,360 confirmed cases, the disease is now affecting people in five provinces in the east of the DRC"
+        }
+      ]
+    },
+    {
+      "id": "ins-fba3b3afa310",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 4945.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": "Data reported by DRC on confirmed cases and deaths are under continuous review and harmonisation.",
+      "event_date": "2026-08-14T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Total confirmed cases reported by DRC as of 15 August 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:14:55.631556+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-8a548eddfc7f44b79d018bc9f5a9ec7e",
+          "chunk_id": "doc-8a548eddfc7f44b79d018bc9f5a9ec7e-c0",
+          "source_url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda",
+          "quote": "the Democratic Republic of the Congo (DRC) reported a total of 4 945 confirmed cases"
+        }
+      ]
+    },
+    {
+      "id": "ins-4c3bd4b5c143",
+      "question_id": "bfg_q1",
+      "event_type": "death_count",
+      "confidence": 0.85,
+      "location": "DRC",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "deaths",
+      "metric_value": 1487.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative deaths from Ebola in DRC as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:14:53.209251+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-df39c5ec58244d4ab2480e95abbba4ad",
+          "chunk_id": "doc-df39c5ec58244d4ab2480e95abbba4ad-c0",
+          "source_url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+          "quote": "with 1,487 deaths recorded, representing an overall case fatality rate estimated at about 45%"
+        }
+      ]
+    },
+    {
+      "id": "ins-0caf26e0509b",
+      "question_id": "bfg_q1",
+      "event_type": "case_count",
+      "confidence": 0.85,
+      "location": "Democratic Republic of the Congo",
+      "iso_country_code": "CD",
+      "pathogen": "bundibugyo ebola",
+      "metric_name": "confirmed_cases",
+      "metric_value": 2145.0,
+      "metric_unit": null,
+      "count_basis": "cumulative",
+      "time_window": "unknown",
+      "surveillance_method": null,
+      "data_quality": null,
+      "event_date": "2026-07-15T00:00:00",
+      "event_date_precision": "day",
+      "summary": "Cumulative confirmed cases reported as of 15 July 2026.",
+      "model": "gpt-4o-mini",
+      "extracted_at": "2026-08-19T08:14:58.239644+00:00",
+      "notes": null,
+      "sources": [
+        {
+          "document_id": "doc-0b0ce1b5536b4ea29d072c49c16a9a3b",
+          "chunk_id": "doc-0b0ce1b5536b4ea29d072c49c16a9a3b-c0",
+          "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613",
+          "quote": "In total, 2145 confirmed cases have been reported: 2124 in the Democratic Republic of the Congo"
+        }
+      ]
+    }
+  ],
+  "budget_summary": {
+    "total_input_tokens": 113677,
+    "total_output_tokens": 947,
+    "total_tokens": 114624,
+    "per_model": {
+      "gpt-4o-mini-2024-07-18": {
+        "input_tokens": 113677,
+        "output_tokens": 947,
+        "calls": 52
+      }
+    }
+  },
+  "documents_processed": 9,
+  "documents_skipped": 0,
+  "notes": []
+}
