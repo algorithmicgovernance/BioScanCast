@@ -63,8 +63,6 @@ jobs:
           set -euo pipefail
           STAMP="$(date -u +%Y%m%d_%H%M%S)"
           echo "STAMP=$STAMP" >> "$GITHUB_ENV"
-          echo "RUN_ID_NO_HISTORY=${STAMP}_nohist" >> "$GITHUB_ENV"
-          echo "RUN_ID_WITH_HISTORY=${STAMP}_hist" >> "$GITHUB_ENV"
           mkdir -p "$OUT_NO_HISTORY" "$OUT_WITH_HISTORY" "$FORECAST_OUTPUT_DIR" data/ci_logs
 
       - name: Run full pipeline (no history)
@@ -75,7 +73,7 @@ jobs:
           set -euo pipefail
           LOG="data/ci_logs/no_history_${STAMP}.log"
           FAILS=0
-          echo "=== no-history run started $(date -u +%Y-%m-%dT%H:%M:%SZ) run_id=${RUN_ID_NO_HISTORY} ===" | tee "$LOG"
+          echo "=== no-history run started $(date -u +%Y-%m-%dT%H:%M:%SZ) run_id=${STAMP} ===" | tee "$LOG"
 
           for i in $(seq 1 25); do
             qid="bfg_q${i}"
@@ -84,7 +82,8 @@ jobs:
                 --csv "$QCSV" \
                 --forecasts-csv "$OCSV" \
                 --out-root "$OUT_NO_HISTORY" \
-                --run-id "$RUN_ID_NO_HISTORY" >> "$LOG" 2>&1; then
+                --run-id "$STAMP" \
+                --no-cache >> "$LOG" 2>&1; then
               echo "    ${qid} OK" | tee -a "$LOG"
             else
               echo "    ${qid} FAILED" | tee -a "$LOG"
@@ -105,7 +104,7 @@ jobs:
           set -euo pipefail
           LOG="data/ci_logs/with_history_${STAMP}.log"
           FAILS=0
-          echo "=== with-history run started $(date -u +%Y-%m-%dT%H:%M:%SZ) run_id=${RUN_ID_WITH_HISTORY} ===" | tee "$LOG"
+          echo "=== with-history run started $(date -u +%Y-%m-%dT%H:%M:%SZ) run_id=${STAMP} ===" | tee "$LOG"
 
           for i in $(seq 1 25); do
             qid="bfg_q${i}"
@@ -114,8 +113,9 @@ jobs:
                 --csv "$QCSV" \
                 --forecasts-csv "$OCSV" \
                 --out-root "$OUT_WITH_HISTORY" \
-                --run-id "$RUN_ID_WITH_HISTORY" \
-                --history-context >> "$LOG" 2>&1; then
+                --run-id "$STAMP" \
+                --history-context \
+                --no-cache >> "$LOG" 2>&1; then
               echo "    ${qid} OK" | tee -a "$LOG"
             else
               echo "    ${qid} FAILED" | tee -a "$LOG"
@@ -174,4 +174,3 @@ jobs:
 
           git commit -m "chore: scheduled BFG forecast runs ${STAMP}"
           git push -u origin "${RESULTS_BRANCH}"
-          
